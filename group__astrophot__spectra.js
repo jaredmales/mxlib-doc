@@ -1,0 +1,71 @@
+var group__astrophot__spectra =
+[
+    [ "basicSpectrum", "structmx_1_1astro_1_1basicSpectrum.html", [
+      [ "paramsT", "structmx_1_1astro_1_1basicSpectrum.html#ad50229278224c575a83de84c8d780838", null ],
+      [ "fileName", "structmx_1_1astro_1_1basicSpectrum.html#ae820fc3d8a891b7b01b3fd91219c852c", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1basicSpectrum.html#afb73a5874f8ce9e8b804d0b2fb0e8466", null ],
+      [ "dataDirEnvVar", "structmx_1_1astro_1_1basicSpectrum.html#afffed1cf41cbcafdea3befcd6514ba02", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1basicSpectrum.html#a2fcd0a8bc0db12e7b2c6e6e1d588df93", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1basicSpectrum.html#ad8fc5873f6387ee9a0eb633ca653d6e4", null ]
+    ] ],
+    [ "astroFilter", "structmx_1_1astro_1_1astroFilter.html", [
+      [ "paramsT", "structmx_1_1astro_1_1astroFilter.html#ab1fe0e4223ddbde5ddf41e12d7c830cb", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1astroFilter.html#a4bff07b0d4f3ac6c29a2d1eb8af0c3f4", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1astroFilter.html#a29e286f60436dfc18e6b89a15ab3f9ce", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1astroFilter.html#a5fc56b1f2a040704f8bcb613178f4cd8", null ]
+    ] ],
+    [ "sqWaveFilter", "structmx_1_1astro_1_1sqWaveFilter.html", [
+      [ "paramsT", "structmx_1_1astro_1_1sqWaveFilter_1_1paramsT.html", [
+        [ "dlam", "structmx_1_1astro_1_1sqWaveFilter_1_1paramsT.html#a0246397eaf817abd9bc49bb6af608877", null ],
+        [ "fw", "structmx_1_1astro_1_1sqWaveFilter_1_1paramsT.html#adfb9fd7871f88d95836e6d28f453123d", null ],
+        [ "lam0", "structmx_1_1astro_1_1sqWaveFilter_1_1paramsT.html#a8e02faefdaf783de79284014d2890150", null ]
+      ] ],
+      [ "readSpectrum", "structmx_1_1astro_1_1sqWaveFilter.html#ad2ddd424fca1110e878a843986479038", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1sqWaveFilter.html#a6053214c061bb76a5baacbac673114b3", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1sqWaveFilter.html#ab8dbe18d94eab22026d4654ffca478d6", null ]
+    ] ],
+    [ "calspecSpectrum", "structmx_1_1astro_1_1calspecSpectrum.html", [
+      [ "paramsT", "structmx_1_1astro_1_1calspecSpectrum.html#ad6b7d98fbb7d0f14ad2dde72b2288cac", null ],
+      [ "fileName", "structmx_1_1astro_1_1calspecSpectrum.html#a41045a0d037c281eaa6d408f96671d06", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1calspecSpectrum.html#a121e66703559c3d4d835cb5257894196", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1calspecSpectrum.html#a3aa04335d3d387019b07b2cd14647fa9", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1calspecSpectrum.html#afa1982b72b7f42c2781c93cf751c2695", null ]
+    ] ],
+    [ "picklesSpectrum", "structmx_1_1astro_1_1picklesSpectrum.html", [
+      [ "paramsT", "structmx_1_1astro_1_1picklesSpectrum.html#a334d1ec52bdf2a86c18f2a80d5b86baf", null ],
+      [ "fileName", "structmx_1_1astro_1_1picklesSpectrum.html#a40083c98b27a1d661e1e88258386074b", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1picklesSpectrum.html#a84bdc97f8d7b15f2428b8c4a3f90aedd", null ],
+      [ "dataDirEnvVar", "structmx_1_1astro_1_1picklesSpectrum.html#a0853878b8a8ce5aa7d75a10db53ae228", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1picklesSpectrum.html#a12452a8e8e97c35db51e5edea3a8d128", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1picklesSpectrum.html#a1b8fcb5284d318d9db110901fbe16b46", null ]
+    ] ],
+    [ "earthAlbedo", "structmx_1_1astro_1_1earthAlbedo.html", [
+      [ "paramsT", "structmx_1_1astro_1_1earthAlbedo.html#a9e17406851ca793e79d85f047313aded", null ],
+      [ "fileName", "structmx_1_1astro_1_1earthAlbedo.html#acba11b039e3c4540ef6b97145a266c84", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1earthAlbedo.html#a2eacf7d019febe526dd5b3ca69b85052", null ],
+      [ "dataDirEnvVar", "structmx_1_1astro_1_1earthAlbedo.html#a6c44c87941598c635bd46197229f636d", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1earthAlbedo.html#aa35d4453c8b1cd968e1eb828ce730d65", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1earthAlbedo.html#a662613f7d31f31847637a90f93101d51", null ]
+    ] ],
+    [ "venusAlbedo", "structmx_1_1astro_1_1venusAlbedo.html", [
+      [ "paramsT", "structmx_1_1astro_1_1venusAlbedo.html#a658684aabde24724ca15fa114ee5cfca", null ],
+      [ "fileName", "structmx_1_1astro_1_1venusAlbedo.html#a17019cb7c74022266552b630bab77144", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1venusAlbedo.html#a5bb96cc5ea1f84a48d663b965245a8d1", null ],
+      [ "dataDirEnvVar", "structmx_1_1astro_1_1venusAlbedo.html#abbb1b0d9ec88693e415558b610c98383", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1venusAlbedo.html#a3aa7851eac177073b49746e0b5d80213", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1venusAlbedo.html#ae5cc070703694745cf74a2013a5b6f1a", null ]
+    ] ],
+    [ "cahoySpectrumRaw", "structmx_1_1astro_1_1cahoySpectrumRaw.html", [
+      [ "fileName", "structmx_1_1astro_1_1cahoySpectrumRaw.html#a63f6e7bb266488a2ba106cf74c078067", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1cahoySpectrumRaw.html#a60eb23e46ca8361601b1c54cf880aa27", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1cahoySpectrumRaw.html#a3724a1e146589992facafcc5b7a1d8cc", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1cahoySpectrumRaw.html#a6e42b3fb0698d601ac07ffbc275a8c24", null ]
+    ] ],
+    [ "phoenixSpectrum", "structmx_1_1astro_1_1phoenixSpectrum.html", [
+      [ "paramsT", "structmx_1_1astro_1_1phoenixSpectrum.html#ada205e6d7f2e4ad992f1e5dc8f8f2622", null ],
+      [ "readSpectrum", "structmx_1_1astro_1_1phoenixSpectrum.html#a189255b5b9acfb27dd7bd97996a339c2", null ],
+      [ "fluxUnits", "structmx_1_1astro_1_1phoenixSpectrum.html#a057742231d9771ea1232cf813d5616b1", null ],
+      [ "wavelengthUnits", "structmx_1_1astro_1_1phoenixSpectrum.html#a7db8f344d37bf13f588352ad5f80d765", null ]
+    ] ],
+    [ "rewritePhoenixSpectrum", "group__astrophot__spectra.html#ga2449bbbc0e10179cf1161784269bd80c", null ]
+];

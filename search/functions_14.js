@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['takeresponsematrix_2936',['takeResponseMatrix',['../classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#acef722059959afaec9a6d79d0359f983',1,'mx::AO::sim::simulatedAOSystem']]],
+  ['tan_5farcsec_2937',['tan_arcsec',['../group__dimensionless__constants.html#ga26cfb88249543b56d24bb68c69cf1d79',1,'mx::astro::constants']]],
+  ['tau_2938',['tau',['../structmx_1_1AO_1_1analysis_1_1clGainOpt.html#acc9a64ab5676c66d6c58b0e6da4ce838',1,'mx::AO::analysis::clGainOpt::tau()'],['../structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a4d1972080c167f1532a126832c0f6646',1,'mx::AO::analysis::clGainOpt::tau(realT newTau)']]],
+  ['tau_5f0_2939',['tau_0',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#af16f9aa373aaa8303b5b7f4f9c756da9',1,'mx::AO::analysis::aoAtmosphere']]],
+  ['tauwfs_2940',['tauWFS',['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#a30a108380cc137af574b580cd8ad70b0',1,'mx::AO::analysis::aoSystem::tauWFS(realT ntau)'],['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#a4c3ca9e86f99f6266464c1c5e34e22df',1,'mx::AO::analysis::aoSystem::tauWFS()']]],
+  ['teff_2941',['Teff',['../structmx_1_1astro_1_1mainSequence.html#af7884bdc622f956102bf818ec9049669',1,'mx::astro::mainSequence::Teff(realT numType)'],['../structmx_1_1astro_1_1mainSequence.html#a49228ea716297e8f3fdc98dda40a3624',1,'mx::astro::mainSequence::Teff(const std::string &amp;spType)']]],
+  ['teffsun_2942',['TeffSun',['../group__dimensioned__constants.html#gad2f47a0cc970cd0ace4e7c905590059b',1,'mx::astro::constants']]],
+  ['theta_2943',['theta',['../classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a5a47c7582ca4c7e0bcf2b2fa28bba5cb',1,'mx::math::fit::fitGaussian2D']]],
+  ['three_5ffifths_2944',['three_fifths',['../group__aoConstants.html#ga98d13a598cd7fe38f410730b428bdd07',1,'mx::AO::constants']]],
+  ['threshold_2945',['threshold',['../structmx_1_1improc_1_1HCIobservation.html#aaf2c70628eace3767e033eaba2e6d9a4',1,'mx::improc::HCIobservation']]],
+  ['ti_2946',['Ti',['../structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a7b5a6e6608aeb4609e99dc5ba69026c7',1,'mx::AO::analysis::clGainOpt::Ti()'],['../structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a199b62910692ae7424714287fb176763',1,'mx::AO::analysis::clGainOpt::Ti(realT newTi)']]],
+  ['tiltwavefront_2947',['tiltWavefront',['../group__imaging.html#ga4802aba34c0c75f833e8f058aa871daa',1,'mx::wfp']]],
+  ['timedelayerror_2948',['timeDelayError',['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#a59dd1a7069bc603cd863c7dbc9c73274',1,'mx::AO::analysis::aoSystem::timeDelayError(realT m, realT n, realT d)'],['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#a650e588dbc9696b7c3be7be1586b1b56',1,'mx::AO::analysis::aoSystem::timeDelayError(realT m, realT n)'],['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#adfeb87a846d9d652570592725e883209',1,'mx::AO::analysis::aoSystem::timeDelayError()']]],
+  ['timespecaddnsec_2949',['timespecAddNsec',['../namespacemx.html#ab431eb4ae6228f5ae170f53877ff1052',1,'mx']]],
+  ['timespecutc2taimjd_2950',['timespecUTC2TAIMJD',['../group__timeutils.html#ga1f8aced872356888370b0850137ee48f',1,'mx']]],
+  ['timestamp_2951',['timeStamp',['../group__timeutils.html#gaf154ea9c433dd20eb0d6dcd1e04f2d66',1,'mx']]],
+  ['title_2952',['title',['../classmx_1_1improc_1_1ds9Interface.html#a0815404f9952a06cf83651796a9d2e00',1,'mx::improc::ds9Interface::title()'],['../classmx_1_1improc_1_1ds9Interface.html#afb0a8d6ab68425520aace990b50c9ae1',1,'mx::improc::ds9Interface::title(const std::string &amp;nn)']]],
+  ['tol_2953',['tol',['../classmx_1_1improc_1_1imageXCorrDiscrete.html#abd2757ad930b7e129d58a658fa763b00',1,'mx::improc::imageXCorrDiscrete::tol()'],['../classmx_1_1improc_1_1imageXCorrDiscrete.html#a0e5a19e733b914d984bdf55d94dbaf9d',1,'mx::improc::imageXCorrDiscrete::tol(Scalar nt)']]],
+  ['tolower_2954',['toLower',['../group__stringutils.html#ga365fafc5aed29fa83bae9912b7006c38',1,'mx::ioutils::toLower(std::string &amp;outstr, const std::string &amp;instr)'],['../group__stringutils.html#gaad1effcaab348097dfc799f870e63d21',1,'mx::ioutils::toLower(const std::string &amp;instr)']]],
+  ['toupper_2955',['toUpper',['../group__stringutils.html#ga20e4c52b1890a613aeb6909ee27a2778',1,'mx::ioutils::toUpper(std::string &amp;outstr, const std::string &amp;instr)'],['../group__stringutils.html#ga92a38d69967b254dcb9b6bdcb9c5eae8',1,'mx::ioutils::toUpper(const std::string &amp;instr)']]],
+  ['tukey_2956',['tukey',['../group__signal__windows1D.html#ga4e4c9c3064f636420531df7b1418d35a',1,'mx::sigproc::window::tukey(realT *filt, int N, realT alpha)'],['../group__signal__windows1D.html#ga77c5cd2a0d93d69119d63c332b3a06ca',1,'mx::sigproc::window::tukey(std::vector&lt; realT &gt; &amp;filt, realT alpha)']]],
+  ['tukey2d_2957',['tukey2d',['../group__signal__windows2D.html#ga05a03c41e310b36c3e9102a2b80c6503',1,'mx::sigproc::window']]],
+  ['tukey2dannulus_2958',['tukey2dAnnulus',['../group__signal__windows2D.html#ga72dc368e30f27fd1f9cefca8e8a0a0a2',1,'mx::sigproc::window']]],
+  ['twosqrt2log2_2959',['twosqrt2log2',['../group__gen__math__gaussians.html#gaea298d0b93e57fab9423f5c5d9ae605b',1,'mx::math::func']]]
+];

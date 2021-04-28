@@ -1,0 +1,26 @@
+var files_dup =
+[
+    [ "ao", "dir_4a0bf71ba3138a6abb584fb74c18f794.html", "dir_4a0bf71ba3138a6abb584fb74c18f794" ],
+    [ "app", "dir_98ff7954eb3842da01d2ae02361edfa5.html", "dir_98ff7954eb3842da01d2ae02361edfa5" ],
+    [ "astro", "dir_0fc3206047eab508bd310c9d22a11fd1.html", "dir_0fc3206047eab508bd310c9d22a11fd1" ],
+    [ "doc", "dir_e68e8157741866f444e17edd764ebbae.html", "dir_e68e8157741866f444e17edd764ebbae" ],
+    [ "fft", "dir_ec7419ef954292aec0c8e01109f2b022.html", "dir_ec7419ef954292aec0c8e01109f2b022" ],
+    [ "improc", "dir_36e4a5df511904fcb54b5d9f3b8bffb0.html", "dir_36e4a5df511904fcb54b5d9f3b8bffb0" ],
+    [ "ioutils", "dir_6895d4f394f35c99cbb9eae210940ca9.html", "dir_6895d4f394f35c99cbb9eae210940ca9" ],
+    [ "math", "dir_fba38f648377aa56ae5d69782adf9e53.html", "dir_fba38f648377aa56ae5d69782adf9e53" ],
+    [ "meta", "dir_19fc12b439e4dfd72e55eacdf1189d08.html", "dir_19fc12b439e4dfd72e55eacdf1189d08" ],
+    [ "sigproc", "dir_749a31579df8fa01bae22bb783a391d0.html", "dir_749a31579df8fa01bae22bb783a391d0" ],
+    [ "tests", "dir_59425e443f801f1f2fd8bbe4959a3ccf.html", "dir_59425e443f801f1f2fd8bbe4959a3ccf" ],
+    [ "wfp", "dir_798a60fe574b319ce1e0453987adc495.html", "dir_798a60fe574b319ce1e0453987adc495" ],
+    [ "eigenUtils.hpp", "eigenUtils_8hpp_source.html", null ],
+    [ "environment.hpp", "environment_8hpp.html", "environment_8hpp" ],
+    [ "gnuPlot.hpp", "gnuPlot_8hpp.html", "gnuPlot_8hpp" ],
+    [ "gslInterpolation.hpp", "gslInterpolation_8hpp.html", "gslInterpolation_8hpp" ],
+    [ "imagingArray.hpp", "imagingArray_8hpp.html", "imagingArray_8hpp" ],
+    [ "mxError.hpp", "mxError_8hpp.html", "mxError_8hpp" ],
+    [ "mxException.hpp", "mxException_8hpp.html", null ],
+    [ "mxlib.hpp", "mxlib_8hpp.html", "mxlib_8hpp" ],
+    [ "mxlib_uncomp_version.h", "mxlib__uncomp__version_8h_source.html", null ],
+    [ "ompLoopWatcher.hpp", "ompLoopWatcher_8hpp.html", null ],
+    [ "timeUtils.hpp", "timeUtils_8hpp.html", "timeUtils_8hpp" ]
+];
