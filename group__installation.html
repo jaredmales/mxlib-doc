@@ -139,6 +139,7 @@ Git Version Tracking</h1>
 <h1><a class="anchor" id="building"></a>
 Configuring and Building mxlib</h1>
 <ol type="1">
+<li>clone mxlib from <a href="https://github.com/jaredmales/mxlib">https://github.com/jaredmales/mxlib</a></li>
 <li>If your install prefix is different from <code>$HOME</code>, you will want to invoke <code>make</code> with <code>make PREFIX=/path/to/libraries</code> (where <code>/path/to/libraries</code> is the path to the folder containing <code>lib</code> and <code>include</code> folders for things like levmar and Eigen.) Alternatively, set that variable permanently following the steps below.</li>
 <li>If you need to customize the build (e.g. switch the BLAS or FFT library used or modify paths), run <code>make setup</code>. This will create three Makefiles in <code>local/</code> for you to customize.</li>
 <li>To configure mxlib edit the files in the <code>local/</code> directory only. Some options are:<ul>
@@ -165,7 +166,7 @@ Build Environment</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:07:20 for mxlib by
+    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
