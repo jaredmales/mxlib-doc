@@ -1,6 +1,6 @@
 var fitsHeader_8hpp =
 [
-    [ "fitsHeaderGitStatus", "fitsHeader_8hpp.html#gaeb1f459c8d4c65e48a2b231a3bcb61c0", null ],
-    [ "headersToValues", "fitsHeader_8hpp.html#ga3346d9e5b86d3ef7f9857e68bbbc22c7", null ],
-    [ "headersToValues", "fitsHeader_8hpp.html#ga85ea40f5b9c71405952b19998289acf4", null ]
+    [ "fitsHeaderGitStatus", "fitsHeader_8hpp.html#ga090671b8b7bacafa7548b80293158622", null ],
+    [ "headersToValues", "fitsHeader_8hpp.html#gabe165594f295f9f82996bd13e2e67314", null ],
+    [ "headersToValues", "fitsHeader_8hpp.html#ga59ef63486b8423fecae107446d19dc0a", null ]
 ];

@@ -117,22 +117,26 @@ Files</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga79ccb1b0a47b746afba0c50ca544d8fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interpolation.html#ga79ccb1b0a47b746afba0c50ca544d8fb">mx::gsl_interpolate</a> (const gsl_interp_type *interpT, double *xin, double *yin, size_t Nin, double *xout, double *yout, size_t Nout)</td></tr>
-<tr class="memdesc:ga79ccb1b0a47b746afba0c50ca544d8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a 1-D data X vs Y discrete function onto a new X axis.  <a href="group__interpolation.html#ga79ccb1b0a47b746afba0c50ca544d8fb">More...</a><br /></td></tr>
-<tr class="separator:ga79ccb1b0a47b746afba0c50ca544d8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d199ac493f747f1a5af4ffa9a2e6067"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interpolation.html#ga4d199ac493f747f1a5af4ffa9a2e6067">mx::gsl_interpolate</a> (const gsl_interp_type *interpT, std::vector&lt; double &gt; &amp;xin, std::vector&lt; double &gt; &amp;yin, std::vector&lt; double &gt; &amp;xout, std::vector&lt; double &gt; &amp;yout)</td></tr>
-<tr class="memdesc:ga4d199ac493f747f1a5af4ffa9a2e6067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a 1-D data X vs Y discrete function onto a new X axis (vector version)  <a href="group__interpolation.html#ga4d199ac493f747f1a5af4ffa9a2e6067">More...</a><br /></td></tr>
-<tr class="separator:ga4d199ac493f747f1a5af4ffa9a2e6067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10a7c89db1bd46c8bd46bfee98728929"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga10a7c89db1bd46c8bd46bfee98728929"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__interpolation.html#ga10a7c89db1bd46c8bd46bfee98728929">mx::math::gsl_interpolate</a> (const gsl_interp_type *interpT, realT *xin, realT *yin, size_t Nin, realT *xout, realT *yout, size_t Nout)</td></tr>
+<tr class="memdesc:ga10a7c89db1bd46c8bd46bfee98728929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a 1-D data X vs Y discrete function onto a new X axis.  <a href="group__interpolation.html#ga10a7c89db1bd46c8bd46bfee98728929">More...</a><br /></td></tr>
+<tr class="separator:ga10a7c89db1bd46c8bd46bfee98728929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cd197205e5c8357f103c153095c50cc"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga1cd197205e5c8357f103c153095c50cc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__interpolation.html#ga1cd197205e5c8357f103c153095c50cc">mx::math::gsl_interpolate</a> (const gsl_interp_type *interpT, std::vector&lt; realT &gt; &amp;xin, std::vector&lt; realT &gt; &amp;yin, std::vector&lt; realT &gt; &amp;xout, std::vector&lt; realT &gt; &amp;yout)</td></tr>
+<tr class="memdesc:ga1cd197205e5c8357f103c153095c50cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a 1-D data X vs Y discrete function onto a new X axis (vector version)  <a href="group__interpolation.html#ga1cd197205e5c8357f103c153095c50cc">More...</a><br /></td></tr>
+<tr class="separator:ga1cd197205e5c8357f103c153095c50cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga79ccb1b0a47b746afba0c50ca544d8fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga79ccb1b0a47b746afba0c50ca544d8fb">&#9670;&nbsp;</a></span>gsl_interpolate() <span class="overload">[1/2]</span></h2>
+<a id="ga10a7c89db1bd46c8bd46bfee98728929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10a7c89db1bd46c8bd46bfee98728929">&#9670;&nbsp;</a></span>gsl_interpolate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int mx::gsl_interpolate </td>
+          <td class="memname">int mx::math::gsl_interpolate </td>
           <td>(</td>
           <td class="paramtype">const gsl_interp_type *&#160;</td>
           <td class="paramname"><em>interpT</em>, </td>
@@ -140,13 +144,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">realT *&#160;</td>
           <td class="paramname"><em>xin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">realT *&#160;</td>
           <td class="paramname"><em>yin</em>, </td>
         </tr>
         <tr>
@@ -158,13 +162,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">realT *&#160;</td>
           <td class="paramname"><em>xout</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">realT *&#160;</td>
           <td class="paramname"><em>yout</em>, </td>
         </tr>
         <tr>
@@ -201,20 +205,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00121">121</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00124">124</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gslInterpolation_8hpp_source.html#l00159">mx::gsl_interpolate()</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00313">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00334">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
 
 </div>
 </div>
-<a id="ga4d199ac493f747f1a5af4ffa9a2e6067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4d199ac493f747f1a5af4ffa9a2e6067">&#9670;&nbsp;</a></span>gsl_interpolate() <span class="overload">[2/2]</span></h2>
+<a id="ga1cd197205e5c8357f103c153095c50cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cd197205e5c8357f103c153095c50cc">&#9670;&nbsp;</a></span>gsl_interpolate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int mx::gsl_interpolate </td>
+          <td class="memname">int mx::math::gsl_interpolate </td>
           <td>(</td>
           <td class="paramtype">const gsl_interp_type *&#160;</td>
           <td class="paramname"><em>interpT</em>, </td>
@@ -222,25 +228,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>xin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>yin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>xout</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>yout</em>&#160;</td>
         </tr>
         <tr>
@@ -254,7 +260,7 @@ Functions</h2></td></tr>
 <p>Interpolate a 1-D data X vs Y discrete function onto a new X axis (vector version) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">interpT</td><td>of the <a href="https://www.gnu.org/software/gsl/manual/html_node/Interpolation-Types.html#Interpolation-Types">gsl interpolation types</a>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">interpT</td><td>of the <a href="https://www.gnu.org/software/gsl/doc/html/interp.html#d-interpolation-types">gsl interpolation types</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">xin</td><td>the input x-axis </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">yin</td><td>the input y-values </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">xout</td><td>the desired x-axis </td></tr>
@@ -269,9 +275,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00159">159</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="gslInterpolation_8hpp_source.html#l00121">mx::gsl_interpolate()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00165">165</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +284,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

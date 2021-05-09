@@ -113,6 +113,9 @@ Modules</h2></td></tr>
 <tr class="memitem:group__asciiutils"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__asciiutils.html">ASCII I/O Utilities</a></td></tr>
 <tr class="memdesc:group__asciiutils"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASCII input/output. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__fits__processing"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing.html">FITS Files</a></td></tr>
+<tr class="memdesc:group__fits__processing"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tools for working with FITS files. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__binvector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__binvector.html">binVector Binary File Format</a></td></tr>
 <tr class="memdesc:group__binvector"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple binary file format for storing vectors of data on disk. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,7 +167,7 @@ template&lt;char space = ' ', bool flush = true, char eol = '\n', typename valT 
 <div class="line"><span class="keywordtype">int</span> i=3;</div>
 <div class="line"> </div>
 <div class="line">pout(s,d,i);</div>
-</div><!-- fragment --><p> Note that the types of the values do not need to be specified as templated arguments. When run, this code results in </p><pre class="fragment">* $output: 2.567 3
+</div><!-- fragment --><p> Note that the types of the values do not need to be specified as templated arguments. When run, this code results in </p><pre class="fragment">* $ output: 2.567 3
 * $
 * </pre><p>The behavior can be changed with template arguments like </p><div class="fragment"><div class="line">pout&lt;&#39;\t&#39;, false, 0&gt;(s,d,i);</div>
 </div><!-- fragment --><p> which would use the tab instead of space, and neither flush nor print a newline at the end.</p>
@@ -238,7 +241,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rawBinary_8hpp_source.html#l00051">51</a> of file <a class="el" href="rawBinary_8hpp_source.html">rawBinary.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rawBinary_8hpp_source.html#l00052">52</a> of file <a class="el" href="rawBinary_8hpp_source.html">rawBinary.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00196">MXE_FILERERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="mxError_8hpp_source.html#l00096">mxPError</a>.</p>
 
@@ -249,7 +252,7 @@ template&lt;typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

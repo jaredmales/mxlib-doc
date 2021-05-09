@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('group__fits__utils.html',''); initResi
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">FITS Utilities<div class="ingroups"><a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a></div></div>  </div>
+<div class="title">FITS Utilities<div class="ingroups"><a class="el" href="group__utils.html">General Utilities</a> &raquo; <a class="el" href="group__ioutils.html">Input/Output Utilities</a> &#124; <a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,38 +103,41 @@ $(document).ready(function(){initNavTree('group__fits__utils.html',''); initResi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga85ea40f5b9c71405952b19998289acf4"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
-<tr class="memitem:ga85ea40f5b9c71405952b19998289acf4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga85ea40f5b9c71405952b19998289acf4">mx::improc::headersToValues</a> (std::vector&lt; dataT &gt; &amp;v, const std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
-<tr class="memdesc:ga85ea40f5b9c71405952b19998289acf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#ga85ea40f5b9c71405952b19998289acf4">More...</a><br /></td></tr>
-<tr class="separator:ga85ea40f5b9c71405952b19998289acf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
-<tr class="memitem:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; dataT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga3346d9e5b86d3ef7f9857e68bbbc22c7">mx::improc::headersToValues</a> (const std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
-<tr class="memdesc:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#ga3346d9e5b86d3ef7f9857e68bbbc22c7">More...</a><br /></td></tr>
-<tr class="separator:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb1f459c8d4c65e48a2b231a3bcb61c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gaeb1f459c8d4c65e48a2b231a3bcb61c0">mx::improc::fitsHeaderGitStatus</a> (<a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &amp;head, const std::string &amp;repoName, const char *sha1, int modified)</td></tr>
-<tr class="memdesc:gaeb1f459c8d4c65e48a2b231a3bcb61c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the status of a Git repository to HISTORY in a FITS header.  <a href="group__fits__utils.html#gaeb1f459c8d4c65e48a2b231a3bcb61c0">More...</a><br /></td></tr>
-<tr class="separator:gaeb1f459c8d4c65e48a2b231a3bcb61c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c">mx::improc::getFitsType</a> ()</td></tr>
-<tr class="memdesc:gaaccfc69b8fea18eaf219b24e535e721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c">More...</a><br /></td></tr>
-<tr class="separator:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad7e837ea16b6b22491dc46feae88ac44"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
-<tr class="memitem:gad7e837ea16b6b22491dc46feae88ac44"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44">mx::improc::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
-<tr class="memdesc:gad7e837ea16b6b22491dc46feae88ac44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44">More...</a><br /></td></tr>
-<tr class="separator:gad7e837ea16b6b22491dc46feae88ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga7d2b25e9ff3105162bea0765d4cdc925">mx::improc::getFitsBITPIX</a> ()</td></tr>
-<tr class="separator:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2187199d35666d45a32bdf82f03c2d52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52">mx::improc::fitsStripApost</a> (std::string &amp;s)</td></tr>
-<tr class="memdesc:ga2187199d35666d45a32bdf82f03c2d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52">More...</a><br /></td></tr>
-<tr class="separator:ga2187199d35666d45a32bdf82f03c2d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5dc073d8726b978ab2226c67b4eaa702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702">mx::improc::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
-<tr class="memdesc:ga5dc073d8726b978ab2226c67b4eaa702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702">More...</a><br /></td></tr>
-<tr class="separator:ga5dc073d8726b978ab2226c67b4eaa702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59ef63486b8423fecae107446d19dc0a"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:ga59ef63486b8423fecae107446d19dc0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga59ef63486b8423fecae107446d19dc0a">mx::fits::headersToValues</a> (std::vector&lt; dataT &gt; &amp;v, const std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
+<tr class="memdesc:ga59ef63486b8423fecae107446d19dc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#ga59ef63486b8423fecae107446d19dc0a">More...</a><br /></td></tr>
+<tr class="separator:ga59ef63486b8423fecae107446d19dc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe165594f295f9f82996bd13e2e67314"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:gabe165594f295f9f82996bd13e2e67314"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; dataT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gabe165594f295f9f82996bd13e2e67314">mx::fits::headersToValues</a> (const std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
+<tr class="memdesc:gabe165594f295f9f82996bd13e2e67314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#gabe165594f295f9f82996bd13e2e67314">More...</a><br /></td></tr>
+<tr class="separator:gabe165594f295f9f82996bd13e2e67314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga090671b8b7bacafa7548b80293158622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga090671b8b7bacafa7548b80293158622">mx::fits::fitsHeaderGitStatus</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;head, const std::string &amp;repoName, const char *sha1, int modified)</td></tr>
+<tr class="memdesc:ga090671b8b7bacafa7548b80293158622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the status of a Git repository to HISTORY in a FITS header.  <a href="group__fits__utils.html#ga090671b8b7bacafa7548b80293158622">More...</a><br /></td></tr>
+<tr class="separator:ga090671b8b7bacafa7548b80293158622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">mx::fits::getFitsType</a> ()</td></tr>
+<tr class="memdesc:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">More...</a><br /></td></tr>
+<tr class="separator:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
+<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">mx::fits::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
+<tr class="memdesc:ga6795d65800e7a5200bb9beaa8eec088a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">More...</a><br /></td></tr>
+<tr class="separator:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab66cdba4dc37f5710ccda1e9da82e3fc">mx::fits::getFitsBITPIX</a> ()</td></tr>
+<tr class="separator:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">mx::fits::fitsStripApost</a> (std::string &amp;s)</td></tr>
+<tr class="memdesc:ga4f1c3fd683cda0567bb497210936ae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">More...</a><br /></td></tr>
+<tr class="separator:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6719078e1e86a3b90e3de9c172af712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">mx::fits::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
+<tr class="memdesc:gab6719078e1e86a3b90e3de9c172af712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">More...</a><br /></td></tr>
+<tr class="separator:gab6719078e1e86a3b90e3de9c172af712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga645c413c9f15927628a2600d2dc1e271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">mx::fits::fitsErrText</a> (std::string &amp;explan, const std::string &amp;filename, int fstatus)</td></tr>
+<tr class="memdesc:ga645c413c9f15927628a2600d2dc1e271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a rich error meesage from a FITS status code.  <a href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">More...</a><br /></td></tr>
+<tr class="separator:ga645c413c9f15927628a2600d2dc1e271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gad7e837ea16b6b22491dc46feae88ac44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad7e837ea16b6b22491dc46feae88ac44">&#9670;&nbsp;</a></span>fits_write_key()</h2>
+<a id="ga6795d65800e7a5200bb9beaa8eec088a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6795d65800e7a5200bb9beaa8eec088a">&#9670;&nbsp;</a></span>fits_write_key()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +145,7 @@ Functions</h2></td></tr>
 template&lt;typename typeT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int mx::improc::fits_write_key </td>
+          <td class="memname">int mx::fits::fits_write_key </td>
           <td>(</td>
           <td class="paramtype">fitsfile *&#160;</td>
           <td class="paramname"><em>fptr</em>, </td>
@@ -197,23 +200,66 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00362">362</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00238">238</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
 
 </div>
 </div>
-<a id="gaeb1f459c8d4c65e48a2b231a3bcb61c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaeb1f459c8d4c65e48a2b231a3bcb61c0">&#9670;&nbsp;</a></span>fitsHeaderGitStatus()</h2>
+<a id="ga645c413c9f15927628a2600d2dc1e271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga645c413c9f15927628a2600d2dc1e271">&#9670;&nbsp;</a></span>fitsErrText()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::improc::fitsHeaderGitStatus </td>
+          <td class="memname">void mx::fits::fitsErrText </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &amp;&#160;</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>explan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fstatus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a rich error meesage from a FITS status code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">explan</td><td>[out] the explanatory message </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>[in] the FITS file's name which generated the problem </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fstatus</td><td>[in] the cfitstio status code </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="fitsFile_8hpp_source.html#l00641">mx::fits::fitsFile&lt; dataT &gt;::close()</a>, <a class="el" href="fitsFile_8hpp_source.html#l00589">mx::fits::fitsFile&lt; dataT &gt;::open()</a>, <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01129">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01271">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+
+</div>
+</div>
+<a id="ga090671b8b7bacafa7548b80293158622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga090671b8b7bacafa7548b80293158622">&#9670;&nbsp;</a></span>fitsHeaderGitStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::fits::fitsHeaderGitStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;&#160;</td>
           <td class="paramname"><em>head</em>, </td>
         </tr>
         <tr>
@@ -240,11 +286,6 @@ template&lt;typename typeT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Write the status of a Git repository to HISTORY in a FITS header. </p>
@@ -258,25 +299,18 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00608">608</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01767">mx::improc::HCIobservation&lt; _realT &gt;::outputPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01721">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01756">mx::improc::HCIobservation&lt; _realT &gt;::outputPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01710">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
 
 </div>
 </div>
-<a id="ga5dc073d8726b978ab2226c67b4eaa702"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5dc073d8726b978ab2226c67b4eaa702">&#9670;&nbsp;</a></span>fitsPopulateCard()</h2>
+<a id="gab6719078e1e86a3b90e3de9c172af712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6719078e1e86a3b90e3de9c172af712">&#9670;&nbsp;</a></span>fitsPopulateCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::improc::fitsPopulateCard </td>
+          <td class="memname">void mx::fits::fitsPopulateCard </td>
           <td>(</td>
           <td class="paramtype">char&#160;</td>
           <td class="paramname"><em>headStr</em>[81], </td>
@@ -305,11 +339,6 @@ template&lt;typename typeT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Populate a fits header card with the value string copied verbatim. </p>
@@ -324,34 +353,22 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00310">310</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="fitsUtils_8hpp_source.html#l00030">stdValWidth</a>.</p>
-
 </div>
 </div>
-<a id="ga2187199d35666d45a32bdf82f03c2d52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2187199d35666d45a32bdf82f03c2d52">&#9670;&nbsp;</a></span>fitsStripApost()</h2>
+<a id="ga4f1c3fd683cda0567bb497210936ae9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f1c3fd683cda0567bb497210936ae9b">&#9670;&nbsp;</a></span>fitsStripApost()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mx::improc::fitsStripApost </td>
+          <td class="memname">int mx::fits::fitsStripApost </td>
           <td>(</td>
           <td class="paramtype">std::string &amp;&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Strip the apostrophes from a FITS value string. </p>
@@ -369,14 +386,10 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00274">274</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitsHeaderCard_8hpp_source.html#l00352">mx::improc::fitsHeaderCard::String()</a>.</p>
-
 </div>
 </div>
-<a id="ga7d2b25e9ff3105162bea0765d4cdc925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7d2b25e9ff3105162bea0765d4cdc925">&#9670;&nbsp;</a></span>getFitsBITPIX()</h2>
+<a id="gab66cdba4dc37f5710ccda1e9da82e3fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab66cdba4dc37f5710ccda1e9da82e3fc">&#9670;&nbsp;</a></span>getFitsBITPIX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -384,7 +397,7 @@ template&lt;typename typeT &gt; </div>
 template&lt;typename scalarT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int mx::improc::getFitsBITPIX </td>
+          <td class="memname">int mx::fits::getFitsBITPIX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -406,12 +419,10 @@ template&lt;typename scalarT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00202">202</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
-
 </div>
 </div>
-<a id="gaaccfc69b8fea18eaf219b24e535e721c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaccfc69b8fea18eaf219b24e535e721c">&#9670;&nbsp;</a></span>getFitsType()</h2>
+<a id="ga5a1a014cf5795ad800b6731d66b5c9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a1a014cf5795ad800b6731d66b5c9c6">&#9670;&nbsp;</a></span>getFitsType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,7 +430,7 @@ template&lt;typename scalarT &gt; </div>
 template&lt;typename scalarT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int mx::improc::getFitsType </td>
+          <td class="memname">int mx::fits::getFitsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -434,20 +445,16 @@ template&lt;typename scalarT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">int</td><td>contains a constant defined in cfitsio corresponding to the native type </td></tr>
-    <tr><td class="paramname">-1</td><td>if not a define type in cfitsio </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>a constant defined in cfitsio corresponding to the native type </dd>
+<dd>
+-1 if not a define type in cfitsio </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00086">86</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00107">107</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ga3346d9e5b86d3ef7f9857e68bbbc22c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3346d9e5b86d3ef7f9857e68bbbc22c7">&#9670;&nbsp;</a></span>headersToValues() <span class="overload">[1/2]</span></h2>
+<a id="gabe165594f295f9f82996bd13e2e67314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe165594f295f9f82996bd13e2e67314">&#9670;&nbsp;</a></span>headersToValues() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,9 +462,9 @@ template&lt;typename scalarT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;dataT&gt; mx::improc::headersToValues </td>
+          <td class="memname">std::vector&lt;dataT&gt; mx::fits::headersToValues </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>heads</em>, </td>
         </tr>
         <tr>
@@ -474,7 +481,7 @@ template&lt;typename dataT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Convert the values in a std::vector of <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fits headers</a> into a std::vector of values. </p>
+<p>Convert the values in a std::vector of <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits headers</a> into a std::vector of values. </p>
 <p>Creates a vector of the appropriate type and size.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -496,12 +503,12 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00590">590</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00368">368</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ga85ea40f5b9c71405952b19998289acf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga85ea40f5b9c71405952b19998289acf4">&#9670;&nbsp;</a></span>headersToValues() <span class="overload">[2/2]</span></h2>
+<a id="ga59ef63486b8423fecae107446d19dc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59ef63486b8423fecae107446d19dc0a">&#9670;&nbsp;</a></span>headersToValues() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -509,7 +516,7 @@ template&lt;typename dataT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mx::improc::headersToValues </td>
+          <td class="memname">void mx::fits::headersToValues </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; dataT &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
@@ -517,7 +524,7 @@ template&lt;typename dataT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>heads</em>, </td>
         </tr>
         <tr>
@@ -534,7 +541,7 @@ template&lt;typename dataT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Convert the values in a std::vector of <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fits headers</a> into a std::vector of values. </p>
+<p>Convert the values in a std::vector of <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits headers</a> into a std::vector of values. </p>
 <p>Resizes the vector of the appropriate type.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -551,7 +558,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00568">568</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00343">343</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 </div>
 </div>
@@ -560,7 +567,7 @@ template&lt;typename dataT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

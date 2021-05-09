@@ -1,7 +1,7 @@
 var structmx_1_1ioutils_1_1textTable =
 [
-    [ "addCell", "group__asciiutils.html#ga07dca424d728d5330cd9e858c1ab0f85", null ],
-    [ "addCell", "group__asciiutils.html#ga60ad0f915fa73912b6e3642270f0664b", null ],
+    [ "addCell", "structmx_1_1ioutils_1_1textTable.html#a07dca424d728d5330cd9e858c1ab0f85", null ],
+    [ "addCell", "structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b", null ],
     [ "addCell", "group__asciiutils.html#ga85613e3021407755f1e0af8705073755", null ],
     [ "outPut", "group__asciiutils.html#ga063b3656be8c09545b3fa4546274f48c", null ],
     [ "m_colSep", "structmx_1_1ioutils_1_1textTable.html#ab0fb074afdfebaeb4a8427b83cb8538b", null ],

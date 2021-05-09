@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('aoConstants_8hpp.html',''); initResiza
 
 <p class="definition">Definition in file <a class="el" href="aoConstants_8hpp_source.html">aoConstants.hpp</a>.</p>
 </div><div class="textblock"><code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;boost/math/special_functions/gamma.hpp&gt;</code><br />
-<code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
+<code>#include &quot;../../math/constants.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="gamma_8hpp_source.html">../../math/func/gamma.hpp</a>&quot;</code><br />
 </div>
 <p><a href="aoConstants_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -122,42 +122,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a69c92183391b1224e0674152c96b85f5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="aoConstants_8hpp.html#a69c92183391b1224e0674152c96b85f5">mx::AO::constants::calcConstants</a> (floatT &amp;a_sf, floatT &amp;a_psd)</td></tr>
 <tr class="memdesc:a69c92183391b1224e0674152c96b85f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the AO constants.  <a href="aoConstants_8hpp.html#a69c92183391b1224e0674152c96b85f5">More...</a><br /></td></tr>
 <tr class="separator:a69c92183391b1224e0674152c96b85f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf60e6f001602216664f6304072f4609f"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gaf60e6f001602216664f6304072f4609f"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#gaf60e6f001602216664f6304072f4609f">mx::AO::constants::a_SF</a> ()</td></tr>
-<tr class="memdesc:gaf60e6f001602216664f6304072f4609f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scaling constant for the Kolmorogov optical phase structure function.  <a href="group__aoConstants.html#gaf60e6f001602216664f6304072f4609f">More...</a><br /></td></tr>
-<tr class="separator:gaf60e6f001602216664f6304072f4609f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaef16435554c000208534be5ec1459590"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gaef16435554c000208534be5ec1459590"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#gaef16435554c000208534be5ec1459590">mx::AO::constants::a_PSD</a> ()</td></tr>
-<tr class="memdesc:gaef16435554c000208534be5ec1459590"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scaling constant for the Kolmorogov optical phase power spectral density.  <a href="group__aoConstants.html#gaef16435554c000208534be5ec1459590">More...</a><br /></td></tr>
-<tr class="separator:gaef16435554c000208534be5ec1459590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae01b6269ea87c6dddd926d133ac84772"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gae01b6269ea87c6dddd926d133ac84772"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#gae01b6269ea87c6dddd926d133ac84772">mx::AO::constants::five_thirds</a> ()</td></tr>
-<tr class="memdesc:gae01b6269ea87c6dddd926d133ac84772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 5/3 in the specified precision.  <a href="group__aoConstants.html#gae01b6269ea87c6dddd926d133ac84772">More...</a><br /></td></tr>
-<tr class="separator:gae01b6269ea87c6dddd926d133ac84772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaceafd701dde9c818fa8f4a377dd8f09e"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gaceafd701dde9c818fa8f4a377dd8f09e"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#gaceafd701dde9c818fa8f4a377dd8f09e">mx::AO::constants::five_sixths</a> ()</td></tr>
-<tr class="memdesc:gaceafd701dde9c818fa8f4a377dd8f09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 5/6 in the specified precision.  <a href="group__aoConstants.html#gaceafd701dde9c818fa8f4a377dd8f09e">More...</a><br /></td></tr>
-<tr class="separator:gaceafd701dde9c818fa8f4a377dd8f09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0f8405c977fa3c5d6c183d8d6ed003c7"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga0f8405c977fa3c5d6c183d8d6ed003c7"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#ga0f8405c977fa3c5d6c183d8d6ed003c7">mx::AO::constants::eleven_thirds</a> ()</td></tr>
-<tr class="memdesc:ga0f8405c977fa3c5d6c183d8d6ed003c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 11/3 in the specified precision.  <a href="group__aoConstants.html#ga0f8405c977fa3c5d6c183d8d6ed003c7">More...</a><br /></td></tr>
-<tr class="separator:ga0f8405c977fa3c5d6c183d8d6ed003c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf804a8ecdece60d564df36771ec60c33"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gaf804a8ecdece60d564df36771ec60c33"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#gaf804a8ecdece60d564df36771ec60c33">mx::AO::constants::eleven_sixths</a> ()</td></tr>
-<tr class="memdesc:gaf804a8ecdece60d564df36771ec60c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 11/6 in the specified precision.  <a href="group__aoConstants.html#gaf804a8ecdece60d564df36771ec60c33">More...</a><br /></td></tr>
-<tr class="separator:gaf804a8ecdece60d564df36771ec60c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga66d850bc9636fac61c798c87767860bf"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga66d850bc9636fac61c798c87767860bf"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#ga66d850bc9636fac61c798c87767860bf">mx::AO::constants::six_fifths</a> ()</td></tr>
-<tr class="memdesc:ga66d850bc9636fac61c798c87767860bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 6/5 in the specified precision.  <a href="group__aoConstants.html#ga66d850bc9636fac61c798c87767860bf">More...</a><br /></td></tr>
-<tr class="separator:ga66d850bc9636fac61c798c87767860bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga98d13a598cd7fe38f410730b428bdd07"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga98d13a598cd7fe38f410730b428bdd07"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#ga98d13a598cd7fe38f410730b428bdd07">mx::AO::constants::three_fifths</a> ()</td></tr>
-<tr class="memdesc:ga98d13a598cd7fe38f410730b428bdd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 3/5 in the specified precision.  <a href="group__aoConstants.html#ga98d13a598cd7fe38f410730b428bdd07">More...</a><br /></td></tr>
-<tr class="separator:ga98d13a598cd7fe38f410730b428bdd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4803bc01382e002188e56ba1658fd56b"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga4803bc01382e002188e56ba1658fd56b"><td class="memTemplItemLeft" align="right" valign="top">floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#ga4803bc01382e002188e56ba1658fd56b">mx::AO::constants::seventeen_thirds</a> ()</td></tr>
-<tr class="memdesc:ga4803bc01382e002188e56ba1658fd56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 17/3 in the specified precision.  <a href="group__aoConstants.html#ga4803bc01382e002188e56ba1658fd56b">More...</a><br /></td></tr>
-<tr class="separator:ga4803bc01382e002188e56ba1658fd56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade3865f1bfedbfd3217244849e83ef9a"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
+<tr class="memitem:gade3865f1bfedbfd3217244849e83ef9a"><td class="memTemplItemLeft" align="right" valign="top">constexpr floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#gade3865f1bfedbfd3217244849e83ef9a">mx::AO::constants::a_SF</a> ()</td></tr>
+<tr class="memdesc:gade3865f1bfedbfd3217244849e83ef9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scaling constant for the Kolmorogov optical phase structure function.  <a href="group__aoConstants.html#gade3865f1bfedbfd3217244849e83ef9a">More...</a><br /></td></tr>
+<tr class="separator:gade3865f1bfedbfd3217244849e83ef9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6abf26d15522d5405e6b039ae7818c01"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
+<tr class="memitem:ga6abf26d15522d5405e6b039ae7818c01"><td class="memTemplItemLeft" align="right" valign="top">constexpr floatT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__aoConstants.html#ga6abf26d15522d5405e6b039ae7818c01">mx::AO::constants::a_PSD</a> ()</td></tr>
+<tr class="memdesc:ga6abf26d15522d5405e6b039ae7818c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scaling constant for the Kolmorogov optical phase power spectral density.  <a href="group__aoConstants.html#ga6abf26d15522d5405e6b039ae7818c01">More...</a><br /></td></tr>
+<tr class="separator:ga6abf26d15522d5405e6b039ae7818c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a69c92183391b1224e0674152c96b85f5"></a>
@@ -190,11 +162,11 @@ template&lt;typename floatT &gt; </div>
 
 <p>Calculate the AO constants. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoConstants_8hpp_source.html#l00030">30</a> of file <a class="el" href="aoConstants_8hpp_source.html">aoConstants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoConstants_8hpp_source.html#l00029">29</a> of file <a class="el" href="aoConstants_8hpp_source.html">aoConstants.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoConstants_8hpp_source.html#l00030">mx::AO::constants::calcConstants()</a>.</p>
+<p class="reference">References <a class="el" href="aoConstants_8hpp_source.html#l00029">mx::AO::constants::calcConstants()</a>, and <a class="el" href="math_2constants_8hpp_source.html#l00048">mx::math::pi()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aoConstants_8hpp_source.html#l00030">mx::AO::constants::calcConstants()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aoConstants_8hpp_source.html#l00029">mx::AO::constants::calcConstants()</a>.</p>
 
 </div>
 </div>
@@ -204,7 +176,7 @@ template&lt;typename floatT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_cf528a69cdca6105739343681d2398d1.html">analysis</a></li><li class="navelem"><a class="el" href="aoConstants_8hpp.html">aoConstants.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

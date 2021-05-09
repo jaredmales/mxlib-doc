@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1ADIDerotator.html#a7382e02529ff7a70142920a333da094d">mx::improc::ADIDerotator&lt; _realT &gt;</a>
 </li>
 <li>m_aosys
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a80005a7f078fae51b223bf3868b2f31f">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a6e55bdfc82551abb0665cfd74b245ebe">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_argc
 : <a class="el" href="classmx_1_1app_1_1application.html#a63a7d712c053f19c0e4a62ab465f99a3">mx::app::application</a>
@@ -121,8 +121,17 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_avgLen
 : <a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html#a35b039535dd9007d7cd71f921a6c5176">mx::sigproc::averagePeriodogram&lt; realT &gt;</a>
 </li>
+<li>m_bin_npix
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a542d47a708e3ca2f8e45d9ca48ec56ff">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+</li>
+<li>m_bin_opt
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7e87088d615d39650ff72474d1ed24d7">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+</li>
 <li>m_buffer
 : <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a39ae3ad2f1329657098a3d009aab3b29">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;</a>
+</li>
+<li>m_calAmp
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6f96645b630fe3e9f7c892f2eec47576">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
 </li>
 <li>m_ccIm
 : <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a4fa9d64220ea40884e1c2ead019f7c60">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
@@ -130,9 +139,11 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_centerFocal
 : <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#a852381cf03a8ed6921a127fa793adcb2">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
+, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4.html#abe6315c5479fd4243ae9b92168e91721">mx::wfp::fraunhoferPropagator&lt; _wavefrontT, 1 &gt;</a>
 </li>
 <li>m_centerPupil
 : <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#a2f55d56ac492d59c7bae2e2a4ec99f05">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
+, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4.html#ac56dcd36cf9d572efe059747cd19532d">mx::wfp::fraunhoferPropagator&lt; _wavefrontT, 1 &gt;</a>
 </li>
 <li>m_cic
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a23e800beb523940f4fb5146701245f33">mx::AO::sim::ccdDetector&lt; _realT &gt;</a>
@@ -163,6 +174,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_cols
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a2e0e90562e95350285c3158c23ac1bb7">mx::AO::sim::ccdDetector&lt; _realT &gt;</a>
+, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#a5f0e5e91574be0ecb0fb06200b2d7747">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>
 , <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a98f596901af94f47d997e802597066fb">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
 </li>
 <li>m_colSep
@@ -186,14 +198,29 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_configPathCLBase
 : <a class="el" href="classmx_1_1app_1_1application.html#a163d1bb2ad00ef7b0b0754b291303fbe">mx::app::application</a>
 </li>
+<li>m_configPathCLBase_env
+: <a class="el" href="classmx_1_1app_1_1application.html#aef846f2cc068983150def215516afbda">mx::app::application</a>
+</li>
+<li>m_configPathGlobal
+: <a class="el" href="classmx_1_1app_1_1application.html#ad923c5dc4a1861c9bb7fc08c37a483f0">mx::app::application</a>
+</li>
+<li>m_configPathGlobal_env
+: <a class="el" href="classmx_1_1app_1_1application.html#adf68e7174551a13864c961bb5e8bf6e4">mx::app::application</a>
+</li>
+<li>m_configPathLocal
+: <a class="el" href="classmx_1_1app_1_1application.html#aef4961ead2a553afc12f04c9a894106e">mx::app::application</a>
+</li>
+<li>m_configPathLocal_env
+: <a class="el" href="classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9">mx::app::application</a>
+</li>
 <li>m_configPathUser
 : <a class="el" href="classmx_1_1app_1_1application.html#a23b2644d06767994c6ad9efb9e79bf4e">mx::app::application</a>
 </li>
-<li>m_connected
-: <a class="el" href="classmx_1_1improc_1_1ds9Interface.html#a9f3e1bc30894f433b6a8a499a7d46f50">mx::improc::ds9Interface</a>
+<li>m_configPathUser_env
+: <a class="el" href="classmx_1_1app_1_1application.html#a290f4c557b4f8bfd80eb71e6e4370268">mx::app::application</a>
 </li>
 <li>m_cq
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a77bb965fc94efe9038ec2645987259e4">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a646dfe5b7a972cdb096484daa31555ee">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_D
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a2715026d79892e158f50981bddfc9f86">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
@@ -217,6 +244,15 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_deltaTau
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#af08f0062054f9fb788c8093f51c256ad">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
+<li>m_detCols
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6ea2c9e1b86b3237e963e72684c021aa">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
+</li>
+<li>m_detRows
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a05a74133d8c3f507b1b3109e46d9a7e4">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
+</li>
+<li>m_devicePtr
+: <a class="el" href="structmx_1_1cuda_1_1cudaPtr.html#a91f88705ad5411dc014ffb803ba54dda">mx::cuda::cudaPtr&lt; T &gt;</a>
+</li>
 <li>m_df
 : <a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html#aed51156cb10417684b9ae7f4b449c1f7">mx::sigproc::averagePeriodogram&lt; realT &gt;</a>
 </li>
@@ -230,7 +266,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a046c84def9c078c599647604418d2e2c">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
 </li>
 <li>m_dir
-: <a class="el" href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a106dd2ef5a55c2efab26a575a96e33a3">mx::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
+: <a class="el" href="classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a63c737080201997c72f617136e2808c5">mx::math::fft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
 </li>
 <li>m_dminChanged
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a00d047c8714480a1b3a390f4b0f78cc9">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
@@ -257,7 +293,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a4b7838647e483e8038b8d55e52fcbe83">mx::AO::sim::ccdDetector&lt; _realT &gt;</a>
 </li>
 <li>m_f
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ac2e6cd3edea243f4ff5d2e1b993555f2">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ace114f6065505d45654a5658ae349ac5">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_F0
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a68eaed0c6ace9274be2059395403f0c9">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
@@ -281,17 +317,21 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a25e329392f0555ac278ac2f85fc9911c">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>
 </li>
 <li>m_Fbg
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a211350b8de4b7f639fcaa428672de53e">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7c899d064a23487c559c1a9d2ad2d806">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>m_fft_back
-: <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a81367cdb9cae6adfb1702f448eeb3e99">mx::improc::imageXCorrFFT&lt; _ccImT &gt;</a>
-, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a83369a6c6affbf3f5ce376de96452f92">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
-, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#af394b13b3a1dbfa37fbe78a39cfc3993">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
+: <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a02ef18594e1b71f7b0aa37a5542719fc">mx::improc::imageXCorrFFT&lt; _ccImT &gt;</a>
+, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a4659738d6b5aadc1d2833cea585af911">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
+, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#a8acae85e21cf845c128b9701bb89dc96">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
 </li>
 <li>m_fft_fwd
-: <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ab61c9e80f7f8ac59c7331f5aaaff31e2">mx::improc::imageXCorrFFT&lt; _ccImT &gt;</a>
-, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a69ff406d4408ecc0dcc467aef956a800">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
-, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#a6afa3c2e44494861275b0683a7d5bf17">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
+: <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a10ce5d8092e467f32cdfe25f46fd0d59">mx::improc::imageXCorrFFT&lt; _ccImT &gt;</a>
+, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#afbf32cdd7078747bbf5b181d43136cbd">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
+, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#a5215c3bb3d936f8eb65943e94d2e2b15">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
+</li>
+<li>m_fftPlan
+: <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#ae4288b1241451179bcaf68ed61429baa">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>
+, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4.html#a89b17e6d52918bcea95a493d9f8456f3">mx::wfp::fraunhoferPropagator&lt; _wavefrontT, 1 &gt;</a>
 </li>
 <li>m_fi
 : <a class="el" href="structmx_1_1wfp_1_1idealCoronagraph.html#ac86da32a22efc6cbb8c3925a2ba75cbe">mx::wfp::idealCoronagraph&lt; _realT &gt;</a>
@@ -339,11 +379,14 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_gammaVar
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a6dd437d80740d61e6feb17fc93b9cbab">mx::AO::sim::ccdDetector&lt; _realT &gt;</a>
 </li>
+<li>m_gmax_lp
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a251ac9694ffa4c8a49f805adbfb9ffa4">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;</a>
+</li>
 <li>m_H_Kss
 : <a class="el" href="structmx_1_1astro_1_1mainSequence.html#adb5a1fa13539c9d61d99a8ddaeaa35c1">mx::astro::mainSequence&lt; realT &gt;</a>
 </li>
 <li>m_heads
-: <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a36a98ef51af0a7898d3f645899561f3b">mx::improc::HCIobservation&lt; _realT &gt;</a>
+: <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad84802f9fe46d5c18d84fedbd6a0be64">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
 <li>m_helpCFColWidth
 : <a class="el" href="classmx_1_1app_1_1application.html#a7df88705b8373214f22035761fb293fb">mx::app::application</a>
@@ -378,9 +421,6 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_indices
 : <a class="el" href="classmx_1_1sigproc_1_1circularBufferIndex.html#a0b4bd3bc2258e6d0fdbb32521cac3678">mx::sigproc::circularBufferIndex&lt; _storedT, _indexT &gt;</a>
 </li>
-<li>m_ipAndPort
-: <a class="el" href="classmx_1_1improc_1_1ds9Interface.html#a40b828e51eda3f8820f73ebcbcc66d02">mx::improc::ds9Interface</a>
-</li>
 <li>m_J_Hs
 : <a class="el" href="structmx_1_1astro_1_1mainSequence.html#a449feef73f31811b524ec59d348486ee">mx::astro::mainSequence&lt; realT &gt;</a>
 </li>
@@ -388,11 +428,11 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1ADIDerotator.html#a684a05d7cfdb2ff25dc6b1441537e1a7">mx::improc::ADIDerotator&lt; _realT &gt;</a>
 , <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ab9bcbe51977d86ce8a8e253fb8c556c0">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
-<li>m_L_0
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a6c5f4619bb7fabd9753fbd24db79f5f0">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</a>
-</li>
 <li>m_l_0
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#ac2e828399bcd16877df3c014fab12cc9">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</a>
+</li>
+<li>m_L_0
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a6c5f4619bb7fabd9753fbd24db79f5f0">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</a>
 </li>
 <li>m_lam_0
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#af3a3101d0c40c6ba4be795cfd31fe0f5">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</a>
@@ -422,7 +462,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a8148a5160f4178954e4b8bd9fa914c85">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;</a>
 </li>
 <li>m_m
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#aa44a43ed18951c5b978f2e17693e895c">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ad7dd250c352085d24cd85de4f6745394">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_magIm
 : <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a290756e3e5075debf5784b289c63bdb3">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
@@ -498,6 +538,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_meanSubMethod
 : <a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#a25ef353723267ddb403208e336345070">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;</a>
 </li>
+<li>m_measurementSize
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a84041b02e1e0f0e52d521d1553f581da">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
+</li>
 <li>m_minDPx
 : <a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#a316976219b36a9cdd449e8c30987220a">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;</a>
 </li>
@@ -526,7 +569,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1astro_1_1mainSequence.html#adefd78eae86a5487b5ab3914c66b012a">mx::astro::mainSequence&lt; realT &gt;</a>
 </li>
 <li>m_minTauWFS
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a51a5d50546ebe97b49c758cfade7af45">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a54b110281bd5eb9bf69d2131f7ef2cc5">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>m_minVIc
 : <a class="el" href="structmx_1_1astro_1_1mainSequence.html#afd143d175232f7861b2460e611cf1354">mx::astro::mainSequence&lt; realT &gt;</a>
@@ -547,19 +590,22 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a2d169a0461627c0299cb826cf00e6ece">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
 <li>m_mode_i
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a8075540d989688a5ab4d6fe4761eead2">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ad8093e47208f0edecb04b752bafc3e25">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_modeCoeffs
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a41ccf1474897e5d760a902932cadfac5">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a5b89811a05b3e7645cb8fdff9c828a46">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
+</li>
+<li>m_modes
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a10f476e3dfd72f134d39c79511f6b31b">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
 </li>
 <li>m_Mvs
 : <a class="el" href="structmx_1_1astro_1_1mainSequence.html#a662697097e0f34538ac0818224bcba8d">mx::astro::mainSequence&lt; realT &gt;</a>
 </li>
 <li>m_n
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#adc2fd67ec29f2142d0e30ffd925d513e">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#aecf9a9cdbb7ff592ab78bb7b6e964d79">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_naxes
-: <a class="el" href="classmx_1_1improc_1_1fitsFile.html#a065bc3aeff553171fb5fb3f27b6674f4">mx::improc::fitsFile&lt; dataT &gt;</a>
+: <a class="el" href="classmx_1_1fits_1_1fitsFile.html#a09d1633ef43b19a5608982a5cfca1e98">mx::fits::fitsFile&lt; dataT &gt;</a>
 </li>
 <li>m_Ncols
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a7d809e9beee1333ffd8c3b8404efe7b3">mx::improc::HCIobservation&lt; _realT &gt;</a>
@@ -577,7 +623,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a7f4371da8f30db121a8946081476739a">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
 <li>m_nModes
-: <a class="el" href="classmx_1_1AO_1_1sim_1_1generalIntegrator.html#aff5dab80968b8e40ef8553f1f68c6ffb">mx::AO::sim::generalIntegrator&lt; _realT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a0bd635b649fa579c65eb6cffaec7cfff">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
+, <a class="el" href="classmx_1_1AO_1_1sim_1_1generalIntegrator.html#aff5dab80968b8e40ef8553f1f68c6ffb">mx::AO::sim::generalIntegrator&lt; _realT &gt;</a>
 </li>
 <li>m_Nmodes
 : <a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#ab6ddad339ba965f5b504cd10e11a69aa">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;</a>
@@ -598,7 +645,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#aa98ae7cba72689eb2f56ced5294c0ec6">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
 <li>m_npix_wfs
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17adf715f8b62972f45e1b3f73c7d312">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a06f5d6f94e2dd8f93067066b9434aeb8">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>m_Nrows
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a440e3b76850bc8c07e1b156b73b0318a">mx::improc::HCIobservation&lt; _realT &gt;</a>
@@ -634,10 +681,10 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aad42218085230543cb93b5e7a891ce1e">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
 </li>
 <li>m_p
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a39535a9f6a864ff9b2533fe1227f0ad2">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#acda88f95e31c9048ed3c19811363c6f6">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_plan
-: <a class="el" href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ab5f0d84577b4ff07d8274447dca5dea5">mx::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
+: <a class="el" href="classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ae2c0b37bddffbfff48bf3b25f3981652">mx::math::fft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
 </li>
 <li>m_planes
 : <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa45957774e424d17b37840be2de26008">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
@@ -673,7 +720,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1app_1_1application.html#a7f064bc942b36dcb2155d690cad5e3ea">mx::app::application</a>
 </li>
 <li>m_psdSqrt
-: <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a55644562bf0294777038c00fe9e0abe3">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
+: <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#a6b7c269ea917270835e1cfe70683169d">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>
+, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a55644562bf0294777038c00fe9e0abe3">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
 </li>
 <li>m_psfsub
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a9ca66fd2fafa1a931daec098abfef7d5">mx::improc::HCIobservation&lt; _realT &gt;</a>
@@ -721,7 +769,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a28f3fb17eab7ed0710e7027dbc4f3650">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>
 </li>
 <li>m_RDIheads
-: <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#abb9ebf69b603874ceb7d483c3065322e">mx::improc::HCIobservation&lt; _realT &gt;</a>
+: <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a3e4bd2728cde5b316b4f3173d4db0762">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
 <li>m_RDIimageMJD
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a29c769d7c4b88ed339cca4cf8b4a8595">mx::improc::HCIobservation&lt; _realT &gt;</a>
@@ -738,6 +786,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_RDISepScale
 : <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ac57ee9ed35c4bd6014f37f4a4f974ab3">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>
 </li>
+<li>m_recon
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a8b9debd1bc6dbfb52f4b28c852e87f5f">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
+</li>
 <li>m_refIm
 : <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a99e0ab510d60a463c0586ee3ca64a0eb">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
 </li>
@@ -747,15 +798,19 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_requireConfigPathLocal
 : <a class="el" href="classmx_1_1app_1_1application.html#a8d3365a3a2ef514ecad8b6cdd8ac563e">mx::app::application</a>
 </li>
+<li>m_rMat
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a7089ab5c2fbb7857ef84d5af0a7a3748">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
+</li>
 <li>m_ron
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a0294b338478dd9d53a6164f8754e56a4">mx::AO::sim::ccdDetector&lt; _realT &gt;</a>
 </li>
 <li>m_ron_wfs
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5bf0a169b31f5cb19c70858dda71d635">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa0b02d2a66ce32d60f6df1561c8dfd3b">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>m_rows
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a837aba817975afa51b8bb3a1ee757d6f">mx::AO::sim::ccdDetector&lt; _realT &gt;</a>
 , <a class="el" href="structmx_1_1ioutils_1_1textTable.html#ad7ea44b37732368f4792d9377a4c7006">mx::ioutils::textTable</a>
+, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#acaa81082dd5e378b3bbb1fe32db9a223">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>
 , <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a8a1e44a6ee781091c88d8ba838a19a79">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
 </li>
 <li>m_rowSep
@@ -764,17 +819,17 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>m_saveSz
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#ab42613a901be19e1271b1aeb864e9a68">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;</a>
 </li>
+<li>m_scale
+: <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#a63e1deb21820ceea1d273a765e96881e">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>
+</li>
 <li>m_scintillation
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#ad713c465680b7b4bc38672bb1690c9ab">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;</a>
 </li>
 <li>m_secZeta
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aafa54b55122a48f37531eb509491d121">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
-<li>m_segs
-: <a class="el" href="classmx_1_1improc_1_1ds9Interface.html#a7e56c5e4c46aca4569f6b1790373dd41">mx::improc::ds9Interface</a>
-</li>
 <li>m_sigma_idx
-: <a class="el" href="structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a29809d27323ef679e705996541e28196">mx::math::fit::array2FitGaussian2D&lt; realT &gt;</a>
+: <a class="el" href="structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a20174342d0c3cda7dae1fe0b12ee9f9a">mx::math::fit::array2FitGaussian2D&lt; realT &gt;</a>
 </li>
 <li>m_sigma_x_idx
 : <a class="el" href="structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0313eea4805155ef7b08543f545fb84f">mx::math::fit::array2FitGaussian2D&lt; realT &gt;</a>
@@ -789,7 +844,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a6bf061782c8872d9ee97d208b92918f8">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;</a>
 </li>
 <li>m_size
-: <a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html#a5005c34bd3f9677c96b393b20a0ae7df">mx::sigproc::averagePeriodogram&lt; realT &gt;</a>
+: <a class="el" href="structmx_1_1cuda_1_1cudaPtr.html#a63c047522e2d28e6101583e599b94e16">mx::cuda::cudaPtr&lt; T &gt;</a>
+, <a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html#a5005c34bd3f9677c96b393b20a0ae7df">mx::sigproc::averagePeriodogram&lt; realT &gt;</a>
 </li>
 <li>m_skipPreProcess
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a7a2e76013875a485d7d7c20c5a903798">mx::improc::HCIobservation&lt; _realT &gt;</a>
@@ -798,7 +854,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1app_1_1appConfigurator.html#a34068eb4ad8a7690f504c03298bbb1ac">mx::app::appConfigurator</a>
 </li>
 <li>m_spatialFilter
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a10e66ddebfcde30a9c2f47ddca4d06f9">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a72d26f6476e46d4adb23f8c1509f154d">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_spatialFilter_ku
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6baaec71a3a268f3f04bc4340be5be5b">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
@@ -810,7 +866,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac27c40dabbc546b1595d32fae9a06056">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>m_sq
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#af4336cd3dc283f8371066feadca38218">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a9b17b5ae5a50f6415cb56c8db946dd78">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>m_starMag
 : <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a65d88e5cdb9552897912dfd14df1873d">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
@@ -825,13 +881,13 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#ac5495124bf9106070707d601204170af">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;</a>
 </li>
 <li>m_szX
-: <a class="el" href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a0e62791cbf7b89c70d9d8210773ee72a">mx::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
+: <a class="el" href="classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aeb5b4f904ea150f8211ab859ae361570">mx::math::fft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
 </li>
 <li>m_szY
-: <a class="el" href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ac8630a52d6c75076d1d7bc1c82fdbe5d">mx::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
+: <a class="el" href="classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a32c392a8b34ba3747807e99271fccbe7">mx::math::fft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
 </li>
 <li>m_szZ
-: <a class="el" href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a9fb00c3dfda186984dc35bc70bee0495">mx::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
+: <a class="el" href="classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a321462775601cec870173164b60083ad">mx::math::fft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>
 </li>
 <li>m_targets
 : <a class="el" href="structmx_1_1app_1_1appConfigurator.html#a0c3f65af63f5fafae8a19ed1b86bff19">mx::app::appConfigurator</a>
@@ -853,9 +909,6 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </li>
 <li>m_thresholdOnly
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a145c65833465c057b799dde890ca6827">mx::improc::HCIobservation&lt; _realT &gt;</a>
-</li>
-<li>m_title
-: <a class="el" href="classmx_1_1improc_1_1ds9Interface.html#a45325a9a76a60214a5aedbac6fb69427">mx::improc::ds9Interface</a>
 </li>
 <li>m_tol
 : <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a52a5b2dee15904829b6dbaa2d6b6be7f">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
@@ -944,13 +997,14 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 , <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a94591eb042da03fb6c0f823c0d7ab6d6">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
 <li>makePSDGrid()
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ab56bb21f8f422fb7b69cbc283aa455fc">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ab56bb21f8f422fb7b69cbc283aa455fc">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>makeShiftPhase()
 : <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html#a4695b09c3937475c60944babd19085b4">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>
+, <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4.html#a633271e2b61df6f0dd6ee9a2ab5c768e">mx::wfp::fraunhoferPropagator&lt; _wavefrontT, 1 &gt;</a>
 </li>
 <li>mapIterator
-: <a class="el" href="classmx_1_1improc_1_1fitsHeader.html#a72ff1916c914275a9b009afef7c29eb7">mx::improc::fitsHeader</a>
+: <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a4c00c7d955dd9fa7d393605436f24952">mx::fits::fitsHeader</a>
 </li>
 <li>mask
 : <a class="el" href="structmx_1_1improc_1_1imCenterCircleSym.html#a69114d081fbfd61d11ffec0dd6318448">mx::improc::imCenterCircleSym&lt; realT &gt;</a>
@@ -963,7 +1017,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#acf5e5962b685cb86e9783594cf39482c">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
 </li>
 <li>maskObscuration()
-: <a class="el" href="classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor.html#a57964bc4ea964984d0e8dd8fc8c3a7d3">mx::AO::sim::pywfsSlopeReconstructor&lt; _floatT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor.html#a19c413e4c9ff10ff695125d5c0f0b6f4">mx::AO::sim::pywfsSlopeReconstructor&lt; _floatT &gt;</a>
 </li>
 <li>maskRadius()
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor.html#a8c4ef24ba13c6115be6b9ec389636dd0">mx::AO::sim::pywfsSlopeReconstructor&lt; _floatT &gt;</a>
@@ -979,14 +1033,14 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="classmx_1_1math_1_1laplace__distribution.html#ad3c0308f92df2eb1083f61d07677a5e0">mx::math::laplace_distribution&lt; _RealType &gt;</a>
 </li>
 <li>maxEntries()
-: <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a3c7af26f8a093e1531a08ed9c2aa5487">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;</a>
+: <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a5c795b48ca9b1fc113faf9b583ecee08">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;</a>
 </li>
 <li>maxf
 : <a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">mx::sigproc::psdVarMeanParams&lt; _realT &gt;</a>
 </li>
 <li>maxLag()
-: <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a4c17141ad16142ff21c08d285416e8e0">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
-, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a4bed6148c1848a28ebe6eb086b74baca">mx::improc::imageXCorrFFT&lt; _ccImT &gt;</a>
+: <a class="el" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a2bcc6f482773bc587668cf0c615c4ec5">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;</a>
+, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5ddd187fe9ad0d8f635ea8175304a5ee">mx::improc::imageXCorrFFT&lt; _ccImT &gt;</a>
 </li>
 <li>maxPix
 : <a class="el" href="structmx_1_1improc_1_1imCenterCircleSym.html#af452312dfc9c3945b690398777da9c95">mx::improc::imCenterCircleSym&lt; realT &gt;</a>
@@ -995,17 +1049,17 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1imCenterCircleSym.html#aee5cb2e9e168178528453bb3c831ed83">mx::improc::imCenterCircleSym&lt; realT &gt;</a>
 </li>
 <li>maxStableGain()
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html#ae1f3b445559a121a75868f3ab0e739b4">mx::AO::analysis::clGainOpt&lt; _realT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a818bc179c8c37f97ad69c2578b0ac68f">mx::AO::analysis::clGainOpt&lt; _realT &gt;</a>
 </li>
 <li>mean()
 : <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a5bd0475060b8ea142a70e5d5f2dbe626">mx::astro::baseSpectrum&lt; realT &gt;</a>
-, <a class="el" href="classmx_1_1improc_1_1eigenCube.html#ac71189257761a164821f8fbebf2c24d6">mx::improc::eigenCube&lt; dataT &gt;</a>
+, <a class="el" href="classmx_1_1improc_1_1eigenCube.html#aa75d995de421048b9f5ac491d95e7c62">mx::improc::eigenCube&lt; dataT &gt;</a>
 </li>
 <li>meanSubtract()
 : <a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#a41407e504d60e518bef64c2dc621ba0e">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;</a>
 </li>
 <li>measurementError()
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0ab9ab754049fee29cbc0dfd3fc4c590">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a906ead26e64c2be905790dc799eae4f9">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>measurementSize()
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a5c30899f4723ce2407afe33b0f8fa676">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;</a>
@@ -1024,7 +1078,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1improc_1_1imCenterCircleSym.html#a02174722134c6dc5e6bb17c044fc66c2">mx::improc::imCenterCircleSym&lt; realT &gt;</a>
 </li>
 <li>minTauWFS()
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa6b362e8b58f4aa485fd0b60ce20d519">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6bf1be9cbef16698696c2119158a092b">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>mnCon
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af1fad4c8d48b3f63c98d916115fa5475">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;</a>
@@ -1033,13 +1087,13 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af76c8563c548c855abf55fbb2c213565">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;</a>
 </li>
 <li>multiLayerPSD()
-: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a2ac63ce603c29bc22f52c0a54f1fff83">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a>
+: <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a2ac63ce603c29bc22f52c0a54f1fff83">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a>
 </li>
 <li>Mv()
-: <a class="el" href="structmx_1_1astro_1_1mainSequence.html#ac1e53bf1f407185088637aa5a138fdf3">mx::astro::mainSequence&lt; realT &gt;</a>
+: <a class="el" href="structmx_1_1astro_1_1mainSequence.html#a96f1f2c3654eaccdff0ddcaa119cac4e">mx::astro::mainSequence&lt; realT &gt;</a>
 </li>
 <li>mxException()
-: <a class="el" href="classmxException.html#aeaf3e82d92e0a930d56bd287c7fa8f68">mxException</a>
+: <a class="el" href="classmxException.html#a8d7cab997c33a2a62488ab7e6964e1aa">mxException</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -1047,7 +1101,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:11 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

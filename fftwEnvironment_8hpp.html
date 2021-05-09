@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: fft/fftwEnvironment.hpp File Reference</title>
+<title>mxlib: math/fft/fftwEnvironment.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('fftwEnvironment_8hpp.html',''); initRe
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">fftwEnvironment.hpp File Reference<div class="ingroups"><a class="el" href="group__signal__processing.html">Signal Processing</a> &raquo; <a class="el" href="group__fft.html">Fast Fourier Transforms</a> &raquo; <a class="el" href="group__fft__files.html">FFT Files</a></div></div>  </div>
+<div class="title">fftwEnvironment.hpp File Reference<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a> &raquo; <a class="el" href="group__gen__math__files.html">Gen. Math Files</a> &raquo; <a class="el" href="group__fft__files.html">FFT Files</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -106,16 +106,15 @@ $(document).ready(function(){initNavTree('fftwEnvironment_8hpp.html',''); initRe
 
 <p class="definition">Definition in file <a class="el" href="fftwEnvironment_8hpp_source.html">fftwEnvironment.hpp</a>.</p>
 </div><div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="mxlib_8hpp_source.html">../mxlib.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="environment_8hpp_source.html">../environment.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="environment_8hpp_source.html">../../sys/environment.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fftwTemplates_8hpp_source.html">fftwTemplates.hpp</a>&quot;</code><br />
 </div>
 <p><a href="fftwEnvironment_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwEnvironment.html">mx::fftwEnvironment&lt; realT, threads &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage the FFTW environment and wisdom using RAII.  <a href="structmx_1_1fftwEnvironment.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwEnvironment.html">mx::math::fft::fftwEnvironment&lt; realT, threads &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage the FFTW environment and wisdom using RAII.  <a href="structmx_1_1math_1_1fft_1_1fftwEnvironment.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -126,22 +125,22 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac788e3ca363b84d4d533b54113208613"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gac788e3ca363b84d4d533b54113208613"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fft.html#gac788e3ca363b84d4d533b54113208613">mx::fftw_typename</a> ()</td></tr>
-<tr class="memdesc:gac788e3ca363b84d4d533b54113208613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string corresponding the fftw real floating point type.  <a href="group__fft.html#gac788e3ca363b84d4d533b54113208613">More...</a><br /></td></tr>
-<tr class="separator:gac788e3ca363b84d4d533b54113208613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fft.html#ga8ac65ee6e3c92a301a7c514eeadd4487">mx::fftw_wisdom_filename</a> ()</td></tr>
-<tr class="memdesc:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the mxlib standard wisdom filename for the type.  <a href="group__fft.html#ga8ac65ee6e3c92a301a7c514eeadd4487">More...</a><br /></td></tr>
-<tr class="separator:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9bd30e5f787e9169b9ac5e7b222aa915"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga9bd30e5f787e9169b9ac5e7b222aa915"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fft.html#ga9bd30e5f787e9169b9ac5e7b222aa915">mx::math::fft::fftw_typename</a> ()</td></tr>
+<tr class="memdesc:ga9bd30e5f787e9169b9ac5e7b222aa915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string corresponding the fftw real floating point type.  <a href="group__fft.html#ga9bd30e5f787e9169b9ac5e7b222aa915">More...</a><br /></td></tr>
+<tr class="separator:ga9bd30e5f787e9169b9ac5e7b222aa915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga425a5e598b3a57b1b1d0ffd83a8ffe6b"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga425a5e598b3a57b1b1d0ffd83a8ffe6b"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fft.html#ga425a5e598b3a57b1b1d0ffd83a8ffe6b">mx::math::fft::fftw_wisdom_filename</a> ()</td></tr>
+<tr class="memdesc:ga425a5e598b3a57b1b1d0ffd83a8ffe6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the mxlib standard wisdom filename for the type.  <a href="group__fft.html#ga425a5e598b3a57b1b1d0ffd83a8ffe6b">More...</a><br /></td></tr>
+<tr class="separator:ga425a5e598b3a57b1b1d0ffd83a8ffe6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_ec7419ef954292aec0c8e01109f2b022.html">fft</a></li><li class="navelem"><a class="el" href="fftwEnvironment_8hpp.html">fftwEnvironment.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_6cdd4d2f4f2d35d162926c1e0ab93b1a.html">fft</a></li><li class="navelem"><a class="el" href="fftwEnvironment_8hpp.html">fftwEnvironment.hpp</a></li>
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

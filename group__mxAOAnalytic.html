@@ -132,14 +132,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">mx::AO::analysis::clGainOpt&lt; _realT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to manage optimizing closed-loop gains.  <a href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage the calculation of temporal PSDs of the Fourier modes in atmospheric turbulence.  <a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
 <tr class="memitem:group__aoConstants"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aoConstants.html">AO Constants</a></td></tr>
-<tr class="memdesc:group__aoConstants"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of constants useful for AO analysis. <br /></td></tr>
+<tr class="memdesc:group__aoConstants"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of constants useful for adaptive optics analysis. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -200,9 +200,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Worker function for GSL Integration for the basic sin/cos Fourier modes. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01330">1330</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02095">2095</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00128">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::_layer_i</a>, <a class="el" href="jinc_8hpp_source.html#l00062">mx::math::func::jinc()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00120">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_f</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00121">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_m</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_n</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00127">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_p</a>.</p>
+<p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00130">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00120">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00123">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_m</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00124">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_n</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00129">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_p</a>.</p>
 
 </div>
 </div>
@@ -236,9 +236,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Worker function for GSL Integration for the modified Fourier modes. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01362">1362</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02127">2127</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00128">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::_layer_i</a>, <a class="el" href="jinc_8hpp_source.html#l00062">mx::math::func::jinc()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00123">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_cq</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00120">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_f</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00121">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_m</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_n</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00125">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_spatialFilter</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00124">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_sq</a>.</p>
+<p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00130">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00120">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00125">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_cq</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00123">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_m</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00124">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_n</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00127">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_spatialFilter</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00126">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_sq</a>.</p>
 
 </div>
 </div>
@@ -272,9 +272,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Worker function for GSL Integration for a basis projected onto the modified Fourier modes. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01407">1407</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02172">2172</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00128">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::_layer_i</a>, <a class="el" href="jinc_8hpp_source.html#l00062">mx::math::func::jinc()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00120">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_f</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00138">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_mode_i</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00140">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;::m_modeCoeffs</a>.</p>
+<p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00130">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00120">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00140">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_mode_i</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00142">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_modeCoeffs</a>.</p>
 
 </div>
 </div>
@@ -322,9 +322,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00073">73</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00068">68</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00257">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::aosys</a>, <a class="el" href="jinc_8hpp_source.html#l00062">mx::math::func::jinc()</a>, <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00281">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::k</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00266">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::m</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00275">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::mp</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00269">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::n</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00278">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::np</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00263">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::p</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00272">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::pp</a>.</p>
+<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00252">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::aosys</a>, <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00276">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::k</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00261">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::m</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00270">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::mp</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00264">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::n</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00273">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::np</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00258">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::p</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00267">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::pp</a>.</p>
 
 </div>
 </div>
@@ -381,7 +381,7 @@ template&lt;typename imageT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="varmapToImage_8hpp_source.html#l00029">29</a> of file <a class="el" href="varmapToImage_8hpp_source.html">varmapToImage.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00426">mx::AO::analysis::fourierPSDMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00413">mx::AO::analysis::fourierPSDMap()</a>.</p>
 
 </div>
 </div>
@@ -467,7 +467,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

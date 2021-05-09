@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: improc/fitsFile.hpp File Reference</title>
+<title>mxlib: ioutils/fits/fitsFile.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('fitsFile_8hpp.html',''); initResizable
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">fitsFile.hpp File Reference<div class="ingroups"><a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a><a class="el" href="group__image__processing.html">Image Processing</a> &raquo;  &#124; <a class="el" href="group__image__processing__files.html">Image Processing Files</a> &raquo; <a class="el" href="group__fits__processing__files.html">FITS Files Files</a></div></div>  </div>
+<div class="title">fitsFile.hpp File Reference<div class="ingroups"><a class="el" href="group__utils.html">General Utilities</a> &raquo; <a class="el" href="group__ioutils.html">Input/Output Utilities</a> &#124; <a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a><a class="el" href="group__image__processing.html">Image Processing</a> &raquo;  &#124; <a class="el" href="group__image__processing__files.html">Image Processing Files</a> &raquo; <a class="el" href="group__fits__processing__files.html">FITS Files Files</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,8 +104,8 @@ $(document).ready(function(){initNavTree('fitsFile_8hpp.html',''); initResizable
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
-</div><div class="textblock"><code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../mxError.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="eigenImage_8hpp_source.html">eigenImage.hpp</a>&quot;</code><br />
+</div><div class="textblock"><code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../../mxError.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eigenImage_8hpp_source.html">../../improc/eigenImage.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>&quot;</code><br />
 </div>
@@ -113,8 +113,8 @@ $(document).ready(function(){initNavTree('fitsFile_8hpp.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1fitsFile.html">mx::improc::fitsFile&lt; dataT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage interactions with a FITS file.  <a href="classmx_1_1improc_1_1fitsFile.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile&lt; dataT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage interactions with a FITS file.  <a href="classmx_1_1fits_1_1fitsFile.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -126,69 +126,69 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gae441bf333c0da52071b31bf9f367b03f"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gae441bf333c0da52071b31bf9f367b03f">mx::improc::fitsFilec</a></td></tr>
-<tr class="memdesc:gae441bf333c0da52071b31bf9f367b03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed characters.  <a href="group__fits__processing__typedefs.html#gae441bf333c0da52071b31bf9f367b03f">More...</a><br /></td></tr>
-<tr class="separator:gae441bf333c0da52071b31bf9f367b03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4e9637fad47f9a4a2b33e7aa81c1b38"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gac4e9637fad47f9a4a2b33e7aa81c1b38">mx::improc::fitsFileuc</a></td></tr>
-<tr class="memdesc:gac4e9637fad47f9a4a2b33e7aa81c1b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in unsigned characters.  <a href="group__fits__processing__typedefs.html#gac4e9637fad47f9a4a2b33e7aa81c1b38">More...</a><br /></td></tr>
-<tr class="separator:gac4e9637fad47f9a4a2b33e7aa81c1b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga76221c72a1c7fb82e6f02e3a657a5495"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga76221c72a1c7fb82e6f02e3a657a5495">mx::improc::fitsFiles</a></td></tr>
-<tr class="memdesc:ga76221c72a1c7fb82e6f02e3a657a5495"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed short integers.  <a href="group__fits__processing__typedefs.html#ga76221c72a1c7fb82e6f02e3a657a5495">More...</a><br /></td></tr>
-<tr class="separator:ga76221c72a1c7fb82e6f02e3a657a5495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9b6002dec4d8278b4f6e380ffbf0a6a"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gab9b6002dec4d8278b4f6e380ffbf0a6a">mx::improc::fitsFileus</a></td></tr>
-<tr class="memdesc:gab9b6002dec4d8278b4f6e380ffbf0a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in unsigned short integers.  <a href="group__fits__processing__typedefs.html#gab9b6002dec4d8278b4f6e380ffbf0a6a">More...</a><br /></td></tr>
-<tr class="separator:gab9b6002dec4d8278b4f6e380ffbf0a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae7d4d92f6e73d0fd438d60d10da346f8"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gae7d4d92f6e73d0fd438d60d10da346f8">mx::improc::fitsFilei</a></td></tr>
-<tr class="memdesc:gae7d4d92f6e73d0fd438d60d10da346f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed integers.  <a href="group__fits__processing__typedefs.html#gae7d4d92f6e73d0fd438d60d10da346f8">More...</a><br /></td></tr>
-<tr class="separator:gae7d4d92f6e73d0fd438d60d10da346f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7b164ebc7d5361458d8ca26cfdadf00d"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga7b164ebc7d5361458d8ca26cfdadf00d">mx::improc::fitsFileui</a></td></tr>
-<tr class="memdesc:ga7b164ebc7d5361458d8ca26cfdadf00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in unsigned integers.  <a href="group__fits__processing__typedefs.html#ga7b164ebc7d5361458d8ca26cfdadf00d">More...</a><br /></td></tr>
-<tr class="separator:ga7b164ebc7d5361458d8ca26cfdadf00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8427826af10fde19323ba91f7a647916"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga8427826af10fde19323ba91f7a647916">mx::improc::fitsFilel</a></td></tr>
-<tr class="memdesc:ga8427826af10fde19323ba91f7a647916"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed long integers.  <a href="group__fits__processing__typedefs.html#ga8427826af10fde19323ba91f7a647916">More...</a><br /></td></tr>
-<tr class="separator:ga8427826af10fde19323ba91f7a647916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2898f253c0ca0eae5f6353c6ee4cb51a"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga2898f253c0ca0eae5f6353c6ee4cb51a">mx::improc::fitsFilef</a></td></tr>
-<tr class="memdesc:ga2898f253c0ca0eae5f6353c6ee4cb51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in single precision floats.  <a href="group__fits__processing__typedefs.html#ga2898f253c0ca0eae5f6353c6ee4cb51a">More...</a><br /></td></tr>
-<tr class="separator:ga2898f253c0ca0eae5f6353c6ee4cb51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadea7e3107c8ea9260ada836cfc9f1d21"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gadea7e3107c8ea9260ada836cfc9f1d21">mx::improc::fitsFiled</a></td></tr>
-<tr class="memdesc:gadea7e3107c8ea9260ada836cfc9f1d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in double precision.  <a href="group__fits__processing__typedefs.html#gadea7e3107c8ea9260ada836cfc9f1d21">More...</a><br /></td></tr>
-<tr class="separator:gadea7e3107c8ea9260ada836cfc9f1d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fc2692ed89d1f1581401f81d82cdc19"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga3fc2692ed89d1f1581401f81d82cdc19">mx::fits::fitsFilec</a></td></tr>
+<tr class="memdesc:ga3fc2692ed89d1f1581401f81d82cdc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed characters.  <a href="group__fits__processing__typedefs.html#ga3fc2692ed89d1f1581401f81d82cdc19">More...</a><br /></td></tr>
+<tr class="separator:ga3fc2692ed89d1f1581401f81d82cdc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e37919bc571f3de3c1a0ac0ce71f127"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga7e37919bc571f3de3c1a0ac0ce71f127">mx::fits::fitsFileuc</a></td></tr>
+<tr class="memdesc:ga7e37919bc571f3de3c1a0ac0ce71f127"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in unsigned characters.  <a href="group__fits__processing__typedefs.html#ga7e37919bc571f3de3c1a0ac0ce71f127">More...</a><br /></td></tr>
+<tr class="separator:ga7e37919bc571f3de3c1a0ac0ce71f127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga338a0c61a0a474043e2c52f98f0ba35b"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga338a0c61a0a474043e2c52f98f0ba35b">mx::fits::fitsFiles</a></td></tr>
+<tr class="memdesc:ga338a0c61a0a474043e2c52f98f0ba35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed short integers.  <a href="group__fits__processing__typedefs.html#ga338a0c61a0a474043e2c52f98f0ba35b">More...</a><br /></td></tr>
+<tr class="separator:ga338a0c61a0a474043e2c52f98f0ba35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c1976198a94b51ed17efb79a5b4e586"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga2c1976198a94b51ed17efb79a5b4e586">mx::fits::fitsFileus</a></td></tr>
+<tr class="memdesc:ga2c1976198a94b51ed17efb79a5b4e586"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in unsigned short integers.  <a href="group__fits__processing__typedefs.html#ga2c1976198a94b51ed17efb79a5b4e586">More...</a><br /></td></tr>
+<tr class="separator:ga2c1976198a94b51ed17efb79a5b4e586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61b18b9d5bd704e4c9dbc5e75bd1aacc"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga61b18b9d5bd704e4c9dbc5e75bd1aacc">mx::fits::fitsFilei</a></td></tr>
+<tr class="memdesc:ga61b18b9d5bd704e4c9dbc5e75bd1aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed integers.  <a href="group__fits__processing__typedefs.html#ga61b18b9d5bd704e4c9dbc5e75bd1aacc">More...</a><br /></td></tr>
+<tr class="separator:ga61b18b9d5bd704e4c9dbc5e75bd1aacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa48e4d2bb7f7b9c40dad60f41e19236b"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gaa48e4d2bb7f7b9c40dad60f41e19236b">mx::fits::fitsFileui</a></td></tr>
+<tr class="memdesc:gaa48e4d2bb7f7b9c40dad60f41e19236b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in unsigned integers.  <a href="group__fits__processing__typedefs.html#gaa48e4d2bb7f7b9c40dad60f41e19236b">More...</a><br /></td></tr>
+<tr class="separator:gaa48e4d2bb7f7b9c40dad60f41e19236b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga296fd9ec23d5a33f8d3a001c48e6bddd"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga296fd9ec23d5a33f8d3a001c48e6bddd">mx::fits::fitsFilel</a></td></tr>
+<tr class="memdesc:ga296fd9ec23d5a33f8d3a001c48e6bddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed long integers.  <a href="group__fits__processing__typedefs.html#ga296fd9ec23d5a33f8d3a001c48e6bddd">More...</a><br /></td></tr>
+<tr class="separator:ga296fd9ec23d5a33f8d3a001c48e6bddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd3b6ec64781ac3b5bf5602fd67ab7c0"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gafd3b6ec64781ac3b5bf5602fd67ab7c0">mx::fits::fitsFilef</a></td></tr>
+<tr class="memdesc:gafd3b6ec64781ac3b5bf5602fd67ab7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in single precision floats.  <a href="group__fits__processing__typedefs.html#gafd3b6ec64781ac3b5bf5602fd67ab7c0">More...</a><br /></td></tr>
+<tr class="separator:gafd3b6ec64781ac3b5bf5602fd67ab7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9bb827e84ee13d7640fe5ecba2b4de4"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4">mx::fits::fitsFiled</a></td></tr>
+<tr class="memdesc:gab9bb827e84ee13d7640fe5ecba2b4de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in double precision.  <a href="group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4">More...</a><br /></td></tr>
+<tr class="separator:gab9bb827e84ee13d7640fe5ecba2b4de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gae441bf333c0da52071b31bf9f367b03f"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gae441bf333c0da52071b31bf9f367b03f">mx::improc::fitsFilec</a></td></tr>
-<tr class="memdesc:gae441bf333c0da52071b31bf9f367b03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed characters.  <a href="group__fits__processing__typedefs.html#gae441bf333c0da52071b31bf9f367b03f">More...</a><br /></td></tr>
-<tr class="separator:gae441bf333c0da52071b31bf9f367b03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4e9637fad47f9a4a2b33e7aa81c1b38"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gac4e9637fad47f9a4a2b33e7aa81c1b38">mx::improc::fitsFileuc</a></td></tr>
-<tr class="memdesc:gac4e9637fad47f9a4a2b33e7aa81c1b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in unsigned characters.  <a href="group__fits__processing__typedefs.html#gac4e9637fad47f9a4a2b33e7aa81c1b38">More...</a><br /></td></tr>
-<tr class="separator:gac4e9637fad47f9a4a2b33e7aa81c1b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga76221c72a1c7fb82e6f02e3a657a5495"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga76221c72a1c7fb82e6f02e3a657a5495">mx::improc::fitsFiles</a></td></tr>
-<tr class="memdesc:ga76221c72a1c7fb82e6f02e3a657a5495"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed short integers.  <a href="group__fits__processing__typedefs.html#ga76221c72a1c7fb82e6f02e3a657a5495">More...</a><br /></td></tr>
-<tr class="separator:ga76221c72a1c7fb82e6f02e3a657a5495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9b6002dec4d8278b4f6e380ffbf0a6a"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gab9b6002dec4d8278b4f6e380ffbf0a6a">mx::improc::fitsFileus</a></td></tr>
-<tr class="memdesc:gab9b6002dec4d8278b4f6e380ffbf0a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in unsigned short integers.  <a href="group__fits__processing__typedefs.html#gab9b6002dec4d8278b4f6e380ffbf0a6a">More...</a><br /></td></tr>
-<tr class="separator:gab9b6002dec4d8278b4f6e380ffbf0a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae7d4d92f6e73d0fd438d60d10da346f8"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gae7d4d92f6e73d0fd438d60d10da346f8">mx::improc::fitsFilei</a></td></tr>
-<tr class="memdesc:gae7d4d92f6e73d0fd438d60d10da346f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed integers.  <a href="group__fits__processing__typedefs.html#gae7d4d92f6e73d0fd438d60d10da346f8">More...</a><br /></td></tr>
-<tr class="separator:gae7d4d92f6e73d0fd438d60d10da346f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7b164ebc7d5361458d8ca26cfdadf00d"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga7b164ebc7d5361458d8ca26cfdadf00d">mx::improc::fitsFileui</a></td></tr>
-<tr class="memdesc:ga7b164ebc7d5361458d8ca26cfdadf00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in unsigned integers.  <a href="group__fits__processing__typedefs.html#ga7b164ebc7d5361458d8ca26cfdadf00d">More...</a><br /></td></tr>
-<tr class="separator:ga7b164ebc7d5361458d8ca26cfdadf00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8427826af10fde19323ba91f7a647916"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga8427826af10fde19323ba91f7a647916">mx::improc::fitsFilel</a></td></tr>
-<tr class="memdesc:ga8427826af10fde19323ba91f7a647916"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in signed long integers.  <a href="group__fits__processing__typedefs.html#ga8427826af10fde19323ba91f7a647916">More...</a><br /></td></tr>
-<tr class="separator:ga8427826af10fde19323ba91f7a647916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2898f253c0ca0eae5f6353c6ee4cb51a"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga2898f253c0ca0eae5f6353c6ee4cb51a">mx::improc::fitsFilef</a></td></tr>
-<tr class="memdesc:ga2898f253c0ca0eae5f6353c6ee4cb51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in single precision floats.  <a href="group__fits__processing__typedefs.html#ga2898f253c0ca0eae5f6353c6ee4cb51a">More...</a><br /></td></tr>
-<tr class="separator:ga2898f253c0ca0eae5f6353c6ee4cb51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadea7e3107c8ea9260ada836cfc9f1d21"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gadea7e3107c8ea9260ada836cfc9f1d21">mx::improc::fitsFiled</a></td></tr>
-<tr class="memdesc:gadea7e3107c8ea9260ada836cfc9f1d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1improc_1_1fitsFile.html">fitsFile</a> to work in double precision.  <a href="group__fits__processing__typedefs.html#gadea7e3107c8ea9260ada836cfc9f1d21">More...</a><br /></td></tr>
-<tr class="separator:gadea7e3107c8ea9260ada836cfc9f1d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fc2692ed89d1f1581401f81d82cdc19"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga3fc2692ed89d1f1581401f81d82cdc19">mx::fits::fitsFilec</a></td></tr>
+<tr class="memdesc:ga3fc2692ed89d1f1581401f81d82cdc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed characters.  <a href="group__fits__processing__typedefs.html#ga3fc2692ed89d1f1581401f81d82cdc19">More...</a><br /></td></tr>
+<tr class="separator:ga3fc2692ed89d1f1581401f81d82cdc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e37919bc571f3de3c1a0ac0ce71f127"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga7e37919bc571f3de3c1a0ac0ce71f127">mx::fits::fitsFileuc</a></td></tr>
+<tr class="memdesc:ga7e37919bc571f3de3c1a0ac0ce71f127"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in unsigned characters.  <a href="group__fits__processing__typedefs.html#ga7e37919bc571f3de3c1a0ac0ce71f127">More...</a><br /></td></tr>
+<tr class="separator:ga7e37919bc571f3de3c1a0ac0ce71f127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga338a0c61a0a474043e2c52f98f0ba35b"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga338a0c61a0a474043e2c52f98f0ba35b">mx::fits::fitsFiles</a></td></tr>
+<tr class="memdesc:ga338a0c61a0a474043e2c52f98f0ba35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed short integers.  <a href="group__fits__processing__typedefs.html#ga338a0c61a0a474043e2c52f98f0ba35b">More...</a><br /></td></tr>
+<tr class="separator:ga338a0c61a0a474043e2c52f98f0ba35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c1976198a94b51ed17efb79a5b4e586"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga2c1976198a94b51ed17efb79a5b4e586">mx::fits::fitsFileus</a></td></tr>
+<tr class="memdesc:ga2c1976198a94b51ed17efb79a5b4e586"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in unsigned short integers.  <a href="group__fits__processing__typedefs.html#ga2c1976198a94b51ed17efb79a5b4e586">More...</a><br /></td></tr>
+<tr class="separator:ga2c1976198a94b51ed17efb79a5b4e586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61b18b9d5bd704e4c9dbc5e75bd1aacc"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga61b18b9d5bd704e4c9dbc5e75bd1aacc">mx::fits::fitsFilei</a></td></tr>
+<tr class="memdesc:ga61b18b9d5bd704e4c9dbc5e75bd1aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed integers.  <a href="group__fits__processing__typedefs.html#ga61b18b9d5bd704e4c9dbc5e75bd1aacc">More...</a><br /></td></tr>
+<tr class="separator:ga61b18b9d5bd704e4c9dbc5e75bd1aacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa48e4d2bb7f7b9c40dad60f41e19236b"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gaa48e4d2bb7f7b9c40dad60f41e19236b">mx::fits::fitsFileui</a></td></tr>
+<tr class="memdesc:gaa48e4d2bb7f7b9c40dad60f41e19236b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in unsigned integers.  <a href="group__fits__processing__typedefs.html#gaa48e4d2bb7f7b9c40dad60f41e19236b">More...</a><br /></td></tr>
+<tr class="separator:gaa48e4d2bb7f7b9c40dad60f41e19236b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga296fd9ec23d5a33f8d3a001c48e6bddd"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#ga296fd9ec23d5a33f8d3a001c48e6bddd">mx::fits::fitsFilel</a></td></tr>
+<tr class="memdesc:ga296fd9ec23d5a33f8d3a001c48e6bddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in signed long integers.  <a href="group__fits__processing__typedefs.html#ga296fd9ec23d5a33f8d3a001c48e6bddd">More...</a><br /></td></tr>
+<tr class="separator:ga296fd9ec23d5a33f8d3a001c48e6bddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd3b6ec64781ac3b5bf5602fd67ab7c0"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gafd3b6ec64781ac3b5bf5602fd67ab7c0">mx::fits::fitsFilef</a></td></tr>
+<tr class="memdesc:gafd3b6ec64781ac3b5bf5602fd67ab7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in single precision floats.  <a href="group__fits__processing__typedefs.html#gafd3b6ec64781ac3b5bf5602fd67ab7c0">More...</a><br /></td></tr>
+<tr class="separator:gafd3b6ec64781ac3b5bf5602fd67ab7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9bb827e84ee13d7640fe5ecba2b4de4"><td class="memItemLeft" align="right" valign="top">typedef fitsFile&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4">mx::fits::fitsFiled</a></td></tr>
+<tr class="memdesc:gab9bb827e84ee13d7640fe5ecba2b4de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a> to work in double precision.  <a href="group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4">More...</a><br /></td></tr>
+<tr class="separator:gab9bb827e84ee13d7640fe5ecba2b4de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="fitsFile_8hpp.html">fitsFile.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="dir_1da8549ee5c4fb2fde3d8729e33c7119.html">fits</a></li><li class="navelem"><a class="el" href="fitsFile_8hpp.html">fitsFile.hpp</a></li>
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -16,16 +16,17 @@ var group__gen__math =
       [ "_min", "classmx_1_1math_1_1histogramUniform.html#adb3dd7e506a813c57ab4933efc9f9e26", null ],
       [ "_width", "classmx_1_1math_1_1histogramUniform.html#a3c1c0efcea25c4e0006539472c815079", null ]
     ] ],
+    [ "Constants and units", "group__constants.html", "group__constants" ],
     [ "Geometry and Geodesy", "group__geo.html", "group__geo" ],
     [ "Special Functions", "group__functions.html", "group__functions" ],
     [ "Templatized BLAS and Lapack", "group__template__blaslap.html", "group__template__blaslap" ],
-    [ "Eigen Lapack interfaces", "group__eigen__lapack.html", "group__eigen__lapack" ],
     [ "Interpolation", "group__interpolation.html", "group__interpolation" ],
     [ "Data Fitting", "group__fitting.html", "group__fitting" ],
     [ "Plotting Data", "group__plotting.html", "group__plotting" ],
     [ "Random Numbers", "group__random.html", "group__random" ],
     [ "Vector Utilities", "group__vectorutils.html", "group__vectorutils" ],
-    [ "Physical Constants", "group__phyconstants.html", "group__phyconstants" ],
+    [ "Fast Fourier Transforms", "group__fft.html", "group__fft" ],
+    [ "NVIDIA Cuda Interface", "group__cuda.html", "group__cuda" ],
     [ "Gen. Math Files", "group__gen__math__files.html", "group__gen__math__files" ],
     [ "quarticRoots", "group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc", null ]
 ];

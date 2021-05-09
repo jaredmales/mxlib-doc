@@ -100,9 +100,9 @@ $(document).ready(function(){initNavTree('classmx_1_1app_1_1application.html',''
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>A class for managing application configuration and execution. </p>
 <p>Derived classes should implement at a minimum</p>
-<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">setupConfig</a>();</div>
-<div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd">loadConfig</a>();</div>
-<div class="line"><span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07">execute</a>();</div>
+<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">setupConfig</a>();</div>
+<div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmx_1_1app_1_1application.html#a2052563fd51b964e7e47ad84f59e90f9">loadConfig</a>();</div>
+<div class="line"><span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c">execute</a>();</div>
 </div><!-- fragment --><p>These are executed in the order shown by the call to <a class="el" href="classmx_1_1app_1_1application.html#a5b36195275336bf938432c8931b70090">main()</a>.</p>
 <p>This class uses a cascaded configuration system. The application configuration is built up from the following sources, in increasing order of precedence:</p><ul>
 <li>A global configuration file</li>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('classmx_1_1app_1_1application.html',''
 </ul>
 <p>At each step in the above order, values read from that configuration source override any previous settings. So the command line has the highest precedence.</p>
 <p>The configuration is set up and accessed using an object of type <a class="el" href="structmx_1_1app_1_1appConfigurator.html">appConfigurator</a> named <code>config</code>. For specification of the configuration file syntax and command line arguments see <a class="el" href="structmx_1_1app_1_1appConfigurator.html">appConfigurator</a>.</p>
-<p>The configuration should be set up in the <a class="el" href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">setupConfig</a> function. This is normally done using the <a class="el" href="structmx_1_1app_1_1appConfigurator.html#a313073f6960bf0480c642d61dad3e90a" title="Add a configTarget.">appConfigurator::add</a> method, as in: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> derived_class::setupConfig()</div>
+<p>The configuration should be set up in the <a class="el" href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">setupConfig</a> function. This is normally done using the <a class="el" href="structmx_1_1app_1_1appConfigurator.html#a313073f6960bf0480c642d61dad3e90a" title="Add a configTarget.">appConfigurator::add</a> method, as in: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> derived_class::setupConfig()</div>
 <div class="line">{</div>
 <div class="line">   <a class="code" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a>.<a class="code" href="structmx_1_1app_1_1appConfigurator.html#a313073f6960bf0480c642d61dad3e90a">add</a>(<span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;s&quot;</span>, <span class="stringliteral">&quot;long&quot;</span>, argType::Required, <span class="stringliteral">&quot;section&quot;</span>, <span class="stringliteral">&quot;keyword&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;int&quot;</span>, <span class="stringliteral">&quot;help message&quot;</span>);</div>
 <div class="line">}</div>
@@ -126,10 +126,10 @@ $(document).ready(function(){initNavTree('classmx_1_1app_1_1application.html',''
 keyword=2
 </pre><p> then val will be set to 2. Otherwise, <code>val</code> will remain 0.</p>
 <p>Standard target <code>-h</code>/<code>--help</code> with name "help" to trigger printing a help message, and <code>-c</code>/<code>--config</code> with name "config" to pass a config file via the command line. This behavior can be changed by overriding functions.</p>
-<dl class="section note"><dt>Note</dt><dd>After <a class="el" href="classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd" title="Override this function to extract the configured values and set up the application.">loadConfig()</a> but before <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07" title="This function is where the derived class should do its work.">execute()</a>, the containers in <a class="el" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a> are de-allocated , so they can not be used inside execute.</dd></dl>
-<p>A standard help message is produced when requested by the <code>-h</code>/<code>--help</code> option. This behavior can be changed by overriding the <a class="el" href="classmx_1_1app_1_1application.html#ab9ea338aac65dcbbf4ee137345251bb9">help</a> method. </p>
+<dl class="section note"><dt>Note</dt><dd>After <a class="el" href="classmx_1_1app_1_1application.html#a2052563fd51b964e7e47ad84f59e90f9" title="Override this function to extract the configured values and set up the application.">loadConfig()</a> but before <a class="el" href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c" title="This function is where the derived class should do its work.">execute()</a>, the containers in <a class="el" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a> are de-allocated , so they can not be used inside execute.</dd></dl>
+<p>A standard help message is produced when requested by the <code>-h</code>/<code>--help</code> option. This behavior can be changed by overriding the <a class="el" href="classmx_1_1app_1_1application.html#ab64fba8d9d1dde986dccb4de209e320e">help</a> method. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00098">98</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00097">97</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="application_8hpp_source.html">app/application.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -153,79 +153,91 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Required Overrides</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods should be implemented in derived classes to use an mx::application in its default behavior. </p>
 </div></td></tr>
-<tr class="memitem:aef06b84e72313b842d3339698cd38588"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">setupConfig</a> ()</td></tr>
-<tr class="memdesc:aef06b84e72313b842d3339698cd38588"><td class="mdescLeft">&#160;</td><td class="mdescRight">In derived classes this is where the config targets are added to <a class="el" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a>.  <a href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">More...</a><br /></td></tr>
-<tr class="separator:aef06b84e72313b842d3339698cd38588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634a9602f1d9769ab6d4671781f2e9fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd">loadConfig</a> ()</td></tr>
-<tr class="memdesc:a634a9602f1d9769ab6d4671781f2e9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this function to extract the configured values and set up the application.  <a href="classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd">More...</a><br /></td></tr>
-<tr class="separator:a634a9602f1d9769ab6d4671781f2e9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac24cfb6644b01b20b5ddaa582a3e0e07"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07">execute</a> ()</td></tr>
-<tr class="memdesc:ac24cfb6644b01b20b5ddaa582a3e0e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is where the derived class should do its work. <br  />
-  <a href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07">More...</a><br /></td></tr>
-<tr class="separator:ac24cfb6644b01b20b5ddaa582a3e0e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17540b037b8d22bb4dd2b14b7d868ff4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">setupConfig</a> ()</td></tr>
+<tr class="memdesc:a17540b037b8d22bb4dd2b14b7d868ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">In derived classes this is where the config targets are added to <a class="el" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a>.  <a href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">More...</a><br /></td></tr>
+<tr class="separator:a17540b037b8d22bb4dd2b14b7d868ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2052563fd51b964e7e47ad84f59e90f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a2052563fd51b964e7e47ad84f59e90f9">loadConfig</a> ()</td></tr>
+<tr class="memdesc:a2052563fd51b964e7e47ad84f59e90f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this function to extract the configured values and set up the application.  <a href="classmx_1_1app_1_1application.html#a2052563fd51b964e7e47ad84f59e90f9">More...</a><br /></td></tr>
+<tr class="separator:a2052563fd51b964e7e47ad84f59e90f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c8db5d7158b786ed8352e34672994c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c">execute</a> ()</td></tr>
+<tr class="memdesc:a86c8db5d7158b786ed8352e34672994c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is where the derived class should do its work. <br  />
+  <a href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c">More...</a><br /></td></tr>
+<tr class="separator:a86c8db5d7158b786ed8352e34672994c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Optional Overrides</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods do not need to be implemented in derived classes unless it is desired to change behavior. </p>
 </div></td></tr>
-<tr class="memitem:a01f476cbf421456b3ebd68a2e76c7f77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a01f476cbf421456b3ebd68a2e76c7f77">setup</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:a01f476cbf421456b3ebd68a2e76c7f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the application by executing the configuration steps.  <a href="classmx_1_1app_1_1application.html#a01f476cbf421456b3ebd68a2e76c7f77">More...</a><br /></td></tr>
-<tr class="separator:a01f476cbf421456b3ebd68a2e76c7f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f889150e5b09e20483fd2141545203"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a70f889150e5b09e20483fd2141545203">setup</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a70f889150e5b09e20483fd2141545203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the application by executing the configuration steps.  <a href="classmx_1_1app_1_1application.html#a70f889150e5b09e20483fd2141545203">More...</a><br /></td></tr>
+<tr class="separator:a70f889150e5b09e20483fd2141545203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4de6a6fb28915ccd19704becf2ee41e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a4de6a6fb28915ccd19704becf2ee41e6">reReadConfig</a> ()</td></tr>
 <tr class="memdesc:a4de6a6fb28915ccd19704becf2ee41e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-read the config stack.  <a href="classmx_1_1app_1_1application.html#a4de6a6fb28915ccd19704becf2ee41e6">More...</a><br /></td></tr>
 <tr class="separator:a4de6a6fb28915ccd19704becf2ee41e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0988327074975446f7b86ac7d77179e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ab0988327074975446f7b86ac7d77179e">setDefaults</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:ab0988327074975446f7b86ac7d77179e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default search paths for config files.  <a href="classmx_1_1app_1_1application.html#ab0988327074975446f7b86ac7d77179e">More...</a><br /></td></tr>
-<tr class="separator:ab0988327074975446f7b86ac7d77179e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d5b8790e68231cc5e223264f979da9b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a1d5b8790e68231cc5e223264f979da9b">setupStandardConfig</a> ()</td></tr>
-<tr class="memdesc:a1d5b8790e68231cc5e223264f979da9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the command-line config option in a standard way.  <a href="classmx_1_1app_1_1application.html#a1d5b8790e68231cc5e223264f979da9b">More...</a><br /></td></tr>
-<tr class="separator:a1d5b8790e68231cc5e223264f979da9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a387b6a3a587c4fba345c5e9ecf56f67b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a387b6a3a587c4fba345c5e9ecf56f67b">setupStandardHelp</a> ()</td></tr>
-<tr class="memdesc:a387b6a3a587c4fba345c5e9ecf56f67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the help an options in a standard way.  <a href="classmx_1_1app_1_1application.html#a387b6a3a587c4fba345c5e9ecf56f67b">More...</a><br /></td></tr>
-<tr class="separator:a387b6a3a587c4fba345c5e9ecf56f67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55e42652e11a337e9589e833159f244f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a55e42652e11a337e9589e833159f244f">loadStandardConfig</a> ()</td></tr>
-<tr class="memdesc:a55e42652e11a337e9589e833159f244f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the values of "config".  <a href="classmx_1_1app_1_1application.html#a55e42652e11a337e9589e833159f244f">More...</a><br /></td></tr>
-<tr class="separator:a55e42652e11a337e9589e833159f244f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb7ca1def5cbfc103fe9b6365d2dcf10"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#adb7ca1def5cbfc103fe9b6365d2dcf10">loadStandardHelp</a> ()</td></tr>
-<tr class="memdesc:adb7ca1def5cbfc103fe9b6365d2dcf10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the value of "help" into doHelp.  <a href="classmx_1_1app_1_1application.html#adb7ca1def5cbfc103fe9b6365d2dcf10">More...</a><br /></td></tr>
-<tr class="separator:adb7ca1def5cbfc103fe9b6365d2dcf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa899549ba39024a3039bd322ef6358ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#aa899549ba39024a3039bd322ef6358ba">optionHelp</a> (<a class="el" href="structmx_1_1app_1_1configTarget.html">configTarget</a> &amp;tgt, <a class="el" href="structmx_1_1ioutils_1_1textTable.html">ioutils::textTable</a> &amp;tt)</td></tr>
-<tr class="memdesc:aa899549ba39024a3039bd322ef6358ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format a <a class="el" href="structmx_1_1app_1_1configTarget.html" title="A configuration target.">configTarget</a> for the help message.  <a href="classmx_1_1app_1_1application.html#aa899549ba39024a3039bd322ef6358ba">More...</a><br /></td></tr>
-<tr class="separator:aa899549ba39024a3039bd322ef6358ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0499dea50a9dc99b5454a43e85b97f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ac0499dea50a9dc99b5454a43e85b97f3">setupBasicConfig</a> ()</td></tr>
-<tr class="memdesc:ac0499dea50a9dc99b5454a43e85b97f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup a basic configuration. Can be used in an intermediate derived class to allow its children to use setupConfig.  <a href="classmx_1_1app_1_1application.html#ac0499dea50a9dc99b5454a43e85b97f3">More...</a><br /></td></tr>
-<tr class="separator:ac0499dea50a9dc99b5454a43e85b97f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3a23361cf44dd65f276787b492c404"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a4c3a23361cf44dd65f276787b492c404">loadBasicConfig</a> ()</td></tr>
-<tr class="memdesc:a4c3a23361cf44dd65f276787b492c404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a basic configuration. Can be used in an intermediate derived class to allow its children to use loadConfig.  <a href="classmx_1_1app_1_1application.html#a4c3a23361cf44dd65f276787b492c404">More...</a><br /></td></tr>
-<tr class="separator:a4c3a23361cf44dd65f276787b492c404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a367826f91fc31399de81453ff6c8c841"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a367826f91fc31399de81453ff6c8c841">checkConfig</a> ()</td></tr>
-<tr class="memdesc:a367826f91fc31399de81453ff6c8c841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the config. This is called at the end of setup, before the configuration is cleared.  <a href="classmx_1_1app_1_1application.html#a367826f91fc31399de81453ff6c8c841">More...</a><br /></td></tr>
-<tr class="separator:a367826f91fc31399de81453ff6c8c841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ea338aac65dcbbf4ee137345251bb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ab9ea338aac65dcbbf4ee137345251bb9">help</a> ()</td></tr>
-<tr class="memdesc:ab9ea338aac65dcbbf4ee137345251bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a formatted help message, based on the config target inputs.  <a href="classmx_1_1app_1_1application.html#ab9ea338aac65dcbbf4ee137345251bb9">More...</a><br /></td></tr>
-<tr class="separator:ab9ea338aac65dcbbf4ee137345251bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f28fedc313ee62d97a1a1f57668655a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a1f28fedc313ee62d97a1a1f57668655a">setDefaults</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a1f28fedc313ee62d97a1a1f57668655a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default search paths for config files.  <a href="classmx_1_1app_1_1application.html#a1f28fedc313ee62d97a1a1f57668655a">More...</a><br /></td></tr>
+<tr class="separator:a1f28fedc313ee62d97a1a1f57668655a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800551d816913f5dc01bab92bdb84e0f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a800551d816913f5dc01bab92bdb84e0f">setupStandardConfig</a> ()</td></tr>
+<tr class="memdesc:a800551d816913f5dc01bab92bdb84e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the command-line config option in a standard way.  <a href="classmx_1_1app_1_1application.html#a800551d816913f5dc01bab92bdb84e0f">More...</a><br /></td></tr>
+<tr class="separator:a800551d816913f5dc01bab92bdb84e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce683a6bb7c722b06265e036986c48a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a5ce683a6bb7c722b06265e036986c48a">setupStandardHelp</a> ()</td></tr>
+<tr class="memdesc:a5ce683a6bb7c722b06265e036986c48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the help an options in a standard way.  <a href="classmx_1_1app_1_1application.html#a5ce683a6bb7c722b06265e036986c48a">More...</a><br /></td></tr>
+<tr class="separator:a5ce683a6bb7c722b06265e036986c48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6cc889061cf52aef5c0cb9c79e8e92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a6d6cc889061cf52aef5c0cb9c79e8e92">loadStandardConfig</a> ()</td></tr>
+<tr class="memdesc:a6d6cc889061cf52aef5c0cb9c79e8e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the values of "config".  <a href="classmx_1_1app_1_1application.html#a6d6cc889061cf52aef5c0cb9c79e8e92">More...</a><br /></td></tr>
+<tr class="separator:a6d6cc889061cf52aef5c0cb9c79e8e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedbf3ba9c8f80c087f4d7a38de8b9ce9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#aedbf3ba9c8f80c087f4d7a38de8b9ce9">loadStandardHelp</a> ()</td></tr>
+<tr class="memdesc:aedbf3ba9c8f80c087f4d7a38de8b9ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the value of "help" into doHelp.  <a href="classmx_1_1app_1_1application.html#aedbf3ba9c8f80c087f4d7a38de8b9ce9">More...</a><br /></td></tr>
+<tr class="separator:aedbf3ba9c8f80c087f4d7a38de8b9ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5e0564d08c43952bfca88fd2e34021"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a6e5e0564d08c43952bfca88fd2e34021">optionHelp</a> (<a class="el" href="structmx_1_1app_1_1configTarget.html">configTarget</a> &amp;tgt, <a class="el" href="structmx_1_1ioutils_1_1textTable.html">ioutils::textTable</a> &amp;tt)</td></tr>
+<tr class="memdesc:a6e5e0564d08c43952bfca88fd2e34021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format a <a class="el" href="structmx_1_1app_1_1configTarget.html" title="A configuration target.">configTarget</a> for the help message.  <a href="classmx_1_1app_1_1application.html#a6e5e0564d08c43952bfca88fd2e34021">More...</a><br /></td></tr>
+<tr class="separator:a6e5e0564d08c43952bfca88fd2e34021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edcf166bbc755c4ace6e9421ed025be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a8edcf166bbc755c4ace6e9421ed025be">setupBasicConfig</a> ()</td></tr>
+<tr class="memdesc:a8edcf166bbc755c4ace6e9421ed025be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup a basic configuration. Can be used in an intermediate derived class to allow its children to use setupConfig.  <a href="classmx_1_1app_1_1application.html#a8edcf166bbc755c4ace6e9421ed025be">More...</a><br /></td></tr>
+<tr class="separator:a8edcf166bbc755c4ace6e9421ed025be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ec63e8922a9038b2c69088ce6f8fe8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a23ec63e8922a9038b2c69088ce6f8fe8">loadBasicConfig</a> ()</td></tr>
+<tr class="memdesc:a23ec63e8922a9038b2c69088ce6f8fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a basic configuration. Can be used in an intermediate derived class to allow its children to use loadConfig.  <a href="classmx_1_1app_1_1application.html#a23ec63e8922a9038b2c69088ce6f8fe8">More...</a><br /></td></tr>
+<tr class="separator:a23ec63e8922a9038b2c69088ce6f8fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62cbbde13a2daad4883334cf468f4724"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a62cbbde13a2daad4883334cf468f4724">checkConfig</a> ()</td></tr>
+<tr class="memdesc:a62cbbde13a2daad4883334cf468f4724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the config. This is called at the end of setup, before the configuration is cleared.  <a href="classmx_1_1app_1_1application.html#a62cbbde13a2daad4883334cf468f4724">More...</a><br /></td></tr>
+<tr class="separator:a62cbbde13a2daad4883334cf468f4724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64fba8d9d1dde986dccb4de209e320e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ab64fba8d9d1dde986dccb4de209e320e">help</a> ()</td></tr>
+<tr class="memdesc:ab64fba8d9d1dde986dccb4de209e320e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a formatted help message, based on the config target inputs.  <a href="classmx_1_1app_1_1application.html#ab64fba8d9d1dde986dccb4de209e320e">More...</a><br /></td></tr>
+<tr class="separator:ab64fba8d9d1dde986dccb4de209e320e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a0fb25be07bd15e3859fdafccb0a52b3c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a0fb25be07bd15e3859fdafccb0a52b3c">invokedName</a></td></tr>
 <tr class="memdesc:a0fb25be07bd15e3859fdafccb0a52b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name used to invoke this application.  <a href="classmx_1_1app_1_1application.html#a0fb25be07bd15e3859fdafccb0a52b3c">More...</a><br /></td></tr>
 <tr class="separator:a0fb25be07bd15e3859fdafccb0a52b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5513c8e7c87cbd557835a672c5c8f35a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a5513c8e7c87cbd557835a672c5c8f35a">configPathGlobal</a></td></tr>
-<tr class="memdesc:a5513c8e7c87cbd557835a672c5c8f35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to the gobal configuration file.  <a href="classmx_1_1app_1_1application.html#a5513c8e7c87cbd557835a672c5c8f35a">More...</a><br /></td></tr>
-<tr class="separator:a5513c8e7c87cbd557835a672c5c8f35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad923c5dc4a1861c9bb7fc08c37a483f0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ad923c5dc4a1861c9bb7fc08c37a483f0">m_configPathGlobal</a></td></tr>
+<tr class="memdesc:ad923c5dc4a1861c9bb7fc08c37a483f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to the gobal configuration file. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#ad923c5dc4a1861c9bb7fc08c37a483f0">More...</a><br /></td></tr>
+<tr class="separator:ad923c5dc4a1861c9bb7fc08c37a483f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf68e7174551a13864c961bb5e8bf6e4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#adf68e7174551a13864c961bb5e8bf6e4">m_configPathGlobal_env</a></td></tr>
+<tr class="memdesc:adf68e7174551a13864c961bb5e8bf6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment variable to check for the global config path. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#adf68e7174551a13864c961bb5e8bf6e4">More...</a><br /></td></tr>
+<tr class="separator:adf68e7174551a13864c961bb5e8bf6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23b2644d06767994c6ad9efb9e79bf4e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a23b2644d06767994c6ad9efb9e79bf4e">m_configPathUser</a></td></tr>
-<tr class="memdesc:a23b2644d06767994c6ad9efb9e79bf4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to the user's configuration file. If the first character is not '/' or '~', this is added to HOME.  <a href="classmx_1_1app_1_1application.html#a23b2644d06767994c6ad9efb9e79bf4e">More...</a><br /></td></tr>
+<tr class="memdesc:a23b2644d06767994c6ad9efb9e79bf4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to the user's configuration file. If the first character is not '/' or '~', this is added to HOME. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#a23b2644d06767994c6ad9efb9e79bf4e">More...</a><br /></td></tr>
 <tr class="separator:a23b2644d06767994c6ad9efb9e79bf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4853c8977b52daee7265c26f23e69a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#abf4853c8977b52daee7265c26f23e69a">configPathLocal</a></td></tr>
-<tr class="memdesc:abf4853c8977b52daee7265c26f23e69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to a local configuration file.  <a href="classmx_1_1app_1_1application.html#abf4853c8977b52daee7265c26f23e69a">More...</a><br /></td></tr>
-<tr class="separator:abf4853c8977b52daee7265c26f23e69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290f4c557b4f8bfd80eb71e6e4370268"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a290f4c557b4f8bfd80eb71e6e4370268">m_configPathUser_env</a></td></tr>
+<tr class="memdesc:a290f4c557b4f8bfd80eb71e6e4370268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment variable to check fo the user config path. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#a290f4c557b4f8bfd80eb71e6e4370268">More...</a><br /></td></tr>
+<tr class="separator:a290f4c557b4f8bfd80eb71e6e4370268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4961ead2a553afc12f04c9a894106e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#aef4961ead2a553afc12f04c9a894106e">m_configPathLocal</a></td></tr>
+<tr class="memdesc:aef4961ead2a553afc12f04c9a894106e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to a local configuration file. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#aef4961ead2a553afc12f04c9a894106e">More...</a><br /></td></tr>
+<tr class="separator:aef4961ead2a553afc12f04c9a894106e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6becc35e7352488bc37176ebea98e9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9">m_configPathLocal_env</a></td></tr>
+<tr class="memdesc:a7a6becc35e7352488bc37176ebea98e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment variable to check for the local config path. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9">More...</a><br /></td></tr>
+<tr class="separator:a7a6becc35e7352488bc37176ebea98e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d3365a3a2ef514ecad8b6cdd8ac563e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a8d3365a3a2ef514ecad8b6cdd8ac563e">m_requireConfigPathLocal</a> {true}</td></tr>
-<tr class="memdesc:a8d3365a3a2ef514ecad8b6cdd8ac563e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag controlling whether lack of a configuration file should be reported.  <a href="classmx_1_1app_1_1application.html#a8d3365a3a2ef514ecad8b6cdd8ac563e">More...</a><br /></td></tr>
+<tr class="memdesc:a8d3365a3a2ef514ecad8b6cdd8ac563e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag controlling whether lack of a local configuration file should be reported.  <a href="classmx_1_1app_1_1application.html#a8d3365a3a2ef514ecad8b6cdd8ac563e">More...</a><br /></td></tr>
 <tr class="separator:a8d3365a3a2ef514ecad8b6cdd8ac563e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac855a6ee4c54a29a99cfa01bed5d3d4f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#ac855a6ee4c54a29a99cfa01bed5d3d4f">m_configPathCL</a></td></tr>
 <tr class="memdesc:ac855a6ee4c54a29a99cfa01bed5d3d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path to a configuration file specified on the command line.  <a href="classmx_1_1app_1_1application.html#ac855a6ee4c54a29a99cfa01bed5d3d4f">More...</a><br /></td></tr>
 <tr class="separator:ac855a6ee4c54a29a99cfa01bed5d3d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a163d1bb2ad00ef7b0b0754b291303fbe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a163d1bb2ad00ef7b0b0754b291303fbe">m_configPathCLBase</a></td></tr>
-<tr class="memdesc:a163d1bb2ad00ef7b0b0754b291303fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base path to add to the CL path. Can be set by environment variable defined in MX_APP_DEFAULT_configPathCLBase_env.  <a href="classmx_1_1app_1_1application.html#a163d1bb2ad00ef7b0b0754b291303fbe">More...</a><br /></td></tr>
+<tr class="memdesc:a163d1bb2ad00ef7b0b0754b291303fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base path to add to the CL path. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#a163d1bb2ad00ef7b0b0754b291303fbe">More...</a><br /></td></tr>
 <tr class="separator:a163d1bb2ad00ef7b0b0754b291303fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef846f2cc068983150def215516afbda"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#aef846f2cc068983150def215516afbda">m_configPathCLBase_env</a></td></tr>
+<tr class="memdesc:aef846f2cc068983150def215516afbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment variable to check for the CL base path. Set in constructor to use.  <a href="classmx_1_1app_1_1application.html#aef846f2cc068983150def215516afbda">More...</a><br /></td></tr>
+<tr class="separator:aef846f2cc068983150def215516afbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a816787b0573764b05f9fea0138936018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">appConfigurator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a></td></tr>
 <tr class="memdesc:a816787b0573764b05f9fea0138936018"><td class="mdescLeft">&#160;</td><td class="mdescRight">The structure used for parsing and storing the configuration.  <a href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">More...</a><br /></td></tr>
 <tr class="separator:a816787b0573764b05f9fea0138936018"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,8 +270,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5f151b9ac674fce8ec607fa1914c2b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a367826f91fc31399de81453ff6c8c841"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a367826f91fc31399de81453ff6c8c841">&#9670;&nbsp;</a></span>checkConfig()</h2>
+<a id="a62cbbde13a2daad4883334cf468f4724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62cbbde13a2daad4883334cf468f4724">&#9670;&nbsp;</a></span>checkConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +280,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::checkConfig </td>
+          <td class="memname">virtual void mx::app::application::checkConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -276,7 +288,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -284,14 +296,10 @@ Protected Attributes</h2></td></tr>
 <p>Check the config. This is called at the end of setup, before the configuration is cleared. </p>
 <p>It is up to you to decide how to handle the outcome. If a bad config results in printing help, you can set the doHelp flag. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00492">492</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
-
 </div>
 </div>
-<a id="ac24cfb6644b01b20b5ddaa582a3e0e07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac24cfb6644b01b20b5ddaa582a3e0e07">&#9670;&nbsp;</a></span>execute()</h2>
+<a id="a86c8db5d7158b786ed8352e34672994c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c8db5d7158b786ed8352e34672994c">&#9670;&nbsp;</a></span>execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,7 +308,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mx::app::application::execute </td>
+          <td class="memname">virtual int mx::app::application::execute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -308,7 +316,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -317,14 +325,10 @@ Protected Attributes</h2></td></tr>
  </p>
 <p>The application will exit with the return value of execute. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00335">335</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00281">main()</a>.</p>
-
 </div>
 </div>
-<a id="ab9ea338aac65dcbbf4ee137345251bb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9ea338aac65dcbbf4ee137345251bb9">&#9670;&nbsp;</a></span>help()</h2>
+<a id="ab64fba8d9d1dde986dccb4de209e320e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64fba8d9d1dde986dccb4de209e320e">&#9670;&nbsp;</a></span>help()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +337,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::help </td>
+          <td class="memname">virtual void mx::app::application::help </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -341,23 +345,17 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Print a formatted help message, based on the config target inputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00541">541</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00102">mx::app::appConfigurator::clOnlyTargets</a>, <a class="el" href="application_8hpp_source.html#l00113">config</a>, <a class="el" href="application_8hpp_source.html#l00103">invokedName</a>, <a class="el" href="textTable_8hpp_source.html#l00072">mx::ioutils::textTable::m_colSep</a>, <a class="el" href="textTable_8hpp_source.html#l00061">mx::ioutils::textTable::m_colWidths</a>, <a class="el" href="application_8hpp_source.html#l00122">m_helpCFColWidth</a>, <a class="el" href="application_8hpp_source.html#l00121">m_helpLOColWidth</a>, <a class="el" href="application_8hpp_source.html#l00120">m_helpSOColWidth</a>, <a class="el" href="application_8hpp_source.html#l00123">m_helpTypeColWidth</a>, <a class="el" href="application_8hpp_source.html#l00119">m_helpWidth</a>, <a class="el" href="textTable_8hpp_source.html#l00068">mx::ioutils::textTable::m_lineStart</a>, <a class="el" href="textTable_8hpp_source.html#l00066">mx::ioutils::textTable::m_rows</a>, <a class="el" href="textTable_8hpp_source.html#l00074">mx::ioutils::textTable::m_rowSep</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00095">mx::app::appConfigurator::m_targets</a>, <a class="el" href="application_8hpp_source.html#l00498">optionHelp()</a>, and <a class="el" href="textTable_8hpp_source.html#l00145">mx::ioutils::textTable::outPut()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00281">main()</a>.</p>
-
 </div>
 </div>
-<a id="a4c3a23361cf44dd65f276787b492c404"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c3a23361cf44dd65f276787b492c404">&#9670;&nbsp;</a></span>loadBasicConfig()</h2>
+<a id="a23ec63e8922a9038b2c69088ce6f8fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ec63e8922a9038b2c69088ce6f8fe8">&#9670;&nbsp;</a></span>loadBasicConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +364,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::loadBasicConfig </td>
+          <td class="memname">virtual void mx::app::application::loadBasicConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -374,22 +372,18 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Load a basic configuration. Can be used in an intermediate derived class to allow its children to use loadConfig. </p>
-<p>This is called just before <a class="el" href="classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd" title="Override this function to extract the configured values and set up the application.">loadConfig()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00486">486</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p>This is called just before <a class="el" href="classmx_1_1app_1_1application.html#a2052563fd51b964e7e47ad84f59e90f9" title="Override this function to extract the configured values and set up the application.">loadConfig()</a>. </p>
 
 </div>
 </div>
-<a id="a634a9602f1d9769ab6d4671781f2e9fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a634a9602f1d9769ab6d4671781f2e9fd">&#9670;&nbsp;</a></span>loadConfig()</h2>
+<a id="a2052563fd51b964e7e47ad84f59e90f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2052563fd51b964e7e47ad84f59e90f9">&#9670;&nbsp;</a></span>loadConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +392,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::loadConfig </td>
+          <td class="memname">virtual void mx::app::application::loadConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -406,21 +400,17 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Override this function to extract the configured values and set up the application. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00329">329</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
-
 </div>
 </div>
-<a id="a55e42652e11a337e9589e833159f244f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55e42652e11a337e9589e833159f244f">&#9670;&nbsp;</a></span>loadStandardConfig()</h2>
+<a id="a6d6cc889061cf52aef5c0cb9c79e8e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6cc889061cf52aef5c0cb9c79e8e92">&#9670;&nbsp;</a></span>loadStandardConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +419,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::loadStandardConfig </td>
+          <td class="memname">virtual void mx::app::application::loadStandardConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -437,24 +427,18 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Loads the values of "config". </p>
-<p>Override this function if you do not want to use this, or have different behavior. See also <a class="el" href="classmx_1_1app_1_1application.html#a1d5b8790e68231cc5e223264f979da9b">setupStandardConfig()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00467">467</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00113">config</a>, <a class="el" href="application_8hpp_source.html#l00110">m_configPathCL</a>, and <a class="el" href="application_8hpp_source.html#l00111">m_configPathCLBase</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p>Override this function if you do not want to use this, or have different behavior. See also <a class="el" href="classmx_1_1app_1_1application.html#a800551d816913f5dc01bab92bdb84e0f">setupStandardConfig()</a>. </p>
 
 </div>
 </div>
-<a id="adb7ca1def5cbfc103fe9b6365d2dcf10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb7ca1def5cbfc103fe9b6365d2dcf10">&#9670;&nbsp;</a></span>loadStandardHelp()</h2>
+<a id="aedbf3ba9c8f80c087f4d7a38de8b9ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedbf3ba9c8f80c087f4d7a38de8b9ce9">&#9670;&nbsp;</a></span>loadStandardHelp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,7 +447,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::loadStandardHelp </td>
+          <td class="memname">virtual void mx::app::application::loadStandardHelp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -471,19 +455,13 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Loads the value of "help" into doHelp. </p>
-<p>Override this function if you do not want to use this, or have different behavior. See also <a class="el" href="classmx_1_1app_1_1application.html#a1d5b8790e68231cc5e223264f979da9b">setupStandardConfig()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00474">474</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00113">config</a>, and <a class="el" href="application_8hpp_source.html#l00117">doHelp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p>Override this function if you do not want to use this, or have different behavior. See also <a class="el" href="classmx_1_1app_1_1application.html#a800551d816913f5dc01bab92bdb84e0f">setupStandardConfig()</a>. </p>
 
 </div>
 </div>
@@ -492,9 +470,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int mx::app::application::main </td>
@@ -514,21 +489,16 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The application main function. </p>
-<p>Call this from the true main function, passing the command line arguments to be processed. This calls <a class="el" href="classmx_1_1app_1_1application.html#a01f476cbf421456b3ebd68a2e76c7f77">setup()</a>, then checks if the doHelp flag was set. If so, it calls <a class="el" href="classmx_1_1app_1_1application.html#ab9ea338aac65dcbbf4ee137345251bb9">help()</a> and returns. If doHelp is not set, it then clears the config structure, and then calls <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07">execute()</a>.</p>
+<p>Call this from the true main function, passing the command line arguments to be processed. This calls <a class="el" href="classmx_1_1app_1_1application.html#a70f889150e5b09e20483fd2141545203">setup()</a>, then checks if the doHelp flag was set. If so, it calls <a class="el" href="classmx_1_1app_1_1application.html#ab64fba8d9d1dde986dccb4de209e320e">help()</a> and returns. If doHelp is not set, it then clears the config structure, and then calls <a class="el" href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c">execute()</a>.</p>
 <p>The configuration is cleared before the call to execute, unless m_preserveConfig = true.</p>
 <dl class="section return"><dt>Returns</dt><dd>1 if help is executed. </dd>
 <dd>
 -1 on error. </dd>
 <dd>
-the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07">execute()</a> otherwise. </dd></dl>
+the value of <a class="el" href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c">execute()</a> otherwise. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>[in] standard command line result specifying number of argumetns in argv </td></tr>
@@ -537,14 +507,10 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00281">281</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00379">mx::app::appConfigurator::clear()</a>, <a class="el" href="application_8hpp_source.html#l00113">config</a>, <a class="el" href="application_8hpp_source.html#l00117">doHelp</a>, <a class="el" href="application_8hpp_source.html#l00335">execute()</a>, <a class="el" href="application_8hpp_source.html#l00541">help()</a>, <a class="el" href="application_8hpp_source.html#l00125">m_argc</a>, <a class="el" href="application_8hpp_source.html#l00126">m_argv</a>, <a class="el" href="application_8hpp_source.html#l00115">m_preserveConfig</a>, and <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
-
 </div>
 </div>
-<a id="aa899549ba39024a3039bd322ef6358ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa899549ba39024a3039bd322ef6358ba">&#9670;&nbsp;</a></span>optionHelp()</h2>
+<a id="a6e5e0564d08c43952bfca88fd2e34021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5e0564d08c43952bfca88fd2e34021">&#9670;&nbsp;</a></span>optionHelp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +519,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::optionHelp </td>
+          <td class="memname">virtual void mx::app::application::optionHelp </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structmx_1_1app_1_1configTarget.html">configTarget</a> &amp;&#160;</td>
           <td class="paramname"><em>tgt</em>, </td>
@@ -572,7 +538,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -585,12 +551,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00498">498</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="textTable_8hpp_source.html#l00106">mx::ioutils::textTable::addCell()</a>, <a class="el" href="configTarget_8hpp_source.html#l00067">mx::app::configTarget::helpExplanation</a>, <a class="el" href="configTarget_8hpp_source.html#l00066">mx::app::configTarget::helpType</a>, <a class="el" href="configTarget_8hpp_source.html#l00061">mx::app::configTarget::keyword</a>, <a class="el" href="configTarget_8hpp_source.html#l00058">mx::app::configTarget::longOpt</a>, <a class="el" href="configTarget_8hpp_source.html#l00074">mx::app::configTarget::orderAdded</a>, <a class="el" href="configTarget_8hpp_source.html#l00060">mx::app::configTarget::section</a>, and <a class="el" href="configTarget_8hpp_source.html#l00057">mx::app::configTarget::shortOpt</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>.</p>
 
 </div>
 </div>
@@ -612,7 +572,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -623,10 +583,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 <dd>
 -1 on error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00380">380</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00113">config</a>, <a class="el" href="application_8hpp_source.html#l00105">configPathGlobal</a>, <a class="el" href="application_8hpp_source.html#l00107">configPathLocal</a>, <a class="el" href="application_8hpp_source.html#l00125">m_argc</a>, <a class="el" href="application_8hpp_source.html#l00126">m_argv</a>, <a class="el" href="application_8hpp_source.html#l00110">m_configPathCL</a>, <a class="el" href="application_8hpp_source.html#l00106">m_configPathUser</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00422">mx::app::appConfigurator::parseCommandLine()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00497">mx::app::appConfigurator::readConfig()</a>.</p>
-
 </div>
 </div>
 <a id="aea0f58e6dfd15954c531fe2f20b3381f"></a>
@@ -634,9 +590,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void mx::app::application::setConfigPathGlobal </td>
@@ -646,11 +599,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set the global configuration path. </p>
@@ -661,10 +609,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00305">305</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00105">configPathGlobal</a>.</p>
-
 </div>
 </div>
 <a id="af8ce844c242c6f9bf012143ca2bb8989"></a>
@@ -672,9 +616,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void mx::app::application::setConfigPathLocal </td>
@@ -684,11 +625,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set the local configuration path. </p>
@@ -699,10 +635,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00317">317</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00107">configPathLocal</a>.</p>
-
 </div>
 </div>
 <a id="a7812e01cbbf57173533c128520294c67"></a>
@@ -710,9 +642,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void mx::app::application::setConfigPathUser </td>
@@ -722,11 +651,6 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set the user configuration path. </p>
@@ -738,14 +662,10 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00311">311</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00106">m_configPathUser</a>.</p>
-
 </div>
 </div>
-<a id="ab0988327074975446f7b86ac7d77179e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0988327074975446f7b86ac7d77179e">&#9670;&nbsp;</a></span>setDefaults()</h2>
+<a id="a1f28fedc313ee62d97a1a1f57668655a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f28fedc313ee62d97a1a1f57668655a">&#9670;&nbsp;</a></span>setDefaults()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -754,7 +674,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::setDefaults </td>
+          <td class="memname">virtual void mx::app::application::setDefaults </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -773,7 +693,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -783,22 +703,16 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 <p>The comand line arguments are not used by the default version, but are parameters in case derived classes need access when overriding. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>[in] standard command line result specifying number of argumetns in argv </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>[in] standard command line result specifying number of arguments in argv </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>[in] standard command line result containing the arguments. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00395">395</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00105">configPathGlobal</a>, <a class="el" href="application_8hpp_source.html#l00107">configPathLocal</a>, <a class="el" href="application_8hpp_source.html#l00111">m_configPathCLBase</a>, and <a class="el" href="application_8hpp_source.html#l00106">m_configPathUser</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
-
 </div>
 </div>
-<a id="a01f476cbf421456b3ebd68a2e76c7f77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01f476cbf421456b3ebd68a2e76c7f77">&#9670;&nbsp;</a></span>setup()</h2>
+<a id="a70f889150e5b09e20483fd2141545203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f889150e5b09e20483fd2141545203">&#9670;&nbsp;</a></span>setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,7 +721,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::setup </td>
+          <td class="memname">virtual void mx::app::application::setup </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -826,7 +740,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -841,16 +755,10 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00343">343</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="application_8hpp_source.html#l00492">checkConfig()</a>, <a class="el" href="application_8hpp_source.html#l00113">config</a>, <a class="el" href="application_8hpp_source.html#l00105">configPathGlobal</a>, <a class="el" href="application_8hpp_source.html#l00107">configPathLocal</a>, <a class="el" href="application_8hpp_source.html#l00103">invokedName</a>, <a class="el" href="application_8hpp_source.html#l00486">loadBasicConfig()</a>, <a class="el" href="application_8hpp_source.html#l00329">loadConfig()</a>, <a class="el" href="application_8hpp_source.html#l00467">loadStandardConfig()</a>, <a class="el" href="application_8hpp_source.html#l00474">loadStandardHelp()</a>, <a class="el" href="application_8hpp_source.html#l00110">m_configPathCL</a>, <a class="el" href="application_8hpp_source.html#l00106">m_configPathUser</a>, <a class="el" href="application_8hpp_source.html#l00108">m_requireConfigPathLocal</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00422">mx::app::appConfigurator::parseCommandLine()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00497">mx::app::appConfigurator::readConfig()</a>, <a class="el" href="application_8hpp_source.html#l00395">setDefaults()</a>, <a class="el" href="application_8hpp_source.html#l00480">setupBasicConfig()</a>, <a class="el" href="application_8hpp_source.html#l00323">setupConfig()</a>, <a class="el" href="application_8hpp_source.html#l00455">setupStandardConfig()</a>, and <a class="el" href="application_8hpp_source.html#l00461">setupStandardHelp()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00281">main()</a>.</p>
-
 </div>
 </div>
-<a id="ac0499dea50a9dc99b5454a43e85b97f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0499dea50a9dc99b5454a43e85b97f3">&#9670;&nbsp;</a></span>setupBasicConfig()</h2>
+<a id="a8edcf166bbc755c4ace6e9421ed025be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edcf166bbc755c4ace6e9421ed025be">&#9670;&nbsp;</a></span>setupBasicConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -859,7 +767,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::setupBasicConfig </td>
+          <td class="memname">virtual void mx::app::application::setupBasicConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -867,22 +775,18 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Setup a basic configuration. Can be used in an intermediate derived class to allow its children to use setupConfig. </p>
-<p>This is called just before <a class="el" href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588" title="In derived classes this is where the config targets are added to config.">setupConfig()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00480">480</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p>This is called just before <a class="el" href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4" title="In derived classes this is where the config targets are added to config.">setupConfig()</a>. </p>
 
 </div>
 </div>
-<a id="aef06b84e72313b842d3339698cd38588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef06b84e72313b842d3339698cd38588">&#9670;&nbsp;</a></span>setupConfig()</h2>
+<a id="a17540b037b8d22bb4dd2b14b7d868ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17540b037b8d22bb4dd2b14b7d868ff4">&#9670;&nbsp;</a></span>setupConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -891,7 +795,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::setupConfig </td>
+          <td class="memname">virtual void mx::app::application::setupConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -899,21 +803,17 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>In derived classes this is where the config targets are added to <a class="el" href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">config</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00323">323</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
-
 </div>
 </div>
-<a id="a1d5b8790e68231cc5e223264f979da9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d5b8790e68231cc5e223264f979da9b">&#9670;&nbsp;</a></span>setupStandardConfig()</h2>
+<a id="a800551d816913f5dc01bab92bdb84e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800551d816913f5dc01bab92bdb84e0f">&#9670;&nbsp;</a></span>setupStandardConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -922,7 +822,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::setupStandardConfig </td>
+          <td class="memname">virtual void mx::app::application::setupStandardConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -930,24 +830,18 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Set up the command-line config option in a standard way. </p>
-<p>This adds "-c --config" as command line options. You can override this function to change this behavior, or simply clear config at the beginning of <a class="el" href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">setupConfig()</a>. If you do this, you should also override <a class="el" href="classmx_1_1app_1_1application.html#a55e42652e11a337e9589e833159f244f">loadStandardConfig()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00455">455</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00388">mx::app::appConfigurator::add()</a>, and <a class="el" href="application_8hpp_source.html#l00113">config</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p>This adds "-c --config" as command line options. You can override this function to change this behavior, or simply clear config at the beginning of <a class="el" href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">setupConfig()</a>. If you do this, you should also override <a class="el" href="classmx_1_1app_1_1application.html#a6d6cc889061cf52aef5c0cb9c79e8e92">loadStandardConfig()</a>. </p>
 
 </div>
 </div>
-<a id="a387b6a3a587c4fba345c5e9ecf56f67b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a387b6a3a587c4fba345c5e9ecf56f67b">&#9670;&nbsp;</a></span>setupStandardHelp()</h2>
+<a id="a5ce683a6bb7c722b06265e036986c48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce683a6bb7c722b06265e036986c48a">&#9670;&nbsp;</a></span>setupStandardHelp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -956,7 +850,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mx::app::application::setupStandardHelp </td>
+          <td class="memname">virtual void mx::app::application::setupStandardHelp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -964,19 +858,13 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Set up the help an options in a standard way. </p>
-<p>This adds "-h and --help" as command line options. You can override this function to change this behavior, or simply clear config at the beginning of <a class="el" href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">setupConfig()</a>. If you do this, you should also override <a class="el" href="classmx_1_1app_1_1application.html#adb7ca1def5cbfc103fe9b6365d2dcf10">loadStandardHelp()</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00461">461</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00388">mx::app::appConfigurator::add()</a>, and <a class="el" href="application_8hpp_source.html#l00113">config</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p>This adds "-h and --help" as command line options. You can override this function to change this behavior, or simply clear config at the beginning of <a class="el" href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">setupConfig()</a>. If you do this, you should also override <a class="el" href="classmx_1_1app_1_1application.html#aedbf3ba9c8f80c087f4d7a38de8b9ce9">loadStandardHelp()</a>. </p>
 
 </div>
 </div>
@@ -1003,65 +891,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The structure used for parsing and storing the configuration. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00113">113</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>, <a class="el" href="application_8hpp_source.html#l00467">loadStandardConfig()</a>, <a class="el" href="application_8hpp_source.html#l00474">loadStandardHelp()</a>, <a class="el" href="application_8hpp_source.html#l00281">main()</a>, <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>, <a class="el" href="application_8hpp_source.html#l00343">setup()</a>, <a class="el" href="application_8hpp_source.html#l00455">setupStandardConfig()</a>, and <a class="el" href="application_8hpp_source.html#l00461">setupStandardHelp()</a>.</p>
-
-</div>
-</div>
-<a id="a5513c8e7c87cbd557835a672c5c8f35a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5513c8e7c87cbd557835a672c5c8f35a">&#9670;&nbsp;</a></span>configPathGlobal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string mx::app::application::configPathGlobal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The path to the gobal configuration file. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00105">105</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>, <a class="el" href="application_8hpp_source.html#l00305">setConfigPathGlobal()</a>, <a class="el" href="application_8hpp_source.html#l00395">setDefaults()</a>, and <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
-
-</div>
-</div>
-<a id="abf4853c8977b52daee7265c26f23e69a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf4853c8977b52daee7265c26f23e69a">&#9670;&nbsp;</a></span>configPathLocal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string mx::app::application::configPathLocal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The path to a local configuration file. </p>
-
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00107">107</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>, <a class="el" href="application_8hpp_source.html#l00317">setConfigPathLocal()</a>, <a class="el" href="application_8hpp_source.html#l00395">setDefaults()</a>, and <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00117">117</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1087,9 +917,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>Flag to control whether the help message is printed or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00117">117</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00474">loadStandardHelp()</a>, and <a class="el" href="application_8hpp_source.html#l00281">main()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00121">121</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1115,9 +943,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The name used to invoke this application. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00103">103</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>, and <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00102">102</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1143,9 +969,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>Store argc for later use. E.g. in <a class="el" href="classmx_1_1app_1_1application.html#a4de6a6fb28915ccd19704becf2ee41e6" title="Re-read the config stack.">reReadConfig()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00125">125</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00281">main()</a>, and <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00129">129</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1171,9 +995,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>Store argv for later use. E.g. in <a class="el" href="classmx_1_1app_1_1application.html#a4de6a6fb28915ccd19704becf2ee41e6" title="Re-read the config stack.">reReadConfig()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00126">126</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00281">main()</a>, and <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00130">130</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1199,9 +1021,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The path to a configuration file specified on the command line. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00110">110</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00467">loadStandardConfig()</a>, <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>, and <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00113">113</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1225,11 +1045,139 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 </table>
 </div><div class="memdoc">
 
-<p>A base path to add to the CL path. Can be set by environment variable defined in MX_APP_DEFAULT_configPathCLBase_env. </p>
+<p>A base path to add to the CL path. Set in constructor to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00111">111</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00114">114</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00467">loadStandardConfig()</a>, and <a class="el" href="application_8hpp_source.html#l00395">setDefaults()</a>.</p>
+</div>
+</div>
+<a id="aef846f2cc068983150def215516afbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef846f2cc068983150def215516afbda">&#9670;&nbsp;</a></span>m_configPathCLBase_env</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::app::application::m_configPathCLBase_env</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Environment variable to check for the CL base path. Set in constructor to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00115">115</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad923c5dc4a1861c9bb7fc08c37a483f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad923c5dc4a1861c9bb7fc08c37a483f0">&#9670;&nbsp;</a></span>m_configPathGlobal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::app::application::m_configPathGlobal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The path to the gobal configuration file. Set in constructor to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00104">104</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adf68e7174551a13864c961bb5e8bf6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf68e7174551a13864c961bb5e8bf6e4">&#9670;&nbsp;</a></span>m_configPathGlobal_env</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::app::application::m_configPathGlobal_env</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Environment variable to check for the global config path. Set in constructor to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00105">105</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aef4961ead2a553afc12f04c9a894106e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4961ead2a553afc12f04c9a894106e">&#9670;&nbsp;</a></span>m_configPathLocal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::app::application::m_configPathLocal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The path to a local configuration file. Set in constructor to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00108">108</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7a6becc35e7352488bc37176ebea98e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6becc35e7352488bc37176ebea98e9">&#9670;&nbsp;</a></span>m_configPathLocal_env</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::app::application::m_configPathLocal_env</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Environment variable to check for the local config path. Set in constructor to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00109">109</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1253,11 +1201,35 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 </table>
 </div><div class="memdoc">
 
-<p>The path to the user's configuration file. If the first character is not '/' or '~', this is added to HOME. </p>
+<p>The path to the user's configuration file. If the first character is not '/' or '~', this is added to HOME. Set in constructor to use. </p>
 
 <p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00106">106</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00380">reReadConfig()</a>, <a class="el" href="application_8hpp_source.html#l00311">setConfigPathUser()</a>, <a class="el" href="application_8hpp_source.html#l00395">setDefaults()</a>, and <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+</div>
+</div>
+<a id="a290f4c557b4f8bfd80eb71e6e4370268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290f4c557b4f8bfd80eb71e6e4370268">&#9670;&nbsp;</a></span>m_configPathUser_env</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::app::application::m_configPathUser_env</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Environment variable to check fo the user config path. Set in constructor to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00107">107</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1283,9 +1255,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The width of the config file option column in the help message. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00122">122</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00126">126</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1311,9 +1281,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The width of the long option (&ndash;option) column in the help message. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00121">121</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00125">125</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1339,9 +1307,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The width of the short option (-o) column in the help message. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00120">120</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00124">124</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1367,9 +1333,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The width of the argument type column in the help message. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00123">123</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00127">127</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1395,9 +1359,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>The total text width available for the help message. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00119">119</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">help()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00123">123</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1423,9 +1385,7 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 
 <p>Flag controlling whether the configuration is cleared before execution. Set in derived constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00115">115</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00281">main()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00119">119</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1449,11 +1409,9 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 </table>
 </div><div class="memdoc">
 
-<p>Flag controlling whether lack of a configuration file should be reported. </p>
+<p>Flag controlling whether lack of a local configuration file should be reported. </p>
 
-<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00108">108</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00343">setup()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="application_8hpp_source.html#l00111">111</a> of file <a class="el" href="application_8hpp_source.html">application.hpp</a>.</p>
 
 </div>
 </div>
@@ -1462,16 +1420,16 @@ the value of <a class="el" href="classmx_1_1app_1_1application.html#ac24cfb6644b
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassmx_1_1app_1_1application_html_aef06b84e72313b842d3339698cd38588"><div class="ttname"><a href="classmx_1_1app_1_1application.html#aef06b84e72313b842d3339698cd38588">mx::app::application::setupConfig</a></div><div class="ttdeci">virtual void setupConfig()</div><div class="ttdoc">In derived classes this is where the config targets are added to config.</div><div class="ttdef"><b>Definition:</b> <a href="application_8hpp_source.html#l00323">application.hpp:323</a></div></div>
-<div class="ttc" id="aclassmx_1_1app_1_1application_html_ac24cfb6644b01b20b5ddaa582a3e0e07"><div class="ttname"><a href="classmx_1_1app_1_1application.html#ac24cfb6644b01b20b5ddaa582a3e0e07">mx::app::application::execute</a></div><div class="ttdeci">virtual int execute()</div><div class="ttdoc">This function is where the derived class should do its work.</div><div class="ttdef"><b>Definition:</b> <a href="application_8hpp_source.html#l00335">application.hpp:335</a></div></div>
-<div class="ttc" id="astructmx_1_1app_1_1appConfigurator_html_a313073f6960bf0480c642d61dad3e90a"><div class="ttname"><a href="structmx_1_1app_1_1appConfigurator.html#a313073f6960bf0480c642d61dad3e90a">mx::app::appConfigurator::add</a></div><div class="ttdeci">void add(const configTarget &amp;tgt)</div><div class="ttdoc">Add a configTarget.</div><div class="ttdef"><b>Definition:</b> <a href="appConfigurator_8hpp_source.html#l00388">appConfigurator.hpp:388</a></div></div>
-<div class="ttc" id="aclassmx_1_1app_1_1application_html_a816787b0573764b05f9fea0138936018"><div class="ttname"><a href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">mx::app::application::config</a></div><div class="ttdeci">appConfigurator config</div><div class="ttdoc">The structure used for parsing and storing the configuration.</div><div class="ttdef"><b>Definition:</b> <a href="application_8hpp_source.html#l00113">application.hpp:113</a></div></div>
-<div class="ttc" id="aclassmx_1_1app_1_1application_html_a634a9602f1d9769ab6d4671781f2e9fd"><div class="ttname"><a href="classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd">mx::app::application::loadConfig</a></div><div class="ttdeci">virtual void loadConfig()</div><div class="ttdoc">Override this function to extract the configured values and set up the application.</div><div class="ttdef"><b>Definition:</b> <a href="application_8hpp_source.html#l00329">application.hpp:329</a></div></div>
+<div class="ttc" id="aclassmx_1_1app_1_1application_html_a86c8db5d7158b786ed8352e34672994c"><div class="ttname"><a href="classmx_1_1app_1_1application.html#a86c8db5d7158b786ed8352e34672994c">mx::app::application::execute</a></div><div class="ttdeci">virtual int execute()</div><div class="ttdoc">This function is where the derived class should do its work.</div></div>
+<div class="ttc" id="aclassmx_1_1app_1_1application_html_a2052563fd51b964e7e47ad84f59e90f9"><div class="ttname"><a href="classmx_1_1app_1_1application.html#a2052563fd51b964e7e47ad84f59e90f9">mx::app::application::loadConfig</a></div><div class="ttdeci">virtual void loadConfig()</div><div class="ttdoc">Override this function to extract the configured values and set up the application.</div></div>
+<div class="ttc" id="aclassmx_1_1app_1_1application_html_a17540b037b8d22bb4dd2b14b7d868ff4"><div class="ttname"><a href="classmx_1_1app_1_1application.html#a17540b037b8d22bb4dd2b14b7d868ff4">mx::app::application::setupConfig</a></div><div class="ttdeci">virtual void setupConfig()</div><div class="ttdoc">In derived classes this is where the config targets are added to config.</div></div>
+<div class="ttc" id="astructmx_1_1app_1_1appConfigurator_html_a313073f6960bf0480c642d61dad3e90a"><div class="ttname"><a href="structmx_1_1app_1_1appConfigurator.html#a313073f6960bf0480c642d61dad3e90a">mx::app::appConfigurator::add</a></div><div class="ttdeci">void add(const configTarget &amp;tgt)</div><div class="ttdoc">Add a configTarget.</div></div>
+<div class="ttc" id="aclassmx_1_1app_1_1application_html_a816787b0573764b05f9fea0138936018"><div class="ttname"><a href="classmx_1_1app_1_1application.html#a816787b0573764b05f9fea0138936018">mx::app::application::config</a></div><div class="ttdeci">appConfigurator config</div><div class="ttdoc">The structure used for parsing and storing the configuration.</div><div class="ttdef"><b>Definition:</b> <a href="application_8hpp_source.html#l00117">application.hpp:117</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>app</b></li><li class="navelem"><a class="el" href="classmx_1_1app_1_1application.html">application</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

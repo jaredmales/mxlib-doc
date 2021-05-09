@@ -1,6 +1,5 @@
 var group__template__blas =
 [
-    [ "templateBLAS.hpp", "templateBLAS_8hpp.html", null ],
     [ "gemm", "group__template__blas.html#gac2045fa4573740834da65a428446164d", null ],
     [ "hadd", "group__template__blas.html#ga533678f811dd6bda72bf578e50ede88c", null ],
     [ "hadd_impl", "group__template__blas.html#gab49ebccd89fa6665a721922754b0445c", null ],

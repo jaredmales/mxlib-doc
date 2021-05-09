@@ -1,5 +1,6 @@
 var structmx_1_1astro_1_1baseSpectrum =
 [
+    [ "charFlux", "structmx_1_1astro_1_1baseSpectrum.html#adcff013a03af0758db64eec6ab5ccdd4", null ],
     [ "charFlux", "structmx_1_1astro_1_1baseSpectrum.html#a7f93275bfb91703630366cfb36516b14", null ],
     [ "charTrans", "structmx_1_1astro_1_1baseSpectrum.html#a382f0fdb138e9d8cff30c326146e28d8", null ],
     [ "mean", "structmx_1_1astro_1_1baseSpectrum.html#a5bd0475060b8ea142a70e5d5f2dbe626", null ],

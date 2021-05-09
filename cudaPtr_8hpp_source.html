@@ -281,12 +281,12 @@ $(document).ready(function(){initNavTree('cudaPtr_8hpp_source.html',''); initRes
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;   m_size = sz;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   <span class="keywordtype">int</span> rv = cudaMalloc((<span class="keywordtype">void</span> **)&amp;m_devicePtr, sz*<span class="keyword">sizeof</span>(devicePtrT));</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   cudaError_t rv = cudaMalloc((<span class="keywordtype">void</span> **)&amp;m_devicePtr, sz*<span class="keyword">sizeof</span>(devicePtrT));</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;   </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;   <span class="keywordflow">if</span>(rv != cudaSuccess)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Cuda Malloc Error \n&quot;</span>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keywordflow">return</span> rv;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error from cudaMalloc: &quot;</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      printf(<span class="stringliteral">&quot;[%s] %s\n&quot;</span>, cudaGetErrorName(rv), cudaGetErrorString(rv));</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;   }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;   </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   <span class="keywordflow">return</span> 0;</div>
@@ -404,7 +404,7 @@ $(document).ready(function(){initNavTree('cudaPtr_8hpp_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_32daa4c7a3a3be840bccba6e90c9ee4d.html">cuda</a></li><li class="navelem"><a class="el" href="cudaPtr_8hpp.html">cudaPtr.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 18 2021 14:06:06 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

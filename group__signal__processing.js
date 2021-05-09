@@ -7,13 +7,11 @@ var group__signal__processing =
     [ "linearPredictor", "structmx_1_1sigproc_1_1linearPredictor.html", [
       [ "calcCoefficients", "structmx_1_1sigproc_1_1linearPredictor.html#a225e3398fdfc44857abfae01688274e8", null ]
     ] ],
-    [ "Fast Fourier Transforms", "group__fft.html", "group__fft" ],
     [ "Power Spectra", "group__psds.html", "group__psds" ],
     [ "The Fourier Basis", "group__fourier__basis.html", "group__fourier__basis" ],
     [ "The Zernike Basis", "group__zernike__basis.html", "group__zernike__basis" ],
     [ "Window Functions", "group__signal__windows.html", "group__signal__windows" ],
     [ "Image Filters", "group__image__filters.html", "group__image__filters" ],
-    [ "Physical Constants", "group__phyconstants.html", "group__phyconstants" ],
     [ "Signal Processing Files", "group__signal__processing__files.html", "group__signal__processing__files" ],
     [ "Circular Buffer", "group__circular__buffer.html", "group__circular__buffer" ],
     [ "autocorrelation", "group__signal__processing.html#gadbc4beeec00c60f6f2c107736a778159", null ],

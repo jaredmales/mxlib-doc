@@ -110,7 +110,7 @@ struct mx::improc::HCIobservation&lt; _realT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00092">92</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00081">81</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="HCIobservation_8hpp_source.html">improc/HCIobservation.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -131,9 +131,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a0e9943fe7020609c6969d205cc02977e"><td class="memItemLeft" align="right" valign="top">typedef _realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a></td></tr>
 <tr class="memdesc:a0e9943fe7020609c6969d205cc02977e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The arithmetic type used for calculations. Does not have to match the type in images on disk.  <a href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">More...</a><br /></td></tr>
 <tr class="separator:a0e9943fe7020609c6969d205cc02977e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e64fd2395da446af5fb564834267df"><td class="memItemLeft" align="right" valign="top">typedef Array&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a62e64fd2395da446af5fb564834267df">eigenImageT</a></td></tr>
-<tr class="memdesc:a62e64fd2395da446af5fb564834267df"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Eigen image array type basted on realT.  <a href="structmx_1_1improc_1_1HCIobservation.html#a62e64fd2395da446af5fb564834267df">More...</a><br /></td></tr>
-<tr class="separator:a62e64fd2395da446af5fb564834267df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dad0ef345b3fb1b4751ecc8ddd73e08"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Array&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6dad0ef345b3fb1b4751ecc8ddd73e08">eigenImageT</a></td></tr>
+<tr class="memdesc:a6dad0ef345b3fb1b4751ecc8ddd73e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Eigen image array type basted on realT.  <a href="structmx_1_1improc_1_1HCIobservation.html#a6dad0ef345b3fb1b4751ecc8ddd73e08">More...</a><br /></td></tr>
+<tr class="separator:a6dad0ef345b3fb1b4751ecc8ddd73e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -196,9 +196,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af4fbe90fb5890dd8ac826e56bfaaaef2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#af4fbe90fb5890dd8ac826e56bfaaaef2">m_imageMJD</a></td></tr>
 <tr class="memdesc:af4fbe90fb5890dd8ac826e56bfaaaef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of target image times, in MJD.  <a href="structmx_1_1improc_1_1HCIobservation.html#af4fbe90fb5890dd8ac826e56bfaaaef2">More...</a><br /></td></tr>
 <tr class="separator:af4fbe90fb5890dd8ac826e56bfaaaef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36a98ef51af0a7898d3f645899561f3b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a36a98ef51af0a7898d3f645899561f3b">m_heads</a></td></tr>
-<tr class="memdesc:a36a98ef51af0a7898d3f645899561f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of FITS headers, one per file, populated with the values for the keywords.  <a href="structmx_1_1improc_1_1HCIobservation.html#a36a98ef51af0a7898d3f645899561f3b">More...</a><br /></td></tr>
-<tr class="separator:a36a98ef51af0a7898d3f645899561f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84802f9fe46d5c18d84fedbd6a0be64"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad84802f9fe46d5c18d84fedbd6a0be64">m_heads</a></td></tr>
+<tr class="memdesc:ad84802f9fe46d5c18d84fedbd6a0be64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of FITS headers, one per file, populated with the values for the keywords.  <a href="structmx_1_1improc_1_1HCIobservation.html#ad84802f9fe46d5c18d84fedbd6a0be64">More...</a><br /></td></tr>
+<tr class="separator:ad84802f9fe46d5c18d84fedbd6a0be64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88b7715965c0ccc0baa5aa2a1f738b3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a88b7715965c0ccc0baa5aa2a1f738b3e">m_filesRead</a> {false}</td></tr>
 <tr class="memdesc:a88b7715965c0ccc0baa5aa2a1f738b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the m_fileList has been read.  <a href="structmx_1_1improc_1_1HCIobservation.html#a88b7715965c0ccc0baa5aa2a1f738b3e">More...</a><br /></td></tr>
 <tr class="separator:a88b7715965c0ccc0baa5aa2a1f738b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,9 +215,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a29c769d7c4b88ed339cca4cf8b4a8595"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a29c769d7c4b88ed339cca4cf8b4a8595">m_RDIimageMJD</a></td></tr>
 <tr class="memdesc:a29c769d7c4b88ed339cca4cf8b4a8595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of reference image times, in MJD.  <a href="structmx_1_1improc_1_1HCIobservation.html#a29c769d7c4b88ed339cca4cf8b4a8595">More...</a><br /></td></tr>
 <tr class="separator:a29c769d7c4b88ed339cca4cf8b4a8595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9ebf69b603874ceb7d483c3065322e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#abb9ebf69b603874ceb7d483c3065322e">m_RDIheads</a></td></tr>
-<tr class="memdesc:abb9ebf69b603874ceb7d483c3065322e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of FITS headers, one per reference file, populated with the values for the keywords.  <a href="structmx_1_1improc_1_1HCIobservation.html#abb9ebf69b603874ceb7d483c3065322e">More...</a><br /></td></tr>
-<tr class="separator:abb9ebf69b603874ceb7d483c3065322e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4bd2728cde5b316b4f3173d4db0762"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a3e4bd2728cde5b316b4f3173d4db0762">m_RDIheads</a></td></tr>
+<tr class="memdesc:a3e4bd2728cde5b316b4f3173d4db0762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of FITS headers, one per reference file, populated with the values for the keywords.  <a href="structmx_1_1improc_1_1HCIobservation.html#a3e4bd2728cde5b316b4f3173d4db0762">More...</a><br /></td></tr>
+<tr class="separator:a3e4bd2728cde5b316b4f3173d4db0762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2928228fc4aef667c203f6a3ce7b5a96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a2928228fc4aef667c203f6a3ce7b5a96">m_RDIfilesRead</a> {false}</td></tr>
 <tr class="memdesc:a2928228fc4aef667c203f6a3ce7b5a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the reference files have been read.  <a href="structmx_1_1improc_1_1HCIobservation.html#a2928228fc4aef667c203f6a3ce7b5a96">More...</a><br /></td></tr>
 <tr class="separator:a2928228fc4aef667c203f6a3ce7b5a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,9 +328,9 @@ Coadding</h2></td></tr>
 <tr class="memitem:a10361b8c596b9d260be769d0099ea6cb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a10361b8c596b9d260be769d0099ea6cb">m_coaddKeywords</a></td></tr>
 <tr class="memdesc:a10361b8c596b9d260be769d0099ea6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The values of these keywords will be averaged and replaced.  <a href="structmx_1_1improc_1_1HCIobservation.html#a10361b8c596b9d260be769d0099ea6cb">More...</a><br /></td></tr>
 <tr class="separator:a10361b8c596b9d260be769d0099ea6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab79b6ab55412ad5763de21fb65fa44b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ab79b6ab55412ad5763de21fb65fa44b6">coaddImages</a> (int coaddCombineMethod, int coaddMaxImno, int coaddMaxTime, std::vector&lt; std::string &gt; &amp;coaddKeywords, std::vector&lt; double &gt; &amp;imageMJD, std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
-<tr class="memdesc:ab79b6ab55412ad5763de21fb65fa44b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coadd the images.  <a href="structmx_1_1improc_1_1HCIobservation.html#ab79b6ab55412ad5763de21fb65fa44b6">More...</a><br /></td></tr>
-<tr class="separator:ab79b6ab55412ad5763de21fb65fa44b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3edac12807a23393d5c9ce77293e7a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad3edac12807a23393d5c9ce77293e7a7">coaddImages</a> (int coaddCombineMethod, int coaddMaxImno, int coaddMaxTime, std::vector&lt; std::string &gt; &amp;coaddKeywords, std::vector&lt; double &gt; &amp;imageMJD, std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> &gt; &amp;heads, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
+<tr class="memdesc:ad3edac12807a23393d5c9ce77293e7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coadd the images.  <a href="structmx_1_1improc_1_1HCIobservation.html#ad3edac12807a23393d5c9ce77293e7a7">More...</a><br /></td></tr>
+<tr class="separator:ad3edac12807a23393d5c9ce77293e7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Masking</h2></td></tr>
@@ -339,7 +339,7 @@ Masking</h2></td></tr>
 <tr class="memitem:ad856b3563538ed178bf83ba730488ea6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad856b3563538ed178bf83ba730488ea6">m_maskFile</a></td></tr>
 <tr class="memdesc:ad856b3563538ed178bf83ba730488ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a mask file to apply.  <a href="structmx_1_1improc_1_1HCIobservation.html#ad856b3563538ed178bf83ba730488ea6">More...</a><br /></td></tr>
 <tr class="separator:ad856b3563538ed178bf83ba730488ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63100e36478228318a4060b25d7d888f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a62e64fd2395da446af5fb564834267df">eigenImageT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a63100e36478228318a4060b25d7d888f">m_mask</a></td></tr>
+<tr class="memitem:a63100e36478228318a4060b25d7d888f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6dad0ef345b3fb1b4751ecc8ddd73e08">eigenImageT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a63100e36478228318a4060b25d7d888f">m_mask</a></td></tr>
 <tr class="memdesc:a63100e36478228318a4060b25d7d888f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mask.  <a href="structmx_1_1improc_1_1HCIobservation.html#a63100e36478228318a4060b25d7d888f">More...</a><br /></td></tr>
 <tr class="separator:a63100e36478228318a4060b25d7d888f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a933859bb30a9088ca5b9ff87d37ffa4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a933859bb30a9088ca5b9ff87d37ffa4b">m_maskCube</a></td></tr>
@@ -446,19 +446,19 @@ Output</h2></td></tr>
 <tr class="memitem:a94c1c92c8b61da759cf9841c2f8898e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a94c1c92c8b61da759cf9841c2f8898e6">outputRDIPreProcessed</a> ()</td></tr>
 <tr class="memdesc:a94c1c92c8b61da759cf9841c2f8898e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the pre-processed reference images.  <a href="structmx_1_1improc_1_1HCIobservation.html#a94c1c92c8b61da759cf9841c2f8898e6">More...</a><br /></td></tr>
 <tr class="separator:a94c1c92c8b61da759cf9841c2f8898e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae463c1ba69564164fa9de8508d619ebe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ae463c1ba69564164fa9de8508d619ebe">stdFitsHeader</a> (<a class="el" href="classmx_1_1improc_1_1fitsHeader.html">improc::fitsHeader</a> &amp;head)</td></tr>
-<tr class="memdesc:ae463c1ba69564164fa9de8508d619ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in the <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a> standard FITS header.  <a href="structmx_1_1improc_1_1HCIobservation.html#ae463c1ba69564164fa9de8508d619ebe">More...</a><br /></td></tr>
-<tr class="separator:ae463c1ba69564164fa9de8508d619ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a80009690bc5d038cd8c5cd5a8a69fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0a80009690bc5d038cd8c5cd5a8a69fb">writeFinim</a> (<a class="el" href="classmx_1_1improc_1_1fitsHeader.html">improc::fitsHeader</a> *addHead=0)</td></tr>
-<tr class="memdesc:a0a80009690bc5d038cd8c5cd5a8a69fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the final combined image to disk.  <a href="structmx_1_1improc_1_1HCIobservation.html#a0a80009690bc5d038cd8c5cd5a8a69fb">More...</a><br /></td></tr>
-<tr class="separator:a0a80009690bc5d038cd8c5cd5a8a69fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a985afe62cbed7713e918a05a9d434439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a985afe62cbed7713e918a05a9d434439">outputPSFSub</a> (<a class="el" href="classmx_1_1improc_1_1fitsHeader.html">improc::fitsHeader</a> *addHead=0)</td></tr>
-<tr class="memdesc:a985afe62cbed7713e918a05a9d434439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the PSF subtracted images to disk.  <a href="structmx_1_1improc_1_1HCIobservation.html#a985afe62cbed7713e918a05a9d434439">More...</a><br /></td></tr>
-<tr class="separator:a985afe62cbed7713e918a05a9d434439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a820b073e3b1aefb6e4a55e92515c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a14a820b073e3b1aefb6e4a55e92515c1">stdFitsHeader</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> &amp;head)</td></tr>
+<tr class="memdesc:a14a820b073e3b1aefb6e4a55e92515c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in the <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a> standard FITS header.  <a href="structmx_1_1improc_1_1HCIobservation.html#a14a820b073e3b1aefb6e4a55e92515c1">More...</a><br /></td></tr>
+<tr class="separator:a14a820b073e3b1aefb6e4a55e92515c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8a2f6c255b838a83d75d6504893a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a3c8a2f6c255b838a83d75d6504893a1e">writeFinim</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> *addHead=0)</td></tr>
+<tr class="memdesc:a3c8a2f6c255b838a83d75d6504893a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the final combined image to disk.  <a href="structmx_1_1improc_1_1HCIobservation.html#a3c8a2f6c255b838a83d75d6504893a1e">More...</a><br /></td></tr>
+<tr class="separator:a3c8a2f6c255b838a83d75d6504893a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5a65ce4934ef90658ceec5185f296b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a9b5a65ce4934ef90658ceec5185f296b">outputPSFSub</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> *addHead=0)</td></tr>
+<tr class="memdesc:a9b5a65ce4934ef90658ceec5185f296b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the PSF subtracted images to disk.  <a href="structmx_1_1improc_1_1HCIobservation.html#a9b5a65ce4934ef90658ceec5185f296b">More...</a><br /></td></tr>
+<tr class="separator:a9b5a65ce4934ef90658ceec5185f296b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a62e64fd2395da446af5fb564834267df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62e64fd2395da446af5fb564834267df">&#9670;&nbsp;</a></span>eigenImageT</h2>
+<a id="a6dad0ef345b3fb1b4751ecc8ddd73e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dad0ef345b3fb1b4751ecc8ddd73e08">&#9670;&nbsp;</a></span>eigenImageT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,14 +466,14 @@ Output</h2></td></tr>
 template&lt;typename _realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef Array&lt;<a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>, Eigen::Dynamic, Eigen::Dynamic&gt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::<a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a62e64fd2395da446af5fb564834267df">eigenImageT</a></td>
+          <td class="memname">typedef Eigen::Array&lt;<a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>, Eigen::Dynamic, Eigen::Dynamic&gt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::<a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6dad0ef345b3fb1b4751ecc8ddd73e08">eigenImageT</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The Eigen image array type basted on realT. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00099">99</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00088">88</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,7 +493,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The arithmetic type used for calculations. Does not have to match the type in images on disk. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00096">96</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00085">85</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +514,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00676">676</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00665">665</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +563,7 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00681">681</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00670">670</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -602,7 +602,7 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00690">690</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00679">679</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -673,7 +673,7 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00697">697</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00686">686</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -716,13 +716,13 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00719">719</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00708">708</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab79b6ab55412ad5763de21fb65fa44b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab79b6ab55412ad5763de21fb65fa44b6">&#9670;&nbsp;</a></span>coaddImages()</h2>
+<a id="ad3edac12807a23393d5c9ce77293e7a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3edac12807a23393d5c9ce77293e7a7">&#9670;&nbsp;</a></span>coaddImages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -762,7 +762,7 @@ template&lt;typename _realT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>heads</em>, </td>
         </tr>
         <tr>
@@ -780,12 +780,12 @@ template&lt;typename _realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Coadd the images. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000033">Todo:</a></b></dt><dd>this should really include end of exposure too. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000034">Todo:</a></b></dt><dd>this needs to handle averaging of angles </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd>this should really include end of exposure too. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000033">Todo:</a></b></dt><dd>this needs to handle averaging of angles </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01190">1190</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01179">1179</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00378">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00425">mx::improc::eigenCube&lt; dataT &gt;::mean()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::meanCombine</a>, <a class="el" href="eigenCube_8hpp_source.html#l00550">mx::improc::eigenCube&lt; dataT &gt;::median()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00051">mx::improc::HCI::medianCombine</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00050">mx::improc::HCI::noCombine</a>.</p>
+<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00375">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00422">mx::improc::eigenCube&lt; dataT &gt;::mean()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00054">mx::improc::HCI::meanCombine</a>, <a class="el" href="eigenCube_8hpp_source.html#l00547">mx::improc::eigenCube&lt; dataT &gt;::median()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00053">mx::improc::HCI::medianCombine</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::noCombine</a>.</p>
 
 </div>
 </div>
@@ -806,9 +806,9 @@ template&lt;typename _realT &gt; </div>
 <p>Combine the images into a single final image. </p>
 <p>Images are combined by the method specified in combineMethod </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01554">1554</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01543">1543</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::meanCombine</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00051">mx::improc::HCI::medianCombine</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00050">mx::improc::HCI::noCombine</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00053">mx::improc::HCI::sigmaMeanCombine</a>.</p>
+<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00054">mx::improc::HCI::meanCombine</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00053">mx::improc::HCI::medianCombine</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::noCombine</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00055">mx::improc::HCI::sigmaMeanCombine</a>.</p>
 
 </div>
 </div>
@@ -819,9 +819,6 @@ template&lt;typename _realT &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename _realT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::load_fileList </td>
@@ -847,11 +844,6 @@ template&lt;typename _realT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Load the file list. </p>
@@ -865,9 +857,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00728">728</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00717">717</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8hpp_source.html#l00063">mx::ioutils::getFileNames()</a>.</p>
+<p class="reference">References <a class="el" href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">mx::ioutils::getFileNames()</a>.</p>
 
 </div>
 </div>
@@ -878,9 +870,6 @@ template&lt;typename _realT &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename _realT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::load_fileList </td>
@@ -890,11 +879,6 @@ template&lt;typename _realT &gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Load the file list from a file. </p>
@@ -906,9 +890,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00738">738</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00727">727</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="readColumns_8hpp_source.html#l00135">mx::ioutils::readColumns()</a>.</p>
+<p class="reference">References <a class="el" href="readColumns_8hpp_source.html#l00137">mx::ioutils::readColumns()</a>.</p>
 
 </div>
 </div>
@@ -919,9 +903,6 @@ template&lt;typename _realT &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename _realT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::load_RDIfileList </td>
@@ -947,11 +928,6 @@ template&lt;typename _realT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Load the RDI basis file list. </p>
@@ -965,9 +941,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00745">745</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00734">734</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8hpp_source.html#l00063">mx::ioutils::getFileNames()</a>.</p>
+<p class="reference">References <a class="el" href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">mx::ioutils::getFileNames()</a>.</p>
 
 </div>
 </div>
@@ -978,9 +954,6 @@ template&lt;typename _realT &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename _realT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::load_RDIfileList </td>
@@ -990,11 +963,6 @@ template&lt;typename _realT &gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Load the RDI basis file list from a file. </p>
@@ -1006,9 +974,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00755">755</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00744">744</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="readColumns_8hpp_source.html#l00135">mx::ioutils::readColumns()</a>.</p>
+<p class="reference">References <a class="el" href="readColumns_8hpp_source.html#l00137">mx::ioutils::readColumns()</a>.</p>
 
 </div>
 </div>
@@ -1038,7 +1006,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Reimplemented in <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a33a2a0cae11fc8e929d467fa74db4f84">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01378">1378</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01367">1367</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1057,16 +1025,16 @@ template&lt;typename _realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Output the pre-processed target images. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd>Should add a HISTORY card here </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd>Should add a HISTORY card here </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01662">1662</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01651">1651</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l01274">mx::improc::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2">mx::ioutils::pathFilename()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01271">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
-<a id="a985afe62cbed7713e918a05a9d434439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a985afe62cbed7713e918a05a9d434439">&#9670;&nbsp;</a></span>outputPSFSub()</h2>
+<a id="a9b5a65ce4934ef90658ceec5185f296b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5a65ce4934ef90658ceec5185f296b">&#9670;&nbsp;</a></span>outputPSFSub()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1076,7 +1044,7 @@ template&lt;typename _realT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::outputPSFSub </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1fitsHeader.html">improc::fitsHeader</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> *&#160;</td>
           <td class="paramname"><em>addHead</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
@@ -1085,9 +1053,9 @@ template&lt;typename _realT &gt; </div>
 
 <p>Write the PSF subtracted images to disk. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01767">1767</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01756">1756</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>, <a class="el" href="fitsHeader_8hpp_source.html#l00608">mx::improc::fitsHeaderGitStatus()</a>, <a class="el" href="constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01274">mx::improc::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">mx::fits::fitsHeader::append()</a>, <a class="el" href="group__fits__utils.html#ga090671b8b7bacafa7548b80293158622">mx::fits::fitsHeaderGitStatus()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01271">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -1141,7 +1109,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Reimplemented in <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ae532b5f9ec73a141604aaf5ea06881aa">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00967">967</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00956">956</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1168,14 +1136,14 @@ template&lt;typename _realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Perform post-coadd actions, for use by derived classes. </p>
-<p>A key example is to update keywords after the averaging occurs in <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ab79b6ab55412ad5763de21fb65fa44b6" title="Coadd the images.">coaddImages()</a>.</p>
+<p>A key example is to update keywords after the averaging occurs in <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad3edac12807a23393d5c9ce77293e7a7" title="Coadd the images.">coaddImages()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 &lt;0 on error. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a91ab8817240805cba1ec6675d4289a4a">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01138">1138</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01127">1127</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1205,7 +1173,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Reimplemented in <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a053758a134befca786e2cfbadda246a7">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01132">1132</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01121">1121</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1203,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Reimplemented in <a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a33327db1d17a62bd8574f6bb84a4d53f">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00961">961</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00950">950</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1265,9 +1233,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01395">1395</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01384">1384</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageFilters_8hpp_source.html#l00206">mx::improc::filterImage()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00378">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, and <a class="el" href="imageFilters_8hpp_source.html#l00758">mx::improc::radprofim()</a>.</p>
+<p class="reference">References <a class="el" href="imageFilters_8hpp_source.html#l00206">mx::improc::filterImage()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00375">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, and <a class="el" href="imageFilters_8hpp_source.html#l00764">mx::improc::radprofim()</a>.</p>
 
 </div>
 </div>
@@ -1288,9 +1256,9 @@ template&lt;typename _realT &gt; </div>
 <p>Read the list of files, cut to size, and preprocess. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00765">765</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00754">754</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>, <a class="el" href="fitsHeader_8hpp_source.html#l00326">mx::improc::fitsHeader::count()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00241">mx::ISO8601date2mjd()</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00050">mx::improc::HCI::noCombine</a>, <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01430">mx::improc::fitsFile&lt; dataT &gt;::setReadSize()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00060">mx::improc::zeroNaNCube()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">mx::fits::fitsHeader::append()</a>, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a02ec5c2484482748795b778f473f6f54">mx::fits::fitsHeader::count()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>, <a class="el" href="group__timeutils.html#gaeef1d6e15305fd6c9a5699b91591e2f6">mx::sys::ISO8601date2mjd()</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::noCombine</a>, <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01427">mx::fits::fitsFile&lt; dataT &gt;::setReadSize()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00060">mx::improc::zeroNaNCube()</a>.</p>
 
 </div>
 </div>
@@ -1309,11 +1277,11 @@ template&lt;typename _realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Read the mask file, resizing to imSize if needed. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd>here re-size mask if needed to match imSize </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000034">Todo:</a></b></dt><dd>here re-size mask if needed to match imSize </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01356">1356</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01345">1345</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -1360,9 +1328,9 @@ template&lt;typename _realT &gt; </div>
 <p>Read in already PSF-subtracted files. </p>
 <p>Used to take up final processing after applying some non-klipReduce processing steps to PSF-subtracted images. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01841">1841</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01830">1830</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00073">mx::improc::HCI::combineMethodFmStr()</a>, <a class="el" href="fitsHeader_8hpp_source.html#l00326">mx::improc::fitsHeader::count()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>, <a class="el" href="fileUtils_8hpp_source.html#l00063">mx::ioutils::getFileNames()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00241">mx::ISO8601date2mjd()</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="readColumns_8hpp_source.html#l00135">mx::ioutils::readColumns()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01430">mx::improc::fitsFile&lt; dataT &gt;::setReadSize()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00060">mx::improc::zeroNaNCube()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">mx::fits::fitsHeader::append()</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a3f3d4bc75900f031f004e8047e2d266e">mx::improc::HCI::combineMethodFmStr()</a>, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a02ec5c2484482748795b778f473f6f54">mx::fits::fitsHeader::count()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>, <a class="el" href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">mx::ioutils::getFileNames()</a>, <a class="el" href="group__timeutils.html#gaeef1d6e15305fd6c9a5699b91591e2f6">mx::sys::ISO8601date2mjd()</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="readColumns_8hpp_source.html#l00137">mx::ioutils::readColumns()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01427">mx::fits::fitsFile&lt; dataT &gt;::setReadSize()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00060">mx::improc::zeroNaNCube()</a>.</p>
 
 </div>
 </div>
@@ -1384,9 +1352,9 @@ template&lt;typename _realT &gt; </div>
 <p>The target files must be read with <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6db8cba45cd927c6914c0d9b612d07aa">readFiles()</a> before calling this method.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00974">974</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00963">963</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00241">mx::ISO8601date2mjd()</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00050">mx::improc::HCI::noCombine</a>, <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01430">mx::improc::fitsFile&lt; dataT &gt;::setReadSize()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00060">mx::improc::zeroNaNCube()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">mx::fits::fitsHeader::append()</a>, <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>, <a class="el" href="group__timeutils.html#gaeef1d6e15305fd6c9a5699b91591e2f6">mx::sys::ISO8601date2mjd()</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::noCombine</a>, <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01427">mx::fits::fitsFile&lt; dataT &gt;::setReadSize()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00060">mx::improc::zeroNaNCube()</a>.</p>
 
 </div>
 </div>
@@ -1408,14 +1376,14 @@ template&lt;typename _realT &gt; </div>
 <p>This is called by <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6db8cba45cd927c6914c0d9b612d07aa" title="Read the list of files, cut to size, and preprocess.">readFiles()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01499">1499</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01488">1488</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00144">MXE_NOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="readColumns_8hpp_source.html#l00135">mx::ioutils::readColumns()</a>.</p>
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00144">MXE_NOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2">mx::ioutils::pathFilename()</a>, and <a class="el" href="readColumns_8hpp_source.html#l00137">mx::ioutils::readColumns()</a>.</p>
 
 </div>
 </div>
-<a id="ae463c1ba69564164fa9de8508d619ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae463c1ba69564164fa9de8508d619ebe">&#9670;&nbsp;</a></span>stdFitsHeader()</h2>
+<a id="a14a820b073e3b1aefb6e4a55e92515c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a820b073e3b1aefb6e4a55e92515c1">&#9670;&nbsp;</a></span>stdFitsHeader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1425,7 +1393,7 @@ template&lt;typename _realT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::stdFitsHeader </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1fitsHeader.html">improc::fitsHeader</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> &amp;&#160;</td>
           <td class="paramname"><em>head</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1440,9 +1408,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01680">1680</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01669">1669</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00060">mx::improc::HCI::combineMethodStr()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00050">mx::improc::HCI::noCombine</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">mx::fits::fitsHeader::append()</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a65021227cd2f3ac9355d855692804ead">mx::improc::HCI::combineMethodStr()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00052">mx::improc::HCI::noCombine</a>, and <a class="el" href="group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2">mx::ioutils::pathFilename()</a>.</p>
 
 </div>
 </div>
@@ -1492,14 +1460,14 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01144">1144</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01133">1133</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="readColumns_8hpp_source.html#l00135">mx::ioutils::readColumns()</a>.</p>
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2">mx::ioutils::pathFilename()</a>, and <a class="el" href="readColumns_8hpp_source.html#l00137">mx::ioutils::readColumns()</a>.</p>
 
 </div>
 </div>
-<a id="a0a80009690bc5d038cd8c5cd5a8a69fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a80009690bc5d038cd8c5cd5a8a69fb">&#9670;&nbsp;</a></span>writeFinim()</h2>
+<a id="a3c8a2f6c255b838a83d75d6504893a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8a2f6c255b838a83d75d6504893a1e">&#9670;&nbsp;</a></span>writeFinim()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1509,7 +1477,7 @@ template&lt;typename _realT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::writeFinim </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1fitsHeader.html">improc::fitsHeader</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a> *&#160;</td>
           <td class="paramname"><em>addHead</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
@@ -1518,9 +1486,9 @@ template&lt;typename _realT &gt; </div>
 
 <p>Write the final combined image to disk. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01721">1721</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l01710">1710</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00399">mx::improc::fitsHeader::append()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00060">mx::improc::HCI::combineMethodStr()</a>, <a class="el" href="fitsHeader_8hpp_source.html#l00608">mx::improc::fitsHeaderGitStatus()</a>, <a class="el" href="fileUtils_8hpp_source.html#l00233">mx::ioutils::getSequentialFilename()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00053">mx::improc::HCI::sigmaMeanCombine</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01274">mx::improc::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">mx::fits::fitsHeader::append()</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a65021227cd2f3ac9355d855692804ead">mx::improc::HCI::combineMethodStr()</a>, <a class="el" href="group__fits__utils.html#ga090671b8b7bacafa7548b80293158622">mx::fits::fitsHeaderGitStatus()</a>, <a class="el" href="group__fileutils.html#ga1433f755568d77709f43db840846a11f">mx::ioutils::getSequentialFilename()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00055">mx::improc::HCI::sigmaMeanCombine</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01271">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1515,7 @@ template&lt;typename _realT &gt; </div>
 </ul>
 <p>No other types of combination are currently supported for coadding. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00424">424</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00413">413</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1567,7 +1535,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The values of these keywords will be averaged and replaced. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00433">433</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00422">422</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1555,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Maximum number of images to coadd. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00427">427</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00416">416</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1575,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Maximum elapsed time over which to coadd the images. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00430">430</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00419">419</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1634,7 +1602,7 @@ template&lt;typename _realT &gt; </div>
 <li><a class="el" href="group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603ea6215ade813de2fd681c606705826b522" title="Combine with the sigma clipped mean.">HCI::sigmaMeanCombine</a> &ndash; final image is sigma clipped mean. If m_sigmaThreshold &lt;= 0, then it reverts to meanCombine. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00539">539</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00528">528</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1653,9 +1621,9 @@ template&lt;typename _realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Vector to hold the image weights read from the m_weightFile. </p>
-<p>After readWeights is executed by readFiles, this will contain the normalized weights. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd>check how comboWeights are handled in coadding </dd></dl>
+<p>After readWeights is executed by readFiles, this will contain the normalized weights. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd>check how comboWeights are handled in coadding </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00215">215</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00204">204</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1675,7 +1643,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Specify how many files from m_fileList to delete from the back of the list. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00270">270</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00259">259</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1695,7 +1663,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Specify how many files from m_fileList to delete from the front of the list. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00267">267</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00256">256</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1687,7 @@ template&lt;typename _realT &gt; </div>
 <li>false &ndash; [default] don't write to disk </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00596">596</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00585">585</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1739,7 +1707,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Set whether the final combined image is written to disk. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00575">575</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00564">564</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1760,7 +1728,7 @@ template&lt;typename _realT &gt; </div>
 <p>Use m_finimName exactly as specified, without appending a number or an extension. </p>
 <p>Output is still FITS format, regardless of extension. This will overwrite an existing file without asking. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00590">590</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00579">579</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1781,7 +1749,7 @@ template&lt;typename _realT &gt; </div>
 <p>The list of files to read in. </p>
 <p>This can be set on construction or by calling <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#aa87c9ab7269be2121d3eaa2e5f5f2e48">load_fileList</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00264">264</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00253">253</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1801,7 +1769,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Whether or not the specified files have been deleted from m_fileList. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00209">209</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00198">198</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1821,7 +1789,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Whether or not the m_fileList has been read. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00206">206</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00195">195</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1841,7 +1809,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The final combined images, one for each cube in psfsub. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00250">250</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00239">239</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1862,12 +1830,12 @@ template&lt;typename _realT &gt; </div>
 <p>The base file name of the output final image. </p>
 <p>The complete name is formed by combining with a sequential number and the ".fits" extension. that is: m_finimName0000.fits. This behavior can be modified with m_exactFinimName. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00584">584</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00573">573</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a36a98ef51af0a7898d3f645899561f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36a98ef51af0a7898d3f645899561f3b">&#9670;&nbsp;</a></span>m_heads</h2>
+<a id="ad84802f9fe46d5c18d84fedbd6a0be64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84802f9fe46d5c18d84fedbd6a0be64">&#9670;&nbsp;</a></span>m_heads</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1875,14 +1843,14 @@ template&lt;typename _realT &gt; </div>
 template&lt;typename _realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a>&gt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::m_heads</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a>&gt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::m_heads</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Vector of FITS headers, one per file, populated with the values for the keywords. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00203">203</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00192">192</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1902,7 +1870,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of target image times, in MJD. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00200">200</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00189">189</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +1892,7 @@ template&lt;typename _realT &gt; </div>
 <p>Set to &lt;= 0 to use images uncut.</p>
 <p>Image sizes are not increased if this is larger than their size on disk. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00315">315</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00304">304</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1944,7 +1912,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of FITS header keywords to read from the files in m_fileList. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00308">308</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00297">297</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1957,14 +1925,14 @@ template&lt;typename _realT &gt; </div>
 template&lt;typename _realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a62e64fd2395da446af5fb564834267df">eigenImageT</a> <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::m_mask</td>
+          <td class="memname"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6dad0ef345b3fb1b4751ecc8ddd73e08">eigenImageT</a> <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::m_mask</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The mask. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00458">458</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00447">447</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1984,7 +1952,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>A cube of masks, one for each input image, which may be modified versions (e.g. rotated) of mask. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00460">460</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00449">449</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2005,7 +1973,7 @@ template&lt;typename _realT &gt; </div>
 <p>Specify a mask file to apply. </p>
 <p>No mask is applied if this is empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00456">456</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00445">445</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2025,7 +1993,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The minimum fraction of good (un-masked) pixels to include in the final combination (0.0 to 1.0). If not met, then the pixel will be NaN-ed. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00553">553</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00542">542</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2045,7 +2013,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Whether or not the date is in ISO 8601 format. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00302">302</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00291">291</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2068,7 +2036,7 @@ template&lt;typename _realT &gt; </div>
 <p>Default is "DATE-OBS".</p>
 <p>If empty "", then image date is not read. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00299">299</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00288">288</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2088,7 +2056,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>If the date is not ISO 8601, this specifies the conversion to Julian Days (i.e. seconds to days) </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00305">305</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00294">294</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2108,7 +2076,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Number of columns of the images in m_tgtIms. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00196">196</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00185">185</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2128,7 +2096,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Number of images in m_tgtIms. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00194">194</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00183">183</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2148,7 +2116,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Pixels per image, that is Nrows*Ncols. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00197">197</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00186">186</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2168,7 +2136,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Number of rows of the images in m_tgtIms. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00195">195</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00184">184</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2188,7 +2156,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The directory where to write output files. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00578">578</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00567">567</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2209,7 +2177,7 @@ template&lt;typename _realT &gt; </div>
 <p>Azimuthal boxcar width for azimuthal unsharp mask. </p>
 <p>If this is 0 then azimuthal-USM is not performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00499">499</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00488">488</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2230,7 +2198,7 @@ template&lt;typename _realT &gt; </div>
 <p>Radial boxcar width for azimuthal unsharp mask. </p>
 <p>If this is 0 then azimuthal-USM is not performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00504">504</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00493">493</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2250,7 +2218,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>controls whether pre-processing takes place before or after coadding </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00490">490</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00479">479</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2271,7 +2239,7 @@ template&lt;typename _realT &gt; </div>
 <p>Kernel FWHM for symmetric unsharp mask (USM) </p>
 <p>USM is not performed if this is 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00510">510</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00499">499</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2291,7 +2259,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>If true, the mask is applied during each pre-processing step. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00492">492</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00481">481</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2311,7 +2279,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>If true, then we stop after pre-processing. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00518">518</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00507">507</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2332,7 +2300,7 @@ template&lt;typename _realT &gt; </div>
 <p>Set path and file prefix to output the pre-processed images. </p>
 <p>If empty, then pre-processed images are not output. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00515">515</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00504">504</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2352,7 +2320,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>If true, a radial profile is subtracted from each image. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00494">494</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00483">483</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2373,7 +2341,7 @@ template&lt;typename _realT &gt; </div>
 <p>The PSF subtracted images. </p>
 <p>This is a vector of cubes so that it can contain results from different reductions, e.g. different modes when using KLIP. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00247">247</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00236">236</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2393,7 +2361,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Prefix of the FITS file names used to write individual PSF subtracted images to disk if m_doOutputPSFSub is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00599">599</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00588">588</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2415,7 +2383,7 @@ template&lt;typename _realT &gt; </div>
 <p>If this is not empty and qualityThreshold is &gt; 0, then only images where qualityValue &gt;= qualityThreshold are read and processed.</p>
 <p>The only restriction on qualityThreshold is that it is &gt; 0. It is intendend to be something like Strehl ratio. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00279">279</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00268">268</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2436,7 +2404,7 @@ template&lt;typename _realT &gt; </div>
 <p>Threshold to apply to qualityValues read from qualityFile. </p>
 <p>If &lt;= 0, then thresholding is not performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00284">284</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00273">273</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2456,7 +2424,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Specify how many files from m_RDIfileList to delete from the back of the list. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00350">350</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00339">339</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2476,7 +2444,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Specify how many files from m_RDIfileList to delete from the front of the list. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00347">347</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00336">336</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2497,7 +2465,7 @@ template&lt;typename _realT &gt; </div>
 <p>The list of files to read in for the RDI basis. </p>
 <p>This is set by calling <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a462cd5d39ff34109425b492efad360b8">load_RDIfileList</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00344">344</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00333">333</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2517,7 +2485,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Whether or not the specified files have been deleted from m_RDIfileList. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00236">236</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00225">225</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2537,12 +2505,12 @@ template&lt;typename _realT &gt; </div>
 
 <p>Whether or not the reference files have been read. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00233">233</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00222">222</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
-<a id="abb9ebf69b603874ceb7d483c3065322e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb9ebf69b603874ceb7d483c3065322e">&#9670;&nbsp;</a></span>m_RDIheads</h2>
+<a id="a3e4bd2728cde5b316b4f3173d4db0762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e4bd2728cde5b316b4f3173d4db0762">&#9670;&nbsp;</a></span>m_RDIheads</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2550,14 +2518,14 @@ template&lt;typename _realT &gt; </div>
 template&lt;typename _realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a>&gt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::m_RDIheads</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits::fitsHeader</a>&gt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation</a>&lt; _realT &gt;::m_RDIheads</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Vector of FITS headers, one per reference file, populated with the values for the keywords. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00230">230</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00219">219</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2577,7 +2545,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of reference image times, in MJD. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00227">227</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00216">216</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2597,7 +2565,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of FITS header keywords to read from the files in m_fileList. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00367">367</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00356">356</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2619,7 +2587,7 @@ template&lt;typename _realT &gt; </div>
 <p>If this is not empty and <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ac05c4d816c3cbea7f0ab4893a038537f">m_RDIqualityThreshold</a> is &gt; 0, then only images where qualityValue &gt;= qualityThreshold are read and processed.</p>
 <p>The only restriction on m_RDIqualityThreshold is that it is &gt; 0. It is intendend to be something like Strehl ratio. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00359">359</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00348">348</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2640,7 +2608,7 @@ template&lt;typename _realT &gt; </div>
 <p>Threshold to apply to qualityValues read from qualityFile. </p>
 <p>If &lt;= 0, then thresholding is not performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00364">364</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00353">353</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2660,7 +2628,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The optional reference image cube. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00224">224</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00213">213</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2680,7 +2648,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The standard deviation threshold used if combineMethod == <a class="el" href="group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603ea6215ade813de2fd681c606705826b522" title="Combine with the sigma clipped mean.">HCI::sigmaMeanCombine</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00550">550</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00539">539</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2700,7 +2668,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Don't do any of the pre-processing steps (including coadding). </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00488">488</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00477">477</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2720,7 +2688,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The target image cube. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00192">192</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00181">181</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2741,7 +2709,7 @@ template&lt;typename _realT &gt; </div>
 <p>Just prints the names and qualities of the files which pass threshold, and stop. </p>
 <p>Useful mainly for debugging. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00289">289</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00278">278</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2762,7 +2730,7 @@ template&lt;typename _realT &gt; </div>
 <p>Specifies a file containing the image weights, for combining with weighted mean. </p>
 <p>This 2-column space-delimited ASCII file containing filenames and weights. It must be specified before <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a6db8cba45cd927c6914c0d9b612d07aa" title="Read the list of files, cut to size, and preprocess.">readFiles()</a> is executed. In readFiles this is loaded after the m_fileList is cutdown and matched to the remaining files. </p>
 
-<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00545">545</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HCIobservation_8hpp_source.html#l00534">534</a> of file <a class="el" href="HCIobservation_8hpp_source.html">HCIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -2775,7 +2743,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html">HCIobservation</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

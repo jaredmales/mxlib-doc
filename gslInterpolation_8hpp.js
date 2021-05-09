@@ -1,5 +1,5 @@
 var gslInterpolation_8hpp =
 [
-    [ "gsl_interpolate", "gslInterpolation_8hpp.html#ga79ccb1b0a47b746afba0c50ca544d8fb", null ],
-    [ "gsl_interpolate", "gslInterpolation_8hpp.html#ga4d199ac493f747f1a5af4ffa9a2e6067", null ]
+    [ "gsl_interpolate", "gslInterpolation_8hpp.html#ga10a7c89db1bd46c8bd46bfee98728929", null ],
+    [ "gsl_interpolate", "gslInterpolation_8hpp.html#ga1cd197205e5c8357f103c153095c50cc", null ]
 ];

@@ -125,82 +125,83 @@ $(document).ready(function(){initNavTree('rawBinary_8hpp_source.html',''); initR
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../mxError.hpp&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>ioutils</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/// Write an array of data to file as raw binary.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span><span class="comment">/** Here raw binary means no formatting or metadata,</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">  * just the bytes pointed to by the array are written to</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">  * disk.</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  * \ingroup ioutils</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  * \returns 0 on success</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  * \returns -1 on error</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24">writeRawBinary</a>( <span class="keyword">const</span> std::string &amp; fileName, <span class="comment">///&lt; [in] the file to write to</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>                    T * data,                     <span class="comment">///&lt; [in] the data pointer</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span>                    <span class="keywordtype">size_t</span> szData)                <span class="comment">///&lt; [in] number of elements of sizeof(T) to write</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span>{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   FILE * fout;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   fout = fopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordflow">if</span>(fout == 0)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, errno, <span class="stringliteral">&quot;Error from fopen [&quot;</span> + fileName + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../mxlib.hpp&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;../mxError.hpp&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>ioutils</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/// Write an array of data to file as raw binary.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span><span class="comment">/** Here raw binary means no formatting or metadata,</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">  * just the bytes pointed to by the array are written to</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  * disk.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  * \ingroup ioutils</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  * \returns 0 on success</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  * \returns -1 on error</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24">writeRawBinary</a>( <span class="keyword">const</span> std::string &amp; fileName, <span class="comment">///&lt; [in] the file to write to</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span>                    T * data,                     <span class="comment">///&lt; [in] the data pointer</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span>                    <span class="keywordtype">size_t</span> szData)                <span class="comment">///&lt; [in] number of elements of sizeof(T) to write</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   FILE * fout;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   fout = fopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keywordflow">if</span>(fout == 0)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, errno, <span class="stringliteral">&quot;Error from fopen [&quot;</span> + fileName + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keywordtype">int</span> nwr = fwrite( data, <span class="keyword">sizeof</span>(T), szData, fout);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keywordflow">if</span>(nwr != szData)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="comment">//Have to handle case where EOF reached but no error.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">if</span>(errno != 0)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, errno, <span class="stringliteral">&quot;Error writing to file [&quot;</span> + fileName + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Error writing to file, did not write all elements. [&quot;</span> + fileName+ <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      fclose(fout);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <span class="keywordtype">int</span> res = fclose(fout);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   <span class="keywordflow">if</span>(res != 0)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, errno, <span class="stringliteral">&quot;Error closing file [&quot;</span> + fileName + <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">//namespace ioutils</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif //rawBinary_hpp</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordtype">int</span> nwr = fwrite( data, <span class="keyword">sizeof</span>(T), szData, fout);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   <span class="keywordflow">if</span>(nwr != szData)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="comment">//Have to handle case where EOF reached but no error.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">if</span>(errno != 0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;         <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, errno, <span class="stringliteral">&quot;Error writing to file [&quot;</span> + fileName + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Error writing to file, did not write all elements. [&quot;</span> + fileName+ <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      fclose(fout);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordtype">int</span> res = fclose(fout);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keywordflow">if</span>(res != 0)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeRawBinary&quot;</span>, errno, <span class="stringliteral">&quot;Error closing file [&quot;</span> + fileName + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">//namespace ioutils</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif //rawBinary_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
 <div class="ttc" id="agroup__error__macros_html_gad4e5d5d54d751af7aad7400576e486d5"><div class="ttname"><a href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a></div><div class="ttdeci">#define mxPError(esrc, ecode, expl)</div><div class="ttdoc">This reports a standard library error, taking after perror.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00096">mxError.hpp:96</a></div></div>
-<div class="ttc" id="agroup__ioutils_html_gacd8c8775b9570d83bd9a37fc7e193e24"><div class="ttname"><a href="group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24">mx::ioutils::writeRawBinary</a></div><div class="ttdeci">int writeRawBinary(const std::string &amp;fileName, T *data, size_t szData)</div><div class="ttdoc">Write an array of data to file as raw binary.</div><div class="ttdef"><b>Definition:</b> <a href="rawBinary_8hpp_source.html#l00051">rawBinary.hpp:51</a></div></div>
+<div class="ttc" id="agroup__ioutils_html_gacd8c8775b9570d83bd9a37fc7e193e24"><div class="ttname"><a href="group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24">mx::ioutils::writeRawBinary</a></div><div class="ttdeci">int writeRawBinary(const std::string &amp;fileName, T *data, size_t szData)</div><div class="ttdoc">Write an array of data to file as raw binary.</div><div class="ttdef"><b>Definition:</b> <a href="rawBinary_8hpp_source.html#l00052">rawBinary.hpp:52</a></div></div>
 <div class="ttc" id="agroup__mxe__errors_html_ga1cb55d92155f8f1425930d8d2db08ca1"><div class="ttname"><a href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a></div><div class="ttdeci">#define MXE_FILERERR</div><div class="ttdoc">An error occurred while reading from a file.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00196">mxError.hpp:196</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="rawBinary_8hpp.html">rawBinary.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputdatat_3589',['outputDataT',['../structmx_1_1fftwTypeSpec.html#ab62fb372c455b203be14e63032771378',1,'mx::fftwTypeSpec::outputDataT()'],['../structmx_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4.html#a0ab5cc0c4cfe95212d9cd26f78090a34',1,'mx::fftwTypeSpec&lt; complexFT, complexFT &gt;::outputDataT()'],['../structmx_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4.html#aacaa0328bbe0a7b9ab1cb83e705dad44',1,'mx::fftwTypeSpec&lt; float, complexFT &gt;::outputDataT()']]]
+  ['outputdatat_3684',['outputDataT',['../structmx_1_1math_1_1fft_1_1fftwTypeSpec.html#a2467bcba6732882f5dfd992418d64b40',1,'mx::math::fft::fftwTypeSpec::outputDataT()'],['../structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4.html#a426d8c52a1a96036b97dea70ec9800c4',1,'mx::math::fft::fftwTypeSpec&lt; complexFT, complexFT &gt;::outputDataT()'],['../structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4.html#ae5e658ca2d9e526ae020dab92db5df1b',1,'mx::math::fft::fftwTypeSpec&lt; float, complexFT &gt;::outputDataT()']]]
 ];

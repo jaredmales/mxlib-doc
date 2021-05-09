@@ -110,7 +110,7 @@ class mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT,
 <div class="line">   <span class="keywordtype">int</span> nextWF(wavefront&lt;realT&gt; &amp; wf); <span class="comment">//Fills in the wavefront with phase and amplitude</span></div>
 <div class="line">};</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00080">80</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00064">64</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="simulatedAOSystem_8hpp_source.html">ao/sim/simulatedAOSystem.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -125,9 +125,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a76e80d9a5d123981f8532110b1736462"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Array&lt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a>, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a76e80d9a5d123981f8532110b1736462">imageT</a></td></tr>
 <tr class="memdesc:a76e80d9a5d123981f8532110b1736462"><td class="mdescLeft">&#160;</td><td class="mdescRight">The real image type.  <a href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a76e80d9a5d123981f8532110b1736462">More...</a><br /></td></tr>
 <tr class="separator:a76e80d9a5d123981f8532110b1736462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a6fb6e481746d4114a3d88eaf042fee"><td class="memItemLeft" align="right" valign="top">typedef mx::imagingArray&lt; std::complex&lt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a> &gt;, mx::fftwAllocator&lt; std::complex&lt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a> &gt; &gt;, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a6a6fb6e481746d4114a3d88eaf042fee">complexImageT</a></td></tr>
-<tr class="memdesc:a6a6fb6e481746d4114a3d88eaf042fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex image type.  <a href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a6a6fb6e481746d4114a3d88eaf042fee">More...</a><br /></td></tr>
-<tr class="separator:a6a6fb6e481746d4114a3d88eaf042fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda4377db2f849c04950b8ec92925e29"><td class="memItemLeft" align="right" valign="top">typedef wfp::imagingArray&lt; std::complex&lt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a> &gt;, wfp::fftwAllocator&lt; std::complex&lt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a> &gt; &gt;, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#afda4377db2f849c04950b8ec92925e29">complexImageT</a></td></tr>
+<tr class="memdesc:afda4377db2f849c04950b8ec92925e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex image type.  <a href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#afda4377db2f849c04950b8ec92925e29">More...</a><br /></td></tr>
+<tr class="separator:afda4377db2f849c04950b8ec92925e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -208,8 +208,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wfSz</b> ()</td></tr>
 <tr class="separator:a64d6c030521adbc6b1adb5102c19f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a6a6fb6e481746d4114a3d88eaf042fee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a6fb6e481746d4114a3d88eaf042fee">&#9670;&nbsp;</a></span>complexImageT</h2>
+<a id="afda4377db2f849c04950b8ec92925e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda4377db2f849c04950b8ec92925e29">&#9670;&nbsp;</a></span>complexImageT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,14 +217,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wfSz</b> ()</td></tr>
 template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filterT , typename _dmT , typename _turbSeqT , typename _coronT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef mx::imagingArray&lt;std::complex&lt;<a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a>&gt;, mx::fftwAllocator&lt;std::complex&lt;<a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a>&gt; &gt;, 0&gt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html">mx::AO::sim::simulatedAOSystem</a>&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::<a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a6a6fb6e481746d4114a3d88eaf042fee">complexImageT</a></td>
+          <td class="memname">typedef wfp::imagingArray&lt;std::complex&lt;<a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a>&gt;, wfp::fftwAllocator&lt;std::complex&lt;<a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">realT</a>&gt; &gt;, 0&gt; <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html">mx::AO::sim::simulatedAOSystem</a>&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::<a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#afda4377db2f849c04950b8ec92925e29">complexImageT</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The complex image type. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00092">92</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00074">74</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +244,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The real image type. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00090">90</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00072">72</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The floating point type used for all calculations. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00086">86</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00068">68</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The wavefront type. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00088">88</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00070">70</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +305,9 @@ template&lt;typename realT , typename wfsT , typename reconT , typename filterT 
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00312">312</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00296">296</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="environment_8hpp_source.html#l00045">mx::getEnv()</a>.</p>
+<p class="reference">References <a class="el" href="group__system.html#ga5e31951267872facbe589bb9e15b4995">mx::sys::getEnv()</a>.</p>
 
 </div>
 </div>
@@ -327,9 +327,9 @@ template&lt;typename realT , typename wfsT , typename reconT , typename filterT 
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00336">336</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00321">321</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stringUtils_8hpp_source.html#l00083">mx::ioutils::convertToString()</a>.</p>
+<p class="reference">References <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01271">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -396,9 +396,9 @@ template&lt;typename realT , typename wfsT , typename reconT , typename filterT 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00367">367</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00356">356</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -419,7 +419,7 @@ template&lt;typename realT , typename wfsT , typename reconT , typename filterT 
 <p>Get the simulation step size. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_simStep [sec]. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l01016">1016</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00978">978</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +453,7 @@ template&lt;typename realT , typename wfsT , typename reconT , typename filterT 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l01008">1008</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00970">970</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -502,9 +502,9 @@ template&lt;typename realT , typename wfsT , typename reconT , typename filterT 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00490">490</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00479">479</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00059">mx::get_curr_time()</a>.</p>
+<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00063">mx::sys::get_curr_time()</a>.</p>
 
 </div>
 </div>
@@ -525,7 +525,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The system pupil. This is generally a binary mask and will be applied at various points in the propagation. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00246">246</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00224">224</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -545,7 +545,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>A pupil mask which is applied once at the beginning of propagation. Could be apodized and/or different from _pupil. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00247">247</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00225">225</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -565,7 +565,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The pupil name for use in the <a class="el" href="namespacemx_1_1AO_1_1path.html" title="Namespace for paths.">mx::AO::path</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00103">103</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00089">89</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +585,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The system name for use in <a class="el" href="namespacemx_1_1AO_1_1path.html" title="Namespace for paths.">mx::AO::path</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00101">101</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00087">87</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +605,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The WFS name for use in the <a class="el" href="namespacemx_1_1AO_1_1path.html" title="Namespace for paths.">mx::AO::path</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00102">102</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00088">88</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -624,7 +624,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 </div><div class="memdoc">
 <p>Image outputs </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00172">172</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00158">158</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 
 <p>The simulation step size in seconds. </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00141">141</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00127">127</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 </div><div class="memdoc">
 <p>Wavefront Outputs </p>
 
-<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00157">157</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulatedAOSystem_8hpp_source.html#l00143">143</a> of file <a class="el" href="simulatedAOSystem_8hpp_source.html">simulatedAOSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -680,12 +680,12 @@ template&lt;typename _realT , typename _wfsT , typename _reconT , typename _filt
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1simulatedAOSystem_html_a19062da0d5ec9f380ceca1eec80be72e"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">mx::AO::sim::simulatedAOSystem::realT</a></div><div class="ttdeci">_realT realT</div><div class="ttdoc">The floating point type used for all calculations.</div><div class="ttdef"><b>Definition:</b> <a href="simulatedAOSystem_8hpp_source.html#l00086">simulatedAOSystem.hpp:86</a></div></div>
+<div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1simulatedAOSystem_html_a19062da0d5ec9f380ceca1eec80be72e"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html#a19062da0d5ec9f380ceca1eec80be72e">mx::AO::sim::simulatedAOSystem::realT</a></div><div class="ttdeci">_realT realT</div><div class="ttdoc">The floating point type used for all calculations.</div><div class="ttdef"><b>Definition:</b> <a href="simulatedAOSystem_8hpp_source.html#l00068">simulatedAOSystem.hpp:68</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>sim</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html">simulatedAOSystem</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

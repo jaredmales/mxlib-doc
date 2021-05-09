@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  * </span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../gslInterpolation.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../math/gslInterpolation.hpp&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="units_8hpp.html">units.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
@@ -582,99 +582,100 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;   </div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="comment">/// Read in the main sequence table of Mamajek, and construct the vectors for input into the mainSequence class.</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="comment"></span><span class="comment">/** The table should be copied to a text file, and all ... replaced with -99, then any remaining . replaced with space.</span></div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno"><a class="line" href="stars_8hpp.html#a49304ee39daa78925d41bde562ce972f">  492</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stars_8hpp.html#a49304ee39daa78925d41bde562ce972f">makeMSTable</a>( <span class="keyword">const</span> std::string &amp; fn )</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;{</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;   std::vector&lt;std::string&gt; SpT;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;   std::vector&lt;double&gt; Teff;  </div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;   std::vector&lt;double&gt; logT;   </div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;   std::vector&lt;double&gt; logL;  </div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;   std::vector&lt;double&gt; Mbol;  </div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;   std::vector&lt;double&gt; BCv;   </div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;   std::vector&lt;double&gt; Mv;    </div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;   std::vector&lt;double&gt; B__V;    </div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;   std::vector&lt;double&gt; Bt__Vt;  </div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;   std::vector&lt;double&gt; G__V;    </div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;   std::vector&lt;double&gt; Bp__Rp;  </div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;   std::vector&lt;double&gt; G__Rp;   </div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;   std::vector&lt;double&gt; M_G;    </div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;   std::vector&lt;double&gt; b__y;    </div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;   std::vector&lt;double&gt; U__B;   </div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;   std::vector&lt;double&gt; V__Rc;   </div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;   std::vector&lt;double&gt; V__Ic;   </div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;   std::vector&lt;double&gt; V__Ks;   </div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;   std::vector&lt;double&gt; J__H;    </div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;   std::vector&lt;double&gt; H__Ks;    </div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;   std::vector&lt;double&gt; Ks__W1;   </div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;   std::vector&lt;double&gt; W1__W2;  </div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;   std::vector&lt;double&gt; W1__W3;  </div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;   std::vector&lt;double&gt; W1__W4;   </div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;   std::vector&lt;double&gt; M_J;   </div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;   std::vector&lt;double&gt; M_Ks;  </div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;   std::vector&lt;double&gt; i__z;  </div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;   std::vector&lt;double&gt; z__Y; </div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;   std::vector&lt;double&gt; R_Rsun; </div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;   std::vector&lt;double&gt; Msun;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; </div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;   <a class="code" href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">ioutils::readColumns</a>(fn,SpT,Teff,logT,logL,Mbol,BCv,Mv,B__V,Bt__Vt,G__V,Bp__Rp,G__Rp,M_G,b__y,U__B,V__Rc,V__Ic,V__Ks,J__H,H__Ks,Ks__W1,W1__W2,W1__W3,</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                  W1__W4,M_J,M_Ks,i__z,z__Y,R_Rsun, Msun);</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;//&quot;</span> &lt;&lt; fn &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_numTypes = {&quot;</span> &lt;&lt; <a class="code" href="group__stars.html#ga3df9c066c0292686701b4599a364e5cd">numSpType</a>(SpT[0]);</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="group__stars.html#ga3df9c066c0292686701b4599a364e5cd">numSpType</a>(SpT[n]);</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;   </div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_Teffs = {&quot;</span> &lt;&lt; Teff[0];</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Teff[n];</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;   </div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_logLs = {&quot;</span> &lt;&lt; logL[0];</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; logL[n];</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;   </div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_rads = {&quot;</span> &lt;&lt; R_Rsun[0];</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; R_Rsun[n];</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;   </div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_masses = {&quot;</span> &lt;&lt; Msun[0];</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Msun[n];</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;   </div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_Mvs = {&quot;</span> &lt;&lt; Mv[0];</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Mv[n];</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;   </div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_V_Rcs = {&quot;</span> &lt;&lt; V__Rc[0];</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; V__Rc[n];</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;   </div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_V_Ics = {&quot;</span> &lt;&lt; V__Ic[0];</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; V__Ic[n];</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;   </div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_V_Kss = {&quot;</span> &lt;&lt; V__Ks[0];</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; V__Ks[n];</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;   </div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_J_Hs = {&quot;</span> &lt;&lt; J__H[0];</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; J__H[n];</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;   </div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_H_Kss = {&quot;</span> &lt;&lt; H__Ks[0];</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; H__Ks[n];</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;}</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;} <span class="comment">//namespace maintenance</span></div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;} <span class="comment">//namespace astro</span></div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160; </div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="comment"></span><span class="comment">/** This is used to create mamajek.inc.</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="comment">  * The table should be copied to a text file, and all `...` replaced with -99, then any remaining . replaced with space.</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno"><a class="line" href="stars_8hpp.html#a49304ee39daa78925d41bde562ce972f">  493</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stars_8hpp.html#a49304ee39daa78925d41bde562ce972f">makeMSTable</a>( <span class="keyword">const</span> std::string &amp; fn )</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;{</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;   std::vector&lt;std::string&gt; SpT;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;   std::vector&lt;double&gt; Teff;  </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;   std::vector&lt;double&gt; logT;   </div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;   std::vector&lt;double&gt; logL;  </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;   std::vector&lt;double&gt; Mbol;  </div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;   std::vector&lt;double&gt; BCv;   </div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;   std::vector&lt;double&gt; Mv;    </div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;   std::vector&lt;double&gt; B__V;    </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;   std::vector&lt;double&gt; Bt__Vt;  </div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;   std::vector&lt;double&gt; G__V;    </div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;   std::vector&lt;double&gt; Bp__Rp;  </div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;   std::vector&lt;double&gt; G__Rp;   </div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;   std::vector&lt;double&gt; M_G;    </div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;   std::vector&lt;double&gt; b__y;    </div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;   std::vector&lt;double&gt; U__B;   </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;   std::vector&lt;double&gt; V__Rc;   </div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;   std::vector&lt;double&gt; V__Ic;   </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;   std::vector&lt;double&gt; V__Ks;   </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;   std::vector&lt;double&gt; J__H;    </div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;   std::vector&lt;double&gt; H__Ks;    </div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;   std::vector&lt;double&gt; Ks__W1;   </div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;   std::vector&lt;double&gt; W1__W2;  </div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;   std::vector&lt;double&gt; W1__W3;  </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;   std::vector&lt;double&gt; W1__W4;   </div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;   std::vector&lt;double&gt; M_J;   </div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;   std::vector&lt;double&gt; M_Ks;  </div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;   std::vector&lt;double&gt; i__z;  </div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;   std::vector&lt;double&gt; z__Y; </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;   std::vector&lt;double&gt; R_Rsun; </div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;   std::vector&lt;double&gt; Msun;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;   <a class="code" href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">ioutils::readColumns</a>(fn,SpT,Teff,logT,logL,Mbol,BCv,Mv,B__V,Bt__Vt,G__V,Bp__Rp,G__Rp,M_G,b__y,U__B,V__Rc,V__Ic,V__Ks,J__H,H__Ks,Ks__W1,W1__W2,W1__W3,</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                  W1__W4,M_J,M_Ks,i__z,z__Y,R_Rsun, Msun);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160; </div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;//&quot;</span> &lt;&lt; fn &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_numTypes = {&quot;</span> &lt;&lt; <a class="code" href="group__stars.html#ga3df9c066c0292686701b4599a364e5cd">numSpType</a>(SpT[0]);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="group__stars.html#ga3df9c066c0292686701b4599a364e5cd">numSpType</a>(SpT[n]);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;   </div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_Teffs = {&quot;</span> &lt;&lt; Teff[0];</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Teff[n];</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;   </div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_logLs = {&quot;</span> &lt;&lt; logL[0];</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; logL[n];</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;   </div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_rads = {&quot;</span> &lt;&lt; R_Rsun[0];</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; R_Rsun[n];</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;   </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_masses = {&quot;</span> &lt;&lt; Msun[0];</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Msun[n];</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;   </div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_Mvs = {&quot;</span> &lt;&lt; Mv[0];</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Mv[n];</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;   </div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_V_Rcs = {&quot;</span> &lt;&lt; V__Rc[0];</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; V__Rc[n];</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;   </div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_V_Ics = {&quot;</span> &lt;&lt; V__Ic[0];</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; V__Ic[n];</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;   </div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_V_Kss = {&quot;</span> &lt;&lt; V__Ks[0];</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; V__Ks[n];</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;   </div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_J_Hs = {&quot;</span> &lt;&lt; J__H[0];</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; J__H[n];</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;   </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;         m_H_Kss = {&quot;</span> &lt;&lt; H__Ks[0];</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1;n&lt;SpT.size();++n) std::cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; H__Ks[n];</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;   std::cout &lt;&lt; <span class="stringliteral">&quot;};\n&quot;</span>;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;}</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;} <span class="comment">//namespace maintenance</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;} <span class="comment">//namespace astro</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;} <span class="comment">//namespace mx</span></div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160; </div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160; </div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160; </div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__stringutils_html_gaaeb681d49abc4a51152f57bdde20c398"><div class="ttname"><a href="group__stringutils.html#gaaeb681d49abc4a51152f57bdde20c398">mx::ioutils::removeWhiteSpace</a></div><div class="ttdeci">void removeWhiteSpace(std::string &amp;outstr, const std::string &amp;instr)</div><div class="ttdoc">Remove all white space from a string.</div><div class="ttdef"><b>Definition:</b> <a href="stringUtils_8hpp_source.html#l00418">stringUtils.hpp:418</a></div></div>
+<div class="ttc" id="agroup__stringutils_html_gaaeb681d49abc4a51152f57bdde20c398"><div class="ttname"><a href="group__stringutils.html#gaaeb681d49abc4a51152f57bdde20c398">mx::ioutils::removeWhiteSpace</a></div><div class="ttdeci">void removeWhiteSpace(std::string &amp;outstr, const std::string &amp;instr)</div><div class="ttdoc">Remove all white space from a string.</div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a18c2d9b002e87126edaf69b7f5cd1a5a"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a18c2d9b002e87126edaf69b7f5cd1a5a">mx::astro::mainSequence::m_maxT</a></div><div class="ttdeci">double m_maxT</div><div class="ttdoc">The maximum numeric spectral type for effective Temperature.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00126">stars.hpp:126</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_ac1e53bf1f407185088637aa5a138fdf3"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#ac1e53bf1f407185088637aa5a138fdf3">mx::astro::mainSequence::Mv</a></div><div class="ttdeci">realT Mv(const std::string &amp;spType)</div><div class="ttdoc">Get the interpolated absolute V magnitude.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00338">stars.hpp:338</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a0e44fe09b301cc1689f94d758120208b"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a0e44fe09b301cc1689f94d758120208b">mx::astro::mainSequence::radius</a></div><div class="ttdeci">realT radius(const std::string &amp;spType)</div><div class="ttdoc">Get the interpolated radius.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00288">stars.hpp:288</a></div></div>
@@ -682,7 +683,7 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_afb37c7efd4b792cf5aff8f6e820c5f75"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#afb37c7efd4b792cf5aff8f6e820c5f75">mx::astro::mainSequence::m_masses</a></div><div class="ttdeci">std::vector&lt; double &gt; m_masses</div><div class="ttdoc">The masses from the sequence.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00116">stars.hpp:116</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a4cee7fa2db5d2dfe3a9630eb8e6b7354"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a4cee7fa2db5d2dfe3a9630eb8e6b7354">mx::astro::mainSequence::radius</a></div><div class="ttdeci">realT radius(realT numType)</div><div class="ttdoc">Get the interpolated radius.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00273">stars.hpp:273</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a756c387ce705973251a0b514201a7b8f"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a756c387ce705973251a0b514201a7b8f">mx::astro::mainSequence::V_Rc</a></div><div class="ttdeci">realT V_Rc(const std::string &amp;spType)</div><div class="ttdoc">Get the interpolated absolute V-Rc color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00363">stars.hpp:363</a></div></div>
-<div class="ttc" id="agroup__asciiutils_html_ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><div class="ttname"><a href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a></div><div class="ttdeci">int readColumns(const std::string &amp;fname, arrTs &amp;... arrays)</div><div class="ttdoc">Read in columns from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="readColumns_8hpp_source.html#l00135">readColumns.hpp:135</a></div></div>
+<div class="ttc" id="agroup__asciiutils_html_ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><div class="ttname"><a href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a></div><div class="ttdeci">int readColumns(const std::string &amp;fname, arrTs &amp;... arrays)</div><div class="ttdoc">Read in columns from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="readColumns_8hpp_source.html#l00137">readColumns.hpp:137</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a72ca68b984b232857494a4cf2584156b"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a72ca68b984b232857494a4cf2584156b">mx::astro::mainSequence::J_H</a></div><div class="ttdeci">realT J_H(realT numType)</div><div class="ttdoc">Get the interpolated absolute J-H color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00423">stars.hpp:423</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a14a32b020ba4c923ce78cb8294e458b5"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a14a32b020ba4c923ce78cb8294e458b5">mx::astro::mainSequence::V_Rc</a></div><div class="ttdeci">realT V_Rc(realT numType)</div><div class="ttdoc">Get the interpolated absolute V-Rc color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00348">stars.hpp:348</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a4c44d931b973c4cdfc1d62ad262a5baa"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a4c44d931b973c4cdfc1d62ad262a5baa">mx::astro::mainSequence::interpMv</a></div><div class="ttdeci">gslInterpolator&lt; double &gt; interpMv</div><div class="ttdoc">The interpolator for absolute V magnitude.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00136">stars.hpp:136</a></div></div>
@@ -692,7 +693,7 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a05907b6b08a2b7518d7f769113d5e89e"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a05907b6b08a2b7518d7f769113d5e89e">mx::astro::mainSequence::m_TeffsR</a></div><div class="ttdeci">std::vector&lt; double &gt; m_TeffsR</div><div class="ttdoc">The effective temperatures from the sequence, reveresed order.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00112">stars.hpp:112</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a2ed7f1ee43f13e07268a7f13d532bb13"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a2ed7f1ee43f13e07268a7f13d532bb13">mx::astro::mainSequence::logL</a></div><div class="ttdeci">realT logL(realT numType)</div><div class="ttdoc">Get the interpolated log of luminosity.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00298">stars.hpp:298</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a0ee7ef57aa6f0ffbfc4da062fd90ab36"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a0ee7ef57aa6f0ffbfc4da062fd90ab36">mx::astro::mainSequence::m_minSpTfmT</a></div><div class="ttdeci">double m_minSpTfmT</div><div class="ttdoc">The minimum numeric spectral type for effective Temperature.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00162">stars.hpp:162</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_ab4b9f400293a2e1ad1d85485c7a8cb4f"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#ab4b9f400293a2e1ad1d85485c7a8cb4f">mx::astro::mainSequence::interpL</a></div><div class="ttdeci">gslInterpolator&lt; double &gt; interpL</div><div class="ttdoc">The interpolator for log luminosity.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00132">stars.hpp:132</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a449feef73f31811b524ec59d348486ee"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a449feef73f31811b524ec59d348486ee">mx::astro::mainSequence::m_J_Hs</a></div><div class="ttdeci">std::vector&lt; double &gt; m_J_Hs</div><div class="ttdoc">The J-H colors from the sequence.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00121">stars.hpp:121</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_adb6a90da6b05dd8dee8e85fcfec69d13"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#adb6a90da6b05dd8dee8e85fcfec69d13">mx::astro::mainSequence::m_maxSpTfmT</a></div><div class="ttdeci">double m_maxSpTfmT</div><div class="ttdoc">The maximum numeric spectral type for effective Temperature.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00163">stars.hpp:163</a></div></div>
@@ -700,7 +701,7 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a638b958e00aa8e418b3f387a847473b6"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a638b958e00aa8e418b3f387a847473b6">mx::astro::mainSequence::m_minMv</a></div><div class="ttdeci">double m_minMv</div><div class="ttdoc">The minimum numeric spectral type for absolute V magnitude.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00137">stars.hpp:137</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_ac3e24c74f271a340b4beb61318e3ae27"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#ac3e24c74f271a340b4beb61318e3ae27">mx::astro::mainSequence::m_maxVKs</a></div><div class="ttdeci">double m_maxVKs</div><div class="ttdoc">The maximum numeric spectral type for V-Ks color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00150">stars.hpp:150</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a662697097e0f34538ac0818224bcba8d"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a662697097e0f34538ac0818224bcba8d">mx::astro::mainSequence::m_Mvs</a></div><div class="ttdeci">std::vector&lt; double &gt; m_Mvs</div><div class="ttdoc">The absolute V magnitudes from the sequence.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00117">stars.hpp:117</a></div></div>
-<div class="ttc" id="agroup__stringutils_html_ga20e4c52b1890a613aeb6909ee27a2778"><div class="ttname"><a href="group__stringutils.html#ga20e4c52b1890a613aeb6909ee27a2778">mx::ioutils::toUpper</a></div><div class="ttdeci">void toUpper(std::string &amp;outstr, const std::string &amp;instr)</div><div class="ttdoc">Convert a string to all upper case.</div><div class="ttdef"><b>Definition:</b> <a href="stringUtils_8hpp_source.html#l00384">stringUtils.hpp:384</a></div></div>
+<div class="ttc" id="agroup__stringutils_html_ga20e4c52b1890a613aeb6909ee27a2778"><div class="ttname"><a href="group__stringutils.html#ga20e4c52b1890a613aeb6909ee27a2778">mx::ioutils::toUpper</a></div><div class="ttdeci">void toUpper(std::string &amp;outstr, const std::string &amp;instr)</div><div class="ttdoc">Convert a string to all upper case.</div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_acbbc7220481095ca7d2e5cfeac48613c"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#acbbc7220481095ca7d2e5cfeac48613c">mx::astro::mainSequence::interpRad</a></div><div class="ttdeci">gslInterpolator&lt; double &gt; interpRad</div><div class="ttdoc">The interpolator for effective Temperature.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00128">stars.hpp:128</a></div></div>
 <div class="ttc" id="aunits_8hpp_html"><div class="ttname"><a href="units_8hpp.html">units.hpp</a></div><div class="ttdoc">Unit specifications and conversions.</div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a8c790b795757ba0f1760e87d55dfbf32"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a8c790b795757ba0f1760e87d55dfbf32">mx::astro::mainSequence::m_logLs</a></div><div class="ttdeci">std::vector&lt; double &gt; m_logLs</div><div class="ttdoc">The log10 luminosities from the sequence.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00114">stars.hpp:114</a></div></div>
@@ -726,7 +727,7 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a5755f35a718560dd8ab12bd6723414ec"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a5755f35a718560dd8ab12bd6723414ec">mx::astro::mainSequence::m_minJH</a></div><div class="ttdeci">double m_minJH</div><div class="ttdoc">The minimum numeric spectral type for J-H color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00153">stars.hpp:153</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_adefd78eae86a5487b5ab3914c66b012a"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#adefd78eae86a5487b5ab3914c66b012a">mx::astro::mainSequence::m_minT</a></div><div class="ttdeci">double m_minT</div><div class="ttdoc">The minimum numeric spectral type for effective Temperature.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00125">stars.hpp:125</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a6931dc757103f8e4319d879ff6829333"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a6931dc757103f8e4319d879ff6829333">mx::astro::mainSequence::m_V_Kss</a></div><div class="ttdeci">std::vector&lt; double &gt; m_V_Kss</div><div class="ttdoc">The V-Ks colors from the sequence.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00120">stars.hpp:120</a></div></div>
-<div class="ttc" id="astars_8hpp_html_a49304ee39daa78925d41bde562ce972f"><div class="ttname"><a href="stars_8hpp.html#a49304ee39daa78925d41bde562ce972f">mx::astro::maintenance::makeMSTable</a></div><div class="ttdeci">void makeMSTable(const std::string &amp;fn)</div><div class="ttdoc">Read in the main sequence table of Mamajek, and construct the vectors for input into the mainSequence...</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00492">stars.hpp:492</a></div></div>
+<div class="ttc" id="astars_8hpp_html_a49304ee39daa78925d41bde562ce972f"><div class="ttname"><a href="stars_8hpp.html#a49304ee39daa78925d41bde562ce972f">mx::astro::maintenance::makeMSTable</a></div><div class="ttdeci">void makeMSTable(const std::string &amp;fn)</div><div class="ttdoc">Read in the main sequence table of Mamajek, and construct the vectors for input into the mainSequence...</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00493">stars.hpp:493</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_a296ed205f83a9eda21e3e08cb4efdf98"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#a296ed205f83a9eda21e3e08cb4efdf98">mx::astro::mainSequence::J_H</a></div><div class="ttdeci">realT J_H(const std::string &amp;spType)</div><div class="ttdoc">Get the interpolated absolute J-H color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00438">stars.hpp:438</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_aef97821d9b1db26213fd77c5d75aa004"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#aef97821d9b1db26213fd77c5d75aa004">mx::astro::mainSequence::V_Ks</a></div><div class="ttdeci">realT V_Ks(realT numType)</div><div class="ttdoc">Get the interpolated absolute V-Ks color.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00398">stars.hpp:398</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1mainSequence_html_adb5a1fa13539c9d61d99a8ddaeaa35c1"><div class="ttname"><a href="structmx_1_1astro_1_1mainSequence.html#adb5a1fa13539c9d61d99a8ddaeaa35c1">mx::astro::mainSequence::m_H_Kss</a></div><div class="ttdeci">std::vector&lt; double &gt; m_H_Kss</div><div class="ttdoc">The H-Ks colors from the sequence.</div><div class="ttdef"><b>Definition:</b> <a href="stars_8hpp_source.html#l00122">stars.hpp:122</a></div></div>
@@ -747,7 +748,7 @@ $(document).ready(function(){initNavTree('stars_8hpp_source.html',''); initResiz
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0fc3206047eab508bd310c9d22a11fd1.html">astro</a></li><li class="navelem"><a class="el" href="stars_8hpp.html">stars.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

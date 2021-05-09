@@ -332,33 +332,125 @@ $(document).ready(function(){initNavTree('imageUtils_8hpp_source.html',''); init
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      }</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;   }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">///@}</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;} <span class="comment">//namespace math</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#endif // improc_imageUtils_hpp</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenT, <span class="keyword">typename</span> eigenTin&gt;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keywordtype">void</span> removeRowsAndCols(eigenT &amp; out, <span class="keyword">const</span> eigenTin &amp; in, <span class="keywordtype">int</span> st, <span class="keywordtype">int</span> w)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;   </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   out.resize(in.rows() - w, in.cols() - w);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;   out.topLeftCorner(st,st) = in.topLeftCorner(st,st);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;   </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   out.bottomLeftCorner(in.rows()-(st+w), st) = in.bottomLeftCorner(in.rows()-(st+w), st);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;   </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   out.topRightCorner(st, in.cols()-(st+w))  = in.topRightCorner(st, in.cols()-(st+w));</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;   </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;   out.bottomRightCorner(in.rows()-(st+w),in.cols()-(st+w)) = in.bottomRightCorner(in.rows()-(st+w),in.cols()-(st+w));</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenT, <span class="keyword">typename</span> eigenTin&gt;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keywordtype">void</span> removeRows(eigenT &amp; out,  <span class="keyword">const</span> eigenTin &amp; in, <span class="keywordtype">int</span> st, <span class="keywordtype">int</span> w)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;{</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;   </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;   out.resize(in.rows() - w, in.cols());</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;   out.topLeftCorner(st,in.cols()) = in.topLeftCorner(st,in.cols());</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   out.bottomLeftCorner(in.rows()-(st+w), in.cols()) = in.bottomLeftCorner(in.rows()-(st+w), in.cols());</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenT, <span class="keyword">typename</span> eigenTin&gt;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keywordtype">void</span> removeCols(eigenT &amp; out,  <span class="keyword">const</span> eigenTin &amp; in, <span class="keywordtype">int</span> st, <span class="keywordtype">int</span> w)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;   </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;   out.resize(in.rows(), in.cols() - w);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;   </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;   out.topLeftCorner(in.rows(), st) = in.topLeftCorner(in.rows(), st);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;   </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;   out.topRightCorner(in.rows(),in.cols()-(st+w)) = in.topRightCorner(in.rows(),in.cols()-(st+w));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}   </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">/// Copy one image to another, with no transformation</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"></span><span class="comment">/** This is merely memcpy </span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">  * \returns dest</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keywordtype">void</span> * <a class="code" href="group__image__utils.html#ga569cacef7253286c8cc8f940cbe6342b">imcpy</a>( <span class="keywordtype">void</span> * dest,   <span class="comment">///&lt; [out] the address of the first pixel in the destination image</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"></span>              <span class="keywordtype">void</span> * src,    <span class="comment">///&lt; [in] the address of the first pixel in the source image</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment"></span>              <span class="keywordtype">size_t</span> width,  <span class="comment">///&lt; [in] the width in pixels of size szof</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment"></span>              <span class="keywordtype">size_t</span> height, <span class="comment">///&lt; [in] the height in pixels of size szof</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"></span>              <span class="keywordtype">size_t</span> szof    <span class="comment">///&lt; [in] the size in bytes of a one pixel</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"></span>            );</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">/// Copy one image to another, flipping up-down</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"></span><span class="comment">/** This is a reversed row-by-row memcpy</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">  * \returns dest</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keywordtype">void</span> * <a class="code" href="group__image__utils.html#ga99a33999a2a4dc160d0a781d2975ccef">imcpy_flipUD</a>( <span class="keywordtype">void</span> * dest,   <span class="comment">///&lt; [out] the address of the first pixel in the destination image</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment"></span>                     <span class="keywordtype">void</span> * src,    <span class="comment">///&lt; [in] the address of the first pixel in the source image</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"></span>                     <span class="keywordtype">size_t</span> width,  <span class="comment">///&lt; [in] the width in pixels of size szof</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment"></span>                     <span class="keywordtype">size_t</span> height, <span class="comment">///&lt; [in] the height in pixels of size szof</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"></span>                     <span class="keywordtype">size_t</span> szof    <span class="comment">///&lt; [in] the size in bytes of a one pixel</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"></span>                   );</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">/// Copy one image to another, flipping left-right</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"></span><span class="comment">/** </span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">  * \returns dest</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keywordtype">void</span> * <a class="code" href="group__image__utils.html#ga642a76fba1b7f06b2888b3646330c4da">imcpy_flipLR</a>( <span class="keywordtype">void</span> * dest,   <span class="comment">///&lt; [out] the address of the first pixel in the destination image</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment"></span>                     <span class="keywordtype">void</span> * src,    <span class="comment">///&lt; [in] the address of the first pixel in the source image</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment"></span>                     <span class="keywordtype">size_t</span> width,  <span class="comment">///&lt; [in] the width in pixels of size szof</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment"></span>                     <span class="keywordtype">size_t</span> height, <span class="comment">///&lt; [in] the height in pixels of size szof</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment"></span>                     <span class="keywordtype">size_t</span> szof    <span class="comment">///&lt; [in] the size in bytes of a one pixel</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment"></span>                   );</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">/// Copy one image to another, flipping up-down and left-right</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment"></span><span class="comment">/** </span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">  * \returns dest</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keywordtype">void</span> * <a class="code" href="group__image__utils.html#ga5f71c0ea291ce55da576a6f565451e8b">imcpy_flipUDLR</a>( <span class="keywordtype">void</span> * dest,   <span class="comment">///&lt; [out] the address of the first pixel in the destination image</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment"></span>                       <span class="keywordtype">void</span> * src,    <span class="comment">///&lt; [in] the address of the first pixel in the source image</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment"></span>                       <span class="keywordtype">size_t</span> width,  <span class="comment">///&lt; [in] the width in pixels of size szof</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment"></span>                       <span class="keywordtype">size_t</span> height, <span class="comment">///&lt; [in] the height in pixels of size szof</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment"></span>                       <span class="keywordtype">size_t</span> szof    <span class="comment">///&lt; [in] the size in bytes of a one pixel</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment"></span>                     );</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">///@}</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;} <span class="comment">//namespace math</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">#endif // improc_imageUtils_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__image__utils_html_ga05880e2f798ef0086d2017c3685ab3fa"><div class="ttname"><a href="group__image__utils.html#ga05880e2f798ef0086d2017c3685ab3fa">mx::improc::imageMaxInterp</a></div><div class="ttdeci">int imageMaxInterp(floatT &amp;x, floatT &amp;y, floatT &amp;scale_x, floatT &amp;scale_y, magImageT &amp;magIm, const imageT &amp;im)</div><div class="ttdoc">Fine the maximum in an image at sub-pixel resolution by cubic convolution interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="imageUtils_8hpp_source.html#l00195">imageUtils.hpp:195</a></div></div>
-<div class="ttc" id="agroup__image__transforms_html_ga3e35a0db70c18656ab9f54558e8bd694"><div class="ttname"><a href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">mx::improc::imageMagnify</a></div><div class="ttdeci">void imageMagnify(arrOutT &amp;transim, const arrInT &amp;im, transformT trans)</div><div class="ttdoc">Magnify an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00444">imageTransforms.hpp:444</a></div></div>
-<div class="ttc" id="astructmx_1_1improc_1_1cubicConvolTransform_html"><div class="ttname"><a href="structmx_1_1improc_1_1cubicConvolTransform.html">mx::improc::cubicConvolTransform</a></div><div class="ttdoc">Transformation by cubic convolution interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00086">imageTransforms.hpp:86</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="agroup__image__transforms_html_ga3e35a0db70c18656ab9f54558e8bd694"><div class="ttname"><a href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">mx::improc::imageMagnify</a></div><div class="ttdeci">void imageMagnify(arrOutT &amp;transim, const arrInT &amp;im, transformT trans)</div><div class="ttdoc">Magnify an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00504">imageTransforms.hpp:504</a></div></div>
+<div class="ttc" id="agroup__image__utils_html_ga569cacef7253286c8cc8f940cbe6342b"><div class="ttname"><a href="group__image__utils.html#ga569cacef7253286c8cc8f940cbe6342b">mx::improc::imcpy</a></div><div class="ttdeci">void * imcpy(void *dest, void *src, size_t width, size_t height, size_t szof)</div><div class="ttdoc">Copy one image to another, with no transformation.</div></div>
+<div class="ttc" id="astructmx_1_1improc_1_1cubicConvolTransform_html"><div class="ttname"><a href="structmx_1_1improc_1_1cubicConvolTransform.html">mx::improc::cubicConvolTransform</a></div><div class="ttdoc">Transformation by cubic convolution interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00087">imageTransforms.hpp:87</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="agroup__image__utils_html_ga7fa9c9ad263766e2e62151399208eb2c"><div class="ttname"><a href="group__image__utils.html#ga7fa9c9ad263766e2e62151399208eb2c">mx::improc::imageMean</a></div><div class="ttdeci">imageT::Scalar imageMean(imageT &amp;im)</div><div class="ttdoc">Calculate the mean value of an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageUtils_8hpp_source.html#l00083">imageUtils.hpp:83</a></div></div>
 <div class="ttc" id="agroup__image__utils_html_gaa56bbb261dda0b6fe51279394768ec96"><div class="ttname"><a href="group__image__utils.html#gaa56bbb261dda0b6fe51279394768ec96">mx::improc::zeroNaNCube</a></div><div class="ttdeci">void zeroNaNCube(cubeT &amp;imc)</div><div class="ttdoc">Zero any NaNs in an image cube.</div><div class="ttdef"><b>Definition:</b> <a href="imageUtils_8hpp_source.html#l00060">imageUtils.hpp:60</a></div></div>
 <div class="ttc" id="agroup__image__utils_html_ga8f04126be7880d749f6943ee30b89974"><div class="ttname"><a href="group__image__utils.html#ga8f04126be7880d749f6943ee30b89974">mx::improc::combine2ImagesMasked</a></div><div class="ttdeci">void combine2ImagesMasked(imageT &amp;combo, const imageT1 &amp;im1, const imageT2 &amp;mask1, const imageT3 &amp;im2, const imageT4 &amp;mask2)</div><div class="ttdoc">Combine two images, each with their own mask defining good pixels.</div><div class="ttdef"><b>Definition:</b> <a href="imageUtils_8hpp_source.html#l00220">imageUtils.hpp:220</a></div></div>
+<div class="ttc" id="agroup__image__utils_html_ga99a33999a2a4dc160d0a781d2975ccef"><div class="ttname"><a href="group__image__utils.html#ga99a33999a2a4dc160d0a781d2975ccef">mx::improc::imcpy_flipUD</a></div><div class="ttdeci">void * imcpy_flipUD(void *dest, void *src, size_t width, size_t height, size_t szof)</div><div class="ttdoc">Copy one image to another, flipping up-down.</div></div>
 <div class="ttc" id="agroup__image__utils_html_gaf141b4bb579d7e518007c5761b322a48"><div class="ttname"><a href="group__image__utils.html#gaf141b4bb579d7e518007c5761b322a48">mx::improc::imageVariance</a></div><div class="ttdeci">imageT::Scalar imageVariance(imageT &amp;im, typename imageT::Scalar mean)</div><div class="ttdoc">Calculate the variance of an image w.r.t. a given value.</div><div class="ttdef"><b>Definition:</b> <a href="imageUtils_8hpp_source.html#l00106">imageUtils.hpp:106</a></div></div>
-<div class="ttc" id="agroup__dimensioned__constants_html_ga48a5d9609fd9405c69f13f8cecb19ee9"><div class="ttname"><a href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">mx::astro::constants::c</a></div><div class="ttdeci">constexpr units::realT c()</div><div class="ttdoc">The speed of light.</div><div class="ttdef"><b>Definition:</b> <a href="constants_8hpp_source.html#l00060">constants.hpp:60</a></div></div>
+<div class="ttc" id="agroup__dimensioned__constants_html_ga48a5d9609fd9405c69f13f8cecb19ee9"><div class="ttname"><a href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">mx::astro::constants::c</a></div><div class="ttdeci">constexpr units::realT c()</div><div class="ttdoc">The speed of light.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00060">constants.hpp:60</a></div></div>
+<div class="ttc" id="agroup__image__utils_html_ga642a76fba1b7f06b2888b3646330c4da"><div class="ttname"><a href="group__image__utils.html#ga642a76fba1b7f06b2888b3646330c4da">mx::improc::imcpy_flipLR</a></div><div class="ttdeci">void * imcpy_flipLR(void *dest, void *src, size_t width, size_t height, size_t szof)</div><div class="ttdoc">Copy one image to another, flipping left-right.</div></div>
 <div class="ttc" id="agroup__image__utils_html_ga7bdc288187662af9655c1a94d57c30c4"><div class="ttname"><a href="group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4">mx::improc::zeroNaNs</a></div><div class="ttdeci">void zeroNaNs(imageT &amp;im)</div><div class="ttdoc">Zero any NaNs in an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageUtils_8hpp_source.html#l00044">imageUtils.hpp:44</a></div></div>
 <div class="ttc" id="aimageTransforms_8hpp_html"><div class="ttname"><a href="imageTransforms_8hpp.html">imageTransforms.hpp</a></div><div class="ttdoc">Image interpolation and transformation.</div></div>
+<div class="ttc" id="agroup__image__utils_html_ga5f71c0ea291ce55da576a6f565451e8b"><div class="ttname"><a href="group__image__utils.html#ga5f71c0ea291ce55da576a6f565451e8b">mx::improc::imcpy_flipUDLR</a></div><div class="ttdeci">void * imcpy_flipUDLR(void *dest, void *src, size_t width, size_t height, size_t szof)</div><div class="ttdoc">Copy one image to another, flipping up-down and left-right.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageUtils_8hpp.html">imageUtils.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

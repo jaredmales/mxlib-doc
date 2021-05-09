@@ -15,8 +15,8 @@ var classmx_1_1improc_1_1imageXCorrFFT =
     [ "resize", "classmx_1_1improc_1_1imageXCorrFFT.html#a1c02a06f8c1f9396d422142c877fbaf3", null ],
     [ "setReference", "classmx_1_1improc_1_1imageXCorrFFT.html#a5f8fc93d98bf328b2ee664c0e42b10d0", null ],
     [ "m_ccIm", "classmx_1_1improc_1_1imageXCorrFFT.html#a80d4250ef6f771528cde2169d0ec95c3", null ],
-    [ "m_fft_back", "classmx_1_1improc_1_1imageXCorrFFT.html#a81367cdb9cae6adfb1702f448eeb3e99", null ],
-    [ "m_fft_fwd", "classmx_1_1improc_1_1imageXCorrFFT.html#ab61c9e80f7f8ac59c7331f5aaaff31e2", null ],
+    [ "m_fft_back", "classmx_1_1improc_1_1imageXCorrFFT.html#a02ef18594e1b71f7b0aa37a5542719fc", null ],
+    [ "m_fft_fwd", "classmx_1_1improc_1_1imageXCorrFFT.html#a10ce5d8092e467f32cdfe25f46fd0d59", null ],
     [ "m_ftIm0", "classmx_1_1improc_1_1imageXCorrFFT.html#a94e700ceba3b2922400aa7967941ccfd", null ],
     [ "m_ftWork", "classmx_1_1improc_1_1imageXCorrFFT.html#a20cea259ff3cab34b9e54d8d0e899c91", null ],
     [ "m_maxLag", "classmx_1_1improc_1_1imageXCorrFFT.html#a179923f88756d97d90f55c162a3b2709", null ]

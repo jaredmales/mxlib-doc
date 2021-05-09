@@ -8,5 +8,6 @@ var modules =
     [ "Wavefront Propagation", "group__imaging.html", "group__imaging" ],
     [ "Astronomy", "group__genastro.html", "group__genastro" ],
     [ "General Utilities", "group__utils.html", "group__utils" ],
-    [ "mxlib Coding Standards", "group__coding.html", "group__coding" ]
+    [ "mxlib Coding Standards", "group__coding.html", "group__coding" ],
+    [ "Unit Conversions", "group__astrounits.html", "group__astrounits" ]
 ];

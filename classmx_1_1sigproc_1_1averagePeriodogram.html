@@ -108,7 +108,7 @@ class mx::sigproc::averagePeriodogram&lt; realT &gt;</h3>
 <p>Can also be used to calculate the unaveraged non-overlapped periodogram of the entire time series.</p>
 <p>Example: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keywordtype">float</span> realT;</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="structmx_1_1fftwEnvironment.html">mx::fftwEnvironment&lt;realT&gt;</a> fftwEnv; <span class="comment">//for efficient fft planning</span></div>
+<div class="line">mx::fftwEnvironment&lt;realT&gt; fftwEnv; <span class="comment">//for efficient fft planning</span></div>
 <div class="line"> </div>
 <div class="line">std::vector&lt;realT&gt; ts = getTimeSeries(); <span class="comment">//Some function to populate ts.</span></div>
 <div class="line"> </div>
@@ -361,7 +361,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="averagePeriodogram_8hpp_source.html#l00270">270</a> of file <a class="el" href="averagePeriodogram_8hpp_source.html">averagePeriodogram.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__fftw__template__alloc.html#gaeb9965fa73a1eec2b2bd5831b424f743">mx::fftw_free()</a>.</p>
+<p class="reference">References <a class="el" href="group__fftw__template__alloc.html#gacf28859c5f4b38cb0790eb14766f057f">mx::math::fft::fftw_free()</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="averagePeriodogram_8hpp_source.html#l00356">356</a> of file <a class="el" href="averagePeriodogram_8hpp_source.html">averagePeriodogram.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00282">mx::math::vectorVariance()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00063">mx::sigproc::psdVar1sided()</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00282">mx::math::vectorVariance()</a>.</p>
 
 </div>
 </div>
@@ -666,8 +666,6 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="averagePeriodogram_8hpp_source.html#l00303">303</a> of file <a class="el" href="averagePeriodogram_8hpp_source.html">averagePeriodogram.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__fftw__template__alloc.html#gaeb9965fa73a1eec2b2bd5831b424f743">mx::fftw_free()</a>.</p>
-
 </div>
 </div>
 <a id="a925298961b4785a63353d4e0aa938f1f"></a>
@@ -719,6 +717,8 @@ template&lt;typename realT &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>the size of the periodogram estimate for the current setup. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="averagePeriodogram_8hpp_source.html#l00428">428</a> of file <a class="el" href="averagePeriodogram_8hpp_source.html">averagePeriodogram.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01378">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>.</p>
 
 </div>
 </div>
@@ -980,13 +980,12 @@ template&lt;typename realT &gt; </div>
 </div><!-- doc-content -->
 <div class="ttc" id="aclassmx_1_1sigproc_1_1averagePeriodogram_html_adec30ccbb1e98d059f69ee5a17364509"><div class="ttname"><a href="classmx_1_1sigproc_1_1averagePeriodogram.html#adec30ccbb1e98d059f69ee5a17364509">mx::sigproc::averagePeriodogram::dt</a></div><div class="ttdeci">realT dt()</div><div class="ttdoc">Get the sampling interval of the time-series.</div><div class="ttdef"><b>Definition:</b> <a href="averagePeriodogram_8hpp_source.html#l00284">averagePeriodogram.hpp:284</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga0fc2a56e712ef940c8a587bae280f5fe"><div class="ttname"><a href="group__vectorutils.html#ga0fc2a56e712ef940c8a587bae280f5fe">mx::math::vectorMeanSub</a></div><div class="ttdeci">void vectorMeanSub(valueT *vec, size_t sz)</div><div class="ttdoc">Subtract the mean from a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00505">vectorUtils.hpp:505</a></div></div>
-<div class="ttc" id="astructmx_1_1fftwEnvironment_html"><div class="ttname"><a href="structmx_1_1fftwEnvironment.html">mx::fftwEnvironment</a></div><div class="ttdoc">Manage the FFTW environment and wisdom using RAII.</div><div class="ttdef"><b>Definition:</b> <a href="fftwEnvironment_8hpp_source.html#l00130">fftwEnvironment.hpp:130</a></div></div>
 <div class="ttc" id="agroup__signal__windows1D_html_gad4206316596a9b44903423d77d3aa485"><div class="ttname"><a href="group__signal__windows1D.html#gad4206316596a9b44903423d77d3aa485">mx::sigproc::window::hann</a></div><div class="ttdeci">void hann(realT *filt, int N)</div><div class="ttdoc">The Hann Window.</div><div class="ttdef"><b>Definition:</b> <a href="signalWindows_8hpp_source.html#l00179">signalWindows.hpp:179</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>sigproc</b></li><li class="navelem"><a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html">averagePeriodogram</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:11 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

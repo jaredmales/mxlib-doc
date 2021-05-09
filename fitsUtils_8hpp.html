@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: improc/fitsUtils.hpp File Reference</title>
+<title>mxlib: ioutils/fits/fitsUtils.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('fitsUtils_8hpp.html',''); initResizabl
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">fitsUtils.hpp File Reference<div class="ingroups"><a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a><a class="el" href="group__image__processing.html">Image Processing</a> &raquo;  &#124; <a class="el" href="group__image__processing__files.html">Image Processing Files</a> &raquo; <a class="el" href="group__fits__processing__files.html">FITS Files Files</a></div></div>  </div>
+<div class="title">fitsUtils.hpp File Reference<div class="ingroups"><a class="el" href="group__utils.html">General Utilities</a> &raquo; <a class="el" href="group__ioutils.html">Input/Output Utilities</a> &#124; <a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a><a class="el" href="group__image__processing.html">Image Processing</a> &raquo;  &#124; <a class="el" href="group__image__processing__files.html">Image Processing Files</a> &raquo; <a class="el" href="group__fits__processing__files.html">FITS Files Files</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('fitsUtils_8hpp.html',''); initResizabl
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;fitsio.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="mxlib_8hpp_source.html">../mxlib.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stringUtils_8hpp_source.html">../stringUtils.hpp</a>&quot;</code><br />
 </div>
 <p><a href="fitsUtils_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -127,41 +127,47 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c">mx::improc::getFitsType</a> ()</td></tr>
-<tr class="memdesc:gaaccfc69b8fea18eaf219b24e535e721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c">More...</a><br /></td></tr>
-<tr class="separator:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga7d2b25e9ff3105162bea0765d4cdc925">mx::improc::getFitsBITPIX</a> ()</td></tr>
-<tr class="separator:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2187199d35666d45a32bdf82f03c2d52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52">mx::improc::fitsStripApost</a> (std::string &amp;s)</td></tr>
-<tr class="memdesc:ga2187199d35666d45a32bdf82f03c2d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52">More...</a><br /></td></tr>
-<tr class="separator:ga2187199d35666d45a32bdf82f03c2d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5dc073d8726b978ab2226c67b4eaa702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702">mx::improc::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
-<tr class="memdesc:ga5dc073d8726b978ab2226c67b4eaa702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702">More...</a><br /></td></tr>
-<tr class="separator:ga5dc073d8726b978ab2226c67b4eaa702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad7e837ea16b6b22491dc46feae88ac44"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
-<tr class="memitem:gad7e837ea16b6b22491dc46feae88ac44"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44">mx::improc::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
-<tr class="memdesc:gad7e837ea16b6b22491dc46feae88ac44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44">More...</a><br /></td></tr>
-<tr class="separator:gad7e837ea16b6b22491dc46feae88ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">mx::fits::getFitsType</a> ()</td></tr>
+<tr class="memdesc:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">More...</a><br /></td></tr>
+<tr class="separator:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab66cdba4dc37f5710ccda1e9da82e3fc">mx::fits::getFitsBITPIX</a> ()</td></tr>
+<tr class="separator:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">mx::fits::fitsStripApost</a> (std::string &amp;s)</td></tr>
+<tr class="memdesc:ga4f1c3fd683cda0567bb497210936ae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">More...</a><br /></td></tr>
+<tr class="separator:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6719078e1e86a3b90e3de9c172af712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">mx::fits::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
+<tr class="memdesc:gab6719078e1e86a3b90e3de9c172af712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">More...</a><br /></td></tr>
+<tr class="separator:gab6719078e1e86a3b90e3de9c172af712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
+<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">mx::fits::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
+<tr class="memdesc:ga6795d65800e7a5200bb9beaa8eec088a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">More...</a><br /></td></tr>
+<tr class="separator:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga645c413c9f15927628a2600d2dc1e271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">mx::fits::fitsErrText</a> (std::string &amp;explan, const std::string &amp;filename, int fstatus)</td></tr>
+<tr class="memdesc:ga645c413c9f15927628a2600d2dc1e271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a rich error meesage from a FITS status code.  <a href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">More...</a><br /></td></tr>
+<tr class="separator:ga645c413c9f15927628a2600d2dc1e271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c">mx::improc::getFitsType</a> ()</td></tr>
-<tr class="memdesc:gaaccfc69b8fea18eaf219b24e535e721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c">More...</a><br /></td></tr>
-<tr class="separator:gaaccfc69b8fea18eaf219b24e535e721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga7d2b25e9ff3105162bea0765d4cdc925">mx::improc::getFitsBITPIX</a> ()</td></tr>
-<tr class="separator:ga7d2b25e9ff3105162bea0765d4cdc925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2187199d35666d45a32bdf82f03c2d52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52">mx::improc::fitsStripApost</a> (std::string &amp;s)</td></tr>
-<tr class="memdesc:ga2187199d35666d45a32bdf82f03c2d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52">More...</a><br /></td></tr>
-<tr class="separator:ga2187199d35666d45a32bdf82f03c2d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5dc073d8726b978ab2226c67b4eaa702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702">mx::improc::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
-<tr class="memdesc:ga5dc073d8726b978ab2226c67b4eaa702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702">More...</a><br /></td></tr>
-<tr class="separator:ga5dc073d8726b978ab2226c67b4eaa702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad7e837ea16b6b22491dc46feae88ac44"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
-<tr class="memitem:gad7e837ea16b6b22491dc46feae88ac44"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44">mx::improc::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
-<tr class="memdesc:gad7e837ea16b6b22491dc46feae88ac44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44">More...</a><br /></td></tr>
-<tr class="separator:gad7e837ea16b6b22491dc46feae88ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">mx::fits::getFitsType</a> ()</td></tr>
+<tr class="memdesc:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">More...</a><br /></td></tr>
+<tr class="separator:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab66cdba4dc37f5710ccda1e9da82e3fc">mx::fits::getFitsBITPIX</a> ()</td></tr>
+<tr class="separator:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">mx::fits::fitsStripApost</a> (std::string &amp;s)</td></tr>
+<tr class="memdesc:ga4f1c3fd683cda0567bb497210936ae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">More...</a><br /></td></tr>
+<tr class="separator:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6719078e1e86a3b90e3de9c172af712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">mx::fits::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
+<tr class="memdesc:gab6719078e1e86a3b90e3de9c172af712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">More...</a><br /></td></tr>
+<tr class="separator:gab6719078e1e86a3b90e3de9c172af712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
+<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">mx::fits::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
+<tr class="memdesc:ga6795d65800e7a5200bb9beaa8eec088a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">More...</a><br /></td></tr>
+<tr class="separator:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga645c413c9f15927628a2600d2dc1e271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">mx::fits::fitsErrText</a> (std::string &amp;explan, const std::string &amp;filename, int fstatus)</td></tr>
+<tr class="memdesc:ga645c413c9f15927628a2600d2dc1e271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a rich error meesage from a FITS status code.  <a href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">More...</a><br /></td></tr>
+<tr class="separator:ga645c413c9f15927628a2600d2dc1e271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4c5195a4197fde3527ab43f539456e1c"></a>
@@ -178,7 +184,7 @@ Functions</h2></td></tr>
 
 <p>The standard width of the value entry in a header card. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00030">30</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsUtils_8hpp_source.html#l00046">46</a> of file <a class="el" href="fitsUtils_8hpp_source.html">fitsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -187,8 +193,8 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="fitsUtils_8hpp.html">fitsUtils.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="dir_1da8549ee5c4fb2fde3d8729e33c7119.html">fits</a></li><li class="navelem"><a class="el" href="fitsUtils_8hpp.html">fitsUtils.hpp</a></li>
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

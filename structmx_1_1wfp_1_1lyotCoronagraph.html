@@ -120,9 +120,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a9a1ee7b9804c9342cbf71641a3afd220"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9a1ee7b9804c9342cbf71641a3afd220">complexT</a></td></tr>
 <tr class="memdesc:a9a1ee7b9804c9342cbf71641a3afd220"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex floating point type.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9a1ee7b9804c9342cbf71641a3afd220">More...</a><br /></td></tr>
 <tr class="separator:a9a1ee7b9804c9342cbf71641a3afd220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad87deb64792f526a7f65be02f12362b0"><td class="memItemLeft" align="right" valign="top">typedef mx::imagingArray&lt; std::complex&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> &gt;, fftwAllocator&lt; std::complex&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> &gt; &gt;, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a></td></tr>
-<tr class="memdesc:ad87deb64792f526a7f65be02f12362b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wavefront complex field type.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">More...</a><br /></td></tr>
-<tr class="separator:ad87deb64792f526a7f65be02f12362b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78aba3d81022a224b7259dfe5377654c"><td class="memItemLeft" align="right" valign="top">typedef mx::wfp::imagingArray&lt; std::complex&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> &gt;, fftwAllocator&lt; std::complex&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> &gt; &gt;, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a></td></tr>
+<tr class="memdesc:a78aba3d81022a224b7259dfe5377654c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wavefront complex field type.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">More...</a><br /></td></tr>
+<tr class="separator:a78aba3d81022a224b7259dfe5377654c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734031ad71e16cd0fecae9b6be73c469"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Array&lt; std::complex&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#acc57edc733fc59bca303201374f5be1a">fpmaskFloatT</a> &gt;, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a734031ad71e16cd0fecae9b6be73c469">fpMaskT</a></td></tr>
 <tr class="memdesc:a734031ad71e16cd0fecae9b6be73c469"><td class="mdescLeft">&#160;</td><td class="mdescRight">The focal plane mask type.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a734031ad71e16cd0fecae9b6be73c469">More...</a><br /></td></tr>
 <tr class="separator:a734031ad71e16cd0fecae9b6be73c469"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,15 +159,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a07e4963a43a57f2d637f132bf0a16fb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a07e4963a43a57f2d637f132bf0a16fb7">loadCoronagraph</a> (const std::string &amp;cName)</td></tr>
 <tr class="memdesc:a07e4963a43a57f2d637f132bf0a16fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the components of the coronagraph based in its base name.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a07e4963a43a57f2d637f132bf0a16fb7">More...</a><br /></td></tr>
 <tr class="separator:a07e4963a43a57f2d637f132bf0a16fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a781ac9c6f394e4a8ecd0976baf622732"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a781ac9c6f394e4a8ecd0976baf622732">propagate</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;pupilPlane)</td></tr>
+<tr class="memitem:a781ac9c6f394e4a8ecd0976baf622732"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a781ac9c6f394e4a8ecd0976baf622732">propagate</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;pupilPlane)</td></tr>
 <tr class="memdesc:a781ac9c6f394e4a8ecd0976baf622732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagate the given pupil-plane wavefront through the coronagraph.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a781ac9c6f394e4a8ecd0976baf622732">More...</a><br /></td></tr>
 <tr class="separator:a781ac9c6f394e4a8ecd0976baf622732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae21d5ab1b52f08eb059b462af17600b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ae21d5ab1b52f08eb059b462af17600b7">propagate</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1">imageT</a> &amp;fpIntensity, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;pupilPlane)</td></tr>
+<tr class="memitem:ae21d5ab1b52f08eb059b462af17600b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ae21d5ab1b52f08eb059b462af17600b7">propagate</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1">imageT</a> &amp;fpIntensity, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;pupilPlane)</td></tr>
 <tr class="separator:ae21d5ab1b52f08eb059b462af17600b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bf9b935adaa8b7099cd4841c23b9aa3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a8bf9b935adaa8b7099cd4841c23b9aa3">propagateNC</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;pupilPlane)</td></tr>
+<tr class="memitem:a8bf9b935adaa8b7099cd4841c23b9aa3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a8bf9b935adaa8b7099cd4841c23b9aa3">propagateNC</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;pupilPlane)</td></tr>
 <tr class="memdesc:a8bf9b935adaa8b7099cd4841c23b9aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagate the given pupil-plane wavefront without the coronagraph.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a8bf9b935adaa8b7099cd4841c23b9aa3">More...</a><br /></td></tr>
 <tr class="separator:a8bf9b935adaa8b7099cd4841c23b9aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaced42fd139449d054d0d0ae47e96c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#aaaced42fd139449d054d0d0ae47e96c9">propagateNC</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1">imageT</a> &amp;fpIntensity, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;pupilPlane)</td></tr>
+<tr class="memitem:aaaced42fd139449d054d0d0ae47e96c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#aaaced42fd139449d054d0d0ae47e96c9">propagateNC</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1">imageT</a> &amp;fpIntensity, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;pupilPlane)</td></tr>
 <tr class="separator:aaaced42fd139449d054d0d0ae47e96c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a3ab92867a56530c85687f255e5f266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9a3ab92867a56530c85687f255e5f266">optimizeAPLCMC</a> (<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1">imageT</a> &amp;geomPupil, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> fpmRadPix, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> relTol, <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a> absTol, int maxIter, const std::string &amp;cname)</td></tr>
 <tr class="memdesc:a9a3ab92867a56530c85687f255e5f266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize the pupil amplitude apodization and focal-plane mask complex transmission.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9a3ab92867a56530c85687f255e5f266">More...</a><br /></td></tr>
@@ -204,13 +204,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8148a5160f4178954e4b8bd9fa914c85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1">imageT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a8148a5160f4178954e4b8bd9fa914c85">m_lyotStop</a></td></tr>
 <tr class="memdesc:a8148a5160f4178954e4b8bd9fa914c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image containing the lyot stop.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a8148a5160f4178954e4b8bd9fa914c85">More...</a><br /></td></tr>
 <tr class="separator:a8148a5160f4178954e4b8bd9fa914c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f69fe53e25bbcf99af1a203e4ab935"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html">fraunhoferPropagator</a>&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a99f69fe53e25bbcf99af1a203e4ab935">m_fp</a></td></tr>
+<tr class="memitem:a99f69fe53e25bbcf99af1a203e4ab935"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html">fraunhoferPropagator</a>&lt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a99f69fe53e25bbcf99af1a203e4ab935">m_fp</a></td></tr>
 <tr class="memdesc:a99f69fe53e25bbcf99af1a203e4ab935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fraunhofer propagator.  <a href="structmx_1_1wfp_1_1lyotCoronagraph.html#a99f69fe53e25bbcf99af1a203e4ab935">More...</a><br /></td></tr>
 <tr class="separator:a99f69fe53e25bbcf99af1a203e4ab935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad87deb64792f526a7f65be02f12362b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad87deb64792f526a7f65be02f12362b0">&#9670;&nbsp;</a></span>complexFieldT</h2>
+<a id="a78aba3d81022a224b7259dfe5377654c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78aba3d81022a224b7259dfe5377654c">&#9670;&nbsp;</a></span>complexFieldT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +218,7 @@ Public Attributes</h2></td></tr>
 template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef mx::imagingArray&lt;std::complex&lt;<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a>&gt;, fftwAllocator&lt;std::complex&lt;<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a>&gt; &gt;, 0&gt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">mx::wfp::lyotCoronagraph</a>&lt; _realT, _fpmaskFloatT &gt;::<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a></td>
+          <td class="memname">typedef mx::wfp::imagingArray&lt;std::complex&lt;<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a>&gt;, fftwAllocator&lt;std::complex&lt;<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9effd97eff1b1a06c9799124c33a73f7">realT</a>&gt; &gt;, 0&gt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">mx::wfp::lyotCoronagraph</a>&lt; _realT, _fpmaskFloatT &gt;::<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -382,7 +382,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00274">274</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -504,7 +504,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00283">283</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00378">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00375">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -539,7 +539,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00321">321</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00724">mx::improc::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -581,7 +581,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00241">241</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imagingUtils_8hpp_source.html#l00070">mx::wfp::circularPupil()</a>.</p>
+<p class="reference">References <a class="el" href="imagingUtils_8hpp_source.html#l00072">mx::wfp::circularPupil()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +654,9 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00648">648</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00661">661</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imagingUtils_8hpp_source.html#l00070">mx::wfp::circularPupil()</a>, and <a class="el" href="imagingUtils_8hpp_source.html#l00181">mx::wfp::makeComplexPupil()</a>.</p>
+<p class="reference">References <a class="el" href="imagingUtils_8hpp_source.html#l00072">mx::wfp::circularPupil()</a>, and <a class="el" href="imagingUtils_8hpp_source.html#l00183">mx::wfp::makeComplexPupil()</a>.</p>
 
 </div>
 </div>
@@ -728,7 +728,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="lyotCoronagraph_8hpp_source.html#l00494">494</a> of file <a class="el" href="lyotCoronagraph_8hpp_source.html">lyotCoronagraph.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imagingUtils_8hpp_source.html#l00070">mx::wfp::circularPupil()</a>, and <a class="el" href="imagingUtils_8hpp_source.html#l00181">mx::wfp::makeComplexPupil()</a>.</p>
+<p class="reference">References <a class="el" href="imagingUtils_8hpp_source.html#l00072">mx::wfp::circularPupil()</a>, and <a class="el" href="imagingUtils_8hpp_source.html#l00183">mx::wfp::makeComplexPupil()</a>.</p>
 
 </div>
 </div>
@@ -743,7 +743,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
         <tr>
           <td class="memname">int <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">mx::wfp::lyotCoronagraph</a>&lt; _realT, _fpmaskFloatT &gt;::propagate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;&#160;</td>
           <td class="paramname"><em>pupilPlane</em></td><td>)</td>
           <td></td>
         </tr>
@@ -779,7 +779,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;&#160;</td>
           <td class="paramname"><em>pupilPlane</em>&#160;</td>
         </tr>
         <tr>
@@ -812,7 +812,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
         <tr>
           <td class="memname">int <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">mx::wfp::lyotCoronagraph</a>&lt; _realT, _fpmaskFloatT &gt;::propagateNC </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;&#160;</td>
           <td class="paramname"><em>pupilPlane</em></td><td>)</td>
           <td></td>
         </tr>
@@ -849,7 +849,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a> &amp;&#160;</td>
           <td class="paramname"><em>pupilPlane</em>&#160;</td>
         </tr>
         <tr>
@@ -972,7 +972,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html">fraunhoferPropagator</a>&lt;<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0">complexFieldT</a>&gt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">mx::wfp::lyotCoronagraph</a>&lt; _realT, _fpmaskFloatT &gt;::m_fp</td>
+          <td class="memname"><a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html">fraunhoferPropagator</a>&lt;<a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c">complexFieldT</a>&gt; <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">mx::wfp::lyotCoronagraph</a>&lt; _realT, _fpmaskFloatT &gt;::m_fp</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1132,7 +1132,7 @@ template&lt;typename _realT , typename _fpmaskFloatT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>wfp</b></li><li class="navelem"><a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html">lyotCoronagraph</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:11 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

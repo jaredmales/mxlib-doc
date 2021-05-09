@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['venusalbedo_2042',['venusAlbedo',['../structmx_1_1astro_1_1venusAlbedo.html',1,'mx::astro']]],
-  ['vonkarmanspectrum_2043',['vonKarmanSpectrum',['../structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html',1,'mx::AO::analysis']]]
+  ['wavefront_2094',['wavefront',['../structmx_1_1AO_1_1sim_1_1wavefront.html',1,'mx::AO::sim']]],
+  ['wfs_2095',['wfs',['../structmx_1_1AO_1_1analysis_1_1wfs.html',1,'mx::AO::analysis']]],
+  ['wfs_3c_20realt_2c_20std_3a_3aostream_20_3e_2096',['wfs&lt; realT, std::ostream &gt;',['../structmx_1_1AO_1_1analysis_1_1wfs.html',1,'mx::AO::analysis']]]
 ];

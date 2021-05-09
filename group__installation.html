@@ -103,6 +103,7 @@ Introduction</h1>
 <h1><a class="anchor" id="install_depends"></a>
 Basic Dependencies</h1>
 <p>This is the list of the other libraries and code-bases mxlib depends on. I usually install these from scratch to ensure maximum optimization (though I have little to no quantitative evidence that it matters), but you can probably manage most of these from the O/S package manager. You will need to make sure to install the <code>dev</code> packages.</p>
+<p>Alternatively, see the next section for quickstart instructions using the conda package manager (part of <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> or <a href="https://www.anaconda.com/products/individual">Anaconda</a>) on Linux or macOS.</p>
 <ol type="1">
 <li>You need a c++14 compatible compiler with OpenMP support.<ul>
 <li>CentOS 7: you will need to install the devtoolset package (see <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/</a>): <div class="fragment"><div class="line">$ sudo yum install centos-release-scl</div>
@@ -131,6 +132,16 @@ Basic Dependencies</h1>
 </li>
 </ol>
 <p>The relevant header files for each library need to be accessible to the compiler, either in a standard location or in one you specify when compiling your programs.</p>
+<h1><a class="anchor" id="conda_install"></a>
+Installing dependencies from conda</h1>
+<p>The conda package manager contains packages for all of mxlib's external dependencies (not including vendored libraries, shipped under source/vendor/). This means setting up a correct build environment on macOS or Linux &ndash; even in a cluster environment, where you may not have root access &ndash; is straightforward. (To do: CUDA support with conda.)</p>
+<p>Once you have installed conda (either <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> or <a href="https://www.anaconda.com/products/individual">Anaconda</a> is fine), you will create and activate an environment to use mxlib with. </p><div class="fragment"><div class="line">$ conda create conda create -y -n mxlib_env</div>
+</div><!-- fragment --><p> The install process is tested with conda-forge packages, which you may not be using by default. (Installing them in the mxlib_env environment won't cause conflicts with any other environments you may have.) </p><div class="fragment"><div class="line">$ conda activate mxlib_env</div>
+<div class="line">$ bash ./setup/conda_setup_Linux.sh</div>
+<div class="line"><span class="preprocessor"># or, on macOS:</span></div>
+<div class="line"><span class="preprocessor">$ bash ./setup/conda_setup_macOS.sh</span></div>
+</div><!-- fragment --><p> If all went well, you should now be able to build mxlib: </p><div class="fragment"><div class="line">$ make install PREFIX=$CONDA_PREFIX NEED_CUDA=no</div>
+</div><!-- fragment --><p> Now mxlib headers and libraries are in $CONDA_PREFIX/include and $CONDA_PREFIX/lib and should be found by default as long as "conda activate mxlib_env" is always run after you open a new terminal and before you compile things that use mxlib.</p>
 <h1><a class="anchor" id="git_tracking"></a>
 Git Version Tracking</h1>
 <p>Mxlib includes a systems to track its git version, using the SHA1 hash. This, in principle, allows any results to be tagged with the version of the library used to generate them. The goal is to always be able to restore the code to a given point so that previous results can be reproduced. The library will issue a warning at compile time if there are any modifications to it that aren't yet committed, meaning that they aren't trackable. <br  />
@@ -166,7 +177,7 @@ Build Environment</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

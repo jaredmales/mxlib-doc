@@ -127,11 +127,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a> (const std::string &amp;fname, arrTs &amp;... arrays)</td></tr>
 <tr class="memdesc:ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in columns from a text file.  <a href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">More...</a><br /></td></tr>
 <tr class="separator:ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga60ad0f915fa73912b6e3642270f0664b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga60ad0f915fa73912b6e3642270f0664b">mx::ioutils::textTable::addCell</a> (size_t row, size_t col, const std::string &amp;cell)</td></tr>
-<tr class="memdesc:ga60ad0f915fa73912b6e3642270f0664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one cell to the table, overwriting if it already exists.  <a href="group__asciiutils.html#ga60ad0f915fa73912b6e3642270f0664b">More...</a><br /></td></tr>
-<tr class="separator:ga60ad0f915fa73912b6e3642270f0664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga07dca424d728d5330cd9e858c1ab0f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga07dca424d728d5330cd9e858c1ab0f85">mx::ioutils::textTable::addCell</a> (size_t row, size_t col, const char *cell)</td></tr>
-<tr class="separator:ga07dca424d728d5330cd9e858c1ab0f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85613e3021407755f1e0af8705073755"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
 <tr class="memitem:ga85613e3021407755f1e0af8705073755"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga85613e3021407755f1e0af8705073755">mx::ioutils::textTable::addCell</a> (size_t row, size_t col, const typeT &amp;cell, int precision=0)</td></tr>
 <tr class="memdesc:ga85613e3021407755f1e0af8705073755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one cell to the table, overwriting if it already exists.  <a href="group__asciiutils.html#ga85613e3021407755f1e0af8705073755">More...</a><br /></td></tr>
@@ -142,120 +137,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga063b3656be8c09545b3fa4546274f48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga07dca424d728d5330cd9e858c1ab0f85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga07dca424d728d5330cd9e858c1ab0f85">&#9670;&nbsp;</a></span>addCell() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mx::ioutils::textTable::addCell </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>col</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>cell</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>[in] the row of the cell. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>[in] the column of the cell. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>[in] the new contents of the cell, will be wrapped. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00126">126</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="textTable_8hpp_source.html#l00106">mx::ioutils::textTable::addCell()</a>.</p>
-
-</div>
-</div>
-<a id="ga60ad0f915fa73912b6e3642270f0664b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga60ad0f915fa73912b6e3642270f0664b">&#9670;&nbsp;</a></span>addCell() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mx::ioutils::textTable::addCell </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>col</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>cell</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add one cell to the table, overwriting if it already exists. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>[in] the row of the cell. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>[in] the column of the cell. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>[in] the new contents of the cell, will be wrapped. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00106">106</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="textTable_8hpp_source.html#l00061">mx::ioutils::textTable::m_colWidths</a>, <a class="el" href="textTable_8hpp_source.html#l00066">mx::ioutils::textTable::m_rows</a>, and <a class="el" href="stringUtils_8hpp_source.html#l00448">mx::ioutils::stringWrap()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00126">mx::ioutils::textTable::addCell()</a>, and <a class="el" href="application_8hpp_source.html#l00498">mx::app::application::optionHelp()</a>.</p>
-
-</div>
-</div>
 <a id="ga85613e3021407755f1e0af8705073755"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga85613e3021407755f1e0af8705073755">&#9670;&nbsp;</a></span>addCell() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85613e3021407755f1e0af8705073755">&#9670;&nbsp;</a></span>addCell()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,9 +187,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00135">135</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00107">107</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="textTable_8hpp_source.html#l00106">mx::ioutils::textTable::addCell()</a>.</p>
+<p class="reference">References <a class="el" href="structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b">mx::ioutils::textTable::addCell()</a>.</p>
 
 </div>
 </div>
@@ -343,11 +226,9 @@ template&lt;typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00145">145</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00117">117</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="textTable_8hpp_source.html#l00072">mx::ioutils::textTable::m_colSep</a>, <a class="el" href="textTable_8hpp_source.html#l00061">mx::ioutils::textTable::m_colWidths</a>, <a class="el" href="textTable_8hpp_source.html#l00070">mx::ioutils::textTable::m_lineEnd</a>, <a class="el" href="textTable_8hpp_source.html#l00068">mx::ioutils::textTable::m_lineStart</a>, <a class="el" href="textTable_8hpp_source.html#l00066">mx::ioutils::textTable::m_rows</a>, and <a class="el" href="textTable_8hpp_source.html#l00074">mx::ioutils::textTable::m_rowSep</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">mx::app::application::help()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="textTable_8hpp_source.html#l00073">mx::ioutils::textTable::m_colSep</a>, <a class="el" href="textTable_8hpp_source.html#l00062">mx::ioutils::textTable::m_colWidths</a>, <a class="el" href="textTable_8hpp_source.html#l00071">mx::ioutils::textTable::m_lineEnd</a>, <a class="el" href="textTable_8hpp_source.html#l00069">mx::ioutils::textTable::m_lineStart</a>, <a class="el" href="textTable_8hpp_source.html#l00067">mx::ioutils::textTable::m_rows</a>, and <a class="el" href="textTable_8hpp_source.html#l00075">mx::ioutils::textTable::m_rowSep</a>.</p>
 
 </div>
 </div>
@@ -408,21 +289,21 @@ template&lt;char delim = ' ', char comment = '#', char eol = '\n', typename... a
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="readColumns_8hpp_source.html#l00135">135</a> of file <a class="el" href="readColumns_8hpp_source.html">readColumns.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="readColumns_8hpp_source.html#l00137">137</a> of file <a class="el" href="readColumns_8hpp_source.html">readColumns.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00203">MXE_FILECERR</a>, <a class="el" href="mxError_8hpp_source.html#l00182">MXE_FILEOERR</a>, <a class="el" href="mxError_8hpp_source.html#l00196">MXE_FILERERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="mxError_8hpp_source.html#l00096">mxPError</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00447">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00738">mx::improc::HCIobservation&lt; _realT &gt;::load_fileList()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00755">mx::improc::HCIobservation&lt; _realT &gt;::load_RDIfileList()</a>, <a class="el" href="stars_8hpp_source.html#l00492">mx::astro::maintenance::makeMSTable()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01841">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="phoenixSpectrum_8hpp_source.html#l00046">mx::astro::phoenixSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00051">mx::astro::basicSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="cahoyAlbedos_8hpp_source.html#l00090">mx::astro::cahoySpectrumRaw&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00091">mx::astro::astroFilter&lt; _units, _rsr &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00210">mx::astro::calspecSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00251">mx::astro::picklesSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00303">mx::astro::earthAlbedo&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00350">mx::astro::venusAlbedo&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01499">mx::improc::HCIobservation&lt; _realT &gt;::readWeights()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01144">mx::improc::HCIobservation&lt; _realT &gt;::threshold()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00438">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00727">mx::improc::HCIobservation&lt; _realT &gt;::load_fileList()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00744">mx::improc::HCIobservation&lt; _realT &gt;::load_RDIfileList()</a>, <a class="el" href="stars_8hpp_source.html#l00493">mx::astro::maintenance::makeMSTable()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01830">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="phoenixSpectrum_8hpp_source.html#l00046">mx::astro::phoenixSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00051">mx::astro::basicSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="cahoyAlbedos_8hpp_source.html#l00090">mx::astro::cahoySpectrumRaw&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00091">mx::astro::astroFilter&lt; _units, _rsr &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00227">mx::astro::calspecSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00268">mx::astro::picklesSpectrum&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00320">mx::astro::earthAlbedo&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00367">mx::astro::venusAlbedo&lt; _units &gt;::readSpectrum()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01488">mx::improc::HCIobservation&lt; _realT &gt;::readWeights()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01133">mx::improc::HCIobservation&lt; _realT &gt;::threshold()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__asciiutils_html_ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><div class="ttname"><a href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a></div><div class="ttdeci">int readColumns(const std::string &amp;fname, arrTs &amp;... arrays)</div><div class="ttdoc">Read in columns from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="readColumns_8hpp_source.html#l00135">readColumns.hpp:135</a></div></div>
+<div class="ttc" id="agroup__asciiutils_html_ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><div class="ttname"><a href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a></div><div class="ttdeci">int readColumns(const std::string &amp;fname, arrTs &amp;... arrays)</div><div class="ttdoc">Read in columns from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="readColumns_8hpp_source.html#l00137">readColumns.hpp:137</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

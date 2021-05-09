@@ -90,8 +90,6 @@ $(document).ready(function(){initNavTree('namespacemx.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">mx Namespace Reference</div>  </div>
@@ -103,89 +101,8 @@ $(document).ready(function(){initNavTree('namespacemx.html',''); initResizable()
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>The mxlib c++ namespace. </p>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html">fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast Fourier Transforms using the FFTW library interface.  <a href="classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwEnvironment.html">fftwEnvironment</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage the FFTW environment and wisdom using RAII.  <a href="structmx_1_1fftwEnvironment.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwPlanSpec.html">fftwPlanSpec</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the type of the plan based on the real type of the data.  <a href="structmx_1_1fftwPlanSpec.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwPlanSpec_3_01double_01_4.html">fftwPlanSpec&lt; double &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwPlanSpec.html" title="Specify the type of the plan based on the real type of the data.">fftwPlanSpec</a> for double.  <a href="structmx_1_1fftwPlanSpec_3_01double_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwPlanSpec_3_01float_01_4.html">fftwPlanSpec&lt; float &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwPlanSpec.html" title="Specify the type of the plan based on the real type of the data.">fftwPlanSpec</a> for float.  <a href="structmx_1_1fftwPlanSpec_3_01float_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwPlanSpec_3_01long_01double_01_4.html">fftwPlanSpec&lt; long double &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwPlanSpec.html" title="Specify the type of the plan based on the real type of the data.">fftwPlanSpec</a> for long double.  <a href="structmx_1_1fftwPlanSpec_3_01long_01double_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec.html">fftwTypeSpec</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure specifying various types based on the FFT input and output data types.  <a href="structmx_1_1fftwTypeSpec.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01complexDT_00_01complexDT_01_4.html">fftwTypeSpec&lt; complexDT, complexDT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-double input and complex-double output.  <a href="structmx_1_1fftwTypeSpec_3_01complexDT_00_01complexDT_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4.html">fftwTypeSpec&lt; complexDT, double &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-double input and double output.  <a href="structmx_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4.html">fftwTypeSpec&lt; complexFT, complexFT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-float input and complex-float output.  <a href="structmx_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01complexFT_00_01float_01_4.html">fftwTypeSpec&lt; complexFT, float &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-float input and real-float output.  <a href="structmx_1_1fftwTypeSpec_3_01complexFT_00_01float_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01complexLT_00_01complexLT_01_4.html">fftwTypeSpec&lt; complexLT, complexLT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-long-double input and complex-long-double output.  <a href="structmx_1_1fftwTypeSpec_3_01complexLT_00_01complexLT_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html">fftwTypeSpec&lt; complexLT, long double &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-long-double input and real-long-double output.  <a href="structmx_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4.html">fftwTypeSpec&lt; double, complexDT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for real-double input and complex-double output.  <a href="structmx_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4.html">fftwTypeSpec&lt; float, complexFT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for real-float input and complex-float output.  <a href="structmx_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1fftwTypeSpec_3_01long_01double_00_01complexLT_01_4.html">fftwTypeSpec&lt; long double, complexLT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for real-long-double input and complex-long-double output.  <a href="structmx_1_1fftwTypeSpec_3_01long_01double_00_01complexLT_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1gnuPlot.html">gnuPlot</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A c++ interface to gnuplot.  <a href="classmx_1_1gnuPlot.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1is__imagingArray.html">is_imagingArray</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether a type is an imagingArray by testing whether it has a typedef of "is_imagingArray".  <a href="structmx_1_1is__imagingArray.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1ompLoopWatcher.html">ompLoopWatcher</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to track the number of iterations in an OMP parallelized loop.  <a href="classmx_1_1ompLoopWatcher.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:gad05407083932576c4c4faf7cfa039266"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fftw__template__types.html#gad05407083932576c4c4faf7cfa039266">complexFT</a></td></tr>
-<tr class="memdesc:gad05407083932576c4c4faf7cfa039266"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex float data type.  <a href="group__fftw__template__types.html#gad05407083932576c4c4faf7cfa039266">More...</a><br /></td></tr>
-<tr class="separator:gad05407083932576c4c4faf7cfa039266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ea36c097cf31560fd0124628bc19acc"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fftw__template__types.html#ga9ea36c097cf31560fd0124628bc19acc">complexDT</a></td></tr>
-<tr class="memdesc:ga9ea36c097cf31560fd0124628bc19acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex double data type.  <a href="group__fftw__template__types.html#ga9ea36c097cf31560fd0124628bc19acc">More...</a><br /></td></tr>
-<tr class="separator:ga9ea36c097cf31560fd0124628bc19acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2152a55844ab45de8d543270179a465"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fftw__template__types.html#gaa2152a55844ab45de8d543270179a465">complexLT</a></td></tr>
-<tr class="memdesc:gaa2152a55844ab45de8d543270179a465"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex long double data type.  <a href="group__fftw__template__types.html#gaa2152a55844ab45de8d543270179a465">More...</a><br /></td></tr>
-<tr class="separator:gaa2152a55844ab45de8d543270179a465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab4fa8429540732612b4082b001281742"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab4fa8429540732612b4082b001281742">getEnv</a> (const std::string &amp;estr)</td></tr>
-<tr class="memdesc:gab4fa8429540732612b4082b001281742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of an environment variable.  <a href="group__system.html#gab4fa8429540732612b4082b001281742">More...</a><br /></td></tr>
-<tr class="separator:gab4fa8429540732612b4082b001281742"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga79ccb1b0a47b746afba0c50ca544d8fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interpolation.html#ga79ccb1b0a47b746afba0c50ca544d8fb">gsl_interpolate</a> (const gsl_interp_type *interpT, double *xin, double *yin, size_t Nin, double *xout, double *yout, size_t Nout)</td></tr>
-<tr class="memdesc:ga79ccb1b0a47b746afba0c50ca544d8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a 1-D data X vs Y discrete function onto a new X axis.  <a href="group__interpolation.html#ga79ccb1b0a47b746afba0c50ca544d8fb">More...</a><br /></td></tr>
-<tr class="separator:ga79ccb1b0a47b746afba0c50ca544d8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d199ac493f747f1a5af4ffa9a2e6067"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interpolation.html#ga4d199ac493f747f1a5af4ffa9a2e6067">gsl_interpolate</a> (const gsl_interp_type *interpT, std::vector&lt; double &gt; &amp;xin, std::vector&lt; double &gt; &amp;yin, std::vector&lt; double &gt; &amp;xout, std::vector&lt; double &gt; &amp;yout)</td></tr>
-<tr class="memdesc:ga4d199ac493f747f1a5af4ffa9a2e6067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a 1-D data X vs Y discrete function onto a new X axis (vector version)  <a href="group__interpolation.html#ga4d199ac493f747f1a5af4ffa9a2e6067">More...</a><br /></td></tr>
-<tr class="separator:ga4d199ac493f747f1a5af4ffa9a2e6067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacc968e47358b648a87d2c64213b1882e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">MXE_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
 <tr class="memdesc:gacc968e47358b648a87d2c64213b1882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for an mxlib error code.  <a href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">More...</a><br /></td></tr>
 <tr class="separator:gacc968e47358b648a87d2c64213b1882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,115 +119,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aa3de0e92d5db0a60289f27491d1d94f4"><td class="memTemplItemLeft" align="right" valign="top">iosT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemx.html#aa3de0e92d5db0a60289f27491d1d94f4">dumpGitStatus</a> (iosT &amp;ios)</td></tr>
 <tr class="memdesc:aa3de0e92d5db0a60289f27491d1d94f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the current git status of the library to a stream.  <a href="namespacemx.html#aa3de0e92d5db0a60289f27491d1d94f4">More...</a><br /></td></tr>
 <tr class="separator:aa3de0e92d5db0a60289f27491d1d94f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga06a225fe04bb8236fec9d8afdbb3b94e"><td class="memTemplParams" colspan="2">template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </td></tr>
-<tr class="memitem:ga06a225fe04bb8236fec9d8afdbb3b94e"><td class="memTemplItemLeft" align="right" valign="top">typeT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga06a225fe04bb8236fec9d8afdbb3b94e">get_curr_time</a> ()</td></tr>
-<tr class="separator:ga06a225fe04bb8236fec9d8afdbb3b94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafa44b0870c096eef0f1544b41f2355d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils__sleep.html#gafa44b0870c096eef0f1544b41f2355d9">sleep</a> (unsigned sec)</td></tr>
-<tr class="memdesc:gafa44b0870c096eef0f1544b41f2355d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a specified period in seconds.  <a href="group__timeutils__sleep.html#gafa44b0870c096eef0f1544b41f2355d9">More...</a><br /></td></tr>
-<tr class="separator:gafa44b0870c096eef0f1544b41f2355d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga24b58fe234e349a07b45a84c819e5b87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils__sleep.html#ga24b58fe234e349a07b45a84c819e5b87">milliSleep</a> (unsigned msec)</td></tr>
-<tr class="memdesc:ga24b58fe234e349a07b45a84c819e5b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a specified period in milliseconds.  <a href="group__timeutils__sleep.html#ga24b58fe234e349a07b45a84c819e5b87">More...</a><br /></td></tr>
-<tr class="separator:ga24b58fe234e349a07b45a84c819e5b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga145c5198a5191f663888693e4c6073e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils__sleep.html#ga145c5198a5191f663888693e4c6073e2">microSleep</a> (unsigned usec)</td></tr>
-<tr class="memdesc:ga145c5198a5191f663888693e4c6073e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a specified period in microseconds.  <a href="group__timeutils__sleep.html#ga145c5198a5191f663888693e4c6073e2">More...</a><br /></td></tr>
-<tr class="separator:ga145c5198a5191f663888693e4c6073e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ccb8080335bf7b900a15748a0ae235d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils__sleep.html#ga2ccb8080335bf7b900a15748a0ae235d">nanoSleep</a> (unsigned nsec)</td></tr>
-<tr class="memdesc:ga2ccb8080335bf7b900a15748a0ae235d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a specified period in nanoseconds.  <a href="group__timeutils__sleep.html#ga2ccb8080335bf7b900a15748a0ae235d">More...</a><br /></td></tr>
-<tr class="separator:ga2ccb8080335bf7b900a15748a0ae235d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab431eb4ae6228f5ae170f53877ff1052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemx.html#ab431eb4ae6228f5ae170f53877ff1052">timespecAddNsec</a> (timespec &amp;ts, unsigned nsec)</td></tr>
-<tr class="separator:ab431eb4ae6228f5ae170f53877ff1052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa6b611db0b692ae4dc1afb9b24762d76"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gaa6b611db0b692ae4dc1afb9b24762d76"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaa6b611db0b692ae4dc1afb9b24762d76">parse_hms</a> (const std::string &amp;hmsstr, floatT &amp;h, floatT &amp;m, floatT &amp;s)</td></tr>
-<tr class="separator:gaa6b611db0b692ae4dc1afb9b24762d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacdd110d0d8cca27cc959b33b666ce885"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gacdd110d0d8cca27cc959b33b666ce885">Cal2mjd</a> (int yr, int mon, int day, int hr, int min, double sec)</td></tr>
-<tr class="memdesc:gacdd110d0d8cca27cc959b33b666ce885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Gregorian calendar date into modified Julian date (MJD).  <a href="group__timeutils.html#gacdd110d0d8cca27cc959b33b666ce885">More...</a><br /></td></tr>
-<tr class="separator:gacdd110d0d8cca27cc959b33b666ce885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c9ce4871cb82d3363af3b577f11520b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga9c9ce4871cb82d3363af3b577f11520b">ISO8601dateBreakdown</a> (int &amp;yr, int &amp;mon, int &amp;day, int &amp;hr, int &amp;min, double &amp;sec, const std::string &amp;fdate)</td></tr>
-<tr class="memdesc:ga9c9ce4871cb82d3363af3b577f11520b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" into the individual components.  <a href="group__timeutils.html#ga9c9ce4871cb82d3363af3b577f11520b">More...</a><br /></td></tr>
-<tr class="separator:ga9c9ce4871cb82d3363af3b577f11520b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaed5d9d66ee5f53b72cc1b423d4a5c44"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaaed5d9d66ee5f53b72cc1b423d4a5c44">ISO8601date2mjd</a> (const std::string &amp;fdate)</td></tr>
-<tr class="memdesc:gaaed5d9d66ee5f53b72cc1b423d4a5c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" and return the modified Julian date (MJD)  <a href="group__timeutils.html#gaaed5d9d66ee5f53b72cc1b423d4a5c44">More...</a><br /></td></tr>
-<tr class="separator:gaaed5d9d66ee5f53b72cc1b423d4a5c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="memTemplParams" colspan="2">template&lt;typename timeT &gt; </td></tr>
-<tr class="memitem:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga4f7f57095346e9b07d01b3a9566d55a0">ISO8601DateTimeStr</a> (const timeT &amp;timeIn, int timeZone=0)</td></tr>
-<tr class="memdesc:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format.  <a href="group__timeutils.html#ga4f7f57095346e9b07d01b3a9566d55a0">More...</a><br /></td></tr>
-<tr class="separator:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gae8c301b28a67a2e7e1055ec7ff7e6e1b">ISO8601DateTimeStr&lt; time_t &gt;</a> (const time_t &amp;timeIn, int timeZone)</td></tr>
-<tr class="memdesc:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for time_t.  <a href="group__timeutils.html#gae8c301b28a67a2e7e1055ec7ff7e6e1b">More...</a><br /></td></tr>
-<tr class="separator:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0159847006ce826a1a53e174ba021285"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ga0159847006ce826a1a53e174ba021285"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga0159847006ce826a1a53e174ba021285">ISO8601DateTimeStr&lt; timespec &gt;</a> (const timespec &amp;timeIn, int timeZone)</td></tr>
-<tr class="memdesc:ga0159847006ce826a1a53e174ba021285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for timespec.  <a href="group__timeutils.html#ga0159847006ce826a1a53e174ba021285">More...</a><br /></td></tr>
-<tr class="separator:ga0159847006ce826a1a53e174ba021285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13480d3d24f7676bd5ef4730e558c95a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga13480d3d24f7676bd5ef4730e558c95a">ISO8601DateTimeStr</a> (int timeZone=0)</td></tr>
-<tr class="memdesc:ga13480d3d24f7676bd5ef4730e558c95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for the current UTC time.  <a href="group__timeutils.html#ga13480d3d24f7676bd5ef4730e558c95a">More...</a><br /></td></tr>
-<tr class="separator:ga13480d3d24f7676bd5ef4730e558c95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga061ce6c72240212234c68e63896f59e7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga061ce6c72240212234c68e63896f59e7">ISO8601DateTimeStrMJD</a> (const double &amp;timeIn, int timeZone=0)</td></tr>
-<tr class="memdesc:ga061ce6c72240212234c68e63896f59e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for an MJD.  <a href="group__timeutils.html#ga061ce6c72240212234c68e63896f59e7">More...</a><br /></td></tr>
-<tr class="separator:ga061ce6c72240212234c68e63896f59e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf154ea9c433dd20eb0d6dcd1e04f2d66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaf154ea9c433dd20eb0d6dcd1e04f2d66">timeStamp</a> (std::string &amp;tstamp, timespec &amp;ts)</td></tr>
-<tr class="memdesc:gaf154ea9c433dd20eb0d6dcd1e04f2d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a timestamp string in the form YYYYMMDDHHMMSS.SSSSSSSSS.  <a href="group__timeutils.html#gaf154ea9c433dd20eb0d6dcd1e04f2d66">More...</a><br /></td></tr>
-<tr class="separator:gaf154ea9c433dd20eb0d6dcd1e04f2d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1f8aced872356888370b0850137ee48f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga1f8aced872356888370b0850137ee48f">timespecUTC2TAIMJD</a> (double &amp;djm, double &amp;djmf, const timespec &amp;tsp, tm *tm0)</td></tr>
-<tr class="memdesc:ga1f8aced872356888370b0850137ee48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a UTC timespec to TAI modified Julian date.  <a href="group__timeutils.html#ga1f8aced872356888370b0850137ee48f">More...</a><br /></td></tr>
-<tr class="separator:ga1f8aced872356888370b0850137ee48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac788e3ca363b84d4d533b54113208613"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gac788e3ca363b84d4d533b54113208613"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fft.html#gac788e3ca363b84d4d533b54113208613">fftw_typename</a> ()</td></tr>
-<tr class="memdesc:gac788e3ca363b84d4d533b54113208613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string corresponding the fftw real floating point type.  <a href="group__fft.html#gac788e3ca363b84d4d533b54113208613">More...</a><br /></td></tr>
-<tr class="separator:gac788e3ca363b84d4d533b54113208613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fft.html#ga8ac65ee6e3c92a301a7c514eeadd4487">fftw_wisdom_filename</a> ()</td></tr>
-<tr class="memdesc:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the mxlib standard wisdom filename for the type.  <a href="group__fft.html#ga8ac65ee6e3c92a301a7c514eeadd4487">More...</a><br /></td></tr>
-<tr class="separator:ga8ac65ee6e3c92a301a7c514eeadd4487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga49a41eaf2711cad9a09da008eecd68fa"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga49a41eaf2711cad9a09da008eecd68fa"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__wisdom.html#ga49a41eaf2711cad9a09da008eecd68fa">fftw_import_system_wisdom</a> ()</td></tr>
-<tr class="memdesc:ga49a41eaf2711cad9a09da008eecd68fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template wrapper for fftwX_import_system_wisdom();.  <a href="group__fftw__template__wisdom.html#ga49a41eaf2711cad9a09da008eecd68fa">More...</a><br /></td></tr>
-<tr class="separator:ga49a41eaf2711cad9a09da008eecd68fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa98ec43cb391d1f249b725dd456b2020"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gaa98ec43cb391d1f249b725dd456b2020"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__wisdom.html#gaa98ec43cb391d1f249b725dd456b2020">fftw_import_wisdom_from_filename</a> (const char *filename)</td></tr>
-<tr class="memdesc:gaa98ec43cb391d1f249b725dd456b2020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template wrapper for fftwX_import_wisdom_from_filename(const char *);.  <a href="group__fftw__template__wisdom.html#gaa98ec43cb391d1f249b725dd456b2020">More...</a><br /></td></tr>
-<tr class="separator:gaa98ec43cb391d1f249b725dd456b2020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab8a901e0d137e9680dc7975d0e56dfb3"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gab8a901e0d137e9680dc7975d0e56dfb3"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__wisdom.html#gab8a901e0d137e9680dc7975d0e56dfb3">fftw_export_wisdom_to_filename</a> (const char *filename)</td></tr>
-<tr class="memdesc:gab8a901e0d137e9680dc7975d0e56dfb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template wrapper for fftwX_export_wisdom_to_filename(const char *);.  <a href="group__fftw__template__wisdom.html#gab8a901e0d137e9680dc7975d0e56dfb3">More...</a><br /></td></tr>
-<tr class="separator:gab8a901e0d137e9680dc7975d0e56dfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d599d0aee1f16a10b1d74ce8101615e"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga4d599d0aee1f16a10b1d74ce8101615e"><td class="memTemplItemLeft" align="right" valign="top">realT *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__alloc.html#ga4d599d0aee1f16a10b1d74ce8101615e">fftw_malloc</a> (size_t n)</td></tr>
-<tr class="memdesc:ga4d599d0aee1f16a10b1d74ce8101615e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call to fftw_malloc, with type cast.  <a href="group__fftw__template__alloc.html#ga4d599d0aee1f16a10b1d74ce8101615e">More...</a><br /></td></tr>
-<tr class="separator:ga4d599d0aee1f16a10b1d74ce8101615e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb9965fa73a1eec2b2bd5831b424f743"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gaeb9965fa73a1eec2b2bd5831b424f743"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__alloc.html#gaeb9965fa73a1eec2b2bd5831b424f743">fftw_free</a> (realT *p)</td></tr>
-<tr class="memdesc:gaeb9965fa73a1eec2b2bd5831b424f743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call to fftw_free.  <a href="group__fftw__template__alloc.html#gaeb9965fa73a1eec2b2bd5831b424f743">More...</a><br /></td></tr>
-<tr class="separator:gaeb9965fa73a1eec2b2bd5831b424f743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae5efdc2d330b9047dc29e5d5a06d86c1"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gae5efdc2d330b9047dc29e5d5a06d86c1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__plans.html#gae5efdc2d330b9047dc29e5d5a06d86c1">fftw_make_planner_thread_safe</a> ()</td></tr>
-<tr class="memdesc:gae5efdc2d330b9047dc29e5d5a06d86c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for fftwX_make_planner_thread_safe()  <a href="group__fftw__template__plans.html#gae5efdc2d330b9047dc29e5d5a06d86c1">More...</a><br /></td></tr>
-<tr class="separator:gae5efdc2d330b9047dc29e5d5a06d86c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5066c5b7f98445203998b88df8100b4e"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga5066c5b7f98445203998b88df8100b4e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__plans.html#ga5066c5b7f98445203998b88df8100b4e">fftw_plan_with_nthreads</a> (int nthreads)</td></tr>
-<tr class="memdesc:ga5066c5b7f98445203998b88df8100b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the FFTW planner how many threads to use.  <a href="group__fftw__template__plans.html#ga5066c5b7f98445203998b88df8100b4e">More...</a><br /></td></tr>
-<tr class="separator:ga5066c5b7f98445203998b88df8100b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03c86fe6a07a41026efabc376a3756e0"><td class="memTemplParams" colspan="2">template&lt;typename inputDataT , typename outputDataT &gt; </td></tr>
-<tr class="memitem:ga03c86fe6a07a41026efabc376a3756e0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1fftwTypeSpec.html">fftwTypeSpec</a>&lt; inputDataT, outputDataT &gt;::planT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__plans.html#ga03c86fe6a07a41026efabc376a3756e0">fftw_plan_dft</a> (std::vector&lt; int &gt; n, inputDataT *in, outputDataT *out, int sign, unsigned flags)</td></tr>
-<tr class="memdesc:ga03c86fe6a07a41026efabc376a3756e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for the fftwX_plan_dft functions.  <a href="group__fftw__template__plans.html#ga03c86fe6a07a41026efabc376a3756e0">More...</a><br /></td></tr>
-<tr class="separator:ga03c86fe6a07a41026efabc376a3756e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5da3c8cd973302cb1903a64deeb68f8f"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga5da3c8cd973302cb1903a64deeb68f8f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__plans.html#ga5da3c8cd973302cb1903a64deeb68f8f">fftw_cleanup</a> ()</td></tr>
-<tr class="memdesc:ga5da3c8cd973302cb1903a64deeb68f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup persistent planner data.  <a href="group__fftw__template__plans.html#ga5da3c8cd973302cb1903a64deeb68f8f">More...</a><br /></td></tr>
-<tr class="separator:ga5da3c8cd973302cb1903a64deeb68f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac57d3471076e5c4e6b75d00310324583"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gac57d3471076e5c4e6b75d00310324583"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__plans.html#gac57d3471076e5c4e6b75d00310324583">fftw_cleanup_threads</a> ()</td></tr>
-<tr class="memdesc:gac57d3471076e5c4e6b75d00310324583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup persistent planner data and threads data.  <a href="group__fftw__template__plans.html#gac57d3471076e5c4e6b75d00310324583">More...</a><br /></td></tr>
-<tr class="separator:gac57d3471076e5c4e6b75d00310324583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="memTemplParams" colspan="2">template&lt;typename inputDataT , typename outputDataT &gt; </td></tr>
-<tr class="memitem:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__exec.html#ga3bce7eecbe39e1a71a37490a2479a0a4">fftw_execute_dft</a> (typename <a class="el" href="structmx_1_1fftwTypeSpec.html">fftwTypeSpec</a>&lt; inputDataT, outputDataT &gt;::planT plan, inputDataT *in, outputDataT *out)</td></tr>
-<tr class="memdesc:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the given plan on the given arrays.  <a href="group__fftw__template__exec.html#ga3bce7eecbe39e1a71a37490a2479a0a4">More...</a><br /></td></tr>
-<tr class="separator:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4388b4ea666258851b99f2bfe17f43f4"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga4388b4ea666258851b99f2bfe17f43f4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__exec.html#ga4388b4ea666258851b99f2bfe17f43f4">fftw_destroy_plan</a> (typename <a class="el" href="structmx_1_1fftwPlanSpec.html">fftwPlanSpec</a>&lt; realT &gt;::planT plan)</td></tr>
-<tr class="memdesc:ga4388b4ea666258851b99f2bfe17f43f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the given plan.  <a href="group__fftw__template__exec.html#ga4388b4ea666258851b99f2bfe17f43f4">More...</a><br /></td></tr>
-<tr class="separator:ga4388b4ea666258851b99f2bfe17f43f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aa3de0e92d5db0a60289f27491d1d94f4"></a>
@@ -347,48 +155,9 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mxlib_8hpp_source.html#l00052">52</a> of file <a class="el" href="mxlib_8hpp_source.html">mxlib.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxlib_8hpp_source.html#l00048">48</a> of file <a class="el" href="mxlib_8hpp_source.html">mxlib.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
-
-</div>
-</div>
-<a id="ab431eb4ae6228f5ae170f53877ff1052"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab431eb4ae6228f5ae170f53877ff1052">&#9670;&nbsp;</a></span>timespecAddNsec()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mx::timespecAddNsec </td>
-          <td>(</td>
-          <td class="paramtype">timespec &amp;&#160;</td>
-          <td class="paramname"><em>ts</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>nsec</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Adds a time offset to an existing timespec </p>
-
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00111">111</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
 </div>
 </div>
@@ -398,7 +167,7 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

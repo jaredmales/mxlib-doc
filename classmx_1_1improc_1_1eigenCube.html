@@ -102,7 +102,7 @@ class mx::improc::eigenCube&lt; dataT &gt;</h3>
 
 <p>An image cube with an Eigen-like API. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00034">34</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00030">30</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="eigenCube_8hpp_source.html">improc/eigenCube.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -114,24 +114,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad13e3af2cb7be2ccfa61271751e0ca38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#ad13e3af2cb7be2ccfa61271751e0ca38">eigenCube</a> (dataT *ndata, size_t nrows, size_t ncols, size_t nplanes)</td></tr>
 <tr class="memdesc:ad13e3af2cb7be2ccfa61271751e0ca38"><td class="mdescLeft">&#160;</td><td class="mdescRight">C'tor taking an existing array as an argument.  <a href="classmx_1_1improc_1_1eigenCube.html#ad13e3af2cb7be2ccfa61271751e0ca38">More...</a><br /></td></tr>
 <tr class="separator:ad13e3af2cb7be2ccfa61271751e0ca38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b500485988ec85b0c503f9a16de6337"><td class="memItemLeft" align="right" valign="top">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a6b500485988ec85b0c503f9a16de6337">cube</a> ()</td></tr>
-<tr class="memdesc:a6b500485988ec85b0c503f9a16de6337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D Eigen::Map pointed at the entire cube.  <a href="classmx_1_1improc_1_1eigenCube.html#a6b500485988ec85b0c503f9a16de6337">More...</a><br /></td></tr>
-<tr class="separator:a6b500485988ec85b0c503f9a16de6337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a602325e19cd65132ffd7b36a058438"><td class="memItemLeft" align="right" valign="top">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a7a602325e19cd65132ffd7b36a058438">image</a> (Index n)</td></tr>
-<tr class="memdesc:a7a602325e19cd65132ffd7b36a058438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D Eigen::Map pointed at the specified image.  <a href="classmx_1_1improc_1_1eigenCube.html#a7a602325e19cd65132ffd7b36a058438">More...</a><br /></td></tr>
-<tr class="separator:a7a602325e19cd65132ffd7b36a058438"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc6b066352b41fa10b25954c94b5a9e"><td class="memItemLeft" align="right" valign="top">const Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a6cc6b066352b41fa10b25954c94b5a9e">image</a> (Index n) const</td></tr>
-<tr class="memdesc:a6cc6b066352b41fa10b25954c94b5a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D Eigen::Map pointed at the specified image.  <a href="classmx_1_1improc_1_1eigenCube.html#a6cc6b066352b41fa10b25954c94b5a9e">More...</a><br /></td></tr>
-<tr class="separator:a6cc6b066352b41fa10b25954c94b5a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d1dc9322ec759a7ad1f23219f24cdeb"><td class="memItemLeft" align="right" valign="top">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt;, Unaligned, Stride&lt; Dynamic, Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a6d1dc9322ec759a7ad1f23219f24cdeb">pixel</a> (Index i, Index j)</td></tr>
-<tr class="memdesc:a6d1dc9322ec759a7ad1f23219f24cdeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an Eigen::Map-ed vector of the pixels at the given coordinate.  <a href="classmx_1_1improc_1_1eigenCube.html#a6d1dc9322ec759a7ad1f23219f24cdeb">More...</a><br /></td></tr>
-<tr class="separator:a6d1dc9322ec759a7ad1f23219f24cdeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc99a7a26b8ab985cf85765c6e39b765"><td class="memItemLeft" align="right" valign="top">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#acc99a7a26b8ab985cf85765c6e39b765">asVectors</a> ()</td></tr>
-<tr class="memdesc:acc99a7a26b8ab985cf85765c6e39b765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an Eigen::Map of the cube where each image is a vector.  <a href="classmx_1_1improc_1_1eigenCube.html#acc99a7a26b8ab985cf85765c6e39b765">More...</a><br /></td></tr>
-<tr class="separator:acc99a7a26b8ab985cf85765c6e39b765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e926748d5e2d69742a022fd2221e2ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a6e926748d5e2d69742a022fd2221e2ad">Covar</a> (Matrix&lt; dataT, Dynamic, Dynamic &gt; &amp;cv)</td></tr>
-<tr class="memdesc:a6e926748d5e2d69742a022fd2221e2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the covariance matrix of the images in the cube.  <a href="classmx_1_1improc_1_1eigenCube.html#a6e926748d5e2d69742a022fd2221e2ad">More...</a><br /></td></tr>
-<tr class="separator:a6e926748d5e2d69742a022fd2221e2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b7f5b18741343a5b4be12665ae7f77"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#aa9b7f5b18741343a5b4be12665ae7f77">cube</a> ()</td></tr>
+<tr class="memdesc:aa9b7f5b18741343a5b4be12665ae7f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D Eigen::Eigen::Map pointed at the entire cube.  <a href="classmx_1_1improc_1_1eigenCube.html#aa9b7f5b18741343a5b4be12665ae7f77">More...</a><br /></td></tr>
+<tr class="separator:aa9b7f5b18741343a5b4be12665ae7f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81b1c69b2c9e1c376ec70d562dbebe9"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9">image</a> (Index n)</td></tr>
+<tr class="memdesc:af81b1c69b2c9e1c376ec70d562dbebe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D Eigen::Eigen::Map pointed at the specified image.  <a href="classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9">More...</a><br /></td></tr>
+<tr class="separator:af81b1c69b2c9e1c376ec70d562dbebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0d40b76fa94de86dcda1af0847fd81"><td class="memItemLeft" align="right" valign="top">const Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a6f0d40b76fa94de86dcda1af0847fd81">image</a> (Index n) const</td></tr>
+<tr class="memdesc:a6f0d40b76fa94de86dcda1af0847fd81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2D Eigen::Eigen::Map pointed at the specified image.  <a href="classmx_1_1improc_1_1eigenCube.html#a6f0d40b76fa94de86dcda1af0847fd81">More...</a><br /></td></tr>
+<tr class="separator:a6f0d40b76fa94de86dcda1af0847fd81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f40db09e4669b4a97380c0278c0dd6"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt;, Eigen::Unaligned, Eigen::Stride&lt; Eigen::Dynamic, Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a74f40db09e4669b4a97380c0278c0dd6">pixel</a> (Index i, Index j)</td></tr>
+<tr class="memdesc:a74f40db09e4669b4a97380c0278c0dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an Eigen::Eigen::Map-ed vector of the pixels at the given coordinate.  <a href="classmx_1_1improc_1_1eigenCube.html#a74f40db09e4669b4a97380c0278c0dd6">More...</a><br /></td></tr>
+<tr class="separator:a74f40db09e4669b4a97380c0278c0dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7098ccdc4fb4a546b5b052a66934c8"><td class="memItemLeft" align="right" valign="top">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#aec7098ccdc4fb4a546b5b052a66934c8">asVectors</a> ()</td></tr>
+<tr class="memdesc:aec7098ccdc4fb4a546b5b052a66934c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an Eigen::Eigen::Map of the cube where each image is a vector.  <a href="classmx_1_1improc_1_1eigenCube.html#aec7098ccdc4fb4a546b5b052a66934c8">More...</a><br /></td></tr>
+<tr class="separator:aec7098ccdc4fb4a546b5b052a66934c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f33ac1f221c66dfeb6998c406954779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a3f33ac1f221c66dfeb6998c406954779">Covar</a> (Eigen::Matrix&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &amp;cv)</td></tr>
+<tr class="memdesc:a3f33ac1f221c66dfeb6998c406954779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the covariance matrix of the images in the cube.  <a href="classmx_1_1improc_1_1eigenCube.html#a3f33ac1f221c66dfeb6998c406954779">More...</a><br /></td></tr>
+<tr class="separator:a3f33ac1f221c66dfeb6998c406954779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7024770ae7f7b64f002fb4a9692fa8e5"><td class="memTemplParams" colspan="2">template&lt;typename eigenT &gt; </td></tr>
 <tr class="memitem:a7024770ae7f7b64f002fb4a9692fa8e5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1eigenCube.html#a7024770ae7f7b64f002fb4a9692fa8e5">sum</a> (eigenT &amp;mim)</td></tr>
 <tr class="memdesc:a7024770ae7f7b64f002fb4a9692fa8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the sum image of the cube.  <a href="classmx_1_1improc_1_1eigenCube.html#a7024770ae7f7b64f002fb4a9692fa8e5">More...</a><br /></td></tr>
@@ -218,7 +218,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00230">230</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00227">227</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -274,13 +274,13 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00241">241</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00238">238</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acc99a7a26b8ab985cf85765c6e39b765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc99a7a26b8ab985cf85765c6e39b765">&#9670;&nbsp;</a></span>asVectors()</h2>
+<a id="aec7098ccdc4fb4a546b5b052a66934c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7098ccdc4fb4a546b5b052a66934c8">&#9670;&nbsp;</a></span>asVectors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,21 +288,21 @@ template&lt;typename dataT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::asVectors</td>
+          <td class="memname">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::asVectors</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return an Eigen::Map of the cube where each image is a vector. </p>
+<p>Return an Eigen::Eigen::Map of the cube where each image is a vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00396">396</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00393">393</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="KLIPreduction_8hpp_source.html#l00826">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="KLIPreduction_8hpp_source.html#l00779">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>.</p>
 
 </div>
 </div>
-<a id="a6e926748d5e2d69742a022fd2221e2ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e926748d5e2d69742a022fd2221e2ad">&#9670;&nbsp;</a></span>Covar()</h2>
+<a id="a3f33ac1f221c66dfeb6998c406954779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f33ac1f221c66dfeb6998c406954779">&#9670;&nbsp;</a></span>Covar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +312,7 @@ template&lt;typename dataT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::Covar </td>
           <td>(</td>
-          <td class="paramtype">Matrix&lt; dataT, Dynamic, Dynamic &gt; &amp;&#160;</td>
+          <td class="paramtype">Eigen::Matrix&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &amp;&#160;</td>
           <td class="paramname"><em>cv</em></td><td>)</td>
           <td></td>
         </tr>
@@ -321,12 +321,12 @@ template&lt;typename dataT &gt; </div>
 
 <p>Calculate the covariance matrix of the images in the cube. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00402">402</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00399">399</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a6b500485988ec85b0c503f9a16de6337"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b500485988ec85b0c503f9a16de6337">&#9670;&nbsp;</a></span>cube()</h2>
+<a id="aa9b7f5b18741343a5b4be12665ae7f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b7f5b18741343a5b4be12665ae7f77">&#9670;&nbsp;</a></span>cube()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,21 +334,21 @@ template&lt;typename dataT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::cube</td>
+          <td class="memname">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::cube</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a 2D Eigen::Map pointed at the entire cube. </p>
+<p>Returns a 2D Eigen::Eigen::Map pointed at the entire cube. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00372">372</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00369">369</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="KLIPreduction_8hpp_source.html#l00826">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="KLIPreduction_8hpp_source.html#l00779">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>.</p>
 
 </div>
 </div>
-<a id="a7a602325e19cd65132ffd7b36a058438"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a602325e19cd65132ffd7b36a058438">&#9670;&nbsp;</a></span>image() <span class="overload">[1/2]</span></h2>
+<a id="af81b1c69b2c9e1c376ec70d562dbebe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81b1c69b2c9e1c376ec70d562dbebe9">&#9670;&nbsp;</a></span>image() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +356,7 @@ template&lt;typename dataT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::image </td>
+          <td class="memname">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::image </td>
           <td>(</td>
           <td class="paramtype">Index&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -365,7 +365,7 @@ template&lt;typename dataT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a 2D Eigen::Map pointed at the specified image. </p>
+<p>Returns a 2D Eigen::Eigen::Map pointed at the specified image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[in] the image number </td></tr>
@@ -373,14 +373,14 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00378">378</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00375">375</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01190">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00283">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadFocalMask()</a>, <a class="el" href="zernikeBasis_8hpp_source.html#l00030">mx::AO::makeZernikeBasis()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00410">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::meanSubtract()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01395">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00494">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>, and <a class="el" href="psdFilter__test_8cpp_source.html#l00217">SCENARIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01179">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00283">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadFocalMask()</a>, <a class="el" href="zernikeBasis_8hpp_source.html#l00030">mx::AO::makeZernikeBasis()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00364">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::meanSubtract()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01384">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00447">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>, and <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>.</p>
 
 </div>
 </div>
-<a id="a6cc6b066352b41fa10b25954c94b5a9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cc6b066352b41fa10b25954c94b5a9e">&#9670;&nbsp;</a></span>image() <span class="overload">[2/2]</span></h2>
+<a id="a6f0d40b76fa94de86dcda1af0847fd81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0d40b76fa94de86dcda1af0847fd81">&#9670;&nbsp;</a></span>image() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +388,7 @@ template&lt;typename dataT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::image </td>
+          <td class="memname">const Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::image </td>
           <td>(</td>
           <td class="paramtype">Index&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -397,7 +397,7 @@ template&lt;typename dataT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a 2D Eigen::Map pointed at the specified image. </p>
+<p>Returns a 2D Eigen::Eigen::Map pointed at the specified image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[in] the image number </td></tr>
@@ -405,7 +405,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00384">384</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00381">381</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -443,9 +443,9 @@ template&lt;typename eigenT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00425">425</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00422">422</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01190">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, and <a class="el" href="KLIPreduction_8hpp_source.html#l00410">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::meanSubtract()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01179">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, and <a class="el" href="KLIPreduction_8hpp_source.html#l00364">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::meanSubtract()</a>.</p>
 
 </div>
 </div>
@@ -502,7 +502,7 @@ template&lt;typename eigenT , typename eigenCubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00441">441</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00438">438</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -551,7 +551,7 @@ template&lt;typename eigenT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00481">481</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00478">478</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -615,7 +615,7 @@ template&lt;typename eigenT , typename eigenCubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00508">508</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00505">505</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -653,14 +653,14 @@ template&lt;typename eigenT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00550">550</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00547">547</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01190">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, and <a class="el" href="KLIPreduction_8hpp_source.html#l00410">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::meanSubtract()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01179">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, and <a class="el" href="KLIPreduction_8hpp_source.html#l00364">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::meanSubtract()</a>.</p>
 
 </div>
 </div>
-<a id="a6d1dc9322ec759a7ad1f23219f24cdeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d1dc9322ec759a7ad1f23219f24cdeb">&#9670;&nbsp;</a></span>pixel()</h2>
+<a id="a74f40db09e4669b4a97380c0278c0dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f40db09e4669b4a97380c0278c0dd6">&#9670;&nbsp;</a></span>pixel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,7 +668,7 @@ template&lt;typename eigenT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt;, Unaligned, Stride&lt; Dynamic, Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::pixel </td>
+          <td class="memname">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt;, Eigen::Unaligned, Eigen::Stride&lt; Eigen::Dynamic, Eigen::Dynamic &gt; &gt; <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; dataT &gt;::pixel </td>
           <td>(</td>
           <td class="paramtype">Index&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -687,11 +687,11 @@ template&lt;typename dataT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns an Eigen::Map-ed vector of the pixels at the given coordinate. </p>
+<p>Returns an Eigen::Eigen::Map-ed vector of the pixels at the given coordinate. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00390">390</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00387">387</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdFilter__test_8cpp_source.html#l00217">SCENARIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -755,7 +755,7 @@ template&lt;typename eigenT , typename eigenCubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00594">594</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00591">591</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +804,7 @@ template&lt;typename eigenT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00568">568</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00565">565</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -875,7 +875,7 @@ template&lt;typename eigenT , typename eigenCubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00663">663</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00660">660</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -931,7 +931,7 @@ template&lt;typename eigenT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00636">636</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00633">633</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -969,7 +969,7 @@ template&lt;typename eigenT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00409">409</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenCube_8hpp_source.html#l00406">406</a> of file <a class="el" href="eigenCube_8hpp_source.html">eigenCube.hpp</a>.</p>
 
 </div>
 </div>
@@ -982,7 +982,7 @@ template&lt;typename eigenT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

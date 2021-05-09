@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('autocorrelation_8hpp_source.html','');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef autocorrelation_hpp</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define autocorrelation_hpp</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;../fft/fft.hpp&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;../math/fft/fft.hpp&quot;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('autocorrelation_8hpp_source.html','');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   std::vector&lt;std::complex&lt;T&gt;&gt; fftOut;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   std::vector&lt;std::complex&lt;T&gt;&gt; fftIn;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   mx::fftT&lt;std::complex&lt;T&gt;, std::complex&lt;T&gt;, 1, 0&gt; fft;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   math::fft::fftT&lt;std::complex&lt;T&gt;, std::complex&lt;T&gt;, 1, 0&gt; fft;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;   <span class="comment"></span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">   /// Calculate the A.C. as the inverse FFT of the PSD </span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span><span class="comment">   /** This calculates the circular autocorrelation from the PSD.</span></div>
@@ -240,7 +240,7 @@ $(document).ready(function(){initNavTree('autocorrelation_8hpp_source.html','');
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif //autocorrelation_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="agroup__signal__processing_html_gadbc4beeec00c60f6f2c107736a778159"><div class="ttname"><a href="group__signal__processing.html#gadbc4beeec00c60f6f2c107736a778159">mx::sigproc::autocorrelation</a></div><div class="ttdeci">void autocorrelation(std::vector&lt; T &gt; &amp;ac, std::vector&lt; T &gt; &amp;sig)</div><div class="ttdoc">Calculate the autocorrelation of a time-series.</div><div class="ttdef"><b>Definition:</b> <a href="autocorrelation_8hpp_source.html#l00079">autocorrelation.hpp:79</a></div></div>
 <div class="ttc" id="astructmx_1_1sigproc_1_1autocorrelationFromPSD_html_ac2814d49690e650b397cae9b94eb02bd"><div class="ttname"><a href="structmx_1_1sigproc_1_1autocorrelationFromPSD.html#ac2814d49690e650b397cae9b94eb02bd">mx::sigproc::autocorrelationFromPSD::operator()</a></div><div class="ttdeci">void operator()(T *ac, size_t Nac, T *psd, size_t Npsd)</div><div class="ttdoc">Calculate the A.C. as the inverse FFT of the PSD.</div><div class="ttdef"><b>Definition:</b> <a href="autocorrelation_8hpp_source.html#l00107">autocorrelation.hpp:107</a></div></div>
 <div class="ttc" id="astructmx_1_1sigproc_1_1autocorrelationFromPSD_html"><div class="ttname"><a href="structmx_1_1sigproc_1_1autocorrelationFromPSD.html">mx::sigproc::autocorrelationFromPSD</a></div><div class="ttdoc">Functor for calculating the autocorrelation given a PSD.</div><div class="ttdef"><b>Definition:</b> <a href="autocorrelation_8hpp_source.html#l00096">autocorrelation.hpp:96</a></div></div>
@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('autocorrelation_8hpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="autocorrelation_8hpp.html">autocorrelation.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

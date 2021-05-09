@@ -114,67 +114,69 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:timeUtils_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timeUtils_8hpp.html">timeUtils.hpp</a></td></tr>
-<tr class="memdesc:timeUtils_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for working with time. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:sofa_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sofa_8hpp.html">sofa.hpp</a></td></tr>
 <tr class="memdesc:sofa_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for the sofa library headers, adding a namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga06a225fe04bb8236fec9d8afdbb3b94e"><td class="memTemplParams" colspan="2">template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </td></tr>
-<tr class="memitem:ga06a225fe04bb8236fec9d8afdbb3b94e"><td class="memTemplItemLeft" align="right" valign="top">typeT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga06a225fe04bb8236fec9d8afdbb3b94e">mx::get_curr_time</a> ()</td></tr>
-<tr class="separator:ga06a225fe04bb8236fec9d8afdbb3b94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa6b611db0b692ae4dc1afb9b24762d76"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:gaa6b611db0b692ae4dc1afb9b24762d76"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaa6b611db0b692ae4dc1afb9b24762d76">mx::parse_hms</a> (const std::string &amp;hmsstr, floatT &amp;h, floatT &amp;m, floatT &amp;s)</td></tr>
-<tr class="separator:gaa6b611db0b692ae4dc1afb9b24762d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacdd110d0d8cca27cc959b33b666ce885"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gacdd110d0d8cca27cc959b33b666ce885">mx::Cal2mjd</a> (int yr, int mon, int day, int hr, int min, double sec)</td></tr>
-<tr class="memdesc:gacdd110d0d8cca27cc959b33b666ce885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Gregorian calendar date into modified Julian date (MJD).  <a href="group__timeutils.html#gacdd110d0d8cca27cc959b33b666ce885">More...</a><br /></td></tr>
-<tr class="separator:gacdd110d0d8cca27cc959b33b666ce885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c9ce4871cb82d3363af3b577f11520b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga9c9ce4871cb82d3363af3b577f11520b">mx::ISO8601dateBreakdown</a> (int &amp;yr, int &amp;mon, int &amp;day, int &amp;hr, int &amp;min, double &amp;sec, const std::string &amp;fdate)</td></tr>
-<tr class="memdesc:ga9c9ce4871cb82d3363af3b577f11520b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" into the individual components.  <a href="group__timeutils.html#ga9c9ce4871cb82d3363af3b577f11520b">More...</a><br /></td></tr>
-<tr class="separator:ga9c9ce4871cb82d3363af3b577f11520b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaed5d9d66ee5f53b72cc1b423d4a5c44"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaaed5d9d66ee5f53b72cc1b423d4a5c44">mx::ISO8601date2mjd</a> (const std::string &amp;fdate)</td></tr>
-<tr class="memdesc:gaaed5d9d66ee5f53b72cc1b423d4a5c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" and return the modified Julian date (MJD)  <a href="group__timeutils.html#gaaed5d9d66ee5f53b72cc1b423d4a5c44">More...</a><br /></td></tr>
-<tr class="separator:gaaed5d9d66ee5f53b72cc1b423d4a5c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="memTemplParams" colspan="2">template&lt;typename timeT &gt; </td></tr>
-<tr class="memitem:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga4f7f57095346e9b07d01b3a9566d55a0">mx::ISO8601DateTimeStr</a> (const timeT &amp;timeIn, int timeZone=0)</td></tr>
-<tr class="memdesc:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format.  <a href="group__timeutils.html#ga4f7f57095346e9b07d01b3a9566d55a0">More...</a><br /></td></tr>
-<tr class="separator:ga4f7f57095346e9b07d01b3a9566d55a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gae8c301b28a67a2e7e1055ec7ff7e6e1b">mx::ISO8601DateTimeStr&lt; time_t &gt;</a> (const time_t &amp;timeIn, int timeZone)</td></tr>
-<tr class="memdesc:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for time_t.  <a href="group__timeutils.html#gae8c301b28a67a2e7e1055ec7ff7e6e1b">More...</a><br /></td></tr>
-<tr class="separator:gae8c301b28a67a2e7e1055ec7ff7e6e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0159847006ce826a1a53e174ba021285"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ga0159847006ce826a1a53e174ba021285"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga0159847006ce826a1a53e174ba021285">mx::ISO8601DateTimeStr&lt; timespec &gt;</a> (const timespec &amp;timeIn, int timeZone)</td></tr>
-<tr class="memdesc:ga0159847006ce826a1a53e174ba021285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for timespec.  <a href="group__timeutils.html#ga0159847006ce826a1a53e174ba021285">More...</a><br /></td></tr>
-<tr class="separator:ga0159847006ce826a1a53e174ba021285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13480d3d24f7676bd5ef4730e558c95a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga13480d3d24f7676bd5ef4730e558c95a">mx::ISO8601DateTimeStr</a> (int timeZone=0)</td></tr>
-<tr class="memdesc:ga13480d3d24f7676bd5ef4730e558c95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for the current UTC time.  <a href="group__timeutils.html#ga13480d3d24f7676bd5ef4730e558c95a">More...</a><br /></td></tr>
-<tr class="separator:ga13480d3d24f7676bd5ef4730e558c95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga061ce6c72240212234c68e63896f59e7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga061ce6c72240212234c68e63896f59e7">mx::ISO8601DateTimeStrMJD</a> (const double &amp;timeIn, int timeZone=0)</td></tr>
-<tr class="memdesc:ga061ce6c72240212234c68e63896f59e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for an MJD.  <a href="group__timeutils.html#ga061ce6c72240212234c68e63896f59e7">More...</a><br /></td></tr>
-<tr class="separator:ga061ce6c72240212234c68e63896f59e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf154ea9c433dd20eb0d6dcd1e04f2d66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaf154ea9c433dd20eb0d6dcd1e04f2d66">mx::timeStamp</a> (std::string &amp;tstamp, timespec &amp;ts)</td></tr>
-<tr class="memdesc:gaf154ea9c433dd20eb0d6dcd1e04f2d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a timestamp string in the form YYYYMMDDHHMMSS.SSSSSSSSS.  <a href="group__timeutils.html#gaf154ea9c433dd20eb0d6dcd1e04f2d66">More...</a><br /></td></tr>
-<tr class="separator:gaf154ea9c433dd20eb0d6dcd1e04f2d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1f8aced872356888370b0850137ee48f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga1f8aced872356888370b0850137ee48f">mx::timespecUTC2TAIMJD</a> (double &amp;djm, double &amp;djmf, const timespec &amp;tsp, tm *tm0)</td></tr>
-<tr class="memdesc:ga1f8aced872356888370b0850137ee48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a UTC timespec to TAI modified Julian date.  <a href="group__timeutils.html#ga1f8aced872356888370b0850137ee48f">More...</a><br /></td></tr>
-<tr class="separator:ga1f8aced872356888370b0850137ee48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd514bac4b8a41e1e41d56dff63e61e0"><td class="memTemplParams" colspan="2">template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </td></tr>
+<tr class="memitem:gadd514bac4b8a41e1e41d56dff63e61e0"><td class="memTemplItemLeft" align="right" valign="top">typeT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gadd514bac4b8a41e1e41d56dff63e61e0">mx::sys::get_curr_time</a> (timespec &amp;tsp)</td></tr>
+<tr class="memdesc:gadd514bac4b8a41e1e41d56dff63e61e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system time in seconds.  <a href="group__timeutils.html#gadd514bac4b8a41e1e41d56dff63e61e0">More...</a><br /></td></tr>
+<tr class="separator:gadd514bac4b8a41e1e41d56dff63e61e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9461058712fcc1c377db5cdfd824128"><td class="memTemplParams" colspan="2">template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </td></tr>
+<tr class="memitem:gaa9461058712fcc1c377db5cdfd824128"><td class="memTemplItemLeft" align="right" valign="top">typeT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaa9461058712fcc1c377db5cdfd824128">mx::sys::get_curr_time</a> ()</td></tr>
+<tr class="memdesc:gaa9461058712fcc1c377db5cdfd824128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system time in seconds.  <a href="group__timeutils.html#gaa9461058712fcc1c377db5cdfd824128">More...</a><br /></td></tr>
+<tr class="separator:gaa9461058712fcc1c377db5cdfd824128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2378479450b9f5d737b32c27c4dcccc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaa2378479450b9f5d737b32c27c4dcccc">mx::sys::timespecAddNsec</a> (timespec &amp;ts, unsigned nsec)</td></tr>
+<tr class="memdesc:gaa2378479450b9f5d737b32c27c4dcccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a time offset to an existing timespec.  <a href="group__timeutils.html#gaa2378479450b9f5d737b32c27c4dcccc">More...</a><br /></td></tr>
+<tr class="separator:gaa2378479450b9f5d737b32c27c4dcccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa28afcc79713260e225d319791496c5a"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
+<tr class="memitem:gaa28afcc79713260e225d319791496c5a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaa28afcc79713260e225d319791496c5a">mx::sys::parse_hms</a> (floatT &amp;h, floatT &amp;m, floatT &amp;s, const std::string &amp;hmsstr)</td></tr>
+<tr class="separator:gaa28afcc79713260e225d319791496c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc843ae69b89a7aeaa807a20e727d249"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gacc843ae69b89a7aeaa807a20e727d249">mx::sys::Cal2mjd</a> (int yr, int mon, int day, int hr, int min, double sec)</td></tr>
+<tr class="memdesc:gacc843ae69b89a7aeaa807a20e727d249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Gregorian calendar date into modified Julian date (MJD).  <a href="group__timeutils.html#gacc843ae69b89a7aeaa807a20e727d249">More...</a><br /></td></tr>
+<tr class="separator:gacc843ae69b89a7aeaa807a20e727d249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31880febfbc08a2e376e31e09a58f6fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga31880febfbc08a2e376e31e09a58f6fc">mx::sys::ISO8601dateBreakdown</a> (int &amp;yr, int &amp;mon, int &amp;day, int &amp;hr, int &amp;min, double &amp;sec, const std::string &amp;fdate)</td></tr>
+<tr class="memdesc:ga31880febfbc08a2e376e31e09a58f6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" into the individual components.  <a href="group__timeutils.html#ga31880febfbc08a2e376e31e09a58f6fc">More...</a><br /></td></tr>
+<tr class="separator:ga31880febfbc08a2e376e31e09a58f6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeef1d6e15305fd6c9a5699b91591e2f6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaeef1d6e15305fd6c9a5699b91591e2f6">mx::sys::ISO8601date2mjd</a> (const std::string &amp;fdate)</td></tr>
+<tr class="memdesc:gaeef1d6e15305fd6c9a5699b91591e2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" and return the modified Julian date (MJD)  <a href="group__timeutils.html#gaeef1d6e15305fd6c9a5699b91591e2f6">More...</a><br /></td></tr>
+<tr class="separator:gaeef1d6e15305fd6c9a5699b91591e2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga393603b6b33b079ef7c42841b272fe9e"><td class="memTemplParams" colspan="2">template&lt;typename timeT &gt; </td></tr>
+<tr class="memitem:ga393603b6b33b079ef7c42841b272fe9e"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga393603b6b33b079ef7c42841b272fe9e">mx::sys::ISO8601DateTimeStr</a> (const timeT &amp;timeIn, int timeZone=0)</td></tr>
+<tr class="memdesc:ga393603b6b33b079ef7c42841b272fe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format.  <a href="group__timeutils.html#ga393603b6b33b079ef7c42841b272fe9e">More...</a><br /></td></tr>
+<tr class="separator:ga393603b6b33b079ef7c42841b272fe9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4e0942bd452a924c10615f2a1928312"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gaf4e0942bd452a924c10615f2a1928312"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gaf4e0942bd452a924c10615f2a1928312">mx::sys::ISO8601DateTimeStr&lt; time_t &gt;</a> (const time_t &amp;timeIn, int timeZone)</td></tr>
+<tr class="memdesc:gaf4e0942bd452a924c10615f2a1928312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for time_t.  <a href="group__timeutils.html#gaf4e0942bd452a924c10615f2a1928312">More...</a><br /></td></tr>
+<tr class="separator:gaf4e0942bd452a924c10615f2a1928312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93e547ffbcdd69dad8ad84b7b3f8ec44"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga93e547ffbcdd69dad8ad84b7b3f8ec44"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga93e547ffbcdd69dad8ad84b7b3f8ec44">mx::sys::ISO8601DateTimeStr&lt; timespec &gt;</a> (const timespec &amp;timeIn, int timeZone)</td></tr>
+<tr class="memdesc:ga93e547ffbcdd69dad8ad84b7b3f8ec44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for timespec.  <a href="group__timeutils.html#ga93e547ffbcdd69dad8ad84b7b3f8ec44">More...</a><br /></td></tr>
+<tr class="separator:ga93e547ffbcdd69dad8ad84b7b3f8ec44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34569e1ddc72ccd4f83d2853d5328c9b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga34569e1ddc72ccd4f83d2853d5328c9b">mx::sys::ISO8601DateTimeStr</a> (int timeZone=0)</td></tr>
+<tr class="memdesc:ga34569e1ddc72ccd4f83d2853d5328c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for the current UTC time.  <a href="group__timeutils.html#ga34569e1ddc72ccd4f83d2853d5328c9b">More...</a><br /></td></tr>
+<tr class="separator:ga34569e1ddc72ccd4f83d2853d5328c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64eeaaae0173982de083bdf197a45e6f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga64eeaaae0173982de083bdf197a45e6f">mx::sys::ISO8601DateTimeStrMJD</a> (const double &amp;timeIn, int timeZone=0)</td></tr>
+<tr class="memdesc:ga64eeaaae0173982de083bdf197a45e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a date-time string in ISO 8601 format for an MJD.  <a href="group__timeutils.html#ga64eeaaae0173982de083bdf197a45e6f">More...</a><br /></td></tr>
+<tr class="separator:ga64eeaaae0173982de083bdf197a45e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac621c1f95982719c59e6f141310e1b99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#gac621c1f95982719c59e6f141310e1b99">mx::sys::timeStamp</a> (std::string &amp;tstamp, timespec &amp;ts)</td></tr>
+<tr class="memdesc:gac621c1f95982719c59e6f141310e1b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a timestamp string in the form YYYYMMDDHHMMSS.SSSSSSSSS.  <a href="group__timeutils.html#gac621c1f95982719c59e6f141310e1b99">More...</a><br /></td></tr>
+<tr class="separator:gac621c1f95982719c59e6f141310e1b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7496f43e726e6f5353406e25dfe5557c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timeutils.html#ga7496f43e726e6f5353406e25dfe5557c">mx::sys::timespecUTC2TAIMJD</a> (double &amp;djm, double &amp;djmf, const timespec &amp;tsp, tm *tm0)</td></tr>
+<tr class="memdesc:ga7496f43e726e6f5353406e25dfe5557c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a UTC timespec to TAI modified Julian date.  <a href="group__timeutils.html#ga7496f43e726e6f5353406e25dfe5557c">More...</a><br /></td></tr>
+<tr class="separator:ga7496f43e726e6f5353406e25dfe5557c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gacdd110d0d8cca27cc959b33b666ce885"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacdd110d0d8cca27cc959b33b666ce885">&#9670;&nbsp;</a></span>Cal2mjd()</h2>
+<a id="gacc843ae69b89a7aeaa807a20e727d249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacc843ae69b89a7aeaa807a20e727d249">&#9670;&nbsp;</a></span>Cal2mjd()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double mx::Cal2mjd </td>
+          <td class="memname">double mx::sys::Cal2mjd </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>yr</em>, </td>
@@ -215,44 +217,36 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Converts a Gregorian calendar date into modified Julian date (MJD). </p>
 <p>Uses the SOFA function iauCal2jd. This is not a template in floating point because SOFA is always double precision.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">yr</td><td>Gregorian calendar year </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mon</td><td>Gregorian calendar month </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>Gregorian calendar day </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hr</td><td>Gregorian calendar hour </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>Gregorian calendar minute </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sec</td><td>Gregorian calendar second</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">double</td><td>containing the MJD </td></tr>
-    <tr><td class="paramname">&lt;0</td><td>on error (-1 = bad year, -2 = bad month, -3 = bad day) </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>on error (-1 = bad year, -2 = bad month, -3 = bad day)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000060">Test:</a></b></dt><dd>Verify calculation of MJD. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_Cal2mjd">[test doc]</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">yr</td><td>[in] Gregorian calendar year </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mon</td><td>[in] Gregorian calendar month </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>[in] Gregorian calendar day </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hr</td><td>[in] Gregorian calendar hour </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>[in] Gregorian calendar minute </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sec</td><td>[in] Gregorian calendar second </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00183">183</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00100">mx::astro::constants::day()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="timeUtils_8hpp_source.html#l00241">mx::ISO8601date2mjd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timeUtils__test_8cpp_source.html#l00261">SCENARIO()</a>.</p>
 
 </div>
 </div>
-<a id="ga06a225fe04bb8236fec9d8afdbb3b94e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga06a225fe04bb8236fec9d8afdbb3b94e">&#9670;&nbsp;</a></span>get_curr_time()</h2>
+<a id="gaa9461058712fcc1c377db5cdfd824128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9461058712fcc1c377db5cdfd824128">&#9670;&nbsp;</a></span>get_curr_time() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,14 +254,17 @@ Functions</h2></td></tr>
 template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typeT mx::get_curr_time </td>
+          <td class="memname">typeT mx::sys::get_curr_time </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the current system time. Uses timespec, so nanosecond resolution is possible.</p>
+
+<p>Get the current system time in seconds. </p>
+<p>Uses timespec, so nanosecond resolution is possible. This version creates a timespec internally.</p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">typeT</td><td>is the type to return the time in [default=double]. must have cast from integer types, and + and / operators defined. </td></tr>
@@ -277,69 +274,101 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">typeT</td><td>containing the current time in seconds </td></tr>
+    <tr><td class="paramname">typeT</td><td>containing the current time in seconds</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000053">Test:</a></b></dt><dd>Verify operation of get_curr_time. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_get_curr_time">[test doc]</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00091">91</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
+
+</div>
+</div>
+<a id="gadd514bac4b8a41e1e41d56dff63e61e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd514bac4b8a41e1e41d56dff63e61e0">&#9670;&nbsp;</a></span>get_curr_time() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typeT mx::sys::get_curr_time </td>
+          <td>(</td>
+          <td class="paramtype">timespec &amp;&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current system time in seconds. </p>
+<p>Uses timespec, so nanosecond resolution is possible.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">typeT</td><td>is the type to return the time in [default=double]. must have cast from integer types, and + and / operators defined. </td></tr>
+    <tr><td class="paramname">clk_id</td><td>is the sys/time.h clock identifier [default=CLOCK_REALTIME]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">typeT</td><td>containing the current time in seconds</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000052">Test:</a></b></dt><dd>Verify operation of get_curr_time. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_get_curr_time">[test doc]</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">tsp</td><td>[out] a timespec to populate with the current time </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00059">59</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00063">63</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="linearPredictor_8hpp_source.html#l00066">mx::sigproc::linearPredictor&lt; realT &gt;::calcCoefficients()</a>, <a class="el" href="eigenLapack_8hpp_source.html#l00264">mx::math::calcKLModes()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01190">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01554">mx::improc::HCIobservation&lt; _realT &gt;::combineFinim()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00606">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::derotate()</a>, <a class="el" href="levmarInterface_8hpp_source.html#l00639">mx::math::fit::levmarInterface&lt; gaussian1D_fitter&lt; _realT &gt; &gt;::fit()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00447">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01395">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00765">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01841">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00974">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00494">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>, <a class="el" href="simulatedAOSystem_8hpp_source.html#l00490">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::takeResponseMatrix()</a>, and <a class="el" href="KLIPreduction_8hpp_source.html#l00826">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eigenLapack_8hpp_source.html#l00264">mx::math::calcKLModes()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01179">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01543">mx::improc::HCIobservation&lt; _realT &gt;::combineFinim()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00597">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::derotate()</a>, <a class="el" href="levmarInterface_8hpp_source.html#l00639">mx::math::fit::levmarInterface&lt; gaussian1D_fitter&lt; _realT &gt; &gt;::fit()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00438">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01384">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00754">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01830">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00963">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00447">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>, <a class="el" href="timeUtils__test_8cpp_source.html#l00013">SCENARIO()</a>, <a class="el" href="simulatedAOSystem_8hpp_source.html#l00479">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::takeResponseMatrix()</a>, and <a class="el" href="KLIPreduction_8hpp_source.html#l00779">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>.</p>
 
 </div>
 </div>
-<a id="gaaed5d9d66ee5f53b72cc1b423d4a5c44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaed5d9d66ee5f53b72cc1b423d4a5c44">&#9670;&nbsp;</a></span>ISO8601date2mjd()</h2>
+<a id="gaeef1d6e15305fd6c9a5699b91591e2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeef1d6e15305fd6c9a5699b91591e2f6">&#9670;&nbsp;</a></span>ISO8601date2mjd()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double mx::ISO8601date2mjd </td>
+          <td class="memname">double mx::sys::ISO8601date2mjd </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>fdate</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" and return the modified Julian date (MJD) </p>
 <p>Parsing is currently only for the exact form above, which is the form in a FITS file. See <a href="https://en.wikipedia.org/?title=ISO_8601">https://en.wikipedia.org/?title=ISO_8601</a>. After parsing calls Cal2mjd.</p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000062">Test:</a></b></dt><dd>Verify conversion of an ISO 8601 time string to MJD. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_ISO8601date2mjd">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fdate</td><td>is a standard ISO8601 date string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fdate</td><td>[in] a standard ISO8601 date string </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00241">241</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00183">mx::Cal2mjd()</a>, <a class="el" href="constants_8hpp_source.html#l00100">mx::astro::constants::day()</a>, and <a class="el" href="timeUtils_8hpp_source.html#l00205">mx::ISO8601dateBreakdown()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l00765">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01841">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00974">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l00754">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01830">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00963">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>, and <a class="el" href="timeUtils__test_8cpp_source.html#l00345">SCENARIO()</a>.</p>
 
 </div>
 </div>
-<a id="ga9c9ce4871cb82d3363af3b577f11520b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9c9ce4871cb82d3363af3b577f11520b">&#9670;&nbsp;</a></span>ISO8601dateBreakdown()</h2>
+<a id="ga31880febfbc08a2e376e31e09a58f6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31880febfbc08a2e376e31e09a58f6fc">&#9670;&nbsp;</a></span>ISO8601dateBreakdown()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mx::ISO8601dateBreakdown </td>
+          <td class="memname">int mx::sys::ISO8601dateBreakdown </td>
           <td>(</td>
           <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>yr</em>, </td>
@@ -386,15 +415,14 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" into the individual components. </p>
-<p>Parsing is currently only for the exact form above, which is the form in a FITS file. See <a href="https://en.wikipedia.org/?title=ISO_8601">https://en.wikipedia.org/?title=ISO_8601</a>. </p>
+<p>Parsing is currently only for the exact form above, which is the form in a FITS file. See <a href="https://en.wikipedia.org/?title=ISO_8601">https://en.wikipedia.org/?title=ISO_8601</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-4 if fdate is not long enough</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000061">Test:</a></b></dt><dd>Verify parsing of an ISO 8601 time string <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_ISO8601dateBreakdown">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">yr</td><td>[out] Gregorian calendar year </td></tr>
@@ -408,16 +436,12 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00205">205</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00100">mx::astro::constants::day()</a>, and <a class="el" href="timeUtils_8hpp_source.html#l00140">mx::parse_hms()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="timeUtils_8hpp_source.html#l00241">mx::ISO8601date2mjd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timeUtils__test_8cpp_source.html#l00286">SCENARIO()</a>.</p>
 
 </div>
 </div>
-<a id="ga4f7f57095346e9b07d01b3a9566d55a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4f7f57095346e9b07d01b3a9566d55a0">&#9670;&nbsp;</a></span>ISO8601DateTimeStr() <span class="overload">[1/2]</span></h2>
+<a id="ga393603b6b33b079ef7c42841b272fe9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga393603b6b33b079ef7c42841b272fe9e">&#9670;&nbsp;</a></span>ISO8601DateTimeStr() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +449,7 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
 template&lt;typename timeT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string mx::ISO8601DateTimeStr </td>
+          <td class="memname">std::string mx::sys::ISO8601DateTimeStr </td>
           <td>(</td>
           <td class="paramtype">const timeT &amp;&#160;</td>
           <td class="paramname"><em>timeIn</em>, </td>
@@ -452,83 +476,66 @@ template&lt;typename timeT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeIn</td><td>is the input time </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>containing the format date/time </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00269">269</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeIn</td><td>[in] the input time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>[in] [optional] specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ga13480d3d24f7676bd5ef4730e558c95a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga13480d3d24f7676bd5ef4730e558c95a">&#9670;&nbsp;</a></span>ISO8601DateTimeStr() <span class="overload">[2/2]</span></h2>
+<a id="ga34569e1ddc72ccd4f83d2853d5328c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34569e1ddc72ccd4f83d2853d5328c9b">&#9670;&nbsp;</a></span>ISO8601DateTimeStr() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string mx::ISO8601DateTimeStr </td>
+          <td class="memname">std::string mx::sys::ISO8601DateTimeStr </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>timeZone</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get a date-time string in ISO 8601 format for the current UTC time. </p>
 <p>Returns a string in the ISO 8601 format: YYYY-MM-DDYHH:MM:SS.SS, with optional timezone designation such as Z or +00:00.</p>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>[optional] specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>containing the format date/time </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00353">353</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00291">mx::ISO8601DateTimeStr&lt; time_t &gt;()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>[in] [optional] specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="gae8c301b28a67a2e7e1055ec7ff7e6e1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae8c301b28a67a2e7e1055ec7ff7e6e1b">&#9670;&nbsp;</a></span>ISO8601DateTimeStr&lt; time_t &gt;()</h2>
+<a id="gaf4e0942bd452a924c10615f2a1928312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4e0942bd452a924c10615f2a1928312">&#9670;&nbsp;</a></span>ISO8601DateTimeStr&lt; time_t &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="group__timeutils.html#ga4f7f57095346e9b07d01b3a9566d55a0">mx::ISO8601DateTimeStr</a>&lt; time_t &gt; </td>
+          <td class="memname">std::string mx::sys::ISO8601DateTimeStr&lt; time_t &gt; </td>
           <td>(</td>
           <td class="paramtype">const time_t &amp;&#160;</td>
           <td class="paramname"><em>timeIn</em>, </td>
@@ -545,49 +552,36 @@ template&lt;&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get a date-time string in ISO 8601 format for time_t. </p>
 <p>Returns a string in the ISO 8601 format: YYYY-MM-DDYHH:MM:SS, with optional timezone designation such as Z or +00:00.</p>
-<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeIn</td><td>is the input time </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>containing the format date/time </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00291">291</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="timeUtils_8hpp_source.html#l00353">mx::ISO8601DateTimeStr()</a>, and <a class="el" href="timeUtils_8hpp_source.html#l00322">mx::ISO8601DateTimeStr&lt; timespec &gt;()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeIn</td><td>[in] the input time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>[in] [optional] specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ga0159847006ce826a1a53e174ba021285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0159847006ce826a1a53e174ba021285">&#9670;&nbsp;</a></span>ISO8601DateTimeStr&lt; timespec &gt;()</h2>
+<a id="ga93e547ffbcdd69dad8ad84b7b3f8ec44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93e547ffbcdd69dad8ad84b7b3f8ec44">&#9670;&nbsp;</a></span>ISO8601DateTimeStr&lt; timespec &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="group__timeutils.html#ga4f7f57095346e9b07d01b3a9566d55a0">mx::ISO8601DateTimeStr</a>&lt; timespec &gt; </td>
+          <td class="memname">std::string mx::sys::ISO8601DateTimeStr&lt; timespec &gt; </td>
           <td>(</td>
           <td class="paramtype">const timespec &amp;&#160;</td>
           <td class="paramname"><em>timeIn</em>, </td>
@@ -604,47 +598,34 @@ template&lt;&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get a date-time string in ISO 8601 format for timespec. </p>
 <p>Returns a string in the ISO 8601 format: YYYY-MM-DDYHH:MM:SS.SSSSSSSSS, with optional timezone designation such as Z or +00:00.</p>
-<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeIn</td><td>is the input time </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>containing the format date/time </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00322">322</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00291">mx::ISO8601DateTimeStr&lt; time_t &gt;()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeIn</td><td>[in] the input time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeZone</td><td>[in] [optional] specifies whether to include a timezone designation. 0=&gt; none, 1=&gt; letter, 2=&gt;offset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ga061ce6c72240212234c68e63896f59e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga061ce6c72240212234c68e63896f59e7">&#9670;&nbsp;</a></span>ISO8601DateTimeStrMJD()</h2>
+<a id="ga64eeaaae0173982de083bdf197a45e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64eeaaae0173982de083bdf197a45e6f">&#9670;&nbsp;</a></span>ISO8601DateTimeStrMJD()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string mx::ISO8601DateTimeStrMJD </td>
+          <td class="memname">std::string mx::sys::ISO8601DateTimeStrMJD </td>
           <td>(</td>
           <td class="paramtype">const double &amp;&#160;</td>
           <td class="paramname"><em>timeIn</em>, </td>
@@ -661,11 +642,6 @@ template&lt;&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get a date-time string in ISO 8601 format for an MJD. </p>
@@ -684,14 +660,10 @@ template&lt;&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00367">367</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="sofa__constants_8h_source.html#l00057">DJM0</a>.</p>
-
 </div>
 </div>
-<a id="gaa6b611db0b692ae4dc1afb9b24762d76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa6b611db0b692ae4dc1afb9b24762d76">&#9670;&nbsp;</a></span>parse_hms()</h2>
+<a id="gaa28afcc79713260e225d319791496c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa28afcc79713260e225d319791496c5a">&#9670;&nbsp;</a></span>parse_hms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,14 +671,8 @@ template&lt;&gt; </div>
 template&lt;typename floatT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mx::parse_hms </td>
+          <td class="memname">void mx::sys::parse_hms </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>hmsstr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">floatT &amp;&#160;</td>
           <td class="paramname"><em>h</em>, </td>
         </tr>
@@ -720,7 +686,13 @@ template&lt;typename floatT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">floatT &amp;&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hmsstr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -730,41 +702,81 @@ template&lt;typename floatT &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Parse a string of format hh:mm:ss.s Breaks a time string into constituent parts. Handles -h by distributing the sign to m and s.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">hmsstr</td><td>is a string of format hh:mm:ss.s where ss.s can be of any precision </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">h</td><td>is the hour component coverted to floatT </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">m</td><td>is the minute component converted to floatT </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">s</td><td>is the second component converted to floatT</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">floatT</td><td>is a floating point type </td></tr>
+    <tr><td class="paramname">floatT</td><td>is a floating point type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000059">Test:</a></b></dt><dd>Verify parsing of a formatted time string. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_parse_hms">[test doc]</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">h</td><td>[out] the hour component coverted to floatT </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">m</td><td>[out] the minute component converted to floatT </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">s</td><td>[out] the second component converted to floatT </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hmsstr</td><td>[in] a string of format hh:mm:ss.s where ss.s can be of any precision </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00140">140</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00155">155</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="timeUtils_8hpp_source.html#l00205">mx::ISO8601dateBreakdown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timeUtils__test_8cpp_source.html#l00195">SCENARIO()</a>.</p>
 
 </div>
 </div>
-<a id="ga1f8aced872356888370b0850137ee48f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1f8aced872356888370b0850137ee48f">&#9670;&nbsp;</a></span>timespecUTC2TAIMJD()</h2>
+<a id="gaa2378479450b9f5d737b32c27c4dcccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2378479450b9f5d737b32c27c4dcccc">&#9670;&nbsp;</a></span>timespecAddNsec()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mx::timespecUTC2TAIMJD </td>
+          <td class="memname">void mx::sys::timespecAddNsec </td>
+          <td>(</td>
+          <td class="paramtype">timespec &amp;&#160;</td>
+          <td class="paramname"><em>ts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>nsec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a time offset to an existing timespec. </p>
+<p>The offset is specified in nanoseconds, which can be greater than 1e9.</p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000058">Test:</a></b></dt><dd>Verify operation of timespecAddNsec. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_timespecAddNsec">[test doc]</a> <br  />
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ts</td><td>[in/out] the time to add to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nsec</td><td>[in] the number of nanoseconds to add to ts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="timeUtils__test_8cpp_source.html#l00091">SCENARIO()</a>.</p>
+
+</div>
+</div>
+<a id="ga7496f43e726e6f5353406e25dfe5557c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7496f43e726e6f5353406e25dfe5557c">&#9670;&nbsp;</a></span>timespecUTC2TAIMJD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::sys::timespecUTC2TAIMJD </td>
           <td>(</td>
           <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>djm</em>, </td>
@@ -793,24 +805,10 @@ template&lt;typename floatT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Convert a UTC timespec to TAI modified Julian date. </p>
 <p>Converts a timespec assumed to be in <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time (UTC)</a> to a <a href="https://en.wikipedia.org/wiki/Julian_day">Modified Julian Date (MJD)</a> in <a href="https://en.wikipedia.org/wiki/International_Atomic_Time">International Atomic Time (TAI)</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">djm</td><td>the modified Julian day number </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">djmf</td><td>the fraction of the day </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tsp</td><td>contains the UTC time </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">tm0</td><td>[optional] will be filled with the broken down UTC time</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">1</td><td>SOFA dubious year [see SOFA documentation for iauDat] </td></tr>
@@ -824,22 +822,26 @@ template&lt;typename floatT &gt; </div>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00452">452</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">djm</td><td>[out] the modified Julian day number </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">djmf</td><td>[out] the fraction of the day </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tsp</td><td>[in] contains the UTC time </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tm0</td><td>[out] [optional] will be filled with the broken down UTC time </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="gaf154ea9c433dd20eb0d6dcd1e04f2d66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf154ea9c433dd20eb0d6dcd1e04f2d66">&#9670;&nbsp;</a></span>timeStamp()</h2>
+<a id="gac621c1f95982719c59e6f141310e1b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac621c1f95982719c59e6f141310e1b99">&#9670;&nbsp;</a></span>timeStamp()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int mx::timeStamp </td>
+          <td class="memname">int mx::sys::timeStamp </td>
           <td>(</td>
           <td class="paramtype">std::string &amp;&#160;</td>
           <td class="paramname"><em>tstamp</em>, </td>
@@ -856,11 +858,6 @@ template&lt;typename floatT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get a timestamp string in the form YYYYMMDDHHMMSS.SSSSSSSSS. </p>
@@ -876,8 +873,6 @@ template&lt;typename floatT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00406">406</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
-
 </div>
 </div>
 </div><!-- contents -->
@@ -885,7 +880,7 @@ template&lt;typename floatT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

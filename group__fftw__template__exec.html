@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('group__fftw__template__exec.html','');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Execution<div class="ingroups"><a class="el" href="group__signal__processing.html">Signal Processing</a> &raquo; <a class="el" href="group__fft.html">Fast Fourier Transforms</a> &raquo; <a class="el" href="group__fftw__templates.html">Template FFTW</a></div></div>  </div>
+<div class="title">Execution<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a> &raquo; <a class="el" href="group__fft.html">Fast Fourier Transforms</a> &raquo; <a class="el" href="group__fftw__templates.html">Template FFTW</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,18 +103,18 @@ $(document).ready(function(){initNavTree('group__fftw__template__exec.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="memTemplParams" colspan="2">template&lt;typename inputDataT , typename outputDataT &gt; </td></tr>
-<tr class="memitem:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__exec.html#ga3bce7eecbe39e1a71a37490a2479a0a4">mx::fftw_execute_dft</a> (typename <a class="el" href="structmx_1_1fftwTypeSpec.html">fftwTypeSpec</a>&lt; inputDataT, outputDataT &gt;::planT plan, inputDataT *in, outputDataT *out)</td></tr>
-<tr class="memdesc:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the given plan on the given arrays.  <a href="group__fftw__template__exec.html#ga3bce7eecbe39e1a71a37490a2479a0a4">More...</a><br /></td></tr>
-<tr class="separator:ga3bce7eecbe39e1a71a37490a2479a0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4388b4ea666258851b99f2bfe17f43f4"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga4388b4ea666258851b99f2bfe17f43f4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__exec.html#ga4388b4ea666258851b99f2bfe17f43f4">mx::fftw_destroy_plan</a> (typename <a class="el" href="structmx_1_1fftwPlanSpec.html">fftwPlanSpec</a>&lt; realT &gt;::planT plan)</td></tr>
-<tr class="memdesc:ga4388b4ea666258851b99f2bfe17f43f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the given plan.  <a href="group__fftw__template__exec.html#ga4388b4ea666258851b99f2bfe17f43f4">More...</a><br /></td></tr>
-<tr class="separator:ga4388b4ea666258851b99f2bfe17f43f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29b804f27821608a5806b7afbe6cc54b"><td class="memTemplParams" colspan="2">template&lt;typename inputDataT , typename outputDataT &gt; </td></tr>
+<tr class="memitem:ga29b804f27821608a5806b7afbe6cc54b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__exec.html#ga29b804f27821608a5806b7afbe6cc54b">mx::math::fft::fftw_execute_dft</a> (typename <a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html">fftwTypeSpec</a>&lt; inputDataT, outputDataT &gt;::planT plan, inputDataT *in, outputDataT *out)</td></tr>
+<tr class="memdesc:ga29b804f27821608a5806b7afbe6cc54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the given plan on the given arrays.  <a href="group__fftw__template__exec.html#ga29b804f27821608a5806b7afbe6cc54b">More...</a><br /></td></tr>
+<tr class="separator:ga29b804f27821608a5806b7afbe6cc54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5610a5a0f43ab849923925cd2e9f06ff"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga5610a5a0f43ab849923925cd2e9f06ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fftw__template__exec.html#ga5610a5a0f43ab849923925cd2e9f06ff">mx::math::fft::fftw_destroy_plan</a> (typename <a class="el" href="structmx_1_1math_1_1fft_1_1fftwPlanSpec.html">fftwPlanSpec</a>&lt; realT &gt;::planT plan)</td></tr>
+<tr class="memdesc:ga5610a5a0f43ab849923925cd2e9f06ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the given plan.  <a href="group__fftw__template__exec.html#ga5610a5a0f43ab849923925cd2e9f06ff">More...</a><br /></td></tr>
+<tr class="separator:ga5610a5a0f43ab849923925cd2e9f06ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga4388b4ea666258851b99f2bfe17f43f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4388b4ea666258851b99f2bfe17f43f4">&#9670;&nbsp;</a></span>fftw_destroy_plan()</h2>
+<a id="ga5610a5a0f43ab849923925cd2e9f06ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5610a5a0f43ab849923925cd2e9f06ff">&#9670;&nbsp;</a></span>fftw_destroy_plan()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,9 +122,9 @@ Functions</h2></td></tr>
 template&lt;typename realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mx::fftw_destroy_plan </td>
+          <td class="memname">void mx::math::fft::fftw_destroy_plan </td>
           <td>(</td>
-          <td class="paramtype">typename <a class="el" href="structmx_1_1fftwPlanSpec.html">fftwPlanSpec</a>&lt; realT &gt;::planT&#160;</td>
+          <td class="paramtype">typename <a class="el" href="structmx_1_1math_1_1fft_1_1fftwPlanSpec.html">fftwPlanSpec</a>&lt; realT &gt;::planT&#160;</td>
           <td class="paramname"><em>plan</em></td><td>)</td>
           <td></td>
         </tr>
@@ -147,8 +147,8 @@ template&lt;typename realT &gt; </div>
 
 </div>
 </div>
-<a id="ga3bce7eecbe39e1a71a37490a2479a0a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3bce7eecbe39e1a71a37490a2479a0a4">&#9670;&nbsp;</a></span>fftw_execute_dft()</h2>
+<a id="ga29b804f27821608a5806b7afbe6cc54b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29b804f27821608a5806b7afbe6cc54b">&#9670;&nbsp;</a></span>fftw_execute_dft()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,9 +156,9 @@ template&lt;typename realT &gt; </div>
 template&lt;typename inputDataT , typename outputDataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mx::fftw_execute_dft </td>
+          <td class="memname">void mx::math::fft::fftw_execute_dft </td>
           <td>(</td>
-          <td class="paramtype">typename <a class="el" href="structmx_1_1fftwTypeSpec.html">fftwTypeSpec</a>&lt; inputDataT, outputDataT &gt;::planT&#160;</td>
+          <td class="paramtype">typename <a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html">fftwTypeSpec</a>&lt; inputDataT, outputDataT &gt;::planT&#160;</td>
           <td class="paramname"><em>plan</em>, </td>
         </tr>
         <tr>
@@ -205,7 +205,7 @@ template&lt;typename inputDataT , typename outputDataT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

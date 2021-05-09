@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('imageXCorrDiscrete_8hpp_source.html','
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">   67</a></span>&#160;<span class="comment"></span>   <span class="keyword">typedef</span> <span class="keyword">typename</span> _ccImT::Scalar <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a>; <span class="comment">///&lt; the scalar type of the image type</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>   </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="comment"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   /** \name Working Memory</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * @{</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     */</span> </div>
@@ -412,103 +412,102 @@ $(document).ready(function(){initNavTree('imageXCorrDiscrete_8hpp_source.html','
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;   }</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                                                  <span class="comment">// 16/4    15/4   16/3   15/3</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;   <span class="keywordtype">int</span> maxLag_r = 0.5*(im.rows()-m_refIm.rows()); <span class="comment">// 6       5       6      6</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;   <span class="keywordtype">int</span> maxLag_c = 0.5*(im.cols()-m_refIm.cols());</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;   <span class="keywordtype">int</span> maxLag_r = (im.rows()-m_refIm.rows()); <span class="comment">// 6       5       6      6</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;   <span class="keywordtype">int</span> maxLag_c = (im.cols()-m_refIm.cols());</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;   </div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;   </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;   </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;   <span class="keywordflow">if</span>(maxLag_r &gt; m_maxLag &amp;&amp; m_maxLag != 0) maxLag_r = m_maxLag;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;   <span class="keywordflow">if</span>(maxLag_c &gt; m_maxLag &amp;&amp; m_maxLag != 0) maxLag_c = m_maxLag;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;   m_ccIm.resize(2*maxLag_r + 1, 2*maxLag_c + 1);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;   </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;   <span class="keywordflow">for</span>( <span class="keywordtype">int</span> rL = -maxLag_r; rL &lt;= maxLag_r; ++rL)</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;   {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      <span class="keywordflow">for</span>( <span class="keywordtype">int</span> cL = -maxLag_c; cL &lt;= maxLag_c; ++cL)</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      {                          </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                                         <span class="comment">//   16/4          15/4         16/3    15/3</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;         <span class="keywordtype">int</span> r0 = 0.5*im.rows() + rL-0.5*m_refIm.rows(); <span class="comment">//   0-15          0-13         0-14    0-14  </span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;         <span class="keywordtype">int</span> c0 = 0.5*im.cols() + cL-0.5*m_refIm.cols();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;   <span class="keywordflow">if</span>(maxLag_r &gt; m_maxLag &amp;&amp; m_maxLag != 0) maxLag_r = m_maxLag;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;   <span class="keywordflow">if</span>(maxLag_c &gt; m_maxLag &amp;&amp; m_maxLag != 0) maxLag_c = m_maxLag;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;   m_ccIm.resize(2*maxLag_r + 1, 2*maxLag_c + 1);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;   </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;   <span class="keywordflow">for</span>( <span class="keywordtype">int</span> rL = -maxLag_r; rL &lt;= maxLag_r; ++rL)</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;   {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">for</span>( <span class="keywordtype">int</span> cL = -maxLag_c; cL &lt;= maxLag_c; ++cL)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      {                          </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                                                         <span class="comment">//   16/4          15/4         16/3    15/3</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;         <span class="keywordtype">int</span> r0 = 0.5*im.rows() + rL-0.5*m_refIm.rows(); <span class="comment">//   0-15          0-13         0-14    0-14  </span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;         <span class="keywordtype">int</span> c0 = 0.5*im.cols() + cL-0.5*m_refIm.cols();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;         </div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;         </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;         </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;         <span class="keywordflow">if</span>(m_haveMask)</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;         {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            m_normIm = im.block(r0,c0, m_refIm.rows(), m_refIm.cols())*m_maskIm;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;         }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;         {  </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            m_normIm = im.block(r0,c0, m_refIm.rows(), m_refIm.cols());</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;         }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;         </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;         <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> m = <a class="code" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c">imageMean</a>(m_normIm);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;         <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> sv = sqrt(<a class="code" href="group__image__utils.html#gaf141b4bb579d7e518007c5761b322a48">imageVariance</a>(m_normIm,m));</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;         <span class="keywordflow">if</span>(sv &lt;= 0) </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;         {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            m_ccIm(maxLag_r +  rL, maxLag_c + cL) = 0;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;         }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;         {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            m_normIm = (m_normIm-m)/sv;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            m_ccIm(maxLag_r +  rL, maxLag_c + cL) = (m_normIm*m_refIm).sum();    </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="comment">//ds9Interface ds9( m_normIm, 1);</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;         }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;         <span class="keywordflow">if</span>(m_haveMask)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;         {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            m_normIm = im.block(r0,c0, m_refIm.rows(), m_refIm.cols())*m_maskIm;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;         }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;         {  </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            m_normIm = im.block(r0,c0, m_refIm.rows(), m_refIm.cols());</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;         }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;         </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;         <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> m = <a class="code" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c">imageMean</a>(m_normIm);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;         <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> sv = sqrt(<a class="code" href="group__image__utils.html#gaf141b4bb579d7e518007c5761b322a48">imageVariance</a>(m_normIm,m));</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;         <span class="keywordflow">if</span>(sv &lt;= 0) </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;         {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            m_ccIm(maxLag_r +  rL, maxLag_c + cL) = 0;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;         }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;         {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            m_normIm = (m_normIm-m)/sv;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            m_ccIm(maxLag_r +  rL, maxLag_c + cL) = (m_normIm*m_refIm).sum();    </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="comment">//ds9Interface ds9( m_normIm, 1);</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;         }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;         </div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;         </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;         </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   <span class="keywordflow">if</span>(m_peakMethod == xcorrPeakMethod::gaussfit)</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;   {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <span class="keywordtype">int</span> xLag0,yLag0;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> pk = m_ccIm.maxCoeff(&amp;xLag0, &amp;yLag0);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> mn = m_ccIm.minCoeff();</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      m_fitter.setArray(m_ccIm.data(), m_ccIm.rows(), m_ccIm.cols());</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      m_fitter.setGuess(mn, pk, xLag0, yLag0, 0.2*m_ccIm.rows(), 0.2*m_ccIm.cols(), 0); </div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      m_fitter.fit();</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      xShift = m_fitter.x0() - maxLag_r;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      yShift = m_fitter.y0() - maxLag_c;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;   <span class="keywordflow">else</span> <span class="keywordflow">if</span>(m_peakMethod == xcorrPeakMethod::interp)</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;   {</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      m_magIm.resize(m_magSize, m_magSize);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <a class="code" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">imageMagnify</a>(m_magIm, m_ccIm, <a class="code" href="structmx_1_1improc_1_1cubicConvolTransform.html">cubicConvolTransform&lt;Scalar&gt;</a>());</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      m_magIm.maxCoeff(&amp;x,&amp;y);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      xShift = x*m_tol - maxLag_r;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      yShift = y*m_tol - maxLag_c;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;   }</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;   <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;   {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> x,y;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      imageCenterOfLight(x,y,m_ccIm);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      xShift = x - maxLag_r;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      yShift = y - maxLag_c;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;   }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;   </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;   </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;}</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;   </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;} <span class="comment">//improc</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;} <span class="comment">//mx </span></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">#endif //imageXCorrDiscrete_hpp</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;   </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   <span class="keywordflow">if</span>(m_peakMethod == xcorrPeakMethod::gaussfit)</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;   {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordtype">int</span> xLag0,yLag0;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> pk = m_ccIm.maxCoeff(&amp;xLag0, &amp;yLag0);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> mn = m_ccIm.minCoeff();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      m_fitter.setArray(m_ccIm.data(), m_ccIm.rows(), m_ccIm.cols());</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      m_fitter.setGuess(mn, pk, xLag0, yLag0, 0.2*m_ccIm.rows(), 0.2*m_ccIm.cols(), 0); </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      m_fitter.fit();</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;   </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      xShift = m_fitter.x0() - maxLag_r;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      yShift = m_fitter.y0() - maxLag_c;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;   }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;   <span class="keywordflow">else</span> <span class="keywordflow">if</span>(m_peakMethod == xcorrPeakMethod::interp)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;   {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      m_magIm.resize(m_magSize, m_magSize);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      <a class="code" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">imageMagnify</a>(m_magIm, m_ccIm, <a class="code" href="structmx_1_1improc_1_1cubicConvolTransform.html">cubicConvolTransform&lt;Scalar&gt;</a>());</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      m_magIm.maxCoeff(&amp;x,&amp;y);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      xShift = x*m_tol - maxLag_r;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      yShift = y*m_tol - maxLag_c;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;   }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;   {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <a class="code" href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">Scalar</a> x,y;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      imageCenterOfLight(x,y,m_ccIm);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      xShift = x - maxLag_r;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      yShift = y - maxLag_c;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;   }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;   </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;   </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;}</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;   </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;} <span class="comment">//improc</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;} <span class="comment">//mx </span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#endif //imageXCorrDiscrete_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_a28b99afb12500d5eb1c684d295b39711"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a28b99afb12500d5eb1c684d295b39711">mx::improc::imageXCorrDiscrete::m_maskIm</a></div><div class="ttdeci">ccImT m_maskIm</div><div class="ttdoc">Mask image to use, may be needed for proper normalization even if refIm has 0 mask applied.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00077">imageXCorrDiscrete.hpp:77</a></div></div>
-<div class="ttc" id="agroup__image__transforms_html_ga3e35a0db70c18656ab9f54558e8bd694"><div class="ttname"><a href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">mx::improc::imageMagnify</a></div><div class="ttdeci">void imageMagnify(arrOutT &amp;transim, const arrInT &amp;im, transformT trans)</div><div class="ttdoc">Magnify an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00444">imageTransforms.hpp:444</a></div></div>
+<div class="ttc" id="agroup__image__transforms_html_ga3e35a0db70c18656ab9f54558e8bd694"><div class="ttname"><a href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">mx::improc::imageMagnify</a></div><div class="ttdeci">void imageMagnify(arrOutT &amp;transim, const arrInT &amp;im, transformT trans)</div><div class="ttdoc">Magnify an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00504">imageTransforms.hpp:504</a></div></div>
 <div class="ttc" id="aimageUtils_8hpp_html"><div class="ttname"><a href="imageUtils_8hpp.html">imageUtils.hpp</a></div><div class="ttdoc">Header for the image processing utilities.</div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_adbfca7f19b01925c631860e0cb02d076"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#adbfca7f19b01925c631860e0cb02d076">mx::improc::imageXCorrDiscrete::imageXCorrDiscrete</a></div><div class="ttdeci">imageXCorrDiscrete()</div><div class="ttdoc">Default c'tor.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00195">imageXCorrDiscrete.hpp:195</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_a97f771e3d5bdfe1c41639ff8a3cec83b"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a97f771e3d5bdfe1c41639ff8a3cec83b">mx::improc::imageXCorrDiscrete::ccImT</a></div><div class="ttdeci">_ccImT ccImT</div><div class="ttdoc">the Eigen-like array type used for image processing</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00066">imageXCorrDiscrete.hpp:66</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_a0ed7bfe34b50acd3fa186ec5dbeb261a"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a">mx::improc::imageXCorrDiscrete::Scalar</a></div><div class="ttdeci">_ccImT::Scalar Scalar</div><div class="ttdoc">the scalar type of the image type</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00067">imageXCorrDiscrete.hpp:67</a></div></div>
-<div class="ttc" id="astructmx_1_1improc_1_1cubicConvolTransform_html"><div class="ttname"><a href="structmx_1_1improc_1_1cubicConvolTransform.html">mx::improc::cubicConvolTransform</a></div><div class="ttdoc">Transformation by cubic convolution interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00086">imageTransforms.hpp:86</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="astructmx_1_1improc_1_1cubicConvolTransform_html"><div class="ttname"><a href="structmx_1_1improc_1_1cubicConvolTransform.html">mx::improc::cubicConvolTransform</a></div><div class="ttdoc">Transformation by cubic convolution interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00087">imageTransforms.hpp:87</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_ac662f39d8bf6abd771cee8738ec7f2bd"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#ac662f39d8bf6abd771cee8738ec7f2bd">mx::improc::imageXCorrDiscrete::operator()</a></div><div class="ttdeci">int operator()(Scalar &amp;xShift, Scalar &amp;yShift, const imT &amp;im)</div><div class="ttdoc">Conduct the cross correlation to a specified tolerance.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00303">imageXCorrDiscrete.hpp:303</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_abd2757ad930b7e129d58a658fa763b00"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#abd2757ad930b7e129d58a658fa763b00">mx::improc::imageXCorrDiscrete::tol</a></div><div class="ttdeci">Scalar tol()</div><div class="ttdoc">Get the tolerance of the interpolated-magnified image, in pixels.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00219">imageXCorrDiscrete.hpp:219</a></div></div>
 <div class="ttc" id="agroup__hc__imaging__enums_html_gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c"><div class="ttname"><a href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c">mx::improc::HCI::imageMean</a></div><div class="ttdeci">@ imageMean</div><div class="ttdoc">The mean of each image (within the search region) is subtracted from itself.</div><div class="ttdef"><b>Definition:</b> <a href="KLIPreduction_8hpp_source.html#l00045">KLIPreduction.hpp:45</a></div></div>
-<div class="ttc" id="aclassmx_1_1math_1_1fit_1_1fitGaussian2D_html"><div class="ttname"><a href="classmx_1_1math_1_1fit_1_1fitGaussian2D.html">mx::math::fit::fitGaussian2D</a></div><div class="ttdoc">Class to manage fitting a 2D Gaussian to data via the levmarInterface.</div><div class="ttdef"><b>Definition:</b> <a href="fitGaussian_8hpp_source.html#l00250">fitGaussian.hpp:250</a></div></div>
+<div class="ttc" id="aclassmx_1_1math_1_1fit_1_1fitGaussian2D_html"><div class="ttname"><a href="classmx_1_1math_1_1fit_1_1fitGaussian2D.html">mx::math::fit::fitGaussian2D</a></div><div class="ttdoc">Class to manage fitting a 2D Gaussian to data via the levmarInterface.</div><div class="ttdef"><b>Definition:</b> <a href="fitGaussian_8hpp_source.html#l00253">fitGaussian.hpp:253</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_a52a5b2dee15904829b6dbaa2d6b6be7f"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a52a5b2dee15904829b6dbaa2d6b6be7f">mx::improc::imageXCorrDiscrete::m_tol</a></div><div class="ttdeci">Scalar m_tol</div><div class="ttdoc">The tolerance of the interpolated-magnified image, in pixels.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00093">imageXCorrDiscrete.hpp:93</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html">mx::improc::imageXCorrDiscrete</a></div><div class="ttdoc">Find the optimum shift to align two images using the discrete cross correlation.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00063">imageXCorrDiscrete.hpp:63</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrDiscrete_html_a7e42b12004d5de335374ecd5f97e2a47"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrDiscrete.html#a7e42b12004d5de335374ecd5f97e2a47">mx::improc::imageXCorrDiscrete::m_magSize</a></div><div class="ttdeci">Scalar m_magSize</div><div class="ttdoc">Magnified size of the ccIm when using interp. Set as function of m_tol and m_maxLag.</div><div class="ttdef"><b>Definition:</b> <a href="imageXCorrDiscrete_8hpp_source.html#l00095">imageXCorrDiscrete.hpp:95</a></div></div>
@@ -531,7 +530,7 @@ $(document).ready(function(){initNavTree('imageXCorrDiscrete_8hpp_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageXCorrDiscrete_8hpp.html">imageXCorrDiscrete.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -109,22 +109,25 @@ $(document).ready(function(){initNavTree('fourierTemporalPSD_8hpp.html',''); ini
 </div><div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
-<code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
 <code>#include &lt;gsl/gsl_integration.h&gt;</code><br />
 <code>#include &lt;gsl/gsl_errno.h&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
+<code>#include &quot;../../math/constants.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="jinc_8hpp_source.html">../../math/func/jinc.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="airyPattern_8hpp_source.html">../../math/func/airyPattern.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vectorUtils_8hpp_source.html">../../math/vectorUtils.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="fitsFile_8hpp_source.html">../../improc/fitsFile.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fitsFile_8hpp_source.html">../../ioutils/fits/fitsFile.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fourierModes_8hpp_source.html">../../sigproc/fourierModes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="psdVarMean_8hpp_source.html">../../sigproc/psdVarMean.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="stringUtils_8hpp_source.html">../../ioutils/stringUtils.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="readColumns_8hpp_source.html">../../ioutils/readColumns.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="binVector_8hpp_source.html">../../ioutils/binVector.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ompLoopWatcher_8hpp_source.html">../../ompLoopWatcher.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fileUtils_8hpp_source.html">../../ioutils/fileUtils.hpp</a>&quot;</code><br />
+<code>#include &quot;../../ipc/ompLoopWatcher.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../../mxError.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="gslInterpolation_8hpp_source.html">../../gslInterpolation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gslInterpolation_8hpp_source.html">../../math/gslInterpolation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wfsNoisePSD_8hpp_source.html">wfsNoisePSD.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="clAOLinearPredictor_8hpp_source.html">clAOLinearPredictor.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="clGainOpt_8hpp_source.html">clGainOpt.hpp</a>&quot;</code><br />
@@ -136,7 +139,7 @@ $(document).ready(function(){initNavTree('fourierTemporalPSD_8hpp.html',''); ini
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html">mx::AO::analysis::fourierTemporalPSD&lt; realT, aosysT &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage the calculation of temporal PSDs of the Fourier modes in atmospheric turbulence.  <a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -187,7 +190,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00083">83</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00082">82</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +200,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_cf528a69cdca6105739343681d2398d1.html">analysis</a></li><li class="navelem"><a class="el" href="fourierTemporalPSD_8hpp.html">fourierTemporalPSD.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

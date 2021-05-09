@@ -1,11 +1,12 @@
 var group__fits__utils =
 [
-    [ "fits_write_key", "group__fits__utils.html#gad7e837ea16b6b22491dc46feae88ac44", null ],
-    [ "fitsHeaderGitStatus", "group__fits__utils.html#gaeb1f459c8d4c65e48a2b231a3bcb61c0", null ],
-    [ "fitsPopulateCard", "group__fits__utils.html#ga5dc073d8726b978ab2226c67b4eaa702", null ],
-    [ "fitsStripApost", "group__fits__utils.html#ga2187199d35666d45a32bdf82f03c2d52", null ],
-    [ "getFitsBITPIX", "group__fits__utils.html#ga7d2b25e9ff3105162bea0765d4cdc925", null ],
-    [ "getFitsType", "group__fits__utils.html#gaaccfc69b8fea18eaf219b24e535e721c", null ],
-    [ "headersToValues", "group__fits__utils.html#ga3346d9e5b86d3ef7f9857e68bbbc22c7", null ],
-    [ "headersToValues", "group__fits__utils.html#ga85ea40f5b9c71405952b19998289acf4", null ]
+    [ "fits_write_key", "group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a", null ],
+    [ "fitsErrText", "group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271", null ],
+    [ "fitsHeaderGitStatus", "group__fits__utils.html#ga090671b8b7bacafa7548b80293158622", null ],
+    [ "fitsPopulateCard", "group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712", null ],
+    [ "fitsStripApost", "group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b", null ],
+    [ "getFitsBITPIX", "group__fits__utils.html#gab66cdba4dc37f5710ccda1e9da82e3fc", null ],
+    [ "getFitsType", "group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6", null ],
+    [ "headersToValues", "group__fits__utils.html#gabe165594f295f9f82996bd13e2e67314", null ],
+    [ "headersToValues", "group__fits__utils.html#ga59ef63486b8423fecae107446d19dc0a", null ]
 ];

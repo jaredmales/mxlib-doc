@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('turbSequence_8hpp_source.html',''); in
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../../ioutils/fileUtils.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../../improc/fitsFile.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../../ioutils/fits/fitsFile.hpp&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;wavefront.hpp&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
@@ -302,7 +302,7 @@ $(document).ready(function(){initNavTree('turbSequence_8hpp_source.html',''); in
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">void</span> turbSequence&lt;realT&gt;::openPhaseFrame(<span class="keywordtype">int</span> fn)</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;   improc::fitsFile&lt;float&gt; ff;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;   fits::fitsFile&lt;float&gt; ff;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   std::cout &lt;&lt; _phaseFnames[fn] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
@@ -384,15 +384,15 @@ $(document).ready(function(){initNavTree('turbSequence_8hpp_source.html',''); in
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">#endif //turbSequence_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
-<div class="ttc" id="agroup__fileutils_html_ga92fbb4df9f3da30d15b2a0807189b3b5"><div class="ttname"><a href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">mx::ioutils::getFileNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getFileNames(const std::string &amp;directory, const std::string &amp;prefix, const std::string &amp;substr, const std::string &amp;extension)</div><div class="ttdoc">Get a list of file names from the specified directory, specifying a prefix, a substring to match,...</div><div class="ttdef"><b>Definition:</b> <a href="fileUtils_8hpp_source.html#l00063">fileUtils.hpp:63</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
+<div class="ttc" id="agroup__fileutils_html_ga92fbb4df9f3da30d15b2a0807189b3b5"><div class="ttname"><a href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">mx::ioutils::getFileNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getFileNames(const std::string &amp;directory, const std::string &amp;prefix, const std::string &amp;substr, const std::string &amp;extension)</div><div class="ttdoc">Get a list of file names from the specified directory, specifying a prefix, a substring to match,...</div></div>
 <div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
 <div class="ttc" id="agroup__mxe__errors_html_ga41aab350bdc910d52004e0f58b58b546"><div class="ttname"><a href="group__mxe__errors.html#ga41aab350bdc910d52004e0f58b58b546">MXE_FILENOTFOUND</a></div><div class="ttdeci">#define MXE_FILENOTFOUND</div><div class="ttdoc">The file was not found.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00210">mxError.hpp:210</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_082cbf2913457a01d654a9fdfc0ec78a.html">sim</a></li><li class="navelem"><a class="el" href="turbSequence_8hpp.html">turbSequence.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

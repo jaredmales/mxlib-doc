@@ -135,19 +135,19 @@ $(document).ready(function(){initNavTree('zernikeBasis_8hpp_source.html',''); in
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   std::string pupilFName = mx::AO::path::pupil::pupilFile(pupilName);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   Eigen::Array&lt;realT, -1, -1&gt; pupil;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <a class="code" href="classmx_1_1improc_1_1fitsFile.html">mx::improc::fitsFile&lt;realT&gt;</a> ff;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   ff.<a class="code" href="classmx_1_1improc_1_1fitsFile.html#a2906524512f94ad0eefc2feb0229099b">read</a>(pupil, pupilFName);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   mx::improc::fitsFile&lt;realT&gt; ff;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   ff.read(pupil, pupilFName);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   realT psum = pupil.sum();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   realT norm;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; rawModes.planes(); ++i)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      rawModes.<a class="code" href="classmx_1_1improc_1_1eigenCube.html#a7a602325e19cd65132ffd7b36a058438">image</a>(i) *= pupil;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      rawModes.<a class="code" href="classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9">image</a>(i) *= pupil;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      norm = rawModes.<a class="code" href="classmx_1_1improc_1_1eigenCube.html#a7a602325e19cd65132ffd7b36a058438">image</a>(i).square().sum()/psum;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      norm = rawModes.<a class="code" href="classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9">image</a>(i).square().sum()/psum;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      rawModes.<a class="code" href="classmx_1_1improc_1_1eigenCube.html#a7a602325e19cd65132ffd7b36a058438">image</a>(i)/= sqrt(norm);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      rawModes.<a class="code" href="classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9">image</a>(i)/= sqrt(norm);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('zernikeBasis_8hpp_source.html',''); in
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   std::string fName = mx::AO::path::basis::modes(basisName, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   ff.<a class="code" href="classmx_1_1improc_1_1fitsFile.html#aa736dba80c1aa68762db3b378ca8056e">write</a>(fName, rawModes);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   ff.write(fName, rawModes);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">//namespace AO</span></div>
@@ -179,19 +179,16 @@ $(document).ready(function(){initNavTree('zernikeBasis_8hpp_source.html',''); in
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif //__fourierBasis_hpp__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsFile_html_a2906524512f94ad0eefc2feb0229099b"><div class="ttname"><a href="classmx_1_1improc_1_1fitsFile.html#a2906524512f94ad0eefc2feb0229099b">mx::improc::fitsFile::read</a></div><div class="ttdeci">int read(dataT *data)</div><div class="ttdoc">Read the contents of the FITS file into an array.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00724">fitsFile.hpp:724</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
-<div class="ttc" id="agroup__zernike__basis_html_ga24f3c016cb740db0af22a4060f34fa6e"><div class="ttname"><a href="group__zernike__basis.html#ga24f3c016cb740db0af22a4060f34fa6e">mx::sigproc::zernikeBasis</a></div><div class="ttdeci">int zernikeBasis(cubeT &amp;cube, typename cubeT::Scalar rad=-1, int minj=2)</div><div class="ttdoc">Fill in an Eigencube-like array with Zernike polynomials in Noll order.</div><div class="ttdef"><b>Definition:</b> <a href="zernike_8hpp_source.html#l00416">zernike.hpp:416</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsFile_html"><div class="ttname"><a href="classmx_1_1improc_1_1fitsFile.html">mx::improc::fitsFile</a></div><div class="ttdoc">Class to manage interactions with a FITS file.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00037">fitsFile.hpp:37</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1eigenCube_html_a7a602325e19cd65132ffd7b36a058438"><div class="ttname"><a href="classmx_1_1improc_1_1eigenCube.html#a7a602325e19cd65132ffd7b36a058438">mx::improc::eigenCube::image</a></div><div class="ttdeci">Map&lt; Array&lt; dataT, Dynamic, Dynamic &gt; &gt; image(Index n)</div><div class="ttdoc">Returns a 2D Eigen::Map pointed at the specified image.</div><div class="ttdef"><b>Definition:</b> <a href="eigenCube_8hpp_source.html#l00378">eigenCube.hpp:378</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsFile_html_aa736dba80c1aa68762db3b378ca8056e"><div class="ttname"><a href="classmx_1_1improc_1_1fitsFile.html#aa736dba80c1aa68762db3b378ca8056e">mx::improc::fitsFile::write</a></div><div class="ttdeci">int write(const dataT *im, int d1, int d2, int d3, fitsHeader *head)</div><div class="ttdoc">Write the contents of a raw array to the FITS file.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l01274">fitsFile.hpp:1274</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
+<div class="ttc" id="agroup__zernike__basis_html_ga24f3c016cb740db0af22a4060f34fa6e"><div class="ttname"><a href="group__zernike__basis.html#ga24f3c016cb740db0af22a4060f34fa6e">mx::sigproc::zernikeBasis</a></div><div class="ttdeci">int zernikeBasis(cubeT &amp;cube, typename cubeT::Scalar rad=-1, int minj=2)</div><div class="ttdoc">Fill in an Eigencube-like array with Zernike polynomials in Noll order.</div><div class="ttdef"><b>Definition:</b> <a href="zernike_8hpp_source.html#l00485">zernike.hpp:485</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1eigenCube_html_af81b1c69b2c9e1c376ec70d562dbebe9"><div class="ttname"><a href="classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9">mx::improc::eigenCube::image</a></div><div class="ttdeci">Eigen::Map&lt; Eigen::Array&lt; dataT, Eigen::Dynamic, Eigen::Dynamic &gt; &gt; image(Index n)</div><div class="ttdoc">Returns a 2D Eigen::Eigen::Map pointed at the specified image.</div><div class="ttdef"><b>Definition:</b> <a href="eigenCube_8hpp_source.html#l00375">eigenCube.hpp:375</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1eigenCube_html"><div class="ttname"><a href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube&lt; realT &gt;</a></div></div>
 <div class="ttc" id="azernikeBasis_8hpp_html_a4a138c419356e21e1b73fe537e564e0d"><div class="ttname"><a href="zernikeBasis_8hpp.html#a4a138c419356e21e1b73fe537e564e0d">mx::AO::makeZernikeBasis</a></div><div class="ttdeci">void makeZernikeBasis(const std::string &amp;basisName, const std::string &amp;pupilName, int dim, int N)</div><div class="ttdoc">Make the Zernike basis.</div><div class="ttdef"><b>Definition:</b> <a href="zernikeBasis_8hpp_source.html#l00030">zernikeBasis.hpp:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="zernikeBasis_8hpp.html">zernikeBasis.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

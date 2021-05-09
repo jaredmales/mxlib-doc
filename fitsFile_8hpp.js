@@ -1,12 +1,12 @@
 var fitsFile_8hpp =
 [
-    [ "fitsFilec", "fitsFile_8hpp.html#gae441bf333c0da52071b31bf9f367b03f", null ],
-    [ "fitsFiled", "fitsFile_8hpp.html#gadea7e3107c8ea9260ada836cfc9f1d21", null ],
-    [ "fitsFilef", "fitsFile_8hpp.html#ga2898f253c0ca0eae5f6353c6ee4cb51a", null ],
-    [ "fitsFilei", "fitsFile_8hpp.html#gae7d4d92f6e73d0fd438d60d10da346f8", null ],
-    [ "fitsFilel", "fitsFile_8hpp.html#ga8427826af10fde19323ba91f7a647916", null ],
-    [ "fitsFiles", "fitsFile_8hpp.html#ga76221c72a1c7fb82e6f02e3a657a5495", null ],
-    [ "fitsFileuc", "fitsFile_8hpp.html#gac4e9637fad47f9a4a2b33e7aa81c1b38", null ],
-    [ "fitsFileui", "fitsFile_8hpp.html#ga7b164ebc7d5361458d8ca26cfdadf00d", null ],
-    [ "fitsFileus", "fitsFile_8hpp.html#gab9b6002dec4d8278b4f6e380ffbf0a6a", null ]
+    [ "fitsFilec", "fitsFile_8hpp.html#ga3fc2692ed89d1f1581401f81d82cdc19", null ],
+    [ "fitsFiled", "fitsFile_8hpp.html#gab9bb827e84ee13d7640fe5ecba2b4de4", null ],
+    [ "fitsFilef", "fitsFile_8hpp.html#gafd3b6ec64781ac3b5bf5602fd67ab7c0", null ],
+    [ "fitsFilei", "fitsFile_8hpp.html#ga61b18b9d5bd704e4c9dbc5e75bd1aacc", null ],
+    [ "fitsFilel", "fitsFile_8hpp.html#ga296fd9ec23d5a33f8d3a001c48e6bddd", null ],
+    [ "fitsFiles", "fitsFile_8hpp.html#ga338a0c61a0a474043e2c52f98f0ba35b", null ],
+    [ "fitsFileuc", "fitsFile_8hpp.html#ga7e37919bc571f3de3c1a0ac0ce71f127", null ],
+    [ "fitsFileui", "fitsFile_8hpp.html#gaa48e4d2bb7f7b9c40dad60f41e19236b", null ],
+    [ "fitsFileus", "fitsFile_8hpp.html#ga2c1976198a94b51ed17efb79a5b4e586", null ]
 ];

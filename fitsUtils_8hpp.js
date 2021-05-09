@@ -1,9 +1,10 @@
 var fitsUtils_8hpp =
 [
     [ "stdValWidth", "fitsUtils_8hpp.html#a4c5195a4197fde3527ab43f539456e1c", null ],
-    [ "fits_write_key", "fitsUtils_8hpp.html#gad7e837ea16b6b22491dc46feae88ac44", null ],
-    [ "fitsPopulateCard", "fitsUtils_8hpp.html#ga5dc073d8726b978ab2226c67b4eaa702", null ],
-    [ "fitsStripApost", "fitsUtils_8hpp.html#ga2187199d35666d45a32bdf82f03c2d52", null ],
-    [ "getFitsBITPIX", "fitsUtils_8hpp.html#ga7d2b25e9ff3105162bea0765d4cdc925", null ],
-    [ "getFitsType", "fitsUtils_8hpp.html#gaaccfc69b8fea18eaf219b24e535e721c", null ]
+    [ "fits_write_key", "fitsUtils_8hpp.html#ga6795d65800e7a5200bb9beaa8eec088a", null ],
+    [ "fitsErrText", "fitsUtils_8hpp.html#ga645c413c9f15927628a2600d2dc1e271", null ],
+    [ "fitsPopulateCard", "fitsUtils_8hpp.html#gab6719078e1e86a3b90e3de9c172af712", null ],
+    [ "fitsStripApost", "fitsUtils_8hpp.html#ga4f1c3fd683cda0567bb497210936ae9b", null ],
+    [ "getFitsBITPIX", "fitsUtils_8hpp.html#gab66cdba4dc37f5710ccda1e9da82e3fc", null ],
+    [ "getFitsType", "fitsUtils_8hpp.html#ga5a1a014cf5795ad800b6731d66b5c9c6", null ]
 ];

@@ -111,6 +111,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
+<tr class="memitem:group__constants"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__constants.html">Constants and units</a></td></tr>
+<tr class="memdesc:group__constants"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-defined constants and unit conversions. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__geo"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html">Geometry and Geodesy</a></td></tr>
 <tr class="memdesc:group__geo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions for basic geometry and working with earth coordinate systems. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,10 +121,7 @@ Modules</h2></td></tr>
 <tr class="memdesc:group__functions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various special functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__template__blaslap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__template__blaslap.html">Templatized BLAS and Lapack</a></td></tr>
-<tr class="memdesc:group__template__blaslap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templatized interfaces to the BLAS and the Lapack library. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__eigen__lapack"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eigen__lapack.html">Eigen Lapack interfaces</a></td></tr>
-<tr class="memdesc:group__eigen__lapack"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interfaces to Lapack and BLAS for Eigen-like arrays. <br /></td></tr>
+<tr class="memdesc:group__template__blaslap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templatized interfaces to BLAS and the Lapack librarries. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__interpolation"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interpolation.html">Interpolation</a></td></tr>
 <tr class="memdesc:group__interpolation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various tools for interpolating data and discrete functions. <br /></td></tr>
@@ -138,8 +138,11 @@ Modules</h2></td></tr>
 <tr class="memitem:group__vectorutils"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vectorutils.html">Vector Utilities</a></td></tr>
 <tr class="memdesc:group__vectorutils"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for working with std::vector. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__phyconstants"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__phyconstants.html">Physical Constants</a></td></tr>
-<tr class="memdesc:group__phyconstants"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various physical constants. <br /></td></tr>
+<tr class="memitem:group__fft"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fft.html">Fast Fourier Transforms</a></td></tr>
+<tr class="memdesc:group__fft"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tools for using the FFT. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cuda.html">NVIDIA Cuda Interface</a></td></tr>
+<tr class="memdesc:group__cuda"><td class="mdescLeft">&#160;</td><td class="mdescRight">A templatized interface to the cuda libraries. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__gen__math__files"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gen__math__files.html">Gen. Math Files</a></td></tr>
 <tr class="memdesc:group__gen__math__files"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source files for General Mathematics. <br /></td></tr>
@@ -230,9 +233,9 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="roots_8hpp_source.html#l00051">51</a> of file <a class="el" href="roots_8hpp_source.html">roots.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l01684">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l01950">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS()</a>.</p>
 
 </div>
 </div>
@@ -241,7 +244,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

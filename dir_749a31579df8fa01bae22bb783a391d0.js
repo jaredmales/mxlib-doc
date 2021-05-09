@@ -5,9 +5,6 @@ var dir_749a31579df8fa01bae22bb783a391d0 =
     [ "basisUtils2D.hpp", "basisUtils2D_8hpp.html", "basisUtils2D_8hpp" ],
     [ "circularBuffer.hpp", "circularBuffer_8hpp.html", null ],
     [ "crossCorrelation.hpp", "crossCorrelation_8hpp_source.html", null ],
-    [ "filterNoise1D.hpp", "filterNoise1D_8hpp.html", [
-      [ "filterNoise1D", "structmx_1_1sigproc_1_1filterNoise1D.html", null ]
-    ] ],
     [ "fourierModes.hpp", "fourierModes_8hpp.html", "fourierModes_8hpp" ],
     [ "gramSchmidt.hpp", "gramSchmidt_8hpp.html", "gramSchmidt_8hpp" ],
     [ "levinsonRecursion.hpp", "levinsonRecursion_8hpp_source.html", null ],
@@ -15,6 +12,7 @@ var dir_749a31579df8fa01bae22bb783a391d0 =
     [ "psdFilter.hpp", "psdFilter_8hpp.html", [
       [ "arrayT", "structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html", null ]
     ] ],
+    [ "psdFilterCuda.hpp", "psdFilterCuda_8hpp.html", null ],
     [ "psdUtils.hpp", "psdUtils_8hpp.html", "psdUtils_8hpp" ],
     [ "psdVarMean.hpp", "psdVarMean_8hpp.html", "psdVarMean_8hpp" ],
     [ "signalWindows.hpp", "signalWindows_8hpp.html", "signalWindows_8hpp" ],

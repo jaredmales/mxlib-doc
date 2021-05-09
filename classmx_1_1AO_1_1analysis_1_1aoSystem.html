@@ -112,7 +112,7 @@ class mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00066">66</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00067">67</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="aoSystem_8hpp_source.html">ao/analysis/aoSystem.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -187,33 +187,69 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ec4cdcff118998f74cf0a3408688df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a9ec4cdcff118998f74cf0a3408688df3">npix_wfs</a> (realT npix)</td></tr>
 <tr class="memdesc:a9ec4cdcff118998f74cf0a3408688df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of pixels in the WFS.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a9ec4cdcff118998f74cf0a3408688df3">More...</a><br /></td></tr>
 <tr class="separator:a9ec4cdcff118998f74cf0a3408688df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17a1c010926ce298c087ac849f440137"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17a1c010926ce298c087ac849f440137">npix_wfs</a> ()</td></tr>
-<tr class="memdesc:a17a1c010926ce298c087ac849f440137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of pixels in the WFS.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17a1c010926ce298c087ac849f440137">More...</a><br /></td></tr>
-<tr class="separator:a17a1c010926ce298c087ac849f440137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d916ec15c643447169807e8c38a3e86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7d916ec15c643447169807e8c38a3e86">npix_wfs</a> (const std::vector&lt; realT &gt; &amp;npix)</td></tr>
+<tr class="memdesc:a7d916ec15c643447169807e8c38a3e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of pixels in the WFS for each binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7d916ec15c643447169807e8c38a3e86">More...</a><br /></td></tr>
+<tr class="separator:a7d916ec15c643447169807e8c38a3e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a85023a16637b624c523b46f792450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a51a85023a16637b624c523b46f792450">npix_wfs</a> (int idx, realT npix)</td></tr>
+<tr class="memdesc:a51a85023a16637b624c523b46f792450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of pixels in the WFS for a given binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a51a85023a16637b624c523b46f792450">More...</a><br /></td></tr>
+<tr class="separator:a51a85023a16637b624c523b46f792450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463e7c8c976ce477af7b468ad9c9d796"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a463e7c8c976ce477af7b468ad9c9d796">npix_wfs</a> (size_t idx)</td></tr>
+<tr class="memdesc:a463e7c8c976ce477af7b468ad9c9d796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of pixels in the WFS for a given binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a463e7c8c976ce477af7b468ad9c9d796">More...</a><br /></td></tr>
+<tr class="separator:a463e7c8c976ce477af7b468ad9c9d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd514d8d406546fb1727a55324bfbec7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#abd514d8d406546fb1727a55324bfbec7">npix_wfs</a> ()</td></tr>
+<tr class="memdesc:abd514d8d406546fb1727a55324bfbec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of pixels in the WFS for all binning modes.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#abd514d8d406546fb1727a55324bfbec7">More...</a><br /></td></tr>
+<tr class="separator:abd514d8d406546fb1727a55324bfbec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3563f0de56a7a045c10706f1966513f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a3563f0de56a7a045c10706f1966513f7">ron_wfs</a> (realT nron)</td></tr>
 <tr class="memdesc:a3563f0de56a7a045c10706f1966513f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the WFS readout noise.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a3563f0de56a7a045c10706f1966513f7">More...</a><br /></td></tr>
 <tr class="separator:a3563f0de56a7a045c10706f1966513f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17bd539308663bc7d123723f0c008ef9"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17bd539308663bc7d123723f0c008ef9">ron_wfs</a> ()</td></tr>
-<tr class="memdesc:a17bd539308663bc7d123723f0c008ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the WFS readout noise.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17bd539308663bc7d123723f0c008ef9">More...</a><br /></td></tr>
-<tr class="separator:a17bd539308663bc7d123723f0c008ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e1fa6bff235d8addc697cfdbcd07be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a95e1fa6bff235d8addc697cfdbcd07be">ron_wfs</a> (const std::vector&lt; realT &gt; &amp;nron)</td></tr>
+<tr class="memdesc:a95e1fa6bff235d8addc697cfdbcd07be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the WFS readout noise for each binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a95e1fa6bff235d8addc697cfdbcd07be">More...</a><br /></td></tr>
+<tr class="separator:a95e1fa6bff235d8addc697cfdbcd07be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac608075bd2e9caa32246e5ff68633a83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac608075bd2e9caa32246e5ff68633a83">ron_wfs</a> (int idx, realT nron)</td></tr>
+<tr class="memdesc:ac608075bd2e9caa32246e5ff68633a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the WFS readout noise for a given bining mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac608075bd2e9caa32246e5ff68633a83">More...</a><br /></td></tr>
+<tr class="separator:ac608075bd2e9caa32246e5ff68633a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a3bb93500c1dfc0527f06a17642fe4"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a74a3bb93500c1dfc0527f06a17642fe4">ron_wfs</a> (size_t idx)</td></tr>
+<tr class="memdesc:a74a3bb93500c1dfc0527f06a17642fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the WFS readout noise for a given binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a74a3bb93500c1dfc0527f06a17642fe4">More...</a><br /></td></tr>
+<tr class="separator:a74a3bb93500c1dfc0527f06a17642fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9cbaac68bccccbbff118a2d08c431a6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ab9cbaac68bccccbbff118a2d08c431a6">ron_wfs</a> ()</td></tr>
+<tr class="memdesc:ab9cbaac68bccccbbff118a2d08c431a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the WFS readout noise for all binning modes.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ab9cbaac68bccccbbff118a2d08c431a6">More...</a><br /></td></tr>
+<tr class="separator:ab9cbaac68bccccbbff118a2d08c431a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae73d59dae20b67a5a8ca64627ae07f16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae73d59dae20b67a5a8ca64627ae07f16">Fbg</a> (realT fbg)</td></tr>
-<tr class="memdesc:ae73d59dae20b67a5a8ca64627ae07f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the background flux.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae73d59dae20b67a5a8ca64627ae07f16">More...</a><br /></td></tr>
+<tr class="memdesc:ae73d59dae20b67a5a8ca64627ae07f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a single value of the background flux.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae73d59dae20b67a5a8ca64627ae07f16">More...</a><br /></td></tr>
 <tr class="separator:ae73d59dae20b67a5a8ca64627ae07f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06589d1f6229e64704c1951dbe335fc5"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a06589d1f6229e64704c1951dbe335fc5">Fbg</a> ()</td></tr>
-<tr class="memdesc:a06589d1f6229e64704c1951dbe335fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the background flux.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a06589d1f6229e64704c1951dbe335fc5">More...</a><br /></td></tr>
-<tr class="separator:a06589d1f6229e64704c1951dbe335fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16c2c3ac597aa3f2549ae165b13530f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae16c2c3ac597aa3f2549ae165b13530f">Fbg</a> (const std::vector&lt; realT &gt; &amp;fbg)</td></tr>
+<tr class="memdesc:ae16c2c3ac597aa3f2549ae165b13530f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the background fluxes.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae16c2c3ac597aa3f2549ae165b13530f">More...</a><br /></td></tr>
+<tr class="separator:ae16c2c3ac597aa3f2549ae165b13530f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a7380a91ffec05a5c7c5853167fa93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a91a7380a91ffec05a5c7c5853167fa93">Fbg</a> (int idx, realT fbg)</td></tr>
+<tr class="memdesc:a91a7380a91ffec05a5c7c5853167fa93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a single value of the background flux for a given binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a91a7380a91ffec05a5c7c5853167fa93">More...</a><br /></td></tr>
+<tr class="separator:a91a7380a91ffec05a5c7c5853167fa93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03830a58c050506ecd85be2593bffef9"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a03830a58c050506ecd85be2593bffef9">Fbg</a> (size_t idx)</td></tr>
+<tr class="memdesc:a03830a58c050506ecd85be2593bffef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the background flux for a given binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a03830a58c050506ecd85be2593bffef9">More...</a><br /></td></tr>
+<tr class="separator:a03830a58c050506ecd85be2593bffef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9d29d28bbe0829ad5bd4766fe065b4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aaa9d29d28bbe0829ad5bd4766fe065b4">Fbg</a> ()</td></tr>
+<tr class="memdesc:aaa9d29d28bbe0829ad5bd4766fe065b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the background flux for all binning modes.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aaa9d29d28bbe0829ad5bd4766fe065b4">More...</a><br /></td></tr>
+<tr class="separator:aaa9d29d28bbe0829ad5bd4766fe065b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b362e8b58f4aa485fd0b60ce20d519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa6b362e8b58f4aa485fd0b60ce20d519">minTauWFS</a> (realT ntau)</td></tr>
+<tr class="memdesc:aa6b362e8b58f4aa485fd0b60ce20d519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a single value of the minimum WFS exposure time.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa6b362e8b58f4aa485fd0b60ce20d519">More...</a><br /></td></tr>
+<tr class="separator:aa6b362e8b58f4aa485fd0b60ce20d519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60deeeb4b983e8a8f236634f2f50289f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a60deeeb4b983e8a8f236634f2f50289f">minTauWFS</a> (const std::vector&lt; realT &gt; &amp;ntau)</td></tr>
+<tr class="memdesc:a60deeeb4b983e8a8f236634f2f50289f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the minimum WFS exposure times.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a60deeeb4b983e8a8f236634f2f50289f">More...</a><br /></td></tr>
+<tr class="separator:a60deeeb4b983e8a8f236634f2f50289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7311ac4d6df6ca8deaf42da567c645d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7311ac4d6df6ca8deaf42da567c645d9">minTauWFS</a> (size_t idx, realT ntau)</td></tr>
+<tr class="memdesc:a7311ac4d6df6ca8deaf42da567c645d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a single value of the minimum WFS exposure time for a given binning mode.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7311ac4d6df6ca8deaf42da567c645d9">More...</a><br /></td></tr>
+<tr class="separator:a7311ac4d6df6ca8deaf42da567c645d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf1be9cbef16698696c2119158a092b"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6bf1be9cbef16698696c2119158a092b">minTauWFS</a> (size_t idx)</td></tr>
+<tr class="memdesc:a6bf1be9cbef16698696c2119158a092b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the minimum WFS exposure time for a given binning.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6bf1be9cbef16698696c2119158a092b">More...</a><br /></td></tr>
+<tr class="separator:a6bf1be9cbef16698696c2119158a092b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363553d4176f2083e0d5ce08fc1acb43"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a363553d4176f2083e0d5ce08fc1acb43">minTauWFS</a> ()</td></tr>
+<tr class="memdesc:a363553d4176f2083e0d5ce08fc1acb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the values of the minimum WFS exposure time.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a363553d4176f2083e0d5ce08fc1acb43">More...</a><br /></td></tr>
+<tr class="separator:a363553d4176f2083e0d5ce08fc1acb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a956b8bbf26ecaa47ef2ebdbb183f7a6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a956b8bbf26ecaa47ef2ebdbb183f7a6c">bin_npix</a> (bool bnp)</td></tr>
 <tr class="memdesc:a956b8bbf26ecaa47ef2ebdbb183f7a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the pixel binning flag.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a956b8bbf26ecaa47ef2ebdbb183f7a6c">More...</a><br /></td></tr>
 <tr class="separator:a956b8bbf26ecaa47ef2ebdbb183f7a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0721945320181b724ae919376f31bf91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0721945320181b724ae919376f31bf91">bin_npix</a> ()</td></tr>
 <tr class="memdesc:a0721945320181b724ae919376f31bf91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the pixel binngin flag.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0721945320181b724ae919376f31bf91">More...</a><br /></td></tr>
 <tr class="separator:a0721945320181b724ae919376f31bf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6b362e8b58f4aa485fd0b60ce20d519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa6b362e8b58f4aa485fd0b60ce20d519">minTauWFS</a> (realT ntau)</td></tr>
-<tr class="memdesc:aa6b362e8b58f4aa485fd0b60ce20d519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the minimum WFS exposure time.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa6b362e8b58f4aa485fd0b60ce20d519">More...</a><br /></td></tr>
-<tr class="separator:aa6b362e8b58f4aa485fd0b60ce20d519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cff5fdeb070da9a213877b952fd98a9"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0cff5fdeb070da9a213877b952fd98a9">minTauWFS</a> ()</td></tr>
-<tr class="memdesc:a0cff5fdeb070da9a213877b952fd98a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the minimum WFS exposure time.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0cff5fdeb070da9a213877b952fd98a9">More...</a><br /></td></tr>
-<tr class="separator:a0cff5fdeb070da9a213877b952fd98a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30a108380cc137af574b580cd8ad70b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a30a108380cc137af574b580cd8ad70b0">tauWFS</a> (realT ntau)</td></tr>
 <tr class="memdesc:a30a108380cc137af574b580cd8ad70b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the WFS exposure time.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a30a108380cc137af574b580cd8ad70b0">More...</a><br /></td></tr>
 <tr class="separator:a30a108380cc137af574b580cd8ad70b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,12 +325,12 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Measurement Error</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Calculating the WFE due to WFS measurement noise. </p>
 </div></td></tr>
-<tr class="memitem:a44c9272d9e7dcb8a901736d158c24c3b"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a44c9272d9e7dcb8a901736d158c24c3b">signal2Noise2</a> (realT &amp;tau_wfs, realT d)</td></tr>
-<tr class="memdesc:a44c9272d9e7dcb8a901736d158c24c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the signal to noise ratio squared (S/N)^2 for the WFS measurement.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a44c9272d9e7dcb8a901736d158c24c3b">More...</a><br /></td></tr>
-<tr class="separator:a44c9272d9e7dcb8a901736d158c24c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bf2fb3b591f8f246ceb6cc1bf7a4f99"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0bf2fb3b591f8f246ceb6cc1bf7a4f99">measurementError</a> (realT m, realT n, realT d)</td></tr>
-<tr class="memdesc:a0bf2fb3b591f8f246ceb6cc1bf7a4f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the measurement noise at a spatial frequency and specified actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0bf2fb3b591f8f246ceb6cc1bf7a4f99">More...</a><br /></td></tr>
-<tr class="separator:a0bf2fb3b591f8f246ceb6cc1bf7a4f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405cd30a59622a10c4fb84917a585855"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a405cd30a59622a10c4fb84917a585855">signal2Noise2</a> (realT &amp;tau_wfs, realT d, int b)</td></tr>
+<tr class="memdesc:a405cd30a59622a10c4fb84917a585855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the signal to noise ratio squared (S/N)^2 for the WFS measurement.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a405cd30a59622a10c4fb84917a585855">More...</a><br /></td></tr>
+<tr class="separator:a405cd30a59622a10c4fb84917a585855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906ead26e64c2be905790dc799eae4f9"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a906ead26e64c2be905790dc799eae4f9">measurementError</a> (realT m, realT n, realT d, int b)</td></tr>
+<tr class="memdesc:a906ead26e64c2be905790dc799eae4f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the measurement noise at a spatial frequency and specified actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a906ead26e64c2be905790dc799eae4f9">More...</a><br /></td></tr>
+<tr class="separator:a906ead26e64c2be905790dc799eae4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab9ab754049fee29cbc0dfd3fc4c590"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0ab9ab754049fee29cbc0dfd3fc4c590">measurementError</a> (realT m, realT n)</td></tr>
 <tr class="memdesc:a0ab9ab754049fee29cbc0dfd3fc4c590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the measurement noise at a spatial frequency using the optimum actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0ab9ab754049fee29cbc0dfd3fc4c590">More...</a><br /></td></tr>
 <tr class="separator:a0ab9ab754049fee29cbc0dfd3fc4c590"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,9 +340,9 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Time Delay Error</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Calculating the WFE due to time delay. </p>
 </div></td></tr>
-<tr class="memitem:a59dd1a7069bc603cd863c7dbc9c73274"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a59dd1a7069bc603cd863c7dbc9c73274">timeDelayError</a> (realT m, realT n, realT d)</td></tr>
-<tr class="memdesc:a59dd1a7069bc603cd863c7dbc9c73274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the time delay at a spatial frequency at the optimum exposure time and the specified actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a59dd1a7069bc603cd863c7dbc9c73274">More...</a><br /></td></tr>
-<tr class="separator:a59dd1a7069bc603cd863c7dbc9c73274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca821999be52dde5e79a9972535af7a"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5ca821999be52dde5e79a9972535af7a">timeDelayError</a> (realT m, realT n, realT d, int b)</td></tr>
+<tr class="memdesc:a5ca821999be52dde5e79a9972535af7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the time delay at a spatial frequency at the optimum exposure time and the specified actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5ca821999be52dde5e79a9972535af7a">More...</a><br /></td></tr>
+<tr class="separator:a5ca821999be52dde5e79a9972535af7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650e588dbc9696b7c3be7be1586b1b56"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a650e588dbc9696b7c3be7be1586b1b56">timeDelayError</a> (realT m, realT n)</td></tr>
 <tr class="memdesc:a650e588dbc9696b7c3be7be1586b1b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the time delay at a spatial frequency at the optimum exposure time at the optimum actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a650e588dbc9696b7c3be7be1586b1b56">More...</a><br /></td></tr>
 <tr class="separator:a650e588dbc9696b7c3be7be1586b1b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,9 +385,9 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Optimum Parameters</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Functions to calculate the optimum integration time and actuator spacing. </p>
 </div></td></tr>
-<tr class="memitem:afc1d136e9b718dc9a860610f65f8036d"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#afc1d136e9b718dc9a860610f65f8036d">optimumTauWFS</a> (realT m, realT n, realT d)</td></tr>
-<tr class="memdesc:afc1d136e9b718dc9a860610f65f8036d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the optimum exposure time for a given spatial frequency at a specified actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#afc1d136e9b718dc9a860610f65f8036d">More...</a><br /></td></tr>
-<tr class="separator:afc1d136e9b718dc9a860610f65f8036d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e3f39e0b3fa383db0aeb1a8b0d1073"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#af0e3f39e0b3fa383db0aeb1a8b0d1073">optimumTauWFS</a> (realT m, realT n, realT d, int b)</td></tr>
+<tr class="memdesc:af0e3f39e0b3fa383db0aeb1a8b0d1073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the optimum exposure time for a given spatial frequency at a specified actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#af0e3f39e0b3fa383db0aeb1a8b0d1073">More...</a><br /></td></tr>
+<tr class="separator:af0e3f39e0b3fa383db0aeb1a8b0d1073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6261f3118fe3b7c22ee0eea65c77bf5b"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6261f3118fe3b7c22ee0eea65c77bf5b">optimumTauWFS</a> (realT m, realT n)</td></tr>
 <tr class="memdesc:a6261f3118fe3b7c22ee0eea65c77bf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the optimum exposure time for a given spatial frequency at the optimum actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6261f3118fe3b7c22ee0eea65c77bf5b">More...</a><br /></td></tr>
 <tr class="separator:a6261f3118fe3b7c22ee0eea65c77bf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -476,18 +512,24 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a3880bc4c69284efab845a55904874638"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a3880bc4c69284efab845a55904874638">m_lam_wfs</a> {0}</td></tr>
 <tr class="memdesc:a3880bc4c69284efab845a55904874638"><td class="mdescLeft">&#160;</td><td class="mdescRight">WFS wavelength [m].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a3880bc4c69284efab845a55904874638">More...</a><br /></td></tr>
 <tr class="separator:a3880bc4c69284efab845a55904874638"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17adf715f8b62972f45e1b3f73c7d312"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17adf715f8b62972f45e1b3f73c7d312">m_npix_wfs</a> {0}</td></tr>
-<tr class="memdesc:a17adf715f8b62972f45e1b3f73c7d312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of WFS pixels.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a17adf715f8b62972f45e1b3f73c7d312">More...</a><br /></td></tr>
-<tr class="separator:a17adf715f8b62972f45e1b3f73c7d312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf0a169b31f5cb19c70858dda71d635"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5bf0a169b31f5cb19c70858dda71d635">m_ron_wfs</a> {0}</td></tr>
-<tr class="memdesc:a5bf0a169b31f5cb19c70858dda71d635"><td class="mdescLeft">&#160;</td><td class="mdescRight">WFS readout noise [electrons/pix].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5bf0a169b31f5cb19c70858dda71d635">More...</a><br /></td></tr>
-<tr class="separator:a5bf0a169b31f5cb19c70858dda71d635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a211350b8de4b7f639fcaa428672de53e"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a211350b8de4b7f639fcaa428672de53e">m_Fbg</a> {0}</td></tr>
-<tr class="memdesc:a211350b8de4b7f639fcaa428672de53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background flux, [photons/sec/pixel].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a211350b8de4b7f639fcaa428672de53e">More...</a><br /></td></tr>
-<tr class="separator:a211350b8de4b7f639fcaa428672de53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51a5d50546ebe97b49c758cfade7af45"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a51a5d50546ebe97b49c758cfade7af45">m_minTauWFS</a> {0}</td></tr>
-<tr class="memdesc:a51a5d50546ebe97b49c758cfade7af45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum WFS exposure time [sec].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a51a5d50546ebe97b49c758cfade7af45">More...</a><br /></td></tr>
-<tr class="separator:a51a5d50546ebe97b49c758cfade7af45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f5d6f94e2dd8f93067066b9434aeb8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a06f5d6f94e2dd8f93067066b9434aeb8">m_npix_wfs</a></td></tr>
+<tr class="memdesc:a06f5d6f94e2dd8f93067066b9434aeb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of WFS pixels.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a06f5d6f94e2dd8f93067066b9434aeb8">More...</a><br /></td></tr>
+<tr class="separator:a06f5d6f94e2dd8f93067066b9434aeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b02d2a66ce32d60f6df1561c8dfd3b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa0b02d2a66ce32d60f6df1561c8dfd3b">m_ron_wfs</a></td></tr>
+<tr class="memdesc:aa0b02d2a66ce32d60f6df1561c8dfd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">WFS readout noise [electrons/pix].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa0b02d2a66ce32d60f6df1561c8dfd3b">More...</a><br /></td></tr>
+<tr class="separator:aa0b02d2a66ce32d60f6df1561c8dfd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c899d064a23487c559c1a9d2ad2d806"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7c899d064a23487c559c1a9d2ad2d806">m_Fbg</a></td></tr>
+<tr class="memdesc:a7c899d064a23487c559c1a9d2ad2d806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background flux, [photons/sec/pixel].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7c899d064a23487c559c1a9d2ad2d806">More...</a><br /></td></tr>
+<tr class="separator:a7c899d064a23487c559c1a9d2ad2d806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b110281bd5eb9bf69d2131f7ef2cc5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a54b110281bd5eb9bf69d2131f7ef2cc5">m_minTauWFS</a></td></tr>
+<tr class="memdesc:a54b110281bd5eb9bf69d2131f7ef2cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum WFS exposure time [sec].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a54b110281bd5eb9bf69d2131f7ef2cc5">More...</a><br /></td></tr>
+<tr class="separator:a54b110281bd5eb9bf69d2131f7ef2cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542d47a708e3ca2f8e45d9ca48ec56ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a542d47a708e3ca2f8e45d9ca48ec56ff">m_bin_npix</a> {true}</td></tr>
+<tr class="memdesc:a542d47a708e3ca2f8e45d9ca48ec56ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag controlling whether or not to bin WFS pixels according to the actuator spacing.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a542d47a708e3ca2f8e45d9ca48ec56ff">More...</a><br /></td></tr>
+<tr class="separator:a542d47a708e3ca2f8e45d9ca48ec56ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e87088d615d39650ff72474d1ed24d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7e87088d615d39650ff72474d1ed24d7">m_bin_opt</a> {0}</td></tr>
+<tr class="memdesc:a7e87088d615d39650ff72474d1ed24d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The optimum binning factor. If WFS modes are used, this is the index. Otherwise it is the bining factor (&gt;=1).  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7e87088d615d39650ff72474d1ed24d7">More...</a><br /></td></tr>
+<tr class="separator:a7e87088d615d39650ff72474d1ed24d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef0d7b70d6dc4d67ffb61846a248324a"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aef0d7b70d6dc4d67ffb61846a248324a">m_tauWFS</a> {0}</td></tr>
 <tr class="memdesc:aef0d7b70d6dc4d67ffb61846a248324a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual WFS exposure time [sec].  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aef0d7b70d6dc4d67ffb61846a248324a">More...</a><br /></td></tr>
 <tr class="separator:aef0d7b70d6dc4d67ffb61846a248324a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -593,7 +635,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Default c'tor. </p>
 <p>Calls initialize(). </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00987">987</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01071">1071</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -613,7 +655,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00992">992</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01076">1076</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +677,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the pixel binngin flag. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01228">1228</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01497">1497</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -665,7 +707,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01220">1220</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01486">1486</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -716,7 +758,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01937">1937</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02269">2269</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -754,7 +796,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01948">1948</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02280">2280</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -797,9 +839,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01928">1928</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02260">2260</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00915">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00933">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X()</a>.</p>
 
 </div>
 </div>
@@ -849,7 +891,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01964">1964</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02296">2296</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -889,7 +931,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01974">1974</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02306">2306</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -932,9 +974,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01954">1954</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02286">2286</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00943">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::Y()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00961">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::Y()</a>.</p>
 
 </div>
 </div>
@@ -984,7 +1026,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01988">1988</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02320">2320</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1066,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01998">1998</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02330">2330</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1109,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01980">1980</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02312">2312</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1286,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02015">2015</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02347">2347</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1326,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02025">2025</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02357">2357</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1327,9 +1369,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02004">2004</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02336">2336</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00930">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::dX()</a>, <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>.</p>
+<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00948">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::dX()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>.</p>
 
 </div>
 </div>
@@ -1507,7 +1549,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02043">2043</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02375">2375</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1589,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02053">2053</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02385">2385</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1590,9 +1632,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02031">2031</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02363">2363</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00971">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::n_air()</a>.</p>
+<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00989">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::n_air()</a>.</p>
 
 </div>
 </div>
@@ -1642,7 +1684,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02069">2069</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02401">2401</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1682,7 +1724,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02079">2079</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02411">2411</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1725,9 +1767,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02059">2059</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02391">2391</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00979">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X_Z()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00997">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X_Z()</a>.</p>
 
 </div>
 </div>
@@ -1799,7 +1841,7 @@ template&lt;typename varFuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01849">1849</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02181">2181</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1851,7 +1893,7 @@ template&lt;typename imageT , typename CfuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01904">1904</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02236">2236</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1880,7 +1922,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the component WFE, total WFE, and Strehl ratio. </p>
 <p>This should only be called when something changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01812">1812</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02144">2144</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1902,7 +1944,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01603">1603</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01869">1869</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +1966,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01580">1580</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01846">1846</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1946,7 +1988,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01554">1554</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01820">1820</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1967,7 +2009,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the primary mirror diamter. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_D. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01115">1115</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01198">1198</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1997,11 +2039,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01105">1105</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01188">1188</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoSystem_8hpp_source.html#l01105">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::D()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l01105">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::D()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>.</p>
 
 </div>
 </div>
@@ -2022,7 +2062,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the minimum subaperture sampling. </p>
 <dl class="section return"><dt>Returns</dt><dd>the new value of m_d_min. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01130">1130</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01213">1213</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2052,7 +2092,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01122">1122</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01205">1205</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2074,7 +2114,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Finds the value of m_d_opt where the fitting error is less than than the combined time delay and measurement error.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_d_opt. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01756">1756</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02032">2032</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2095,7 +2135,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of m_deltaTau. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_deltaTau. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01270">1270</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01526">1526</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2125,7 +2165,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01262">1262</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01518">1518</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2147,7 +2187,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01655">1655</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01921">1921</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2169,7 +2209,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01629">1629</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01895">1895</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2200,9 +2240,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02085">2085</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02417">2417</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l01084">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::dumpAtmosphere()</a>.</p>
+<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l01102">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::dumpAtmosphere()</a>.</p>
 
 </div>
 </div>
@@ -2223,7 +2263,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the 0 magnitude photon rate. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_F0. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01056">1056</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01139">1139</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2254,12 +2294,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01048">1048</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01131">1131</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a06589d1f6229e64704c1951dbe335fc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06589d1f6229e64704c1951dbe335fc5">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[1/2]</span></h2>
+<a id="aaa9d29d28bbe0829ad5bd4766fe065b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9d29d28bbe0829ad5bd4766fe065b4">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2267,20 +2307,95 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::Fbg</td>
+          <td class="memname">std::vector&lt; realT &gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::Fbg</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the value of the background flux. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Get the value of the background flux for all binning modes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_Fbg </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01214">1214</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01424">1424</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae16c2c3ac597aa3f2549ae165b13530f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16c2c3ac597aa3f2549ae165b13530f">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::Fbg </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fbg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the value of the background fluxes. </p>
+<p>This sets the value of the background flux for each binning mode </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fbg</td><td>[in] is the new value of m_Fbg </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01384">1384</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a91a7380a91ffec05a5c7c5853167fa93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a7380a91ffec05a5c7c5853167fa93">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::Fbg </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>fbg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a single value of the background flux for a given binning mode. </p>
+<p>This sets the entry in the vector if the vector has the proper length </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fbg</td><td>[in] is the new value of m_Fbg[idx] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01397">1397</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
 <a id="ae73d59dae20b67a5a8ca64627ae07f16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae73d59dae20b67a5a8ca64627ae07f16">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73d59dae20b67a5a8ca64627ae07f16">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2297,7 +2412,8 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Set the value of the background flux. </p>
+<p>Set a single value of the background flux. </p>
+<p>This sets the vector to length 1 with a single value </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fbg</td><td>[in] is the new value of m_Fbg </td></tr>
@@ -2305,7 +2421,40 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01206">1206</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01374">1374</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a03830a58c050506ecd85be2593bffef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03830a58c050506ecd85be2593bffef9">&#9670;&nbsp;</a></span>Fbg() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::Fbg </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the value of the background flux for a given binning mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>m_Fbg[idx] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01413">1413</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
@@ -2327,7 +2476,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculates \( F_\gamma = F_0 10^{-0.4 m} \) where \( F_0 \) is m_F0 and \( m \) is m_starMag.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of the current photon rate. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01098">1098</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01181">1181</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2358,7 +2507,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01092">1092</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01175">1175</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2378,7 +2527,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Get the value of m_fit_mn_max. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01333">1333</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01589">1589</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2408,7 +2557,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01326">1326</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01582">1582</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2429,7 +2578,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the total fitting error over all uncorrected spatial frequencies. </p>
 <dl class="section return"><dt>Returns</dt><dd>the total fitting error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01527">1527</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01793">1793</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2472,9 +2621,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01518">1518</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01784">1784</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>.</p>
 
 </div>
 </div>
@@ -2495,7 +2644,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the science wavelength. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_lam_sci. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01298">1298</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01554">1554</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2525,7 +2674,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01290">1290</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01546">1546</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2546,7 +2695,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the WFS wavelength. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_lam_wfs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01172">1172</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01255">1255</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2576,7 +2725,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01164">1164</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01247">1247</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2596,7 +2745,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Load parameters corresponding to the G-MagAO-X system. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01032">1032</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01115">1115</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2616,9 +2765,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Load the default parameters from Guyon, 2005 <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00997">997</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01081">1081</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l01035">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::loadGuyon2005()</a>.</p>
+<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l01053">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::loadGuyon2005()</a>.</p>
 
 </div>
 </div>
@@ -2638,9 +2787,11 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Load parameters corresponding to the MagAO-X system. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01012">1012</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01096">1096</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l01048">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::loadLCO()</a>.</p>
+<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l01066">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::loadLCO()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>.</p>
 
 </div>
 </div>
@@ -2661,7 +2812,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the total measurement error over all corrected spatial frequencies. </p>
 <dl class="section return"><dt>Returns</dt><dd>the total WFE due to measurement error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01440">1440</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01704">1704</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2704,12 +2855,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01411">1411</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01673">1673</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a0bf2fb3b591f8f246ceb6cc1bf7a4f99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bf2fb3b591f8f246ceb6cc1bf7a4f99">&#9670;&nbsp;</a></span>measurementError() <span class="overload">[3/3]</span></h2>
+<a id="a906ead26e64c2be905790dc799eae4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a906ead26e64c2be905790dc799eae4f9">&#9670;&nbsp;</a></span>measurementError() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2732,7 +2883,13 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2750,18 +2907,19 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>[in] specifies the u component of the spatial frequency </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[in] specifies the v component of the spatial frequency </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>[in] the actuator spacing in meters </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>[in] the binning parameter. Either the WFS mode index, or the binning factor. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01418">1418</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01681">1681</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00563">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::r_0()</a>.</p>
+<p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00581">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::r_0()</a>.</p>
 
 </div>
 </div>
-<a id="a0cff5fdeb070da9a213877b952fd98a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cff5fdeb070da9a213877b952fd98a9">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[1/2]</span></h2>
+<a id="a363553d4176f2083e0d5ce08fc1acb43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363553d4176f2083e0d5ce08fc1acb43">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2769,20 +2927,51 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::minTauWFS</td>
+          <td class="memname">std::vector&lt; realT &gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::minTauWFS</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the value of the minimum WFS exposure time. </p>
+<p>Get the values of the minimum WFS exposure time. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_minTauWFS. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01242">1242</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01480">1480</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a60deeeb4b983e8a8f236634f2f50289f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60deeeb4b983e8a8f236634f2f50289f">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::minTauWFS </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ntau</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the value of the minimum WFS exposure times. </p>
+<p>This sets the vector of the minimum WFS exposure times </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ntau</td><td>[in] is the new value of m_minTauWFS </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01440">1440</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa6b362e8b58f4aa485fd0b60ce20d519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6b362e8b58f4aa485fd0b60ce20d519">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b362e8b58f4aa485fd0b60ce20d519">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2799,7 +2988,8 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Set the value of the minimum WFS exposure time. </p>
+<p>Set a single value of the minimum WFS exposure time. </p>
+<p>This sets the vector to length 1 with a single value </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ntau</td><td>[in] is the new value of m_minTauWFS </td></tr>
@@ -2807,7 +2997,84 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01234">1234</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01430">1430</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6bf1be9cbef16698696c2119158a092b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf1be9cbef16698696c2119158a092b">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::minTauWFS </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the value of the minimum WFS exposure time for a given binning. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_minTauWFS[idx]. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01469">1469</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
+
+</div>
+</div>
+<a id="a7311ac4d6df6ca8deaf42da567c645d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7311ac4d6df6ca8deaf42da567c645d9">&#9670;&nbsp;</a></span>minTauWFS() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::minTauWFS </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>ntau</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a single value of the minimum WFS exposure time for a given binning mode. </p>
+<p>This sets the entry in the vector if the vector has sufficient length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ntau</td><td>[in] is the new value of m_minTauWFS </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01453">1453</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
@@ -2828,7 +3095,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the non-common path WFE PSD index. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_ncp_alpha. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01389">1389</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01645">1645</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2858,7 +3125,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01381">1381</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01637">1637</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2879,7 +3146,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the non-common path WFE. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_ncp_wfe. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01375">1375</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01631">1631</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2909,7 +3176,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01367">1367</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01623">1623</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2930,7 +3197,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the total NCP variance in rad^2. </p>
 <dl class="section return"><dt>Returns</dt><dd>the total NCP variance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01806">1806</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02138">2138</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2973,14 +3240,14 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01795">1795</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02127">2127</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
 </div>
 </div>
-<a id="a17a1c010926ce298c087ac849f440137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17a1c010926ce298c087ac849f440137">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[1/2]</span></h2>
+<a id="abd514d8d406546fb1727a55324bfbec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd514d8d406546fb1727a55324bfbec7">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2988,20 +3255,95 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::npix_wfs</td>
+          <td class="memname">std::vector&lt; realT &gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::npix_wfs</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the number of pixels in the WFS. </p>
+<p>Get the number of pixels in the WFS for all binning modes. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_npix_wfs </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01186">1186</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01311">1311</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d916ec15c643447169807e8c38a3e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d916ec15c643447169807e8c38a3e86">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::npix_wfs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>npix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the number of pixels in the WFS for each binning mode. </p>
+<p>This sets the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">npix</td><td>[in] is the new values of m_npix_wfs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01271">1271</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a51a85023a16637b624c523b46f792450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a85023a16637b624c523b46f792450">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::npix_wfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>npix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the number of pixels in the WFS for a given binning mode. </p>
+<p>This sets the entry in the vector, if it has the proper length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">npix</td><td>[in] is the new value of m_npix_wfs[idx] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01284">1284</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
 <a id="a9ec4cdcff118998f74cf0a3408688df3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ec4cdcff118998f74cf0a3408688df3">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec4cdcff118998f74cf0a3408688df3">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3019,14 +3361,48 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Set the number of pixels in the WFS. </p>
+<p>This sets the vector to length 1 with a single value </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">npix</td><td>[in] is the new value of m_npix_wfs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">npix</td><td>[in] is the new single value of m_npix_wfs </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01178">1178</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01261">1261</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a463e7c8c976ce477af7b468ad9c9d796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a463e7c8c976ce477af7b468ad9c9d796">&#9670;&nbsp;</a></span>npix_wfs() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::npix_wfs </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of pixels in the WFS for a given binning mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_npix_wfs[idx] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01300">1300</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
@@ -3047,7 +3423,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of m_optd. </p>
 <dl class="section return"><dt>Returns</dt><dd>the new value of m_optd_delta. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01144">1144</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01227">1227</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3077,7 +3453,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01136">1136</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01219">1219</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3098,7 +3474,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the fractional change in actuator spacing for optimization.. </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of m_optd_delta. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01158">1158</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01241">1241</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3129,7 +3505,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01150">1150</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01233">1233</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3163,7 +3539,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Calculate the optimum exposure time for a given spatial frequency at the optimum actuator spacing. </p>
 <p>Finds the optimum exposure time at \( k = (m/D)\hat{u} + (n/D)\hat{v} \). If optd == false this uses the minimum actuator spacing.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the optimum expsoure time. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3173,12 +3549,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01748">1748</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02023">2023</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="afc1d136e9b718dc9a860610f65f8036d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc1d136e9b718dc9a860610f65f8036d">&#9670;&nbsp;</a></span>optimumTauWFS() <span class="overload">[2/2]</span></h2>
+<a id="af0e3f39e0b3fa383db0aeb1a8b0d1073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e3f39e0b3fa383db0aeb1a8b0d1073">&#9670;&nbsp;</a></span>optimumTauWFS() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3201,7 +3577,13 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3213,7 +3595,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Calculate the optimum exposure time for a given spatial frequency at a specified actuator spacing. </p>
 <p>Finds the optimum exposure time at \( k = (m/D)\hat{u} + (n/D)\hat{v} \).</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the optimum expsoure time. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3223,9 +3605,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01684">1684</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01950">1950</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="roots_8hpp_source.html#l00051">mx::math::quarticRoots()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00563">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::r_0()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00757">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::v_wind()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00915">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="roots_8hpp_source.html#l00051">mx::math::quarticRoots()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00581">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::r_0()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00775">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::v_wind()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00933">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X()</a>.</p>
 
 </div>
 </div>
@@ -3246,7 +3628,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of m_optTau. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_optTau. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01284">1284</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01540">1540</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3276,12 +3658,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01276">1276</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01532">1532</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a17bd539308663bc7d123723f0c008ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17bd539308663bc7d123723f0c008ef9">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[1/2]</span></h2>
+<a id="ab9cbaac68bccccbbff118a2d08c431a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9cbaac68bccccbbff118a2d08c431a6">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3289,20 +3671,95 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::ron_wfs</td>
+          <td class="memname">std::vector&lt; realT &gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::ron_wfs</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the value of the WFS readout noise. </p>
+<p>Get the value of the WFS readout noise for all binning modes. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_ron_wfs </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01200">1200</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01368">1368</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a95e1fa6bff235d8addc697cfdbcd07be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e1fa6bff235d8addc697cfdbcd07be">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::ron_wfs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nron</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the value of the WFS readout noise for each binning mode. </p>
+<p>This sets the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nron</td><td>[in] is the new value of m_ron_wfs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01327">1327</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac608075bd2e9caa32246e5ff68633a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac608075bd2e9caa32246e5ff68633a83">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::ron_wfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>nron</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the value of the WFS readout noise for a given bining mode. </p>
+<p>This sets the entry in the vector if the vector has the proper length </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nron</td><td>[in] is the new value of m_ron_wfs [idx] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01340">1340</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
 <a id="a3563f0de56a7a045c10706f1966513f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3563f0de56a7a045c10706f1966513f7">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3563f0de56a7a045c10706f1966513f7">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3320,14 +3777,48 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Set the value of the WFS readout noise. </p>
+<p>This sets the vector to length 1 with a single value </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nron</td><td>[in] is the new value of m_ron_wfs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nron</td><td>[in] is the new single value of m_ron_wfs </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01192">1192</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01317">1317</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a74a3bb93500c1dfc0527f06a17642fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a3bb93500c1dfc0527f06a17642fe4">&#9670;&nbsp;</a></span>ron_wfs() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::ron_wfs </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the value of the WFS readout noise for a given binning mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_ron_wfs[idx] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>[in] the index of the binning mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01357">1357</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>.</p>
 
 </div>
 </div>
@@ -3348,12 +3839,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the zecant of the zenith angle. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_secZeta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01320">1320</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01576">1576</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a44c9272d9e7dcb8a901736d158c24c3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44c9272d9e7dcb8a901736d158c24c3b">&#9670;&nbsp;</a></span>signal2Noise2()</h2>
+<a id="a405cd30a59622a10c4fb84917a585855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405cd30a59622a10c4fb84917a585855">&#9670;&nbsp;</a></span>signal2Noise2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3370,7 +3861,13 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3389,11 +3886,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">tau_wfs</td><td>[in/out] specifies the WFS exposure time. If 0, then optimumTauWFS is used </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>[in] the actuator spacing in meters, used if binning WFS pixels </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>[in] the binning parameter. Either the WFS mode index, or the binning factor. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01395">1395</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01651">1651</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3414,7 +3912,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of spatialFilter_ku. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_spatialFilter_ku </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01347">1347</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01603">1603</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3444,7 +3942,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01339">1339</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01595">1595</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3465,7 +3963,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of spatialFilter_kv. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_spatialFilter_kv </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01361">1361</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01617">1617</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3495,7 +3993,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01353">1353</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01609">1609</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3516,7 +4014,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the Star's magnitude. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_starMag </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01070">1070</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01153">1153</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3546,7 +4044,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01062">1062</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01145">1145</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3572,7 +4070,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p> where \( \sigma_{wfe}^2 \) is the current value of m_wfeVar.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_strehl. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01840">1840</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02172">2172</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3593,7 +4091,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the value of the minimum WFS exposure time. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_tauWFS. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01256">1256</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01512">1512</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3623,7 +4121,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01248">1248</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01504">1504</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3644,7 +4142,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the time delay error over all corrected spatial frequencies. </p>
 <dl class="section return"><dt>Returns</dt><dd>the total WFE due to time delay. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01491">1491</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01757">1757</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3687,12 +4185,12 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01484">1484</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01749">1749</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a59dd1a7069bc603cd863c7dbc9c73274"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59dd1a7069bc603cd863c7dbc9c73274">&#9670;&nbsp;</a></span>timeDelayError() <span class="overload">[3/3]</span></h2>
+<a id="a5ca821999be52dde5e79a9972535af7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca821999be52dde5e79a9972535af7a">&#9670;&nbsp;</a></span>timeDelayError() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3715,7 +4213,13 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3737,9 +4241,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01464">1464</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01728">1728</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00590">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00757">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::v_wind()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00915">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00608">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::lam_0()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l00775">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::v_wind()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00933">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::X()</a>.</p>
 
 </div>
 </div>
@@ -3761,7 +4265,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>If no changes, merely returns m_wfeVar. Calls calcStrehl if there are changes.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_wfeVar; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01832">1832</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02164">2164</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3793,7 +4297,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 <p>Check for unassigned wfs pointer. </p>
 <p>Prints error and exit()s. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00264">264</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00270">270</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00130">MXE_PARAMNOTSET</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
@@ -3816,7 +4320,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Get the zenith angle. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_zeta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01314">1314</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01570">1570</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3846,11 +4350,67 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01304">1304</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01560">1560</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a542d47a708e3ca2f8e45d9ca48ec56ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542d47a708e3ca2f8e45d9ca48ec56ff">&#9670;&nbsp;</a></span>m_bin_npix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_bin_npix {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag controlling whether or not to bin WFS pixels according to the actuator spacing. </p>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00095">95</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e87088d615d39650ff72474d1ed24d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e87088d615d39650ff72474d1ed24d7">&#9670;&nbsp;</a></span>m_bin_opt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_bin_opt {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The optimum binning factor. If WFS modes are used, this is the index. Otherwise it is the bining factor (&gt;=1). </p>
+
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00097">97</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a492e574bc5c4fd86960a613377157738"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a492e574bc5c4fd86960a613377157738">&#9670;&nbsp;</a></span>m_circularLimit</h2>
 
@@ -3875,7 +4435,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Flag to indicate that the spatial frequency limit is circular, not square. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00117">117</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00123">123</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3903,7 +4463,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Telescope diameter [m]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00077">77</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00078">78</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3931,7 +4491,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Minimum AO system actuator pitch [m]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00079">79</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00080">80</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3959,7 +4519,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Current optimum AO system actuator pitch [m]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00080">80</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00081">81</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3987,7 +4547,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Loop latency [sec]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00096">96</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00101">101</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4015,7 +4575,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Flag to indicate that d_min has changed. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00115">115</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00121">121</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4043,12 +4603,12 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>0 mag flux from star at WFS [photons/sec] </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00076">76</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00077">77</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a211350b8de4b7f639fcaa428672de53e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a211350b8de4b7f639fcaa428672de53e">&#9670;&nbsp;</a></span>m_Fbg</h2>
+<a id="a7c899d064a23487c559c1a9d2ad2d806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c899d064a23487c559c1a9d2ad2d806">&#9670;&nbsp;</a></span>m_Fbg</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4059,7 +4619,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_Fbg {0}</td>
+          <td class="memname">std::vector&lt;realT&gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_Fbg</td>
         </tr>
       </table>
   </td>
@@ -4071,7 +4631,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Background flux, [photons/sec/pixel]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00089">89</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00092">92</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4099,7 +4659,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Maximum spatial frequency index to use for fitting error calculation. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00104">104</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00110">110</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4127,7 +4687,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Science wavelength [m]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00099">99</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00105">105</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4155,12 +4715,12 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>WFS wavelength [m]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00086">86</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00087">87</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a51a5d50546ebe97b49c758cfade7af45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51a5d50546ebe97b49c758cfade7af45">&#9670;&nbsp;</a></span>m_minTauWFS</h2>
+<a id="a54b110281bd5eb9bf69d2131f7ef2cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b110281bd5eb9bf69d2131f7ef2cc5">&#9670;&nbsp;</a></span>m_minTauWFS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4171,7 +4731,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_minTauWFS {0}</td>
+          <td class="memname">std::vector&lt;realT&gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_minTauWFS</td>
         </tr>
       </table>
   </td>
@@ -4183,7 +4743,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Minimum WFS exposure time [sec]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00094">94</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00093">93</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4211,7 +4771,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Power-law exponent for the NCP aberations. Default is 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00110">110</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00116">116</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4239,12 +4799,12 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Static WFE [m rms]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00109">109</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00115">115</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a17adf715f8b62972f45e1b3f73c7d312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17adf715f8b62972f45e1b3f73c7d312">&#9670;&nbsp;</a></span>m_npix_wfs</h2>
+<a id="a06f5d6f94e2dd8f93067066b9434aeb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f5d6f94e2dd8f93067066b9434aeb8">&#9670;&nbsp;</a></span>m_npix_wfs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4255,7 +4815,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_npix_wfs {0}</td>
+          <td class="memname">std::vector&lt;realT&gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_npix_wfs</td>
         </tr>
       </table>
   </td>
@@ -4267,7 +4827,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Number of WFS pixels. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00087">87</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00090">90</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4295,7 +4855,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Flag controlling whether actuator pitch is optimized (true) or just uses m_d_min (false). Default: true. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00081">81</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00082">82</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4323,7 +4883,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>The fractional change from d_min used in optimization. Set to 1 for integer binnings, &gt; 1 for finer sampling. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00082">82</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00083">83</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4351,12 +4911,12 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Flag controlling whether optimum integration time is calculated (true) enforcing m_minTauWFS, or if m_tauWFS is used (false). Default: true. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00097">97</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00103">103</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5bf0a169b31f5cb19c70858dda71d635"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bf0a169b31f5cb19c70858dda71d635">&#9670;&nbsp;</a></span>m_ron_wfs</h2>
+<a id="aa0b02d2a66ce32d60f6df1561c8dfd3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b02d2a66ce32d60f6df1561c8dfd3b">&#9670;&nbsp;</a></span>m_ron_wfs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4367,7 +4927,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_ron_wfs {0}</td>
+          <td class="memname">std::vector&lt;realT&gt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">mx::AO::analysis::aoSystem</a>&lt; realT, inputSpectT, iosT &gt;::m_ron_wfs</td>
         </tr>
       </table>
   </td>
@@ -4379,7 +4939,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>WFS readout noise [electrons/pix]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00088">88</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00091">91</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4407,7 +4967,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Secant of the Zenith angle (calculated) </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00102">102</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00108">108</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4435,7 +4995,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>The spatial filter cutoff in u, [m^-1]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00106">106</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00112">112</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4463,7 +5023,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>The spatial filter cutoff in v, [m^-1]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00107">107</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00113">113</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4491,7 +5051,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Flag to indicate that a specification has changed. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00114">114</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00120">120</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4519,7 +5079,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>The magnitude of the star. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00112">112</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00118">118</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4547,7 +5107,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Strehl ratio, a calculated quantity. Never use this directdy, instead use <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac435761d5698b3ab790e058c29d249cd" title="Get the current Strehl ratio.">strehl()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00129">129</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00135">135</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4575,7 +5135,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Actual WFS exposure time [sec]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00095">95</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00099">99</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4603,7 +5163,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to dispersive anisoplanatism OPD. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00124">124</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00130">130</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4631,7 +5191,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to the chromaticity of the index of refraction [rad^2 at lam_Sci]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00123">123</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00129">129</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4659,7 +5219,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to the chromaticity of scintillation OPD [rad^2 at lam_sc]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00122">122</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00128">128</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4687,7 +5247,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to fitting error [rad^2 at m_lam_sci]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00121">121</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00127">127</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4715,7 +5275,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to measurement a error [rad^2 at m_lam_sci]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00119">119</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00125">125</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4743,7 +5303,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to NCP errors [rad^2 at m_lam_sci]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00126">126</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00132">132</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4771,7 +5331,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Total WFE due to time delay [rad^2 at m_lam_sci]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00120">120</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00126">126</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4799,7 +5359,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>The WFE variance, in meters^2. Never use this directly, instead use <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a46c7d0db7a46248fa04045b7bed1ab13" title="Get the current value of the total WFE variance.">wfeVar()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00128">128</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00134">134</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4827,7 +5387,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>The WFS beta_p class. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00084">84</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00085">85</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4855,7 +5415,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 
 <p>Zenith angle [radians]. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00101">101</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l00107">107</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4868,7 +5428,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: improc/fitsHeader.hpp File Reference</title>
+<title>mxlib: ioutils/fits/fitsHeader.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('fitsHeader_8hpp.html',''); initResizab
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">fitsHeader.hpp File Reference<div class="ingroups"><a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a><a class="el" href="group__image__processing.html">Image Processing</a> &raquo;  &#124; <a class="el" href="group__image__processing__files.html">Image Processing Files</a> &raquo; <a class="el" href="group__fits__processing__files.html">FITS Files Files</a></div></div>  </div>
+<div class="title">fitsHeader.hpp File Reference<div class="ingroups"><a class="el" href="group__utils.html">General Utilities</a> &raquo; <a class="el" href="group__ioutils.html">Input/Output Utilities</a> &#124; <a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__fits__processing.html">FITS Files</a><a class="el" href="group__image__processing.html">Image Processing</a> &raquo;  &#124; <a class="el" href="group__image__processing__files.html">Image Processing Files</a> &raquo; <a class="el" href="group__fits__processing__files.html">FITS Files Files</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -115,8 +115,8 @@ $(document).ready(function(){initNavTree('fitsHeader_8hpp.html',''); initResizab
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1fitsHeader.html">mx::improc::fitsHeader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage a complete fits header.  <a href="classmx_1_1improc_1_1fitsHeader.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html">mx::fits::fitsHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage a complete fits header.  <a href="classmx_1_1fits_1_1fitsHeader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -127,25 +127,25 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga85ea40f5b9c71405952b19998289acf4"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
-<tr class="memitem:ga85ea40f5b9c71405952b19998289acf4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga85ea40f5b9c71405952b19998289acf4">mx::improc::headersToValues</a> (std::vector&lt; dataT &gt; &amp;v, const std::vector&lt; fitsHeader &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
-<tr class="memdesc:ga85ea40f5b9c71405952b19998289acf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#ga85ea40f5b9c71405952b19998289acf4">More...</a><br /></td></tr>
-<tr class="separator:ga85ea40f5b9c71405952b19998289acf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
-<tr class="memitem:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; dataT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga3346d9e5b86d3ef7f9857e68bbbc22c7">mx::improc::headersToValues</a> (const std::vector&lt; fitsHeader &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
-<tr class="memdesc:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1improc_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#ga3346d9e5b86d3ef7f9857e68bbbc22c7">More...</a><br /></td></tr>
-<tr class="separator:ga3346d9e5b86d3ef7f9857e68bbbc22c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb1f459c8d4c65e48a2b231a3bcb61c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gaeb1f459c8d4c65e48a2b231a3bcb61c0">mx::improc::fitsHeaderGitStatus</a> (fitsHeader &amp;head, const std::string &amp;repoName, const char *sha1, int modified)</td></tr>
-<tr class="memdesc:gaeb1f459c8d4c65e48a2b231a3bcb61c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the status of a Git repository to HISTORY in a FITS header.  <a href="group__fits__utils.html#gaeb1f459c8d4c65e48a2b231a3bcb61c0">More...</a><br /></td></tr>
-<tr class="separator:gaeb1f459c8d4c65e48a2b231a3bcb61c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59ef63486b8423fecae107446d19dc0a"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:ga59ef63486b8423fecae107446d19dc0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga59ef63486b8423fecae107446d19dc0a">mx::fits::headersToValues</a> (std::vector&lt; dataT &gt; &amp;v, const std::vector&lt; fitsHeader &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
+<tr class="memdesc:ga59ef63486b8423fecae107446d19dc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#ga59ef63486b8423fecae107446d19dc0a">More...</a><br /></td></tr>
+<tr class="separator:ga59ef63486b8423fecae107446d19dc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe165594f295f9f82996bd13e2e67314"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:gabe165594f295f9f82996bd13e2e67314"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; dataT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gabe165594f295f9f82996bd13e2e67314">mx::fits::headersToValues</a> (const std::vector&lt; fitsHeader &gt; &amp;heads, const std::string &amp;keyw)</td></tr>
+<tr class="memdesc:gabe165594f295f9f82996bd13e2e67314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the values in a std::vector of <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fits headers</a> into a std::vector of values.  <a href="group__fits__utils.html#gabe165594f295f9f82996bd13e2e67314">More...</a><br /></td></tr>
+<tr class="separator:gabe165594f295f9f82996bd13e2e67314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga090671b8b7bacafa7548b80293158622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga090671b8b7bacafa7548b80293158622">mx::fits::fitsHeaderGitStatus</a> (fitsHeader &amp;head, const std::string &amp;repoName, const char *sha1, int modified)</td></tr>
+<tr class="memdesc:ga090671b8b7bacafa7548b80293158622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the status of a Git repository to HISTORY in a FITS header.  <a href="group__fits__utils.html#ga090671b8b7bacafa7548b80293158622">More...</a><br /></td></tr>
+<tr class="separator:ga090671b8b7bacafa7548b80293158622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="fitsHeader_8hpp.html">fitsHeader.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="dir_1da8549ee5c4fb2fde3d8729e33c7119.html">fits</a></li><li class="navelem"><a class="el" href="fitsHeader_8hpp.html">fitsHeader.hpp</a></li>
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

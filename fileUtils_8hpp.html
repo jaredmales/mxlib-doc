@@ -104,16 +104,9 @@ $(document).ready(function(){initNavTree('fileUtils_8hpp.html',''); initResizabl
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="fileUtils_8hpp_source.html">fileUtils.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;libgen.h&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;sys/types.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;boost/filesystem.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="mxlib_8hpp_source.html">../mxlib.hpp</a>&quot;</code><br />
 </div>
 <p><a href="fileUtils_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -125,6 +118,18 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gaa29c120210986d49fbc5e17cf3dbe090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gaa29c120210986d49fbc5e17cf3dbe090">mx::ioutils::createDirectories</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:gaa29c120210986d49fbc5e17cf3dbe090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory or directories.  <a href="group__fileutils.html#gaa29c120210986d49fbc5e17cf3dbe090">More...</a><br /></td></tr>
+<tr class="separator:gaa29c120210986d49fbc5e17cf3dbe090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb280b224f7e6b0015be14f9ad647572"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gacb280b224f7e6b0015be14f9ad647572">mx::ioutils::pathStem</a> (const std::string &amp;fname)</td></tr>
+<tr class="memdesc:gacb280b224f7e6b0015be14f9ad647572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stem of the filename.  <a href="group__fileutils.html#gacb280b224f7e6b0015be14f9ad647572">More...</a><br /></td></tr>
+<tr class="separator:gacb280b224f7e6b0015be14f9ad647572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf51e09c00fab5d48f220ce0474d438a2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2">mx::ioutils::pathFilename</a> (const std::string &amp;fname)</td></tr>
+<tr class="memdesc:gaf51e09c00fab5d48f220ce0474d438a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the base filename.  <a href="group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2">More...</a><br /></td></tr>
+<tr class="separator:gaf51e09c00fab5d48f220ce0474d438a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4a59fffa55fed37d5ff784bef0df317"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gac4a59fffa55fed37d5ff784bef0df317">mx::ioutils::parentPath</a> (const std::string &amp;fname)</td></tr>
+<tr class="memdesc:gac4a59fffa55fed37d5ff784bef0df317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent path from a filename.  <a href="group__fileutils.html#gac4a59fffa55fed37d5ff784bef0df317">More...</a><br /></td></tr>
+<tr class="separator:gac4a59fffa55fed37d5ff784bef0df317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga92fbb4df9f3da30d15b2a0807189b3b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">mx::ioutils::getFileNames</a> (const std::string &amp;directory, const std::string &amp;prefix, const std::string &amp;substr, const std::string &amp;extension)</td></tr>
 <tr class="memdesc:ga92fbb4df9f3da30d15b2a0807189b3b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of file names from the specified directory, specifying a prefix, a substring to match, and an extension.  <a href="group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5">More...</a><br /></td></tr>
 <tr class="separator:ga92fbb4df9f3da30d15b2a0807189b3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,14 +148,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga082efbe4a068d22b0b3a70207e267987"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#ga082efbe4a068d22b0b3a70207e267987">mx::ioutils::fileNamePrepend</a> (const std::string &amp;fname, const std::string &amp;prepend)</td></tr>
 <tr class="memdesc:ga082efbe4a068d22b0b3a70207e267987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepend strings to a file name, leaving the directory and extension unaltered.  <a href="group__fileutils.html#ga082efbe4a068d22b0b3a70207e267987">More...</a><br /></td></tr>
 <tr class="separator:ga082efbe4a068d22b0b3a70207e267987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c333aae67c46fefed3cc5af82aa4d89"><td class="memTemplParams" colspan="2">template&lt;int ndigit = 4&gt; </td></tr>
-<tr class="memitem:ga4c333aae67c46fefed3cc5af82aa4d89"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fileutils.html#ga4c333aae67c46fefed3cc5af82aa4d89">mx::ioutils::getSequentialFilename</a> (const std::string &amp;basename, const std::string &amp;extension=&quot;&quot;, const int startat=0)</td></tr>
-<tr class="memdesc:ga4c333aae67c46fefed3cc5af82aa4d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next file in a numbered sequence.  <a href="group__fileutils.html#ga4c333aae67c46fefed3cc5af82aa4d89">More...</a><br /></td></tr>
-<tr class="separator:ga4c333aae67c46fefed3cc5af82aa4d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa1e201858fec401b8f67655e6c246fc6"><td class="memTemplParams" colspan="2">template&lt;int ndigit = 4&gt; </td></tr>
-<tr class="memitem:gaa1e201858fec401b8f67655e6c246fc6"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gaa1e201858fec401b8f67655e6c246fc6">mx::ioutils::getSequentialFilename</a> (const std::string &amp;basename, const int startat)</td></tr>
-<tr class="memdesc:gaa1e201858fec401b8f67655e6c246fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next file in a numbered sequence.  <a href="group__fileutils.html#gaa1e201858fec401b8f67655e6c246fc6">More...</a><br /></td></tr>
-<tr class="separator:gaa1e201858fec401b8f67655e6c246fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1433f755568d77709f43db840846a11f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#ga1433f755568d77709f43db840846a11f">mx::ioutils::getSequentialFilename</a> (const std::string &amp;basename, const std::string &amp;extension=&quot;&quot;, const int startat=0, int ndigit=4)</td></tr>
+<tr class="memdesc:ga1433f755568d77709f43db840846a11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next file in a numbered sequence.  <a href="group__fileutils.html#ga1433f755568d77709f43db840846a11f">More...</a><br /></td></tr>
+<tr class="separator:ga1433f755568d77709f43db840846a11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeae49145fd1be0dff5c7d4269f6f5509"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gaeae49145fd1be0dff5c7d4269f6f5509">mx::ioutils::fileSize</a> (int fd)</td></tr>
 <tr class="memdesc:gaeae49145fd1be0dff5c7d4269f6f5509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size in bytes of a file.  <a href="group__fileutils.html#gaeae49145fd1be0dff5c7d4269f6f5509">More...</a><br /></td></tr>
 <tr class="separator:gaeae49145fd1be0dff5c7d4269f6f5509"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,7 +164,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="fileUtils_8hpp.html">fileUtils.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -106,7 +106,6 @@ $(document).ready(function(){initNavTree('ini_8hpp.html',''); initResizable(); }
 </div><div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
 </div>
 <p><a href="ini_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -125,9 +124,6 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int ini_parse </td>
@@ -153,21 +149,12 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Parse given INI-style file. </p>
 <p>May have [section]s, name=value pairs (whitespace stripped), and comments. By default comments start with ';' (semicolon) but this can be configured with the INI_COMMENT_CHAR macro. Section is "" if name=value pair parsed before any section heading. name:value pairs are also supported as a concession to Python's ConfigParser.</p>
 <p>For each name=value pair parsed, call handler function with given user pointer as well as section, name, and value (data only valid for duration of handler call). Handler should return nonzero on success, zero on error.</p>
 <p>Returns 0 on success, line number of first error on parse error (doesn't stop on first error), -1 on file open error, or -2 on memory allocation error (only when INI_USE_STACK is zero). </p>
-
-<p class="definition">Definition at line <a class="el" href="ini_8hpp_source.html#l00260">260</a> of file <a class="el" href="ini_8hpp_source.html">ini.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="ini_8hpp_source.html#l00139">ini_parse_file()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="iniFile_8hpp_source.html#l00094">mx::app::iniFile::parse()</a>.</p>
 
@@ -178,9 +165,6 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int ini_parse_file </td>
@@ -206,19 +190,10 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Parse ini file. </p>
 <p>Same as <a class="el" href="ini_8hpp.html#ad285e522c65745f50f01ba650b563dd7" title="Parse given INI-style file.">ini_parse()</a>, but takes a FILE* instead of filename. This doesn't close the file when it's finished &ndash; the caller must do that. </p>
-
-<p class="definition">Definition at line <a class="el" href="ini_8hpp_source.html#l00139">139</a> of file <a class="el" href="ini_8hpp_source.html">ini.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ini_8hpp_source.html#l00260">ini_parse()</a>.</p>
 
 </div>
 </div>
@@ -228,7 +203,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_98ff7954eb3842da01d2ae02361edfa5.html">app</a></li><li class="navelem"><a class="el" href="ini_8hpp.html">ini.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

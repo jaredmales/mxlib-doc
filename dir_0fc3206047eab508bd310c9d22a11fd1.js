@@ -7,7 +7,7 @@ var dir_0fc3206047eab508bd310c9d22a11fd1 =
     [ "astroSpectrum.hpp", "astroSpectrum_8hpp.html", null ],
     [ "blackbody.hpp", "blackbody_8hpp_source.html", null ],
     [ "cahoyAlbedos.hpp", "cahoyAlbedos_8hpp.html", null ],
-    [ "constants.hpp", "constants_8hpp.html", "constants_8hpp" ],
+    [ "constants.hpp", "astro_2constants_8hpp.html", "astro_2constants_8hpp" ],
     [ "kepler.hpp", "kepler_8hpp.html", "kepler_8hpp" ],
     [ "mamajek.inc", "mamajek_8inc_source.html", null ],
     [ "orbitUtils.hpp", "orbitUtils_8hpp.html", "orbitUtils_8hpp" ],

@@ -50,6 +50,8 @@ var classmx_1_1AO_1_1analysis_1_1aoAtmosphere =
     [ "update_z_mean", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a5fefe4daf2c0d99c7ca13259cd5a114b", null ],
     [ "v_wind", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#aa59d0ef0ee9385f3206c0a291be72286", null ],
     [ "v_wind", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#af3935f96a256905516587af10bd20bd5", null ],
+    [ "v_wind_mean", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#ae8f0baca973d1388ac06b154fefd8e4b", null ],
+    [ "v_wind_mean2", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a1367ae98e9af9926df7e30a01b752901", null ],
     [ "X", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a15e5bad818780b08a419303678c35805", null ],
     [ "X_Z", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a68d3a94d1f3f73383be493dd4e442c96", null ],
     [ "Y", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#ac30fbd5e41519937ec450823d00aea9d", null ],

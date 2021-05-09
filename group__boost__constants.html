@@ -90,13 +90,14 @@ $(document).ready(function(){initNavTree('group__boost__constants.html',''); ini
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Boost Constants<div class="ingroups"><a class="el" href="group__genastro.html">Astronomy</a> &#124; <a class="el" href="group__gen__math.html">General Mathematics</a> &#124; <a class="el" href="group__signal__processing.html">Signal Processing</a> &#124; <a class="el" href="group__image__processing.html">Image Processing</a> &raquo; <a class="el" href="group__phyconstants.html">Physical Constants</a> &raquo; <a class="el" href="group__genphyconstants.html">General Constants</a></div></div>  </div>
+<div class="title">Boost Constants<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a> &raquo; <a class="el" href="group__constants.html">Constants and units</a> &raquo; <a class="el" href="group__genconstants.html">General Constants</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Constants provided by the boost library.  
 <a href="#details">More...</a></p>
 <p>Constants provided by the boost library. </p>
+<dl class="section warning"><dt>Warning</dt><dd>including a boost header directly, instead of as wrapped in mx/math/constants.hpp, can significantly increase compilation times.</dd></dl>
 <p>Many constants of general utility are defined by the boost c++ library. For example:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;boost/math/constants/constants.hpp&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span>boost::math::constants;</div>
@@ -116,7 +117,7 @@ $(document).ready(function(){initNavTree('group__boost__constants.html',''); ini
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

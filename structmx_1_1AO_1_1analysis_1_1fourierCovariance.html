@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('structmx_1_1AO_1_1analysis_1_1fourierC
 <div class="textblock"><h3>template&lt;typename realT, typename aosysT&gt;<br />
 struct mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;</h3>
 
-<p>Structure to manage the Fourier mode covariance calculation. </p>
+<p>Structure to manage the Fourier mode covariance calculation, passed to integration functions. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">realT</td><td>a floating point type used for all calculations. As of Nov 2016 must be double due to gsl_integration. </td></tr>
@@ -110,7 +110,7 @@ struct mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00060">60</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00055">55</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="fourierCovariance_8hpp_source.html">ao/analysis/fourierCovariance.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -131,7 +131,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a942625b736d897954814c6b544a91b34"><td class="memItemLeft" align="right" valign="top">aosysT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a942625b736d897954814c6b544a91b34">aosys</a> {nullptr}</td></tr>
 <tr class="memdesc:a942625b736d897954814c6b544a91b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to an AO system, which contains the relevant spatial PSD of turbulence.  <a href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a942625b736d897954814c6b544a91b34">More...</a><br /></td></tr>
 <tr class="separator:a942625b736d897954814c6b544a91b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a25355b83af950d4c17823be125f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a80a25355b83af950d4c17823be125f97">useBasic</a></td></tr>
+<tr class="memitem:a80a25355b83af950d4c17823be125f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a80a25355b83af950d4c17823be125f97">useBasic</a> {false}</td></tr>
 <tr class="memdesc:a80a25355b83af950d4c17823be125f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag controlling use of basic or modified Fourier modes. If true, the basic sin/cos modes are used. If false (default), the modified modes are u sed.  <a href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a80a25355b83af950d4c17823be125f97">More...</a><br /></td></tr>
 <tr class="separator:a80a25355b83af950d4c17823be125f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f09e6f7744eaa81464a5bc9dd0a16e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a18f09e6f7744eaa81464a5bc9dd0a16e">p</a></td></tr>
@@ -155,13 +155,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af7c798e0c3079a48aea0f819b937f285"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af7c798e0c3079a48aea0f819b937f285">k</a></td></tr>
 <tr class="memdesc:af7c798e0c3079a48aea0f819b937f285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial frequency being calculated, passed for use in the integrand worker functions.  <a href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af7c798e0c3079a48aea0f819b937f285">More...</a><br /></td></tr>
 <tr class="separator:af7c798e0c3079a48aea0f819b937f285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1fad4c8d48b3f63c98d916115fa5475"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af1fad4c8d48b3f63c98d916115fa5475">mnCon</a></td></tr>
+<tr class="memitem:af1fad4c8d48b3f63c98d916115fa5475"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af1fad4c8d48b3f63c98d916115fa5475">mnCon</a> {0}</td></tr>
 <tr class="memdesc:af1fad4c8d48b3f63c98d916115fa5475"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum controlled value of spatial frequency (k*D). If &lt; 0 then not controlled.  <a href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#af1fad4c8d48b3f63c98d916115fa5475">More...</a><br /></td></tr>
 <tr class="separator:af1fad4c8d48b3f63c98d916115fa5475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d6c2f2803555efb411b77963030983"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a51d6c2f2803555efb411b77963030983">absTol</a></td></tr>
+<tr class="memitem:a51d6c2f2803555efb411b77963030983"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a51d6c2f2803555efb411b77963030983">absTol</a> {1e-7}</td></tr>
 <tr class="memdesc:a51d6c2f2803555efb411b77963030983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute tolerance for the radial integral. Default is 1e-7.  <a href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a51d6c2f2803555efb411b77963030983">More...</a><br /></td></tr>
 <tr class="separator:a51d6c2f2803555efb411b77963030983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4f1b5346df3b18ffb176caf5395b230"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#ae4f1b5346df3b18ffb176caf5395b230">relTol</a></td></tr>
+<tr class="memitem:ae4f1b5346df3b18ffb176caf5395b230"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#ae4f1b5346df3b18ffb176caf5395b230">relTol</a> {1e-7}</td></tr>
 <tr class="memdesc:ae4f1b5346df3b18ffb176caf5395b230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative tolerance for the radial integral. Default is 1e-7.  <a href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#ae4f1b5346df3b18ffb176caf5395b230">More...</a><br /></td></tr>
 <tr class="separator:ae4f1b5346df3b18ffb176caf5395b230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a080fb412ad6168b6fd086e771f687"><td class="memItemLeft" align="right" valign="top">gsl_integration_workspace *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#ad0a080fb412ad6168b6fd086e771f687">phi_w</a></td></tr>
@@ -199,9 +199,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00300">300</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00294">294</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00053">WSZ</a>.</p>
+<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00291">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::k_w</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00288">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::phi_w</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00314">314</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00301">301</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00291">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::k_w</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00288">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::phi_w</a>.</p>
 
 </div>
 </div>
@@ -264,13 +266,13 @@ template&lt;typename realT , typename aosysT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the covariance between the two modes. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd><p class="startdd">document me </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd><p class="startdd">document me </p>
 <p class="enddd">handle gsl errors </p>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00324">324</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00311">311</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00053">WSZ</a>.</p>
+<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00282">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::absTol</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00291">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::k_w</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00285">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::relTol</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
 
 </div>
 </div>
@@ -284,14 +286,16 @@ template&lt;typename realT , typename aosysT &gt; </div>
 template&lt;typename realT , typename aosysT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::absTol</td>
+          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::absTol {1e-7}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Absolute tolerance for the radial integral. Default is 1e-7. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00287">287</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00282">282</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00311">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::getVariance()</a>.</p>
 
 </div>
 </div>
@@ -311,9 +315,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Pointer to an AO system, which contains the relevant spatial PSD of turbulence. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00257">257</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00252">252</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -333,9 +337,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Spatial frequency being calculated, passed for use in the integrand worker functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00281">281</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00276">276</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00220">mx::AO::analysis::kInt()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00215">mx::AO::analysis::kInt()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -355,7 +359,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Working memory for the radial integral. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00296">296</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00291">291</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00294">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::fourierCovariance()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00311">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::getVariance()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00301">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::~fourierCovariance()</a>.</p>
 
 </div>
 </div>
@@ -375,9 +381,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>The m-index of the unprimed mode, corresponding to the \( k_u = m/D \) component of spatial frequency. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00266">266</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00261">261</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -390,16 +396,16 @@ template&lt;typename realT , typename aosysT &gt; </div>
 template&lt;typename realT , typename aosysT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::mnCon</td>
+          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::mnCon {0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The maximum controlled value of spatial frequency (k*D). If &lt; 0 then not controlled. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00284">284</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00279">279</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +425,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>The m-index of the primed mode, corresponding to the \( k_u = m/D \) component of spatial frequency. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00275">275</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00270">270</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -441,9 +447,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>The n-indexof the unprimed mode, corresponding to the \( k_v = n/D \) component of spatial frequency. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00269">269</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00264">264</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -463,9 +469,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>The n-indexof the primed mode, corresponding to the \( k_v = n/D \) component of spatial frequency. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00278">278</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00273">273</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -485,9 +491,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>p-index of the unprimed mode. +/-1 for modified modes. If basic, then +1==&gt;cosine, -1==&gt;sine. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00263">263</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00258">258</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -507,9 +513,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Working memory for the azimuthal integral. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00293">293</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00288">288</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00220">mx::AO::analysis::kInt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00294">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::fourierCovariance()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00215">mx::AO::analysis::kInt()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00301">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::~fourierCovariance()</a>.</p>
 
 </div>
 </div>
@@ -529,9 +535,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>p-index of the primed mode. +/-1 for modified modes. If basic, then +1==&gt;cosine, -1==&gt;sine. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00272">272</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00267">267</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00073">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00139">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
 
 </div>
 </div>
@@ -544,14 +550,16 @@ template&lt;typename realT , typename aosysT &gt; </div>
 template&lt;typename realT , typename aosysT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::relTol</td>
+          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::relTol {1e-7}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Relative tolerance for the radial integral. Default is 1e-7. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00290">290</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00285">285</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00311">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::getVariance()</a>.</p>
 
 </div>
 </div>
@@ -564,16 +572,16 @@ template&lt;typename realT , typename aosysT &gt; </div>
 template&lt;typename realT , typename aosysT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::useBasic</td>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">mx::AO::analysis::fourierCovariance</a>&lt; realT, aosysT &gt;::useBasic {false}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Flag controlling use of basic or modified Fourier modes. If true, the basic sin/cos modes are used. If false (default), the modified modes are u sed. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00260">260</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierCovariance_8hpp_source.html#l00255">255</a> of file <a class="el" href="fourierCovariance_8hpp_source.html">fourierCovariance.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00220">mx::AO::analysis::kInt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00215">mx::AO::analysis::kInt()</a>.</p>
 
 </div>
 </div>
@@ -586,7 +594,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html">fourierCovariance</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

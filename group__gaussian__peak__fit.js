@@ -3,7 +3,7 @@ var group__gaussian__peak__fit =
     [ "array2FitGaussian2D", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html", [
       [ "setFixed", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a8d046b8e754ae693eb34fd258f9205a9", null ],
       [ "data", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#aa6ddf493849b766aca1ff4fb7902a148", null ],
-      [ "m_sigma_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a29809d27323ef679e705996541e28196", null ],
+      [ "m_sigma_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a20174342d0c3cda7dae1fe0b12ee9f9a", null ],
       [ "m_sigma_x_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0313eea4805155ef7b08543f545fb84f", null ],
       [ "m_sigma_y_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a26a354d432fcaa2b6f4a15ad53d6b643", null ],
       [ "m_theta_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#adc138cc7bcf32eed00fc10bf185e518f", null ],
@@ -11,6 +11,7 @@ var group__gaussian__peak__fit =
       [ "nx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a8d485b3f4ae4de9cc49058f8425f616c", null ],
       [ "ny", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0fc7eb07025ecad3214b97a5d8b27c7e", null ]
     ] ],
+    [ "gaussian1D_fitter", "structmx_1_1math_1_1fit_1_1gaussian1D__fitter.html", null ],
     [ "fitGaussian1D", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html", [
       [ "A", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ac53e2c5a27497abde89a1044d7c54e44", null ],
       [ "fit", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#aa6ab4a51d4d5376ad239393efac9405b", null ],
@@ -20,9 +21,8 @@ var group__gaussian__peak__fit =
       [ "sigma", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a2217d6d43b2fd9954f3189e21e82e021", null ],
       [ "x0", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ac13ed4e28104b072f782be19c66e8f29", null ]
     ] ],
-    [ "gaussian1D_fitter", "structmx_1_1math_1_1fit_1_1gaussian1D__fitter.html", null ],
     [ "gaussian2D_sym_fitter", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter.html", [
-      [ "paramNormalizer", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter.html#a187899485d45d740f5b14f88126ca7b8", null ]
+      [ "paramNormalizer", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter.html#a5e083cc3c3894b4f7f98f7bf8fcdae4b", null ]
     ] ],
     [ "fitGaussian2D", "classmx_1_1math_1_1fit_1_1fitGaussian2D.html", [
       [ "fit", "classmx_1_1math_1_1fit_1_1fitGaussian2D.html#ad6ed7c61fd51f7f5d6b6c1fb846644c3", null ],
@@ -44,7 +44,7 @@ var group__gaussian__peak__fit =
       [ "arr", "classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a8003dcbc0b4663b1ed93aa7380697d9d", null ]
     ] ],
     [ "gaussian2D_gen_fitter", "structmx_1_1math_1_1fit_1_1gaussian2D__gen__fitter.html", null ],
-    [ "fitGaussian2Dgen", "group__gaussian__peak__fit.html#ga245d3421e4aa7d1fcdd730a2a66ada29", null ],
-    [ "fitGaussian2Dsym", "group__gaussian__peak__fit.html#ga7ed0df18c6ac63660630f3aaa6657413", null ],
+    [ "fitGaussian2Dgen", "group__gaussian__peak__fit.html#ga9996dab3a145502581c7cf1d0c2e08ef", null ],
+    [ "fitGaussian2Dsym", "group__gaussian__peak__fit.html#gaba9d8402691aaaf84a8202e612fe7ab6", null ],
     [ "guessGauss2D_ang", "group__gaussian__peak__fit.html#ga595ec60efa8b7a68bf5b2a8a7668190c", null ]
 ];

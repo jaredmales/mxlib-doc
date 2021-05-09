@@ -1,6 +1,7 @@
 var group__fileutils =
 [
     [ "fileUtils.hpp", "fileUtils_8hpp.html", null ],
+    [ "createDirectories", "group__fileutils.html#gaa29c120210986d49fbc5e17cf3dbe090", null ],
     [ "fileNameAppend", "group__fileutils.html#ga34cbdfd66ed57b5891611151b729eee4", null ],
     [ "fileNamePrepend", "group__fileutils.html#ga082efbe4a068d22b0b3a70207e267987", null ],
     [ "fileNamePrependAppend", "group__fileutils.html#ga29885af2f797ae1bc43e63ee128c2bab", null ],
@@ -9,6 +10,8 @@ var group__fileutils =
     [ "getFileNames", "group__fileutils.html#ga303b58a3deace43cd4bdb5e4048cd4ec", null ],
     [ "getFileNames", "group__fileutils.html#gab92ba503551c6a5181e7b1663cf55c3c", null ],
     [ "getFileNames", "group__fileutils.html#ga92fbb4df9f3da30d15b2a0807189b3b5", null ],
-    [ "getSequentialFilename", "group__fileutils.html#gaa1e201858fec401b8f67655e6c246fc6", null ],
-    [ "getSequentialFilename", "group__fileutils.html#ga4c333aae67c46fefed3cc5af82aa4d89", null ]
+    [ "getSequentialFilename", "group__fileutils.html#ga1433f755568d77709f43db840846a11f", null ],
+    [ "parentPath", "group__fileutils.html#gac4a59fffa55fed37d5ff784bef0df317", null ],
+    [ "pathFilename", "group__fileutils.html#gaf51e09c00fab5d48f220ce0474d438a2", null ],
+    [ "pathStem", "group__fileutils.html#gacb280b224f7e6b0015be14f9ad647572", null ]
 ];

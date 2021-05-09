@@ -104,7 +104,7 @@ class mx::improc::imageXCorrFFT&lt; _ccImT &gt;</h3>
 
 <p>Find the optimum shift to align two images using the Fourier cross correlation and a peak fit. </p>
 <p>The shift is reported in pixels such that if the mxlib imageShift function is used to shift the input image by the negative of the shifts, it will align with the reference.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo:</a></b></dt><dd>This needs to be brought up to the same standard as <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html" title="Find the optimum shift to align two images using the Fourier cross correlation and a peak fit.">imageXCorrFFT</a>. Perhaps folded in as an alternative method?</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000038">Todo:</a></b></dt><dd>This needs to be brought up to the same standard as <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html" title="Find the optimum shift to align two images using the Fourier cross correlation and a peak fit.">imageXCorrFFT</a>. Perhaps folded in as an alternative method?</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">_ccImT</td><td>is the Eigen-like array type used for image processing. See typedefs. </td></tr>
@@ -182,12 +182,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a20cea259ff3cab34b9e54d8d0e899c91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e01a55e1cd95ef7499f768b7ed1f23c">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a20cea259ff3cab34b9e54d8d0e899c91">m_ftWork</a></td></tr>
 <tr class="memdesc:a20cea259ff3cab34b9e54d8d0e899c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the FFT.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a20cea259ff3cab34b9e54d8d0e899c91">More...</a><br /></td></tr>
 <tr class="separator:a20cea259ff3cab34b9e54d8d0e899c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab61c9e80f7f8ac59c7331f5aaaff31e2"><td class="memItemLeft" align="right" valign="top">fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ab61c9e80f7f8ac59c7331f5aaaff31e2">m_fft_fwd</a></td></tr>
-<tr class="memdesc:ab61c9e80f7f8ac59c7331f5aaaff31e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the forward transform.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#ab61c9e80f7f8ac59c7331f5aaaff31e2">More...</a><br /></td></tr>
-<tr class="separator:ab61c9e80f7f8ac59c7331f5aaaff31e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81367cdb9cae6adfb1702f448eeb3e99"><td class="memItemLeft" align="right" valign="top">fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a81367cdb9cae6adfb1702f448eeb3e99">m_fft_back</a></td></tr>
-<tr class="memdesc:a81367cdb9cae6adfb1702f448eeb3e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the backward transfsorm.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a81367cdb9cae6adfb1702f448eeb3e99">More...</a><br /></td></tr>
-<tr class="separator:a81367cdb9cae6adfb1702f448eeb3e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ce5d8092e467f32cdfe25f46fd0d59"><td class="memItemLeft" align="right" valign="top">math::fft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a10ce5d8092e467f32cdfe25f46fd0d59">m_fft_fwd</a></td></tr>
+<tr class="memdesc:a10ce5d8092e467f32cdfe25f46fd0d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the forward transform.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a10ce5d8092e467f32cdfe25f46fd0d59">More...</a><br /></td></tr>
+<tr class="separator:a10ce5d8092e467f32cdfe25f46fd0d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ef18594e1b71f7b0aa37a5542719fc"><td class="memItemLeft" align="right" valign="top">math::fft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a02ef18594e1b71f7b0aa37a5542719fc">m_fft_back</a></td></tr>
+<tr class="memdesc:a02ef18594e1b71f7b0aa37a5542719fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the backward transfsorm.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a02ef18594e1b71f7b0aa37a5542719fc">More...</a><br /></td></tr>
+<tr class="separator:a02ef18594e1b71f7b0aa37a5542719fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a37e47175d3ad19090299d056445d2bff"></a>
@@ -466,7 +466,7 @@ template&lt;class imT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00241">241</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageUtils_8hpp_source.html#l00106">mx::improc::imageVariance()</a>, <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="imageUtils_8hpp_source.html#l00158">mx::improc::imageMaxInterp()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageUtils_8hpp_source.html#l00106">mx::improc::imageVariance()</a>, <a class="el" href="mxError_8hpp_source.html#l00152">MXE_SIZEERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
 </div>
 </div>
@@ -526,7 +526,7 @@ template&lt;class im0T , class imT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00294">294</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00304">304</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -601,7 +601,7 @@ template&lt;class ccImT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00214">214</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00287">mx::improc::imageShiftWP()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00106">mx::improc::imageVariance()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00283">mx::improc::imageShiftWP()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00106">mx::improc::imageVariance()</a>.</p>
 
 </div>
 </div>
@@ -634,8 +634,8 @@ template&lt;class _ccImT &gt; </div>
 
 </div>
 </div>
-<a id="a81367cdb9cae6adfb1702f448eeb3e99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81367cdb9cae6adfb1702f448eeb3e99">&#9670;&nbsp;</a></span>m_fft_back</h2>
+<a id="a02ef18594e1b71f7b0aa37a5542719fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ef18594e1b71f7b0aa37a5542719fc">&#9670;&nbsp;</a></span>m_fft_back</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,7 +646,7 @@ template&lt;class _ccImT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>,2,0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_fft_back</td>
+          <td class="memname">math::fft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>,2,0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_fft_back</td>
         </tr>
       </table>
   </td>
@@ -662,8 +662,8 @@ template&lt;class _ccImT &gt; </div>
 
 </div>
 </div>
-<a id="ab61c9e80f7f8ac59c7331f5aaaff31e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab61c9e80f7f8ac59c7331f5aaaff31e2">&#9670;&nbsp;</a></span>m_fft_fwd</h2>
+<a id="a10ce5d8092e467f32cdfe25f46fd0d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ce5d8092e467f32cdfe25f46fd0d59">&#9670;&nbsp;</a></span>m_fft_fwd</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -674,7 +674,7 @@ template&lt;class _ccImT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>,2,0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_fft_fwd</td>
+          <td class="memname">math::fft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b">realT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0f6f56fee5db63b4c00050555619f39a">complexT</a>,2,0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_fft_fwd</td>
         </tr>
       </table>
   </td>
@@ -784,7 +784,7 @@ template&lt;class _ccImT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:11 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

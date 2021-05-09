@@ -1,8 +1,8 @@
 var group__fftw__template__plans =
 [
-    [ "fftw_cleanup", "group__fftw__template__plans.html#ga5da3c8cd973302cb1903a64deeb68f8f", null ],
-    [ "fftw_cleanup_threads", "group__fftw__template__plans.html#gac57d3471076e5c4e6b75d00310324583", null ],
-    [ "fftw_make_planner_thread_safe", "group__fftw__template__plans.html#gae5efdc2d330b9047dc29e5d5a06d86c1", null ],
-    [ "fftw_plan_dft", "group__fftw__template__plans.html#ga03c86fe6a07a41026efabc376a3756e0", null ],
-    [ "fftw_plan_with_nthreads", "group__fftw__template__plans.html#ga5066c5b7f98445203998b88df8100b4e", null ]
+    [ "fftw_cleanup", "group__fftw__template__plans.html#ga706980381ed5326fc89958d70386c1e1", null ],
+    [ "fftw_cleanup_threads", "group__fftw__template__plans.html#ga20636ea4d4bce1f5591f210b00a88fd7", null ],
+    [ "fftw_make_planner_thread_safe", "group__fftw__template__plans.html#ga75ece4ed44f4af93b7b686cc022525f0", null ],
+    [ "fftw_plan_dft", "group__fftw__template__plans.html#gae3494c5f157fddb0cc2e7af81c83d545", null ],
+    [ "fftw_plan_with_nthreads", "group__fftw__template__plans.html#ga14e7bdcf99577fd87db914bec80998f8", null ]
 ];

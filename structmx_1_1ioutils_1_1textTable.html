@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('structmx_1_1ioutils_1_1textTable.html'
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>An ascii table formatter. </p>
 <p>Manages a table of string content, including word-wrapping within cells. Contents are output to an ostream line by line with a table structure.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd><p class="startdd">have ability to add whole row, with a variadic template to handle different types </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000062">Todo:</a></b></dt><dd><p class="startdd">have ability to add whole row, with a variadic template to handle different types </p>
 <p class="interdd">allow non-wrapping (i.e. unlimited width) columns </p>
 <p class="interdd">headers and footers </p>
 <p class="interdd">add centering (h and v) and right and bottom justification </p>
@@ -108,17 +108,17 @@ $(document).ready(function(){initNavTree('structmx_1_1ioutils_1_1textTable.html'
 <p class="enddd">add sort capability, with vector of column choices to sort first by column N, then M, etc. </p>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00059">59</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00060">60</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="textTable_8hpp_source.html">ioutils/textTable.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ga60ad0f915fa73912b6e3642270f0664b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga60ad0f915fa73912b6e3642270f0664b">addCell</a> (size_t row, size_t col, const std::string &amp;cell)</td></tr>
-<tr class="memdesc:ga60ad0f915fa73912b6e3642270f0664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one cell to the table, overwriting if it already exists.  <a href="group__asciiutils.html#ga60ad0f915fa73912b6e3642270f0664b">More...</a><br /></td></tr>
-<tr class="separator:ga60ad0f915fa73912b6e3642270f0664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga07dca424d728d5330cd9e858c1ab0f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga07dca424d728d5330cd9e858c1ab0f85">addCell</a> (size_t row, size_t col, const char *cell)</td></tr>
-<tr class="separator:ga07dca424d728d5330cd9e858c1ab0f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ad0f915fa73912b6e3642270f0664b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b">addCell</a> (size_t row, size_t col, const std::string &amp;cell)</td></tr>
+<tr class="memdesc:a60ad0f915fa73912b6e3642270f0664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one cell to the table, overwriting if it already exists.  <a href="structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b">More...</a><br /></td></tr>
+<tr class="separator:a60ad0f915fa73912b6e3642270f0664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07dca424d728d5330cd9e858c1ab0f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1ioutils_1_1textTable.html#a07dca424d728d5330cd9e858c1ab0f85">addCell</a> (size_t row, size_t col, const char *cell)</td></tr>
+<tr class="separator:a07dca424d728d5330cd9e858c1ab0f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85613e3021407755f1e0af8705073755"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
 <tr class="memitem:ga85613e3021407755f1e0af8705073755"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga85613e3021407755f1e0af8705073755">addCell</a> (size_t row, size_t col, const typeT &amp;cell, int precision=0)</td></tr>
 <tr class="memdesc:ga85613e3021407755f1e0af8705073755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one cell to the table, overwriting if it already exists.  <a href="group__asciiutils.html#ga85613e3021407755f1e0af8705073755">More...</a><br /></td></tr>
@@ -149,6 +149,95 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a526673b6686ef2795a77c1c1d6da9d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text to print between each row.  <a href="structmx_1_1ioutils_1_1textTable.html#a526673b6686ef2795a77c1c1d6da9d4f">More...</a><br /></td></tr>
 <tr class="separator:a526673b6686ef2795a77c1c1d6da9d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a07dca424d728d5330cd9e858c1ab0f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07dca424d728d5330cd9e858c1ab0f85">&#9670;&nbsp;</a></span>addCell() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::ioutils::textTable::addCell </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>[in] the row of the cell. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>[in] the column of the cell. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>[in] the new contents of the cell, will be wrapped. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60ad0f915fa73912b6e3642270f0664b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ad0f915fa73912b6e3642270f0664b">&#9670;&nbsp;</a></span>addCell() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::ioutils::textTable::addCell </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add one cell to the table, overwriting if it already exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>[in] the row of the cell. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>[in] the column of the cell. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>[in] the new contents of the cell, will be wrapped. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00107">addCell()</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="ab0fb074afdfebaeb4a8427b83cb8538b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0fb074afdfebaeb4a8427b83cb8538b">&#9670;&nbsp;</a></span>m_colSep</h2>
@@ -164,9 +253,9 @@ Public Attributes</h2></td></tr>
 
 <p>Text to print between each column. </p>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00072">72</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00073">73</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">mx::app::application::help()</a>, and <a class="el" href="textTable_8hpp_source.html#l00145">outPut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00117">outPut()</a>.</p>
 
 </div>
 </div>
@@ -184,9 +273,9 @@ Public Attributes</h2></td></tr>
 
 <p>The widths of each column, not including the separator. </p>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00061">61</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00062">62</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00106">addCell()</a>, <a class="el" href="application_8hpp_source.html#l00541">mx::app::application::help()</a>, and <a class="el" href="textTable_8hpp_source.html#l00145">outPut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00117">outPut()</a>.</p>
 
 </div>
 </div>
@@ -204,9 +293,9 @@ Public Attributes</h2></td></tr>
 
 <p>Text to print at the end of the line. </p>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00070">70</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00071">71</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00145">outPut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00117">outPut()</a>.</p>
 
 </div>
 </div>
@@ -224,9 +313,9 @@ Public Attributes</h2></td></tr>
 
 <p>Text to print at the beginning of the line. </p>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00068">68</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00069">69</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">mx::app::application::help()</a>, and <a class="el" href="textTable_8hpp_source.html#l00145">outPut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00117">outPut()</a>.</p>
 
 </div>
 </div>
@@ -245,9 +334,9 @@ Public Attributes</h2></td></tr>
 <p>The table cells. </p>
 <p>Organized as rows.cells.lines, where a cell could be multiple lines. </p>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00066">66</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00067">67</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00106">addCell()</a>, <a class="el" href="application_8hpp_source.html#l00541">mx::app::application::help()</a>, and <a class="el" href="textTable_8hpp_source.html#l00145">outPut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00117">outPut()</a>.</p>
 
 </div>
 </div>
@@ -265,9 +354,9 @@ Public Attributes</h2></td></tr>
 
 <p>Text to print between each row. </p>
 
-<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00074">74</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00075">75</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="application_8hpp_source.html#l00541">mx::app::application::help()</a>, and <a class="el" href="textTable_8hpp_source.html#l00145">outPut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="textTable_8hpp_source.html#l00117">outPut()</a>.</p>
 
 </div>
 </div>
@@ -280,7 +369,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>ioutils</b></li><li class="navelem"><a class="el" href="structmx_1_1ioutils_1_1textTable.html">textTable</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:11 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

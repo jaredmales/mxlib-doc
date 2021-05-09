@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('imageTransforms_8hpp.html',''); initRe
 </div><div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div>
 <p><a href="imageTransforms_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -152,6 +153,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga23b9a6fb1491ce76e06009083726d5f6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__transforms.html#ga23b9a6fb1491ce76e06009083726d5f6">mx::improc::imageShiftWP</a> (outputArrT &amp;out, inputArrT &amp;in, int dx, int dy)</td></tr>
 <tr class="memdesc:ga23b9a6fb1491ce76e06009083726d5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift an image by whole pixels, wrapping around..  <a href="group__image__transforms.html#ga23b9a6fb1491ce76e06009083726d5f6">More...</a><br /></td></tr>
 <tr class="separator:ga23b9a6fb1491ce76e06009083726d5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="memTemplParams" colspan="2">template&lt;typename outputArrT , typename inputArrT , typename scaleArrT &gt; </td></tr>
+<tr class="memitem:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__transforms.html#ga7dbc59cd2a6d420a6c99f427905e2cad">mx::improc::imageShiftWP</a> (outputArrT &amp;out, inputArrT &amp;in, scaleArrT &amp;scale, int dx, int dy)</td></tr>
+<tr class="memdesc:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift an image by whole pixels, wrapping around, with a scaling image applied to the shifted image.  <a href="group__image__transforms.html#ga7dbc59cd2a6d420a6c99f427905e2cad">More...</a><br /></td></tr>
+<tr class="separator:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga68362f13937a7a98081e041d10f192a1"><td class="memTemplParams" colspan="2">template&lt;typename arrOutT , typename arrInT , typename floatT1 , typename floatT2 , typename transformT &gt; </td></tr>
 <tr class="memitem:ga68362f13937a7a98081e041d10f192a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__transforms.html#ga68362f13937a7a98081e041d10f192a1">mx::improc::imageShift</a> (arrOutT &amp;transim, const arrInT &amp;im, floatT1 dx, floatT2 dy, transformT trans)</td></tr>
 <tr class="memdesc:ga68362f13937a7a98081e041d10f192a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift an image.  <a href="group__image__transforms.html#ga68362f13937a7a98081e041d10f192a1">More...</a><br /></td></tr>
@@ -201,6 +206,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga23b9a6fb1491ce76e06009083726d5f6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__transforms.html#ga23b9a6fb1491ce76e06009083726d5f6">mx::improc::imageShiftWP</a> (outputArrT &amp;out, inputArrT &amp;in, int dx, int dy)</td></tr>
 <tr class="memdesc:ga23b9a6fb1491ce76e06009083726d5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift an image by whole pixels, wrapping around..  <a href="group__image__transforms.html#ga23b9a6fb1491ce76e06009083726d5f6">More...</a><br /></td></tr>
 <tr class="separator:ga23b9a6fb1491ce76e06009083726d5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="memTemplParams" colspan="2">template&lt;typename outputArrT , typename inputArrT , typename scaleArrT &gt; </td></tr>
+<tr class="memitem:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__transforms.html#ga7dbc59cd2a6d420a6c99f427905e2cad">mx::improc::imageShiftWP</a> (outputArrT &amp;out, inputArrT &amp;in, scaleArrT &amp;scale, int dx, int dy)</td></tr>
+<tr class="memdesc:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift an image by whole pixels, wrapping around, with a scaling image applied to the shifted image.  <a href="group__image__transforms.html#ga7dbc59cd2a6d420a6c99f427905e2cad">More...</a><br /></td></tr>
+<tr class="separator:ga7dbc59cd2a6d420a6c99f427905e2cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga68362f13937a7a98081e041d10f192a1"><td class="memTemplParams" colspan="2">template&lt;typename arrOutT , typename arrInT , typename floatT1 , typename floatT2 , typename transformT &gt; </td></tr>
 <tr class="memitem:ga68362f13937a7a98081e041d10f192a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__transforms.html#ga68362f13937a7a98081e041d10f192a1">mx::improc::imageShift</a> (arrOutT &amp;transim, const arrInT &amp;im, floatT1 dx, floatT2 dy, transformT trans)</td></tr>
 <tr class="memdesc:ga68362f13937a7a98081e041d10f192a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift an image.  <a href="group__image__transforms.html#ga68362f13937a7a98081e041d10f192a1">More...</a><br /></td></tr>
@@ -248,7 +257,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageTransforms_8hpp.html">imageTransforms.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

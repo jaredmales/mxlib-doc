@@ -6,6 +6,7 @@ var classmx_1_1AO_1_1sim_1_1directPhaseReconstructor =
     [ "rmatT", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#ade828640321cb3ec7da5ae3a7e90d8fe", null ],
     [ "rmatT", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#ade828640321cb3ec7da5ae3a7e90d8fe", null ],
     [ "rmatT", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#ade828640321cb3ec7da5ae3a7e90d8fe", null ],
+    [ "specT", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a70cb85b6adb25061123d0dde67ffcf49", null ],
     [ "directPhaseReconstructor", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#abcf095f5011262c00db1f24867c2a478", null ],
     [ "directPhaseReconstructor", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#abcf095f5011262c00db1f24867c2a478", null ],
     [ "directPhaseReconstructor", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#abcf095f5011262c00db1f24867c2a478", null ],
@@ -57,5 +58,13 @@ var classmx_1_1AO_1_1sim_1_1directPhaseReconstructor =
     [ "_measurementSize", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a8e68bad18a82417a94fde5be2e01ecf2", null ],
     [ "_nModes", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a20c339df2dddf07b876b5d6ddddc9f44", null ],
     [ "_recon", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#ad05d448ced2edb22d8a239ebf8dfa15a", null ],
-    [ "_rMat", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a799bcba81c8d6e2a0d1a322b6c79bea1", null ]
+    [ "_rMat", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a799bcba81c8d6e2a0d1a322b6c79bea1", null ],
+    [ "m_calAmp", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6f96645b630fe3e9f7c892f2eec47576", null ],
+    [ "m_detCols", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6ea2c9e1b86b3237e963e72684c021aa", null ],
+    [ "m_detRows", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a05a74133d8c3f507b1b3109e46d9a7e4", null ],
+    [ "m_measurementSize", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a84041b02e1e0f0e52d521d1553f581da", null ],
+    [ "m_modes", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a10f476e3dfd72f134d39c79511f6b31b", null ],
+    [ "m_nModes", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a0bd635b649fa579c65eb6cffaec7cfff", null ],
+    [ "m_recon", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a8b9debd1bc6dbfb52f4b28c852e87f5f", null ],
+    [ "m_rMat", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a7089ab5c2fbb7857ef84d5af0a7a3748", null ]
 ];

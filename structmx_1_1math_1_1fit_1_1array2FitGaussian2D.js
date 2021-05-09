@@ -2,7 +2,7 @@ var structmx_1_1math_1_1fit_1_1array2FitGaussian2D =
 [
     [ "setFixed", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a8d046b8e754ae693eb34fd258f9205a9", null ],
     [ "data", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#aa6ddf493849b766aca1ff4fb7902a148", null ],
-    [ "m_sigma_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a29809d27323ef679e705996541e28196", null ],
+    [ "m_sigma_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a20174342d0c3cda7dae1fe0b12ee9f9a", null ],
     [ "m_sigma_x_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0313eea4805155ef7b08543f545fb84f", null ],
     [ "m_sigma_y_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a26a354d432fcaa2b6f4a15ad53d6b643", null ],
     [ "m_theta_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#adc138cc7bcf32eed00fc10bf185e518f", null ],

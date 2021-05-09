@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: /home/jrmales/Source/mxlib_new/tests/include/sigproc/psdFilter_test.cpp File Reference</title>
+<title>mxlib: /home/jrmales/Source/mxlib/tests/include/sigproc/psdFilter_test.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('psdFilter__test_8cpp.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;../../catch2/catch.hpp&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &quot;<a class="el" href="psdFilter_8hpp_source.html">../../../include/sigproc/psdFilter.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="psdUtils_8hpp_source.html">../../../include/sigproc/psdUtils.hpp</a>&quot;</code><br />
@@ -138,10 +139,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Scenario: compiling psdFilter</p>
 <p>Verify compilation and initilization of the 3 ranks for psdFilter.</p>
 <p><a class="anchor" id="tests_sigproc_psdFilter_compile"></a></p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter__test_8cpp_source.html#l00021">21</a> of file <a class="el" href="psdFilter__test_8cpp_source.html">psdFilter_test.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter__test_8cpp_source.html#l00022">22</a> of file <a class="el" href="psdFilter__test_8cpp_source.html">psdFilter_test.cpp</a>.</p>
 
 </div>
 </div>
@@ -173,9 +175,9 @@ Functions</h2></td></tr>
 <p>Verify filtering and noise normalization Conducts random noise tests, verifying that the resultant rms is within 2% of expected value on average over many trials. Results are usually better than 1%, but 2% makes sure we don't get false failures.</p>
 <p><a class="anchor" id="tests_sigproc_psdFilter_filter"></a></p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter__test_8cpp_source.html#l00217">217</a> of file <a class="el" href="psdFilter__test_8cpp_source.html">psdFilter_test.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter__test_8cpp_source.html#l00218">218</a> of file <a class="el" href="psdFilter__test_8cpp_source.html">psdFilter_test.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00634">mx::sigproc::augment1SidedPSD()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00690">mx::sigproc::augment1SidedPSDFreq()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00191">mx::sigproc::frequency_grid()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00378">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00322">mx::sigproc::normPSD()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00390">mx::improc::eigenCube&lt; dataT &gt;::pixel()</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00282">mx::math::vectorVariance()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00686">mx::sigproc::augment1SidedPSD()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00743">mx::sigproc::augment1SidedPSDFreq()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00235">mx::sigproc::frequency_grid()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00375">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00368">mx::sigproc::normPSD()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00387">mx::improc::eigenCube&lt; dataT &gt;::pixel()</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00282">mx::math::vectorVariance()</a>.</p>
 
 </div>
 </div>
@@ -185,7 +187,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="dir_dcba6dfd410a966f3c2ecded9b1039f6.html">include</a></li><li class="navelem"><a class="el" href="dir_def6315a8ee75eb822220c4751a6759d.html">sigproc</a></li><li class="navelem"><a class="el" href="psdFilter__test_8cpp.html">psdFilter_test.cpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

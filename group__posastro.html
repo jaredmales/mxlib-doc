@@ -239,6 +239,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Calculate the Parallactic Angle, with angles in degrees. </p>
 <dl class="section return"><dt>Returns</dt><dd>the parallactic angle in degrees.</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000003">Test:</a></b></dt><dd>Scenario: calculating parallactic angles <a class="el" href="astroDynamics__test_8cpp.html#tests_astrodynamics_parang">[test doc]</a></dd></dl>
 <dl class="section note"><dt>Note</dt><dd>2020-Jan-19: re-reordered arguments and added newflag to prevent compilation of current programs so the new order is implemented. <br  />
  </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -251,9 +252,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00293">293</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00301">301</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="geo_8hpp_source.html#l00082">mx::math::dtor()</a>, <a class="el" href="astroDynamics_8hpp_source.html#l00276">mx::astro::parAngRad()</a>, and <a class="el" href="geo_8hpp_source.html#l00101">mx::math::rtod()</a>.</p>
+<p class="reference">References <a class="el" href="geo_8hpp_source.html#l00078">mx::math::dtor()</a>, <a class="el" href="astroDynamics_8hpp_source.html#l00282">mx::astro::parAngRad()</a>, and <a class="el" href="geo_8hpp_source.html#l00093">mx::math::rtod()</a>.</p>
 
 </div>
 </div>
@@ -316,9 +317,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00259">259</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00263">263</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroDynamics_8hpp_source.html#l00276">mx::astro::parAngRad()</a>, and <a class="el" href="geo_8hpp_source.html#l00101">mx::math::rtod()</a>.</p>
+<p class="reference">References <a class="el" href="astroDynamics_8hpp_source.html#l00282">mx::astro::parAngRad()</a>, and <a class="el" href="geo_8hpp_source.html#l00093">mx::math::rtod()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="astroDynamics__test_8cpp_source.html#l00015">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -357,7 +360,8 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the Parallactic Angle, with angles in radians. </p>
-<dl class="section return"><dt>Returns</dt><dd>the parallactic angle in radians. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the parallactic angle in radians.</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000002">Test:</a></b></dt><dd>Scenario: calculating parallactic angles <a class="el" href="astroDynamics__test_8cpp.html#tests_astrodynamics_parang">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ha</td><td>[in] the hour angle, in radians, negative to the east </td></tr>
@@ -367,9 +371,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00276">276</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00282">282</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="astroDynamics_8hpp_source.html#l00259">mx::astro::parAngDeg()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="astroDynamics_8hpp_source.html#l00263">mx::astro::parAngDeg()</a>.</p>
 
 </div>
 </div>
@@ -420,7 +424,8 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the Parallactic Angle from the pre-calculated trig functions. Result in radians. </p>
-<dl class="section return"><dt>Returns</dt><dd>the parallactic angle in radians. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the parallactic angle in radians.</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000001">Test:</a></b></dt><dd>Scenario: calculating parallactic angles <a class="el" href="astroDynamics__test_8cpp.html#tests_astrodynamics_parang">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sinHA</td><td>[in] the sine of the target hour angle </td></tr>
@@ -432,7 +437,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00242">242</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroDynamics_8hpp_source.html#l00244">244</a> of file <a class="el" href="astroDynamics_8hpp_source.html">astroDynamics.hpp</a>.</p>
 
 </div>
 </div>
@@ -441,7 +446,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

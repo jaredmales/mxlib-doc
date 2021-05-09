@@ -103,9 +103,19 @@ $(document).ready(function(){initNavTree('structmx_1_1astro_1_1sqWaveFilter.html
 struct mx::astro::sqWaveFilter&lt; _units, _rsr &gt;</h3>
 
 <p>A square-wave filter spectrum. </p>
-<p>Parameters specify the central wavelength, width, and sampling (all in microns) of a square-wave type filter. </p>
+<p>Parameters specify the central wavelength, width, and sampling (all in microns) of a square-wave type filter.</p>
+<p>To create this filter: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keywordtype">double</span> realT;</div>
+<div class="line"> </div>
+<div class="line">realT lam0 = 0.5; <span class="comment">//Central wavelength in microns</span></div>
+<div class="line">realT fw = 0.05; <span class="comment">//Full-width, in microns.</span></div>
+<div class="line">realT dlam = 0.001; <span class="comment">//Delta-lambda for specifying the defining points.  See note.</span></div>
+<div class="line"> </div>
+<div class="line">astroSpectrum&lt;sqWaveFilter&lt;units::si&lt;realT&gt;&gt;&gt; filt({ lam0, fw, dlam});</div>
+<div class="line"> </div>
+<div class="line">filt.setSpectrum(grid_meters); <span class="comment">// grid_meters is a vector&lt;realT&gt; specifying the wavelength grid in meters</span></div>
+</div><!-- fragment --><p>Note that dlam specifies how sharp the filter edges are when interpolated. Larger values will make the filter more trapezoidal. </p>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00123">123</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00140">140</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="astroSpectra_8hpp_source.html">astro/astroSpectra.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -187,9 +197,9 @@ template&lt;typename _units , bool _rsr = true&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00151">151</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00168">168</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroSpectra_8hpp_source.html#l00135">mx::astro::sqWaveFilter&lt; _units, _rsr &gt;::paramsT::dlam</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00134">mx::astro::sqWaveFilter&lt; _units, _rsr &gt;::paramsT::fw</a>, and <a class="el" href="astroSpectra_8hpp_source.html#l00133">mx::astro::sqWaveFilter&lt; _units, _rsr &gt;::paramsT::lam0</a>.</p>
+<p class="reference">References <a class="el" href="astroSpectra_8hpp_source.html#l00152">mx::astro::sqWaveFilter&lt; _units, _rsr &gt;::paramsT::dlam</a>, <a class="el" href="astroSpectra_8hpp_source.html#l00151">mx::astro::sqWaveFilter&lt; _units, _rsr &gt;::paramsT::fw</a>, and <a class="el" href="astroSpectra_8hpp_source.html#l00150">mx::astro::sqWaveFilter&lt; _units, _rsr &gt;::paramsT::lam0</a>.</p>
 
 </div>
 </div>
@@ -218,7 +228,7 @@ template&lt;typename _units , bool _rsr = true&gt; </div>
 
 <p>No conversion is performed on filter transmission. </p>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00142">142</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00159">159</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
 
 </div>
 </div>
@@ -246,7 +256,7 @@ template&lt;typename _units , bool _rsr = true&gt; </div>
 
 <p>Convert from um to SI m. </p>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00139">139</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectra_8hpp_source.html#l00156">156</a> of file <a class="el" href="astroSpectra_8hpp_source.html">astroSpectra.hpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +269,7 @@ template&lt;typename _units , bool _rsr = true&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>astro</b></li><li class="navelem"><a class="el" href="structmx_1_1astro_1_1sqWaveFilter.html">sqWaveFilter</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

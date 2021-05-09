@@ -15,5 +15,6 @@ var imageTransforms_8hpp =
     [ "imageRebinSum", "imageTransforms_8hpp.html#ga02dc4b162fe62ecfa38109d24c363a9f", null ],
     [ "imageRotate", "imageTransforms_8hpp.html#ga3842e84008d9123b8df9962380354f30", null ],
     [ "imageShift", "imageTransforms_8hpp.html#ga68362f13937a7a98081e041d10f192a1", null ],
-    [ "imageShiftWP", "imageTransforms_8hpp.html#ga23b9a6fb1491ce76e06009083726d5f6", null ]
+    [ "imageShiftWP", "imageTransforms_8hpp.html#ga23b9a6fb1491ce76e06009083726d5f6", null ],
+    [ "imageShiftWP", "imageTransforms_8hpp.html#ga7dbc59cd2a6d420a6c99f427905e2cad", null ]
 ];

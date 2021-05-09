@@ -13,9 +13,10 @@ var psdUtils_8hpp =
     [ "oneoverf_norm", "psdUtils_8hpp.html#ga28474f4d402cb6e95cd16fd6debe704e", null ],
     [ "oneoverf_psd", "psdUtils_8hpp.html#ga16e4b43e07eaeb749f091a39cf993c90", null ],
     [ "oneoverk_norm", "psdUtils_8hpp.html#ga54f28b5b8ac4cba70ac63bd3a0ba3343", null ],
-    [ "psdVar", "psdUtils_8hpp.html#ga695a5317eb68df2be7f884dc594dc93c", null ],
-    [ "psdVar", "psdUtils_8hpp.html#gaf68a6fb57a2991cca1b1d0e8068e1ec7", null ],
-    [ "psdVar", "psdUtils_8hpp.html#gaa7739a992e37a424353485bcc89f65bf", null ],
+    [ "psdVar", "psdUtils_8hpp.html#gaa1e70516ded906911c0f18ac466b272d", null ],
+    [ "psdVar1sided", "psdUtils_8hpp.html#ga61cb9edc15367dc46359553a646cd770", null ],
+    [ "psdVar2sided", "psdUtils_8hpp.html#gaaf6cadd738aedf81b21cdd406ce63973", null ],
+    [ "psdVarDisabled", "psdUtils_8hpp.html#ga38d23967b6fb4e964ae47e3577df1e48", null ],
     [ "rebin1SidedPSD", "psdUtils_8hpp.html#gaef47718eab8560f420d589d44bd63b49", null ],
     [ "vonKarman_psd", "psdUtils_8hpp.html#gaed98346fd5a35b6daba93907e690f66d", null ],
     [ "vonKarmanPSD", "psdUtils_8hpp.html#ga83af1f209971a81531d243aaf524dd74", null ]

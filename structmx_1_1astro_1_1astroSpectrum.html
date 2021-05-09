@@ -112,7 +112,7 @@ struct mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00255">255</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00276">276</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="astroSpectrum_8hpp_source.html">astro/astroSpectrum.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a36f67962750fef1c130e24b85006e34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parameters of the spectrum, using the underlying spectrums parameter type.  <a href="structmx_1_1astro_1_1astroSpectrum.html#a36f67962750fef1c130e24b85006e34e">More...</a><br /></td></tr>
 <tr class="separator:a36f67962750fef1c130e24b85006e34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68701503a0fdfa4510f404935f8368d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1astro_1_1astroSpectrum.html#a68701503a0fdfa4510f404935f8368d0">setParameters</a> (const paramsT &amp;params, const std::string &amp;dataDir)</td></tr>
-<tr class="memdesc:a68701503a0fdfa4510f404935f8368d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parameters of the spectrum, using the underlying spectrums parameter type.  <a href="structmx_1_1astro_1_1astroSpectrum.html#a68701503a0fdfa4510f404935f8368d0">More...</a><br /></td></tr>
+<tr class="memdesc:a68701503a0fdfa4510f404935f8368d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parameters of the spectrum, using the underlying spectrum's parameter type.  <a href="structmx_1_1astro_1_1astroSpectrum.html#a68701503a0fdfa4510f404935f8368d0">More...</a><br /></td></tr>
 <tr class="separator:a68701503a0fdfa4510f404935f8368d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32ba8f3aa6c95326b56299b5e606668d"><td class="memTemplParams" colspan="2">template&lt;typename gridT &gt; </td></tr>
 <tr class="memitem:a32ba8f3aa6c95326b56299b5e606668d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1astro_1_1astroSpectrum.html#a32ba8f3aa6c95326b56299b5e606668d">setSpectrum</a> (gridT &amp;lambda)</td></tr>
@@ -170,6 +170,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a382f0fdb138e9d8cff30c326146e28d8 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a382f0fdb138e9d8cff30c326146e28d8">charTrans</a> (_spectrumT::units::realT &amp;lambda0, _spectrumT::units::realT &amp;weff, _spectrumT::units::realT &amp;max, _spectrumT::units::realT &amp;fwhm, std::vector&lt; _spectrumT::units::realT &gt; &amp;lambda)</td></tr>
 <tr class="memdesc:a382f0fdb138e9d8cff30c326146e28d8 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characterize the spectrum as a filter transmission curve.  <a href="structmx_1_1astro_1_1baseSpectrum.html#a382f0fdb138e9d8cff30c326146e28d8">More...</a><br /></td></tr>
 <tr class="separator:a382f0fdb138e9d8cff30c326146e28d8 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcff013a03af0758db64eec6ab5ccdd4 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#adcff013a03af0758db64eec6ab5ccdd4">charFlux</a> (_spectrumT::units::realT &amp;flambda0, _spectrumT::units::realT &amp;fnu0, _spectrumT::units::realT &amp;fphot0, std::vector&lt; _spectrumT::units::realT &gt; &amp;lambda, filterT &amp;trans)</td></tr>
+<tr class="memdesc:adcff013a03af0758db64eec6ab5ccdd4 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characterize the flux densities of the spectrum w.r.t. a filter transmission curve.  <a href="structmx_1_1astro_1_1baseSpectrum.html#adcff013a03af0758db64eec6ab5ccdd4">More...</a><br /></td></tr>
+<tr class="separator:adcff013a03af0758db64eec6ab5ccdd4 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f93275bfb91703630366cfb36516b14 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a7f93275bfb91703630366cfb36516b14">charFlux</a> (_spectrumT::units::realT &amp;flambda0, _spectrumT::units::realT &amp;fnu0, _spectrumT::units::realT &amp;fphot0, std::vector&lt; _spectrumT::units::realT &gt; &amp;lambda, std::vector&lt; _spectrumT::units::realT &gt; &amp;trans)</td></tr>
 <tr class="memdesc:a7f93275bfb91703630366cfb36516b14 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Characterize the flux densities of the spectrum w.r.t. a filter transmission curve.  <a href="structmx_1_1astro_1_1baseSpectrum.html#a7f93275bfb91703630366cfb36516b14">More...</a><br /></td></tr>
 <tr class="separator:a7f93275bfb91703630366cfb36516b14 inherit pub_methods_structmx_1_1astro_1_1baseSpectrum"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,7 +218,7 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00267">267</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00288">288</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
 </div>
 </div>
@@ -253,9 +256,9 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00270">270</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00291">291</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00284">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>.</p>
+<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00305">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>.</p>
 
 </div>
 </div>
@@ -304,9 +307,9 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00276">276</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00297">297</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00284">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>.</p>
+<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00305">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>.</p>
 
 </div>
 </div>
@@ -345,11 +348,11 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00284">284</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00305">305</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00262">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_dataDir</a>, <a class="el" href="astroSpectrum_8hpp_source.html#l00264">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_params</a>, and <a class="el" href="environment_8hpp_source.html#l00045">mx::getEnv()</a>.</p>
+<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00283">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_dataDir</a>, <a class="el" href="astroSpectrum_8hpp_source.html#l00285">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_params</a>, and <a class="el" href="group__system.html#ga5e31951267872facbe589bb9e15b4995">mx::sys::getEnv()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00270">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::astroSpectrum()</a>, and <a class="el" href="cahoyAlbedos_8hpp_source.html#l00141">mx::astro::cahoyGrid&lt; _units &gt;::loadGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00291">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::astroSpectrum()</a>, and <a class="el" href="cahoyAlbedos_8hpp_source.html#l00141">mx::astro::cahoyGrid&lt; _units &gt;::loadGrid()</a>.</p>
 
 </div>
 </div>
@@ -389,7 +392,7 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the parameters of the spectrum, using the underlying spectrums parameter type. </p>
+<p>Set the parameters of the spectrum, using the underlying spectrum's parameter type. </p>
 <p>This version also sets the data directory, instead of using the enivronment variable.</p>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -400,9 +403,9 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00301">301</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00322">322</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00262">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_dataDir</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00264">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_params</a>.</p>
+<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00283">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_dataDir</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00285">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_params</a>.</p>
 
 </div>
 </div>
@@ -439,9 +442,9 @@ template&lt;typename gridT &gt; </div>
 <dd>
 0 on success.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00313">313</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00334">334</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00262">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_dataDir</a>, <a class="el" href="astroSpectrum_8hpp_source.html#l00264">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_params</a>, <a class="el" href="astroSpectrum_8hpp_source.html#l00032">mx::astro::baseSpectrum&lt; _spectrumT::units::realT &gt;::_spectrum</a>, and <a class="el" href="gslInterpolation_8hpp_source.html#l00121">mx::gsl_interpolate()</a>.</p>
+<p class="reference">References <a class="el" href="astroSpectrum_8hpp_source.html#l00283">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_dataDir</a>, <a class="el" href="astroSpectrum_8hpp_source.html#l00285">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::_params</a>, <a class="el" href="astroSpectrum_8hpp_source.html#l00032">mx::astro::baseSpectrum&lt; _spectrumT::units::realT &gt;::_spectrum</a>, and <a class="el" href="gslInterpolation_8hpp_source.html#l00124">mx::math::gsl_interpolate()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="cahoyAlbedos_8hpp_source.html#l00141">mx::astro::cahoyGrid&lt; _units &gt;::loadGrid()</a>.</p>
 
@@ -464,9 +467,9 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
 
 <p>The directory containing the spectrum. </p>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00262">262</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00283">283</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00284">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00313">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00305">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00334">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
 
 </div>
 </div>
@@ -486,9 +489,9 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
 
 <p>The parameters of the spectrum, e.g. its name or the numerical parameters needed to generate the name. </p>
 
-<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00264">264</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="astroSpectrum_8hpp_source.html#l00285">285</a> of file <a class="el" href="astroSpectrum_8hpp_source.html">astroSpectrum.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00284">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00313">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00305">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setParameters()</a>, and <a class="el" href="astroSpectrum_8hpp_source.html#l00334">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
 
 </div>
 </div>
@@ -501,7 +504,7 @@ template&lt;typename _spectrumT , bool freq = false&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>astro</b></li><li class="navelem"><a class="el" href="structmx_1_1astro_1_1astroSpectrum.html">astroSpectrum</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:48 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

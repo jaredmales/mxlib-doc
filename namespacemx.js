@@ -58,6 +58,14 @@ var namespacemx =
       [ "sqWaveFilter", "structmx_1_1astro_1_1sqWaveFilter.html", "structmx_1_1astro_1_1sqWaveFilter" ],
       [ "venusAlbedo", "structmx_1_1astro_1_1venusAlbedo.html", "structmx_1_1astro_1_1venusAlbedo" ]
     ] ],
+    [ "cuda", null, [
+      [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ]
+    ] ],
+    [ "fits", null, [
+      [ "fitsFile", "classmx_1_1fits_1_1fitsFile.html", "classmx_1_1fits_1_1fitsFile" ],
+      [ "fitsHeader", "classmx_1_1fits_1_1fitsHeader.html", "classmx_1_1fits_1_1fitsHeader" ],
+      [ "fitsHeaderCard", "structmx_1_1fits_1_1fitsHeaderCard.html", "structmx_1_1fits_1_1fitsHeaderCard" ]
+    ] ],
     [ "improc", null, [
       [ "ADIDerotator", "structmx_1_1improc_1_1ADIDerotator.html", "structmx_1_1improc_1_1ADIDerotator" ],
       [ "ADIobservation", "structmx_1_1improc_1_1ADIobservation.html", "structmx_1_1improc_1_1ADIobservation" ],
@@ -65,12 +73,8 @@ var namespacemx =
       [ "azBoxKernel", "structmx_1_1improc_1_1azBoxKernel.html", "structmx_1_1improc_1_1azBoxKernel" ],
       [ "bilinearTransform", "structmx_1_1improc_1_1bilinearTransform.html", null ],
       [ "cubicConvolTransform", "structmx_1_1improc_1_1cubicConvolTransform.html", "structmx_1_1improc_1_1cubicConvolTransform" ],
-      [ "ds9Interface", "classmx_1_1improc_1_1ds9Interface.html", "classmx_1_1improc_1_1ds9Interface" ],
       [ "eigenArrPlanes", "structmx_1_1improc_1_1eigenArrPlanes.html", null ],
       [ "eigenCube", "classmx_1_1improc_1_1eigenCube.html", "classmx_1_1improc_1_1eigenCube" ],
-      [ "fitsFile", "classmx_1_1improc_1_1fitsFile.html", "classmx_1_1improc_1_1fitsFile" ],
-      [ "fitsHeader", "classmx_1_1improc_1_1fitsHeader.html", "classmx_1_1improc_1_1fitsHeader" ],
-      [ "fitsHeaderCard", "structmx_1_1improc_1_1fitsHeaderCard.html", "structmx_1_1improc_1_1fitsHeaderCard" ],
       [ "gaussKernel", "structmx_1_1improc_1_1gaussKernel.html", null ],
       [ "HCIobservation", "structmx_1_1improc_1_1HCIobservation.html", "structmx_1_1improc_1_1HCIobservation" ],
       [ "imageXCorrDiscrete", "classmx_1_1improc_1_1imageXCorrDiscrete.html", "classmx_1_1improc_1_1imageXCorrDiscrete" ],
@@ -84,6 +88,24 @@ var namespacemx =
       [ "textTable", "structmx_1_1ioutils_1_1textTable.html", "structmx_1_1ioutils_1_1textTable" ]
     ] ],
     [ "math", null, [
+      [ "fft", null, [
+        [ "fftT< _inputT, _outputT, _rank, 0 >", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4" ],
+        [ "fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html", "structmx_1_1math_1_1fft_1_1fftwEnvironment" ],
+        [ "fftwPlanSpec", "structmx_1_1math_1_1fft_1_1fftwPlanSpec.html", "structmx_1_1math_1_1fft_1_1fftwPlanSpec" ],
+        [ "fftwPlanSpec< double >", "structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01double_01_4.html", "structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01double_01_4" ],
+        [ "fftwPlanSpec< float >", "structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01float_01_4.html", "structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01float_01_4" ],
+        [ "fftwPlanSpec< long double >", "structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01long_01double_01_4.html", "structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01long_01double_01_4" ],
+        [ "fftwTypeSpec", "structmx_1_1math_1_1fft_1_1fftwTypeSpec.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec" ],
+        [ "fftwTypeSpec< complexDT, complexDT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexDT_00_01complexDT_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexDT_00_01complexDT_01_4" ],
+        [ "fftwTypeSpec< complexDT, double >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4" ],
+        [ "fftwTypeSpec< complexFT, complexFT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4" ],
+        [ "fftwTypeSpec< complexFT, float >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexFT_00_01float_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexFT_00_01float_01_4" ],
+        [ "fftwTypeSpec< complexLT, complexLT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01complexLT_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01complexLT_01_4" ],
+        [ "fftwTypeSpec< complexLT, long double >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4" ],
+        [ "fftwTypeSpec< double, complexDT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4" ],
+        [ "fftwTypeSpec< float, complexFT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4" ],
+        [ "fftwTypeSpec< long double, complexLT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01long_01double_00_01complexLT_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01long_01double_00_01complexLT_01_4" ]
+      ] ],
       [ "fit", null, [
         [ "airy2D_obs_fitter", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter.html", null ],
         [ "airy2D_obs_fitter_ps", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter__ps.html", null ],
@@ -103,6 +125,7 @@ var namespacemx =
         [ "levmarInterface", "classmx_1_1math_1_1fit_1_1levmarInterface.html", "classmx_1_1math_1_1fit_1_1levmarInterface" ],
         [ "moffat2D_sym_fitter", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ]
       ] ],
+      [ "gnuPlot", "classmx_1_1math_1_1gnuPlot.html", "classmx_1_1math_1_1gnuPlot" ],
       [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html", "classmx_1_1math_1_1histogramUniform" ],
       [ "laplace_distribution", "classmx_1_1math_1_1laplace__distribution.html", "classmx_1_1math_1_1laplace__distribution" ],
       [ "randomT", "classmx_1_1math_1_1randomT.html", "classmx_1_1math_1_1randomT" ],
@@ -128,35 +151,18 @@ var namespacemx =
       [ "circularBufferBranch", "classmx_1_1sigproc_1_1circularBufferBranch.html", "classmx_1_1sigproc_1_1circularBufferBranch" ],
       [ "circularBufferIndex", "classmx_1_1sigproc_1_1circularBufferIndex.html", "classmx_1_1sigproc_1_1circularBufferIndex" ],
       [ "circularBufferMod", "classmx_1_1sigproc_1_1circularBufferMod.html", "classmx_1_1sigproc_1_1circularBufferMod" ],
-      [ "filterNoise1D", "structmx_1_1sigproc_1_1filterNoise1D.html", null ],
       [ "fourierModeDef", "structmx_1_1sigproc_1_1fourierModeDef.html", "structmx_1_1sigproc_1_1fourierModeDef" ],
       [ "linearPredictor", "structmx_1_1sigproc_1_1linearPredictor.html", "structmx_1_1sigproc_1_1linearPredictor" ],
+      [ "psdFilter< _realT, 1 >", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4" ],
       [ "psdFilter< _realT, _rank, 0 >", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4" ],
       [ "psdVarMean", "structmx_1_1sigproc_1_1psdVarMean.html", "structmx_1_1sigproc_1_1psdVarMean" ],
       [ "psdVarMeanParams", "structmx_1_1sigproc_1_1psdVarMeanParams.html", "structmx_1_1sigproc_1_1psdVarMeanParams" ]
     ] ],
     [ "wfp", null, [
       [ "fraunhoferPropagator", "classmx_1_1wfp_1_1fraunhoferPropagator.html", "classmx_1_1wfp_1_1fraunhoferPropagator" ],
+      [ "fraunhoferPropagator< _wavefrontT, 1 >", "classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4.html", "classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4" ],
       [ "idealCoronagraph", "structmx_1_1wfp_1_1idealCoronagraph.html", "structmx_1_1wfp_1_1idealCoronagraph" ],
+      [ "is_imagingArray", "structmx_1_1wfp_1_1is__imagingArray.html", null ],
       [ "lyotCoronagraph", "structmx_1_1wfp_1_1lyotCoronagraph.html", "structmx_1_1wfp_1_1lyotCoronagraph" ]
-    ] ],
-    [ "fftT< _inputT, _outputT, _rank, 0 >", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4" ],
-    [ "fftwEnvironment", "structmx_1_1fftwEnvironment.html", "structmx_1_1fftwEnvironment" ],
-    [ "fftwPlanSpec", "structmx_1_1fftwPlanSpec.html", "structmx_1_1fftwPlanSpec" ],
-    [ "fftwPlanSpec< double >", "structmx_1_1fftwPlanSpec_3_01double_01_4.html", "structmx_1_1fftwPlanSpec_3_01double_01_4" ],
-    [ "fftwPlanSpec< float >", "structmx_1_1fftwPlanSpec_3_01float_01_4.html", "structmx_1_1fftwPlanSpec_3_01float_01_4" ],
-    [ "fftwPlanSpec< long double >", "structmx_1_1fftwPlanSpec_3_01long_01double_01_4.html", "structmx_1_1fftwPlanSpec_3_01long_01double_01_4" ],
-    [ "fftwTypeSpec", "structmx_1_1fftwTypeSpec.html", "structmx_1_1fftwTypeSpec" ],
-    [ "fftwTypeSpec< complexDT, complexDT >", "structmx_1_1fftwTypeSpec_3_01complexDT_00_01complexDT_01_4.html", "structmx_1_1fftwTypeSpec_3_01complexDT_00_01complexDT_01_4" ],
-    [ "fftwTypeSpec< complexDT, double >", "structmx_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4.html", "structmx_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4" ],
-    [ "fftwTypeSpec< complexFT, complexFT >", "structmx_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4.html", "structmx_1_1fftwTypeSpec_3_01complexFT_00_01complexFT_01_4" ],
-    [ "fftwTypeSpec< complexFT, float >", "structmx_1_1fftwTypeSpec_3_01complexFT_00_01float_01_4.html", "structmx_1_1fftwTypeSpec_3_01complexFT_00_01float_01_4" ],
-    [ "fftwTypeSpec< complexLT, complexLT >", "structmx_1_1fftwTypeSpec_3_01complexLT_00_01complexLT_01_4.html", "structmx_1_1fftwTypeSpec_3_01complexLT_00_01complexLT_01_4" ],
-    [ "fftwTypeSpec< complexLT, long double >", "structmx_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html", "structmx_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4" ],
-    [ "fftwTypeSpec< double, complexDT >", "structmx_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4.html", "structmx_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4" ],
-    [ "fftwTypeSpec< float, complexFT >", "structmx_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4.html", "structmx_1_1fftwTypeSpec_3_01float_00_01complexFT_01_4" ],
-    [ "fftwTypeSpec< long double, complexLT >", "structmx_1_1fftwTypeSpec_3_01long_01double_00_01complexLT_01_4.html", "structmx_1_1fftwTypeSpec_3_01long_01double_00_01complexLT_01_4" ],
-    [ "gnuPlot", "classmx_1_1gnuPlot.html", "classmx_1_1gnuPlot" ],
-    [ "is_imagingArray", "structmx_1_1is__imagingArray.html", null ],
-    [ "ompLoopWatcher", "classmx_1_1ompLoopWatcher.html", "classmx_1_1ompLoopWatcher" ]
+    ] ]
 ];

@@ -138,17 +138,17 @@ $(document).ready(function(){initNavTree('pupil_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   wfp::circularPupil( pup, centralObs,0,overscan);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <a class="code" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> phead;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;SCALE&quot;</span>, pupilDiamMeters/pupilDiamPixels, <span class="stringliteral">&quot;Scale in m/pix&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;PUPILD&quot;</span>, pupilDiamMeters, <span class="stringliteral">&quot;Physical diameter of pupil image [m]&quot;</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;CENTOBS&quot;</span>, centralObs, <span class="stringliteral">&quot;Central obscuration ratio&quot;</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;OVERSCAN&quot;</span>, overscan, <span class="stringliteral">&quot;Fractional pixel overscan&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   fitsHeader phead;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   phead.append(<span class="stringliteral">&quot;SCALE&quot;</span>, pupilDiamMeters/pupilDiamPixels, <span class="stringliteral">&quot;Scale in m/pix&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   phead.append(<span class="stringliteral">&quot;PUPILD&quot;</span>, pupilDiamMeters, <span class="stringliteral">&quot;Physical diameter of pupil image [m]&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   phead.append(<span class="stringliteral">&quot;CENTOBS&quot;</span>, centralObs, <span class="stringliteral">&quot;Central obscuration ratio&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   phead.append(<span class="stringliteral">&quot;OVERSCAN&quot;</span>, overscan, <span class="stringliteral">&quot;Fractional pixel overscan&quot;</span>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <a class="code" href="classmx_1_1improc_1_1fitsFile.html">fitsFile&lt;realT&gt;</a> ff;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   fitsFile&lt;realT&gt; ff;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   std::string fName = mx::AO::path::pupil::pupilFile(pupilName, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   ff.<a class="code" href="classmx_1_1improc_1_1fitsFile.html#aa736dba80c1aa68762db3b378ca8056e">write</a>(fName, pup, phead);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   ff.write(fName, pup, phead);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
@@ -188,18 +188,18 @@ $(document).ready(function(){initNavTree('pupil_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;   </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <a class="code" href="classmx_1_1improc_1_1fitsHeader.html">fitsHeader</a> phead;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;SCALE&quot;</span>, pupilDiamMeters/pupilDiamPixels, <span class="stringliteral">&quot;Scale in m/pix&quot;</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;PUPILD&quot;</span>, pupilDiamMeters, <span class="stringliteral">&quot;Physical diameter of pupil image [m]&quot;</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;CENTOBS&quot;</span>, centralObs, <span class="stringliteral">&quot;Central obscuration ratio&quot;</span>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;TUKALPHA&quot;</span>, tukeyAlpha, <span class="stringliteral">&quot;Tukey window alpha parameter&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   phead.<a class="code" href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">append</a>(<span class="stringliteral">&quot;OVERSCAN&quot;</span>, overScan, <span class="stringliteral">&quot;Apodization overscan&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   fitsHeader phead;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   phead.append(<span class="stringliteral">&quot;SCALE&quot;</span>, pupilDiamMeters/pupilDiamPixels, <span class="stringliteral">&quot;Scale in m/pix&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   phead.append(<span class="stringliteral">&quot;PUPILD&quot;</span>, pupilDiamMeters, <span class="stringliteral">&quot;Physical diameter of pupil image [m]&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   phead.append(<span class="stringliteral">&quot;CENTOBS&quot;</span>, centralObs, <span class="stringliteral">&quot;Central obscuration ratio&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   phead.append(<span class="stringliteral">&quot;TUKALPHA&quot;</span>, tukeyAlpha, <span class="stringliteral">&quot;Tukey window alpha parameter&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   phead.append(<span class="stringliteral">&quot;OVERSCAN&quot;</span>, overScan, <span class="stringliteral">&quot;Apodization overscan&quot;</span>);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   <a class="code" href="classmx_1_1improc_1_1fitsFile.html">fitsFile&lt;realT&gt;</a> ff;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   fitsFile&lt;realT&gt; ff;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   std::string fName = mx::AO::path::pupil::pupilFile(pupilName, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   ff.<a class="code" href="classmx_1_1improc_1_1fitsFile.html#aa736dba80c1aa68762db3b378ca8056e">write</a>(fName, pup, phead);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   ff.write(fName, pup, phead);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
@@ -212,19 +212,15 @@ $(document).ready(function(){initNavTree('pupil_8hpp_source.html',''); initResiz
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="apupil_8hpp_html_ad4cdc97d64d463b75accec60d5459333"><div class="ttname"><a href="pupil_8hpp.html#ad4cdc97d64d463b75accec60d5459333">mx::AO::circularApodizedPupil</a></div><div class="ttdeci">void circularApodizedPupil(const std::string &amp;pupilName, int pupilDiamPixels, realT pupilDiamMeters, realT tukeyAlpha, realT centralObs=0, realT overScan=0)</div><div class="ttdoc">Generates a circular apodized pupil and saves it to disk.</div><div class="ttdef"><b>Definition:</b> <a href="pupil_8hpp_source.html#l00065">pupil.hpp:65</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="apupil_8hpp_html_a05f76619f4dd6d3fa6a5c5b4ab52226a"><div class="ttname"><a href="pupil_8hpp.html#a05f76619f4dd6d3fa6a5c5b4ab52226a">mx::AO::circularPupil</a></div><div class="ttdeci">void circularPupil(const std::string &amp;pupilName, realT pupilDiamPixels, realT pupilDiamMeters, realT centralObs=0, realT overscan=0)</div><div class="ttdoc">Generate a circular pupil and saves it to disk.</div><div class="ttdef"><b>Definition:</b> <a href="pupil_8hpp_source.html#l00028">pupil.hpp:28</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsHeader_html"><div class="ttname"><a href="classmx_1_1improc_1_1fitsHeader.html">mx::improc::fitsHeader</a></div><div class="ttdoc">Class to manage a complete fits header.</div><div class="ttdef"><b>Definition:</b> <a href="fitsHeader_8hpp_source.html#l00033">fitsHeader.hpp:33</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsFile_html"><div class="ttname"><a href="classmx_1_1improc_1_1fitsFile.html">mx::improc::fitsFile</a></div><div class="ttdoc">Class to manage interactions with a FITS file.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00037">fitsFile.hpp:37</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsHeader_html_a56ac65cf2a4adc2ddb2b3d1dd58df56c"><div class="ttname"><a href="classmx_1_1improc_1_1fitsHeader.html#a56ac65cf2a4adc2ddb2b3d1dd58df56c">mx::improc::fitsHeader::append</a></div><div class="ttdeci">void append(fitsHeaderCard card)</div><div class="ttdoc">Append a fitsHeaderCard to the end of the header.</div><div class="ttdef"><b>Definition:</b> <a href="fitsHeader_8hpp_source.html#l00399">fitsHeader.hpp:399</a></div></div>
 <div class="ttc" id="agroup__eigen__image__processing_html_gaa5f4935db90fd971a51c9ffa85fcfa99"><div class="ttname"><a href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">mx::improc::eigenImage</a></div><div class="ttdeci">Eigen::Array&lt; scalarT, -1, -1 &gt; eigenImage</div><div class="ttdoc">Definition of the eigenImage type, which is an alias for Eigen::Array.</div><div class="ttdef"><b>Definition:</b> <a href="eigenImage_8hpp_source.html#l00044">eigenImage.hpp:44</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1fitsFile_html_aa736dba80c1aa68762db3b378ca8056e"><div class="ttname"><a href="classmx_1_1improc_1_1fitsFile.html#aa736dba80c1aa68762db3b378ca8056e">mx::improc::fitsFile::write</a></div><div class="ttdeci">int write(const dataT *im, int d1, int d2, int d3, fitsHeader *head)</div><div class="ttdoc">Write the contents of a raw array to the FITS file.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l01274">fitsFile.hpp:1274</a></div></div>
 <div class="ttc" id="aaoPaths_8hpp_html"><div class="ttname"><a href="aoPaths_8hpp.html">aoPaths.hpp</a></div><div class="ttdoc">Standardized paths for the mx::AO system.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="pupil_8hpp.html">pupil.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('psdUtils_8hpp.html',''); initResizable
 <p class="definition">Definition in file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 </div><div class="textblock"><code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;../fft/fft.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="fft_8hpp_source.html">../math/fft/fft.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vectorUtils_8hpp_source.html">../math/vectorUtils.hpp</a>&quot;</code><br />
 </div>
 <p><a href="psdUtils_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -119,18 +119,22 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaf68a6fb57a2991cca1b1d0e8068e1ec7">mx::sigproc::psdVar</a> (realT df, realT *PSD, size_t sz, realT half=0.5)</td></tr>
-<tr class="memdesc:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#gaf68a6fb57a2991cca1b1d0e8068e1ec7">More...</a><br /></td></tr>
-<tr class="separator:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa7739a992e37a424353485bcc89f65bf"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gaa7739a992e37a424353485bcc89f65bf"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaa7739a992e37a424353485bcc89f65bf">mx::sigproc::psdVar</a> (realT df, std::vector&lt; realT &gt; &amp;PSD, realT half=0.5)</td></tr>
-<tr class="memdesc:gaa7739a992e37a424353485bcc89f65bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#gaa7739a992e37a424353485bcc89f65bf">More...</a><br /></td></tr>
-<tr class="separator:gaa7739a992e37a424353485bcc89f65bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga695a5317eb68df2be7f884dc594dc93c"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrT &gt; </td></tr>
-<tr class="memitem:ga695a5317eb68df2be7f884dc594dc93c"><td class="memTemplItemLeft" align="right" valign="top">eigenArrT::Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga695a5317eb68df2be7f884dc594dc93c">mx::sigproc::psdVar</a> (eigenArrT &amp;freq, eigenArrT &amp;PSD, bool trap=true)</td></tr>
-<tr class="memdesc:ga695a5317eb68df2be7f884dc594dc93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#ga695a5317eb68df2be7f884dc594dc93c">More...</a><br /></td></tr>
-<tr class="separator:ga695a5317eb68df2be7f884dc594dc93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61cb9edc15367dc46359553a646cd770"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga61cb9edc15367dc46359553a646cd770"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga61cb9edc15367dc46359553a646cd770">mx::sigproc::psdVar1sided</a> (realT df, const realT *PSD, size_t sz, realT half=0.5)</td></tr>
+<tr class="memdesc:ga61cb9edc15367dc46359553a646cd770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a 1-D, 1-sided PSD.  <a href="group__psds.html#ga61cb9edc15367dc46359553a646cd770">More...</a><br /></td></tr>
+<tr class="separator:ga61cb9edc15367dc46359553a646cd770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf6cadd738aedf81b21cdd406ce63973"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gaaf6cadd738aedf81b21cdd406ce63973"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaaf6cadd738aedf81b21cdd406ce63973">mx::sigproc::psdVar2sided</a> (realT df, const realT *PSD, size_t sz, realT half=0.5)</td></tr>
+<tr class="memdesc:gaaf6cadd738aedf81b21cdd406ce63973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a 1-D, 2-sided PSD.  <a href="group__psds.html#gaaf6cadd738aedf81b21cdd406ce63973">More...</a><br /></td></tr>
+<tr class="separator:gaaf6cadd738aedf81b21cdd406ce63973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1e70516ded906911c0f18ac466b272d"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gaa1e70516ded906911c0f18ac466b272d"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">mx::sigproc::psdVar</a> (const std::vector&lt; realT &gt; &amp;f, const std::vector&lt; realT &gt; &amp;PSD, realT half=0.5)</td></tr>
+<tr class="memdesc:gaa1e70516ded906911c0f18ac466b272d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a 1-D PSD.  <a href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">More...</a><br /></td></tr>
+<tr class="separator:gaa1e70516ded906911c0f18ac466b272d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38d23967b6fb4e964ae47e3577df1e48"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrT &gt; </td></tr>
+<tr class="memitem:ga38d23967b6fb4e964ae47e3577df1e48"><td class="memTemplItemLeft" align="right" valign="top">eigenArrT::Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga38d23967b6fb4e964ae47e3577df1e48">mx::sigproc::psdVarDisabled</a> (eigenArrT &amp;freq, eigenArrT &amp;PSD, bool trap=true)</td></tr>
+<tr class="memdesc:ga38d23967b6fb4e964ae47e3577df1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#ga38d23967b6fb4e964ae47e3577df1e48">More...</a><br /></td></tr>
+<tr class="separator:ga38d23967b6fb4e964ae47e3577df1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memTemplParams" colspan="2">template&lt;class realT &gt; </td></tr>
 <tr class="memitem:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">mx::sigproc::freq_sampling</a> (size_t dim, realT f_max)</td></tr>
 <tr class="memdesc:gad62e6e7fd9fde862c407f3d6613e6374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the frequency sampling for a grid given maximum dimension and maximum frequency.  <a href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">More...</a><br /></td></tr>
@@ -195,18 +199,22 @@ Functions</h2></td></tr>
 <tr class="memdesc:gaef47718eab8560f420d589d44bd63b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebin a PSD, including its frequency scale, to a larger frequency bin size (fewer bins)  <a href="group__psds.html#gaef47718eab8560f420d589d44bd63b49">More...</a><br /></td></tr>
 <tr class="separator:gaef47718eab8560f420d589d44bd63b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaf68a6fb57a2991cca1b1d0e8068e1ec7">mx::sigproc::psdVar</a> (realT df, realT *PSD, size_t sz, realT half=0.5)</td></tr>
-<tr class="memdesc:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#gaf68a6fb57a2991cca1b1d0e8068e1ec7">More...</a><br /></td></tr>
-<tr class="separator:gaf68a6fb57a2991cca1b1d0e8068e1ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa7739a992e37a424353485bcc89f65bf"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gaa7739a992e37a424353485bcc89f65bf"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaa7739a992e37a424353485bcc89f65bf">mx::sigproc::psdVar</a> (realT df, std::vector&lt; realT &gt; &amp;PSD, realT half=0.5)</td></tr>
-<tr class="memdesc:gaa7739a992e37a424353485bcc89f65bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#gaa7739a992e37a424353485bcc89f65bf">More...</a><br /></td></tr>
-<tr class="separator:gaa7739a992e37a424353485bcc89f65bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga695a5317eb68df2be7f884dc594dc93c"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrT &gt; </td></tr>
-<tr class="memitem:ga695a5317eb68df2be7f884dc594dc93c"><td class="memTemplItemLeft" align="right" valign="top">eigenArrT::Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga695a5317eb68df2be7f884dc594dc93c">mx::sigproc::psdVar</a> (eigenArrT &amp;freq, eigenArrT &amp;PSD, bool trap=true)</td></tr>
-<tr class="memdesc:ga695a5317eb68df2be7f884dc594dc93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#ga695a5317eb68df2be7f884dc594dc93c">More...</a><br /></td></tr>
-<tr class="separator:ga695a5317eb68df2be7f884dc594dc93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61cb9edc15367dc46359553a646cd770"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga61cb9edc15367dc46359553a646cd770"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga61cb9edc15367dc46359553a646cd770">mx::sigproc::psdVar1sided</a> (realT df, const realT *PSD, size_t sz, realT half=0.5)</td></tr>
+<tr class="memdesc:ga61cb9edc15367dc46359553a646cd770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a 1-D, 1-sided PSD.  <a href="group__psds.html#ga61cb9edc15367dc46359553a646cd770">More...</a><br /></td></tr>
+<tr class="separator:ga61cb9edc15367dc46359553a646cd770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf6cadd738aedf81b21cdd406ce63973"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gaaf6cadd738aedf81b21cdd406ce63973"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaaf6cadd738aedf81b21cdd406ce63973">mx::sigproc::psdVar2sided</a> (realT df, const realT *PSD, size_t sz, realT half=0.5)</td></tr>
+<tr class="memdesc:gaaf6cadd738aedf81b21cdd406ce63973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a 1-D, 2-sided PSD.  <a href="group__psds.html#gaaf6cadd738aedf81b21cdd406ce63973">More...</a><br /></td></tr>
+<tr class="separator:gaaf6cadd738aedf81b21cdd406ce63973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1e70516ded906911c0f18ac466b272d"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gaa1e70516ded906911c0f18ac466b272d"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">mx::sigproc::psdVar</a> (const std::vector&lt; realT &gt; &amp;f, const std::vector&lt; realT &gt; &amp;PSD, realT half=0.5)</td></tr>
+<tr class="memdesc:gaa1e70516ded906911c0f18ac466b272d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a 1-D PSD.  <a href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">More...</a><br /></td></tr>
+<tr class="separator:gaa1e70516ded906911c0f18ac466b272d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38d23967b6fb4e964ae47e3577df1e48"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrT &gt; </td></tr>
+<tr class="memitem:ga38d23967b6fb4e964ae47e3577df1e48"><td class="memTemplItemLeft" align="right" valign="top">eigenArrT::Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga38d23967b6fb4e964ae47e3577df1e48">mx::sigproc::psdVarDisabled</a> (eigenArrT &amp;freq, eigenArrT &amp;PSD, bool trap=true)</td></tr>
+<tr class="memdesc:ga38d23967b6fb4e964ae47e3577df1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of a PSD.  <a href="group__psds.html#ga38d23967b6fb4e964ae47e3577df1e48">More...</a><br /></td></tr>
+<tr class="separator:ga38d23967b6fb4e964ae47e3577df1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memTemplParams" colspan="2">template&lt;class realT &gt; </td></tr>
 <tr class="memitem:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">mx::sigproc::freq_sampling</a> (size_t dim, realT f_max)</td></tr>
 <tr class="memdesc:gad62e6e7fd9fde862c407f3d6613e6374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the frequency sampling for a grid given maximum dimension and maximum frequency.  <a href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">More...</a><br /></td></tr>
@@ -277,7 +285,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="psdUtils_8hpp.html">psdUtils.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

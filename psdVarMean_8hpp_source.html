@@ -126,226 +126,237 @@ $(document).ready(function(){initNavTree('psdVarMean_8hpp_source.html',''); init
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;boost/math/special_functions/bessel.hpp&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;boost/math/constants/constants.hpp&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using namespace </span>boost::math::constants;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl_integration.h&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl_errno.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl_integration.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl_errno.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;../math/func/bessel.hpp&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;../math/constants.hpp&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;../math/gslInterpolation.hpp&quot;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;mx/gslInterpolation.hpp&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;mx/sigproc/psdFilter.hpp&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="psdFilter_8hpp.html">psdFilter.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span>sigproc </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span>sigproc </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span class="comment"></span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/// Parameters for calculating the variance of the mean from a numerical PSD.</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span><span class="comment">/** Interpolates on the PSD for the integration.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">  *  \tparam realT the real floating point type of the frequency and PSD vectors. [Must be double due to GSL] </span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _realT&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">   56</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">psdVarMeanParams</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keyword">typedef</span> _realT realT;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">   60</a></span>&#160;   std::vector&lt;realT&gt; * freq {<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Pointer to the frequency vector</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">   61</a></span>&#160;<span class="comment"></span>   std::vector&lt;realT&gt; * psd {<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Pointer to the psd vector</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708">   62</a></span>&#160;<span class="comment"></span>   realT T {0}; <span class="comment">///&lt; The sample length (units appropriate for freq)</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>   </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2">   64</a></span>&#160;   realT minf {0}; <span class="comment">///&lt; The minimum frequency</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">   65</a></span>&#160;<span class="comment"></span>   realT maxf {0}; <span class="comment">///&lt; The maximum frequency</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span>   </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   realT extrapAlpha{0};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">   69</a></span>&#160;   <span class="keywordtype">bool</span> initialized {<span class="keyword">false</span>}; <span class="comment">///&lt; Flag controlling whether the interpolator is initialized</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>   </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a4b389a16b0e99c85b2ef18ff6018a192">   71</a></span>&#160;   mx::gslInterpolator&lt;realT&gt; <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a4b389a16b0e99c85b2ef18ff6018a192">terp</a>; <span class="comment">///&lt; Interpolator for the PSD</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>   <span class="comment"></span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">   /// Get the value of the PSD at k using interpolation</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span><span class="comment">   /** Extrapolates outside the range of frequencies in freq.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * Right now this is just constant. </span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     * \todo implement better extrapolation past max-freq.</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     */</span> </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">   79</a></span>&#160;   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">psdVal</a>( realT <a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a> <span class="comment">/**&lt; [in] The transformed frequency coordinate */</span>)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span>( !initialized )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;         <span class="keywordflow">if</span>(freq  == <span class="keyword">nullptr</span> || psd == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;         {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Vectors not set.\n&quot;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            exit(-1);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;         }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;         <span class="keywordflow">if</span>(T == 0)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;         {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;T not set.\n&quot;</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            exit(-1);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;         }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;         </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;         </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;         terp.setup(gsl_interp_steffen, *freq, *psd);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;         </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;         minf = (*freq)[0];</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;         maxf = (*freq)[freq-&gt;size()-1];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;         </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;         initialized = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      realT f = (2.0/T)*<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">if</span>(f &lt; minf) <span class="keywordflow">return</span> (*psd)[0];</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">if</span>(f &gt; maxf)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;         <span class="comment">//Enter extrapolation here</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         <span class="comment">//return 0;//(*psd)[psd-&gt;size()-1];</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;         <span class="keywordflow">if</span>(extrapAlpha == 0) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;         <span class="keywordflow">return</span> (*psd)[psd-&gt;size()-1] * pow( f/maxf, -1*extrapAlpha);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">return</span> terp(f);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/// Integration worker function for psdVarMean::operator()</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">  * \tparam paramsT the type of the parameter structure. See psdVarMean.</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">  * \returns the value of the integrand at k</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> paramsT&gt;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f">  127</a></span>&#160;<span class="keyword">typename</span> paramsT::realT <a class="code" href="psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f">psdVarMeanFunc</a>( <span class="keyword">typename</span> paramsT::realT <a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>, <span class="comment">///&lt; [in] the scaled frequency coordinate</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"></span>                                        <span class="keywordtype">void</span> * params              <span class="comment">///&lt; [in] pointer to the parameter structure</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span>                                      )</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> paramsT::realT realT;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   paramsT * pvar = (paramsT *) params;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   realT J = boost::math::cyl_bessel_j(0.5, two_pi&lt;realT&gt;()*<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   <span class="keywordflow">return</span> J*J/<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>*pvar-&gt;psdVal(<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">/// Calculate the variance of the mean for a process given its PSD </span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"></span><span class="comment">/** Functor which manages the GSL integration workspace memory.</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">  * \todo document the paramsT interface</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">  * \tparam paramsT is a parameter structure with the correct interface.</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> paramsT&gt;</div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html">  149</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html">psdVarMean</a></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> paramsT::realT realT;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;   </div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a6ac87e5bf647c039cf835afca7929166">  153</a></span>&#160;   realT extrapAlpha {0}; <span class="comment">///&lt; The extrapolation exponent.  No extrapolation if 0.</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span>   </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">  156</a></span>&#160;   gsl_integration_workspace * w {<span class="keyword">nullptr</span>}; <span class="comment">///&lt; The GSL integration workspace memory</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"></span>      </div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">  158</a></span>&#160;   <span class="keywordtype">size_t</span> wSize {10000}; <span class="comment">///&lt; The size of the GSL workspace</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"></span>   <span class="comment"></span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">   /// Initializes the gsl library.</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">  161</a></span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">init</a>()</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;   {<span class="comment"></span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">      ///\todo We&#39;ll get the occasional failure to reach tolerance error, just ignore them all for now.</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"></span>      gsl_set_error_handler_off();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;   }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">   /// Default c&#39;tor</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#aca318713f1c5987c7becbc1cc4990014">  169</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#aca318713f1c5987c7becbc1cc4990014">psdVarMean</a>() </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;   {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      init();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;   } </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">   /// Constructor which initializes workspace size</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#ae1d121621ec4be0e9bafb37724d7af0b">  175</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#ae1d121621ec4be0e9bafb37724d7af0b">psdVarMean</a>( <span class="keywordtype">size_t</span> wm <span class="comment">/**&lt; [in] Size of the GSL integration workspace*/</span>)</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;   {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      init();</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      wSize = wm;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;   }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">   /// d&#39;tor cleans up the workspace memory</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a014c4e22353ece20ef66725f8120218e">  182</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a014c4e22353ece20ef66725f8120218e">~psdVarMean</a>()</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;   {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;         gsl_integration_workspace_free(w);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">   /// Calculate the variance of the mean for a psd over a sample length </span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"></span><span class="comment">   /** </span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">     * \returns the variance of the mean for the process governed by the PSD.</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">     */</span> </div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">  194</a></span>&#160;   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">operator()</a>( realT &amp; error,             <span class="comment">///&lt; [out] The error estimate returned by gsl_integration_qagiu </span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment"></span>                     std::vector&lt;realT&gt; &amp; freq, <span class="comment">///&lt; [in] The frequency vector</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"></span>                     std::vector&lt;realT&gt; &amp; psd,  <span class="comment">///&lt; [in] The psd vector</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"></span>                     realT T                    <span class="comment">///&lt; [in] The sample length (units approprate for freq)</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"></span>                   )</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;   {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">if</span>(w == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;         w = gsl_integration_workspace_alloc(wSize);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="comment">//Setup the integration parameters structure</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      paramsT pvar;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;   </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      pvar.freq = &amp;freq;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      pvar.psd = &amp;psd;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      pvar.T = T;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;   </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      pvar.extrapAlpha = extrapAlpha;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="comment">//Setup the function</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      gsl_function func;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      func.function = &amp;psdVarMeanFunc&lt;paramsT&gt;;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      func.params = &amp;pvar;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      realT result;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keywordtype">int</span> ec = gsl_integration_qagiu (&amp;func, 0.0, 1e-14, 1e-8, wSize, w, &amp;result, &amp;error);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(ec);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordflow">return</span> result/(2*T);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;   }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;};</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="comment"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/// Parameters for calculating the variance of the mean from a numerical PSD.</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span><span class="comment">/** Interpolates on the PSD for the integration.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  *  \tparam realT the real floating point type of the frequency and PSD vectors. [Must be double due to GSL] </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _realT&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">   54</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">psdVarMeanParams</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keyword">typedef</span> _realT realT;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">   58</a></span>&#160;   std::vector&lt;realT&gt; * <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">freq</a> {<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Pointer to the frequency vector</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">   59</a></span>&#160;<span class="comment"></span>   std::vector&lt;realT&gt; * <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a> {<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Pointer to the psd vector</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708">   60</a></span>&#160;<span class="comment"></span>   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708">T</a> {0}; <span class="comment">///&lt; The sample length (units appropriate for freq)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>   </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2">   62</a></span>&#160;   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2">minf</a> {0}; <span class="comment">///&lt; The minimum frequency</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">   63</a></span>&#160;<span class="comment"></span>   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">maxf</a> {0}; <span class="comment">///&lt; The maximum frequency</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>   </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   realT extrapAlpha{0};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">   67</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">initialized</a> {<span class="keyword">false</span>}; <span class="comment">///&lt; Flag controlling whether the interpolator is initialized</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>   </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">   69</a></span>&#160;   math::gslInterpolator&lt;realT&gt; <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">terp</a>; <span class="comment">///&lt; Interpolator for the PSD</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>   <span class="comment"></span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   /// Get the value of the PSD at k using interpolation</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span><span class="comment">   /** Extrapolates outside the range of frequencies in freq.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     * Right now this is just constant. </span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * \todo implement better extrapolation past max-freq.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     */</span> </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">   77</a></span>&#160;   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">psdVal</a>( realT <a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a> <span class="comment">/**&lt; [in] The transformed frequency coordinate */</span>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">if</span>( !<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">initialized</a> )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;         <span class="keywordflow">if</span>(<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">freq</a>  == <span class="keyword">nullptr</span> || <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;         {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Vectors not set.\n&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            exit(-1);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;         }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;         <span class="keywordflow">if</span>(<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708">T</a> == 0)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;         {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;T not set.\n&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            exit(-1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;         }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;         </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">         #ifdef MX_OLD_GSL</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;         <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">terp</a>.setup(gsl_interp_linear, *<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">freq</a>, *<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">         #else </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;         <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">terp</a>.setup(gsl_interp_steffen, *<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">freq</a>, *<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">         #endif</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;         <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2">minf</a> = (*freq)[0];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;         <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">maxf</a> = (*freq)[<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">freq</a>-&gt;size()-1];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;         </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;         <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">initialized</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      realT f = (2.0/<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708">T</a>)*<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">if</span>(f &lt; <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2">minf</a>) <span class="keywordflow">return</span> (*<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a>)[0];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordflow">if</span>(f &gt; <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">maxf</a>)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         <span class="comment">//Enter extrapolation here</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;         <span class="comment">//return 0;//(*psd)[psd-&gt;size()-1];</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         <span class="keywordflow">if</span>(extrapAlpha == 0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;         <span class="keywordflow">return</span> (*<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a>)[<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">psd</a>-&gt;size()-1] * pow( f/<a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">maxf</a>, -1*extrapAlpha);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">terp</a>(f);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">/// Integration worker function for psdVarMean::operator()</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">  * \tparam paramsT the type of the parameter structure. See psdVarMean.</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">  * \returns the value of the integrand at k</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> paramsT&gt;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f">  128</a></span>&#160;<span class="keyword">typename</span> paramsT::realT <a class="code" href="psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f">psdVarMeanFunc</a>( <span class="keyword">typename</span> paramsT::realT <a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>, <span class="comment">///&lt; [in] the scaled frequency coordinate</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span>                                        <span class="keywordtype">void</span> * params              <span class="comment">///&lt; [in] pointer to the parameter structure</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"></span>                                      )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> paramsT::realT realT;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   paramsT * pvar = (paramsT *) params;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   realT J = math::func::bessel_j&lt;realT, realT&gt;(0.5, math::two_pi&lt;realT&gt;()*<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   <span class="keywordflow">return</span> J*J/<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>*pvar-&gt;psdVal(<a class="code" href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">k</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">/// Calculate the variance of the mean for a process given its PSD </span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"></span><span class="comment">/** Functor which manages the GSL integration workspace memory.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">  * \todo document the paramsT interface</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">  * \tparam paramsT is a parameter structure with the correct interface.</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> paramsT&gt;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html">  150</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html">psdVarMean</a></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> paramsT::realT realT;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a6ac87e5bf647c039cf835afca7929166">  154</a></span>&#160;   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a6ac87e5bf647c039cf835afca7929166">extrapAlpha</a> {0}; <span class="comment">///&lt; The extrapolation exponent.  No extrapolation if 0.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"></span>   </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">  157</a></span>&#160;   gsl_integration_workspace * <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">w</a> {<span class="keyword">nullptr</span>}; <span class="comment">///&lt; The GSL integration workspace memory</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"></span>      </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">  159</a></span>&#160;   <span class="keywordtype">size_t</span> <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">wSize</a> {10000}; <span class="comment">///&lt; The size of the GSL workspace</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"></span>   <span class="comment"></span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">   /// Initializes the gsl library.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">  162</a></span>&#160;<span class="comment"></span>   <span class="keywordtype">void</span> <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">init</a>()</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   {<span class="comment"></span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">      ///\todo We&#39;ll get the occasional failure to reach tolerance error, just ignore them all for now.</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"></span>      gsl_set_error_handler_off();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;   </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">   /// Default c&#39;tor</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#aca318713f1c5987c7becbc1cc4990014">  170</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#aca318713f1c5987c7becbc1cc4990014">psdVarMean</a>() </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;   {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">init</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;   } </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">   /// Constructor which initializes workspace size</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#ae1d121621ec4be0e9bafb37724d7af0b">  176</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#ae1d121621ec4be0e9bafb37724d7af0b">psdVarMean</a>( <span class="keywordtype">size_t</span> wm <span class="comment">/**&lt; [in] Size of the GSL integration workspace*/</span>)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;   {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">init</a>();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">wSize</a> = wm;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">   /// d&#39;tor cleans up the workspace memory</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a014c4e22353ece20ef66725f8120218e">  183</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a014c4e22353ece20ef66725f8120218e">~psdVarMean</a>()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;   {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">w</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;         gsl_integration_workspace_free(<a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">w</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">   /// Calculate the variance of the mean for a psd over a sample length </span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"></span><span class="comment">   /** </span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">     * \returns the variance of the mean for the process governed by the PSD.</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">     */</span> </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">  195</a></span>&#160;   realT <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">operator()</a>( realT &amp; error,             <span class="comment">///&lt; [out] The error estimate returned by gsl_integration_qagiu </span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"></span>                     std::vector&lt;realT&gt; &amp; freq, <span class="comment">///&lt; [in] The frequency vector</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"></span>                     std::vector&lt;realT&gt; &amp; psd,  <span class="comment">///&lt; [in] The psd vector</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"></span>                     realT T                    <span class="comment">///&lt; [in] The sample length (units approprate for freq)</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span>                   )</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;   {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">w</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;         <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">w</a> = gsl_integration_workspace_alloc(<a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">wSize</a>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="comment">//Setup the integration parameters structure</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      paramsT pvar;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;   </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      pvar.freq = &amp;freq;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      pvar.psd = &amp;psd;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      pvar.T = T;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      pvar.extrapAlpha = <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a6ac87e5bf647c039cf835afca7929166">extrapAlpha</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <span class="comment">//Setup the function</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      gsl_function func;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      func.function = &amp;psdVarMeanFunc&lt;paramsT&gt;;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      func.params = &amp;pvar;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      realT result;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keywordtype">int</span> ec = gsl_integration_qagiu (&amp;func, 0.0, 1e-14, 1e-8, <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">wSize</a>, <a class="code" href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">w</a>, &amp;result, &amp;error);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(ec);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">return</span> result/(2*T);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;   }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;};</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;} <span class="comment">//namespace sigproc </span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#endif //psdVarMean_hpp</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;} <span class="comment">//namespace sigproc </span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif //psdVarMean_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a27784044ee2cceab3c45d72cbb5e2faa"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">mx::sigproc::psdVarMean::operator()</a></div><div class="ttdeci">realT operator()(realT &amp;error, std::vector&lt; realT &gt; &amp;freq, std::vector&lt; realT &gt; &amp;psd, realT T)</div><div class="ttdoc">Calculate the variance of the mean for a psd over a sample length.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00194">psdVarMean.hpp:194</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html">mx::sigproc::psdVarMeanParams</a></div><div class="ttdoc">Parameters for calculating the variance of the mean from a numerical PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00056">psdVarMean.hpp:56</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_aec94fd87f9ede9659ecaae6d6f34620e"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">mx::sigproc::psdVarMean::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initializes the gsl library.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00161">psdVarMean.hpp:161</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_aca318713f1c5987c7becbc1cc4990014"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#aca318713f1c5987c7becbc1cc4990014">mx::sigproc::psdVarMean::psdVarMean</a></div><div class="ttdeci">psdVarMean()</div><div class="ttdoc">Default c'tor.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00169">psdVarMean.hpp:169</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html">mx::sigproc::psdVarMean</a></div><div class="ttdoc">Calculate the variance of the mean for a process given its PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00149">psdVarMean.hpp:149</a></div></div>
-<div class="ttc" id="agroup__dimensioned__constants_html_gaff0edddeb4620b93d42c08d638627506"><div class="ttname"><a href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">mx::astro::constants::k</a></div><div class="ttdeci">constexpr units::realT k()</div><div class="ttdoc">Boltzmann Constant.</div><div class="ttdef"><b>Definition:</b> <a href="constants_8hpp_source.html#l00071">constants.hpp:71</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_ae1d121621ec4be0e9bafb37724d7af0b"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#ae1d121621ec4be0e9bafb37724d7af0b">mx::sigproc::psdVarMean::psdVarMean</a></div><div class="ttdeci">psdVarMean(size_t wm)</div><div class="ttdoc">Constructor which initializes workspace size.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00175">psdVarMean.hpp:175</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a014c4e22353ece20ef66725f8120218e"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a014c4e22353ece20ef66725f8120218e">mx::sigproc::psdVarMean::~psdVarMean</a></div><div class="ttdeci">~psdVarMean()</div><div class="ttdoc">d'tor cleans up the workspace memory</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00182">psdVarMean.hpp:182</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a4b389a16b0e99c85b2ef18ff6018a192"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a4b389a16b0e99c85b2ef18ff6018a192">mx::sigproc::psdVarMeanParams::terp</a></div><div class="ttdeci">mx::gslInterpolator&lt; realT &gt; terp</div><div class="ttdoc">Interpolator for the PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00071">psdVarMean.hpp:71</a></div></div>
-<div class="ttc" id="apsdVarMean_8hpp_html_af60e94a3fe233a42176dfe22bed8a36f"><div class="ttname"><a href="psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f">mx::sigproc::psdVarMeanFunc</a></div><div class="ttdeci">paramsT::realT psdVarMeanFunc(typename paramsT::realT k, void *params)</div><div class="ttdoc">Integration worker function for psdVarMean::operator()</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00127">psdVarMean.hpp:127</a></div></div>
-<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a0703eb92f39460580679099509b795d1"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">mx::sigproc::psdVarMeanParams::psdVal</a></div><div class="ttdeci">realT psdVal(realT k)</div><div class="ttdoc">Get the value of the PSD at k using interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00079">psdVarMean.hpp:79</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_acbab8d0874761fa06b69cc979eef82ac"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac">mx::sigproc::psdVarMeanParams::psd</a></div><div class="ttdeci">std::vector&lt; realT &gt; * psd</div><div class="ttdoc">Pointer to the psd vector.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00059">psdVarMean.hpp:59</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a27784044ee2cceab3c45d72cbb5e2faa"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">mx::sigproc::psdVarMean::operator()</a></div><div class="ttdeci">realT operator()(realT &amp;error, std::vector&lt; realT &gt; &amp;freq, std::vector&lt; realT &gt; &amp;psd, realT T)</div><div class="ttdoc">Calculate the variance of the mean for a psd over a sample length.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00195">psdVarMean.hpp:195</a></div></div>
+<div class="ttc" id="apsdFilter_8hpp_html"><div class="ttname"><a href="psdFilter_8hpp.html">psdFilter.hpp</a></div><div class="ttdoc">Declares and defines a class for filtering with PSDs.</div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a6ac87e5bf647c039cf835afca7929166"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a6ac87e5bf647c039cf835afca7929166">mx::sigproc::psdVarMean::extrapAlpha</a></div><div class="ttdeci">realT extrapAlpha</div><div class="ttdoc">The extrapolation exponent. No extrapolation if 0.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00154">psdVarMean.hpp:154</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html">mx::sigproc::psdVarMeanParams</a></div><div class="ttdoc">Parameters for calculating the variance of the mean from a numerical PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00054">psdVarMean.hpp:54</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a5a563a4fb64f104a40f18dacf263d2ee"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a5a563a4fb64f104a40f18dacf263d2ee">mx::sigproc::psdVarMeanParams::freq</a></div><div class="ttdeci">std::vector&lt; realT &gt; * freq</div><div class="ttdoc">Pointer to the frequency vector.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00058">psdVarMean.hpp:58</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_aec94fd87f9ede9659ecaae6d6f34620e"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">mx::sigproc::psdVarMean::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initializes the gsl library.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00162">psdVarMean.hpp:162</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a0109c95cfd363637d20902a3dde95b35"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">mx::sigproc::psdVarMeanParams::terp</a></div><div class="ttdeci">math::gslInterpolator&lt; realT &gt; terp</div><div class="ttdoc">Interpolator for the PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00069">psdVarMean.hpp:69</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_ac9cd9efd5e11f7e85448da62b909536a"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ac9cd9efd5e11f7e85448da62b909536a">mx::sigproc::psdVarMeanParams::maxf</a></div><div class="ttdeci">realT maxf</div><div class="ttdoc">The maximum frequency.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00063">psdVarMean.hpp:63</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_aca318713f1c5987c7becbc1cc4990014"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#aca318713f1c5987c7becbc1cc4990014">mx::sigproc::psdVarMean::psdVarMean</a></div><div class="ttdeci">psdVarMean()</div><div class="ttdoc">Default c'tor.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00170">psdVarMean.hpp:170</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a8e309a079ee35e6f4312b7566b3ae767"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">mx::sigproc::psdVarMeanParams::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdoc">Flag controlling whether the interpolator is initialized.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00067">psdVarMean.hpp:67</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html">mx::sigproc::psdVarMean</a></div><div class="ttdoc">Calculate the variance of the mean for a process given its PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00150">psdVarMean.hpp:150</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a3801c99d355eccb34e815caefa0b91b2"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2">mx::sigproc::psdVarMeanParams::minf</a></div><div class="ttdeci">realT minf</div><div class="ttdoc">The minimum frequency.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00062">psdVarMean.hpp:62</a></div></div>
+<div class="ttc" id="agroup__dimensioned__constants_html_gaff0edddeb4620b93d42c08d638627506"><div class="ttname"><a href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">mx::astro::constants::k</a></div><div class="ttdeci">constexpr units::realT k()</div><div class="ttdoc">Boltzmann Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00071">constants.hpp:71</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_ae1d121621ec4be0e9bafb37724d7af0b"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#ae1d121621ec4be0e9bafb37724d7af0b">mx::sigproc::psdVarMean::psdVarMean</a></div><div class="ttdeci">psdVarMean(size_t wm)</div><div class="ttdoc">Constructor which initializes workspace size.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00176">psdVarMean.hpp:176</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a014c4e22353ece20ef66725f8120218e"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a014c4e22353ece20ef66725f8120218e">mx::sigproc::psdVarMean::~psdVarMean</a></div><div class="ttdeci">~psdVarMean()</div><div class="ttdoc">d'tor cleans up the workspace memory</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00183">psdVarMean.hpp:183</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_aa8255f638f815e6005ddad6ffcfbd708"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708">mx::sigproc::psdVarMeanParams::T</a></div><div class="ttdeci">realT T</div><div class="ttdoc">The sample length (units appropriate for freq)</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00060">psdVarMean.hpp:60</a></div></div>
+<div class="ttc" id="apsdVarMean_8hpp_html_af60e94a3fe233a42176dfe22bed8a36f"><div class="ttname"><a href="psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f">mx::sigproc::psdVarMeanFunc</a></div><div class="ttdeci">paramsT::realT psdVarMeanFunc(typename paramsT::realT k, void *params)</div><div class="ttdoc">Integration worker function for psdVarMean::operator()</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00128">psdVarMean.hpp:128</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a9310aa21808dbc68f0e6519c24fa459b"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a9310aa21808dbc68f0e6519c24fa459b">mx::sigproc::psdVarMean::wSize</a></div><div class="ttdeci">size_t wSize</div><div class="ttdoc">The size of the GSL workspace.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00159">psdVarMean.hpp:159</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMean_html_a0da6168cd6ca16dbf0ac260a20993fd0"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMean.html#a0da6168cd6ca16dbf0ac260a20993fd0">mx::sigproc::psdVarMean::w</a></div><div class="ttdeci">gsl_integration_workspace * w</div><div class="ttdoc">The GSL integration workspace memory.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00157">psdVarMean.hpp:157</a></div></div>
+<div class="ttc" id="astructmx_1_1sigproc_1_1psdVarMeanParams_html_a0703eb92f39460580679099509b795d1"><div class="ttname"><a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">mx::sigproc::psdVarMeanParams::psdVal</a></div><div class="ttdeci">realT psdVal(realT k)</div><div class="ttdoc">Get the value of the PSD at k using interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="psdVarMean_8hpp_source.html#l00077">psdVarMean.hpp:77</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="psdVarMean_8hpp.html">psdVarMean.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

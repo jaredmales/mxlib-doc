@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mapiterator_3586',['mapIterator',['../classmx_1_1improc_1_1fitsHeader.html#a72ff1916c914275a9b009afef7c29eb7',1,'mx::improc::fitsHeader']]]
+  ['mapiterator_3681',['mapIterator',['../classmx_1_1fits_1_1fitsHeader.html#a4c00c7d955dd9fa7d393605436f24952',1,'mx::fits::fitsHeader']]]
 ];

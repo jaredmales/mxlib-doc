@@ -5,13 +5,8 @@ var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
     [ "aperturePhotometer.hpp", "aperturePhotometer_8hpp.html", [
       [ "aperturePhotometer", "classmx_1_1improc_1_1aperturePhotometer.html", "classmx_1_1improc_1_1aperturePhotometer" ]
     ] ],
-    [ "ds9Interface.hpp", "ds9Interface_8hpp.html", "ds9Interface_8hpp" ],
     [ "eigenCube.hpp", "eigenCube_8hpp.html", null ],
     [ "eigenImage.hpp", "eigenImage_8hpp.html", "eigenImage_8hpp" ],
-    [ "fitsFile.hpp", "fitsFile_8hpp.html", "fitsFile_8hpp" ],
-    [ "fitsHeader.hpp", "fitsHeader_8hpp.html", "fitsHeader_8hpp" ],
-    [ "fitsHeaderCard.hpp", "fitsHeaderCard_8hpp.html", null ],
-    [ "fitsUtils.hpp", "fitsUtils_8hpp.html", "fitsUtils_8hpp" ],
     [ "HCIobservation.hpp", "HCIobservation_8hpp.html", "HCIobservation_8hpp" ],
     [ "imageFilters.hpp", "imageFilters_8hpp.html", "imageFilters_8hpp" ],
     [ "imageMasks.hpp", "imageMasks_8hpp.html", "imageMasks_8hpp" ],
@@ -21,5 +16,6 @@ var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
     [ "imageXCorrDiscrete.hpp", "imageXCorrDiscrete_8hpp.html", null ],
     [ "imageXCorrFFT.hpp", "imageXCorrFFT_8hpp.html", null ],
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],
+    [ "improc.hpp", "improc_8hpp_source.html", null ],
     [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", "KLIPreduction_8hpp" ]
 ];

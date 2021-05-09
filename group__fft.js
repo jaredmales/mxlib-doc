@@ -1,30 +1,29 @@
 var group__fft =
 [
-    [ "fftT< _inputT, _outputT, _rank, 0 >", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html", [
-      [ "fftT", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aa0dcbad550e5b7eb988e6c609a374689", null ],
-      [ "fftT", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#addbc08330ddd770b9b1828e85582e40e", null ],
-      [ "fftT", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a248b4f56dc27ba7a2ade2b56ade232ae", null ],
-      [ "~fftT", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ad8740ccb2685c0cd76f82cb3ce2ab588", null ],
-      [ "destroyPlan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a83f3e9b3f1356a16ac976dc53fff98a7", null ],
-      [ "dir", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#abb6557b7f1dae5e9029edc1788210adf", null ],
-      [ "doPlan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a55bf209c90fe00c47ef32411588a6d4a", null ],
-      [ "doPlan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a80010d4dd3d40a23c60b219ad7320a0e", null ],
-      [ "operator()", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ac961363595f28b6a21ec54d165d79e57", null ],
-      [ "plan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ae5c02849741bdcff71a5cbb35926f6bc", null ],
-      [ "plan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a20fbafa71440f1f9b2e5637809d9ae4e", null ],
-      [ "plan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a9bc381e5158bf830b61617b08c12438e", null ],
-      [ "m_dir", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a106dd2ef5a55c2efab26a575a96e33a3", null ],
-      [ "m_plan", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ab5f0d84577b4ff07d8274447dca5dea5", null ],
-      [ "m_szX", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a0e62791cbf7b89c70d9d8210773ee72a", null ],
-      [ "m_szY", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ac8630a52d6c75076d1d7bc1c82fdbe5d", null ],
-      [ "m_szZ", "classmx_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a9fb00c3dfda186984dc35bc70bee0495", null ]
+    [ "fftT< _inputT, _outputT, _rank, 0 >", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html", [
+      [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a33ed2bf4eb9c4f88a93bef53249373bb", null ],
+      [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a7e8e16de205250e15428efe328d9e56e", null ],
+      [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a21cbda87f430a270f5c2cf69f3fa81c1", null ],
+      [ "~fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ab1b4b04a67ffb325134afadbe829b9c4", null ],
+      [ "destroyPlan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a0b6899c672d0cb92eb6301a72b373433", null ],
+      [ "dir", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ad791a4680766d0d4f6309c6ab0ac2702", null ],
+      [ "doPlan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a0146814ac232ce58fb91a5f8fd77690a", null ],
+      [ "doPlan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#af4683a059a8907850e7316be6e4c31e8", null ],
+      [ "operator()", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a11efb50d3d887e4aa1e2a1bf6746f477", null ],
+      [ "plan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aa858c7154ddf8dc09121b715717864e2", null ],
+      [ "plan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a841e668725040e312c14a76eea1a34be", null ],
+      [ "plan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a7cd03153c371a18a7627b9e9af90ba88", null ],
+      [ "m_dir", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a63c737080201997c72f617136e2808c5", null ],
+      [ "m_plan", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ae2c0b37bddffbfff48bf3b25f3981652", null ],
+      [ "m_szX", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aeb5b4f904ea150f8211ab859ae361570", null ],
+      [ "m_szY", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a32c392a8b34ba3747807e99271fccbe7", null ],
+      [ "m_szZ", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a321462775601cec870173164b60083ad", null ]
     ] ],
-    [ "fftwEnvironment", "structmx_1_1fftwEnvironment.html", [
-      [ "fftwEnvironment", "structmx_1_1fftwEnvironment.html#a035e4cb3691a23fad3cef966f3c00780", null ]
+    [ "fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html", [
+      [ "fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html#a872344a04b0783e42bc8681c51b3c009", null ]
     ] ],
     [ "Template FFTW", "group__fftw__templates.html", "group__fftw__templates" ],
     [ "Getting FFTW", "group__fftw.html", null ],
-    [ "FFT Files", "group__fft__files.html", "group__fft__files" ],
-    [ "fftw_typename", "group__fft.html#gac788e3ca363b84d4d533b54113208613", null ],
-    [ "fftw_wisdom_filename", "group__fft.html#ga8ac65ee6e3c92a301a7c514eeadd4487", null ]
+    [ "fftw_typename", "group__fft.html#ga9bd30e5f787e9169b9ac5e7b222aa915", null ],
+    [ "fftw_wisdom_filename", "group__fft.html#ga425a5e598b3a57b1b1d0ffd83a8ffe6b", null ]
 ];

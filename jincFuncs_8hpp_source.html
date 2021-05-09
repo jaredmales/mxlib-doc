@@ -103,8 +103,8 @@ $(document).ready(function(){initNavTree('jincFuncs_8hpp_source.html',''); initR
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef jincFuncs_hpp</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define jincFuncs_hpp</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;mx/math/func/jinc.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../math/constants.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../math/func/jinc.hpp&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
@@ -132,9 +132,9 @@ $(document).ready(function(){initNavTree('jincFuncs_8hpp_source.html',''); initR
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   realT kp = sqrt( pow(ku + mmode,2) + pow(kv + nmode,2) );</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   realT km = sqrt( pow(ku - mmode,2) + pow(kv - nmode,2) );</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   Jp = <a class="code" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">math::func::jinc</a>(pi&lt;realT&gt;()*kp);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   Jp = <a class="code" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">math::func::jinc</a>(math::pi&lt;realT&gt;()*kp);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   Jm = <a class="code" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">math::func::jinc</a>(pi&lt;realT&gt;()*km);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   Jm = <a class="code" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">math::func::jinc</a>(math::pi&lt;realT&gt;()*km);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
@@ -150,13 +150,13 @@ $(document).ready(function(){initNavTree('jincFuncs_8hpp_source.html',''); initR
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="ajincFuncs_8hpp_html_a9853ebc9756a47116c467720dd36d632"><div class="ttname"><a href="jincFuncs_8hpp.html#a9853ebc9756a47116c467720dd36d632">mx::AO::analysis::jincFuncs</a></div><div class="ttdeci">int jincFuncs(realT &amp;Jp, realT &amp;Jm, int mpos, int npos, int mmode, int nmode)</div><div class="ttdoc">The +/- Jinc functions for analyzing contrast.</div><div class="ttdef"><b>Definition:</b> <a href="jincFuncs_8hpp_source.html#l00026">jincFuncs.hpp:26</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
-<div class="ttc" id="agroup__functions_html_gaf7e3e0d052049a12fd7d4e0190cf5602"><div class="ttname"><a href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">mx::math::func::jinc</a></div><div class="ttdeci">T jinc(const T &amp;x)</div><div class="ttdoc">Returns the the Jinc function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00062">jinc.hpp:62</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
+<div class="ttc" id="agroup__functions_html_gaf7e3e0d052049a12fd7d4e0190cf5602"><div class="ttname"><a href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">mx::math::func::jinc</a></div><div class="ttdeci">T jinc(const T &amp;x)</div><div class="ttdoc">Returns the the Jinc function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00064">jinc.hpp:64</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_cf528a69cdca6105739343681d2398d1.html">analysis</a></li><li class="navelem"><a class="el" href="jincFuncs_8hpp.html">jincFuncs.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

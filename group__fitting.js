@@ -57,6 +57,5 @@ var group__fitting =
       [ "ny", "structmx_1_1math_1_1fit_1_1array2Fit.html#a7f557ce7c296b32b7781274d0589cbfb", null ]
     ] ],
     [ "Peak Fitting", "group__peak__fit.html", "group__peak__fit" ],
-    [ "Fitting Files", "group__fitting__files.html", "group__fitting__files" ],
     [ "The levmar library", "group__levmar.html", null ]
 ];

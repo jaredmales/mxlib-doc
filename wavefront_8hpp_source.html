@@ -102,8 +102,8 @@ $(document).ready(function(){initNavTree('wavefront_8hpp_source.html',''); initR
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma GCC system_header</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;mx/imagingArray.hpp&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;mx/wfp/imagingUtils.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../wfp/imagingArray.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../wfp/imagingUtils.hpp&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemx.html">mx</a></div>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('wavefront_8hpp_source.html',''); initR
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">   31</a></span>&#160;<span class="comment"></span>   <span class="keyword">typedef</span>  Eigen::Array&lt;_realT, Eigen::Dynamic, Eigen::Dynamic&gt;  <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a>; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">   ///The wavefront data type</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ab2bc7827da2013e71a2786a9284c91af">   34</a></span>&#160;<span class="comment"></span>   <span class="keyword">typedef</span> mx::imagingArray&lt;std::complex&lt;realT&gt;,fftwAllocator&lt;std::complex&lt;realT&gt; &gt;, 0&gt; <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ab2bc7827da2013e71a2786a9284c91af">complexAmplitudeT</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structmx_1_1AO_1_1sim_1_1wavefront.html#aefc5fb6390e44524dc07973a31fdbeb2">   34</a></span>&#160;<span class="comment"></span>   <span class="keyword">typedef</span> wfp::imagingArray&lt;std::complex&lt;realT&gt;, wfp::fftwAllocator&lt;std::complex&lt;realT&gt; &gt;, 0&gt; <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#aefc5fb6390e44524dc07973a31fdbeb2">complexAmplitudeT</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <span class="comment"></span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">   ///The wavefront amplitude</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">   37</a></span>&#160;<span class="comment"></span>   <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a>;</div>
@@ -147,59 +147,58 @@ $(document).ready(function(){initNavTree('wavefront_8hpp_source.html',''); initR
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a>.setZero();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordtype">void</span> setAmplitude(<span class="keyword">const</span> <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> &amp; amp)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a> = amp;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordtype">void</span> setPhase(<span class="keyword">const</span> <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> &amp; ph)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a> = ph;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordtype">void</span> getWavefront(<a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ab2bc7827da2013e71a2786a9284c91af">complexAmplitudeT</a> &amp; wf, <span class="keywordtype">int</span> wfSz)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="group__imaging.html#ga8cc3db912b30e0e8ce4aec335d6e3421">wfp::makeComplexPupil</a>( wf, <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a>, <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a>, wfSz); </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">void</span> getWavefront( <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ab2bc7827da2013e71a2786a9284c91af">complexAmplitudeT</a> &amp; wf, </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a9f100ffb54dcb74a67cc5b4cac0038c9">realT</a> dlambda, </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                      <span class="keywordtype">int</span> wfSz</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    )</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> dphase = <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a>*(<a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a20254e9961f6b5f46ddee3a6895ddb85">lambda</a>/dlambda);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="group__imaging.html#ga8cc3db912b30e0e8ce4aec335d6e3421">wfp::makeComplexPupil</a>( wf, <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a>, dphase, wfSz); </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keywordtype">void</span> setAmplitude(<span class="keyword">const</span> <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> &amp; amp)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a> = amp;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordtype">void</span> setPhase(<span class="keyword">const</span> <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> &amp; ph)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a> = ph;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keywordtype">void</span> getWavefront(<a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#aefc5fb6390e44524dc07973a31fdbeb2">complexAmplitudeT</a> &amp; wf, <span class="keywordtype">int</span> wfSz)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="group__imaging.html#ga8cc3db912b30e0e8ce4aec335d6e3421">wfp::makeComplexPupil</a>( wf, <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a>, <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a>, wfSz); </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keywordtype">void</span> getWavefront( <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#aefc5fb6390e44524dc07973a31fdbeb2">complexAmplitudeT</a> &amp; wf, </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a9f100ffb54dcb74a67cc5b4cac0038c9">realT</a> dlambda, </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                      <span class="keywordtype">int</span> wfSz</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">realImageT</a> dphase = <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">phase</a>*(<a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a20254e9961f6b5f46ddee3a6895ddb85">lambda</a>/dlambda);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="group__imaging.html#ga8cc3db912b30e0e8ce4aec335d6e3421">wfp::makeComplexPupil</a>( wf, <a class="code" href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">amplitude</a>, dphase, wfSz); </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">//namespace sim</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">//namespace AO</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">//namespace sim</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">//namespace AO</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_a4acdb8ce290cca912ed8bbc812039a80"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#a4acdb8ce290cca912ed8bbc812039a80">mx::AO::sim::wavefront::amplitude</a></div><div class="ttdeci">realImageT amplitude</div><div class="ttdoc">The wavefront amplitude.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00037">wavefront.hpp:37</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_a9449f30d83b93b664a6e051c5f90d62e"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#a9449f30d83b93b664a6e051c5f90d62e">mx::AO::sim::wavefront::setZero</a></div><div class="ttdeci">void setZero()</div><div class="ttdoc">Zero the wavefront.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00049">wavefront.hpp:49</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html">mx::AO::sim::wavefront</a></div><div class="ttdoc">Structure containing the phase and amplitude of a wavefront</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00025">wavefront.hpp:25</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_a9f100ffb54dcb74a67cc5b4cac0038c9"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#a9f100ffb54dcb74a67cc5b4cac0038c9">mx::AO::sim::wavefront::realT</a></div><div class="ttdeci">_realT realT</div><div class="ttdoc">The floating point type used for all calculations.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00028">wavefront.hpp:28</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
-<div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_ab2bc7827da2013e71a2786a9284c91af"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#ab2bc7827da2013e71a2786a9284c91af">mx::AO::sim::wavefront::complexAmplitudeT</a></div><div class="ttdeci">mx::imagingArray&lt; std::complex&lt; realT &gt;, fftwAllocator&lt; std::complex&lt; realT &gt; &gt;, 0 &gt; complexAmplitudeT</div><div class="ttdoc">The wavefront data type.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00034">wavefront.hpp:34</a></div></div>
-<div class="ttc" id="agroup__imaging_html_ga8cc3db912b30e0e8ce4aec335d6e3421"><div class="ttname"><a href="group__imaging.html#ga8cc3db912b30e0e8ce4aec335d6e3421">mx::wfp::makeComplexPupil</a></div><div class="ttdeci">void makeComplexPupil(arrayOutT &amp;complexPupil, const arrayInT &amp;realPupil, int wavefrontSizePixels)</div><div class="ttdoc">Create a complex pupil plane wavefront from a real amplitude mask.</div><div class="ttdef"><b>Definition:</b> <a href="imagingUtils_8hpp_source.html#l00181">imagingUtils.hpp:181</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
+<div class="ttc" id="agroup__imaging_html_ga8cc3db912b30e0e8ce4aec335d6e3421"><div class="ttname"><a href="group__imaging.html#ga8cc3db912b30e0e8ce4aec335d6e3421">mx::wfp::makeComplexPupil</a></div><div class="ttdeci">void makeComplexPupil(arrayOutT &amp;complexPupil, const arrayInT &amp;realPupil, int wavefrontSizePixels)</div><div class="ttdoc">Create a complex pupil plane wavefront from a real amplitude mask.</div><div class="ttdef"><b>Definition:</b> <a href="imagingUtils_8hpp_source.html#l00183">imagingUtils.hpp:183</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_ae39b6ba6a7e1d09ef0221c9dc06871bf"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#ae39b6ba6a7e1d09ef0221c9dc06871bf">mx::AO::sim::wavefront::phase</a></div><div class="ttdeci">realImageT phase</div><div class="ttdoc">The wavefront phase.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00040">wavefront.hpp:40</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_a20254e9961f6b5f46ddee3a6895ddb85"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#a20254e9961f6b5f46ddee3a6895ddb85">mx::AO::sim::wavefront::lambda</a></div><div class="ttdeci">realT lambda</div><div class="ttdoc">The wavelength at which the wavefront is specified.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00043">wavefront.hpp:43</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_a730a345878d3b101b6b64dd40da36339"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#a730a345878d3b101b6b64dd40da36339">mx::AO::sim::wavefront::realImageT</a></div><div class="ttdeci">Eigen::Array&lt; _realT, Eigen::Dynamic, Eigen::Dynamic &gt; realImageT</div><div class="ttdoc">The data type of the real image, used to hold the phase and amplitude.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00031">wavefront.hpp:31</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_aa51a0cd10a565c7f90dae6e7841bb874"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#aa51a0cd10a565c7f90dae6e7841bb874">mx::AO::sim::wavefront::iterNo</a></div><div class="ttdeci">realT iterNo</div><div class="ttdoc">The iteration number of this wavefront.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00046">wavefront.hpp:46</a></div></div>
+<div class="ttc" id="astructmx_1_1AO_1_1sim_1_1wavefront_html_aefc5fb6390e44524dc07973a31fdbeb2"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1wavefront.html#aefc5fb6390e44524dc07973a31fdbeb2">mx::AO::sim::wavefront::complexAmplitudeT</a></div><div class="ttdeci">wfp::imagingArray&lt; std::complex&lt; realT &gt;, wfp::fftwAllocator&lt; std::complex&lt; realT &gt; &gt;, 0 &gt; complexAmplitudeT</div><div class="ttdoc">The wavefront data type.</div><div class="ttdef"><b>Definition:</b> <a href="wavefront_8hpp_source.html#l00034">wavefront.hpp:34</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_082cbf2913457a01d654a9fdfc0ec78a.html">sim</a></li><li class="navelem"><b>wavefront.hpp</b></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:09 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

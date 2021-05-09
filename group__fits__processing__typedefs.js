@@ -1,12 +1,12 @@
 var group__fits__processing__typedefs =
 [
-    [ "fitsFilec", "group__fits__processing__typedefs.html#gae441bf333c0da52071b31bf9f367b03f", null ],
-    [ "fitsFiled", "group__fits__processing__typedefs.html#gadea7e3107c8ea9260ada836cfc9f1d21", null ],
-    [ "fitsFilef", "group__fits__processing__typedefs.html#ga2898f253c0ca0eae5f6353c6ee4cb51a", null ],
-    [ "fitsFilei", "group__fits__processing__typedefs.html#gae7d4d92f6e73d0fd438d60d10da346f8", null ],
-    [ "fitsFilel", "group__fits__processing__typedefs.html#ga8427826af10fde19323ba91f7a647916", null ],
-    [ "fitsFiles", "group__fits__processing__typedefs.html#ga76221c72a1c7fb82e6f02e3a657a5495", null ],
-    [ "fitsFileuc", "group__fits__processing__typedefs.html#gac4e9637fad47f9a4a2b33e7aa81c1b38", null ],
-    [ "fitsFileui", "group__fits__processing__typedefs.html#ga7b164ebc7d5361458d8ca26cfdadf00d", null ],
-    [ "fitsFileus", "group__fits__processing__typedefs.html#gab9b6002dec4d8278b4f6e380ffbf0a6a", null ]
+    [ "fitsFilec", "group__fits__processing__typedefs.html#ga3fc2692ed89d1f1581401f81d82cdc19", null ],
+    [ "fitsFiled", "group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4", null ],
+    [ "fitsFilef", "group__fits__processing__typedefs.html#gafd3b6ec64781ac3b5bf5602fd67ab7c0", null ],
+    [ "fitsFilei", "group__fits__processing__typedefs.html#ga61b18b9d5bd704e4c9dbc5e75bd1aacc", null ],
+    [ "fitsFilel", "group__fits__processing__typedefs.html#ga296fd9ec23d5a33f8d3a001c48e6bddd", null ],
+    [ "fitsFiles", "group__fits__processing__typedefs.html#ga338a0c61a0a474043e2c52f98f0ba35b", null ],
+    [ "fitsFileuc", "group__fits__processing__typedefs.html#ga7e37919bc571f3de3c1a0ac0ce71f127", null ],
+    [ "fitsFileui", "group__fits__processing__typedefs.html#gaa48e4d2bb7f7b9c40dad60f41e19236b", null ],
+    [ "fitsFileus", "group__fits__processing__typedefs.html#ga2c1976198a94b51ed17efb79a5b4e586", null ]
 ];

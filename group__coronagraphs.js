@@ -20,7 +20,7 @@ var group__coronagraphs =
       [ "m_wholePixel", "structmx_1_1wfp_1_1idealCoronagraph.html#aaf8f077bd580a1a5bd4e654ea76a0375", null ]
     ] ],
     [ "lyotCoronagraph", "structmx_1_1wfp_1_1lyotCoronagraph.html", [
-      [ "complexFieldT", "structmx_1_1wfp_1_1lyotCoronagraph.html#ad87deb64792f526a7f65be02f12362b0", null ],
+      [ "complexFieldT", "structmx_1_1wfp_1_1lyotCoronagraph.html#a78aba3d81022a224b7259dfe5377654c", null ],
       [ "complexT", "structmx_1_1wfp_1_1lyotCoronagraph.html#a9a1ee7b9804c9342cbf71641a3afd220", null ],
       [ "fpmaskFloatT", "structmx_1_1wfp_1_1lyotCoronagraph.html#acc57edc733fc59bca303201374f5be1a", null ],
       [ "fpMaskT", "structmx_1_1wfp_1_1lyotCoronagraph.html#a734031ad71e16cd0fecae9b6be73c469", null ],

@@ -348,89 +348,95 @@ $(document).ready(function(){initNavTree('randomT_8hpp_source.html',''); initRes
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">  * @brief Return true if two exponential distributions have the same</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">  *        parameters.</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="randomT_8hpp.html#ae2897ab49433402954766c981b9d48ca">  256</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d1,</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                                    <span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d2)</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{ </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;   <span class="keywordflow">return</span> __d1.<a class="code" href="classmx_1_1math_1_1laplace__distribution.html#acc4a073be45e89d9b14aaae403eeb682">param</a>() == __d2.<a class="code" href="classmx_1_1math_1_1laplace__distribution.html#acc4a073be45e89d9b14aaae403eeb682">param</a>(); </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">  * @brief Return true if two exponential distributions have different</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">  *        parameters.</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24">  266</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d1,</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                                    <span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d2)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;{ </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;   <span class="keywordflow">return</span> !(__d1 == __d2); </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">  * @brief Inserts a %laplace_distribution random number distribution</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">  * @p __x into the output stream @p __os.</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">  * @param __os An output stream.</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">  * @param __x  A %laplace_distribution random number distribution.</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType&gt; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="randomT_8hpp.html#ae2897ab49433402954766c981b9d48ca">  257</a></span>&#160;<span class="keywordtype">bool</span> operator== ( <span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d1,</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d2</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{ </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;   <span class="keywordflow">return</span> __d1.<a class="code" href="classmx_1_1math_1_1laplace__distribution.html#acc4a073be45e89d9b14aaae403eeb682">param</a>() == __d2.<a class="code" href="classmx_1_1math_1_1laplace__distribution.html#acc4a073be45e89d9b14aaae403eeb682">param</a>(); </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">  * @brief Return true if two exponential distributions have different</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">  *        parameters.</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24">  268</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType&gt; <span class="keywordtype">bool</span> <a class="code" href="randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24">operator!=</a>( <span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d1,</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                              <span class="keyword">const</span> <a class="code" href="classmx_1_1math_1_1laplace__distribution.html">laplace_distribution&lt;_RealType&gt;</a>&amp; __d2</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                            )</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{ </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;   <span class="keywordflow">return</span> !(__d1 == __d2); </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">  * @brief Inserts a %laplace_distribution random number distribution</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">  * @p __x into the output stream @p __os.</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">  * @returns The output stream with the state of @p __x inserted or in</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">  * an error state.</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType, <span class="keyword">typename</span> _CharT, <span class="keyword">typename</span> _Traits&gt; std::basic_ostream&lt;_CharT, _Traits&gt;&amp;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;   operator&lt;&lt;(std::basic_ostream&lt;_CharT, _Traits&gt;&amp;, <span class="keyword">const</span> laplace_distribution&lt;_RealType&gt;&amp;);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">  * @brief Extracts a %laplace_distribution random number distribution</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">  * @p __x from the input stream @p __is.</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">  * @param __is An input stream.</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">  * @param __x A %laplace_distribution random number</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">  *            generator engine.</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">  * @returns The input stream with @p __x extracted or in an error state.</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType, <span class="keyword">typename</span> _CharT, <span class="keyword">typename</span> _Traits&gt; std::basic_istream&lt;_CharT, _Traits&gt;&amp;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;   operator&gt;&gt;(std::basic_istream&lt;_CharT, _Traits&gt;&amp;, laplace_distribution&lt;_RealType&gt;&amp;);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">/** \ingroup random</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"> * @{</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">///Alias for a uniform random variate</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9">  307</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">uniDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::uniform_real_distribution&lt;realT&gt;</a>&gt;;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">///Alias for a standard normal random variate</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="group__random.html#gab8e17d1c5c200c2a0a331d534d0234e0">  311</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">normDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::normal_distribution&lt;realT&gt;</a>&gt;;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">///Alias for an exponential random variate</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="group__random.html#gae8d6d7983466a93606409a1b102d75e1">  316</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">expDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::exponential_distribution&lt;realT&gt;</a>&gt;;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">///Alias for a laplace random variate</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="group__random.html#ga32bf2e66300b92d509cc33e15ba0f5a1">  320</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">lapDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, laplace_distribution&lt;realT&gt;</a>&gt;;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">///Alias for a poisson random variate</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">int</span>T&gt;</div>
-<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="group__random.html#ga3ddc6e269a1ccbbb0e6db4aec00639c1">  324</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">poissonDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;intT, std::mt19937_64, std::poisson_distribution&lt;intT&gt;</a>&gt;;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">/// @}</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">  * @param __os An output stream.</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">  * @param __x  A %laplace_distribution random number distribution.</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">  * @returns The output stream with the state of @p __x inserted or in</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">  * an error state.</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType, <span class="keyword">typename</span> _CharT, <span class="keyword">typename</span> _Traits&gt; std::basic_ostream&lt;_CharT, _Traits&gt;&amp;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;   operator&lt;&lt;(std::basic_ostream&lt;_CharT, _Traits&gt;&amp;, <span class="keyword">const</span> laplace_distribution&lt;_RealType&gt;&amp;);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">  * @brief Extracts a %laplace_distribution random number distribution</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">  * @p __x from the input stream @p __is.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">  * @param __is An input stream.</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">  * @param __x A %laplace_distribution random number</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">  *            generator engine.</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">  * @returns The input stream with @p __x extracted or in an error state.</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> _RealType, <span class="keyword">typename</span> _CharT, <span class="keyword">typename</span> _Traits&gt; std::basic_istream&lt;_CharT, _Traits&gt;&amp;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;   operator&gt;&gt;(std::basic_istream&lt;_CharT, _Traits&gt;&amp;, laplace_distribution&lt;_RealType&gt;&amp;);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">/** \ingroup random</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"> * @{</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">///Alias for a uniform random variate</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9">  310</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">uniDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::uniform_real_distribution&lt;realT&gt;</a>&gt;;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">///Alias for a standard normal random variate</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="group__random.html#gab8e17d1c5c200c2a0a331d534d0234e0">  314</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">normDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::normal_distribution&lt;realT&gt;</a>&gt;;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">///Alias for an exponential random variate</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="group__random.html#gae8d6d7983466a93606409a1b102d75e1">  319</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">expDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::exponential_distribution&lt;realT&gt;</a>&gt;;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">///Alias for a laplace random variate</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="group__random.html#ga32bf2e66300b92d509cc33e15ba0f5a1">  323</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">lapDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, laplace_distribution&lt;realT&gt;</a>&gt;;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">///Alias for a poisson random variate</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">int</span>T&gt;</div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="group__random.html#ga3ddc6e269a1ccbbb0e6db4aec00639c1">  327</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">poissonDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;intT, std::mt19937_64, std::poisson_distribution&lt;intT&gt;</a>&gt;;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;} <span class="comment">//namespace math</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">#endif //mx_math_randomT_hpp</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">/*5/22/06: added 64 bit mersenne twister support</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">///Alias for a log normal variate</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="group__random.html#ga4137d1ca980b2c2bdf5e5b1646a0b173">  331</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classmx_1_1math_1_1randomT.html">lognormDistT</a> = <a class="code" href="classmx_1_1math_1_1randomT.html">randomT&lt;realT, std::mt19937_64, std::lognormal_distribution&lt;realT&gt;</a>&gt;;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">/// @}</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;} <span class="comment">//namespace math</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">#endif //mx_math_randomT_hpp</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">/*5/22/06: added 64 bit mersenne twister support</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">*/</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructmx_1_1math_1_1laplace__distribution_1_1param__type_html"><div class="ttname"><a href="structmx_1_1math_1_1laplace__distribution_1_1param__type.html">mx::math::laplace_distribution::param_type</a></div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00145">randomT.hpp:145</a></div></div>
@@ -438,10 +444,10 @@ $(document).ready(function(){initNavTree('randomT_8hpp_source.html',''); initRes
 <div class="ttc" id="aclassmx_1_1math_1_1laplace__distribution_html_ad6a744881f148b8698785a4ce69e99c9"><div class="ttname"><a href="classmx_1_1math_1_1laplace__distribution.html#ad6a744881f148b8698785a4ce69e99c9">mx::math::laplace_distribution::operator()</a></div><div class="ttdeci">result_type operator()(_UniformRandomNumberGenerator &amp;__urng)</div><div class="ttdoc">Generating functions.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00226">randomT.hpp:226</a></div></div>
 <div class="ttc" id="arandomSeed_8hpp_html"><div class="ttname"><a href="randomSeed_8hpp.html">randomSeed.hpp</a></div><div class="ttdoc">Defines a random number seed generator.</div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1laplace__distribution_html_a5e9fb1ad37c41aa47c07648f31f6dac9"><div class="ttname"><a href="classmx_1_1math_1_1laplace__distribution.html#a5e9fb1ad37c41aa47c07648f31f6dac9">mx::math::laplace_distribution::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Resets the distribution state.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00180">randomT.hpp:180</a></div></div>
-<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="eigenUtils_8hpp_source.html#l00018">eigenUtils.hpp:18</a></div></div>
+<div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1randomT_html"><div class="ttname"><a href="classmx_1_1math_1_1randomT.html">mx::math::randomT</a></div><div class="ttdoc">A random number type, which functions like any other arithmetic type.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00060">randomT.hpp:60</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1randomT_html_acd1166e03e1d63c6e0f2d1ded1fd5de4"><div class="ttname"><a href="classmx_1_1math_1_1randomT.html#acd1166e03e1d63c6e0f2d1ded1fd5de4">mx::math::randomT&lt; realT &gt;::randistT</a></div><div class="ttdeci">_randistT randistT</div><div class="ttdoc">Typedef for the distribution type.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00066">randomT.hpp:66</a></div></div>
-<div class="ttc" id="arandomT_8hpp_html_a6d21ed82be23ab91bd75e5413dcb7c24"><div class="ttname"><a href="randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24">mx::math::operator!=</a></div><div class="ttdeci">bool operator!=(const laplace_distribution&lt; _RealType &gt; &amp;__d1, const laplace_distribution&lt; _RealType &gt; &amp;__d2)</div><div class="ttdoc">Return true if two exponential distributions have different parameters.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00266">randomT.hpp:266</a></div></div>
+<div class="ttc" id="arandomT_8hpp_html_a6d21ed82be23ab91bd75e5413dcb7c24"><div class="ttname"><a href="randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24">mx::math::operator!=</a></div><div class="ttdeci">bool operator!=(const laplace_distribution&lt; _RealType &gt; &amp;__d1, const laplace_distribution&lt; _RealType &gt; &amp;__d2)</div><div class="ttdoc">Return true if two exponential distributions have different parameters.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00268">randomT.hpp:268</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1laplace__distribution_html_acc4a073be45e89d9b14aaae403eeb682"><div class="ttname"><a href="classmx_1_1math_1_1laplace__distribution.html#acc4a073be45e89d9b14aaae403eeb682">mx::math::laplace_distribution::param</a></div><div class="ttdeci">param_type param() const</div><div class="ttdoc">Returns the parameter set of the distribution.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00193">randomT.hpp:193</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1randomT_html_aab8f687a74cad1b5fbde43ff6abb631a"><div class="ttname"><a href="classmx_1_1math_1_1randomT.html#aab8f687a74cad1b5fbde43ff6abb631a">mx::math::randomT&lt; realT &gt;::ranengT</a></div><div class="ttdeci">_ranengT ranengT</div><div class="ttdoc">Typedef for the engine type.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00069">randomT.hpp:69</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1laplace__distribution_html_a4c2c61de2feee1846ad18549d787504f"><div class="ttname"><a href="classmx_1_1math_1_1laplace__distribution.html#a4c2c61de2feee1846ad18549d787504f">mx::math::laplace_distribution::laplace_distribution</a></div><div class="ttdeci">laplace_distribution(const result_type &amp;__lambda=result_type(1))</div><div class="ttdoc">Constructs a Laplace (double exponential) distribution with inverse scale parameter .</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00171">randomT.hpp:171</a></div></div>
@@ -460,7 +466,7 @@ $(document).ready(function(){initNavTree('randomT_8hpp_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="randomT_8hpp.html">randomT.hpp</a></li>
-    <li class="footer">Generated on Wed Apr 28 2021 00:11:10 for mxlib by
+    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

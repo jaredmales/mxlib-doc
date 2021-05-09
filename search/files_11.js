@@ -1,14 +1,20 @@
 var searchData=
 [
-  ['templateblas_2ehpp_2163',['templateBLAS.hpp',['../templateBLAS_8hpp.html',1,'']]],
-  ['templatelapack_2ehpp_2164',['templateLapack.hpp',['../templateLapack_8hpp.html',1,'']]],
-  ['templatelevmar_2ehpp_2165',['templateLevmar.hpp',['../templateLevmar_8hpp.html',1,'']]],
-  ['texttable_2ehpp_2166',['textTable.hpp',['../textTable_8hpp.html',1,'']]],
-  ['timeutils_2ehpp_2167',['timeUtils.hpp',['../timeUtils_8hpp.html',1,'']]],
-  ['truefalset_2ehpp_2168',['trueFalseT.hpp',['../trueFalseT_8hpp.html',1,'']]],
-  ['turbatmosphere_2ehpp_2169',['turbAtmosphere.hpp',['../turbAtmosphere_8hpp.html',1,'']]],
-  ['turblayer_2ehpp_2170',['turbLayer.hpp',['../turbLayer_8hpp.html',1,'']]],
-  ['turbsequence_2ehpp_2171',['turbSequence.hpp',['../turbSequence_8hpp.html',1,'']]],
-  ['typedescription_2ehpp_2172',['typeDescription.hpp',['../typeDescription_8hpp.html',1,'']]],
-  ['typetraits_2ehpp_2173',['typeTraits.hpp',['../typeTraits_8hpp.html',1,'']]]
+  ['templateblas_2ehpp_2223',['templateBLAS.hpp',['../templateBLAS_8hpp.html',1,'']]],
+  ['templatecublas_2ehpp_2224',['templateCublas.hpp',['../templateCublas_8hpp.html',1,'']]],
+  ['templatecublas_5ftest_2ecpp_2225',['templateCublas_test.cpp',['../templateCublas__test_8cpp.html',1,'']]],
+  ['templatecuda_2ehpp_2226',['templateCuda.hpp',['../templateCuda_8hpp.html',1,'']]],
+  ['templatecufft_2ehpp_2227',['templateCufft.hpp',['../templateCufft_8hpp.html',1,'']]],
+  ['templatecurand_2ehpp_2228',['templateCurand.hpp',['../templateCurand_8hpp.html',1,'']]],
+  ['templatelapack_2ehpp_2229',['templateLapack.hpp',['../templateLapack_8hpp.html',1,'']]],
+  ['templatelevmar_2ehpp_2230',['templateLevmar.hpp',['../templateLevmar_8hpp.html',1,'']]],
+  ['texttable_2ehpp_2231',['textTable.hpp',['../textTable_8hpp.html',1,'']]],
+  ['timeutils_2ehpp_2232',['timeUtils.hpp',['../timeUtils_8hpp.html',1,'']]],
+  ['timeutils_5ftest_2ecpp_2233',['timeUtils_test.cpp',['../timeUtils__test_8cpp.html',1,'']]],
+  ['truefalset_2ehpp_2234',['trueFalseT.hpp',['../trueFalseT_8hpp.html',1,'']]],
+  ['turbatmosphere_2ehpp_2235',['turbAtmosphere.hpp',['../turbAtmosphere_8hpp.html',1,'']]],
+  ['turblayer_2ehpp_2236',['turbLayer.hpp',['../turbLayer_8hpp.html',1,'']]],
+  ['turbsequence_2ehpp_2237',['turbSequence.hpp',['../turbSequence_8hpp.html',1,'']]],
+  ['typedescription_2ehpp_2238',['typeDescription.hpp',['../typeDescription_8hpp.html',1,'']]],
+  ['typetraits_2ehpp_2239',['typeTraits.hpp',['../typeTraits_8hpp.html',1,'']]]
 ];
