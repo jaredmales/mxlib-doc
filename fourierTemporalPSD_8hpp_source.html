@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,7 +24,9 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="mxlib.css" rel="stylesheet" type="text/css" />
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -34,7 +37,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
   </td>
  </tr>
  </tbody>
@@ -1211,7 +1214,7 @@ $(document).ready(function(){initNavTree('fourierTemporalPSD_8hpp_source.html','
 <div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160; </div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;                  <span class="keywordflow">if</span>(lifetimeTrials &gt; 0)</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;                  {</div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;                     speckleAmpPSD( spfreq, sppsd, tfreq, tPSDp, ETFxn, tPSDn, NTFxn, lifetimeTrials);</div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;                     <a class="code" href="speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923">speckleAmpPSD</a>( spfreq, sppsd, tfreq, tPSDp, ETFxn, tPSDn, NTFxn, lifetimeTrials);</div>
 <div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;                     realT spvar = <a class="code" href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">sigproc::psdVar</a>(spfreq, sppsd);</div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;                  </div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;                     realT splifeT = 100.0;</div>
@@ -1261,7 +1264,7 @@ $(document).ready(function(){initNavTree('fourierTemporalPSD_8hpp_source.html','
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;                  </div>
 <div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;                     <span class="keywordflow">if</span>(lifetimeTrials &gt; 0)</div>
 <div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;                     {</div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;                        speckleAmpPSD( spfreq, sppsd, tfreq, tPSDp, ETFxn, tPSDn, NTFxn, lifetimeTrials);</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;                        <a class="code" href="speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923">speckleAmpPSD</a>( spfreq, sppsd, tfreq, tPSDp, ETFxn, tPSDn, NTFxn, lifetimeTrials);</div>
 <div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;                        realT spvar = <a class="code" href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">sigproc::psdVar</a>(spfreq, sppsd);</div>
 <div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;                  </div>
 <div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;                        realT splifeT = 100.0;</div>
@@ -2447,6 +2450,7 @@ $(document).ready(function(){initNavTree('fourierTemporalPSD_8hpp_source.html','
 <div class="ttc" id="astructmx_1_1AO_1_1analysis_1_1clGainOpt_html_acd3b46428d2f9e326bb78362ecf020b3"><div class="ttname"><a href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html#acd3b46428d2f9e326bb78362ecf020b3">mx::AO::analysis::clGainOpt::f</a></div><div class="ttdeci">void f(realT *newF, size_t nF)</div><div class="ttdoc">Set the vector of frequencies.</div><div class="ttdef"><b>Definition:</b> <a href="clGainOpt_8hpp_source.html#l00539">clGainOpt.hpp:539</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1analysis_1_1fourierTemporalPSD_html_a56998d92261f8c74bbdb7a9a26c86479"><div class="ttname"><a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a56998d92261f8c74bbdb7a9a26c86479">mx::AO::analysis::fourierTemporalPSD::relTol</a></div><div class="ttdeci">realT relTol()</div><div class="ttdoc">Get the current relative tolerance.</div><div class="ttdef"><b>Definition:</b> <a href="fourierTemporalPSD_8hpp_source.html#l00451">fourierTemporalPSD.hpp:451</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1analysis_1_1fourierTemporalPSD_html_a2ac63ce603c29bc22f52c0a54f1fff83"><div class="ttname"><a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a2ac63ce603c29bc22f52c0a54f1fff83">mx::AO::analysis::fourierTemporalPSD::multiLayerPSD</a></div><div class="ttdeci">int multiLayerPSD(std::vector&lt; realT &gt; &amp;PSD, std::vector&lt; realT &gt; &amp;freq, realT m, realT n, int p, realT fmax=0)</div><div class="ttdoc">Calculate the temporal PSD for a Fourier mode in a multi-layer model.</div><div class="ttdef"><b>Definition:</b> <a href="fourierTemporalPSD_8hpp_source.html#l00666">fourierTemporalPSD.hpp:666</a></div></div>
+<div class="ttc" id="aspeckleAmpPSD_8hpp_html_ab2e95b1b6ab095255198a1d9c9feb923"><div class="ttname"><a href="speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923">mx::AO::analysis::speckleAmpPSD</a></div><div class="ttdeci">int speckleAmpPSD(std::vector&lt; realT &gt; &amp;spFreq, std::vector&lt; realT &gt; &amp;spPSD, const std::vector&lt; realT &gt; &amp;freq, const std::vector&lt; realT &gt; &amp;fmPSD, const std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;fmXferFxn, const std::vector&lt; realT &gt; &amp;nPSD, const std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;nXferFxn, int N, std::vector&lt; realT &gt; *vars=nullptr, std::vector&lt; realT &gt; *bins=nullptr, bool noPSD=false)</div><div class="ttdoc">Calculate the PSD of the speckle intensity given the PSD of Fourier mode amplitude.</div><div class="ttdef"><b>Definition:</b> <a href="speckleAmpPSD_8hpp_source.html#l00054">speckleAmpPSD.hpp:54</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1analysis_1_1fourierTemporalPSD_html_ab56bb21f8f422fb7b69cbc283aa455fc"><div class="ttname"><a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ab56bb21f8f422fb7b69cbc283aa455fc">mx::AO::analysis::fourierTemporalPSD::makePSDGrid</a></div><div class="ttdeci">void makePSDGrid(const std::string &amp;dir, int mnMax, realT dFreq, realT maxFreq, realT fmax=0)</div><div class="ttdoc">Calculate PSDs over a grid of spatial frequencies.</div><div class="ttdef"><b>Definition:</b> <a href="fourierTemporalPSD_8hpp_source.html#l00687">fourierTemporalPSD.hpp:687</a></div></div>
 <div class="ttc" id="agroup__fourier__basis_html_ga1e41643ee55c12b8d6777f4736460b08"><div class="ttname"><a href="group__fourier__basis.html#ga1e41643ee55c12b8d6777f4736460b08">mx::sigproc::fourierModeCoordinates</a></div><div class="ttdeci">int fourierModeCoordinates(int &amp;m, int &amp;n, int &amp;p, int i)</div><div class="ttdoc">Calculate the (m,n,p) coordinates of a Fourier mode given its index.</div><div class="ttdef"><b>Definition:</b> <a href="fourierModes_8hpp_source.html#l00545">fourierModes.hpp:545</a></div></div>
 <div class="ttc" id="aaoSystem_8hpp_html"><div class="ttname"><a href="aoSystem_8hpp.html">aoSystem.hpp</a></div><div class="ttdoc">Declares and defines an analytical AO system.</div></div>
@@ -2475,7 +2479,7 @@ $(document).ready(function(){initNavTree('fourierTemporalPSD_8hpp_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_cf528a69cdca6105739343681d2398d1.html">analysis</a></li><li class="navelem"><a class="el" href="fourierTemporalPSD_8hpp.html">fourierTemporalPSD.hpp</a></li>
-    <li class="footer">Generated on Sun May 9 2021 12:39:46 for mxlib by
+    <li class="footer">Generated on Tue Jun 22 2021 23:48:00 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

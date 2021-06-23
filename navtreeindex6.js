@@ -248,6 +248,6 @@ var NAVTREEINDEX6 =
 "group__fits__processing.html":[0,7,0,3],
 "group__fits__processing.html":[0,4,8],
 "group__fits__processing__files.html":[0,7,0,3,5],
-"group__fits__processing__files.html":[0,4,9,0],
-"group__fits__processing__files.html":[0,4,8,5]
+"group__fits__processing__files.html":[0,4,8,5],
+"group__fits__processing__files.html":[0,4,9,0]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#aeb5c893356e280ea594e8c4bb08d3874":[0,5,4,0,8,22],
-"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#af2aec61c9cd66ddec49ff84be8641019":[0,5,4,0,8,31],
 "structmx_1_1AO_1_1analysis_1_1clGainOpt.html#af84b5dd2cbe9649fa731796478ba3100":[0,5,4,0,8,9],
 "structmx_1_1AO_1_1analysis_1_1clGainOpt.html#af97996b913c8ee01b3a409527e97a773":[0,5,4,0,8,13],
 "structmx_1_1AO_1_1analysis_1_1clGainOpt.html#afb3d1c48129dc80468595b5a5e5d2cd9":[0,5,4,0,8,40],
@@ -249,5 +247,7 @@ var NAVTREEINDEX11 =
 "structmx_1_1astro_1_1cahoySpectrumRaw.html#a60eb23e46ca8361601b1c54cf880aa27":[0,6,2,3,7,1],
 "structmx_1_1astro_1_1cahoySpectrumRaw.html#a63f6e7bb266488a2ba106cf74c078067":[0,6,2,3,7,0],
 "structmx_1_1astro_1_1cahoySpectrumRaw.html#a6e42b3fb0698d601ac07ffbc275a8c24":[0,6,2,3,7,3],
-"structmx_1_1astro_1_1calspecSpectrum.html":[0,6,2,3,3]
+"structmx_1_1astro_1_1calspecSpectrum.html":[0,6,2,3,3],
+"structmx_1_1astro_1_1calspecSpectrum.html#a121e66703559c3d4d835cb5257894196":[0,6,2,3,3,2],
+"structmx_1_1astro_1_1calspecSpectrum.html#a3aa04335d3d387019b07b2cd14647fa9":[0,6,2,3,3,3]
 };

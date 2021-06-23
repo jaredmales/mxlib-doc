@@ -116,7 +116,7 @@ var searchData=
   ['m_5findices_1062',['m_indices',['../classmx_1_1sigproc_1_1circularBufferIndex.html#a0b4bd3bc2258e6d0fdbb32521cac3678',1,'mx::sigproc::circularBufferIndex']]],
   ['m_5fj_5fhs_1063',['m_J_Hs',['../structmx_1_1astro_1_1mainSequence.html#a449feef73f31811b524ec59d348486ee',1,'mx::astro::mainSequence']]],
   ['m_5fkeywords_1064',['m_keywords',['../structmx_1_1improc_1_1ADIDerotator.html#a684a05d7cfdb2ff25dc6b1441537e1a7',1,'mx::improc::ADIDerotator::m_keywords()'],['../structmx_1_1improc_1_1HCIobservation.html#ab9bcbe51977d86ce8a8e253fb8c556c0',1,'mx::improc::HCIobservation::m_keywords()']]],
-  ['m_5fl_5f0_1065',['m_l_0',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#ac2e828399bcd16877df3c014fab12cc9',1,'mx::AO::analysis::aoAtmosphere::m_l_0()'],['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a6c5f4619bb7fabd9753fbd24db79f5f0',1,'mx::AO::analysis::aoAtmosphere::m_L_0()']]],
+  ['m_5fl_5f0_1065',['m_L_0',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a6c5f4619bb7fabd9753fbd24db79f5f0',1,'mx::AO::analysis::aoAtmosphere::m_L_0()'],['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#ac2e828399bcd16877df3c014fab12cc9',1,'mx::AO::analysis::aoAtmosphere::m_l_0()']]],
   ['m_5flam_5f0_1066',['m_lam_0',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#af3a3101d0c40c6ba4be795cfd31fe0f5',1,'mx::AO::analysis::aoAtmosphere']]],
   ['m_5flam_5fsci_1067',['m_lam_sci',['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#a23ca61c429610c6b011cdab98c13db99',1,'mx::AO::analysis::aoSystem']]],
   ['m_5flam_5fwfs_1068',['m_lam_wfs',['../classmx_1_1AO_1_1analysis_1_1aoSystem.html#a3880bc4c69284efab845a55904874638',1,'mx::AO::analysis::aoSystem']]],

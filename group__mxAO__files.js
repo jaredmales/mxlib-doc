@@ -16,8 +16,6 @@ var group__mxAO__files =
     [ "fourierCovariance.hpp", "fourierCovariance_8hpp.html", null ],
     [ "jincFuncs.hpp", "jincFuncs_8hpp.html", null ],
     [ "speckleAmpPSD.hpp", "speckleAmpPSD_8hpp.html", null ],
-    [ "speckleAmpPSD.hpp", "speckleAmpPSD_8hpp.html", null ],
-    [ "speckleAmpPSD.hpp", "speckleAmpPSD_8hpp.html", null ],
     [ "varmapToImage.hpp", "varmapToImage_8hpp.html", null ],
     [ "wfsNoisePSD.hpp", "wfsNoisePSD_8hpp.html", null ],
     [ "ccdDetector.hpp", "ccdDetector_8hpp.html", null ]

@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,7 +24,9 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="mxlib.css" rel="stylesheet" type="text/css" />
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -34,7 +37,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +96,7 @@ $(document).ready(function(){initNavTree('speckleAmpPSD_8hpp.html',''); initResi
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">speckleAmpPSD.hpp File Reference<div class="ingroups"><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo; <a class="el" href="group__mxAO__files.html">Adaptive Optics Files</a><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo;  &#124; <a class="el" href="group__mxAO__files.html">Adaptive Optics Files</a><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo;  &#124; <a class="el" href="group__mxAO__files.html">Adaptive Optics Files</a></div></div>  </div>
+<div class="title">speckleAmpPSD.hpp File Reference<div class="ingroups"><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo; <a class="el" href="group__mxAO__files.html">Adaptive Optics Files</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -127,12 +130,12 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab2e95b1b6ab095255198a1d9c9feb923"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ab2e95b1b6ab095255198a1d9c9feb923"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mx::AO::analysis::speckleAmpPSD</b> (std::vector&lt; realT &gt; &amp;spFreq, std::vector&lt; realT &gt; &amp;spPSD, const std::vector&lt; realT &gt; &amp;freq, const std::vector&lt; realT &gt; &amp;fmPSD, const std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;fmXferFxn, const std::vector&lt; realT &gt; &amp;nPSD, const std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;nXferFxn, int N, std::vector&lt; realT &gt; *vars=nullptr, std::vector&lt; realT &gt; *bins=nullptr, bool noPSD=false)</td></tr>
-<tr class="memdesc:ab2e95b1b6ab095255198a1d9c9feb923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the PSD of the speckle intensity given the PSD of Fourier mode amplitude.  <a href="speckleAmpPSD-old_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923">More...</a><br /></td></tr>
+<tr class="memitem:ab2e95b1b6ab095255198a1d9c9feb923"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923">mx::AO::analysis::speckleAmpPSD</a> (std::vector&lt; realT &gt; &amp;spFreq, std::vector&lt; realT &gt; &amp;spPSD, const std::vector&lt; realT &gt; &amp;freq, const std::vector&lt; realT &gt; &amp;fmPSD, const std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;fmXferFxn, const std::vector&lt; realT &gt; &amp;nPSD, const std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;nXferFxn, int N, std::vector&lt; realT &gt; *vars=nullptr, std::vector&lt; realT &gt; *bins=nullptr, bool noPSD=false)</td></tr>
+<tr class="memdesc:ab2e95b1b6ab095255198a1d9c9feb923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the PSD of the speckle intensity given the PSD of Fourier mode amplitude.  <a href="speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923">More...</a><br /></td></tr>
 <tr class="separator:ab2e95b1b6ab095255198a1d9c9feb923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d0c7e69702d3ec1723d4a3490bcafe2"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:a7d0c7e69702d3ec1723d4a3490bcafe2"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mx::AO::analysis::speckleAmpVarMean</b> (std::vector&lt; realT &gt; &amp;vars, std::vector&lt; realT &gt; &amp;bins, std::vector&lt; realT &gt; &amp;freq, std::vector&lt; realT &gt; &amp;fmPSD, std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;fmXferFxn, std::vector&lt; realT &gt; &amp;nPSD, std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;nXferFxn, int N)</td></tr>
-<tr class="memdesc:a7d0c7e69702d3ec1723d4a3490bcafe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of the mean vs bin size in a speckle time-series.  <a href="speckleAmpPSD-old_8hpp.html#a7d0c7e69702d3ec1723d4a3490bcafe2">More...</a><br /></td></tr>
+<tr class="memitem:a7d0c7e69702d3ec1723d4a3490bcafe2"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="speckleAmpPSD_8hpp.html#a7d0c7e69702d3ec1723d4a3490bcafe2">mx::AO::analysis::speckleAmpVarMean</a> (std::vector&lt; realT &gt; &amp;vars, std::vector&lt; realT &gt; &amp;bins, std::vector&lt; realT &gt; &amp;freq, std::vector&lt; realT &gt; &amp;fmPSD, std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;fmXferFxn, std::vector&lt; realT &gt; &amp;nPSD, std::vector&lt; std::complex&lt; realT &gt;&gt; &amp;nXferFxn, int N)</td></tr>
+<tr class="memdesc:a7d0c7e69702d3ec1723d4a3490bcafe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of the mean vs bin size in a speckle time-series.  <a href="speckleAmpPSD_8hpp.html#a7d0c7e69702d3ec1723d4a3490bcafe2">More...</a><br /></td></tr>
 <tr class="separator:a7d0c7e69702d3ec1723d4a3490bcafe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -223,14 +226,7 @@ template&lt;typename realT &gt; </div>
 <p>A Hann window is used.</p>
 <p>Statistics are not currently normalized. You need to normalize to match expected contrast if desired.</p>
 <p>Will also calculate the binned-variances in the generated time-series, if the arguments vars and bins are not null pointers.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd><p class="startdd">Figure out what's going on with psdFilter normalization! </p>
-<p class="enddd">probably need to not do overlapped averaging in periodogram. Could drop mean-sub then. </p>
-</dd></dl>
-<p>Does so by generating a time-series from the PSD using Fourier-domain convolution, and calculating the average periodogram.</p>
-<p>A Hann window is used.</p>
-<p>Statistics are not currently normalized. You need to normalize to match expected contrast if desired.</p>
-<p>Will also calculate the binned-variances in the generated time-series, if the arguments vars and bins are not null pointers.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd><p class="startdd">Figure out what's going on with psdFilter normalization! </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd><p class="startdd">Figure out what's going on with psdFilter normalization! </p>
 <p class="enddd">probably need to not do overlapped averaging in periodogram. Could drop mean-sub then. </p>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -250,7 +246,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="speckleAmpPSD-old_8hpp_source.html#l00054">54</a> of file <a class="el" href="speckleAmpPSD-old_8hpp_source.html">speckleAmpPSD-old.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">54</a> of file <a class="el" href="speckleAmpPSD_8hpp_source.html">speckleAmpPSD.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00686">mx::sigproc::augment1SidedPSD()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00129">mx::sigproc::psdVar()</a>, <a class="el" href="averagePeriodogram_8hpp_source.html#l00428">mx::sigproc::averagePeriodogram&lt; realT &gt;::size()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00774">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00273">mx::AO::analysis::speckleAmpVarMean()</a>.</p>
 
 </div>
 </div>
@@ -335,7 +335,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="speckleAmpPSD-old_8hpp_source.html#l00273">273</a> of file <a class="el" href="speckleAmpPSD-old_8hpp_source.html">speckleAmpPSD-old.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="speckleAmpPSD_8hpp_source.html#l00273">273</a> of file <a class="el" href="speckleAmpPSD_8hpp_source.html">speckleAmpPSD.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00273">mx::AO::analysis::speckleAmpVarMean()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="speckleAmpPSD_8hpp_source.html#l00273">mx::AO::analysis::speckleAmpVarMean()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +349,7 @@ template&lt;typename realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_cf528a69cdca6105739343681d2398d1.html">analysis</a></li><li class="navelem"><a class="el" href="speckleAmpPSD_8hpp.html">speckleAmpPSD.hpp</a></li>
-    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
+    <li class="footer">Generated on Tue Jun 22 2021 23:48:02 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

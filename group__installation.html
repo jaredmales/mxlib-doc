@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,7 +24,9 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="mxlib.css" rel="stylesheet" type="text/css" />
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -34,7 +37,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
   </td>
  </tr>
  </tbody>
@@ -135,12 +138,13 @@ Basic Dependencies</h1>
 <h1><a class="anchor" id="conda_install"></a>
 Installing dependencies from conda</h1>
 <p>The conda package manager contains packages for all of mxlib's external dependencies (not including vendored libraries, shipped under source/vendor/). This means setting up a correct build environment on macOS or Linux &ndash; even in a cluster environment, where you may not have root access &ndash; is straightforward. (To do: CUDA support with conda.)</p>
-<p>Once you have installed conda (either <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> or <a href="https://www.anaconda.com/products/individual">Anaconda</a> is fine), you will create and activate an environment to use mxlib with. </p><div class="fragment"><div class="line">$ conda create conda create -y -n mxlib_env</div>
+<p>Once you have installed conda (either <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> or <a href="https://www.anaconda.com/products/individual">Anaconda</a> is fine), you will create and activate an environment to use mxlib with. </p><div class="fragment"><div class="line">$ conda create -y -n mxlib_env</div>
 </div><!-- fragment --><p> The install process is tested with conda-forge packages, which you may not be using by default. (Installing them in the mxlib_env environment won't cause conflicts with any other environments you may have.) </p><div class="fragment"><div class="line">$ conda activate mxlib_env</div>
 <div class="line">$ bash ./setup/conda_setup_Linux.sh</div>
 <div class="line"><span class="preprocessor"># or, on macOS:</span></div>
 <div class="line"><span class="preprocessor">$ bash ./setup/conda_setup_macOS.sh</span></div>
-</div><!-- fragment --><p> If all went well, you should now be able to build mxlib: </p><div class="fragment"><div class="line">$ make install PREFIX=$CONDA_PREFIX NEED_CUDA=no</div>
+</div><!-- fragment --><p> You may see the message: "To make your changes take effect please reactivate your environment." That would be "conda deactivate" followed by "conda activate mxlib_env".</p>
+<p>If all went well, you should now be able to build mxlib: </p><div class="fragment"><div class="line">$ make install PREFIX=$CONDA_PREFIX NEED_CUDA=no</div>
 </div><!-- fragment --><p> Now mxlib headers and libraries are in $CONDA_PREFIX/include and $CONDA_PREFIX/lib and should be found by default as long as "conda activate mxlib_env" is always run after you open a new terminal and before you compile things that use mxlib.</p>
 <h1><a class="anchor" id="git_tracking"></a>
 Git Version Tracking</h1>
@@ -177,7 +181,7 @@ Build Environment</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 9 2021 12:39:47 for mxlib by
+    <li class="footer">Generated on Tue Jun 22 2021 23:48:02 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
