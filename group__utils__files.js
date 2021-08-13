@@ -5,7 +5,9 @@ var group__utils__files =
     [ "typeDescription.hpp", "typeDescription_8hpp.html", null ],
     [ "typeTraits.hpp", "typeTraits_8hpp.html", null ],
     [ "environment.hpp", "environment_8hpp.html", null ],
+    [ "gitRepo.hpp", "gitRepo_8hpp.html", null ],
     [ "timeUtils.hpp", "timeUtils_8hpp.html", null ],
+    [ "ompLoopWatcher.hpp", "ompLoopWatcher_8hpp.html", null ],
     [ "binVector.hpp", "binVector_8hpp.html", null ],
     [ "pout.hpp", "pout_8hpp.html", null ],
     [ "rawBinary.hpp", "rawBinary_8hpp.html", null ]

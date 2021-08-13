@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -24,9 +23,7 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="mxlib.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -37,7 +34,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
   </td>
  </tr>
  </tbody>
@@ -205,7 +202,7 @@ $(document).ready(function(){initNavTree('psdUtils__test_8cpp_source.html',''); 
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;         }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;         psd[0] = psd[1];</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;         </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         <a class="code" href="group__psds.html#gaa0767c333258d1afaadfcd94ba22594b">mx::sigproc::normPSD</a>(psd, f, 1.0);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         <a class="code" href="group__psds.html#gadf1501874337d43b64ea2f3da0537a09">mx::sigproc::normPSD</a>(psd, f, 1.0);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;         <span class="comment">//Now have a 1/f^2 PSD with total 1-sided variance of 1.0.</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         REQUIRE(fabs(<a class="code" href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">mx::sigproc::psdVar</a>(f, psd, 1.0)-1.0) &lt; 1e-10); <span class="comment">//handles epsilon</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;         </div>
@@ -246,14 +243,14 @@ $(document).ready(function(){initNavTree('psdUtils__test_8cpp_source.html',''); 
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__psds_html_gaa1e70516ded906911c0f18ac466b272d"><div class="ttname"><a href="group__psds.html#gaa1e70516ded906911c0f18ac466b272d">mx::sigproc::psdVar</a></div><div class="ttdeci">realT psdVar(const std::vector&lt; realT &gt; &amp;f, const std::vector&lt; realT &gt; &amp;PSD, realT half=0.5)</div><div class="ttdoc">Calculate the variance of a 1-D PSD.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00129">psdUtils.hpp:129</a></div></div>
 <div class="ttc" id="apsdUtils__test_8cpp_html_a7419701a8b71f52a62b3b32a9d29bb5e"><div class="ttname"><a href="psdUtils__test_8cpp.html#a7419701a8b71f52a62b3b32a9d29bb5e">SCENARIO</a></div><div class="ttdeci">SCENARIO(&quot;calculating variance from a 1D PSD&quot;, &quot;[sigproc::psdUtils]&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils__test_8cpp_source.html#l00022">psdUtils_test.cpp:22</a></div></div>
-<div class="ttc" id="agroup__psds_html_ga9be4feb5c4ac0b44608a726306b0311a"><div class="ttname"><a href="group__psds.html#ga9be4feb5c4ac0b44608a726306b0311a">mx::sigproc::augment1SidedPSDFreq</a></div><div class="ttdeci">void augment1SidedPSDFreq(std::vector&lt; T &gt; &amp;freqTwoSided, std::vector&lt; T &gt; &amp;freqOneSided)</div><div class="ttdoc">Augment a 1-sided frequency scale to standard FFT form.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00743">psdUtils.hpp:743</a></div></div>
-<div class="ttc" id="agroup__psds_html_ga32e44c6b0cd5ec6927a3f1ca1272a987"><div class="ttname"><a href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">mx::sigproc::augment1SidedPSD</a></div><div class="ttdeci">void augment1SidedPSD(vectorTout &amp;psdTwoSided, vectorTin &amp;psdOneSided, bool addZeroFreq=false, typename vectorTin::value_type scale=0.5)</div><div class="ttdoc">Augment a 1-sided PSD to standard 2-sided FFT form.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00686">psdUtils.hpp:686</a></div></div>
-<div class="ttc" id="agroup__psds_html_gaa0767c333258d1afaadfcd94ba22594b"><div class="ttname"><a href="group__psds.html#gaa0767c333258d1afaadfcd94ba22594b">mx::sigproc::normPSD</a></div><div class="ttdeci">int normPSD(std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT norm, floatT fmin=0, floatT fmax=0)</div><div class="ttdoc">Normalize a PSD to have a given variance.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00368">psdUtils.hpp:368</a></div></div>
+<div class="ttc" id="agroup__psds_html_ga9be4feb5c4ac0b44608a726306b0311a"><div class="ttname"><a href="group__psds.html#ga9be4feb5c4ac0b44608a726306b0311a">mx::sigproc::augment1SidedPSDFreq</a></div><div class="ttdeci">void augment1SidedPSDFreq(std::vector&lt; T &gt; &amp;freqTwoSided, std::vector&lt; T &gt; &amp;freqOneSided)</div><div class="ttdoc">Augment a 1-sided frequency scale to standard FFT form.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00814">psdUtils.hpp:814</a></div></div>
+<div class="ttc" id="agroup__psds_html_gadf1501874337d43b64ea2f3da0537a09"><div class="ttname"><a href="group__psds.html#gadf1501874337d43b64ea2f3da0537a09">mx::sigproc::normPSD</a></div><div class="ttdeci">int normPSD(std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatParamT normT, floatT fmin=std::numeric_limits&lt; floatT &gt;::min(), floatT fmax=std::numeric_limits&lt; floatT &gt;::max())</div><div class="ttdoc">Normalize a 1-D PSD to have a given variance.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00413">psdUtils.hpp:413</a></div></div>
+<div class="ttc" id="agroup__psds_html_ga32e44c6b0cd5ec6927a3f1ca1272a987"><div class="ttname"><a href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">mx::sigproc::augment1SidedPSD</a></div><div class="ttdeci">void augment1SidedPSD(vectorTout &amp;psdTwoSided, vectorTin &amp;psdOneSided, bool addZeroFreq=false, typename vectorTin::value_type scale=0.5)</div><div class="ttdoc">Augment a 1-sided PSD to standard 2-sided FFT form.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00757">psdUtils.hpp:757</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="dir_dcba6dfd410a966f3c2ecded9b1039f6.html">include</a></li><li class="navelem"><a class="el" href="dir_def6315a8ee75eb822220c4751a6759d.html">sigproc</a></li><li class="navelem"><a class="el" href="psdUtils__test_8cpp.html">psdUtils_test.cpp</a></li>
-    <li class="footer">Generated on Tue Jun 22 2021 23:48:02 for mxlib by
+    <li class="footer">Generated on Fri Aug 13 2021 12:45:18 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

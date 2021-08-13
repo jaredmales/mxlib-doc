@@ -63,21 +63,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a488542e331f65f846298f4e14452b2ac",
-"classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6d8355592352aaf6bcfe74119f07df85",
-"classmx_1_1fits_1_1fitsFile.html#a8d85be2fa43a79f3b34e93980d8d7d49",
-"classmx_1_1math_1_1fit_1_1levmarInterface.html",
-"classmx_1_1wfp_1_1fraunhoferPropagator.html#a195779684f44b1cb0f45b55049e030c5",
-"functions_func_s.html",
-"group__fits__processing__typedefs.html",
-"group__image__transforms.html#ga3842e84008d9123b8df9962380354f30",
-"group__sofa__constants.html#gaf8ef72c58a390141765e3ccd27fd6dd4",
-"legendre_8hpp_source.html",
-"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#af84b5dd2cbe9649fa731796478ba3100",
-"structmx_1_1astro_1_1calspecSpectrum.html#a41045a0d037c281eaa6d408f96671d06",
-"structmx_1_1improc_1_1ADIobservation.html#a4a5f128fd9f72397b49ccbca68010644",
-"structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b",
-"textTable_8hpp_source.html"
+"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a44431de3541c9d33e31c9c3ce63d78d8",
+"classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6d29c9c02e015a14e9378f6d939f5610",
+"classmx_1_1fits_1_1fitsFile.html#a90e1f799fa3f23bd20a1757e1afead5a",
+"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a5a47c7582ca4c7e0bcf2b2fa28bba5cb",
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a925c59a95730dffd07d8f9343575eaf2",
+"fourierModes_8hpp.html#ga365be757fe57b1014ad8de4ee5e0776e",
+"group__eigen__lapack.html#ga9c4fc17379b2d70e1f7deb476edd43b9",
+"group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda31e090419171bebe25f65eeb5a05120f",
+"group__signal__processing.html#ga367c27a77ed0cce60a762d968a510888",
+"imageUtils_8hpp.html#ga54dfc41af4090b82694cc201d0651f64",
+"speckleAmpPSD_8hpp_source.html",
+"structmx_1_1app_1_1configTarget.html#a87c92bd39da19ebeda757095ca8599ec",
+"structmx_1_1fits_1_1fitsHeaderCard.html#a8cf9dde77dbf54851e0889631bb45ca0",
+"structmx_1_1improc_1_1HCIobservation.html#ad5568cc2b991591c4b873ef4e021d292",
+"structmx_1_1wfp_1_1lyotCoronagraph.html#a1576243618ca1cf3bd2b2eb7e738946c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

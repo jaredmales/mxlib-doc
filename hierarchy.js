@@ -91,6 +91,7 @@ var hierarchy =
     [ "mx::math::fit::gaussian2D_sym_fitter< _realT >", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter.html", null ],
     [ "mx::improc::gaussKernel< _arrayT, _kernW >", "structmx_1_1improc_1_1gaussKernel.html", null ],
     [ "mx::AO::sim::generalIntegrator< _realT >", "classmx_1_1AO_1_1sim_1_1generalIntegrator.html", null ],
+    [ "mx::sys::gitRepo", "classmx_1_1sys_1_1gitRepo.html", null ],
     [ "mx::math::gnuPlot", "classmx_1_1math_1_1gnuPlot.html", null ],
     [ "mx::math::fit::hasJacobian< T >", "structmx_1_1math_1_1fit_1_1hasJacobian.html", null ],
     [ "mx::improc::HCIobservation< _realT >", "structmx_1_1improc_1_1HCIobservation.html", [
@@ -132,6 +133,7 @@ var hierarchy =
     [ "mx::astro::mainSequence< realT >", "structmx_1_1astro_1_1mainSequence.html", null ],
     [ "mx::math::fit::moffat2D_sym_fitter< _realT >", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ],
     [ "mxException", "classmxException.html", null ],
+    [ "mx::ipc::ompLoopWatcher< _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time >", "classmx_1_1ipc_1_1ompLoopWatcher.html", null ],
     [ "mx::math::laplace_distribution< _RealType >::param_type", "structmx_1_1math_1_1laplace__distribution_1_1param__type.html", null ],
     [ "mx::astro::sqWaveFilter< _units, _rsr >::paramsT", "structmx_1_1astro_1_1sqWaveFilter_1_1paramsT.html", null ],
     [ "mx::astro::phoenixSpectrum< _units >", "structmx_1_1astro_1_1phoenixSpectrum.html", null ],
@@ -147,6 +149,7 @@ var hierarchy =
     [ "mx::math::randomT< realT >", "classmx_1_1math_1_1randomT.html", null ],
     [ "mx::math::randomT< realT, std::mt19937_64, std::gamma_distribution< realT > >", "classmx_1_1math_1_1randomT.html", null ],
     [ "mx::math::randomT< realT, std::mt19937_64, std::normal_distribution< realT > >", "classmx_1_1math_1_1randomT.html", null ],
+    [ "mx::ipc::sharedMemSegment", "classmx_1_1ipc_1_1sharedMemSegment.html", null ],
     [ "mx::astro::units::si< _realT >", "structmx_1_1astro_1_1units_1_1si.html", null ],
     [ "mx::AO::sim::simulatedAOSystem< _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT >", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html", null ],
     [ "mx::ioutils::skipCol", "structmx_1_1ioutils_1_1skipCol.html", null ],

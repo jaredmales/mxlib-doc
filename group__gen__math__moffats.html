@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -24,9 +23,7 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="mxlib.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -37,7 +34,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
   </td>
  </tr>
  </tbody>
@@ -103,7 +100,7 @@ $(document).ready(function(){initNavTree('group__gen__math__moffats.html',''); i
 <a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>Utilities for working with the Moffat function. </p>
-<p>The Moffat Function<a class="el" href="citelist.html#CITEREF_moffat_1969">[14]</a>, a.k.a. the Moffat Profile, a.k.a. the Moffat Distribution, has the form </p><p class="formulaDsp">
+<p>The Moffat Function<a class="el" href="citelist.html#CITEREF_moffat_1969">[13]</a>, a.k.a. the Moffat Profile, a.k.a. the Moffat Distribution, has the form </p><p class="formulaDsp">
 \[ I(x) = I_{pk}\left[ 1 + \frac{x^2}{\alpha^2}\right]^{-\beta} \]
 </p>
 <p> With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
@@ -178,7 +175,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Find value at position (x) of the 1D arbitrarily-centered symmetric unnormalized Moffat function. </p>
-<p>The Moffat distribution is due to <a class="el" href="citelist.html#CITEREF_moffat_1969">[14]</a>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
+<p>The Moffat distribution is due to <a class="el" href="citelist.html#CITEREF_moffat_1969">[13]</a>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
 <p>Here we use the unnormalized general form, most useful for peak fitting.</p>
 <p>This function computes: </p><p class="formulaDsp">
 \[ I(x) = I_0 + I_{pk}\left[ 1 + \frac{(x-x_0)^2}{\alpha^2}\right]^{-\beta} \]
@@ -272,7 +269,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Find value at position (x,y) of the 2D arbitrarily-centered unnormalized symmetric Moffat function. </p>
-<p>The Moffat distribution is due to <a class="el" href="citelist.html#CITEREF_moffat_1969">[14]</a>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
+<p>The Moffat distribution is due to <a class="el" href="citelist.html#CITEREF_moffat_1969">[13]</a>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
 <p>Here we use the unnormalized general form, most useful for peak fitting.</p>
 <p>This function omputes: </p><p class="formulaDsp">
 \[ I(x) = I_0 + I_{pk}\left[ 1 + \frac{(x-x_0)^2 + (y-y_0)^2}{\alpha^2}\right]^{-\beta} \]
@@ -362,7 +359,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jun 22 2021 23:48:02 for mxlib by
+    <li class="footer">Generated on Fri Aug 13 2021 12:45:18 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

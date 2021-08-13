@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -24,9 +23,7 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="mxlib.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -37,7 +34,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
   </td>
  </tr>
  </tbody>
@@ -128,7 +125,7 @@ class mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</h3>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd>once fftT has a plan interface with pointers for working memory, use it.</dd></dl>
 <dl class="test"><dt><b><a class="el" href="test.html#_test000018">Test:</a></b></dt><dd>Scenario: compiling psdFilter. <a class="el" href="psdFilter__test_8cpp.html#tests_sigproc_psdFilter_compile">[test doc]</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00134">134</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00138">138</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="psdFilter_8hpp_source.html">sigproc/psdFilter.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -143,6 +140,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:aa2912fb47e061000f8f50017966040cc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html">psdFilterTypes::arrayT</a>&lt; <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aba353b8b78059d2c22534b04c24bb11a">realT</a>, rank &gt;::<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a></td></tr>
 <tr class="memdesc:aa2912fb47e061000f8f50017966040cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::vector for rank==1, Eigen::Array for rank==2, eigenCube for rank==3.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">More...</a><br /></td></tr>
 <tr class="separator:aa2912fb47e061000f8f50017966040cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78129df933b0e7ee87bc2b154b4ae967"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html">psdFilterTypes::arrayT</a>&lt; <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aba353b8b78059d2c22534b04c24bb11a">realT</a>, rank &gt;::<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a></td></tr>
+<tr class="memdesc:a78129df933b0e7ee87bc2b154b4ae967"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::vector for rank==1, Eigen::Map for rank==2, eigenCube for rank==3.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">More...</a><br /></td></tr>
+<tr class="separator:a78129df933b0e7ee87bc2b154b4ae967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a574ee9e33204b1e5b2a7011c45eb1c68"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html">psdFilterTypes::arrayT</a>&lt; <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aba353b8b78059d2c22534b04c24bb11a">realT</a>, rank &gt;::<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a574ee9e33204b1e5b2a7011c45eb1c68">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a574ee9e33204b1e5b2a7011c45eb1c68">complexArrayT</a></td></tr>
 <tr class="memdesc:a574ee9e33204b1e5b2a7011c45eb1c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::vector for rank==1, Eigen::Array for rank==2, eigenCube for rank==3.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a574ee9e33204b1e5b2a7011c45eb1c68">More...</a><br /></td></tr>
 <tr class="separator:a574ee9e33204b1e5b2a7011c45eb1c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +211,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab99de80a9474097889c7a803cbfd1cff"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#ab99de80a9474097889c7a803cbfd1cff">filter</a> (<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> &amp;noise, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> *noiseIm=nullptr, typename std::enable_if&lt; crank==2 &gt;::type *=0) const</td></tr>
 <tr class="memdesc:ab99de80a9474097889c7a803cbfd1cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the filter.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#ab99de80a9474097889c7a803cbfd1cff">More...</a><br /></td></tr>
 <tr class="separator:ab99de80a9474097889c7a803cbfd1cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520837584064026a8cbb33a95154dd6c"><td class="memTemplParams" colspan="2">template&lt;size_t crank = rank&gt; </td></tr>
+<tr class="memitem:a520837584064026a8cbb33a95154dd6c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a520837584064026a8cbb33a95154dd6c">filter</a> (<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a> noise, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> *noiseIm=nullptr, typename std::enable_if&lt; crank==2 &gt;::type *=0) const</td></tr>
+<tr class="memdesc:a520837584064026a8cbb33a95154dd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the filter.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a520837584064026a8cbb33a95154dd6c">More...</a><br /></td></tr>
+<tr class="separator:a520837584064026a8cbb33a95154dd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e8f2a8b0884cdda10cc59620b1d3f5"><td class="memTemplParams" colspan="2">template&lt;size_t crank = rank&gt; </td></tr>
 <tr class="memitem:a75e8f2a8b0884cdda10cc59620b1d3f5"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a75e8f2a8b0884cdda10cc59620b1d3f5">filter</a> (<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> &amp;noise, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> *noiseIm=nullptr, typename std::enable_if&lt; crank==3 &gt;::type *=0) const</td></tr>
 <tr class="memdesc:a75e8f2a8b0884cdda10cc59620b1d3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the filter.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a75e8f2a8b0884cdda10cc59620b1d3f5">More...</a><br /></td></tr>
@@ -218,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91c8ff4405d178263be2349fb9a588c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a91c8ff4405d178263be2349fb9a588c9">operator()</a> (<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> &amp;noise) const</td></tr>
 <tr class="memdesc:a91c8ff4405d178263be2349fb9a588c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the filter.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a91c8ff4405d178263be2349fb9a588c9">More...</a><br /></td></tr>
 <tr class="separator:a91c8ff4405d178263be2349fb9a588c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e2a8db9f18bad85e28e2fdbf681385"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#ad0e2a8db9f18bad85e28e2fdbf681385">operator()</a> (<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a> noise) const</td></tr>
+<tr class="memdesc:ad0e2a8db9f18bad85e28e2fdbf681385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the filter.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#ad0e2a8db9f18bad85e28e2fdbf681385">More...</a><br /></td></tr>
+<tr class="separator:ad0e2a8db9f18bad85e28e2fdbf681385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102f443d72db9496cc988463c7903a76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a102f443d72db9496cc988463c7903a76">operator()</a> (<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> &amp;noise, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> &amp;noiseIm) const</td></tr>
 <tr class="memdesc:a102f443d72db9496cc988463c7903a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the filter.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a102f443d72db9496cc988463c7903a76">More...</a><br /></td></tr>
 <tr class="separator:a102f443d72db9496cc988463c7903a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,7 +303,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>std::vector for rank==1, Eigen::Array for rank==2, eigenCube for rank==3. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00144">144</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00149">149</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +323,27 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>Complex floating point type. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00139">139</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00143">143</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a78129df933b0e7ee87bc2b154b4ae967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78129df933b0e7ee87bc2b154b4ae967">&#9670;&nbsp;</a></span>realArrayMapT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _realT , size_t _rank&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html">psdFilterTypes::arrayT</a>&lt;<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aba353b8b78059d2c22534b04c24bb11a">realT</a>,rank&gt;::<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a> mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;::<a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>std::vector for rank==1, Eigen::Map for rank==2, eigenCube for rank==3. </p>
+
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00148">148</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +363,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>std::vector for rank==1, Eigen::Array for rank==2, eigenCube for rank==3. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00143">143</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00147">147</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +383,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>Real floating point type. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00138">138</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00142">142</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -450,8 +477,59 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 </div>
 </div>
+<a id="a520837584064026a8cbb33a95154dd6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520837584064026a8cbb33a95154dd6c">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _realT , size_t _rank&gt; </div>
+<div class="memtemplate">
+template&lt;size_t crank = rank&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;::filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a>&#160;</td>
+          <td class="paramname"><em>noise</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aa2912fb47e061000f8f50017966040cc">realArrayT</a> *&#160;</td>
+          <td class="paramname"><em>noiseIm</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; crank==2 &gt;::type *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the filter. </p>
+<p>This version compiles when rank==2</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">noise</td><td>[in/out] the noise field of size <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a323c98dbc45766c2371b980da8834f50" title="Get the number of rows in the filter.">rows()</a> X <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a9a300a24113a3240f0a6ffb5d3ea34d1" title="Get the number of columns in the filter.">cols()</a>, which is filtered in-place. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">noiseIm</td><td>[out] [optional] an array to fill with the imaginary output of the filter, allowing 2-for-1 calculation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a828d7abf4ebba68d969c1eb72dce69e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a828d7abf4ebba68d969c1eb72dce69e0">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a828d7abf4ebba68d969c1eb72dce69e0">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -503,7 +581,7 @@ template&lt;size_t crank = rank&gt; </div>
 </div>
 </div>
 <a id="ab99de80a9474097889c7a803cbfd1cff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab99de80a9474097889c7a803cbfd1cff">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99de80a9474097889c7a803cbfd1cff">&#9670;&nbsp;</a></span>filter() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -555,7 +633,7 @@ template&lt;size_t crank = rank&gt; </div>
 </div>
 </div>
 <a id="a75e8f2a8b0884cdda10cc59620b1d3f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75e8f2a8b0884cdda10cc59620b1d3f5">&#9670;&nbsp;</a></span>filter() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e8f2a8b0884cdda10cc59620b1d3f5">&#9670;&nbsp;</a></span>filter() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -606,8 +684,41 @@ template&lt;size_t crank = rank&gt; </div>
 
 </div>
 </div>
+<a id="ad0e2a8db9f18bad85e28e2fdbf681385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e2a8db9f18bad85e28e2fdbf681385">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _realT , size_t _rank&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a78129df933b0e7ee87bc2b154b4ae967">realArrayMapT</a>&#160;</td>
+          <td class="paramname"><em>noise</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the filter. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000042">Test:</a></b></dt><dd>Verify filtering and noise normalization. <a class="el" href="psdFilter__test_8cpp.html#tests_sigproc_psdFilter_filter">[test doc]</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">noise</td><td>[in/out] the noise field of size <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a323c98dbc45766c2371b980da8834f50" title="Get the number of rows in the filter.">rows()</a> X <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a9a300a24113a3240f0a6ffb5d3ea34d1" title="Get the number of columns in the filter.">cols()</a>, which is filtered in-place. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a91c8ff4405d178263be2349fb9a588c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91c8ff4405d178263be2349fb9a588c9">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c8ff4405d178263be2349fb9a588c9">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,7 +750,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 </div>
 </div>
 <a id="a102f443d72db9496cc988463c7903a76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a102f443d72db9496cc988463c7903a76">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a102f443d72db9496cc988463c7903a76">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -670,7 +781,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error</dd></dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000042">Test:</a></b></dt><dd>Verify filtering and noise normalization. <a class="el" href="psdFilter__test_8cpp.html#tests_sigproc_psdFilter_filter">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000043">Test:</a></b></dt><dd>Verify filtering and noise normalization. <a class="el" href="psdFilter__test_8cpp.html#tests_sigproc_psdFilter_filter">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">noise</td><td>[in/out] the noise field of size <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a323c98dbc45766c2371b980da8834f50" title="Get the number of rows in the filter.">rows()</a> X <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a9a300a24113a3240f0a6ffb5d3ea34d1" title="Get the number of columns in the filter.">cols()</a>, which is filtered in-place. </td></tr>
@@ -1495,7 +1606,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>The number of columns in the filter, and the required number of columns in the noise array. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00150">150</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00155">155</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1523,7 +1634,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>The frequency scaling of the x-dimension. Used to scale the output. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00153">153</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00158">158</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1662,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>The frequency scaling of the y-dimension. Used to scale the output. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00154">154</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00159">159</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1579,7 +1690,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>The frequency scaling of the z-dimension. Used to scale the output. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00155">155</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00160">160</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1718,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>FFT object for the backward transfsorm. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00163">163</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00168">168</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1635,7 +1746,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>FFT object for the forward transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00162">162</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00167">167</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1663,7 +1774,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>Working memory for the FFT. Declared mutable so it can be accessed in the const filter method. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00160">160</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00165">165</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1691,7 +1802,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>Flag indicates whether or not m_psdSqrt was allocated by this instance, and so must be deallocated. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00158">158</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00163">163</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1830,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>Then number of planes in the filter. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00151">151</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00156">156</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1747,7 +1858,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>Pointer to the real array containing the square root of the PSD. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00157">157</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00162">162</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1775,7 +1886,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 
 <p>The number of rows in the filter, and the required number of rows in the noise array. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00149">149</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdFilter_8hpp_source.html#l00154">154</a> of file <a class="el" href="psdFilter_8hpp_source.html">psdFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1788,7 +1899,7 @@ template&lt;typename _realT , size_t _rank&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>sigproc</b></li><li class="navelem"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html">psdFilter&lt; _realT, _rank, 0 &gt;</a></li>
-    <li class="footer">Generated on Tue Jun 22 2021 23:48:03 for mxlib by
+    <li class="footer">Generated on Fri Aug 13 2021 12:45:20 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

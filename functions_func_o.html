@@ -1,4 +1,3 @@
-<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -24,9 +23,7 @@
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="mxlib.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -37,7 +34,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mxlib
    </div>
-   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males. [<a href="https://github.com/jaredmales/mxlib">git repo</a>]</div>
+   <div id="projectbrief">c++ tools for analyzing astronomical data and other tasks by Jared R. Males</div>
   </td>
  </tr>
  </tbody>
@@ -98,12 +95,15 @@ $(document).ready(function(){initNavTree('functions_func_o.html',''); initResiza
 <li>olXfer()
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html#ac3784718c4ad1957d20f6c8f3b64df4f">mx::AO::analysis::clGainOpt&lt; _realT &gt;</a>
 </li>
+<li>ompLoopWatcher()
+: <a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html#a7a1ee13752bcc664c542309eae50f7b9">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;</a>
+</li>
 <li>open()
-: <a class="el" href="classmx_1_1fits_1_1fitsFile.html#aefb248aac3f444d87b68046ce5e26d19">mx::fits::fitsFile&lt; dataT &gt;</a>
+: <a class="el" href="classmx_1_1fits_1_1fitsFile.html#a5a4e0367036575d36ca2ee8661cd37d6">mx::fits::fitsFile&lt; dataT &gt;</a>
 </li>
 <li>openLoop()
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1generalIntegrator.html#a8202a65935c544b1f70d251e6d87dbcd">mx::AO::sim::generalIntegrator&lt; _realT &gt;</a>
-, <a class="el" href="classmx_1_1AO_1_1sim_1_1leakyIntegrator.html#a26e2decbec6290cea9fc0045b974018e">mx::AO::sim::leakyIntegrator&lt; _realT &gt;</a>
+, <a class="el" href="classmx_1_1AO_1_1sim_1_1leakyIntegrator.html#af6ebef932decb78e3a25e4df0fa503a5">mx::AO::sim::leakyIntegrator&lt; _realT &gt;</a>
 </li>
 <li>openLoopDelay()
 : <a class="el" href="classmx_1_1AO_1_1sim_1_1generalIntegrator.html#af89ef108ffb68c9561e890c137786d65">mx::AO::sim::generalIntegrator&lt; _realT &gt;</a>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('functions_func_o.html',''); initResiza
 , <a class="el" href="structmx_1_1sigproc_1_1autocorrelationFromPSD.html#ac2814d49690e650b397cae9b94eb02bd">mx::sigproc::autocorrelationFromPSD&lt; T &gt;</a>
 , <a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html#a57dc74dd38c5bc17dc1383ec9b51083c">mx::sigproc::averagePeriodogram&lt; realT &gt;</a>
 , <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#aabd0ae313681641f816d3150182a4953">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>
-, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a91c8ff4405d178263be2349fb9a588c9">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
+, <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#ad0e2a8db9f18bad85e28e2fdbf681385">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>
 , <a class="el" href="structmx_1_1sigproc_1_1psdVarMean.html#a27784044ee2cceab3c45d72cbb5e2faa">mx::sigproc::psdVarMean&lt; paramsT &gt;</a>
 </li>
 <li>operator*()
@@ -138,22 +138,22 @@ $(document).ready(function(){initNavTree('functions_func_o.html',''); initResiza
 </li>
 <li>operator[]()
 : <a class="el" href="structmx_1_1app_1_1clOptions.html#a1e769f91bd49e51ba14c30a22f69b1e3">mx::app::clOptions</a>
-, <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a31ba49643bfe07964cd9ec3f89c6fb47">mx::astro::baseSpectrum&lt; realT &gt;</a>
+, <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a3f23a42de38d1e575d72970b601ffb82">mx::astro::baseSpectrum&lt; realT &gt;</a>
 , <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a00dcba804a168365416ef9b5ef44773d">mx::fits::fitsHeader</a>
 , <a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html#adb233c7acba5a0216555c1db469e3470">mx::sigproc::averagePeriodogram&lt; realT &gt;</a>
 , <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a8b2c85faa0917f5131ce10d6bfe4de19">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;</a>
 </li>
 <li>optd()
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a0d308fcad9a926281d4878e64bc4b575">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a82c0cc80580fe62c663874dfd87fc24e">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>optd_delta()
-: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aff8cf866756e38b3f322bcb2f8339552">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
+: <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a03dbb862928b1b50616a61018abf39a2">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;</a>
 </li>
 <li>optGainOpenLoop()
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a1fd998c9f66e37dd0539c509bb468ff4">mx::AO::analysis::clGainOpt&lt; _realT &gt;</a>
 </li>
 <li>optimizeAPLCMC()
-: <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#ad91f1698bf34722787cc83d71689898b">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;</a>
+: <a class="el" href="structmx_1_1wfp_1_1lyotCoronagraph.html#a9a3ab92867a56530c85687f255e5f266">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;</a>
 </li>
 <li>optimizeNc()
 : <a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#ab842a4afff5448f3e6ee4e59b9403245">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;</a>
@@ -182,13 +182,16 @@ $(document).ready(function(){initNavTree('functions_func_o.html',''); initResiza
 <li>outputRDIPreProcessed()
 : <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a94c1c92c8b61da759cf9841c2f8898e6">mx::improc::HCIobservation&lt; _realT &gt;</a>
 </li>
+<li>outputStatus()
+: <a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html#a5b6845c772ca22dd607f68d3e3bb0768">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jun 22 2021 23:48:04 for mxlib by
+    <li class="footer">Generated on Fri Aug 13 2021 12:45:20 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

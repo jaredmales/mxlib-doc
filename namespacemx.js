@@ -87,6 +87,10 @@ var namespacemx =
       [ "skipCol", "structmx_1_1ioutils_1_1skipCol.html", "structmx_1_1ioutils_1_1skipCol" ],
       [ "textTable", "structmx_1_1ioutils_1_1textTable.html", "structmx_1_1ioutils_1_1textTable" ]
     ] ],
+    [ "ipc", null, [
+      [ "ompLoopWatcher", "classmx_1_1ipc_1_1ompLoopWatcher.html", "classmx_1_1ipc_1_1ompLoopWatcher" ],
+      [ "sharedMemSegment", "classmx_1_1ipc_1_1sharedMemSegment.html", "classmx_1_1ipc_1_1sharedMemSegment" ]
+    ] ],
     [ "math", null, [
       [ "fft", null, [
         [ "fftT< _inputT, _outputT, _rank, 0 >", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4" ],
@@ -157,6 +161,9 @@ var namespacemx =
       [ "psdFilter< _realT, _rank, 0 >", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4" ],
       [ "psdVarMean", "structmx_1_1sigproc_1_1psdVarMean.html", "structmx_1_1sigproc_1_1psdVarMean" ],
       [ "psdVarMeanParams", "structmx_1_1sigproc_1_1psdVarMeanParams.html", "structmx_1_1sigproc_1_1psdVarMeanParams" ]
+    ] ],
+    [ "sys", null, [
+      [ "gitRepo", "classmx_1_1sys_1_1gitRepo.html", "classmx_1_1sys_1_1gitRepo" ]
     ] ],
     [ "wfp", null, [
       [ "fraunhoferPropagator", "classmx_1_1wfp_1_1fraunhoferPropagator.html", "classmx_1_1wfp_1_1fraunhoferPropagator" ],
