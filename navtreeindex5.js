@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a8b2ec50eb34d06a44b8164383dbf747a":[0,3,2,1,30],
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a91c8ff4405d178263be2349fb9a588c9":[0,3,2,1,14],
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a91e95644726eeb0562df7db6d0f97368":[0,3,2,1,19],
 "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a925c59a95730dffd07d8f9343575eaf2":[0,3,2,1,26],
 "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a98f596901af94f47d997e802597066fb":[0,3,2,1,32],
 "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a9a300a24113a3240f0a6ffb5d3ea34d1":[0,3,2,1,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "fourierCovariance_8hpp.html#ga4c2d016705e5e36c40478fb588b045e5":[8,0,0,0,7,7],
 "fourierCovariance_8hpp_source.html":[8,0,0,0,7],
 "fourierModes_8hpp.html":[8,0,9,5],
-"fourierModes_8hpp.html#ga0e6e7d63b0d17d7fca0e77fcedbd90f4":[8,0,9,5,16],
-"fourierModes_8hpp.html#ga12f77b409b344ec38c6acb2f4e8f6094":[8,0,9,5,10],
-"fourierModes_8hpp.html#ga1e41643ee55c12b8d6777f4736460b08":[8,0,9,5,6],
-"fourierModes_8hpp.html#ga303df4cc382d09d3d9d4a250c48b6da6":[8,0,9,5,19]
+"fourierModes_8hpp.html#ga0e6e7d63b0d17d7fca0e77fcedbd90f4":[8,0,9,5,16]
 };

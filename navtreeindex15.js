@@ -1,5 +1,9 @@
 var NAVTREEINDEX15 =
 {
+"structmx_1_1wfp_1_1idealCoronagraph.html#af8a7790c997e1c54214c51af3848ea85":[0,5,3,0,7],
+"structmx_1_1wfp_1_1is__imagingArray.html":[7,0,0,12,3],
+"structmx_1_1wfp_1_1lyotCoronagraph.html":[0,5,3,1],
+"structmx_1_1wfp_1_1lyotCoronagraph.html#a07e4963a43a57f2d637f132bf0a16fb7":[0,5,3,1,9],
 "structmx_1_1wfp_1_1lyotCoronagraph.html#a1576243618ca1cf3bd2b2eb7e738946c":[0,5,3,1,25],
 "structmx_1_1wfp_1_1lyotCoronagraph.html#a2decd87fa22ceb48c069cf840bbf2dc1":[0,5,3,1,4],
 "structmx_1_1wfp_1_1lyotCoronagraph.html#a38faef4beaf34ebe9b09da44d64a92fc":[0,5,3,1,8],

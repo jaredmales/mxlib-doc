@@ -1,5 +1,9 @@
 var NAVTREEINDEX11 =
 {
+"sofa__constants_8h_source.html":[8,0,3,0],
+"speckleAmpPSD_8hpp.html":[8,0,0,0,10],
+"speckleAmpPSD_8hpp.html#a7d0c7e69702d3ec1723d4a3490bcafe2":[8,0,0,0,10,1],
+"speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923":[8,0,0,0,10,0],
 "speckleAmpPSD_8hpp_source.html":[8,0,0,0,10],
 "stars_8hpp.html":[8,0,2,12],
 "stars_8hpp.html#a49304ee39daa78925d41bde562ce972f":[8,0,2,12,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX11 =
 "structmx_1_1app_1_1configTarget.html#a11855eaf15aadddf8815269ef99b2ad1":[0,7,5,3,11],
 "structmx_1_1app_1_1configTarget.html#a38c43a2e37bdc76db316fdfcd2676a9b":[0,7,5,3,3],
 "structmx_1_1app_1_1configTarget.html#a46af798a275c4ad0e255ad068d2c02a5":[0,7,5,3,2],
-"structmx_1_1app_1_1configTarget.html#a4755dcea66b398d06d3e4d2593b1b57a":[0,7,5,3,6],
-"structmx_1_1app_1_1configTarget.html#a5987148267c4fe38219491f2a5f07428":[0,7,5,3,9],
-"structmx_1_1app_1_1configTarget.html#a5e7e7c03b69f4df2db4a2ff348f35816":[0,7,5,3,15],
-"structmx_1_1app_1_1configTarget.html#a84679548bd8d0fafcd447f56616b1a51":[0,7,5,3,1],
-"structmx_1_1app_1_1configTarget.html#a84dd5bea6c530693cf98ee532540c46e":[0,7,5,3,0]
+"structmx_1_1app_1_1configTarget.html#a4755dcea66b398d06d3e4d2593b1b57a":[0,7,5,3,6]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"imageTransforms_8hpp_source.html":[8,0,4,9],
+"imageUtils_8hpp.html":[8,0,4,10],
+"imageUtils_8hpp.html#ga05880e2f798ef0086d2017c3685ab3fa":[8,0,4,10,1],
 "imageUtils_8hpp.html#ga54dfc41af4090b82694cc201d0651f64":[8,0,4,10,2],
 "imageUtils_8hpp.html#ga569cacef7253286c8cc8f940cbe6342b":[8,0,4,10,5],
 "imageUtils_8hpp.html#ga5f71c0ea291ce55da576a6f565451e8b":[8,0,4,10,8],
@@ -157,7 +160,6 @@ var NAVTREEINDEX10 =
 "psdUtils_8hpp.html#ga28474f4d402cb6e95cd16fd6debe704e":[8,0,9,11,10],
 "psdUtils_8hpp.html#ga32e44c6b0cd5ec6927a3f1ca1272a987":[8,0,9,11,0],
 "psdUtils_8hpp.html#ga38d23967b6fb4e964ae47e3577df1e48":[8,0,9,11,16],
-"psdUtils_8hpp.html#ga4e9c3e856f88c25abac9ff6ee03f809a":[8,0,9,11,6],
 "psdUtils_8hpp.html#ga505c909ca8b9ba63f1b31056ddb069c2":[8,0,9,11,5],
 "psdUtils_8hpp.html#ga54f28b5b8ac4cba70ac63bd3a0ba3343":[8,0,9,11,12],
 "psdUtils_8hpp.html#ga61cb9edc15367dc46359553a646cd770":[8,0,9,11,14],
@@ -165,6 +167,7 @@ var NAVTREEINDEX10 =
 "psdUtils_8hpp.html#ga9be4feb5c4ac0b44608a726306b0311a":[8,0,9,11,1],
 "psdUtils_8hpp.html#gaa1e70516ded906911c0f18ac466b272d":[8,0,9,11,13],
 "psdUtils_8hpp.html#gaaf6cadd738aedf81b21cdd406ce63973":[8,0,9,11,15],
+"psdUtils_8hpp.html#gad18fa3a202d5ccec79d2dda8eba2e5ed":[8,0,9,11,6],
 "psdUtils_8hpp.html#gad62e6e7fd9fde862c407f3d6613e6374":[8,0,9,11,2],
 "psdUtils_8hpp.html#gadcc05de7369c4f959fc7b870640d022e":[8,0,9,11,7],
 "psdUtils_8hpp.html#gadf1501874337d43b64ea2f3da0537a09":[8,0,9,11,9],
@@ -175,6 +178,7 @@ var NAVTREEINDEX10 =
 "psdUtils__test_8cpp.html":[8,0,11,0,4,1],
 "psdUtils__test_8cpp.html#a6af36a12d21a95701be235636fc905c7":[8,0,11,0,4,1,0],
 "psdUtils__test_8cpp.html#a7419701a8b71f52a62b3b32a9d29bb5e":[8,0,11,0,4,1,1],
+"psdUtils__test_8cpp.html#aa8ca758d0185f4252b5b60e8f1941376":[8,0,11,0,4,1,2],
 "psdUtils__test_8cpp_source.html":[8,0,11,0,4,1],
 "psdVarMean_8hpp.html":[8,0,9,12],
 "psdVarMean_8hpp.html#af60e94a3fe233a42176dfe22bed8a36f":[8,0,9,12,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX10 =
 "simulatedAOSystem_8hpp.html":[8,0,0,1,11],
 "simulatedAOSystem_8hpp_source.html":[8,0,0,1,11],
 "sofa_8hpp.html":[8,0,2,11],
-"sofa_8hpp_source.html":[8,0,2,11],
-"sofa__constants_8h_source.html":[8,0,3,0],
-"speckleAmpPSD_8hpp.html":[8,0,0,0,10],
-"speckleAmpPSD_8hpp.html#a7d0c7e69702d3ec1723d4a3490bcafe2":[8,0,0,0,10,1],
-"speckleAmpPSD_8hpp.html#ab2e95b1b6ab095255198a1d9c9feb923":[8,0,0,0,10,0]
+"sofa_8hpp_source.html":[8,0,2,11]
 };

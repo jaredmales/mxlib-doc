@@ -99,7 +99,7 @@ var group__psds =
     [ "frequencyGrid", "group__psds.html#ga027c78549a6e53f04ad2194e4962c79e", null ],
     [ "frequencyGrid", "group__psds.html#ga204b4a6d60ae3d3ef3fb53ce2fe71266", null ],
     [ "frequencyGrid", "group__psds.html#ga505c909ca8b9ba63f1b31056ddb069c2", null ],
-    [ "frequencyGrid", "group__psds.html#ga4e9c3e856f88c25abac9ff6ee03f809a", null ],
+    [ "frequencyGrid", "group__psds.html#gad18fa3a202d5ccec79d2dda8eba2e5ed", null ],
     [ "kneePSD", "group__psds.html#gadcc05de7369c4f959fc7b870640d022e", null ],
     [ "normPSD", "group__psds.html#gaef03a320a8a7a76a756a72b5b99ba6ff", null ],
     [ "normPSD", "group__psds.html#gadf1501874337d43b64ea2f3da0537a09", null ],

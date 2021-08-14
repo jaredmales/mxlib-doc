@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"classmx_1_1fits_1_1fitsFile.html#a8d85be2fa43a79f3b34e93980d8d7d49":[0,7,0,3,0,7],
+"classmx_1_1fits_1_1fitsFile.html#a8d85be2fa43a79f3b34e93980d8d7d49":[0,4,8,0,7],
+"classmx_1_1fits_1_1fitsFile.html#a90e1f799fa3f23bd20a1757e1afead5a":[0,7,0,3,0,31],
 "classmx_1_1fits_1_1fitsFile.html#a90e1f799fa3f23bd20a1757e1afead5a":[0,4,8,0,31],
 "classmx_1_1fits_1_1fitsFile.html#a9184645bb50051d52fd61e13ae33c4e1":[0,7,0,3,0,18],
 "classmx_1_1fits_1_1fitsFile.html#a9184645bb50051d52fd61e13ae33c4e1":[0,4,8,0,18],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ac13ed4e28104b072f782be19c66e8f29":[0,2,6,3,1,2,6],
 "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ac53e2c5a27497abde89a1044d7c54e44":[0,2,6,3,1,2,0],
 "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ae5792609b749e111ed16ddeac0696432":[0,2,6,3,1,2,3],
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html":[0,2,6,3,1,4],
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a0434ffa569e12a13873a64eadeecfd38":[0,2,6,3,1,4,14],
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a060528fa0bd3a891212170582a3470ba":[0,2,6,3,1,4,8],
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a36456d4cf9c494aa973cbde6c69ec172":[0,2,6,3,1,4,7]
+"classmx_1_1math_1_1fit_1_1fitGaussian2D.html":[0,2,6,3,1,4]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"fourierModes_8hpp.html#ga12f77b409b344ec38c6acb2f4e8f6094":[8,0,9,5,10],
+"fourierModes_8hpp.html#ga1e41643ee55c12b8d6777f4736460b08":[8,0,9,5,6],
+"fourierModes_8hpp.html#ga303df4cc382d09d3d9d4a250c48b6da6":[8,0,9,5,19],
 "fourierModes_8hpp.html#ga365be757fe57b1014ad8de4ee5e0776e":[8,0,9,5,8],
 "fourierModes_8hpp.html#ga41f13300f4e86fb1cc41f095b5a3fa3c":[8,0,9,5,18],
 "fourierModes_8hpp.html#ga4b7d2d148eb078037ac20074bbbcc357":[8,0,9,5,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "group__eigen__image__processing.html":[0,4,6],
 "group__eigen__image__processing.html#ga7c15ce5d1256dfdf2962fb96fc7b9190":[0,4,6,4],
 "group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99":[0,4,6,3],
-"group__eigen__image__processing.html#gaf2c33450cd88c7a23d561ca21bdae7fd":[0,4,6,5],
-"group__eigen__lapack.html":[0,2,4,2],
-"group__eigen__lapack.html#ga33dce7721a6e2999d72651ad358bbdf6":[0,2,4,2,2],
-"group__eigen__lapack.html#ga769d73daca9dec74c654d049d8b14967":[0,2,4,2,0]
+"group__eigen__image__processing.html#gaf2c33450cd88c7a23d561ca21bdae7fd":[0,4,6,5]
 };
