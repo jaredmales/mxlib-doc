@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('psdUtils_8hpp.html',''); initResizable
 <p class="definition">Definition in file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 </div><div class="textblock"><code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../mxError.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fft_8hpp_source.html">../math/fft/fft.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vectorUtils_8hpp_source.html">../math/vectorUtils.hpp</a>&quot;</code><br />
 </div>
@@ -139,10 +140,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">mx::sigproc::freq_sampling</a> (size_t dim, realT f_max)</td></tr>
 <tr class="memdesc:gad62e6e7fd9fde862c407f3d6613e6374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the frequency sampling for a grid given maximum dimension and maximum frequency.  <a href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">More...</a><br /></td></tr>
 <tr class="separator:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="memTemplParams" colspan="2">template&lt;typename realT , typename realParamT &gt; </td></tr>
-<tr class="memitem:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gad18fa3a202d5ccec79d2dda8eba2e5ed">mx::sigproc::frequencyGrid</a> (std::vector&lt; realT &gt; &amp;vec, realParamT dtT, bool fftOrder=true)</td></tr>
-<tr class="memdesc:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 1-D frequency grid.  <a href="group__psds.html#gad18fa3a202d5ccec79d2dda8eba2e5ed">More...</a><br /></td></tr>
-<tr class="separator:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="memTemplParams" colspan="2">template&lt;typename realT , typename realParamT &gt; </td></tr>
+<tr class="memitem:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gae6fad3b6e5cc9118ddea2d061fdefee3">mx::sigproc::frequencyGrid</a> (std::vector&lt; realT &gt; &amp;vec, realParamT dt, bool fftOrder=true)</td></tr>
+<tr class="memdesc:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 1-D frequency grid.  <a href="group__psds.html#gae6fad3b6e5cc9118ddea2d061fdefee3">More...</a><br /></td></tr>
+<tr class="separator:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga027c78549a6e53f04ad2194e4962c79e"><td class="memTemplParams" colspan="2">template&lt;typename eigenArr , typename realParamT &gt; </td></tr>
 <tr class="memitem:ga027c78549a6e53f04ad2194e4962c79e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga027c78549a6e53f04ad2194e4962c79e">mx::sigproc::frequencyGrid</a> (eigenArr &amp;arr, realParamT drT, eigenArr *k_x, eigenArr *k_y)</td></tr>
 <tr class="memdesc:ga027c78549a6e53f04ad2194e4962c79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2-D frequency grid.  <a href="group__psds.html#ga027c78549a6e53f04ad2194e4962c79e">More...</a><br /></td></tr>
@@ -220,10 +221,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">mx::sigproc::freq_sampling</a> (size_t dim, realT f_max)</td></tr>
 <tr class="memdesc:gad62e6e7fd9fde862c407f3d6613e6374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the frequency sampling for a grid given maximum dimension and maximum frequency.  <a href="group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374">More...</a><br /></td></tr>
 <tr class="separator:gad62e6e7fd9fde862c407f3d6613e6374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="memTemplParams" colspan="2">template&lt;typename realT , typename realParamT &gt; </td></tr>
-<tr class="memitem:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gad18fa3a202d5ccec79d2dda8eba2e5ed">mx::sigproc::frequencyGrid</a> (std::vector&lt; realT &gt; &amp;vec, realParamT dtT, bool fftOrder=true)</td></tr>
-<tr class="memdesc:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 1-D frequency grid.  <a href="group__psds.html#gad18fa3a202d5ccec79d2dda8eba2e5ed">More...</a><br /></td></tr>
-<tr class="separator:gad18fa3a202d5ccec79d2dda8eba2e5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="memTemplParams" colspan="2">template&lt;typename realT , typename realParamT &gt; </td></tr>
+<tr class="memitem:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gae6fad3b6e5cc9118ddea2d061fdefee3">mx::sigproc::frequencyGrid</a> (std::vector&lt; realT &gt; &amp;vec, realParamT dt, bool fftOrder=true)</td></tr>
+<tr class="memdesc:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 1-D frequency grid.  <a href="group__psds.html#gae6fad3b6e5cc9118ddea2d061fdefee3">More...</a><br /></td></tr>
+<tr class="separator:gae6fad3b6e5cc9118ddea2d061fdefee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga027c78549a6e53f04ad2194e4962c79e"><td class="memTemplParams" colspan="2">template&lt;typename eigenArr , typename realParamT &gt; </td></tr>
 <tr class="memitem:ga027c78549a6e53f04ad2194e4962c79e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga027c78549a6e53f04ad2194e4962c79e">mx::sigproc::frequencyGrid</a> (eigenArr &amp;arr, realParamT drT, eigenArr *k_x, eigenArr *k_y)</td></tr>
 <tr class="memdesc:ga027c78549a6e53f04ad2194e4962c79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2-D frequency grid.  <a href="group__psds.html#ga027c78549a6e53f04ad2194e4962c79e">More...</a><br /></td></tr>
@@ -287,7 +288,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="psdUtils_8hpp.html">psdUtils.hpp</a></li>
-    <li class="footer">Generated on Fri Aug 13 2021 21:13:56 for mxlib by
+    <li class="footer">Generated on Sun Aug 22 2021 23:19:36 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

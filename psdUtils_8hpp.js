@@ -6,7 +6,7 @@ var psdUtils_8hpp =
     [ "frequencyGrid", "psdUtils_8hpp.html#ga027c78549a6e53f04ad2194e4962c79e", null ],
     [ "frequencyGrid", "psdUtils_8hpp.html#ga204b4a6d60ae3d3ef3fb53ce2fe71266", null ],
     [ "frequencyGrid", "psdUtils_8hpp.html#ga505c909ca8b9ba63f1b31056ddb069c2", null ],
-    [ "frequencyGrid", "psdUtils_8hpp.html#gad18fa3a202d5ccec79d2dda8eba2e5ed", null ],
+    [ "frequencyGrid", "psdUtils_8hpp.html#gae6fad3b6e5cc9118ddea2d061fdefee3", null ],
     [ "kneePSD", "psdUtils_8hpp.html#gadcc05de7369c4f959fc7b870640d022e", null ],
     [ "normPSD", "psdUtils_8hpp.html#gaef03a320a8a7a76a756a72b5b99ba6ff", null ],
     [ "normPSD", "psdUtils_8hpp.html#gadf1501874337d43b64ea2f3da0537a09", null ],

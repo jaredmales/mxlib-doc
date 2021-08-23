@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"sofa_8hpp_source.html":[8,0,2,11],
 "sofa__constants_8h_source.html":[8,0,3,0],
 "speckleAmpPSD_8hpp.html":[8,0,0,0,10],
 "speckleAmpPSD_8hpp.html#a7d0c7e69702d3ec1723d4a3490bcafe2":[8,0,0,0,10,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "structmx_1_1app_1_1configTarget.html#a08f5c9d90dafd2cc00fa12213fc41848":[0,7,5,3,14],
 "structmx_1_1app_1_1configTarget.html#a11855eaf15aadddf8815269ef99b2ad1":[0,7,5,3,11],
 "structmx_1_1app_1_1configTarget.html#a38c43a2e37bdc76db316fdfcd2676a9b":[0,7,5,3,3],
-"structmx_1_1app_1_1configTarget.html#a46af798a275c4ad0e255ad068d2c02a5":[0,7,5,3,2],
-"structmx_1_1app_1_1configTarget.html#a4755dcea66b398d06d3e4d2593b1b57a":[0,7,5,3,6]
+"structmx_1_1app_1_1configTarget.html#a46af798a275c4ad0e255ad068d2c02a5":[0,7,5,3,2]
 };

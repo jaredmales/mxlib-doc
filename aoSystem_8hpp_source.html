@@ -2534,55 +2534,71 @@ $(document).ready(function(){initNavTree('aoSystem_8hpp_source.html',''); initRe
 <div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    lam_sci = &quot;</span> &lt;&lt; lam_sci() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    zeta    = &quot;</span> &lt;&lt; zeta() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;   </div>
 <div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    lam_wfs = &quot;</span> &lt;&lt; lam_wfs() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;<span class="comment">/*   ios &lt;&lt; &quot;#    npix_wfs = &quot; &lt;&lt; npix_wfs() &lt;&lt; &#39;\n&#39;;</span></div>
-<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;<span class="comment">   ios &lt;&lt; &quot;#    ron_wfs = &quot; &lt;&lt; ron_wfs() &lt;&lt; &#39;\n&#39;;</span></div>
-<div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;<span class="comment">   ios &lt;&lt; &quot;#    Fbg = &quot; &lt;&lt; Fbg() &lt;&lt; &#39;\n&#39;;</span></div>
-<div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160;<span class="comment">   ios &lt;&lt; &quot;#    minTauWFS = &quot; &lt;&lt; minTauWFS() &lt;&lt; &#39;\n&#39;;</span></div>
-<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;<span class="comment">   */</span>ios &lt;&lt; <span class="stringliteral">&quot;#    bin_npix = &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; m_bin_npix &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    tauWFS = &quot;</span> &lt;&lt; tauWFS() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    optTau = &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; m_optTau &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    deltaTau = &quot;</span> &lt;&lt; deltaTau() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    fit_mn_max = &quot;</span> &lt;&lt; m_fit_mn_max &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    spatialFilter_ku = &quot;</span> &lt;&lt; m_spatialFilter_ku &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    spatialFilter_kv = &quot;</span> &lt;&lt; m_spatialFilter_kv &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    ncp_wfe = &quot;</span> &lt;&lt; m_ncp_wfe &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    ncp_alpha = &quot;</span> &lt;&lt; m_ncp_alpha &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;   </div>
-<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;   </div>
-<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;   <span class="keywordflow">if</span> (m_wfsBeta == 0) wfsBetaUnalloc();</div>
-<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;   m_wfsBeta-&gt;dumpWFS(ios);</div>
-<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;   psd.dumpPSD(ios);</div>
-<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;   atm.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a178b43e4d2bd7946f8ddeb945f497717">dumpAtmosphere</a>(ios);</div>
-<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;   </div>
-<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    Software version: &quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#       mxlib sha1 = &quot;</span> &lt;&lt; MXLIB_UNCOMP_CURRENT_SHA1 &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#       mxlib modified = &quot;</span> &lt;&lt; MXLIB_UNCOMP_REPO_MODIFIED &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;      </div>
-<div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160;   <span class="keywordflow">return</span> ios;</div>
-<div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;}</div>
-<div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160; </div>
-<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
-<div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;float, vonKarmanSpectrum&lt;float&gt;</a>, std::ostream&gt;; </div>
-<div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160; </div>
-<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
-<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;double, vonKarmanSpectrum&lt;double&gt;</a>, std::ostream&gt;; </div>
-<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160; </div>
-<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
-<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;float, vonKarmanSpectrum&lt;float&gt;</a>, std::ostream&gt;; </div>
-<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160; </div>
-<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
-<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;long double, vonKarmanSpectrum&lt;long double&gt;</a>, std::ostream&gt;; </div>
-<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160; </div>
-<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;<span class="preprocessor">#ifdef HASQUAD</span></div>
-<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
-<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;__float128, vonKarmanSpectrum&lt;__float128&gt;</a>, std::ostream&gt;; </div>
-<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160; </div>
-<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;} <span class="comment">//namespace analysis</span></div>
-<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;} <span class="comment">//namespace AO</span></div>
-<div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160; </div>
-<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;<span class="preprocessor">#endif //aoSystem_hpp</span></div>
+<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    npix_wfs = &quot;</span> &lt;&lt; npix_wfs((<span class="keywordtype">size_t</span>) 0);</div>
+<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> n=1; n &lt; npix_wfs().size(); ++n) ios &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; npix_wfs(n);</div>
+<div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;   ios &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160; </div>
+<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    ron_wfs = &quot;</span> &lt;&lt; ron_wfs((<span class="keywordtype">size_t</span>) 0);</div>
+<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> n=1; n &lt; ron_wfs().size(); ++n) ios &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; ron_wfs(n);</div>
+<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;   ios &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160; </div>
+<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    Fbg = &quot;</span> &lt;&lt; Fbg((<span class="keywordtype">size_t</span>) 0);</div>
+<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> n=1; n &lt; Fbg().size(); ++n) ios &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; Fbg(n);</div>
+<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;   ios &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160; </div>
+<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    minTauWFS = &quot;</span> &lt;&lt; minTauWFS((<span class="keywordtype">size_t</span>) 0);</div>
+<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> n=1; n &lt; minTauWFS().size(); ++n) ios &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; minTauWFS(n);</div>
+<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;   ios &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160; </div>
+<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;<span class="comment">/*   ios &lt;&lt; &quot;#    npix_wfs = &quot; &lt;&lt; npix_wfs() &lt;&lt; &#39;\n&#39;;</span></div>
+<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;<span class="comment">   ios &lt;&lt; &quot;#    ron_wfs = &quot; &lt;&lt; ron_wfs() &lt;&lt; &#39;\n&#39;;</span></div>
+<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;<span class="comment">   ios &lt;&lt; &quot;#    Fbg = &quot; &lt;&lt; Fbg() &lt;&lt; &#39;\n&#39;;</span></div>
+<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;<span class="comment">   ios &lt;&lt; &quot;#    minTauWFS = &quot; &lt;&lt; minTauWFS() &lt;&lt; &#39;\n&#39;;</span></div>
+<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;<span class="comment">   */</span>ios &lt;&lt; <span class="stringliteral">&quot;#    bin_npix = &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; m_bin_npix &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    tauWFS = &quot;</span> &lt;&lt; tauWFS() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    optTau = &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; m_optTau &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    deltaTau = &quot;</span> &lt;&lt; deltaTau() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    fit_mn_max = &quot;</span> &lt;&lt; m_fit_mn_max &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    spatialFilter_ku = &quot;</span> &lt;&lt; m_spatialFilter_ku &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    spatialFilter_kv = &quot;</span> &lt;&lt; m_spatialFilter_kv &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    ncp_wfe = &quot;</span> &lt;&lt; m_ncp_wfe &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    ncp_alpha = &quot;</span> &lt;&lt; m_ncp_alpha &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;   </div>
+<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;   </div>
+<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;   <span class="keywordflow">if</span> (m_wfsBeta == 0) wfsBetaUnalloc();</div>
+<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;   m_wfsBeta-&gt;dumpWFS(ios);</div>
+<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;   psd.dumpPSD(ios);</div>
+<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;   atm.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a178b43e4d2bd7946f8ddeb945f497717">dumpAtmosphere</a>(ios);</div>
+<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160;   </div>
+<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#    Software version: &quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#       mxlib sha1 = &quot;</span> &lt;&lt; MXLIB_UNCOMP_CURRENT_SHA1 &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;   ios &lt;&lt; <span class="stringliteral">&quot;#       mxlib modified = &quot;</span> &lt;&lt; MXLIB_UNCOMP_REPO_MODIFIED &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;      </div>
+<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;   <span class="keywordflow">return</span> ios;</div>
+<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;}</div>
+<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160; </div>
+<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
+<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;float, vonKarmanSpectrum&lt;float&gt;</a>, std::ostream&gt;; </div>
+<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160; </div>
+<div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
+<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;double, vonKarmanSpectrum&lt;double&gt;</a>, std::ostream&gt;; </div>
+<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160; </div>
+<div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
+<div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;float, vonKarmanSpectrum&lt;float&gt;</a>, std::ostream&gt;; </div>
+<div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160; </div>
+<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
+<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;long double, vonKarmanSpectrum&lt;long double&gt;</a>, std::ostream&gt;; </div>
+<div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160; </div>
+<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;<span class="preprocessor">#ifdef HASQUAD</span></div>
+<div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span></div>
+<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem&lt;__float128, vonKarmanSpectrum&lt;__float128&gt;</a>, std::ostream&gt;; </div>
+<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160; </div>
+<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;} <span class="comment">//namespace analysis</span></div>
+<div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160;} <span class="comment">//namespace AO</span></div>
+<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160; </div>
+<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;<span class="preprocessor">#endif //aoSystem_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassmx_1_1AO_1_1analysis_1_1aoSystem_html_abd514d8d406546fb1727a55324bfbec7"><div class="ttname"><a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#abd514d8d406546fb1727a55324bfbec7">mx::AO::analysis::aoSystem::npix_wfs</a></div><div class="ttdeci">std::vector&lt; realT &gt; npix_wfs()</div><div class="ttdoc">Get the number of pixels in the WFS for all binning modes.</div><div class="ttdef"><b>Definition:</b> <a href="aoSystem_8hpp_source.html#l01323">aoSystem.hpp:1323</a></div></div>
@@ -2725,7 +2741,7 @@ $(document).ready(function(){initNavTree('aoSystem_8hpp_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_cf528a69cdca6105739343681d2398d1.html">analysis</a></li><li class="navelem"><a class="el" href="aoSystem_8hpp.html">aoSystem.hpp</a></li>
-    <li class="footer">Generated on Fri Aug 13 2021 21:13:55 for mxlib by
+    <li class="footer">Generated on Sun Aug 22 2021 23:19:34 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
