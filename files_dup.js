@@ -10,6 +10,7 @@ var files_dup =
     [ "math", "dir_fba38f648377aa56ae5d69782adf9e53.html", "dir_fba38f648377aa56ae5d69782adf9e53" ],
     [ "meta", "dir_19fc12b439e4dfd72e55eacdf1189d08.html", "dir_19fc12b439e4dfd72e55eacdf1189d08" ],
     [ "sigproc", "dir_749a31579df8fa01bae22bb783a391d0.html", "dir_749a31579df8fa01bae22bb783a391d0" ],
+    [ "source", "dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html", "dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" ],
     [ "sys", "dir_317ea3797c15f4a1d9c156bc812661ca.html", "dir_317ea3797c15f4a1d9c156bc812661ca" ],
     [ "tests", "dir_59425e443f801f1f2fd8bbe4959a3ccf.html", "dir_59425e443f801f1f2fd8bbe4959a3ccf" ],
     [ "wfp", "dir_798a60fe574b319ce1e0453987adc495.html", "dir_798a60fe574b319ce1e0453987adc495" ],

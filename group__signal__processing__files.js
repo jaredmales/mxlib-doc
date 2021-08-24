@@ -12,5 +12,6 @@ var group__signal__processing__files =
     [ "psdUtils.hpp", "psdUtils_8hpp.html", null ],
     [ "psdVarMean.hpp", "psdVarMean_8hpp.html", null ],
     [ "signalWindows.hpp", "signalWindows_8hpp.html", null ],
-    [ "zernike.hpp", "zernike_8hpp.html", null ]
+    [ "zernike.hpp", "zernike_8hpp.html", null ],
+    [ "zernike.cpp", "zernike_8cpp.html", null ]
 ];

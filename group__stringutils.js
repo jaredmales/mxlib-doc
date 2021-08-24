@@ -1,6 +1,7 @@
 var group__stringutils =
 [
     [ "stringUtils.hpp", "stringUtils_8hpp.html", null ],
+    [ "stringUtils.cpp", "stringUtils_8cpp.html", null ],
     [ "convertFromString", "group__stringutils.html#ga79aa5be07867f6a65ecc46976efa1609", null ],
     [ "convertFromString< bool >", "group__stringutils.html#ga916f7ddd37ec929aa0fadc88fcaf8715", null ],
     [ "convertToString", "group__stringutils.html#ga454a4beb6cb7a0e1885a4d6114fc7f4b", null ],

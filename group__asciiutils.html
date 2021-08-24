@@ -120,6 +120,9 @@ Files</h2></td></tr>
 <tr class="memitem:textTable_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="textTable_8hpp.html">textTable.hpp</a></td></tr>
 <tr class="memdesc:textTable_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">declares and defines a simple text table manager <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:textTable_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="textTable_8cpp.html">textTable.cpp</a></td></tr>
+<tr class="memdesc:textTable_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">implementation for a simple text table manager <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -131,10 +134,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga85613e3021407755f1e0af8705073755"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga85613e3021407755f1e0af8705073755">mx::ioutils::textTable::addCell</a> (size_t row, size_t col, const typeT &amp;cell, int precision=0)</td></tr>
 <tr class="memdesc:ga85613e3021407755f1e0af8705073755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one cell to the table, overwriting if it already exists.  <a href="group__asciiutils.html#ga85613e3021407755f1e0af8705073755">More...</a><br /></td></tr>
 <tr class="separator:ga85613e3021407755f1e0af8705073755"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga063b3656be8c09545b3fa4546274f48c"><td class="memTemplParams" colspan="2">template&lt;typename iosT &gt; </td></tr>
-<tr class="memitem:ga063b3656be8c09545b3fa4546274f48c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga063b3656be8c09545b3fa4546274f48c">mx::ioutils::textTable::outPut</a> (iosT &amp;ios)</td></tr>
-<tr class="memdesc:ga063b3656be8c09545b3fa4546274f48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the table to a stream.  <a href="group__asciiutils.html#ga063b3656be8c09545b3fa4546274f48c">More...</a><br /></td></tr>
-<tr class="separator:ga063b3656be8c09545b3fa4546274f48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b8d81640ae1bcb94b014eaf2c6be91e"><td class="memTemplParams" colspan="2">template&lt;typename iosT &gt; </td></tr>
+<tr class="memitem:ga8b8d81640ae1bcb94b014eaf2c6be91e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__asciiutils.html#ga8b8d81640ae1bcb94b014eaf2c6be91e">mx::ioutils::textTable::outPut</a> (iosT &amp;ios)</td></tr>
+<tr class="memdesc:ga8b8d81640ae1bcb94b014eaf2c6be91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the table to a stream.  <a href="group__asciiutils.html#ga8b8d81640ae1bcb94b014eaf2c6be91e">More...</a><br /></td></tr>
+<tr class="separator:ga8b8d81640ae1bcb94b014eaf2c6be91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga85613e3021407755f1e0af8705073755"></a>
@@ -189,12 +192,12 @@ template&lt;typename typeT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00107">107</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b">mx::ioutils::textTable::addCell()</a>.</p>
+<p class="reference">References <a class="el" href="textTable_8cpp_source.html#l00036">mx::ioutils::textTable::addCell()</a>.</p>
 
 </div>
 </div>
-<a id="ga063b3656be8c09545b3fa4546274f48c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga063b3656be8c09545b3fa4546274f48c">&#9670;&nbsp;</a></span>outPut()</h2>
+<a id="ga8b8d81640ae1bcb94b014eaf2c6be91e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b8d81640ae1bcb94b014eaf2c6be91e">&#9670;&nbsp;</a></span>outPut()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +205,7 @@ template&lt;typename typeT &gt; </div>
 template&lt;typename iosT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mx::ioutils::textTable::outPut </td>
+          <td class="memname">template void mx::ioutils::textTable::outPut&lt; std::ostream &gt; </td>
           <td>(</td>
           <td class="paramtype">iosT &amp;&#160;</td>
           <td class="paramname"><em>ios</em></td><td>)</td>
@@ -229,6 +232,8 @@ template&lt;typename iosT &gt; </div>
 <p class="definition">Definition at line <a class="el" href="textTable_8hpp_source.html#l00117">117</a> of file <a class="el" href="textTable_8hpp_source.html">textTable.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="textTable_8hpp_source.html#l00073">mx::ioutils::textTable::m_colSep</a>, <a class="el" href="textTable_8hpp_source.html#l00062">mx::ioutils::textTable::m_colWidths</a>, <a class="el" href="textTable_8hpp_source.html#l00071">mx::ioutils::textTable::m_lineEnd</a>, <a class="el" href="textTable_8hpp_source.html#l00069">mx::ioutils::textTable::m_lineStart</a>, <a class="el" href="textTable_8hpp_source.html#l00067">mx::ioutils::textTable::m_rows</a>, and <a class="el" href="textTable_8hpp_source.html#l00075">mx::ioutils::textTable::m_rowSep</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="application_8cpp_source.html#l00268">mx::app::application::help()</a>.</p>
 
 </div>
 </div>
@@ -303,7 +308,7 @@ template&lt;char delim = ' ', char comment = '#', char eol = '\n', typename... a
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Aug 22 2021 23:19:36 for mxlib by
+    <li class="footer">Generated on Mon Aug 23 2021 21:07:53 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

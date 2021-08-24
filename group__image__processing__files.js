@@ -14,5 +14,9 @@ var group__image__processing__files =
     [ "imageXCorrDiscrete.hpp", "imageXCorrDiscrete_8hpp.html", null ],
     [ "imageXCorrFFT.hpp", "imageXCorrFFT_8hpp.html", null ],
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],
-    [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", null ]
+    [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", null ],
+    [ "ADIobservation.cpp", "ADIobservation_8cpp.html", null ],
+    [ "HCIobservation.cpp", "HCIobservation_8cpp.html", null ],
+    [ "imageUtils.cpp", "imageUtils_8cpp.html", null ],
+    [ "KLIPreduction.cpp", "KLIPreduction_8cpp.html", null ]
 ];

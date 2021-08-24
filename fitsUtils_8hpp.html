@@ -123,31 +123,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a4c5195a4197fde3527ab43f539456e1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fitsUtils_8hpp.html#a4c5195a4197fde3527ab43f539456e1c">stdValWidth</a>&#160;&#160;&#160;(20)</td></tr>
 <tr class="memdesc:a4c5195a4197fde3527ab43f539456e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The standard width of the value entry in a header card.  <a href="fitsUtils_8hpp.html#a4c5195a4197fde3527ab43f539456e1c">More...</a><br /></td></tr>
 <tr class="separator:a4c5195a4197fde3527ab43f539456e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">mx::fits::getFitsType</a> ()</td></tr>
-<tr class="memdesc:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">More...</a><br /></td></tr>
-<tr class="separator:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab66cdba4dc37f5710ccda1e9da82e3fc">mx::fits::getFitsBITPIX</a> ()</td></tr>
-<tr class="separator:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">mx::fits::fitsStripApost</a> (std::string &amp;s)</td></tr>
-<tr class="memdesc:ga4f1c3fd683cda0567bb497210936ae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">More...</a><br /></td></tr>
-<tr class="separator:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab6719078e1e86a3b90e3de9c172af712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">mx::fits::fitsPopulateCard</a> (char headStr[81], char *keyword, char *value, char *comment)</td></tr>
-<tr class="memdesc:gab6719078e1e86a3b90e3de9c172af712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a fits header card with the value string copied verbatim.  <a href="group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712">More...</a><br /></td></tr>
-<tr class="separator:gab6719078e1e86a3b90e3de9c172af712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
-<tr class="memitem:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">mx::fits::fits_write_key</a> (fitsfile *fptr, char *keyword, void *value, char *comment)</td></tr>
-<tr class="memdesc:ga6795d65800e7a5200bb9beaa8eec088a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a header card to a file.  <a href="group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a">More...</a><br /></td></tr>
-<tr class="separator:ga6795d65800e7a5200bb9beaa8eec088a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga645c413c9f15927628a2600d2dc1e271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">mx::fits::fitsErrText</a> (std::string &amp;explan, const std::string &amp;filename, int fstatus)</td></tr>
-<tr class="memdesc:ga645c413c9f15927628a2600d2dc1e271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a rich error meesage from a FITS status code.  <a href="group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271">More...</a><br /></td></tr>
-<tr class="separator:ga645c413c9f15927628a2600d2dc1e271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
 <tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">mx::fits::getFitsType</a> ()</td></tr>
 <tr class="memdesc:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">More...</a><br /></td></tr>
@@ -194,7 +169,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="dir_1da8549ee5c4fb2fde3d8729e33c7119.html">fits</a></li><li class="navelem"><a class="el" href="fitsUtils_8hpp.html">fitsUtils.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 22 2021 23:19:36 for mxlib by
+    <li class="footer">Generated on Mon Aug 23 2021 21:07:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

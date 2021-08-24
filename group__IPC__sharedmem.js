@@ -14,5 +14,6 @@ var group__IPC__sharedmem =
       [ "shmemid", "classmx_1_1ipc_1_1sharedMemSegment.html#a34f1ee03a42d33502c0f6f03b660550a", null ],
       [ "size", "classmx_1_1ipc_1_1sharedMemSegment.html#a9fbbb1c1a33d98e63c03be2d1b9ce5ca", null ]
     ] ],
-    [ "sharedMemSegment.hpp", "sharedMemSegment_8hpp.html", null ]
+    [ "sharedMemSegment.hpp", "sharedMemSegment_8hpp.html", null ],
+    [ "sharedMemSegment.cpp", "sharedMemSegment_8cpp.html", null ]
 ];

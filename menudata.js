@@ -156,7 +156,10 @@ var menudata={children:[
 {text:"m",url:"globals.html#index_m"},
 {text:"s",url:"globals.html#index_s"},
 {text:"w",url:"globals.html#index_w"}]},
-{text:"Functions",url:"globals_func.html"},
+{text:"Functions",url:"globals_func.html",children:[
+{text:"i",url:"globals_func.html#index_i"},
+{text:"s",url:"globals_func.html#index_s"},
+{text:"w",url:"globals_func.html#index_w"}]},
 {text:"Macros",url:"globals_defs.html",children:[
 {text:"e",url:"globals_defs.html#index_e"},
 {text:"f",url:"globals_defs.html#index_f"},

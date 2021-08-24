@@ -24,5 +24,7 @@ var group__gen__math__files =
     [ "logistic.hpp", "logistic_8hpp.html", null ],
     [ "moffat.hpp", "moffat_8hpp.html", null ],
     [ "sign.hpp", "sign_8hpp.html", null ],
-    [ "weibull.hpp", "weibull_8hpp.html", null ]
+    [ "weibull.hpp", "weibull_8hpp.html", null ],
+    [ "templateBLAS.cpp", "templateBLAS_8cpp.html", null ],
+    [ "templateLapack.cpp", "templateLapack_8cpp.html", null ]
 ];
