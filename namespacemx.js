@@ -130,6 +130,7 @@ var namespacemx =
         [ "moffat2D_sym_fitter", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ]
       ] ],
       [ "gnuPlot", "classmx_1_1math_1_1gnuPlot.html", "classmx_1_1math_1_1gnuPlot" ],
+      [ "gslInterpolator", "structmx_1_1math_1_1gslInterpolator.html", null ],
       [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html", "classmx_1_1math_1_1histogramUniform" ],
       [ "laplace_distribution", "classmx_1_1math_1_1laplace__distribution.html", "classmx_1_1math_1_1laplace__distribution" ],
       [ "randomT", "classmx_1_1math_1_1randomT.html", "classmx_1_1math_1_1randomT" ],

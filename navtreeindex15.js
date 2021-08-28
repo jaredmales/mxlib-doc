@@ -32,8 +32,9 @@ var NAVTREEINDEX15 =
 "structmx_1_1math_1_1fit_1_1hasJacobian.html":[0,2,6,1],
 "structmx_1_1math_1_1fit_1_1hasJacobian.html#a162c60089cc1a9e5754d9f10aa818771":[0,2,6,1,0],
 "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html":[0,2,6,3,2,2],
+"structmx_1_1math_1_1gslInterpolator.html":[7,0,0,8,3],
 "structmx_1_1math_1_1laplace__distribution_1_1param__type.html":[0,2,8,1,0],
-"structmx_1_1math_1_1syevrMem.html":[7,0,0,8,6],
+"structmx_1_1math_1_1syevrMem.html":[7,0,0,8,7],
 "structmx_1_1meta_1_1has__value__type_3_01T_00_01void__t_3_01typename_01T_1_1value__type_01_4_01_4.html":[0,7,2,3],
 "structmx_1_1meta_1_1is__std__vector.html":[0,7,2,4],
 "structmx_1_1meta_1_1is__std__vector_3_01T_00_01false_01_4.html":[0,7,2,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "turbSequence_8hpp_source.html":[8,0,0,1,14],
 "typeDescription_8hpp.html":[8,0,8,1],
 "typeDescription_8hpp_source.html":[8,0,8,1],
-"typeTraits_8hpp.html":[8,0,8,2],
-"typeTraits_8hpp_source.html":[8,0,8,2]
+"typeTraits_8hpp.html":[8,0,8,2]
 };

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['venusalbedo_2169',['venusAlbedo',['../structmx_1_1astro_1_1venusAlbedo.html',1,'mx::astro']]],
-  ['vonkarmanspectrum_2170',['vonKarmanSpectrum',['../structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html',1,'mx::AO::analysis']]]
+  ['venusalbedo_2175',['venusAlbedo',['../structmx_1_1astro_1_1venusAlbedo.html',1,'mx::astro']]],
+  ['vonkarmanspectrum_2176',['vonKarmanSpectrum',['../structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html',1,'mx::AO::analysis']]]
 ];

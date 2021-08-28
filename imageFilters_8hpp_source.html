@@ -873,7 +873,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;   <span class="comment">/* And finally, interpolate onto the radius image */</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;   radprofIm.resize(im.rows(), im.cols() );</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;   </div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   math::gslInterpolator&lt;double&gt; interp(gsl_interp_linear, med_r, med_v);</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   <a class="code" href="structmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator&lt;double&gt;</a> interp(gsl_interp_linear, med_r, med_v);</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;   </div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>=0;<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>&lt;im.cols();++<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>)</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;   {</div>
@@ -1006,7 +1006,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;      </div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;   <span class="comment">/* And finally, interpolate onto the radius image */</span></div>
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;   stdIm.resize(dim1, dim2);</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;   math::gslInterpolator&lt;double&gt; interp(gsl_interp_linear, std_r, std_v);</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;   <a class="code" href="structmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator&lt;double&gt;</a> interp(gsl_interp_linear, std_r, std_v);</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;   </div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;dim1;++i)</div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;   {</div>
@@ -1124,13 +1124,14 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="ttc" id="agroup__std__prof_html_ga8583f8c86c11fbcd06b8e454c0ef340a"><div class="ttname"><a href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">mx::improc::stddevImage</a></div><div class="ttdeci">void stddevImage(eigenImT &amp;stdIm, const eigenImT1 &amp;im, const eigenImT2 &amp;mask, typename eigenImT::Scalar minRad, typename eigenImT::Scalar maxRad, bool divide=false)</div><div class="ttdoc">Form a standard deviation image, and optionally divide the input by it to form a S/N map.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00946">imageFilters.hpp:946</a></div></div>
 <div class="ttc" id="astructmx_1_1improc_1_1azBoxKernel_html_aa11a98a2bf6dd1897dff11f2633a1a4c"><div class="ttname"><a href="structmx_1_1improc_1_1azBoxKernel.html#aa11a98a2bf6dd1897dff11f2633a1a4c">mx::improc::azBoxKernel::azBoxKernel</a></div><div class="ttdeci">azBoxKernel(arithT radWidth, arithT azWidth)</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00101">imageFilters.hpp:101</a></div></div>
 <div class="ttc" id="agroup__rad__prof_html_gaf4fbc0937d06158b15966b01f016735b"><div class="ttname"><a href="group__rad__prof.html#gaf4fbc0937d06158b15966b01f016735b">mx::improc::radprofim</a></div><div class="ttdeci">void radprofim(radprofT &amp;radprof, eigenImT &amp;im, bool subtract=false, bool mean=false)</div><div class="ttdoc">Form a radial profile image, and optionally subtract it from the input.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00816">imageFilters.hpp:816</a></div></div>
+<div class="ttc" id="astructmx_1_1math_1_1gslInterpolator_html"><div class="ttname"><a href="structmx_1_1math_1_1gslInterpolator.html">mx::math::gslInterpolator&lt; double &gt;</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga92d6c2dc8ec62c1ef61873a40deba9ca"><div class="ttname"><a href="group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca">mx::astro::constants::h</a></div><div class="ttdeci">constexpr units::realT h()</div><div class="ttdoc">Planck Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00091">constants.hpp:91</a></div></div>
 <div class="ttc" id="agroup__image__filters__kernels_html_ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><div class="ttname"><a href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">mx::improc::filterImage</a></div><div class="ttdeci">void filterImage(imageOutT &amp;fim, imageInT im, kernelT kernel, int maxr=0)</div><div class="ttdoc">Filter an image with a kernel.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00206">imageFilters.hpp:206</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageFilters_8hpp.html">imageFilters.hpp</a></li>
-    <li class="footer">Generated on Mon Aug 23 2021 21:07:51 for mxlib by
+    <li class="footer">Generated on Sat Aug 28 2021 12:38:08 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

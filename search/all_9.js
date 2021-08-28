@@ -84,8 +84,11 @@ var searchData=
   ['grid_732',['grid',['../structmx_1_1improc_1_1imCenterCircleSym.html#a0b4d9caba9d17aad4ab228961b483f55',1,'mx::improc::imCenterCircleSym']]],
   ['gsl_5finterpolate_733',['gsl_interpolate',['../group__interpolation.html#ga10a7c89db1bd46c8bd46bfee98728929',1,'mx::math::gsl_interpolate(const gsl_interp_type *interpT, realT *xin, realT *yin, size_t Nin, realT *xout, realT *yout, size_t Nout)'],['../group__interpolation.html#ga1cd197205e5c8357f103c153095c50cc',1,'mx::math::gsl_interpolate(const gsl_interp_type *interpT, std::vector&lt; realT &gt; &amp;xin, std::vector&lt; realT &gt; &amp;yin, std::vector&lt; realT &gt; &amp;xout, std::vector&lt; realT &gt; &amp;yout)']]],
   ['gslinterpolation_2ehpp_734',['gslInterpolation.hpp',['../gslInterpolation_8hpp.html',1,'']]],
-  ['guessgauss2d_5fang_735',['guessGauss2D_ang',['../group__gaussian__peak__fit.html#ga595ec60efa8b7a68bf5b2a8a7668190c',1,'mx::math::fit']]],
-  ['guesswidth_736',['guessWidth',['../structmx_1_1improc_1_1imCenterCircleSym.html#afb3ce6077aaee654cee7d959d70ddada',1,'mx::improc::imCenterCircleSym']]],
-  ['getting_20mkl_737',['Getting MKL',['../group__mkl.html',1,'']]],
-  ['general_20utilities_738',['General Utilities',['../group__utils.html',1,'']]]
+  ['gslinterpolator_735',['gslInterpolator',['../structmx_1_1math_1_1gslInterpolator.html',1,'mx::math']]],
+  ['gslinterpolator_3c_20double_20_3e_736',['gslInterpolator&lt; double &gt;',['../structmx_1_1math_1_1gslInterpolator.html',1,'mx::math']]],
+  ['gslinterpolator_3c_20realt_20_3e_737',['gslInterpolator&lt; realT &gt;',['../structmx_1_1math_1_1gslInterpolator.html',1,'mx::math']]],
+  ['guessgauss2d_5fang_738',['guessGauss2D_ang',['../group__gaussian__peak__fit.html#ga595ec60efa8b7a68bf5b2a8a7668190c',1,'mx::math::fit']]],
+  ['guesswidth_739',['guessWidth',['../structmx_1_1improc_1_1imCenterCircleSym.html#afb3ce6077aaee654cee7d959d70ddada',1,'mx::improc::imCenterCircleSym']]],
+  ['getting_20mkl_740',['Getting MKL',['../group__mkl.html',1,'']]],
+  ['general_20utilities_741',['General Utilities',['../group__utils.html',1,'']]]
 ];

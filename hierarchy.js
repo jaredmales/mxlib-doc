@@ -93,6 +93,9 @@ var hierarchy =
     [ "mx::AO::sim::generalIntegrator< _realT >", "classmx_1_1AO_1_1sim_1_1generalIntegrator.html", null ],
     [ "mx::sys::gitRepo", "classmx_1_1sys_1_1gitRepo.html", null ],
     [ "mx::math::gnuPlot", "classmx_1_1math_1_1gnuPlot.html", null ],
+    [ "mx::math::gslInterpolator< _realT >", "structmx_1_1math_1_1gslInterpolator.html", null ],
+    [ "mx::math::gslInterpolator< double >", "structmx_1_1math_1_1gslInterpolator.html", null ],
+    [ "mx::math::gslInterpolator< realT >", "structmx_1_1math_1_1gslInterpolator.html", null ],
     [ "mx::math::fit::hasJacobian< T >", "structmx_1_1math_1_1fit_1_1hasJacobian.html", null ],
     [ "mx::improc::HCIobservation< _realT >", "structmx_1_1improc_1_1HCIobservation.html", [
       [ "mx::improc::ADIobservation< _realT, _derotFunctObj >", "structmx_1_1improc_1_1ADIobservation.html", [

@@ -78,7 +78,7 @@ var NAVTREEINDEX =
 "structmx_1_1astro_1_1picklesSpectrum.html#a12452a8e8e97c35db51e5edea3a8d128",
 "structmx_1_1improc_1_1HCIobservation.html#a4e959ba44405d6d68e1e226c5ae29b03",
 "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter__ps__eps.html",
-"units_8hpp.html"
+"typeTraits_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

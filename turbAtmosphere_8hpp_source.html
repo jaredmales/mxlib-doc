@@ -383,7 +383,7 @@ $(document).ready(function(){initNavTree('turbAtmosphere_8hpp_source.html',''); 
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      </div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      freq.resize(scrnSz, scrnSz);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      sigproc::frequency_grid(freq, _pupD/_wfSz);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <a class="code" href="group__psds.html#gae6fad3b6e5cc9118ddea2d061fdefee3">sigproc::frequencyGrid</a>(freq, _pupD/_wfSz);</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      psub.resize(scrnSz, scrnSz);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      </div>
@@ -426,7 +426,7 @@ $(document).ready(function(){initNavTree('turbAtmosphere_8hpp_source.html',''); 
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;         psd.resize(scrnSz, scrnSz);</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;         freq.resize(scrnSz, scrnSz);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;         sigproc::frequency_grid&lt;arrayT&gt;(freq, _pupD/_wfSz);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;         sigproc::frequencyGrid&lt;arrayT&gt;(freq, _pupD/_wfSz);</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;         t0 = <a class="code" href="group__timeutils.html#gadd514bac4b8a41e1e41d56dff63e61e0">sys::get_curr_time</a>();</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
@@ -599,6 +599,7 @@ $(document).ready(function(){initNavTree('turbAtmosphere_8hpp_source.html',''); 
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1turbAtmosphere_html_ad4a08012f14d57430dcbffe40b921b53"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad4a08012f14d57430dcbffe40b921b53">mx::AO::sim::turbAtmosphere::_wfSz</a></div><div class="ttdeci">size_t _wfSz</div><div class="ttdoc">Size of the wavefront in pixels.</div><div class="ttdef"><b>Definition:</b> <a href="turbAtmosphere_8hpp_source.html#l00053">turbAtmosphere.hpp:53</a></div></div>
 <div class="ttc" id="agroup__functions_html_ga3a702ef04302dc30da61d1f6d19ec87b"><div class="ttname"><a href="group__functions.html#ga3a702ef04302dc30da61d1f6d19ec87b">mx::math::func::jinc2</a></div><div class="ttdeci">T jinc2(const T &amp;x)</div><div class="ttdoc">Returns the Jinc2 function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00118">jinc.hpp:118</a></div></div>
 <div class="ttc" id="agroup__timeutils_html_gadd514bac4b8a41e1e41d56dff63e61e0"><div class="ttname"><a href="group__timeutils.html#gadd514bac4b8a41e1e41d56dff63e61e0">mx::sys::get_curr_time</a></div><div class="ttdeci">typeT get_curr_time(timespec &amp;tsp)</div><div class="ttdoc">Get the current system time in seconds.</div><div class="ttdef"><b>Definition:</b> <a href="timeUtils_8hpp_source.html#l00063">timeUtils.hpp:63</a></div></div>
+<div class="ttc" id="agroup__psds_html_gae6fad3b6e5cc9118ddea2d061fdefee3"><div class="ttname"><a href="group__psds.html#gae6fad3b6e5cc9118ddea2d061fdefee3">mx::sigproc::frequencyGrid</a></div><div class="ttdeci">int frequencyGrid(std::vector&lt; realT &gt; &amp;vec, realParamT dt, bool fftOrder=true)</div><div class="ttdoc">Create a 1-D frequency grid.</div><div class="ttdef"><b>Definition:</b> <a href="psdUtils_8hpp_source.html#l00247">psdUtils.hpp:247</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1turbAtmosphere_html_a3f1c0b86aeb3ed1e0d763d35151664e1"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3f1c0b86aeb3ed1e0d763d35151664e1">mx::AO::sim::turbAtmosphere::_subTipTilt</a></div><div class="ttdeci">bool _subTipTilt</div><div class="ttdoc">Whether or not to subtract tip/tilt from the PSD.</div><div class="ttdef"><b>Definition:</b> <a href="turbAtmosphere_8hpp_source.html#l00060">turbAtmosphere.hpp:60</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1turbAtmosphere_html_a917a2f3cb4686ab8dbf88f347fad481c"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a917a2f3cb4686ab8dbf88f347fad481c">mx::AO::sim::turbAtmosphere::_pupD</a></div><div class="ttdeci">realT _pupD</div><div class="ttdoc">Size of the wavefront in meters. &lt;–This is really wavefront diameter.</div><div class="ttdef"><b>Definition:</b> <a href="turbAtmosphere_8hpp_source.html#l00052">turbAtmosphere.hpp:52</a></div></div>
 <div class="ttc" id="astructmx_1_1AO_1_1sim_1_1turbAtmosphere_html_a2d2c0665499d35b5e0894712e422cb10"><div class="ttname"><a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2d2c0665499d35b5e0894712e422cb10">mx::AO::sim::turbAtmosphere::_nWf</a></div><div class="ttdeci">int _nWf</div><div class="ttdoc">Number of iterations which have occurred.</div><div class="ttdef"><b>Definition:</b> <a href="turbAtmosphere_8hpp_source.html#l00075">turbAtmosphere.hpp:75</a></div></div>
@@ -606,7 +607,7 @@ $(document).ready(function(){initNavTree('turbAtmosphere_8hpp_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_082cbf2913457a01d654a9fdfc0ec78a.html">sim</a></li><li class="navelem"><a class="el" href="turbAtmosphere_8hpp.html">turbAtmosphere.hpp</a></li>
-    <li class="footer">Generated on Mon Aug 23 2021 21:07:51 for mxlib by
+    <li class="footer">Generated on Sat Aug 28 2021 12:38:07 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
