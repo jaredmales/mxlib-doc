@@ -115,8 +115,8 @@ var NAVTREEINDEX13 =
 "structmx_1_1fits_1_1fitsHeaderCard.html#ac794decdf5d607f53c779584c18d00ea":[0,4,8,2,23],
 "structmx_1_1fits_1_1fitsHeaderCard.html#ad233171d5e56212419f2ac098f96557c":[0,7,0,3,2,25],
 "structmx_1_1fits_1_1fitsHeaderCard.html#ad233171d5e56212419f2ac098f96557c":[0,4,8,2,25],
-"structmx_1_1fits_1_1fitsHeaderCard.html#ad97d2809018ceeabda3547e4e3b4e729":[0,7,0,3,2,16],
 "structmx_1_1fits_1_1fitsHeaderCard.html#ad97d2809018ceeabda3547e4e3b4e729":[0,4,8,2,16],
+"structmx_1_1fits_1_1fitsHeaderCard.html#ad97d2809018ceeabda3547e4e3b4e729":[0,7,0,3,2,16],
 "structmx_1_1fits_1_1fitsHeaderCard.html#ae0db658a0de81b6f27523c48fae23bd9":[0,4,8,2,17],
 "structmx_1_1fits_1_1fitsHeaderCard.html#ae0db658a0de81b6f27523c48fae23bd9":[0,7,0,3,2,17],
 "structmx_1_1fits_1_1fitsHeaderCard.html#ae3a53008f0884fc45964930cc481415b":[0,7,0,3,2,6],
@@ -247,7 +247,7 @@ var NAVTREEINDEX13 =
 "structmx_1_1improc_1_1HCIobservation.html#a440e3b76850bc8c07e1b156b73b0318a":[0,4,7,2,60],
 "structmx_1_1improc_1_1HCIobservation.html#a462cd5d39ff34109425b492efad360b8":[0,4,7,2,11],
 "structmx_1_1improc_1_1HCIobservation.html#a462cd5d39ff34109425b492efad360b8":[0,6,0,2,11],
-"structmx_1_1improc_1_1HCIobservation.html#a484029d62593ab06e15b95746a66f4d6":[0,6,0,2,24],
 "structmx_1_1improc_1_1HCIobservation.html#a484029d62593ab06e15b95746a66f4d6":[0,4,7,2,24],
+"structmx_1_1improc_1_1HCIobservation.html#a484029d62593ab06e15b95746a66f4d6":[0,6,0,2,24],
 "structmx_1_1improc_1_1HCIobservation.html#a4e959ba44405d6d68e1e226c5ae29b03":[0,4,7,2,36]
 };

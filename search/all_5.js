@@ -136,7 +136,7 @@ var searchData=
   ['covar_359',['Covar',['../classmx_1_1improc_1_1eigenCube.html#a3f33ac1f221c66dfeb6998c406954779',1,'mx::improc::eigenCube::Covar()'],['../classmx_1_1math_1_1fit_1_1levmarInterface.html#a0ed27e744bdebd3d070761e5d9451383',1,'mx::math::fit::levmarInterface::covar()']]],
   ['covar_5fsz_360',['covar_sz',['../classmx_1_1math_1_1fit_1_1levmarInterface.html#ae96b8d6f9de7f330752e95c4f5715216',1,'mx::math::fit::levmarInterface']]],
   ['create_361',['create',['../classmx_1_1ipc_1_1sharedMemSegment.html#a3dcbf6e5f3149d4a713f87ce3530cc18',1,'mx::ipc::sharedMemSegment']]],
-  ['createdirectories_362',['createDirectories',['../group__fileutils.html#gaa29c120210986d49fbc5e17cf3dbe090',1,'mx::ioutils']]],
+  ['createdirectories_362',['createDirectories',['../group__fileutils.html#ga517907c00aa5e1b369e7326838d89ce0',1,'mx::ioutils']]],
   ['cube_363',['cube',['../classmx_1_1improc_1_1eigenCube.html#aa9b7f5b18741343a5b4be12665ae7f77',1,'mx::improc::eigenCube']]],
   ['cubic_364',['cubic',['../structmx_1_1improc_1_1cubicConvolTransform.html#a3bfc148bb4106229015e7caf2825e06e',1,'mx::improc::cubicConvolTransform']]],
   ['cubicconvoltransd_365',['cubicConvolTransd',['../group__image__transforms.html#ga3d078cbca1634c3e1854a73a0b9aed6d',1,'mx::improc']]],
