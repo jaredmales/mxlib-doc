@@ -112,7 +112,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether a type is an <a class="el" href="classmx_1_1improc_1_1eigenCube.html" title="An image cube with an Eigen-like API.">eigenCube</a> by testing whether it has a typedef of "is_eigenCube".  <a href="structmx_1_1improc_1_1is__eigenCube.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1eigenArrPlanes.html">mx::improc::eigenArrPlanes&lt; arrT, isCube &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function object to retun the number of planes for any Eigen like object, whether 2D or a 3D cube.  <a href="structmx_1_1improc_1_1eigenArrPlanes.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function object to return the number of planes for any Eigen like object, whether 2D or a 3D cube.  <a href="structmx_1_1improc_1_1eigenArrPlanes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -203,12 +203,12 @@ template&lt;typename imageT , typename maskT  = imageT&gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mat</td><td>[in] the image to take the median of </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>[in] if non-0, a 1/0 mask where 0 pixels are ignored. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">work</td><td>[in] [optional] working memory can be retained and re-passed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">work</td><td>[in] [optional] working memory can be retained and re-passed. Is resized. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenImage_8hpp_source.html#l00118">118</a> of file <a class="el" href="eigenImage_8hpp_source.html">eigenImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenImage_8hpp_source.html#l00117">117</a> of file <a class="el" href="eigenImage_8hpp_source.html">eigenImage.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00218">mx::math::vectorMedianInPlace()</a>.</p>
 
@@ -259,7 +259,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenImage_8hpp_source.html#l00176">176</a> of file <a class="el" href="eigenImage_8hpp_source.html">eigenImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenImage_8hpp_source.html#l00175">175</a> of file <a class="el" href="eigenImage_8hpp_source.html">eigenImage.hpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ template&lt;typename imageT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

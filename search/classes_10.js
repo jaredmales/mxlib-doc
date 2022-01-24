@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['sharedmemsegment_2160',['sharedMemSegment',['../classmx_1_1ipc_1_1sharedMemSegment.html',1,'mx::ipc']]],
-  ['shwfs_2161',['shwfs',['../structmx_1_1AO_1_1analysis_1_1shwfs.html',1,'mx::AO::analysis']]],
-  ['si_2162',['si',['../structmx_1_1astro_1_1units_1_1si.html',1,'mx::astro::units']]],
-  ['simulatedaosystem_2163',['simulatedAOSystem',['../classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html',1,'mx::AO::sim']]],
-  ['skipcol_2164',['skipCol',['../structmx_1_1ioutils_1_1skipCol.html',1,'mx::ioutils']]],
-  ['solar_2165',['solar',['../structmx_1_1astro_1_1units_1_1solar.html',1,'mx::astro::units']]],
-  ['sqwavefilter_2166',['sqWaveFilter',['../structmx_1_1astro_1_1sqWaveFilter.html',1,'mx::astro']]],
-  ['syevrmem_2167',['syevrMem',['../structmx_1_1math_1_1syevrMem.html',1,'mx::math']]]
+  ['randomt_2210',['randomT',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
+  ['randomt_3c_20int_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3apoisson_5fdistribution_3c_20int_20_3e_20_3e_2211',['randomT&lt; int, std::mt19937_64, std::poisson_distribution&lt; int &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
+  ['randomt_3c_20long_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3apoisson_5fdistribution_3c_20long_20_3e_20_3e_2212',['randomT&lt; long, std::mt19937_64, std::poisson_distribution&lt; long &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
+  ['randomt_3c_20realt_20_3e_2213',['randomT&lt; realT &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
+  ['randomt_3c_20realt_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3agamma_5fdistribution_3c_20realt_20_3e_20_3e_2214',['randomT&lt; realT, std::mt19937_64, std::gamma_distribution&lt; realT &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
+  ['randomt_3c_20realt_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3anormal_5fdistribution_3c_20realt_20_3e_20_3e_2215',['randomT&lt; realT, std::mt19937_64, std::normal_distribution&lt; realT &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]]
 ];

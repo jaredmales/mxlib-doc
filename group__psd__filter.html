@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: mx::math::gslInterpolator&lt; _realT &gt; Struct Template Reference</title>
+<title>mxlib: PSD Filter</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structmx_1_1math_1_1gslInterpolator.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('group__psd__filter.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,31 +90,32 @@ $(document).ready(function(){initNavTree('structmx_1_1math_1_1gslInterpolator.ht
 
 <div class="header">
   <div class="summary">
-<a href="structmx_1_1math_1_1gslInterpolator-members.html">List of all members</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">mx::math::gslInterpolator&lt; _realT &gt; Struct Template Reference</div>  </div>
+<div class="title">PSD Filter<div class="ingroups"><a class="el" href="group__signal__processing.html">Signal Processing</a> &raquo; <a class="el" href="group__psds.html">Power Spectra</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Filtering with a PSD to generate correlated noise.  
+<a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<div class="textblock"><h3>template&lt;typename _realT&gt;<br />
-struct mx::math::gslInterpolator&lt; _realT &gt;</h3>
-
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo:</a></b></dt><dd>document <a class="el" href="structmx_1_1math_1_1gslInterpolator.html">gslInterpolator</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000040">Todo:</a></b></dt><dd>add error checking </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00046">46</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
-</div>
-<p><code>#include &lt;<a class="el" href="gslInterpolation_8hpp_source.html">math/gslInterpolation.hpp</a>&gt;</code></p>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>math/<a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a></li>
-</ul>
+<p>Filtering with a PSD to generate correlated noise. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for filtering noise with PSDs.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for filtering noise with PSDs using CUDA cuFFT.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><a class="el" href="structmx_1_1math_1_1gslInterpolator.html">gslInterpolator</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:01 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

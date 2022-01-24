@@ -20,6 +20,7 @@ var group__gen__math =
     [ "Geometry and Geodesy", "group__geo.html", "group__geo" ],
     [ "Special Functions", "group__functions.html", "group__functions" ],
     [ "Templatized BLAS and Lapack", "group__template__blaslap.html", "group__template__blaslap" ],
+    [ "Integration", "group__integration.html", "group__integration" ],
     [ "Interpolation", "group__interpolation.html", "group__interpolation" ],
     [ "Data Fitting", "group__fitting.html", "group__fitting" ],
     [ "Plotting Data", "group__plotting.html", "group__plotting" ],

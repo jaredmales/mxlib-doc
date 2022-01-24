@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('fitsUtils_8hpp.html',''); initResizabl
 </div><div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;complex&gt;</code><br />
 <code>#include &lt;fitsio.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="stringUtils_8hpp_source.html">../stringUtils.hpp</a>&quot;</code><br />
 </div>
@@ -123,13 +124,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a4c5195a4197fde3527ab43f539456e1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fitsUtils_8hpp.html#a4c5195a4197fde3527ab43f539456e1c">stdValWidth</a>&#160;&#160;&#160;(20)</td></tr>
 <tr class="memdesc:a4c5195a4197fde3527ab43f539456e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The standard width of the value entry in a header card.  <a href="fitsUtils_8hpp.html#a4c5195a4197fde3527ab43f539456e1c">More...</a><br /></td></tr>
 <tr class="separator:a4c5195a4197fde3527ab43f539456e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">mx::fits::getFitsType</a> ()</td></tr>
-<tr class="memdesc:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga5a1a014cf5795ad800b6731d66b5c9c6">More...</a><br /></td></tr>
-<tr class="separator:ga5a1a014cf5795ad800b6731d66b5c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
-<tr class="memitem:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gab66cdba4dc37f5710ccda1e9da82e3fc">mx::fits::getFitsBITPIX</a> ()</td></tr>
-<tr class="separator:gab66cdba4dc37f5710ccda1e9da82e3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2545d98be6143f7d2229903d24c267a4"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:ga2545d98be6143f7d2229903d24c267a4"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga2545d98be6143f7d2229903d24c267a4">mx::fits::fitsType</a> ()</td></tr>
+<tr class="memdesc:ga2545d98be6143f7d2229903d24c267a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the cfitsio constant for a given data type.  <a href="group__fits__utils.html#ga2545d98be6143f7d2229903d24c267a4">More...</a><br /></td></tr>
+<tr class="separator:ga2545d98be6143f7d2229903d24c267a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa33646845d0fffe078a64dc08ba6bccf"><td class="memTemplParams" colspan="2">template&lt;typename scalarT &gt; </td></tr>
+<tr class="memitem:gaa33646845d0fffe078a64dc08ba6bccf"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#gaa33646845d0fffe078a64dc08ba6bccf">mx::fits::fitsBITPIX</a> ()</td></tr>
+<tr class="separator:gaa33646845d0fffe078a64dc08ba6bccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">mx::fits::fitsStripApost</a> (std::string &amp;s)</td></tr>
 <tr class="memdesc:ga4f1c3fd683cda0567bb497210936ae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strip the apostrophes from a FITS value string.  <a href="group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b">More...</a><br /></td></tr>
 <tr class="separator:ga4f1c3fd683cda0567bb497210936ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,7 +170,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="dir_1da8549ee5c4fb2fde3d8729e33c7119.html">fits</a></li><li class="navelem"><a class="el" href="fitsUtils_8hpp.html">fitsUtils.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

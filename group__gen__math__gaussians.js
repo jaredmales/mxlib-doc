@@ -1,5 +1,6 @@
 var group__gen__math__gaussians =
 [
+    [ "airyPattern2D", "group__gen__math__gaussians.html#gae633a67480c9cc483cc65ca266c8b3f7", null ],
     [ "fwhm2sigma", "group__gen__math__gaussians.html#ga35136322a522d70ce9557fc45d9e9871", null ],
     [ "gaussian", "group__gen__math__gaussians.html#ga737902a08fd3c398ae1cbc8573ca6bf0", null ],
     [ "gaussian2D", "group__gen__math__gaussians.html#ga99a5edf9f1a6bb349596c2e279ea2cd4", null ],

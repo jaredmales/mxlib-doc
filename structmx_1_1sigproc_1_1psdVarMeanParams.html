@@ -140,9 +140,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8e309a079ee35e6f4312b7566b3ae767"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">initialized</a> {false}</td></tr>
 <tr class="memdesc:a8e309a079ee35e6f4312b7566b3ae767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag controlling whether the interpolator is initialized.  <a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a8e309a079ee35e6f4312b7566b3ae767">More...</a><br /></td></tr>
 <tr class="separator:a8e309a079ee35e6f4312b7566b3ae767"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0109c95cfd363637d20902a3dde95b35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">terp</a></td></tr>
-<tr class="memdesc:a0109c95cfd363637d20902a3dde95b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolator for the PSD.  <a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35">More...</a><br /></td></tr>
-<tr class="separator:a0109c95cfd363637d20902a3dde95b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8189bd8a4ff3dd55f01a13995bd5878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator</a>&lt; <a class="el" href="structmx_1_1math_1_1gsl__interp__steffen.html">math::gsl_interp_steffen</a>&lt; realT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ab8189bd8a4ff3dd55f01a13995bd5878">terp</a></td></tr>
+<tr class="memdesc:ab8189bd8a4ff3dd55f01a13995bd5878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolator for the PSD.  <a href="structmx_1_1sigproc_1_1psdVarMeanParams.html#ab8189bd8a4ff3dd55f01a13995bd5878">More...</a><br /></td></tr>
+<tr class="separator:ab8189bd8a4ff3dd55f01a13995bd5878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0703eb92f39460580679099509b795d1"></a>
@@ -173,7 +173,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Get the value of the PSD at k using interpolation. </p>
 <p>Extrapolates outside the range of frequencies in freq. Right now this is just constant.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>implement better extrapolation past max-freq. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000055">Todo:</a></b></dt><dd>implement better extrapolation past max-freq. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>[in] The transformed frequency coordinate </td></tr>
@@ -181,9 +181,9 @@ template&lt;typename _realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00077">77</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00081">81</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00058">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::freq</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00067">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::initialized</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00063">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::maxf</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00062">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::minf</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00059">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psd</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00060">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::T</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00069">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::terp</a>.</p>
+<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00058">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::freq</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00067">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::initialized</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00063">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::maxf</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00062">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::minf</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00059">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psd</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00060">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::T</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00072">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::terp</a>.</p>
 
 </div>
 </div>
@@ -206,7 +206,7 @@ template&lt;typename _realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00058">58</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ template&lt;typename _realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00067">67</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +250,7 @@ template&lt;typename _realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00063">63</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@ template&lt;typename _realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00062">62</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ template&lt;typename _realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00059">59</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
@@ -316,12 +316,12 @@ template&lt;typename _realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00060">60</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
-<a id="a0109c95cfd363637d20902a3dde95b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0109c95cfd363637d20902a3dde95b35">&#9670;&nbsp;</a></span>terp</h2>
+<a id="ab8189bd8a4ff3dd55f01a13995bd5878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8189bd8a4ff3dd55f01a13995bd5878">&#9670;&nbsp;</a></span>terp</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,16 +329,16 @@ template&lt;typename _realT &gt; </div>
 template&lt;typename _realT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator</a>&lt;realT&gt; <a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">mx::sigproc::psdVarMeanParams</a>&lt; _realT &gt;::terp</td>
+          <td class="memname"><a class="el" href="classmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator</a>&lt;<a class="el" href="structmx_1_1math_1_1gsl__interp__steffen.html">math::gsl_interp_steffen</a>&lt;realT&gt; &gt; <a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">mx::sigproc::psdVarMeanParams</a>&lt; _realT &gt;::terp</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Interpolator for the PSD. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00069">69</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00072">72</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00077">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00081">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal()</a>.</p>
 
 </div>
 </div>
@@ -351,7 +351,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>sigproc</b></li><li class="navelem"><a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html">psdVarMeanParams</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:01 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:54 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

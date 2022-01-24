@@ -1,6 +1,5 @@
 var templateLapack_8hpp =
 [
-    [ "gesdd", "templateLapack_8hpp.html#ad5b6d9379240bcf6b094dfec725e3651", null ],
     [ "gesvd", "templateLapack_8hpp.html#ga9fc63c1ca708cd1a4afa5e5f08fb455a", null ],
     [ "lamch", "templateLapack_8hpp.html#ga9b5224c8973688d47eb9f92ea76da804", null ],
     [ "potrf", "templateLapack_8hpp.html#ad3320d4dceb545bfd50f651e9a67c4db", null ],

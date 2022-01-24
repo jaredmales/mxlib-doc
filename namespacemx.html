@@ -103,12 +103,15 @@ $(document).ready(function(){initNavTree('namespacemx.html',''); initResizable()
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacc968e47358b648a87d2c64213b1882e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">MXE_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
-<tr class="memdesc:gacc968e47358b648a87d2c64213b1882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for an mxlib error code.  <a href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">More...</a><br /></td></tr>
-<tr class="separator:gacc968e47358b648a87d2c64213b1882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gad0cf50f0483ac3d41ddc0f556a18bbc1">errno_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
-<tr class="memdesc:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for a standard errno code.  <a href="group__error__handling.html#gad0cf50f0483ac3d41ddc0f556a18bbc1">More...</a><br /></td></tr>
-<tr class="separator:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab83ea3bc4cd444823884e023ff1fcda7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gab83ea3bc4cd444823884e023ff1fcda7">MXE_CodeToName</a> (int ec)</td></tr>
+<tr class="memdesc:gab83ea3bc4cd444823884e023ff1fcda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name for an mxlib error code.  <a href="group__error__handling.html#gab83ea3bc4cd444823884e023ff1fcda7">More...</a><br /></td></tr>
+<tr class="separator:gab83ea3bc4cd444823884e023ff1fcda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gae7eb7e8aca6b60f4c364ebc0e1e69822">MXE_CodeToDescription</a> (int ec)</td></tr>
+<tr class="memdesc:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description for an mxlib error code.  <a href="group__error__handling.html#gae7eb7e8aca6b60f4c364ebc0e1e69822">More...</a><br /></td></tr>
+<tr class="separator:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab">errno_CodeToName</a> (int ec)</td></tr>
+<tr class="memdesc:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for a standard errno code.  <a href="group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab">More...</a><br /></td></tr>
+<tr class="separator:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7">error_report</a> (const std::string &amp;source, const int &amp;code, const std::string &amp;file, const int &amp;line, const std::string &amp;expl=&quot;&quot;)</td></tr>
 <tr class="memdesc:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a rich error report given an mxlib error code.  <a href="group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7">More...</a><br /></td></tr>
 <tr class="separator:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +170,7 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

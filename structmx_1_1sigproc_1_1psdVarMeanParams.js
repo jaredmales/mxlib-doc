@@ -7,5 +7,5 @@ var structmx_1_1sigproc_1_1psdVarMeanParams =
     [ "minf", "structmx_1_1sigproc_1_1psdVarMeanParams.html#a3801c99d355eccb34e815caefa0b91b2", null ],
     [ "psd", "structmx_1_1sigproc_1_1psdVarMeanParams.html#acbab8d0874761fa06b69cc979eef82ac", null ],
     [ "T", "structmx_1_1sigproc_1_1psdVarMeanParams.html#aa8255f638f815e6005ddad6ffcfbd708", null ],
-    [ "terp", "structmx_1_1sigproc_1_1psdVarMeanParams.html#a0109c95cfd363637d20902a3dde95b35", null ]
+    [ "terp", "structmx_1_1sigproc_1_1psdVarMeanParams.html#ab8189bd8a4ff3dd55f01a13995bd5878", null ]
 ];

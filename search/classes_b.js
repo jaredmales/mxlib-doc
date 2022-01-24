@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['laplace_5fdistribution_2130',['laplace_distribution',['../classmx_1_1math_1_1laplace__distribution.html',1,'mx::math']]],
-  ['leakyintegrator_2131',['leakyIntegrator',['../classmx_1_1AO_1_1sim_1_1leakyIntegrator.html',1,'mx::AO::sim']]],
-  ['levmarinterface_2132',['levmarInterface',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
-  ['levmarinterface_3c_20gaussian1d_5ffitter_3c_20_5frealt_20_3e_20_3e_2133',['levmarInterface&lt; gaussian1D_fitter&lt; _realT &gt; &gt;',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
-  ['levmarinterface_3c_20mx_3a_3amath_3a_3afit_3a_3agaussian2d_5fgen_5ffitter_3c_20scalar_20_3e_20_3e_2134',['levmarInterface&lt; mx::math::fit::gaussian2D_gen_fitter&lt; Scalar &gt; &gt;',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
-  ['levmarinterface_3c_20realt_20_3e_2135',['levmarInterface&lt; realT &gt;',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
-  ['linearpredictor_2136',['linearPredictor',['../structmx_1_1sigproc_1_1linearPredictor.html',1,'mx::sigproc']]],
-  ['linearpredictor_3c_20realt_20_3e_2137',['linearPredictor&lt; realT &gt;',['../structmx_1_1sigproc_1_1linearPredictor.html',1,'mx::sigproc']]],
-  ['lyotcoronagraph_2138',['lyotCoronagraph',['../structmx_1_1wfp_1_1lyotCoronagraph.html',1,'mx::wfp']]]
+  ['laplace_5fdistribution_2182',['laplace_distribution',['../classmx_1_1math_1_1laplace__distribution.html',1,'mx::math']]],
+  ['leakyintegrator_2183',['leakyIntegrator',['../classmx_1_1AO_1_1sim_1_1leakyIntegrator.html',1,'mx::AO::sim']]],
+  ['levmarinterface_2184',['levmarInterface',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
+  ['levmarinterface_3c_20gaussian1d_5ffitter_3c_20_5frealt_20_3e_20_3e_2185',['levmarInterface&lt; gaussian1D_fitter&lt; _realT &gt; &gt;',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
+  ['levmarinterface_3c_20mx_3a_3amath_3a_3afit_3a_3agaussian2d_5fgen_5ffitter_3c_20scalar_20_3e_20_3e_2186',['levmarInterface&lt; mx::math::fit::gaussian2D_gen_fitter&lt; Scalar &gt; &gt;',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
+  ['levmarinterface_3c_20realt_20_3e_2187',['levmarInterface&lt; realT &gt;',['../classmx_1_1math_1_1fit_1_1levmarInterface.html',1,'mx::math::fit']]],
+  ['liberr_2188',['liberr',['../classmx_1_1err_1_1liberr.html',1,'mx::err']]],
+  ['linearpredictor_2189',['linearPredictor',['../structmx_1_1sigproc_1_1linearPredictor.html',1,'mx::sigproc']]],
+  ['linearpredictor_3c_20realt_20_3e_2190',['linearPredictor&lt; realT &gt;',['../structmx_1_1sigproc_1_1linearPredictor.html',1,'mx::sigproc']]],
+  ['loginterpolator_2191',['logInterpolator',['../classmx_1_1math_1_1logInterpolator.html',1,'mx::math']]],
+  ['lyotcoronagraph_2192',['lyotCoronagraph',['../structmx_1_1wfp_1_1lyotCoronagraph.html',1,'mx::wfp']]]
 ];

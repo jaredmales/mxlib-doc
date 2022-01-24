@@ -105,7 +105,7 @@ struct mx::sigproc::psdVarMean&lt; paramsT &gt;</h3>
 
 <p>Calculate the variance of the mean for a process given its PSD. </p>
 <p>Functor which manages the GSL integration workspace memory.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000055">Todo:</a></b></dt><dd>document the paramsT interface</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000054">Todo:</a></b></dt><dd>document the paramsT interface</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">paramsT</td><td>is a parameter structure with the correct interface. </td></tr>
@@ -113,7 +113,7 @@ struct mx::sigproc::psdVarMean&lt; paramsT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00154">154</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00159">159</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="psdVarMean_8hpp_source.html">sigproc/psdVarMean.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -181,9 +181,9 @@ template&lt;typename paramsT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00174">174</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00179">179</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00166">mx::sigproc::psdVarMean&lt; paramsT &gt;::init()</a>.</p>
+<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00171">mx::sigproc::psdVarMean&lt; paramsT &gt;::init()</a>.</p>
 
 </div>
 </div>
@@ -221,9 +221,9 @@ template&lt;typename paramsT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00180">180</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00185">185</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00166">mx::sigproc::psdVarMean&lt; paramsT &gt;::init()</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00163">mx::sigproc::psdVarMean&lt; paramsT &gt;::wSize</a>.</p>
+<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00171">mx::sigproc::psdVarMean&lt; paramsT &gt;::init()</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00168">mx::sigproc::psdVarMean&lt; paramsT &gt;::wSize</a>.</p>
 
 </div>
 </div>
@@ -254,9 +254,9 @@ template&lt;typename paramsT &gt; </div>
 
 <p>d'tor cleans up the workspace memory </p>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00187">187</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00192">192</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00161">mx::sigproc::psdVarMean&lt; paramsT &gt;::w</a>.</p>
+<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00166">mx::sigproc::psdVarMean&lt; paramsT &gt;::w</a>.</p>
 
 </div>
 </div>
@@ -287,11 +287,11 @@ template&lt;typename paramsT &gt; </div>
 </div><div class="memdoc">
 
 <p>Initializes the gsl library. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000057">Todo:</a></b></dt><dd>We'll get the occasional failure to reach tolerance error, just ignore them all for now. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>We'll get the occasional failure to reach tolerance error, just ignore them all for now. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00166">166</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00171">171</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00174">mx::sigproc::psdVarMean&lt; paramsT &gt;::psdVarMean()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00179">mx::sigproc::psdVarMean&lt; paramsT &gt;::psdVarMean()</a>.</p>
 
 </div>
 </div>
@@ -355,9 +355,9 @@ template&lt;typename paramsT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00199">199</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00204">204</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00158">mx::sigproc::psdVarMean&lt; paramsT &gt;::extrapAlpha</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00161">mx::sigproc::psdVarMean&lt; paramsT &gt;::w</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00163">mx::sigproc::psdVarMean&lt; paramsT &gt;::wSize</a>.</p>
+<p class="reference">References <a class="el" href="psdVarMean_8hpp_source.html#l00163">mx::sigproc::psdVarMean&lt; paramsT &gt;::extrapAlpha</a>, <a class="el" href="psdVarMean_8hpp_source.html#l00166">mx::sigproc::psdVarMean&lt; paramsT &gt;::w</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00168">mx::sigproc::psdVarMean&lt; paramsT &gt;::wSize</a>.</p>
 
 </div>
 </div>
@@ -378,9 +378,9 @@ template&lt;typename paramsT &gt; </div>
 
 <p>The extrapolation exponent. No extrapolation if 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00158">158</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00163">163</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00199">mx::sigproc::psdVarMean&lt; paramsT &gt;::operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00204">mx::sigproc::psdVarMean&lt; paramsT &gt;::operator()()</a>.</p>
 
 </div>
 </div>
@@ -408,9 +408,9 @@ template&lt;typename paramsT &gt; </div>
 
 <p>The GSL integration workspace memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00161">161</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00166">166</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00199">mx::sigproc::psdVarMean&lt; paramsT &gt;::operator()()</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00187">mx::sigproc::psdVarMean&lt; paramsT &gt;::~psdVarMean()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00204">mx::sigproc::psdVarMean&lt; paramsT &gt;::operator()()</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00192">mx::sigproc::psdVarMean&lt; paramsT &gt;::~psdVarMean()</a>.</p>
 
 </div>
 </div>
@@ -438,9 +438,9 @@ template&lt;typename paramsT &gt; </div>
 
 <p>The size of the GSL workspace. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00163">163</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdVarMean_8hpp_source.html#l00168">168</a> of file <a class="el" href="psdVarMean_8hpp_source.html">psdVarMean.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00199">mx::sigproc::psdVarMean&lt; paramsT &gt;::operator()()</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00180">mx::sigproc::psdVarMean&lt; paramsT &gt;::psdVarMean()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdVarMean_8hpp_source.html#l00204">mx::sigproc::psdVarMean&lt; paramsT &gt;::operator()()</a>, and <a class="el" href="psdVarMean_8hpp_source.html#l00185">mx::sigproc::psdVarMean&lt; paramsT &gt;::psdVarMean()</a>.</p>
 
 </div>
 </div>
@@ -453,7 +453,7 @@ template&lt;typename paramsT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>sigproc</b></li><li class="navelem"><a class="el" href="structmx_1_1sigproc_1_1psdVarMean.html">psdVarMean</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:01 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:54 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

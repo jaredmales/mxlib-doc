@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mainsequence_2139',['mainSequence',['../structmx_1_1astro_1_1mainSequence.html',1,'mx::astro']]],
-  ['moffat2d_5fsym_5ffitter_2140',['moffat2D_sym_fitter',['../structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html',1,'mx::math::fit']]],
-  ['mxexception_2141',['mxException',['../classmxException.html',1,'']]]
+  ['mainsequence_2193',['mainSequence',['../structmx_1_1astro_1_1mainSequence.html',1,'mx::astro']]],
+  ['moffat2d_5fsym_5ffitter_2194',['moffat2D_sym_fitter',['../structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html',1,'mx::math::fit']]],
+  ['mxexception_2195',['mxException',['../classmx_1_1err_1_1mxException.html',1,'mx::err']]]
 ];

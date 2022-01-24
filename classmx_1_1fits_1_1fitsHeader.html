@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('classmx_1_1fits_1_1fitsHeader.html',''
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>Class to manage a complete fits header. </p>
-<p>Manages tasks such as insertion (avoiding duplicates), and keyword lookup. The <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">cards</a> are stored in a std::list to preserve order, but a std::unordered_multimap is used to provide fast keyword lookup. </p>
+<p>Manages tasks such as insertion (avoiding duplicates), and keyword lookup. The <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">cards</a> are stored in a std::list to preserve order, but a std::unordered_multimap is used to provide fast keyword lookup. </p>
 
 <p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00051">51</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 </div>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('classmx_1_1fits_1_1fitsHeader.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1855c213f7ddcf34c00f8e062319a0d0"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &gt;::<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a77d2ec1f6894fcb718f31b2d3f381b1e">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a></td></tr>
+<tr class="memitem:a1855c213f7ddcf34c00f8e062319a0d0"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &gt;::<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a77d2ec1f6894fcb718f31b2d3f381b1e">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a></td></tr>
 <tr class="memdesc:a1855c213f7ddcf34c00f8e062319a0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The iterator type for the cards list.  <a href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">More...</a><br /></td></tr>
 <tr class="separator:a1855c213f7ddcf34c00f8e062319a0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c00c7d955dd9fa7d393605436f24952"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_multimap&lt; std::string, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> &gt;::<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a77d2ec1f6894fcb718f31b2d3f381b1e">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a4c00c7d955dd9fa7d393605436f24952">mapIterator</a></td></tr>
@@ -159,8 +159,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7424984051e3869defee2e010a49a0ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a7424984051e3869defee2e010a49a0ae">eraseStandardTop</a> ()</td></tr>
 <tr class="memdesc:a7424984051e3869defee2e010a49a0ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the standard entries at the top of the header.  <a href="classmx_1_1fits_1_1fitsHeader.html#a7424984051e3869defee2e010a49a0ae">More...</a><br /></td></tr>
 <tr class="separator:a7424984051e3869defee2e010a49a0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf4e18ef922ef7c35b87965774139c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">append</a> (<a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> card)</td></tr>
-<tr class="memdesc:adf4e18ef922ef7c35b87965774139c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html" title="Simple structure to hold the three components of a FITS header card.">fitsHeaderCard</a> to the end of the header.  <a href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">More...</a><br /></td></tr>
+<tr class="memitem:adf4e18ef922ef7c35b87965774139c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">append</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> card)</td></tr>
+<tr class="memdesc:adf4e18ef922ef7c35b87965774139c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html" title="Class to manage the three components of a FITS header card.">fitsHeaderCard</a> to the end of the header.  <a href="classmx_1_1fits_1_1fitsHeader.html#adf4e18ef922ef7c35b87965774139c1d">More...</a><br /></td></tr>
 <tr class="separator:adf4e18ef922ef7c35b87965774139c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa70da65489fa25f22a95711136847ae2"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
 <tr class="memitem:aa70da65489fa25f22a95711136847ae2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#aa70da65489fa25f22a95711136847ae2">append</a> (const std::string &amp;k, const typeT &amp;v, const std::string &amp;c)</td></tr>
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9387a28f5593e241062397dc2d8ebace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a9387a28f5593e241062397dc2d8ebace">append</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;head)</td></tr>
 <tr class="memdesc:a9387a28f5593e241062397dc2d8ebace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a <a class="el" href="classmx_1_1fits_1_1fitsHeader.html" title="Class to manage a complete fits header.">fitsHeader</a> to the end of the header.  <a href="classmx_1_1fits_1_1fitsHeader.html#a9387a28f5593e241062397dc2d8ebace">More...</a><br /></td></tr>
 <tr class="separator:a9387a28f5593e241062397dc2d8ebace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c65acf7870b719066dbe4858f03115e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a9c65acf7870b719066dbe4858f03115e">insert_before</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> it, <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> card)</td></tr>
+<tr class="memitem:a9c65acf7870b719066dbe4858f03115e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a9c65acf7870b719066dbe4858f03115e">insert_before</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> it, <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> card)</td></tr>
 <tr class="memdesc:a9c65acf7870b719066dbe4858f03115e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a card before another card.  <a href="classmx_1_1fits_1_1fitsHeader.html#a9c65acf7870b719066dbe4858f03115e">More...</a><br /></td></tr>
 <tr class="separator:a9c65acf7870b719066dbe4858f03115e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9809495a5ccd3b3c3554b217cc0a0de"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
@@ -187,7 +187,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a557f2e01f930532a287b67cfc2446544"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a557f2e01f930532a287b67cfc2446544">insert_before</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> it, const std::string &amp;k, typeT v)</td></tr>
 <tr class="memdesc:a557f2e01f930532a287b67cfc2446544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a card before another card, specifying the card by its components.  <a href="classmx_1_1fits_1_1fitsHeader.html#a557f2e01f930532a287b67cfc2446544">More...</a><br /></td></tr>
 <tr class="separator:a557f2e01f930532a287b67cfc2446544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae463067e73f22f1f5b12371be5ed4641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#ae463067e73f22f1f5b12371be5ed4641">insert_after</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> it, <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> card)</td></tr>
+<tr class="memitem:ae463067e73f22f1f5b12371be5ed4641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#ae463067e73f22f1f5b12371be5ed4641">insert_after</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> it, <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> card)</td></tr>
 <tr class="memdesc:ae463067e73f22f1f5b12371be5ed4641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a card after another card.  <a href="classmx_1_1fits_1_1fitsHeader.html#ae463067e73f22f1f5b12371be5ed4641">More...</a><br /></td></tr>
 <tr class="separator:ae463067e73f22f1f5b12371be5ed4641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bb9c5c8e6ab7d29f205f73b80dac611"><td class="memTemplParams" colspan="2">template&lt;typename typeT &gt; </td></tr>
@@ -198,16 +198,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae99cf42cce3fe745653651eae847e5dc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#ae99cf42cce3fe745653651eae847e5dc">insert_after</a> (<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> it, const std::string &amp;k, typeT v)</td></tr>
 <tr class="memdesc:ae99cf42cce3fe745653651eae847e5dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a card after another card, specifying the card by its components.  <a href="classmx_1_1fits_1_1fitsHeader.html#ae99cf42cce3fe745653651eae847e5dc">More...</a><br /></td></tr>
 <tr class="separator:ae99cf42cce3fe745653651eae847e5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e554cc130146320d1e2d22f5dbeb344"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a2e554cc130146320d1e2d22f5dbeb344">operator[]</a> (const std::string &amp;keyword)</td></tr>
+<tr class="memitem:a2e554cc130146320d1e2d22f5dbeb344"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a2e554cc130146320d1e2d22f5dbeb344">operator[]</a> (const std::string &amp;keyword)</td></tr>
 <tr class="memdesc:a2e554cc130146320d1e2d22f5dbeb344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Card access by keyword operator.  <a href="classmx_1_1fits_1_1fitsHeader.html#a2e554cc130146320d1e2d22f5dbeb344">More...</a><br /></td></tr>
 <tr class="separator:a2e554cc130146320d1e2d22f5dbeb344"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b74433ecc646cc0e13a5e9a87232ba6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a3b74433ecc646cc0e13a5e9a87232ba6">operator[]</a> (const std::string &amp;keyword) const</td></tr>
+<tr class="memitem:a3b74433ecc646cc0e13a5e9a87232ba6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a3b74433ecc646cc0e13a5e9a87232ba6">operator[]</a> (const std::string &amp;keyword) const</td></tr>
 <tr class="memdesc:a3b74433ecc646cc0e13a5e9a87232ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Card access by keyword operator (const version)  <a href="classmx_1_1fits_1_1fitsHeader.html#a3b74433ecc646cc0e13a5e9a87232ba6">More...</a><br /></td></tr>
 <tr class="separator:a3b74433ecc646cc0e13a5e9a87232ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a4ca7bb845f6bfe207783bb05d83843fe"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a4ca7bb845f6bfe207783bb05d83843fe">cards</a></td></tr>
+<tr class="memitem:a4ca7bb845f6bfe207783bb05d83843fe"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a4ca7bb845f6bfe207783bb05d83843fe">cards</a></td></tr>
 <tr class="memdesc:a4ca7bb845f6bfe207783bb05d83843fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The storage for the FITS header cards.  <a href="classmx_1_1fits_1_1fitsHeader.html#a4ca7bb845f6bfe207783bb05d83843fe">More...</a><br /></td></tr>
 <tr class="separator:a4ca7bb845f6bfe207783bb05d83843fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2d2b15498e34b11109f8a59212de2ed"><td class="memItemLeft" align="right" valign="top">std::unordered_multimap&lt; std::string, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">headerIterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html#ab2d2b15498e34b11109f8a59212de2ed">cardMap</a></td></tr>
@@ -222,7 +222,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::list&lt;<a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&gt;::<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a77d2ec1f6894fcb718f31b2d3f381b1e">iterator</a> <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">mx::fits::fitsHeader::headerIterator</a></td>
+          <td class="memname">typedef std::list&lt;<a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&gt;::<a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a77d2ec1f6894fcb718f31b2d3f381b1e">iterator</a> <a class="el" href="classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0">mx::fits::fitsHeader::headerIterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -402,7 +402,7 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00280">280</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00281">281</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00156">append()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -503,26 +503,26 @@ template&lt;typename typeT &gt; </div>
         <tr>
           <td class="memname">void mx::fits::fitsHeader::append </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&#160;</td>
           <td class="paramname"><em>card</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Append a <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html" title="Simple structure to hold the three components of a FITS header card.">fitsHeaderCard</a> to the end of the header. </p>
+<p>Append a <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html" title="Class to manage the three components of a FITS header card.">fitsHeaderCard</a> to the end of the header. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">card</td><td>is a <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html" title="Simple structure to hold the three components of a FITS header card.">fitsHeaderCard</a> already populated </td></tr>
+    <tr><td class="paramname">card</td><td>is a <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html" title="Class to manage the three components of a FITS header card.">fitsHeaderCard</a> already populated </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="fitsHeader_8cpp_source.html#l00156">156</a> of file <a class="el" href="fitsHeader_8cpp_source.html">fitsHeader.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, <a class="el" href="fitsHeaderCard_8hpp_source.html#l00046">mx::fits::fitsHeaderCard::keyword</a>, and <a class="el" href="fitsHeaderCard_8hpp_source.html#l00055">mx::fits::fitsHeaderCard::type</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, <a class="el" href="fitsHeaderCard_8cpp_source.html#l00495">mx::fits::fitsHeaderCard::keyword()</a>, and <a class="el" href="fitsHeaderCard_8cpp_source.html#l00944">mx::fits::fitsHeaderCard::type()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsHeader_8hpp_source.html#l00270">append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00267">mx::fits::fitsHeaderGitStatus()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00238">operator[]()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01756">mx::improc::HCIobservation&lt; _realT &gt;::outputPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00754">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01131">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01830">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00963">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>, <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00439">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;::saveRMat()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01669">mx::improc::HCIobservation&lt; _realT &gt;::stdFitsHeader()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01710">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsHeader_8hpp_source.html#l00270">append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00267">mx::fits::fitsHeaderGitStatus()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00238">operator[]()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01756">mx::improc::HCIobservation&lt; _realT &gt;::outputPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00754">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01130">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01830">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00963">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>, <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00439">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;::saveRMat()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01669">mx::improc::HCIobservation&lt; _realT &gt;::stdFitsHeader()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01710">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
 
 </div>
 </div>
@@ -547,7 +547,7 @@ template&lt;typename typeT &gt; </div>
 
 <p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00068">cards</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsHeader_8cpp_source.html#l00178">append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00126">eraseStandardTop()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01131">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01273">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsHeader_8cpp_source.html#l00178">append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00126">eraseStandardTop()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01130">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01272">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -659,7 +659,7 @@ template&lt;typename typeT &gt; </div>
 
 <p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00068">cards</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsHeader_8cpp_source.html#l00178">append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00126">eraseStandardTop()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01131">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01273">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsHeader_8cpp_source.html#l00178">append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00126">eraseStandardTop()</a>, <a class="el" href="fitsFile_8hpp_source.html#l01130">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01272">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -692,7 +692,7 @@ template&lt;typename typeT &gt; </div>
 
 <p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, and <a class="el" href="fitsHeader_8hpp_source.html#l00068">cards</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsHeader_8cpp_source.html#l00126">eraseStandardTop()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01131">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsHeader_8cpp_source.html#l00126">eraseStandardTop()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01130">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>.</p>
 
 </div>
 </div>
@@ -801,7 +801,7 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00319">319</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00321">321</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00215">insert_after()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -864,7 +864,7 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00308">308</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00310">310</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00215">insert_after()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -885,7 +885,7 @@ template&lt;typename typeT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&#160;</td>
           <td class="paramname"><em>card</em>&#160;</td>
         </tr>
         <tr>
@@ -907,9 +907,9 @@ template&lt;typename typeT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fitsHeader_8cpp_source.html#l00215">215</a> of file <a class="el" href="fitsHeader_8cpp_source.html">fitsHeader.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, <a class="el" href="fitsHeaderCard_8hpp_source.html#l00046">mx::fits::fitsHeaderCard::keyword</a>, and <a class="el" href="fitsHeaderCard_8hpp_source.html#l00055">mx::fits::fitsHeaderCard::type</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, <a class="el" href="fitsHeaderCard_8cpp_source.html#l00495">mx::fits::fitsHeaderCard::keyword()</a>, and <a class="el" href="fitsHeaderCard_8cpp_source.html#l00944">mx::fits::fitsHeaderCard::type()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsHeader_8hpp_source.html#l00308">insert_after()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsHeader_8hpp_source.html#l00310">insert_after()</a>.</p>
 
 </div>
 </div>
@@ -963,7 +963,7 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00299">299</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00301">301</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00193">insert_before()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -1026,7 +1026,7 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00288">288</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsHeader_8hpp_source.html#l00290">290</a> of file <a class="el" href="fitsHeader_8hpp_source.html">fitsHeader.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00193">insert_before()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -1047,7 +1047,7 @@ template&lt;typename typeT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&#160;</td>
           <td class="paramname"><em>card</em>&#160;</td>
         </tr>
         <tr>
@@ -1069,9 +1069,9 @@ template&lt;typename typeT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fitsHeader_8cpp_source.html#l00193">193</a> of file <a class="el" href="fitsHeader_8cpp_source.html">fitsHeader.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, <a class="el" href="fitsHeaderCard_8hpp_source.html#l00046">mx::fits::fitsHeaderCard::keyword</a>, and <a class="el" href="fitsHeaderCard_8hpp_source.html#l00055">mx::fits::fitsHeaderCard::type</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00073">cardMap</a>, <a class="el" href="fitsHeaderCard_8cpp_source.html#l00495">mx::fits::fitsHeaderCard::keyword()</a>, and <a class="el" href="fitsHeaderCard_8cpp_source.html#l00944">mx::fits::fitsHeaderCard::type()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsHeader_8hpp_source.html#l00288">insert_before()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsHeader_8hpp_source.html#l00290">insert_before()</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1145,7 @@ template&lt;typename typeT &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp; mx::fits::fitsHeader::operator[] </td>
+          <td class="memname"><a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp; mx::fits::fitsHeader::operator[] </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>keyword</em></td><td>)</td>
@@ -1164,7 +1164,7 @@ template&lt;typename typeT &gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">fitsHeaderCard&amp;</td><td>reference to the <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> </td></tr>
+    <tr><td class="paramname">fitsHeaderCard&amp;</td><td>reference to the <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1182,7 +1182,7 @@ template&lt;typename typeT &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp; mx::fits::fitsHeader::operator[] </td>
+          <td class="memname">const <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> &amp; mx::fits::fitsHeader::operator[] </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>keyword</em></td><td>)</td>
@@ -1201,7 +1201,7 @@ template&lt;typename typeT &gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">fitsHeaderCard&amp;</td><td>const reference to the <a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> </td></tr>
+    <tr><td class="paramname">fitsHeaderCard&amp;</td><td>const reference to the <a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1233,7 +1233,7 @@ template&lt;typename typeT &gt; </div>
 
 <p class="reference">References <a class="el" href="fitsHeader_8hpp_source.html#l00068">cards</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitsFile_8hpp_source.html#l01131">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitsFile_8hpp_source.html#l01130">mx::fits::fitsFile&lt; dataT &gt;::readHeader()</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1277,7 @@ template&lt;typename typeT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::list&lt;<a class="el" href="structmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&gt; mx::fits::fitsHeader::cards</td>
+          <td class="memname">std::list&lt;<a class="el" href="classmx_1_1fits_1_1fitsHeaderCard.html">fitsHeaderCard</a>&gt; mx::fits::fitsHeader::cards</td>
         </tr>
       </table>
   </td>
@@ -1306,7 +1306,7 @@ template&lt;typename typeT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>fits</b></li><li class="navelem"><a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:01 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

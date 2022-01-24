@@ -63,22 +63,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a04eaab2e82b8033926302b34587899a6",
-"classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a11a1673d0ad22e6cea6d29c922addcbd",
-"classmx_1_1fits_1_1fitsFile.html#a5a4e0367036575d36ca2ee8661cd37d6",
-"classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aa858c7154ddf8dc09121b715717864e2",
-"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#acc0b28c084ef7898112ad2ad9a8ef7c9",
-"fitGaussian_8hpp.html#gaba9d8402691aaaf84a8202e612fe7ab6",
-"group__binvector.html#gacb8b9ebf8b2fd06daaa235e54e644378",
-"group__geo.html",
-"group__planets.html#ga4b350ecfdeaca1bedb897db770b09789",
-"imageFilters_8hpp.html",
-"psdUtils_8hpp.html#gad62e6e7fd9fde862c407f3d6613e6374",
-"structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#ac5495124bf9106070707d601204170af",
-"structmx_1_1astro_1_1picklesSpectrum.html#a12452a8e8e97c35db51e5edea3a8d128",
-"structmx_1_1improc_1_1HCIobservation.html#a4e959ba44405d6d68e1e226c5ae29b03",
-"structmx_1_1math_1_1fit_1_1airy2D__obs__fitter__ps__eps.html",
-"typeTraits_8hpp_source.html"
+"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a1d6b9446a7643f11dbb3def7e26da06c",
+"classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a350770106d3f06580f9a25924cccff23",
+"classmx_1_1fits_1_1fitsFile.html#a2465ac76edfc7aceb54f8c545a79875a",
+"classmx_1_1fits_1_1fitsHeaderCard.html#ad310424b2201b5c3a612a63d4484b65b",
+"classmx_1_1math_1_1gnuPlot.html#aa4cd50ed44d9c8210c0712c8d81aef39",
+"classmx_1_1wfp_1_1fraunhoferPropagator_3_01__wavefrontT_00_011_01_4.html#a4079925d38dae84b9063a7d0cd7cd1a1",
+"functions_func_f.html",
+"group__fftw__template__types.html#ga04eb266ccb8a26e19e2ad3e18710b186",
+"group__image__masks.html#ga65cfd4aa1d7febb4f28018918a1795f2",
+"group__signal__windows2D.html#ga05a03c41e310b36c3e9102a2b80c6503",
+"imageXCorrDiscrete_8hpp.html",
+"signalWindows_8hpp.html#ga72dc368e30f27fd1f9cefca8e8a0a0a2",
+"structmx_1_1app_1_1appConfigurator.html#ada9d39514ed403132032c5299f390dd8",
+"structmx_1_1improc_1_1ADIDerotator.html",
+"structmx_1_1improc_1_1KLIPreduction.html#a1a203f0f944f8ccc1f4d2dab1a20a074",
+"structmx_1_1wfp_1_1lyotCoronagraph.html#ad91f1698bf34722787cc83d71689898b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

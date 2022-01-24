@@ -6,7 +6,7 @@ var group__functions =
     [ "bessel_j", "group__functions.html#ga655c3bd311c1ec65b66651763ca353b7", null ],
     [ "factorial", "group__functions.html#gadbf47cb576179c229bedb653c5989388", null ],
     [ "jinc", "group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602", null ],
-    [ "jinc2", "group__functions.html#ga3a702ef04302dc30da61d1f6d19ec87b", null ],
+    [ "jincN", "group__functions.html#gaa37415341730ef4c6de9815c5c8464fa", null ],
     [ "legendre_p", "group__functions.html#ga1a0583ff2032c5a78e1819d31714dffd", null ],
     [ "logistic", "group__functions.html#ga764f78457f1ca51b4cae2590c34e0c83", null ],
     [ "logistic_param", "group__functions.html#gaf0615a3bf1da560abf889e15e4a99140", null ],

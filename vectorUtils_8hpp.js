@@ -19,6 +19,7 @@ var vectorUtils_8hpp =
     [ "vectorSigmaMean", "vectorUtils_8hpp.html#ga755810b51b30a798289dbc680699dbee", null ],
     [ "vectorSigmaMean", "vectorUtils_8hpp.html#ga6746761c7ff2f82c3aee8a894d6f0d53", null ],
     [ "vectorSmoothMax", "vectorUtils_8hpp.html#gadda450e35c0814178194b88277f62e00", null ],
+    [ "vectorSmoothMean", "vectorUtils_8hpp.html#gab6bea659262a0d5b66e78380f49fef8d", null ],
     [ "vectorSmoothMean", "vectorUtils_8hpp.html#gacba7bbd6e3e6f11d5856c16197c8d13d", null ],
     [ "vectorSmoothMean", "vectorUtils_8hpp.html#gad7895585c71500e4cda6502035575e2b", null ],
     [ "vectorSmoothMedian", "vectorUtils_8hpp.html#gacbb779f5b11027088f535e62b9f247cc", null ],

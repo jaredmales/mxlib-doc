@@ -103,7 +103,8 @@ $(document).ready(function(){initNavTree('psdUtils_8hpp.html',''); initResizable
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;Eigen/Dense&gt;</code><br />
+</div><div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../mxError.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fft_8hpp_source.html">../math/fft/fft.hpp</a>&quot;</code><br />
@@ -176,18 +177,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga16e4b43e07eaeb749f091a39cf993c90"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga16e4b43e07eaeb749f091a39cf993c90">mx::sigproc::oneoverf_psd</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, typename eigenArrp::Scalar alpha, typename eigenArrp::Scalar beta=-1)</td></tr>
 <tr class="memdesc:ga16e4b43e07eaeb749f091a39cf993c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a \( 1/|f|^\alpha \) power spectrum.  <a href="group__psds.html#ga16e4b43e07eaeb749f091a39cf993c90">More...</a><br /></td></tr>
 <tr class="separator:ga16e4b43e07eaeb749f091a39cf993c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga83af1f209971a81531d243aaf524dd74"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga83af1f209971a81531d243aaf524dd74"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga83af1f209971a81531d243aaf524dd74">mx::sigproc::vonKarmanPSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT beta, floatT T0, floatT t0, floatT alpha)</td></tr>
-<tr class="memdesc:ga83af1f209971a81531d243aaf524dd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D von Karman power spectrum.  <a href="group__psds.html#ga83af1f209971a81531d243aaf524dd74">More...</a><br /></td></tr>
-<tr class="separator:ga83af1f209971a81531d243aaf524dd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memTemplParams" colspan="2">template&lt;typename floatT , typename floatfT , typename alphaT , typename T0T , typename t0T , typename betaT &gt; </td></tr>
+<tr class="memitem:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga86c40cc15c5d3258a77b9a6efa45f886">mx::sigproc::vonKarmanPSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatfT &gt; &amp;f, alphaT alpha, T0T T0=0, t0T t0=0, betaT beta=1)</td></tr>
+<tr class="memdesc:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D von Karman power spectrum.  <a href="group__psds.html#ga86c40cc15c5d3258a77b9a6efa45f886">More...</a><br /></td></tr>
+<tr class="separator:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadcc05de7369c4f959fc7b870640d022e"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
 <tr class="memitem:gadcc05de7369c4f959fc7b870640d022e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gadcc05de7369c4f959fc7b870640d022e">mx::sigproc::kneePSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT beta, floatT fn, floatT alpha)</td></tr>
 <tr class="memdesc:gadcc05de7369c4f959fc7b870640d022e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D "knee" PSD.  <a href="group__psds.html#gadcc05de7369c4f959fc7b870640d022e">More...</a><br /></td></tr>
 <tr class="separator:gadcc05de7369c4f959fc7b870640d022e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaed98346fd5a35b6daba93907e690f66d"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrp , typename eigenArrf &gt; </td></tr>
-<tr class="memitem:gaed98346fd5a35b6daba93907e690f66d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaed98346fd5a35b6daba93907e690f66d">mx::sigproc::vonKarman_psd</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, typename eigenArrp::Scalar alpha, typename eigenArrp::Scalar L0=0, typename eigenArrp::Scalar l0=0, typename eigenArrp::Scalar beta=-1)</td></tr>
-<tr class="memdesc:gaed98346fd5a35b6daba93907e690f66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a von Karman power spectrum.  <a href="group__psds.html#gaed98346fd5a35b6daba93907e690f66d">More...</a><br /></td></tr>
-<tr class="separator:gaed98346fd5a35b6daba93907e690f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga424886d0cef466d70ab422d34d2822ce"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrp , typename eigenArrf , typename alphaT , typename L0T , typename l0T , typename betaT &gt; </td></tr>
+<tr class="memitem:ga424886d0cef466d70ab422d34d2822ce"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga424886d0cef466d70ab422d34d2822ce">mx::sigproc::vonKarmanPSD</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, alphaT alpha, L0T L0=0, l0T l0=0, betaT beta=-1)</td></tr>
+<tr class="memdesc:ga424886d0cef466d70ab422d34d2822ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a von Karman power spectrum.  <a href="group__psds.html#ga424886d0cef466d70ab422d34d2822ce">More...</a><br /></td></tr>
+<tr class="separator:ga424886d0cef466d70ab422d34d2822ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="memTemplParams" colspan="2">template&lt;typename vectorTout , typename vectorTin &gt; </td></tr>
 <tr class="memitem:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">mx::sigproc::augment1SidedPSD</a> (vectorTout &amp;psdTwoSided, vectorTin &amp;psdOneSided, bool addZeroFreq=false, typename vectorTin::value_type scale=0.5)</td></tr>
 <tr class="memdesc:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Augment a 1-sided PSD to standard 2-sided FFT form.  <a href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">More...</a><br /></td></tr>
@@ -257,18 +258,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga16e4b43e07eaeb749f091a39cf993c90"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga16e4b43e07eaeb749f091a39cf993c90">mx::sigproc::oneoverf_psd</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, typename eigenArrp::Scalar alpha, typename eigenArrp::Scalar beta=-1)</td></tr>
 <tr class="memdesc:ga16e4b43e07eaeb749f091a39cf993c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a \( 1/|f|^\alpha \) power spectrum.  <a href="group__psds.html#ga16e4b43e07eaeb749f091a39cf993c90">More...</a><br /></td></tr>
 <tr class="separator:ga16e4b43e07eaeb749f091a39cf993c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga83af1f209971a81531d243aaf524dd74"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga83af1f209971a81531d243aaf524dd74"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga83af1f209971a81531d243aaf524dd74">mx::sigproc::vonKarmanPSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT beta, floatT T0, floatT t0, floatT alpha)</td></tr>
-<tr class="memdesc:ga83af1f209971a81531d243aaf524dd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D von Karman power spectrum.  <a href="group__psds.html#ga83af1f209971a81531d243aaf524dd74">More...</a><br /></td></tr>
-<tr class="separator:ga83af1f209971a81531d243aaf524dd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memTemplParams" colspan="2">template&lt;typename floatT , typename floatfT , typename alphaT , typename T0T , typename t0T , typename betaT &gt; </td></tr>
+<tr class="memitem:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga86c40cc15c5d3258a77b9a6efa45f886">mx::sigproc::vonKarmanPSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatfT &gt; &amp;f, alphaT alpha, T0T T0=0, t0T t0=0, betaT beta=1)</td></tr>
+<tr class="memdesc:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D von Karman power spectrum.  <a href="group__psds.html#ga86c40cc15c5d3258a77b9a6efa45f886">More...</a><br /></td></tr>
+<tr class="separator:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadcc05de7369c4f959fc7b870640d022e"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
 <tr class="memitem:gadcc05de7369c4f959fc7b870640d022e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gadcc05de7369c4f959fc7b870640d022e">mx::sigproc::kneePSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT beta, floatT fn, floatT alpha)</td></tr>
 <tr class="memdesc:gadcc05de7369c4f959fc7b870640d022e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D "knee" PSD.  <a href="group__psds.html#gadcc05de7369c4f959fc7b870640d022e">More...</a><br /></td></tr>
 <tr class="separator:gadcc05de7369c4f959fc7b870640d022e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaed98346fd5a35b6daba93907e690f66d"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrp , typename eigenArrf &gt; </td></tr>
-<tr class="memitem:gaed98346fd5a35b6daba93907e690f66d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaed98346fd5a35b6daba93907e690f66d">mx::sigproc::vonKarman_psd</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, typename eigenArrp::Scalar alpha, typename eigenArrp::Scalar L0=0, typename eigenArrp::Scalar l0=0, typename eigenArrp::Scalar beta=-1)</td></tr>
-<tr class="memdesc:gaed98346fd5a35b6daba93907e690f66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a von Karman power spectrum.  <a href="group__psds.html#gaed98346fd5a35b6daba93907e690f66d">More...</a><br /></td></tr>
-<tr class="separator:gaed98346fd5a35b6daba93907e690f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga424886d0cef466d70ab422d34d2822ce"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrp , typename eigenArrf , typename alphaT , typename L0T , typename l0T , typename betaT &gt; </td></tr>
+<tr class="memitem:ga424886d0cef466d70ab422d34d2822ce"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga424886d0cef466d70ab422d34d2822ce">mx::sigproc::vonKarmanPSD</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, alphaT alpha, L0T L0=0, l0T l0=0, betaT beta=-1)</td></tr>
+<tr class="memdesc:ga424886d0cef466d70ab422d34d2822ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a von Karman power spectrum.  <a href="group__psds.html#ga424886d0cef466d70ab422d34d2822ce">More...</a><br /></td></tr>
+<tr class="separator:ga424886d0cef466d70ab422d34d2822ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="memTemplParams" colspan="2">template&lt;typename vectorTout , typename vectorTin &gt; </td></tr>
 <tr class="memitem:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">mx::sigproc::augment1SidedPSD</a> (vectorTout &amp;psdTwoSided, vectorTin &amp;psdOneSided, bool addZeroFreq=false, typename vectorTin::value_type scale=0.5)</td></tr>
 <tr class="memdesc:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Augment a 1-sided PSD to standard 2-sided FFT form.  <a href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">More...</a><br /></td></tr>
@@ -288,7 +289,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="psdUtils_8hpp.html">psdUtils.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

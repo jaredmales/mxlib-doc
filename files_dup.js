@@ -15,7 +15,7 @@ var files_dup =
     [ "tests", "dir_59425e443f801f1f2fd8bbe4959a3ccf.html", "dir_59425e443f801f1f2fd8bbe4959a3ccf" ],
     [ "wfp", "dir_798a60fe574b319ce1e0453987adc495.html", "dir_798a60fe574b319ce1e0453987adc495" ],
     [ "mxError.hpp", "mxError_8hpp.html", "mxError_8hpp" ],
-    [ "mxException.hpp", "mxException_8hpp.html", null ],
+    [ "mxException.hpp", "mxException_8hpp.html", "mxException_8hpp" ],
     [ "mxlib.hpp", "mxlib_8hpp.html", "mxlib_8hpp" ],
     [ "mxlib_uncomp_version.h", "mxlib__uncomp__version_8h_source.html", null ]
 ];

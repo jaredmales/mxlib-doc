@@ -90,7 +90,9 @@ $(document).ready(function(){initNavTree('mxException_8hpp.html',''); initResiza
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">mxException.hpp File Reference<div class="ingroups"><a class="el" href="group__error__handling.html">Error Handling</a> &raquo; <a class="el" href="group__error__handling__files.html">Error Handling Files</a></div></div>  </div>
 </div><!--header-->
@@ -105,14 +107,45 @@ $(document).ready(function(){initNavTree('mxException_8hpp.html',''); initResiza
 <p class="definition">Definition in file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 </div><div class="textblock"><code>#include &lt;exception&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="mxError_8hpp_source.html">mxError.hpp</a>&quot;</code><br />
 </div>
 <p><a href="mxException_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmxException.html">mxException</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib exception class.  <a href="classmxException.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html">mx::err::mxException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib exception class.  <a href="classmx_1_1err_1_1mxException.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1invalidarg.html">mx::err::invalidarg</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmx_1_1err_1_1mxException.html" title="The mxlib exception class.">mxException</a> for invalid arguments  <a href="classmx_1_1err_1_1invalidarg.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1notimpl.html">mx::err::notimpl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmx_1_1err_1_1mxException.html" title="The mxlib exception class.">mxException</a> for not implemented features  <a href="classmx_1_1err_1_1notimpl.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1paramnotset.html">mx::err::paramnotset</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmx_1_1err_1_1mxException.html" title="The mxlib exception class.">mxException</a> for parameters which aren't set  <a href="classmx_1_1err_1_1paramnotset.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1sizeerr.html">mx::err::sizeerr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmx_1_1err_1_1mxException.html" title="The mxlib exception class.">mxException</a> for a size error  <a href="classmx_1_1err_1_1sizeerr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1allocerr.html">mx::err::allocerr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmx_1_1err_1_1mxException.html" title="The mxlib exception class.">mxException</a> for an allocation error  <a href="classmx_1_1err_1_1allocerr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1liberr.html">mx::err::liberr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmx_1_1err_1_1mxException.html" title="The mxlib exception class.">mxException</a> for errors returned by a library call  <a href="classmx_1_1err_1_1liberr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacemx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemx.html">mx</a></td></tr>
+<tr class="memdesc:namespacemx"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib c++ namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gad94a7fa7d77d8184ea8493d80dd6c30d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d">mxThrowException</a>(extype,  src,  expl)&#160;&#160;&#160;throw extype(src,  __FILE__, __LINE__, expl);</td></tr>
+<tr class="memdesc:gad94a7fa7d77d8184ea8493d80dd6c30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw an exception. This macro takes care of the file and line.  <a href="group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d">More...</a><br /></td></tr>
+<tr class="separator:gad94a7fa7d77d8184ea8493d80dd6c30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -120,7 +153,7 @@ Classes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="mxException_8hpp.html">mxException.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

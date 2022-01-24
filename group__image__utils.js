@@ -9,6 +9,7 @@ var group__image__utils =
     [ "imcpy_flipLR", "group__image__utils.html#gacbe3b75e33635a015c6f7051ff985b7d", null ],
     [ "imcpy_flipUD", "group__image__utils.html#gaf0f87ffa5e8801f2a6e745b57bbb39f9", null ],
     [ "imcpy_flipUDLR", "group__image__utils.html#gae998f07aee3ddef14d64603e8977c6ab", null ],
+    [ "reflectImageCoords", "group__image__utils.html#gaf65345d7ffa9beb0323fc6e51bee978a", null ],
     [ "zeroNaNCube", "group__image__utils.html#gaa56bbb261dda0b6fe51279394768ec96", null ],
     [ "zeroNaNs", "group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4", null ]
 ];

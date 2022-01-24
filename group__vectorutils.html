@@ -184,6 +184,10 @@ $(document).ready(function(){initNavTree('group__vectorutils.html',''); initResi
 <tr class="memitem:ga8c255eca08126477d2fd3ed20c6166e4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#ga8c255eca08126477d2fd3ed20c6166e4">mx::math::vectorMedianSub</a> (vecT &amp;vec)</td></tr>
 <tr class="memdesc:ga8c255eca08126477d2fd3ed20c6166e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract the median from a vector.  <a href="group__vectorutils.html#ga8c255eca08126477d2fd3ed20c6166e4">More...</a><br /></td></tr>
 <tr class="separator:ga8c255eca08126477d2fd3ed20c6166e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6bea659262a0d5b66e78380f49fef8d"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gab6bea659262a0d5b66e78380f49fef8d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#gab6bea659262a0d5b66e78380f49fef8d">mx::math::vectorSmoothMean</a> (realT *smVec, realT *vec, size_t vecSize, int win)</td></tr>
+<tr class="memdesc:gab6bea659262a0d5b66e78380f49fef8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smooth a vector using the mean in a window specified by its full-width.  <a href="group__vectorutils.html#gab6bea659262a0d5b66e78380f49fef8d">More...</a><br /></td></tr>
+<tr class="separator:gab6bea659262a0d5b66e78380f49fef8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacba7bbd6e3e6f11d5856c16197c8d13d"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:gacba7bbd6e3e6f11d5856c16197c8d13d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#gacba7bbd6e3e6f11d5856c16197c8d13d">mx::math::vectorSmoothMean</a> (std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, int win)</td></tr>
 <tr class="memdesc:gacba7bbd6e3e6f11d5856c16197c8d13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smooth a vector using the mean in a window specified by its full-width.  <a href="group__vectorutils.html#gacba7bbd6e3e6f11d5856c16197c8d13d">More...</a><br /></td></tr>
@@ -204,14 +208,14 @@ $(document).ready(function(){initNavTree('group__vectorutils.html',''); initResi
 <tr class="memitem:ga2fde191f5a8778ea4fbca9515c7fe87e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">mx::math::vectorRebin</a> (vectorT &amp;binv, const vectorT &amp;v, unsigned n, bool binMean=false)</td></tr>
 <tr class="memdesc:ga2fde191f5a8778ea4fbca9515c7fe87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-bin a vector by summing (or averaging) in bins of size n points.  <a href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">More...</a><br /></td></tr>
 <tr class="separator:ga2fde191f5a8778ea4fbca9515c7fe87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac7dc25ee53344f8ade80a142a3bb2178"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:gac7dc25ee53344f8ade80a142a3bb2178"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">mx::math::vectorGaussConvolve</a> (std::vector&lt; realT &gt; &amp;dataOut, const std::vector&lt; realT &gt; &amp;dataIn, const std::vector&lt; realT &gt; &amp;scale, const realT fwhm, const int winhw)</td></tr>
-<tr class="memdesc:gac7dc25ee53344f8ade80a142a3bb2178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve (smooth) a vector with a Gaussian.  <a href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">More...</a><br /></td></tr>
-<tr class="separator:gac7dc25ee53344f8ade80a142a3bb2178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga675a65413630952a5313e02dc1c44992"><td class="memTemplParams" colspan="2">template&lt;typename vectorT , typename binVectorT &gt; </td></tr>
 <tr class="memitem:ga675a65413630952a5313e02dc1c44992"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">mx::math::vectorBinMeans</a> (std::vector&lt; vectorT &gt; &amp;means, binVectorT &amp;binSzs, const vectorT &amp;v)</td></tr>
 <tr class="memdesc:ga675a65413630952a5313e02dc1c44992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and accumulate the means of a timeseries in bins of various sizes.  <a href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">More...</a><br /></td></tr>
 <tr class="separator:ga675a65413630952a5313e02dc1c44992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7dc25ee53344f8ade80a142a3bb2178"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gac7dc25ee53344f8ade80a142a3bb2178"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">mx::math::vectorGaussConvolve</a> (std::vector&lt; realT &gt; &amp;dataOut, const std::vector&lt; realT &gt; &amp;dataIn, const std::vector&lt; realT &gt; &amp;scale, const realT fwhm, const int winhw)</td></tr>
+<tr class="memdesc:gac7dc25ee53344f8ade80a142a3bb2178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve (smooth) a vector with a Gaussian.  <a href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">More...</a><br /></td></tr>
+<tr class="separator:gac7dc25ee53344f8ade80a142a3bb2178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaad958d46209e7b59078f5d1c862007f9"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
 <tr class="memitem:gaad958d46209e7b59078f5d1c862007f9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">mx::math::vectorCumHist</a> (std::vector&lt; floatT &gt; &amp;svec, std::vector&lt; floatT &gt; &amp;sum, std::vector&lt; floatT &gt; &amp;vec)</td></tr>
 <tr class="memdesc:gaad958d46209e7b59078f5d1c862007f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a cumulative histogram of a vector.  <a href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">More...</a><br /></td></tr>
@@ -268,9 +272,9 @@ template&lt;typename vectorT , typename binVectorT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00764">764</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00730">730</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00680">mx::math::vectorRebin()</a>.</p>
+<p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00691">mx::math::vectorRebin()</a>.</p>
 
 </div>
 </div>
@@ -331,7 +335,7 @@ template&lt;typename floatT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00792">792</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00805">805</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -392,7 +396,7 @@ template&lt;typename floatT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00821">821</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00834">834</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -463,7 +467,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00719">719</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00758">758</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00051">mx::astro::constants::G()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00082">mx::astro::constants::sigma()</a>.</p>
 
@@ -768,7 +772,7 @@ template&lt;typename vectorT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00218">218</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="eigenImage_8hpp_source.html#l00118">mx::improc::imageMedian()</a>, <a class="el" href="imageFilters_8hpp_source.html#l00479">mx::improc::medianSmooth()</a>, <a class="el" href="vectorUtils_8hpp_source.html#l00247">mx::math::vectorMedian()</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00618">mx::math::vectorSmoothMedian()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eigenImage_8hpp_source.html#l00117">mx::improc::imageMedian()</a>, <a class="el" href="imageFilters_8hpp_source.html#l00479">mx::improc::medianSmooth()</a>, <a class="el" href="vectorUtils_8hpp_source.html#l00247">mx::math::vectorMedian()</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00629">mx::math::vectorSmoothMedian()</a>.</p>
 
 </div>
 </div>
@@ -864,9 +868,9 @@ template&lt;typename vectorT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00680">680</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00691">691</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="vectorUtils_8hpp_source.html#l00764">mx::math::vectorBinMeans()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="vectorUtils_8hpp_source.html#l00730">mx::math::vectorBinMeans()</a>.</p>
 
 </div>
 </div>
@@ -933,7 +937,7 @@ template&lt;typename vectorT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00062">62</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00687">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::makePSDGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00686">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::makePSDGrid()</a>.</p>
 
 </div>
 </div>
@@ -1197,12 +1201,67 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00648">648</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00659">659</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+
+</div>
+</div>
+<a id="gab6bea659262a0d5b66e78380f49fef8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6bea659262a0d5b66e78380f49fef8d">&#9670;&nbsp;</a></span>vectorSmoothMean() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::vectorSmoothMean </td>
+          <td>(</td>
+          <td class="paramtype">realT *&#160;</td>
+          <td class="paramname"><em>smVec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT *&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>vecSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>win</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Smooth a vector using the mean in a window specified by its full-width. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">smVec</td><td>[out] the smoothed version of the vector. At least as large as <code>vec</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>[in] the input vector, unaltered. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vecSize</td><td>[in] the size of <code>vec</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">win</td><td>[in] the full-width of the smoothing window. Should be even. 0 results in a slow memcpy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00530">530</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
 </div>
 </div>
 <a id="gacba7bbd6e3e6f11d5856c16197c8d13d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacba7bbd6e3e6f11d5856c16197c8d13d">&#9670;&nbsp;</a></span>vectorSmoothMean() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gacba7bbd6e3e6f11d5856c16197c8d13d">&#9670;&nbsp;</a></span>vectorSmoothMean() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1236,21 +1295,24 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Smooth a vector using the mean in a window specified by its full-width. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">smVec</td><td>[out] the smoothed version of the vector </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">smVec</td><td>[out] the smoothed version of the vector. Will be resize()-ed. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>[in] the input vector, unaltered. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">win</td><td>[in] the full-width of the smoothing window </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">win</td><td>[in] the full-width of the smoothing window. Should be even. 0 results in a slow memcpy. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00530">530</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00562">562</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00580">mx::math::vectorSmoothMean()</a>.</p>
 
 </div>
 </div>
 <a id="gad7895585c71500e4cda6502035575e2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad7895585c71500e4cda6502035575e2b">&#9670;&nbsp;</a></span>vectorSmoothMean() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7895585c71500e4cda6502035575e2b">&#9670;&nbsp;</a></span>vectorSmoothMean() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1304,7 +1366,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00569">569</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00580">580</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="vectorUtils_8hpp_source.html#l00562">mx::math::vectorSmoothMean()</a>.</p>
 
 </div>
 </div>
@@ -1352,7 +1416,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00618">618</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vectorUtils_8hpp_source.html#l00629">629</a> of file <a class="el" href="vectorUtils_8hpp_source.html">vectorUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00218">mx::math::vectorMedianInPlace()</a>.</p>
 
@@ -1788,7 +1852,7 @@ template&lt;typename vectorT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

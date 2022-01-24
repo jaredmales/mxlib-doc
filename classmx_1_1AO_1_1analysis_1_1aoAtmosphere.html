@@ -112,7 +112,7 @@ class mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00044">44</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00046">46</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="aoAtmosphere_8hpp_source.html">ao/analysis/aoAtmosphere.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -229,6 +229,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aee6f9c5b8730f9b876a122e74eb54aff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#aee6f9c5b8730f9b876a122e74eb54aff">z_mean</a> (const <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a> &amp;zm)</td></tr>
 <tr class="memdesc:aee6f9c5b8730f9b876a122e74eb54aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the weighted mean m_z_mean and renormalize the layer heights.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#aee6f9c5b8730f9b876a122e74eb54aff">More...</a><br /></td></tr>
 <tr class="separator:aee6f9c5b8730f9b876a122e74eb54aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503b7e7843b67ebd4890f21fd093dac3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a503b7e7843b67ebd4890f21fd093dac3">nonKolmogorov</a> (const bool &amp;nk)</td></tr>
+<tr class="memdesc:a503b7e7843b67ebd4890f21fd093dac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of m_nonKolmogorov.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a503b7e7843b67ebd4890f21fd093dac3">More...</a><br /></td></tr>
+<tr class="separator:a503b7e7843b67ebd4890f21fd093dac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be671b71a6b1da743bc5c0b0ffc703c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a9be671b71a6b1da743bc5c0b0ffc703c">nonKolmogorov</a> ()</td></tr>
+<tr class="memdesc:a9be671b71a6b1da743bc5c0b0ffc703c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of m_nonKolmogorov.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a9be671b71a6b1da743bc5c0b0ffc703c">More...</a><br /></td></tr>
+<tr class="separator:a9be671b71a6b1da743bc5c0b0ffc703c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c293f028454e79501e15cb086ef8e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a7c293f028454e79501e15cb086ef8e97">alpha</a> ()</td></tr>
 <tr class="memdesc:a7c293f028454e79501e15cb086ef8e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the PSD index for Kolmogorov turbulence.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a7c293f028454e79501e15cb086ef8e97">More...</a><br /></td></tr>
 <tr class="separator:a7c293f028454e79501e15cb086ef8e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +297,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a178b43e4d2bd7946f8ddeb945f497717"><td class="memTemplItemLeft" align="right" valign="top">iosT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a178b43e4d2bd7946f8ddeb945f497717">dumpAtmosphere</a> (iosT &amp;ios)</td></tr>
 <tr class="memdesc:a178b43e4d2bd7946f8ddeb945f497717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output current parameters to a stream.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a178b43e4d2bd7946f8ddeb945f497717">More...</a><br /></td></tr>
 <tr class="separator:a178b43e4d2bd7946f8ddeb945f497717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">mx::application support</div></td></tr>
+<tr class="memitem:a6a34271a479c64ab5c37a2f85787f388"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a6a34271a479c64ab5c37a2f85787f388">setupConfig</a> (<a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;config)</td></tr>
+<tr class="memdesc:a6a34271a479c64ab5c37a2f85787f388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the configurator to configure this class.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a6a34271a479c64ab5c37a2f85787f388">More...</a><br /></td></tr>
+<tr class="separator:a6a34271a479c64ab5c37a2f85787f388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d125dde4135951907767591aea2b593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a5d125dde4135951907767591aea2b593">loadConfig</a> (<a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;config)</td></tr>
+<tr class="memdesc:a5d125dde4135951907767591aea2b593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the configuration of this class from a configurator.  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a5d125dde4135951907767591aea2b593">More...</a><br /></td></tr>
+<tr class="separator:a5d125dde4135951907767591aea2b593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -370,7 +383,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The real floating type in which all calculations are performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00048">48</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00050">50</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +404,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00546">546</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00579">579</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +428,7 @@ template&lt;typename realT &gt; </div>
 <p>If m_nonKolmogorov is false, this returns [ \alpha = \frac{11}{3} ] Otherwise it returns the current value of m_alpha.</p>
 <dl class="section return"><dt>Returns</dt><dd>the PSD index. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00908">908</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00953">953</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +459,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00921">921</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00966">966</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -470,7 +483,7 @@ template&lt;typename realT &gt; </div>
 <p>Otherwise it returns the current value of m_beta.</p>
 <dl class="section return"><dt>Returns</dt><dd>the PSD normalization constant. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00929">929</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00974">974</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,7 +514,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00942">942</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00987">987</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -532,7 +545,7 @@ template&lt;typename realT &gt; </div>
 <dd>
 -1 if not, and prints an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00559">559</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00592">592</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -559,7 +572,7 @@ template&lt;typename realT &gt; </div>
 <p>This is only re-calculated if either m_layer_Cn2 or m_layer_v_wind is changed, otherwise this just returns the value of m_dir_wind.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_dir_wind. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00799">799</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00832">832</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +612,7 @@ template&lt;typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01138">1138</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01183">1183</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02484">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::dumpAOSystem()</a>.</p>
 
@@ -651,7 +664,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00965">965</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01010">1010</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02374">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C4var()</a>.</p>
 
@@ -703,7 +716,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00993">993</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01038">1038</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02402">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C5var()</a>.</p>
 
@@ -726,7 +739,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the greenwood frequency at the reference wavelength. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>derive full value of the constant </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01056">1056</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01101">1101</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -756,7 +769,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01062">1062</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01107">1107</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -794,7 +807,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01043">1043</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01088">1088</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -828,7 +841,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01032">1032</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01077">1077</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -849,7 +862,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the atmospheric scale height. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_H, in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00691">691</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00731">731</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -879,7 +892,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00697">697</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00737">737</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -900,7 +913,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the height of the observatory. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_h_obs, in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00679">679</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00719">719</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +943,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00685">685</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00725">725</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -951,7 +964,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the vector of outer scales. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the vector of layer outer scales, in m </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00643">643</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00676">676</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -972,7 +985,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the vector of inner scales. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the vector of layer inner scales, in m </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00661">661</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00694">694</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -997,7 +1010,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of the outer scale for a single layer. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_L_0[n], in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00631">631</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00664">664</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00392">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::fittingError()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>.</p>
 
@@ -1024,7 +1037,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of the inner scale for a single layer. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_l_0[n], in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00649">649</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00682">682</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +1067,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00637">637</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00670">670</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1097,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00655">655</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00688">688</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1106,7 +1119,7 @@ template&lt;typename realT &gt; </div>
 <p>This is the wavelength at which r_0 is specified.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_lam_0, in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00625">625</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00658">658</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02274">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C0var()</a>, <a class="el" href="aoSystem_8hpp_source.html#l02300">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C1var()</a>, <a class="el" href="aoSystem_8hpp_source.html#l02374">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C4var()</a>, <a class="el" href="aoSystem_8hpp_source.html#l02402">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C5var()</a>, <a class="el" href="aoSystem_8hpp_source.html#l02458">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C7var()</a>, <a class="el" href="aoSystem_8hpp_source.html#l01797">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::fittingError()</a>, <a class="el" href="aoSystem_8hpp_source.html#l01963">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS()</a>, and <a class="el" href="aoSystem_8hpp_source.html#l01741">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::timeDelayError()</a>.</p>
 
@@ -1129,7 +1142,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the vector of layer strengths. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the vector of layer strengths: m_layer_Cn2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00716">716</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00750">750</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1173,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00710">710</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00744">744</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1216,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00722">722</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00756">756</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1237,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the vector of layer wind directions. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the vector of layer wind directions: m_layer_dir. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00773">773</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00806">806</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1268,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00767">767</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00800">800</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1304,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00779">779</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00812">812</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1312,7 +1325,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the vector of layer windspeeds. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the vector of layer windspeeds: m_layer_v_wind. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00754">754</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00787">787</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1343,7 +1356,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00747">747</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00780">780</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1392,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00760">760</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00793">793</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1400,7 +1413,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the vector layer heights. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the vector of layer heights:m_layer_z, in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00673">673</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00713">713</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +1444,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00667">667</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00700">700</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1474,38 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00703">703</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00706">706</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5d125dde4135951907767591aea2b593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d125dde4135951907767591aea2b593">&#9670;&nbsp;</a></span>loadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">mx::AO::analysis::aoAtmosphere</a>&lt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a> &gt;::loadConfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load the configuration of this class from a configurator. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000002">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings [test doc] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>[in] the app::configurator object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01239">1239</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1526,7 @@ template&lt;typename realT &gt; </div>
 <p>Load the default atmosphere model from Guyon (2005). </p>
 <p>Sets the parameters from Table 4 of Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01089">1089</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01134">1134</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l01081">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::loadGuyon2005()</a>.</p>
 
@@ -1504,7 +1548,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Load parameters corresponding to the median atmosphere of the GMT site survey at LCO. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01102">1102</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01147">1147</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l01105">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::loadMagAOX()</a>.</p>
 
@@ -1534,7 +1578,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01006">1006</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01051">1051</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02430">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C6var()</a>.</p>
 
@@ -1557,7 +1601,60 @@ template&lt;typename realT &gt; </div>
 <p>Get the number of layers. </p>
 <dl class="section return"><dt>Returns</dt><dd>the size of the m_layer_Cn2 vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00786">786</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00819">819</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9be671b71a6b1da743bc5c0b0ffc703c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be671b71a6b1da743bc5c0b0ffc703c">&#9670;&nbsp;</a></span>nonKolmogorov() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">mx::AO::analysis::aoAtmosphere</a>&lt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a> &gt;::nonKolmogorov</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the value of m_nonKolmogorov. </p>
+<p>This flag indicates if non-Kolmogorov turbulence is being modeled.</p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_nonKolmogorov </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00947">947</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a503b7e7843b67ebd4890f21fd093dac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a503b7e7843b67ebd4890f21fd093dac3">&#9670;&nbsp;</a></span>nonKolmogorov() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">mx::AO::analysis::aoAtmosphere</a>&lt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a> &gt;::nonKolmogorov </td>
+          <td>(</td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>nk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the value of m_nonKolmogorov. </p>
+<p>This flag indicates if non-Kolmogorov turbulence is being modeled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nk</td><td>[in] the value of m_nonKolmogorov </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00941">941</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1578,7 +1675,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of Fried's parameter r_0 at the reference wavelength lam_0. </p>
 <dl class="section return"><dt>Returns</dt><dd>the curret value of m_r_0, in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00598">598</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00631">631</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00392">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::fittingError()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, <a class="el" href="aoSystem_8hpp_source.html#l01694">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::measurementError()</a>, and <a class="el" href="aoSystem_8hpp_source.html#l01963">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS()</a>.</p>
 
@@ -1612,7 +1709,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00604">604</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00637">637</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1654,7 +1751,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00610">610</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00643">643</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1731,7 +1828,38 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01118">1118</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01163">1163</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a34271a479c64ab5c37a2f85787f388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a34271a479c64ab5c37a2f85787f388">&#9670;&nbsp;</a></span>setupConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">mx::AO::analysis::aoAtmosphere</a>&lt; <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a> &gt;::setupConfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setup the configurator to configure this class. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000001">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings [test doc] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>[in] the app::configurator object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01217">1217</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1752,7 +1880,7 @@ template&lt;typename realT &gt; </div>
 <p>Get tau_0 at the reference wavelength. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>derive full value of the constant </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01068">1068</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01113">1113</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1782,7 +1910,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01074">1074</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01119">1119</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1824,7 +1952,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01080">1080</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01125">1125</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1855,7 +1983,7 @@ template&lt;typename realT &gt; </div>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>handle dir_wind averaging across 0/2pi <br  />
  </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00806">806</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00839">839</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +2012,7 @@ template&lt;typename realT &gt; </div>
 <p>Recalculate m_z_mean. </p>
 <p>Called by <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#acf16606871cafa7e1955266277e21ded" title="Get the weighted mean layer height.">z_mean()</a> whenever m_z_mean_updated is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00866">866</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00899">899</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -1911,7 +2039,7 @@ template&lt;typename realT &gt; </div>
 <p>This is only re-calculated if either m_layer_Cn2 or m_layer_v_wind is changed, otherwise this just returns the value of m_v_wind.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_v_wind. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00792">792</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00825">825</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l01963">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS()</a>, and <a class="el" href="aoSystem_8hpp_source.html#l01741">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::timeDelayError()</a>.</p>
 
@@ -1944,7 +2072,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00840">840</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00873">873</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2043,7 +2171,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00950">950</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00995">995</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02274">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C0var()</a>, <a class="el" href="aoSystem_8hpp_source.html#l01963">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS()</a>, and <a class="el" href="aoSystem_8hpp_source.html#l01741">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::timeDelayError()</a>.</p>
 
@@ -2098,7 +2226,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01014">1014</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01059">1059</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02458">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C7var()</a>.</p>
 
@@ -2150,7 +2278,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00978">978</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01023">1023</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02300">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C1var()</a>.</p>
 
@@ -2178,7 +2306,7 @@ template&lt;typename realT &gt; </div>
 <p>This is only re-calculated if either m_layer_Cn2 orm_layer_z is changed, otherwise this just returns the value of m_z_mean.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_z_mean. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00859">859</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00892">892</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2209,7 +2337,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00889">889</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00922">922</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2366,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>\( C_n^2 \) averaged direction </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00078">78</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00080">80</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2266,7 +2394,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The atmospheric scale height, in m. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00066">66</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00068">68</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2295,7 +2423,7 @@ template&lt;typename _realT &gt; </div>
 <p>Height of the observatory above sea level, in m. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00064">64</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00066">66</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2323,7 +2451,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The outer scale, in m. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00058">58</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00060">60</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2351,7 +2479,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>The inner scale of each layer, in m. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00060">60</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00062">62</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2379,7 +2507,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Wavelength of Fried's parameter, in m. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00056">56</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00058">58</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2407,7 +2535,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of layer strengths. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00068">68</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00070">70</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2435,7 +2563,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of layer wind directions, in radians. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00072">72</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00074">74</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2463,7 +2591,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of layer wind speeds, in m/s. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00070">70</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00072">72</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2491,7 +2619,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Vector of layer heights, in m, above the observatory. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00062">62</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00064">64</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2519,7 +2647,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>Fried's parameter, in m. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00054">54</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00056">56</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2547,7 +2675,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>\( C_n^2 \) averaged windspeed </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00076">76</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00078">78</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2575,7 +2703,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>whether or not m_v_wind has been updated after changes </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00074">74</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00076">76</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2603,7 +2731,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>\( C_n^2 \) averaged layer height </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00082">82</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00084">84</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2631,7 +2759,7 @@ template&lt;typename _realT &gt; </div>
 
 <p>whether or not m_z_mean has been update after changes </p>
 
-<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00080">80</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00082">82</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -2644,7 +2772,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">aoAtmosphere</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

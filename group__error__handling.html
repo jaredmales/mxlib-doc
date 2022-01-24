@@ -90,7 +90,6 @@ $(document).ready(function(){initNavTree('group__error__handling.html',''); init
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#groups">Modules</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -103,16 +102,13 @@ $(document).ready(function(){initNavTree('group__error__handling.html',''); init
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>How mxlib handles errors. </p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmxException.html">mxException</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib exception class.  <a href="classmxException.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
 <tr class="memitem:group__error__macros"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__macros.html">Error Handling Macros</a></td></tr>
 <tr class="memdesc:group__error__macros"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macros controlling how mxlib reports errors. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__exceptions"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exceptions.html">Exceptions</a></td></tr>
+<tr class="memdesc:group__exceptions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exceptions with detailed information. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__error__handling__files"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling__files.html">Error Handling Files</a></td></tr>
 <tr class="memdesc:group__error__handling__files"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source files for error handling. <br /></td></tr>
@@ -122,12 +118,15 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacc968e47358b648a87d2c64213b1882e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">mx::MXE_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
-<tr class="memdesc:gacc968e47358b648a87d2c64213b1882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for an mxlib error code.  <a href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">More...</a><br /></td></tr>
-<tr class="separator:gacc968e47358b648a87d2c64213b1882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gad0cf50f0483ac3d41ddc0f556a18bbc1">mx::errno_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
-<tr class="memdesc:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for a standard errno code.  <a href="group__error__handling.html#gad0cf50f0483ac3d41ddc0f556a18bbc1">More...</a><br /></td></tr>
-<tr class="separator:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab83ea3bc4cd444823884e023ff1fcda7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gab83ea3bc4cd444823884e023ff1fcda7">mx::MXE_CodeToName</a> (int ec)</td></tr>
+<tr class="memdesc:gab83ea3bc4cd444823884e023ff1fcda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name for an mxlib error code.  <a href="group__error__handling.html#gab83ea3bc4cd444823884e023ff1fcda7">More...</a><br /></td></tr>
+<tr class="separator:gab83ea3bc4cd444823884e023ff1fcda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gae7eb7e8aca6b60f4c364ebc0e1e69822">mx::MXE_CodeToDescription</a> (int ec)</td></tr>
+<tr class="memdesc:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description for an mxlib error code.  <a href="group__error__handling.html#gae7eb7e8aca6b60f4c364ebc0e1e69822">More...</a><br /></td></tr>
+<tr class="separator:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab">mx::errno_CodeToName</a> (int ec)</td></tr>
+<tr class="memdesc:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for a standard errno code.  <a href="group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab">More...</a><br /></td></tr>
+<tr class="separator:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7">mx::error_report</a> (const std::string &amp;source, const int &amp;code, const std::string &amp;file, const int &amp;line, const std::string &amp;expl=&quot;&quot;)</td></tr>
 <tr class="memdesc:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a rich error report given an mxlib error code.  <a href="group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7">More...</a><br /></td></tr>
 <tr class="separator:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,8 +135,8 @@ Functions</h2></td></tr>
 <tr class="separator:gaedcae323c2891fcbed0eec1e4eebb543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gad0cf50f0483ac3d41ddc0f556a18bbc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad0cf50f0483ac3d41ddc0f556a18bbc1">&#9670;&nbsp;</a></span>errno_CodeToName()</h2>
+<a id="gad4f7f7aed4d908abb9cf4bad51ec4dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4f7f7aed4d908abb9cf4bad51ec4dab">&#9670;&nbsp;</a></span>errno_CodeToName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,18 +145,8 @@ Functions</h2></td></tr>
           <td class="memname">std::string mx::errno_CodeToName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ec</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>ec</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -167,14 +156,13 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ec</td><td>[in] the error code </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">message</td><td>[out] the human friendly message retrieved using std::strerror </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00099">99</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00128">128</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxError_8cpp_source.html#l00459">mx::errno_report()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxError_8cpp_source.html#l00482">mx::errno_report()</a>.</p>
 
 </div>
 </div>
@@ -235,9 +223,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00459">459</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00482">482</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8cpp_source.html#l00099">mx::errno_CodeToName()</a>.</p>
+<p class="reference">References <a class="el" href="mxError_8cpp_source.html#l00128">mx::errno_CodeToName()</a>.</p>
 
 </div>
 </div>
@@ -298,14 +286,47 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00432">432</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00454">454</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8cpp_source.html#l00032">mx::MXE_CodeToName()</a>.</p>
+<p class="reference">References <a class="el" href="mxError_8cpp_source.html#l00080">mx::MXE_CodeToDescription()</a>, and <a class="el" href="mxError_8cpp_source.html#l00032">mx::MXE_CodeToName()</a>.</p>
 
 </div>
 </div>
-<a id="gacc968e47358b648a87d2c64213b1882e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacc968e47358b648a87d2c64213b1882e">&#9670;&nbsp;</a></span>MXE_CodeToName()</h2>
+<a id="gae7eb7e8aca6b60f4c364ebc0e1e69822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7eb7e8aca6b60f4c364ebc0e1e69822">&#9670;&nbsp;</a></span>MXE_CodeToDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string mx::MXE_CodeToDescription </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the description for an mxlib error code. </p>
+<dl class="section return"><dt>Returns</dt><dd>the description for and error code. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ec</td><td>[in] the error code </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mxError_8cpp_source.html#l00080">80</a> of file <a class="el" href="mxError_8cpp_source.html">mxError.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="mxError_8cpp_source.html#l00454">mx::error_report()</a>.</p>
+
+</div>
+</div>
+<a id="gab83ea3bc4cd444823884e023ff1fcda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab83ea3bc4cd444823884e023ff1fcda7">&#9670;&nbsp;</a></span>MXE_CodeToName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,28 +335,17 @@ Functions</h2></td></tr>
           <td class="memname">std::string mx::MXE_CodeToName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ec</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>ec</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the macro name and a message for an mxlib error code. </p>
+<p>Return the name for an mxlib error code. </p>
 <dl class="section return"><dt>Returns</dt><dd>the name of the macro corresponding to the error code. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ec</td><td>[in] the error code </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">message</td><td>[out] the human friendly message </td></tr>
   </table>
   </dd>
 </dl>
@@ -344,7 +354,7 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxError_8cpp_source.html#l00432">mx::error_report()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxError_8cpp_source.html#l00454">mx::error_report()</a>.</p>
 
 </div>
 </div>
@@ -353,7 +363,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

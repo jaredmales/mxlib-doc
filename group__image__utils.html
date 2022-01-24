@@ -99,6 +99,10 @@ $(document).ready(function(){initNavTree('group__image__utils.html',''); initRes
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>Useful functions for working with images. </p>
 <table class="memberdecls">
+<tr class="memitem:gaf65345d7ffa9beb0323fc6e51bee978a"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:gaf65345d7ffa9beb0323fc6e51bee978a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__utils.html#gaf65345d7ffa9beb0323fc6e51bee978a">mx::improc::reflectImageCoords</a> (int &amp;x1, int &amp;y1, int x0, int y0, realT xc, realT yc)</td></tr>
+<tr class="memdesc:gaf65345d7ffa9beb0323fc6e51bee978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect pixel coordinates across the given center pixel.  <a href="group__image__utils.html#gaf65345d7ffa9beb0323fc6e51bee978a">More...</a><br /></td></tr>
+<tr class="separator:gaf65345d7ffa9beb0323fc6e51bee978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7bdc288187662af9655c1a94d57c30c4"><td class="memTemplParams" colspan="2">template&lt;class imageT &gt; </td></tr>
 <tr class="memitem:ga7bdc288187662af9655c1a94d57c30c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4">mx::improc::zeroNaNs</a> (imageT &amp;im)</td></tr>
 <tr class="memdesc:ga7bdc288187662af9655c1a94d57c30c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero any NaNs in an image.  <a href="group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4">More...</a><br /></td></tr>
@@ -117,11 +121,11 @@ $(document).ready(function(){initNavTree('group__image__utils.html',''); initRes
 <tr class="separator:gaf141b4bb579d7e518007c5761b322a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga54dfc41af4090b82694cc201d0651f64"><td class="memTemplParams" colspan="2">template&lt;typename floatT , typename imageT , typename magImageT , typename transformT &gt; </td></tr>
 <tr class="memitem:ga54dfc41af4090b82694cc201d0651f64"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__utils.html#ga54dfc41af4090b82694cc201d0651f64">mx::improc::imageMaxInterp</a> (floatT &amp;x, floatT &amp;y, floatT &amp;scale_x, floatT &amp;scale_y, magImageT &amp;magIm, const imageT &amp;im, transformT trans)</td></tr>
-<tr class="memdesc:ga54dfc41af4090b82694cc201d0651f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fine the maximum in an image at sub-pixel resolution by interpolation.  <a href="group__image__utils.html#ga54dfc41af4090b82694cc201d0651f64">More...</a><br /></td></tr>
+<tr class="memdesc:ga54dfc41af4090b82694cc201d0651f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the maximum in an image at sub-pixel resolution by interpolation.  <a href="group__image__utils.html#ga54dfc41af4090b82694cc201d0651f64">More...</a><br /></td></tr>
 <tr class="separator:ga54dfc41af4090b82694cc201d0651f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga05880e2f798ef0086d2017c3685ab3fa"><td class="memTemplParams" colspan="2">template&lt;typename floatT , typename imageT , typename magImageT &gt; </td></tr>
 <tr class="memitem:ga05880e2f798ef0086d2017c3685ab3fa"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__utils.html#ga05880e2f798ef0086d2017c3685ab3fa">mx::improc::imageMaxInterp</a> (floatT &amp;x, floatT &amp;y, floatT &amp;scale_x, floatT &amp;scale_y, magImageT &amp;magIm, const imageT &amp;im)</td></tr>
-<tr class="memdesc:ga05880e2f798ef0086d2017c3685ab3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fine the maximum in an image at sub-pixel resolution by cubic convolution interpolation.  <a href="group__image__utils.html#ga05880e2f798ef0086d2017c3685ab3fa">More...</a><br /></td></tr>
+<tr class="memdesc:ga05880e2f798ef0086d2017c3685ab3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the maximum in an image at sub-pixel resolution by cubic convolution interpolation.  <a href="group__image__utils.html#ga05880e2f798ef0086d2017c3685ab3fa">More...</a><br /></td></tr>
 <tr class="separator:ga05880e2f798ef0086d2017c3685ab3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f04126be7880d749f6943ee30b89974"><td class="memTemplParams" colspan="2">template&lt;typename imageT , typename imageT1 , typename imageT2 , typename imageT3 , typename imageT4 &gt; </td></tr>
 <tr class="memitem:ga8f04126be7880d749f6943ee30b89974"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__utils.html#ga8f04126be7880d749f6943ee30b89974">mx::improc::combine2ImagesMasked</a> (imageT &amp;combo, const imageT1 &amp;im1, const imageT2 &amp;mask1, const imageT3 &amp;im2, const imageT4 &amp;mask2)</td></tr>
@@ -211,7 +215,7 @@ template&lt;typename imageT , typename imageT1 , typename imageT2 , typename ima
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00220">220</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00238">238</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -269,7 +273,7 @@ template&lt;typename floatT , typename imageT , typename magImageT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Fine the maximum in an image at sub-pixel resolution by cubic convolution interpolation. </p>
+<p>Find the maximum in an image at sub-pixel resolution by cubic convolution interpolation. </p>
 <p>Uses <a class="el" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694" title="Magnify an image.">imageMagnify()</a> to expand the image to the desired scale. Because of the scaling used in imageMagnify, the desired scale may not be exact. As a result the actual scale is returned in scale_x and scale_y. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -283,7 +287,7 @@ template&lt;typename floatT , typename imageT , typename magImageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00195">195</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00213">213</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +349,7 @@ template&lt;typename floatT , typename imageT , typename magImageT , typename tr
       </table>
 </div><div class="memdoc">
 
-<p>Fine the maximum in an image at sub-pixel resolution by interpolation. </p>
+<p>Find the maximum in an image at sub-pixel resolution by interpolation. </p>
 <p>Uses <a class="el" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694" title="Magnify an image.">imageMagnify()</a> to expand the image to the desired scale. Because of the scaling used in imageMagnify, the desired scale may not be exact. As a result the actual scale is returned in scale_x and scale_y. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -360,7 +364,7 @@ template&lt;typename floatT , typename imageT , typename magImageT , typename tr
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00158">158</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00176">176</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00504">mx::improc::imageMagnify()</a>.</p>
 
@@ -395,7 +399,7 @@ template&lt;class imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00083">83</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00101">101</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -439,7 +443,7 @@ template&lt;class imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00106">106</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00124">124</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -693,6 +697,77 @@ template&lt;class imageT &gt; </div>
 
 </div>
 </div>
+<a id="gaf65345d7ffa9beb0323fc6e51bee978a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf65345d7ffa9beb0323fc6e51bee978a">&#9670;&nbsp;</a></span>reflectImageCoords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::improc::reflectImageCoords </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>xc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>yc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reflect pixel coordinates across the given center pixel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>[out] the reflected x coordinate </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y1</td><td>[out] the reflected y coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>[in] the input x coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>[in] the input y coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xc</td><td>[in] the center pixel x coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yc</td><td>[in] the center pixel y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00046">46</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l00257">mx::improc::reflectImageIndices()</a>.</p>
+
+</div>
+</div>
 <a id="gaa56bbb261dda0b6fe51279394768ec96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa56bbb261dda0b6fe51279394768ec96">&#9670;&nbsp;</a></span>zeroNaNCube()</h2>
 
@@ -719,7 +794,7 @@ template&lt;class cubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00060">60</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00078">78</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -753,7 +828,7 @@ template&lt;class imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00044">44</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageUtils_8hpp_source.html#l00062">62</a> of file <a class="el" href="imageUtils_8hpp_source.html">imageUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -764,7 +839,7 @@ template&lt;class imageT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

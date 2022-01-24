@@ -11,6 +11,7 @@ var group__mxe__errors =
     [ "MXE_GNUPLOTERR", "group__mxe__errors.html#ga73199b268822c76ed8388114025791d0", null ],
     [ "MXE_INVALIDARG", "group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a", null ],
     [ "MXE_LAPACKERR", "group__mxe__errors.html#ga4920fa5c899bcd6b7c78d3012d8bbe40", null ],
+    [ "MXE_LIBERR", "group__mxe__errors.html#ga5959027972043131caef95d339732ec5", null ],
     [ "MXE_NOTFOUND", "group__mxe__errors.html#gaf6702f3509aa350c39410d26ffac0f18", null ],
     [ "MXE_NOTIMPL", "group__mxe__errors.html#gacabe55cc9097f4dad7ec5b492a25779b", null ],
     [ "MXE_PARAMNOTSET", "group__mxe__errors.html#ga9b57b26b8d9db764202fbe5e6ea981bb", null ],

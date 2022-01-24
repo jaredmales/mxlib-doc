@@ -484,7 +484,7 @@ $(document).ready(function(){initNavTree('signalWindows_8hpp_source.html',''); i
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;         <span class="comment">//Following mxlib convention of including half pixels</span></div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;         <span class="keywordflow">if</span>(r &gt; rad + 0.5)</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;         {</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            filt[ii*dim + jj] = 0.0;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            filt[jj*dim + ii] = 0.0;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;         }</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rad + r &gt; (N-1)*(1-0.5*alpha) &amp;&amp; alpha &gt; 0.)</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;         {</div>
@@ -492,11 +492,11 @@ $(document).ready(function(){initNavTree('signalWindows_8hpp_source.html',''); i
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            realT dr = rad+r;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="keywordflow">if</span>(dr &gt; N-1) dr = N-1;</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            filt[ii*dim + jj] = 0.5*(1.0 + cos(<a class="code" href="group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db">pi</a> * ( 2.*(dr)/(alpha*(N-1)) - 2./alpha + 1.0) ));</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            filt[jj*dim + ii] = 0.5*(1.0 + cos(<a class="code" href="group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db">pi</a> * ( 2.*(dr)/(alpha*(N-1)) - 2./alpha + 1.0) ));</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;         }</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;         <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;         {</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            filt[ii*dim + jj] = 1.0;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            filt[jj*dim + ii] = 1.0;</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;         }</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      }</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;   }</div>
@@ -549,21 +549,21 @@ $(document).ready(function(){initNavTree('signalWindows_8hpp_source.html',''); i
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;         <span class="comment">//Following mxlib convention of including half pixels</span></div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;         <span class="keywordflow">if</span>(r &gt; rad + 0.5 || r &lt; eps*rad)</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;         {</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;            filt[ii*dim + jj] = 0.0;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;            filt[jj*dim + ii] = 0.0;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;         }</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(z &lt;= 0.5*alpha*(Z-1) &amp;&amp; alpha &gt; 0)</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;         {</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            filt[ii*dim + jj] = 0.5*(1.0 + cos(<a class="code" href="group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db">pi</a>*(2.*z/(alpha*(Z-1)) -1.0) ));</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            filt[jj*dim + ii] = 0.5*(1.0 + cos(<a class="code" href="group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db">pi</a>*(2.*z/(alpha*(Z-1)) -1.0) ));</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;         }</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(z &gt; (Z-1)*(1.-0.5*alpha) &amp;&amp; alpha &gt; 0)</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;         {</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;            z = z*((Z-0.5)/Z); <span class="comment">//Stretch a little to help with the half pixel</span></div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            <span class="keywordflow">if</span>(z &gt; Z) z = Z-1;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            filt[ii*dim + jj] = 0.5*(1.0 + cos(<a class="code" href="group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db">pi</a>* ( 2.*(z)/(alpha*(Z-1)) - 2./alpha + 1.0) ));</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            filt[jj*dim + ii] = 0.5*(1.0 + cos(<a class="code" href="group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db">pi</a>* ( 2.*(z)/(alpha*(Z-1)) - 2./alpha + 1.0) ));</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;         }</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;         <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;         {</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            filt[ii*dim + jj] = 1.0;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            filt[jj*dim + ii] = 1.0;</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;         }</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;      }</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;   }</div>
@@ -593,7 +593,7 @@ $(document).ready(function(){initNavTree('signalWindows_8hpp_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="signalWindows_8hpp.html">signalWindows.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

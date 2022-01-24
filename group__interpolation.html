@@ -90,8 +90,8 @@ $(document).ready(function(){initNavTree('group__interpolation.html',''); initRe
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#groups">Modules</a> &#124;
-<a href="#files">Files</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Interpolation<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a></div></div>  </div>
@@ -103,16 +103,25 @@ $(document).ready(function(){initNavTree('group__interpolation.html',''); initRe
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>Various tools for interpolating data and discrete functions. </p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1gsl__interp__linear.html">mx::math::gsl_interp_linear&lt; _realT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GSL Linear Interpolation.  <a href="structmx_1_1math_1_1gsl__interp__linear.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1gsl__interp__steffen.html">mx::math::gsl_interp_steffen&lt; _realT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GSL Steffen Interpolation.  <a href="structmx_1_1math_1_1gsl__interp__steffen.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gslInterpolator.html">mx::math::gslInterpolator&lt; interpT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to manage interpolation using the GSL interpolation library.  <a href="classmx_1_1math_1_1gslInterpolator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1logInterpolator.html">mx::math::logInterpolator&lt; realT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate a function in log space.  <a href="classmx_1_1math_1_1logInterpolator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
 <tr class="memitem:group__image__transforms"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__image__transforms.html">Image Transforms</a></td></tr>
 <tr class="memdesc:group__image__transforms"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions for transforming images by rotating, translating, and magnifying. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:gslInterpolation_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gslInterpolation_8hpp.html">gslInterpolation.hpp</a></td></tr>
-<tr class="memdesc:gslInterpolation_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrappers for using the GNU Scientific Library 1-D interpolation functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -201,9 +210,9 @@ template&lt;typename realT &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on a gsl error.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000041">Todo:</a></b></dt><dd>report errors iaw mxlib standard in gsl_interpolate</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo:</a></b></dt><dd>report errors iaw mxlib standard in gsl_interpolate</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00132">132</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00061">61</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="astroSpectrum_8hpp_source.html#l00334">mx::astro::astroSpectrum&lt; _spectrumT, freq &gt;::setSpectrum()</a>.</p>
 
@@ -273,7 +282,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00200">200</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gslInterpolation_8hpp_source.html#l00129">129</a> of file <a class="el" href="gslInterpolation_8hpp_source.html">gslInterpolation.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +291,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

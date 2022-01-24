@@ -136,7 +136,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:gaf6702f3509aa350c39410d26ffac0f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">An item was not found.  <a href="group__mxe__errors.html#gaf6702f3509aa350c39410d26ffac0f18">More...</a><br /></td></tr>
 <tr class="separator:gaf6702f3509aa350c39410d26ffac0f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga91bc075cebce532574429af628b3c3b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a>&#160;&#160;&#160;55</td></tr>
-<tr class="memdesc:ga91bc075cebce532574429af628b3c3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A size was calculated incorrectly.  <a href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">More...</a><br /></td></tr>
+<tr class="memdesc:ga91bc075cebce532574429af628b3c3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A size was invalid or calculated incorrectly.  <a href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">More...</a><br /></td></tr>
 <tr class="separator:ga91bc075cebce532574429af628b3c3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8922ad7a19d55763433d41e3e7a712e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mxe__errors.html#ga8922ad7a19d55763433d41e3e7a712e9">MXE_ALLOCERR</a>&#160;&#160;&#160;60</td></tr>
 <tr class="memdesc:ga8922ad7a19d55763433d41e3e7a712e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">An error occurred during memory allocation.  <a href="group__mxe__errors.html#ga8922ad7a19d55763433d41e3e7a712e9">More...</a><br /></td></tr>
@@ -168,6 +168,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gade0138a8712aa54888f6d36756e1ee42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mxe__errors.html#gade0138a8712aa54888f6d36756e1ee42">MXE_TIMEOUT</a>&#160;&#160;&#160;2322</td></tr>
 <tr class="memdesc:gade0138a8712aa54888f6d36756e1ee42"><td class="mdescLeft">&#160;</td><td class="mdescRight">A timeout occurred.  <a href="group__mxe__errors.html#gade0138a8712aa54888f6d36756e1ee42">More...</a><br /></td></tr>
 <tr class="separator:gade0138a8712aa54888f6d36756e1ee42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5959027972043131caef95d339732ec5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mxe__errors.html#ga5959027972043131caef95d339732ec5">MXE_LIBERR</a>&#160;&#160;&#160;4000</td></tr>
+<tr class="memdesc:ga5959027972043131caef95d339732ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">An error was returned by a library.  <a href="group__mxe__errors.html#ga5959027972043131caef95d339732ec5">More...</a><br /></td></tr>
+<tr class="separator:ga5959027972043131caef95d339732ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga73199b268822c76ed8388114025791d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mxe__errors.html#ga73199b268822c76ed8388114025791d0">MXE_GNUPLOTERR</a>&#160;&#160;&#160;4567</td></tr>
 <tr class="memdesc:ga73199b268822c76ed8388114025791d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">An error was returned by gnuplot.  <a href="group__mxe__errors.html#ga73199b268822c76ed8388114025791d0">More...</a><br /></td></tr>
 <tr class="separator:ga73199b268822c76ed8388114025791d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,12 +187,15 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacc968e47358b648a87d2c64213b1882e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">mx::MXE_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
-<tr class="memdesc:gacc968e47358b648a87d2c64213b1882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for an mxlib error code.  <a href="group__error__handling.html#gacc968e47358b648a87d2c64213b1882e">More...</a><br /></td></tr>
-<tr class="separator:gacc968e47358b648a87d2c64213b1882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gad0cf50f0483ac3d41ddc0f556a18bbc1">mx::errno_CodeToName</a> (int ec, std::string &amp;message)</td></tr>
-<tr class="memdesc:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for a standard errno code.  <a href="group__error__handling.html#gad0cf50f0483ac3d41ddc0f556a18bbc1">More...</a><br /></td></tr>
-<tr class="separator:gad0cf50f0483ac3d41ddc0f556a18bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab83ea3bc4cd444823884e023ff1fcda7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gab83ea3bc4cd444823884e023ff1fcda7">mx::MXE_CodeToName</a> (int ec)</td></tr>
+<tr class="memdesc:gab83ea3bc4cd444823884e023ff1fcda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name for an mxlib error code.  <a href="group__error__handling.html#gab83ea3bc4cd444823884e023ff1fcda7">More...</a><br /></td></tr>
+<tr class="separator:gab83ea3bc4cd444823884e023ff1fcda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gae7eb7e8aca6b60f4c364ebc0e1e69822">mx::MXE_CodeToDescription</a> (int ec)</td></tr>
+<tr class="memdesc:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description for an mxlib error code.  <a href="group__error__handling.html#gae7eb7e8aca6b60f4c364ebc0e1e69822">More...</a><br /></td></tr>
+<tr class="separator:gae7eb7e8aca6b60f4c364ebc0e1e69822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab">mx::errno_CodeToName</a> (int ec)</td></tr>
+<tr class="memdesc:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the macro name and a message for a standard errno code.  <a href="group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab">More...</a><br /></td></tr>
+<tr class="separator:gad4f7f7aed4d908abb9cf4bad51ec4dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7">mx::error_report</a> (const std::string &amp;source, const int &amp;code, const std::string &amp;file, const int &amp;line, const std::string &amp;expl=&quot;&quot;)</td></tr>
 <tr class="memdesc:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a rich error report given an mxlib error code.  <a href="group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7">More...</a><br /></td></tr>
 <tr class="separator:ga56a81b53911bc4cf6de96f0a0b1885c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +209,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="mxError_8hpp.html">mxError.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

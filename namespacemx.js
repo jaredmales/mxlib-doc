@@ -61,10 +61,19 @@ var namespacemx =
     [ "cuda", null, [
       [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ]
     ] ],
+    [ "err", null, [
+      [ "allocerr", "classmx_1_1err_1_1allocerr.html", null ],
+      [ "invalidarg", "classmx_1_1err_1_1invalidarg.html", null ],
+      [ "liberr", "classmx_1_1err_1_1liberr.html", null ],
+      [ "mxException", "classmx_1_1err_1_1mxException.html", "classmx_1_1err_1_1mxException" ],
+      [ "notimpl", "classmx_1_1err_1_1notimpl.html", null ],
+      [ "paramnotset", "classmx_1_1err_1_1paramnotset.html", null ],
+      [ "sizeerr", "classmx_1_1err_1_1sizeerr.html", null ]
+    ] ],
     [ "fits", null, [
       [ "fitsFile", "classmx_1_1fits_1_1fitsFile.html", "classmx_1_1fits_1_1fitsFile" ],
       [ "fitsHeader", "classmx_1_1fits_1_1fitsHeader.html", "classmx_1_1fits_1_1fitsHeader" ],
-      [ "fitsHeaderCard", "structmx_1_1fits_1_1fitsHeaderCard.html", "structmx_1_1fits_1_1fitsHeaderCard" ]
+      [ "fitsHeaderCard", "classmx_1_1fits_1_1fitsHeaderCard.html", "classmx_1_1fits_1_1fitsHeaderCard" ]
     ] ],
     [ "improc", null, [
       [ "ADIDerotator", "structmx_1_1improc_1_1ADIDerotator.html", "structmx_1_1improc_1_1ADIDerotator" ],
@@ -130,9 +139,12 @@ var namespacemx =
         [ "moffat2D_sym_fitter", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ]
       ] ],
       [ "gnuPlot", "classmx_1_1math_1_1gnuPlot.html", "classmx_1_1math_1_1gnuPlot" ],
-      [ "gslInterpolator", "structmx_1_1math_1_1gslInterpolator.html", null ],
+      [ "gsl_interp_linear", "structmx_1_1math_1_1gsl__interp__linear.html", null ],
+      [ "gsl_interp_steffen", "structmx_1_1math_1_1gsl__interp__steffen.html", null ],
+      [ "gslInterpolator", "classmx_1_1math_1_1gslInterpolator.html", "classmx_1_1math_1_1gslInterpolator" ],
       [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html", "classmx_1_1math_1_1histogramUniform" ],
       [ "laplace_distribution", "classmx_1_1math_1_1laplace__distribution.html", "classmx_1_1math_1_1laplace__distribution" ],
+      [ "logInterpolator", "classmx_1_1math_1_1logInterpolator.html", "classmx_1_1math_1_1logInterpolator" ],
       [ "randomT", "classmx_1_1math_1_1randomT.html", "classmx_1_1math_1_1randomT" ],
       [ "syevrMem", "structmx_1_1math_1_1syevrMem.html", null ]
     ] ],

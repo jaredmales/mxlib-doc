@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Module <a class="el" href="group__circular__buffer.html">circular_buffer</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000047"></a>perform circular buffer testing on an isolated core, with one test per executable </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000046"></a>perform circular buffer testing on an isolated core, with one test per executable </p>
 <p class="enddd">implement a circular buffer with fixed power-of-two size to test <code>&amp;</code> modulo </p>
 </dd>
 <dt>Class <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</a>  </dt>
@@ -156,7 +156,9 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <p class="enddd">add facility for changing interpolator  </p>
 </dd>
 <dt>Class <a class="el" href="structmx_1_1app_1_1appConfigurator.html">mx::app::appConfigurator</a>  </dt>
-<dd><a class="anchor" id="_todo000021"></a>add handling of += in subsequent files. </dd>
+<dd><p class="startdd"><a class="anchor" id="_todo000021"></a>add handling of += in subsequent files. </p>
+<p class="enddd">should just swith to strict TOML </p>
+</dd>
 <dt>Member <a class="el" href="structmx_1_1app_1_1appConfigurator.html#a0dd9a6680405d26be9b3a320eade834f">mx::app::appConfigurator::readConfig</a>  (const std::string &amp;fname, bool reportFileNotFound=true)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000022"></a>handle += here, by appending to the last value as if a vector. </p>
 <p class="enddd"><a class="anchor" id="_todo000064"></a>update error handling to include &gt;0 (line numer of parse error) and -2 memory allocation error.  </p>
@@ -194,7 +196,9 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Member <a class="el" href="structmx_1_1improc_1_1imCenterCircleSym.html#adec01be9e5d97b9a2c8de2e361205ba0">mx::improc::imCenterCircleSym&lt; realT &gt;::center</a>  (realT &amp;x, realT &amp;y, eigenImage&lt; realT &gt; &amp;im, realT x0, realT y0)</dt>
 <dd><a class="anchor" id="_todo000037"></a>This needs to be able to handle highly non-symmetric peaks much better.  </dd>
 <dt>Member <a class="el" href="group__fileutils.html#ga1433f755568d77709f43db840846a11f">mx::ioutils::getSequentialFilename</a>  (const std::string &amp;basename, const std::string &amp;extension="", const int startat=0, int ndigit=4)</dt>
-<dd><a class="anchor" id="_todo000062"></a>switch to using a regex or something so we can detect the missing file. </dd>
+<dd><a class="anchor" id="_todo000061"></a>switch to using a regex or something so we can detect the missing file. </dd>
+<dt>Member <a class="el" href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a>  (const std::string &amp;fname, arrTs &amp;... arrays)</dt>
+<dd><a class="anchor" id="_todo000062"></a>lineSize should be configurable </dd>
 <dt>Class <a class="el" href="structmx_1_1ioutils_1_1textTable.html">mx::ioutils::textTable</a>  </dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000063"></a>have ability to add whole row, with a variadic template to handle different types </p>
 <p class="interdd">allow non-wrapping (i.e. unlimited width) columns </p>
@@ -204,49 +208,47 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <p class="enddd">add sort capability, with vector of column choices to sort first by column N, then M, etc.  </p>
 </dd>
 <dt>Class <a class="el" href="classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html">mx::math::fft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000042"></a>add execute interface with fftw like signature </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000041"></a>add execute interface with fftw like signature </p>
 <p class="enddd">add plan interface where user passes in pointers (to avoid allocations) </p>
 </dd>
 <dt>Class <a class="el" href="classmx_1_1math_1_1gnuPlot.html">mx::math::gnuPlot</a>  </dt>
-<dd><a class="anchor" id="_todo000044"></a>Use mxError for error reporting. </dd>
+<dd><a class="anchor" id="_todo000043"></a>Use mxError for error reporting. </dd>
 <dt>Member <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a95dd92257ab13fbbaa08dfc9a1568dbf">mx::math::gnuPlot::checkResponse</a>  (std::string &amp;response, double timeout=0)</dt>
-<dd><a class="anchor" id="_todo000045"></a>investigate having a second thread monitor for responses. </dd>
+<dd><a class="anchor" id="_todo000044"></a>investigate having a second thread monitor for responses. </dd>
 <dt>Member <a class="el" href="group__interpolation.html#ga10a7c89db1bd46c8bd46bfee98728929">mx::math::gsl_interpolate</a>  (const gsl_interp_type *interpT, realT *xin, realT *yin, size_t Nin, realT *xout, realT *yout, size_t Nout)</dt>
-<dd><a class="anchor" id="_todo000041"></a>report errors iaw mxlib standard in gsl_interpolate </dd>
-<dt>Class <a class="el" href="structmx_1_1math_1_1gslInterpolator.html">mx::math::gslInterpolator&lt; _realT &gt;</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000039"></a>document <a class="el" href="structmx_1_1math_1_1gslInterpolator.html">gslInterpolator</a> </p>
-<p class="enddd"><a class="anchor" id="_todo000040"></a>add error checking  </p>
-</dd>
+<dd><a class="anchor" id="_todo000039"></a>report errors iaw mxlib standard in gsl_interpolate </dd>
+<dt>Member <a class="el" href="group__integration.html#gaa32b76d13b7ce51cfe74675805ac18fc">mx::math::radprofIntegral</a>  (vectorScT r, vectorT p, bool inczero=false)</dt>
+<dd><a class="anchor" id="_todo000040"></a>the trapezoid rule may not be strictly valid as implemented. Is there a weighting to apply based on r? </dd>
 <dt>Class <a class="el" href="structmx_1_1math_1_1syevrMem.html">mx::math::syevrMem&lt; floatT &gt;</a>  </dt>
 <dd><a class="anchor" id="_todo000038"></a>this should have the working memory for the first exploratory call to ?syevr as well.  </dd>
 <dt>Member <a class="el" href="group__signal__processing.html#gadbc4beeec00c60f6f2c107736a778159">mx::sigproc::autocorrelation</a>  (std::vector&lt; T &gt; &amp;ac, std::vector&lt; T &gt; &amp;sig)</dt>
-<dd><a class="anchor" id="_todo000046"></a>this should probably re-allocate if ac.size() != sig.size(), or at least &lt; </dd>
+<dd><a class="anchor" id="_todo000045"></a>this should probably re-allocate if ac.size() != sig.size(), or at least &lt; </dd>
 <dt>Class <a class="el" href="structmx_1_1sigproc_1_1linearPredictor.html">mx::sigproc::linearPredictor&lt; _realT &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000051"></a>document <a class="el" href="structmx_1_1sigproc_1_1linearPredictor.html" title="A class to support linear prediction.">linearPredictor</a>  </dd>
+<dd><a class="anchor" id="_todo000050"></a>document <a class="el" href="structmx_1_1sigproc_1_1linearPredictor.html" title="A class to support linear prediction.">linearPredictor</a>  </dd>
 <dt>Member <a class="el" href="group__fourier__basis.html#ga9e282ff5bd3482baac97c36a10e3eb4f">mx::sigproc::makeFourierModeFreqs_Circ</a>  (std::vector&lt; fourierModeDef &gt; &amp;spf, int N)</dt>
-<dd><a class="anchor" id="_todo000050"></a>use push_back instead of resize </dd>
+<dd><a class="anchor" id="_todo000049"></a>use push_back instead of resize </dd>
 <dt>Member <a class="el" href="group__fourier__basis.html#gacaba39501cb18e7e623277338bb02da1">mx::sigproc::makeFourierModeFreqs_PandV</a>  (std::vector&lt; fourierModeDef &gt; &amp;spf, int N)</dt>
-<dd><a class="anchor" id="_todo000049"></a>use push_back instead of resize  </dd>
+<dd><a class="anchor" id="_todo000048"></a>use push_back instead of resize  </dd>
 <dt>Class <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000053"></a>once fftT has a plan interface with pointers for working memory, use it.  </dd>
+<dd><a class="anchor" id="_todo000052"></a>once fftT has a plan interface with pointers for working memory, use it.  </dd>
 <dt>Class <a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000052"></a>once fftT has a plan interface with pointers for working memory, use it. </dd>
+<dd><a class="anchor" id="_todo000051"></a>once fftT has a plan interface with pointers for working memory, use it. </dd>
 <dt>Class <a class="el" href="structmx_1_1sigproc_1_1psdVarMean.html">mx::sigproc::psdVarMean&lt; paramsT &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000055"></a>document the paramsT interface </dd>
+<dd><a class="anchor" id="_todo000054"></a>document the paramsT interface </dd>
 <dt>Member <a class="el" href="structmx_1_1sigproc_1_1psdVarMean.html#aec94fd87f9ede9659ecaae6d6f34620e">mx::sigproc::psdVarMean&lt; paramsT &gt;::init</a>  ()</dt>
-<dd><a class="anchor" id="_todo000057"></a>We'll get the occasional failure to reach tolerance error, just ignore them all for now.  </dd>
+<dd><a class="anchor" id="_todo000056"></a>We'll get the occasional failure to reach tolerance error, just ignore them all for now.  </dd>
 <dt>Member <a class="el" href="structmx_1_1sigproc_1_1psdVarMeanParams.html#a0703eb92f39460580679099509b795d1">mx::sigproc::psdVarMeanParams&lt; _realT &gt;::psdVal</a>  (realT k)</dt>
-<dd><a class="anchor" id="_todo000056"></a>implement better extrapolation past max-freq.  </dd>
+<dd><a class="anchor" id="_todo000055"></a>implement better extrapolation past max-freq.  </dd>
 <dt>Member <a class="el" href="group__zernike__basis.html#gabafece7c97ae73f42d23281e494ff37b">mx::sigproc::zernikeQNorm</a>  (realT k, realT phi, int n, int m)</dt>
-<dd><a class="anchor" id="_todo000059"></a>need a more robust jinc_n function for n &gt; 1 </dd>
+<dd><a class="anchor" id="_todo000058"></a>need a more robust jinc_n function for n &gt; 1 </dd>
 <dt>Member <a class="el" href="imagingUtils_8hpp.html#ab3f1da9aa368329b62030983bab6163e">mx::wfp::drawLine</a>  (arrayT &amp;im, typename arrayT::Scalar x0, typename arrayT::Scalar y0, typename arrayT::Scalar x1, typename arrayT::Scalar y1, typename arrayT::Scalar halfWidth)</dt>
-<dd><a class="anchor" id="_todo000061"></a>should handle width much more intelligently, this only works for ~45 degree lines. </dd>
+<dd><a class="anchor" id="_todo000060"></a>should handle width much more intelligently, this only works for ~45 degree lines. </dd>
 <dt>Class <a class="el" href="classmx_1_1wfp_1_1fraunhoferPropagator.html">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;</a>  </dt>
-<dd><a class="anchor" id="_todo000060"></a>check if we should reverse the FFT orders to be proper </dd>
+<dd><a class="anchor" id="_todo000059"></a>check if we should reverse the FFT orders to be proper </dd>
 <dt>Member <a class="el" href="group__fourier__basis.html#ga9b004325ea0b046fd53b7ff705d8b0fd">MX_FOURIER_BASIC</a>  </dt>
-<dd><a class="anchor" id="_todo000048"></a>need to handle references and r-values so this works directly with Eigen arrays. </dd>
+<dd><a class="anchor" id="_todo000047"></a>need to handle references and r-values so this works directly with Eigen arrays. </dd>
 <dt>File <a class="el" href="zernike_8hpp.html">zernike.hpp</a>  </dt>
-<dd><a class="anchor" id="_todo000058"></a>the basic zernike polys should be in math::func.</dd>
+<dd><a class="anchor" id="_todo000057"></a>the basic zernike polys should be in math::func.</dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -254,7 +256,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

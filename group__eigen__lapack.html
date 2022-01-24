@@ -125,7 +125,7 @@ Functions</h2></td></tr>
 <tr class="separator:gaa4510e1a9565b324625079ffd516ee21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga33dce7721a6e2999d72651ad358bbdf6"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
 <tr class="memitem:ga33dce7721a6e2999d72651ad358bbdf6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigen__lapack.html#ga33dce7721a6e2999d72651ad358bbdf6">mx::math::eigenPseudoInverse</a> (Eigen::Array&lt; dataT, -1, -1 &gt; &amp;PInv, dataT &amp;condition, int &amp;nRejected, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;A, dataT &amp;maxCondition, int interact=MX_PINV_NO_INTERACT)</td></tr>
-<tr class="memdesc:ga33dce7721a6e2999d72651ad358bbdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the pseudo-inverse of a patrix using the SVD.  <a href="group__eigen__lapack.html#ga33dce7721a6e2999d72651ad358bbdf6">More...</a><br /></td></tr>
+<tr class="memdesc:ga33dce7721a6e2999d72651ad358bbdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the pseudo-inverse of a matrix using the SVD.  <a href="group__eigen__lapack.html#ga33dce7721a6e2999d72651ad358bbdf6">More...</a><br /></td></tr>
 <tr class="separator:ga33dce7721a6e2999d72651ad358bbdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -206,7 +206,7 @@ template&lt;typename _evCalcT  = double, typename eigenT , typename eigenT1 &gt;
     <tr><td class="paramdir">[in]</td><td class="paramname">n_modes</td><td>[in] [optional] Tbe maximum number of modes to solve for. If 0 all modes are solved for. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mem</td><td>[in] [optional] A memory structure which can be re-used by SYEVR for efficiency. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">t_eigenv</td><td>[out] [optional] if not null, will be filled in with the time taken to calculate eigenvalues. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">t_klim</td><td>[out] [optional] if not null, will be filled in with the time taken to calculate eigenvalues. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">t_klim</td><td>[out] [optional] if not null, will be filled in with the time taken to calculate the KL modes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -278,7 +278,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00362">362</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00360">360</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
 
 </div>
 </div>
@@ -334,27 +334,36 @@ template&lt;typename dataT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Calculate the pseudo-inverse of a patrix using the SVD. </p>
-<p>First computes the SVD of A, \( A = U S V^T \), using eigenGESDD. Then the psuedo-inverse is calculated as \( A^+ = V S^+ U^T\). This MXLAPACK_INTerface does not provide access to U, S and VT.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">PInv</td><td>[out] the pseudo-inverse of A </td></tr>
-    <tr><td class="paramname">condition</td><td>[out] The final condition number. </td></tr>
-    <tr><td class="paramname">nRejected</td><td>[out] the number of eigenvectors rejected </td></tr>
-    <tr><td class="paramname">A</td><td>[in] the matrix to invert </td></tr>
-    <tr><td class="paramname">maxCondition</td><td>[in] the maximum condition number desired, whichis used to threshold the singular values. Set to 0 use include all eigenvalues/vectors. This is ignored if interactive. </td></tr>
-    <tr><td class="paramname">interact</td><td>[in] [optional] a bitmask controlling interaction. If (interact &amp; MX_PINV_PLOT) is true, then <a class="el" href="classmx_1_1math_1_1gnuPlot.html" title="An interactive c++ interface to gnuplot.">gnuPlot</a> is used to display the eigenvalues. If (interact &amp; MX_PINV_ASK) is true then the minimum eigenvaue threshold is requested from the user using stdin. </td></tr>
+<p>Calculate the pseudo-inverse of a matrix using the SVD. </p>
+<p>First computes the SVD of A, \( A = U S V^T \), using eigenGESDD. Then the psuedo-inverse is calculated as \( A^+ = V S^+ U^T\). This interface does not provide access to U, S and VT.</p>
+<p>The parameter <code>interact</code> is intepreted as a bitmask. The values can be</p><ul>
+<li>MX_PINV_PLOT which will cause a plot to be displayed of the singular values</li>
+<li>MX_PINV_ASK which will ask the user for a max. condition number using stdin</li>
+<li>MX_PINV_ASK_NMODES which will ask the user for a max number of modes to include using stdin. Overrides MX_PINV_ASK. If <code>interact</code> is 0 then no interaction is used and maxCondition controls the inversion.<ul>
+<li><br  />
+ <dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">dataT</td><td>is either float or double.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">dataT</td><td>is either float or double. </td></tr>
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </li>
+</ul>
+</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">PInv</td><td>[out] The pseudo-inverse of A </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">condition</td><td>[out] The final condition number. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nRejected</td><td>[out] The number of eigenvectors rejected </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>[in] The matrix to invert </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxCondition</td><td>[in] If &gt; 0, the maximum condition number desired. If &lt;0 the number of modes to keep. Used to threshold the singular values. Set to 0 to include all eigenvalues/vectors. Ignored if interactive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interact</td><td>[in] [optional] a bitmask controlling interaction. See above. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00537">537</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00541">541</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,28 +439,33 @@ template&lt;typename dataT &gt; </div>
 
 <p>Calculate the pseudo-inverse of a patrix using the SVD. </p>
 <p>First computes the SVD of A, \( A = U S V^T \), using eigenGESDD. Then the psuedo-inverse is calculated as \( A^+ = V S^+ U^T\).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">PInv</td><td>the pseudo-inverse of A </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">condition</td><td>The final condition number. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">nRejected</td><td>the number of eigenvectors rejected </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">U</td><td></td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">S</td><td></td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">VT</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>the matrix to invert </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">maxCondition</td><td>he maximum condition number desired, which is used to threshold the singular values. Set to 0 use include all eigenvalues/vectors. This is ignored if interactive. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">interact</td><td>[optional] a bitmask controlling interaction. If (interact &amp; MX_PINV_PLOT) is true, then <a class="el" href="classmx_1_1math_1_1gnuPlot.html" title="An interactive c++ interface to gnuplot.">gnuPlot</a> is used to display the singular values. If (interact &amp; MX_PINV_ASK) is true then the minimum singular value threshold is requested from the user using stdin. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>The parameter <code>interact</code> is intepreted as a bitmask. The values can be</p><ul>
+<li>MX_PINV_PLOT which will cause a plot to be displayed of the singular values</li>
+<li>MX_PINV_ASK which will ask the user for a max. condition number using stdin</li>
+<li>MX_PINV_ASK_NMODES which will ask the user for a max number of modes to include using stdin. Overrides MX_PINV_ASK. If <code>interact</code> is 0 then no interaction is used and <code>maxCondition</code> controls the inversion.</li>
+</ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">dataT</td><td>is either float or double. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">PInv</td><td>[out] The pseudo-inverse of A </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">condition</td><td>[out] The final condition number. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nRejected</td><td>[out] The number of eigenvectors rejected </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">U</td><td>[out] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">S</td><td>[out] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">VT</td><td>[out] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>[in] The matrix to invert </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxCondition</td><td>[in] If &gt; 0, the maximum condition number desired. If &lt;0 the number of modes to keep. Used to threshold the singular values. Set to 0 to include all eigenvalues/vectors. Ignored if interactive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interact</td><td>[in] [optional] a bitmask controlling interaction. See above. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00417">417</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00411">411</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="linearPredictor_8hpp_source.html#l00065">mx::sigproc::linearPredictor&lt; realT &gt;::calcCoefficients()</a>.</p>
 
@@ -542,7 +556,7 @@ the return code from syevr (info) otherwise. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="eigenLapack_8hpp_source.html#l00141">141</a> of file <a class="el" href="eigenLapack_8hpp_source.html">eigenLapack.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00159">MXE_ALLOCERR</a>, <a class="el" href="mxError_8hpp_source.html#l00239">MXE_LAPACKERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00164">MXE_ALLOCERR</a>, <a class="el" href="mxError_8hpp_source.html#l00263">MXE_LAPACKERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
 </div>
 </div>
@@ -602,7 +616,7 @@ template&lt;typename eigenT1 , typename eigenT2 &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -18,6 +18,6 @@ var psdUtils_8hpp =
     [ "psdVar2sided", "psdUtils_8hpp.html#gaaf6cadd738aedf81b21cdd406ce63973", null ],
     [ "psdVarDisabled", "psdUtils_8hpp.html#ga38d23967b6fb4e964ae47e3577df1e48", null ],
     [ "rebin1SidedPSD", "psdUtils_8hpp.html#gaef47718eab8560f420d589d44bd63b49", null ],
-    [ "vonKarman_psd", "psdUtils_8hpp.html#gaed98346fd5a35b6daba93907e690f66d", null ],
-    [ "vonKarmanPSD", "psdUtils_8hpp.html#ga83af1f209971a81531d243aaf524dd74", null ]
+    [ "vonKarmanPSD", "psdUtils_8hpp.html#ga424886d0cef466d70ab422d34d2822ce", null ],
+    [ "vonKarmanPSD", "psdUtils_8hpp.html#ga86c40cc15c5d3258a77b9a6efa45f886", null ]
 ];

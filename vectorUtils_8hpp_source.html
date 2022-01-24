@@ -622,348 +622,361 @@ $(document).ready(function(){initNavTree('vectorUtils_8hpp_source.html',''); ini
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;<span class="comment">///Smooth a vector using the mean in a window specified by its full-width</span></div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00530"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gacba7bbd6e3e6f11d5856c16197c8d13d">  530</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">vectorSmoothMean</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;<span class="comment"></span>                      std::vector&lt;realT&gt; &amp; vec, <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="comment"></span>                      <span class="keywordtype">int</span> win                   <span class="comment">///&lt; [in] the full-width of the smoothing window</span></div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<span class="comment"></span>                    )</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;{</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;   smVec = vec;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;   realT sum;</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;   <span class="keywordtype">int</span> n;</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;   {</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*win;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;      sum = 0;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      n = 0;</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*win &amp;&amp; j &lt; vec.size())</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      {</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;         sum += vec[j];</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;         ++n;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;         ++j;</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;      }</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      smVec[i] = sum/n;</div>
+<div class="line"><a name="l00530"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gab6bea659262a0d5b66e78380f49fef8d">  530</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">vectorSmoothMean</a>( realT * smVec,  <span class="comment">///&lt; [out] the smoothed version of the vector.  At least as large as \p vec.</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;<span class="comment"></span>                      realT * vec,    <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="comment"></span>                      <span class="keywordtype">size_t</span> vecSize, <span class="comment">///&lt; [in] the size of \p vec</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<span class="comment"></span>                      <span class="keywordtype">int</span> win         <span class="comment">///&lt; [in] the full-width of the smoothing window.  Should be even.  0 results in a slow memcpy.</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="comment"></span>                    )</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;{</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;   realT sum;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;   <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vecSize; ++i)</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;   {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*win;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160; </div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;      sum = 0;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;      n = 0;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*win &amp;&amp; j &lt; vecSize)</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;      {</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;         sum += vec[j];</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;         ++n;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;         ++j;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;      }</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160; </div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;      smVec[i] = sum/n;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;   }</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;   }</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; </div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;}</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;<span class="comment">/// Smooth a vector using the mean in windows specified by their full-widths</span></div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="comment"></span><span class="comment">/** You supply a window width for each point.  This is useful for, say, logarithmically growing bin sizes in a </span></div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;<span class="comment">  * PSD.</span></div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="comment">  * \returns 0 on success</span></div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;<span class="comment">  * \returns -1 but who are we kidding it we don&#39;t check for errors</span></div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00569"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">  569</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">vectorSmoothMean</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="comment"></span>                      std::vector&lt;realT&gt; &amp; vec,  <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="comment"></span>                      std::vector&lt;int&gt; &amp; wins,   <span class="comment">///&lt; [in] the full-widths of the smoothing windows, same size as vec.</span></div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment"></span>                      <span class="keywordtype">bool</span> norm = <span class="keyword">false</span>          <span class="comment">///&lt; [in] if true the output will normalized to have the same integral as the input. </span></div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="comment"></span>                    )</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;{</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;   smVec = vec;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160; </div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;   realT sum;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;   <span class="keywordtype">int</span> n;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;   {</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*wins[i];</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160; </div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;      sum = 0;</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;      n = 0;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*wins[i] &amp;&amp; j &lt; vec.size())</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;      {</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;         sum += vec[j];</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;         ++n;</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;         ++j;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      }</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160; </div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      smVec[i] = sum/n;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;}</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;<span class="comment">///Smooth a vector using the mean in a window specified by its full-width</span></div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="comment"></span><span class="comment">/** \overload</span></div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gacba7bbd6e3e6f11d5856c16197c8d13d">  562</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">vectorSmoothMean</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector.  Will be resize()-ed.</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;<span class="comment"></span>                      std::vector&lt;realT&gt; &amp; vec,  <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="comment"></span>                      <span class="keywordtype">int</span> win                    <span class="comment">///&lt; [in] the full-width of the smoothing window.  Should be even.  0 results in a slow memcpy.</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;<span class="comment"></span>                    )</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;{</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;   smVec.resize(vec.size());</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">vectorSmoothMean</a>(smVec.data(), vec.data(), vec.size(), win);</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;}</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="comment">/// Smooth a vector using the mean in windows specified by their full-widths</span></div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment"></span><span class="comment">/** You supply a window width for each point.  This is useful for, say, logarithmically growing bin sizes in a </span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="comment">  * PSD.</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="comment">  * \returns 0 on success</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">  * \returns -1 but who are we kidding it we don&#39;t check for errors</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00580"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">  580</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">vectorSmoothMean</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="comment"></span>                      std::vector&lt;realT&gt; &amp; vec,  <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment"></span>                      std::vector&lt;int&gt; &amp; wins,   <span class="comment">///&lt; [in] the full-widths of the smoothing windows, same size as vec.</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="comment"></span>                      <span class="keywordtype">bool</span> norm = <span class="keyword">false</span>          <span class="comment">///&lt; [in] if true the output will normalized to have the same integral as the input. </span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;<span class="comment"></span>                    )</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;{</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;   smVec = vec;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160; </div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;   realT sum;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;   <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;   {</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*wins[i];</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;   }</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;   <span class="keywordflow">if</span>(norm)</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;   {</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;      realT sumin = 0, sumout = 0;</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;      </div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;      {</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;         sumin += vec[i];</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;         sumout += smVec[i];</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;      }</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;      </div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;      {</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;         smVec[i] *= sumin/sumout;</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;      }</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;   }</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;   </div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;}</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="comment">///Smooth a vector using the median in a window specified by its full-width</span></div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00618"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gacbb779f5b11027088f535e62b9f247cc">  618</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gacbb779f5b11027088f535e62b9f247cc">vectorSmoothMedian</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="comment"></span>                        std::vector&lt;realT&gt; &amp; vec, <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="comment"></span>                        <span class="keywordtype">int</span> win                   <span class="comment">///&lt; [in] the full-width of the smoothing window</span></div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="comment"></span>                      )</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;{</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;   smVec = vec;</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;   std::vector&lt;realT&gt; tvec;</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;   <span class="keywordtype">int</span> n;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;   {</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*win;</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;      tvec.clear();</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*win &amp;&amp; j &lt; vec.size())</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;      {</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;         tvec.push_back(vec[j]);</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;         ++j;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;      }</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160; </div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;      smVec[i] = <a class="code" href="group__vectorutils.html#ga3344de7d024e6d60f8d33275e2824b1a">vectorMedianInPlace</a>(tvec);</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160; </div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;   }</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      sum = 0;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      n = 0;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*wins[i] &amp;&amp; j &lt; vec.size())</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;      {</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;         sum += vec[j];</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;         ++n;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;         ++j;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;      }</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160; </div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;      smVec[i] = sum/n;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;   }</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;   <span class="keywordflow">if</span>(norm)</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;   {</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;      realT sumin = 0, sumout = 0;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;      </div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;      {</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;         sumin += vec[i];</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;         sumout += smVec[i];</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;      }</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;      </div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;      {</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;         smVec[i] *= sumin/sumout;</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      }</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;   }</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;   </div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;}</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="comment">///Smooth a vector using the median in a window specified by its full-width</span></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00629"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gacbb779f5b11027088f535e62b9f247cc">  629</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gacbb779f5b11027088f535e62b9f247cc">vectorSmoothMedian</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment"></span>                        std::vector&lt;realT&gt; &amp; vec, <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="comment"></span>                        <span class="keywordtype">int</span> win                   <span class="comment">///&lt; [in] the full-width of the smoothing window</span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<span class="comment"></span>                      )</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;{</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;   smVec = vec;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;   std::vector&lt;realT&gt; tvec;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;   <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;   {</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*win;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160; </div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;}</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="comment">///Smooth a vector using the max in a window specified by its full-width</span></div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00648"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gadda450e35c0814178194b88277f62e00">  648</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gadda450e35c0814178194b88277f62e00">vectorSmoothMax</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;<span class="comment"></span>                     std::vector&lt;realT&gt; &amp; vec, <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;<span class="comment"></span>                     <span class="keywordtype">int</span> win                   <span class="comment">///&lt; [in] the full-width of the smoothing window</span></div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;<span class="comment"></span>                   )</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;{</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;   smVec = vec;</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160; </div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;   {</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*win;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160; </div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;      smVec[i] = vec[j];</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;      ++j;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*win &amp;&amp; j &lt; vec.size())</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;      {</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;         <span class="keywordflow">if</span>(vec[j] &gt; smVec[i]) smVec[i] = vec[j];</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;         ++j;</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;      }</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;   }</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160; </div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;}</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;<span class="comment">/// Re-bin a vector by summing (or averaging) in bins of size n points.</span></div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;<span class="comment">  * \returns 0 on success</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="comment">  * \returns -1 on error</span></div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="comment">  * \tparam vectorT is any vector-like type with resize(), size(), and the operator()[].</span></div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> vectorT&gt;</div>
-<div class="line"><a name="l00680"></a><span class="lineno"><a class="line" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">  680</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">vectorRebin</a>( vectorT &amp; binv,           <span class="comment">///&lt; [out] the re-binned vector.  will be resized.</span></div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;<span class="comment"></span>                 <span class="keyword">const</span> vectorT &amp; v,        <span class="comment">///&lt; [in] the vector to bin.</span></div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="comment"></span>                 <span class="keywordtype">unsigned</span> n,               <span class="comment">///&lt; [in] the size of the bins, in points</span></div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;<span class="comment"></span>                 <span class="keywordtype">bool</span> binMean = <span class="keyword">false</span>      <span class="comment">///&lt; [in] [optional] flag controlling whether sums (false) or means (true) are calculated.</span></div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="comment"></span>               )</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;{</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;   <span class="keywordflow">if</span>( n==0 ) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160; </div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;   binv.resize( v.size()/n );</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt; binv.size(); ++i)</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;   {</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;      binv[i] = 0;</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;      <span class="keywordtype">unsigned</span> j;</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;      <span class="keywordflow">for</span>(j=0; j &lt; n; ++j)</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;      {</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;         <span class="keywordflow">if</span>(i*n + j &gt;= v.size()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;      tvec.clear();</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*win &amp;&amp; j &lt; vec.size())</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;      {</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;         tvec.push_back(vec[j]);</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;         ++j;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;      }</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;      smVec[i] = <a class="code" href="group__vectorutils.html#ga3344de7d024e6d60f8d33275e2824b1a">vectorMedianInPlace</a>(tvec);</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160; </div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;   }</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160; </div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;}</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;<span class="comment">///Smooth a vector using the max in a window specified by its full-width</span></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00659"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gadda450e35c0814178194b88277f62e00">  659</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gadda450e35c0814178194b88277f62e00">vectorSmoothMax</a>( std::vector&lt;realT&gt; &amp;smVec, <span class="comment">///&lt; [out] the smoothed version of the vector</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;<span class="comment"></span>                     std::vector&lt;realT&gt; &amp; vec, <span class="comment">///&lt; [in] the input vector, unaltered.</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;<span class="comment"></span>                     <span class="keywordtype">int</span> win                   <span class="comment">///&lt; [in] the full-width of the smoothing window</span></div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="comment"></span>                   )</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;{</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;   smVec = vec;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160; </div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i &lt; vec.size(); ++i)</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;   {</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;      <span class="keywordtype">int</span> j = i - 0.5*win;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;      <span class="keywordflow">if</span>(j &lt; 0) j = 0;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160; </div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;      smVec[i] = vec[j];</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;      ++j;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;      <span class="keywordflow">while</span>( j &lt;= i+0.5*win &amp;&amp; j &lt; vec.size())</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;      {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;         <span class="keywordflow">if</span>(vec[j] &gt; smVec[i]) smVec[i] = vec[j];</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;         ++j;</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;      }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;   }</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;}</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;<span class="comment">/// Re-bin a vector by summing (or averaging) in bins of size n points.</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="comment">  * \returns 0 on success</span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;<span class="comment">  * \returns -1 on error</span></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;<span class="comment">  * \tparam vectorT is any vector-like type with resize(), size(), and the operator()[].</span></div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> vectorT&gt;</div>
+<div class="line"><a name="l00691"></a><span class="lineno"><a class="line" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">  691</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">vectorRebin</a>( vectorT &amp; binv,           <span class="comment">///&lt; [out] the re-binned vector.  will be resized.</span></div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="comment"></span>                 <span class="keyword">const</span> vectorT &amp; v,        <span class="comment">///&lt; [in] the vector to bin.</span></div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="comment"></span>                 <span class="keywordtype">unsigned</span> n,               <span class="comment">///&lt; [in] the size of the bins, in points</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="comment"></span>                 <span class="keywordtype">bool</span> binMean = <span class="keyword">false</span>      <span class="comment">///&lt; [in] [optional] flag controlling whether sums (false) or means (true) are calculated.</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="comment"></span>               )</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;{</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;   <span class="keywordflow">if</span>( n==0 ) <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160; </div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;         binv[i] += v[ i*n + j];</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;      }</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160; </div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;      <span class="keywordflow">if</span>(binMean)</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;      {</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;         <span class="keywordflow">if</span>(j &gt; 0) binv[i] /= j;</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;      }</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;   }</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;}</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="comment">/// Convolve (smooth) a vector with a Gaussian.</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="comment">  * \returns 0 on success.</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="comment">  * \returns -1 on error.</span></div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="comment">  * \tparam realT is the real floating point type of the data.</span></div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00719"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">  719</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">vectorGaussConvolve</a>( std::vector&lt;realT&gt; &amp; dataOut,      <span class="comment">///&lt; [out] The smoothed data vector.  Resized.</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> std::vector&lt;realT&gt; &amp; dataIn, <span class="comment">///&lt; [in] The data vector to smooth.</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> std::vector&lt;realT&gt; &amp; scale,  <span class="comment">///&lt; [in] The scale vector used to calculate the kernel.</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> realT fwhm,                  <span class="comment">///&lt; [in] The FWHM of the Gaussian kernel, same units as scale.</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> winhw                    <span class="comment">///&lt; [in] The window half-width in pixels.</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment"></span>                       )</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;{</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;   <span class="keywordflow">if</span>(dataIn.size() != scale.size()) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;   dataOut.resize(dataIn.size());</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;   realT <a class="code" href="group__dimensioned__constants.html#ga9b589183113ae3a42f26526ded7f3dc9">sigma</a> = func::fwhm2sigma&lt;realT&gt;(fwhm);</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; dataIn.size(); ++i)</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;   {</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;      realT <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a>;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;      realT sum = 0;</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;      realT norm = 0;</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i-winhw; j&lt;i+winhw; ++j)</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;      {</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;         <span class="keywordflow">if</span>(j &lt; 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;         <span class="keywordflow">if</span>(j &gt; dataIn.size()-1) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;   binv.resize( v.size()/n );</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt; binv.size(); ++i)</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;   {</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;      binv[i] = 0;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160; </div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;      <span class="keywordtype">unsigned</span> j;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;      <span class="keywordflow">for</span>(j=0; j &lt; n; ++j)</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;      {</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;         <span class="keywordflow">if</span>(i*n + j &gt;= v.size()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;         binv[i] += v[ i*n + j];</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;      }</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160; </div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;      <span class="keywordflow">if</span>(binMean)</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      {</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;         <span class="keywordflow">if</span>(j &gt; 0) binv[i] /= j;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;      }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;   }</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;}</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="comment">/// Calculate and accumulate the means of a timeseries in bins of various sizes.</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment"></span><span class="comment">/** Useful mainly to calculate the variance of the mean as a function of sample size.</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">  * The output is a vector of vectors, where each element is a vector which contains the means in the </span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">  * unique bins of size corresponding to the same index in the in put binSzs vector.</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">  * \returns 0 on success.</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> vectorT, <span class="keyword">typename</span> binVectorT&gt;</div>
+<div class="line"><a name="l00730"></a><span class="lineno"><a class="line" href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">  730</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">vectorBinMeans</a>( std::vector&lt;vectorT&gt; &amp; means, <span class="comment">///&lt; [out] the means in each distinct bin.  Not cleared, but Will be resized with new means appended.</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment"></span>                    binVectorT &amp; binSzs,          <span class="comment">///&lt; [in] the bin sizes in which to calculate the means</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment"></span>                    <span class="keyword">const</span> vectorT &amp; v             <span class="comment">///&lt; [in] the input vector to bin .</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="comment"></span>                  )</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;{</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;   vectorT binv;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;   means.resize(binSzs.size());</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;   </div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt; binSzs.size(); ++i)</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;   {</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;      <a class="code" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">vectorRebin</a>(binv, v, binSzs[i], <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;         <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a> = func::gaussian&lt;realT&gt;( scale[j], 0.0, 1.0, scale[i], <a class="code" href="group__dimensioned__constants.html#ga9b589183113ae3a42f26526ded7f3dc9">sigma</a>);</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;         sum += <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a>*dataIn[j];</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;         norm += <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a>;</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;      }</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;      dataOut[i] = sum/norm;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;   }</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;}</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160; </div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="comment">/// Calculate and accumulate the means of a timeseries in bins of various sizes.</span></div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="comment"></span><span class="comment">/** Useful mainly to calculate the variance of the mean as a function of sample size.</span></div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment">  * The output is a vector of vectors, where each element is a vector which contains the means in the </span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment">  * unique bins of size corresponding to the same index in the in put binSzs vector.</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment">  * \returns 0 on success.</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> vectorT, <span class="keyword">typename</span> binVectorT&gt;</div>
-<div class="line"><a name="l00764"></a><span class="lineno"><a class="line" href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">  764</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">vectorBinMeans</a>( std::vector&lt;vectorT&gt; &amp; means, <span class="comment">///&lt; [out] the means in each distinct bin.  Not cleared, but Will be resized with new means appended.</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment"></span>                    binVectorT &amp; binSzs,          <span class="comment">///&lt; [in] the bin sizes in which to calculate the means</span></div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment"></span>                    <span class="keyword">const</span> vectorT &amp; v             <span class="comment">///&lt; [in] the input vector to bin .</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment"></span>                  )</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;{</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;   vectorT binv;</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160; </div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;   means.resize(binSzs.size());</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;   </div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt; binSzs.size(); ++i)</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;   {</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;      <a class="code" href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">vectorRebin</a>(binv, v, binSzs[i], <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160; </div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      means[i].resize(means[i].size() + binv.size());</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j=0; j&lt; binv.size(); ++j)  means[i][ means[i].size() - binv.size() + j] = binv[j];</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;   }</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;   </div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;}</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="comment">/// Calculate a cumulative histogram of a vector.</span></div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="comment"></span><span class="comment">/** Sorts the vector and sums.</span></div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="comment">  * \retval 0 on success, -1 otherwise.</span></div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="comment">  * \tparam floatT the floating point type of the vector contens.</span></div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
-<div class="line"><a name="l00792"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">  792</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">vectorCumHist</a>( std::vector&lt;floatT&gt; &amp; svec, <span class="comment">///&lt; [out] Contains the sorted vector.</span></div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="comment"></span>             std::vector&lt;floatT&gt; &amp; sum,  <span class="comment">///&lt; [out] Contains the cumulative or running sum of the sorted vector</span></div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="comment"></span>             std::vector&lt;floatT&gt; &amp; vec   <span class="comment">///&lt; [in]  The vector to sort and sum.</span></div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="comment"></span>           )</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;{</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;   svec = vec;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;   std::sort(svec.begin(), svec.end());</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;   sum.resize(svec.size());</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160; </div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;   sum[0] = svec[0];</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt; svec.size(); ++i)</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;   {</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;      sum[i] = sum[i-1] + svec[i];</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;   }</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160; </div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;}</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="comment">/// Calculate a reverse cumulative histogram of a vector.</span></div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="comment"></span><span class="comment">/** Reverse-sorts the vector and sums.</span></div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="comment">  * \retval 0 on success, -1 otherwise.</span></div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="comment">  * \tparam floatT the floating point type of the vector contens.</span></div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
-<div class="line"><a name="l00821"></a><span class="lineno"><a class="line" href="group__vectorutils.html#ga867c068ae6f972b5ad59fa1f0f5d26ee">  821</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#ga867c068ae6f972b5ad59fa1f0f5d26ee">vectorCumHistReverse</a>( std::vector&lt;floatT&gt; &amp; svec, <span class="comment">///&lt; [out] Contains the reverse-sorted vector.</span></div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;<span class="comment"></span>                    std::vector&lt;floatT&gt; &amp; sum,  <span class="comment">///&lt; [out] Contains the cumulative or running sum of the reverse-sorted vector</span></div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;<span class="comment"></span>                    std::vector&lt;floatT&gt; &amp; vec   <span class="comment">///&lt; [in]  The vector to reverse-sort and sum.</span></div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;<span class="comment"></span>                  )</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;{</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;   svec = vec;</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;   std::sort(svec.begin(), svec.end(), std::greater&lt;floatT&gt;());</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160; </div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;   sum.resize(svec.size());</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;   sum[0] = svec[0];</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160; </div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt; svec.size(); ++i)</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;   {</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;      sum[i] = sum[i-1] + svec[i];</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;   }</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160; </div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;}</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;<span class="comment">///@}</span></div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;} <span class="comment">//namespace math</span></div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160; </div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160; </div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160; </div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;<span class="preprocessor">#endif // math_vectorUtils_hpp</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;      means[i].resize(means[i].size() + binv.size());</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j=0; j&lt; binv.size(); ++j)  means[i][ means[i].size() - binv.size() + j] = binv[j];</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;   }</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;   </div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;}</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="comment">/// Convolve (smooth) a vector with a Gaussian.</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="comment">  * \returns 0 on success.</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="comment">  * \returns -1 on error.</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="comment">  * \tparam realT is the real floating point type of the data.</span></div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00758"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">  758</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">vectorGaussConvolve</a>( std::vector&lt;realT&gt; &amp; dataOut,      <span class="comment">///&lt; [out] The smoothed data vector.  Resized.</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> std::vector&lt;realT&gt; &amp; dataIn, <span class="comment">///&lt; [in] The data vector to smooth.</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> std::vector&lt;realT&gt; &amp; scale,  <span class="comment">///&lt; [in] The scale vector used to calculate the kernel.</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> realT fwhm,                  <span class="comment">///&lt; [in] The FWHM of the Gaussian kernel, same units as scale.</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment"></span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> winhw                    <span class="comment">///&lt; [in] The window half-width in pixels.</span></div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment"></span>                       )</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;{</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;   <span class="keywordflow">if</span>(dataIn.size() != scale.size()) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160; </div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;   dataOut.resize(dataIn.size());</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;   realT <a class="code" href="group__dimensioned__constants.html#ga9b589183113ae3a42f26526ded7f3dc9">sigma</a> = func::fwhm2sigma&lt;realT&gt;(fwhm);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; dataIn.size(); ++i)</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;   {</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;      realT <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a>;</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;      realT sum = 0;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;      realT norm = 0;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i-winhw; j&lt;i+winhw; ++j)</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;      {</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;         <span class="keywordflow">if</span>(j &lt; 0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;         <span class="keywordflow">if</span>(j &gt; dataIn.size()-1) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160; </div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;         <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a> = func::gaussian&lt;realT&gt;( scale[j], 0.0, 1.0, scale[i], <a class="code" href="group__dimensioned__constants.html#ga9b589183113ae3a42f26526ded7f3dc9">sigma</a>);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160; </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;         sum += <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a>*dataIn[j];</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;         norm += <a class="code" href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">G</a>;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;      }</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;      dataOut[i] = sum/norm;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;   }</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160; </div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;}</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160; </div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">/// Calculate a cumulative histogram of a vector.</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="comment"></span><span class="comment">/** Sorts the vector and sums.</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="comment">  * \retval 0 on success, -1 otherwise.</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">  * \tparam floatT the floating point type of the vector contens.</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
+<div class="line"><a name="l00805"></a><span class="lineno"><a class="line" href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">  805</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">vectorCumHist</a>( std::vector&lt;floatT&gt; &amp; svec, <span class="comment">///&lt; [out] Contains the sorted vector.</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="comment"></span>             std::vector&lt;floatT&gt; &amp; sum,  <span class="comment">///&lt; [out] Contains the cumulative or running sum of the sorted vector</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="comment"></span>             std::vector&lt;floatT&gt; &amp; vec   <span class="comment">///&lt; [in]  The vector to sort and sum.</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;<span class="comment"></span>           )</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;{</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;   svec = vec;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160; </div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;   std::sort(svec.begin(), svec.end());</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160; </div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;   sum.resize(svec.size());</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;   sum[0] = svec[0];</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt; svec.size(); ++i)</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;   {</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;      sum[i] = sum[i-1] + svec[i];</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;   }</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;}</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;<span class="comment">/// Calculate a reverse cumulative histogram of a vector.</span></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;<span class="comment"></span><span class="comment">/** Reverse-sorts the vector and sums.</span></div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;<span class="comment">  * \retval 0 on success, -1 otherwise.</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;<span class="comment">  * \tparam floatT the floating point type of the vector contens.</span></div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
+<div class="line"><a name="l00834"></a><span class="lineno"><a class="line" href="group__vectorutils.html#ga867c068ae6f972b5ad59fa1f0f5d26ee">  834</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__vectorutils.html#ga867c068ae6f972b5ad59fa1f0f5d26ee">vectorCumHistReverse</a>( std::vector&lt;floatT&gt; &amp; svec, <span class="comment">///&lt; [out] Contains the reverse-sorted vector.</span></div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment"></span>                    std::vector&lt;floatT&gt; &amp; sum,  <span class="comment">///&lt; [out] Contains the cumulative or running sum of the reverse-sorted vector</span></div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;<span class="comment"></span>                    std::vector&lt;floatT&gt; &amp; vec   <span class="comment">///&lt; [in]  The vector to reverse-sort and sum.</span></div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="comment"></span>                  )</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;{</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;   svec = vec;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160; </div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;   std::sort(svec.begin(), svec.end(), std::greater&lt;floatT&gt;());</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;   sum.resize(svec.size());</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;   sum[0] = svec[0];</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt; svec.size(); ++i)</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;   {</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;      sum[i] = sum[i-1] + svec[i];</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160; </div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;   }</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160; </div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;}</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;<span class="comment">///@}</span></div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;} <span class="comment">//namespace math</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160; </div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160; </div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160; </div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;<span class="preprocessor">#endif // math_vectorUtils_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__vectorutils_html_gaad958d46209e7b59078f5d1c862007f9"><div class="ttname"><a href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">mx::math::vectorCumHist</a></div><div class="ttdeci">int vectorCumHist(std::vector&lt; floatT &gt; &amp;svec, std::vector&lt; floatT &gt; &amp;sum, std::vector&lt; floatT &gt; &amp;vec)</div><div class="ttdoc">Calculate a cumulative histogram of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00792">vectorUtils.hpp:792</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_gaad958d46209e7b59078f5d1c862007f9"><div class="ttname"><a href="group__vectorutils.html#gaad958d46209e7b59078f5d1c862007f9">mx::math::vectorCumHist</a></div><div class="ttdeci">int vectorCumHist(std::vector&lt; floatT &gt; &amp;svec, std::vector&lt; floatT &gt; &amp;sum, std::vector&lt; floatT &gt; &amp;vec)</div><div class="ttdoc">Calculate a cumulative histogram of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00805">vectorUtils.hpp:805</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_gaf9eedf955fa8e99195cfaf4ffe66502c"><div class="ttname"><a href="group__vectorutils.html#gaf9eedf955fa8e99195cfaf4ffe66502c">mx::math::vectorSigmaMean</a></div><div class="ttdeci">vectorT::value_type vectorSigmaMean(const vectorT &amp;vec, const vectorT &amp;weights, typename vectorT::value_type sigma)</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00473">vectorUtils.hpp:473</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_gad7895585c71500e4cda6502035575e2b"><div class="ttname"><a href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">mx::math::vectorSmoothMean</a></div><div class="ttdeci">int vectorSmoothMean(std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, std::vector&lt; int &gt; &amp;wins, bool norm=false)</div><div class="ttdoc">Smooth a vector using the mean in windows specified by their full-widths.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00569">vectorUtils.hpp:569</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_gad7895585c71500e4cda6502035575e2b"><div class="ttname"><a href="group__vectorutils.html#gad7895585c71500e4cda6502035575e2b">mx::math::vectorSmoothMean</a></div><div class="ttdeci">int vectorSmoothMean(std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, std::vector&lt; int &gt; &amp;wins, bool norm=false)</div><div class="ttdoc">Smooth a vector using the mean in windows specified by their full-widths.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00580">vectorUtils.hpp:580</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga3344de7d024e6d60f8d33275e2824b1a"><div class="ttname"><a href="group__vectorutils.html#ga3344de7d024e6d60f8d33275e2824b1a">mx::math::vectorMedianInPlace</a></div><div class="ttdeci">vectorT::value_type vectorMedianInPlace(vectorT &amp;vec)</div><div class="ttdoc">Calculate median of a vector in-place, altering the vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00218">vectorUtils.hpp:218</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga0b594d836faba33b6db38fa588320c21"><div class="ttname"><a href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">mx::astro::constants::G</a></div><div class="ttdeci">constexpr units::realT G()</div><div class="ttdoc">Newton's Gravitational Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00051">constants.hpp:51</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_ga2fde191f5a8778ea4fbca9515c7fe87e"><div class="ttname"><a href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">mx::math::vectorRebin</a></div><div class="ttdeci">int vectorRebin(vectorT &amp;binv, const vectorT &amp;v, unsigned n, bool binMean=false)</div><div class="ttdoc">Re-bin a vector by summing (or averaging) in bins of size n points.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00680">vectorUtils.hpp:680</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_ga2fde191f5a8778ea4fbca9515c7fe87e"><div class="ttname"><a href="group__vectorutils.html#ga2fde191f5a8778ea4fbca9515c7fe87e">mx::math::vectorRebin</a></div><div class="ttdeci">int vectorRebin(vectorT &amp;binv, const vectorT &amp;v, unsigned n, bool binMean=false)</div><div class="ttdoc">Re-bin a vector by summing (or averaging) in bins of size n points.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00691">vectorUtils.hpp:691</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga74952a93765d3e16f6d83720b24dcc97"><div class="ttname"><a href="group__vectorutils.html#ga74952a93765d3e16f6d83720b24dcc97">mx::math::vectorMean</a></div><div class="ttdeci">vectorT::value_type vectorMean(const vectorT &amp;vec, const vectorT &amp;w)</div><div class="ttdoc">Calculate the weighted mean of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00191">vectorUtils.hpp:191</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_ga675a65413630952a5313e02dc1c44992"><div class="ttname"><a href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">mx::math::vectorBinMeans</a></div><div class="ttdeci">int vectorBinMeans(std::vector&lt; vectorT &gt; &amp;means, binVectorT &amp;binSzs, const vectorT &amp;v)</div><div class="ttdoc">Calculate and accumulate the means of a timeseries in bins of various sizes.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00764">vectorUtils.hpp:764</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_ga675a65413630952a5313e02dc1c44992"><div class="ttname"><a href="group__vectorutils.html#ga675a65413630952a5313e02dc1c44992">mx::math::vectorBinMeans</a></div><div class="ttdeci">int vectorBinMeans(std::vector&lt; vectorT &gt; &amp;means, binVectorT &amp;binSzs, const vectorT &amp;v)</div><div class="ttdoc">Calculate and accumulate the means of a timeseries in bins of various sizes.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00730">vectorUtils.hpp:730</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga9b589183113ae3a42f26526ded7f3dc9"><div class="ttname"><a href="group__dimensioned__constants.html#ga9b589183113ae3a42f26526ded7f3dc9">mx::astro::constants::sigma</a></div><div class="ttdeci">constexpr units::realT sigma()</div><div class="ttdoc">Stefan-Boltzmann Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00082">constants.hpp:82</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_gac7dc25ee53344f8ade80a142a3bb2178"><div class="ttname"><a href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">mx::math::vectorGaussConvolve</a></div><div class="ttdeci">int vectorGaussConvolve(std::vector&lt; realT &gt; &amp;dataOut, const std::vector&lt; realT &gt; &amp;dataIn, const std::vector&lt; realT &gt; &amp;scale, const realT fwhm, const int winhw)</div><div class="ttdoc">Convolve (smooth) a vector with a Gaussian.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00719">vectorUtils.hpp:719</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_gac7dc25ee53344f8ade80a142a3bb2178"><div class="ttname"><a href="group__vectorutils.html#gac7dc25ee53344f8ade80a142a3bb2178">mx::math::vectorGaussConvolve</a></div><div class="ttdeci">int vectorGaussConvolve(std::vector&lt; realT &gt; &amp;dataOut, const std::vector&lt; realT &gt; &amp;dataIn, const std::vector&lt; realT &gt; &amp;scale, const realT fwhm, const int winhw)</div><div class="ttdoc">Convolve (smooth) a vector with a Gaussian.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00758">vectorUtils.hpp:758</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_gae8bc667fcce347228896da6bdd51d6b1"><div class="ttname"><a href="group__vectorutils.html#gae8bc667fcce347228896da6bdd51d6b1">mx::math::vectorSub</a></div><div class="ttdeci">void vectorSub(vecT &amp;vec, const constT &amp;c)</div><div class="ttdoc">Subtract a constant value from a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00496">vectorUtils.hpp:496</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga276acaf96c84d6998de5071feaed77f6"><div class="ttname"><a href="group__vectorutils.html#ga276acaf96c84d6998de5071feaed77f6">mx::math::vectorScale</a></div><div class="ttdeci">void vectorScale(vectorT &amp;vec, size_t N=0, typename vectorT::value_type scale=0, typename vectorT::value_type offset=0)</div><div class="ttdoc">Fill in a vector with a regularly spaced scale.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00062">vectorUtils.hpp:62</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_gadda450e35c0814178194b88277f62e00"><div class="ttname"><a href="group__vectorutils.html#gadda450e35c0814178194b88277f62e00">mx::math::vectorSmoothMax</a></div><div class="ttdeci">int vectorSmoothMax(std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, int win)</div><div class="ttdoc">Smooth a vector using the max in a window specified by its full-width.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00648">vectorUtils.hpp:648</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_gacbb779f5b11027088f535e62b9f247cc"><div class="ttname"><a href="group__vectorutils.html#gacbb779f5b11027088f535e62b9f247cc">mx::math::vectorSmoothMedian</a></div><div class="ttdeci">int vectorSmoothMedian(std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, int win)</div><div class="ttdoc">Smooth a vector using the median in a window specified by its full-width.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00618">vectorUtils.hpp:618</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_gadda450e35c0814178194b88277f62e00"><div class="ttname"><a href="group__vectorutils.html#gadda450e35c0814178194b88277f62e00">mx::math::vectorSmoothMax</a></div><div class="ttdeci">int vectorSmoothMax(std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, int win)</div><div class="ttdoc">Smooth a vector using the max in a window specified by its full-width.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00659">vectorUtils.hpp:659</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_gacbb779f5b11027088f535e62b9f247cc"><div class="ttname"><a href="group__vectorutils.html#gacbb779f5b11027088f535e62b9f247cc">mx::math::vectorSmoothMedian</a></div><div class="ttdeci">int vectorSmoothMedian(std::vector&lt; realT &gt; &amp;smVec, std::vector&lt; realT &gt; &amp;vec, int win)</div><div class="ttdoc">Smooth a vector using the median in a window specified by its full-width.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00629">vectorUtils.hpp:629</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga9efbdfd637f2a5bb6054c6ee5a163fcc"><div class="ttname"><a href="group__vectorutils.html#ga9efbdfd637f2a5bb6054c6ee5a163fcc">mx::math::vectorMedian</a></div><div class="ttdeci">vectorT::value_type vectorMedian(const vectorT &amp;vec, vectorT *work=0)</div><div class="ttdoc">Calculate median of a vector, leaving the vector unaltered.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00247">vectorUtils.hpp:247</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga48a5d9609fd9405c69f13f8cecb19ee9"><div class="ttname"><a href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">mx::astro::constants::c</a></div><div class="ttdeci">constexpr units::realT c()</div><div class="ttdoc">The speed of light.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00060">constants.hpp:60</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga35450a5a72b0d8740c00afb2ab6b9005"><div class="ttname"><a href="group__vectorutils.html#ga35450a5a72b0d8740c00afb2ab6b9005">mx::math::vectorMeanSub</a></div><div class="ttdeci">void vectorMeanSub(vecT &amp;vec)</div><div class="ttdoc">Subtract the mean from a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00515">vectorUtils.hpp:515</a></div></div>
-<div class="ttc" id="agroup__vectorutils_html_ga867c068ae6f972b5ad59fa1f0f5d26ee"><div class="ttname"><a href="group__vectorutils.html#ga867c068ae6f972b5ad59fa1f0f5d26ee">mx::math::vectorCumHistReverse</a></div><div class="ttdeci">int vectorCumHistReverse(std::vector&lt; floatT &gt; &amp;svec, std::vector&lt; floatT &gt; &amp;sum, std::vector&lt; floatT &gt; &amp;vec)</div><div class="ttdoc">Calculate a reverse cumulative histogram of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00821">vectorUtils.hpp:821</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_ga867c068ae6f972b5ad59fa1f0f5d26ee"><div class="ttname"><a href="group__vectorutils.html#ga867c068ae6f972b5ad59fa1f0f5d26ee">mx::math::vectorCumHistReverse</a></div><div class="ttdeci">int vectorCumHistReverse(std::vector&lt; floatT &gt; &amp;svec, std::vector&lt; floatT &gt; &amp;sum, std::vector&lt; floatT &gt; &amp;vec)</div><div class="ttdoc">Calculate a reverse cumulative histogram of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00834">vectorUtils.hpp:834</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_gab1631714d6318c54d032661a5fc5ab41"><div class="ttname"><a href="group__vectorutils.html#gab1631714d6318c54d032661a5fc5ab41">mx::math::vectorVariance</a></div><div class="ttdeci">vectorT::value_type vectorVariance(const vectorT &amp;vec)</div><div class="ttdoc">Calculate the variance of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00346">vectorUtils.hpp:346</a></div></div>
 <div class="ttc" id="agaussian_8hpp_html"><div class="ttname"><a href="gaussian_8hpp.html">gaussian.hpp</a></div><div class="ttdoc">Declarations for utilities related to the Gaussian function.</div></div>
 <div class="ttc" id="agroup__vectorutils_html_gadeb6a7d051c0a4b4da392d88b8c50c7d"><div class="ttname"><a href="group__vectorutils.html#gadeb6a7d051c0a4b4da392d88b8c50c7d">mx::math::vectorSortOrder</a></div><div class="ttdeci">std::vector&lt; size_t &gt; vectorSortOrder(std::vector&lt; memberT &gt; const &amp;values)</div><div class="ttdoc">Return the indices of the vector in sorted order, without altering the vector itself.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00092">vectorUtils.hpp:92</a></div></div>
@@ -973,7 +986,7 @@ $(document).ready(function(){initNavTree('vectorUtils_8hpp_source.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="vectorUtils_8hpp.html">vectorUtils.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:51 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

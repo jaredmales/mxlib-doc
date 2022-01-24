@@ -528,11 +528,11 @@ $(document).ready(function(){initNavTree('templateLapack_8hpp_source.html',''); 
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment"> The SVD is written</span></div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">      \f$ A = U * \Sigma * V^T \f$</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">\f[ A = U \Sigma V^T \f]</span></div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment"> where \f$ \Sigma \f$ is an M-by-N matrix which is zero except for its</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment"> min(m,n) diagonal elements, U is an M-by-M orthogonal matrix, and</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment"> V is an N-by-N orthogonal matrix.  The diagonal elements of \f$ \Sigma \f$</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment"> min(m,n) diagonal elements, \f$ U \f$ is an M-by-M orthogonal matrix, and</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment"> \f$ V  is an N-by-N orthogonal matrix.  The diagonal elements of \f$ \Sigma \f$</span></div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment"> are the singular values of A; they are real and non-negative, and</span></div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment"> are returned in descending order.  The first min(m,n) columns of</span></div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment"> U and V are the left and right singular vectors of A.</span></div>
@@ -659,51 +659,51 @@ $(document).ready(function(){initNavTree('templateLapack_8hpp_source.html',''); 
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="comment">          &gt; 0:  SBDSDC did not converge, updating process failed.</span></div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;<span class="comment"> \endparblock</span></div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">   * \ingroup template_lapack</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> dataT&gt;</div>
-<div class="line"><a name="l00570"></a><span class="lineno"><a class="line" href="templateLapack_8hpp.html#ad5b6d9379240bcf6b094dfec725e3651">  570</a></span>&#160;MXLAPACK_INT <a class="code" href="templateLapack_8hpp.html#ad5b6d9379240bcf6b094dfec725e3651">gesdd</a>(<span class="keywordtype">char</span> JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, dataT *A, MXLAPACK_INT LDA, dataT *S, dataT * U, MXLAPACK_INT LDU, dataT * VT, MXLAPACK_INT LDVT, dataT *WORK, MXLAPACK_INT  LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT INFO)</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;{</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;   <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;}</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">//Declarations of the lapack calls</span></div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">extern &quot;C&quot;</span></div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">{</span></div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="comment">   void sgesdd_(MKL_CONST_PTR char * JOBZ, MKL_CONST_PTR MXLAPACK_INT *M, MKL_CONST_PTR MXLAPACK_INT *N, float *A, MKL_CONST_PTR MXLAPACK_INT *LDA, float *S, float * U, MKL_CONST_PTR MXLAPACK_INT *LDU, float * VT, MKL_CONST_PTR MXLAPACK_INT *LDVT, float *WORK, MKL_CONST_PTR MXLAPACK_INT * LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT *INFO);</span></div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="comment">   </span></div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="comment">   void dgesdd_(MKL_CONST_PTR char * JOBZ, MKL_CONST_PTR MXLAPACK_INT *M, MKL_CONST_PTR MXLAPACK_INT *N, double *A, MKL_CONST_PTR MXLAPACK_INT *LDA, double *S, double * U, MKL_CONST_PTR MXLAPACK_INT *LDU, double * VT, MKL_CONST_PTR MXLAPACK_INT *LDVT, double *WORK, MKL_CONST_PTR MXLAPACK_INT * LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT *INFO);</span></div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment">   </span></div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="comment">}*/</span></div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="comment">//float specialization of gesdd</span></div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;MXLAPACK_INT gesdd&lt;float&gt;(<span class="keywordtype">char</span> JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, <span class="keywordtype">float</span> *A, MXLAPACK_INT LDA, <span class="keywordtype">float</span> *S, <span class="keywordtype">float</span> * U, MXLAPACK_INT LDU, <span class="keywordtype">float</span> * VT, MXLAPACK_INT LDVT, <span class="keywordtype">float</span> *WORK, MXLAPACK_INT  LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT INFO);</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160; </div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;<span class="comment">//double specialization of gesdd</span></div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;MXLAPACK_INT gesdd&lt;double&gt;(<span class="keywordtype">char</span> JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, <span class="keywordtype">double</span> *A, MXLAPACK_INT LDA, <span class="keywordtype">double</span> *S, <span class="keywordtype">double</span> * U, MXLAPACK_INT LDU, <span class="keywordtype">double</span> * VT, MXLAPACK_INT LDVT, <span class="keywordtype">double</span> *WORK, MXLAPACK_INT  LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT INFO);</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160; </div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;} <span class="comment">//namespace math</span></div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160; </div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="comment">// </span></div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="preprocessor">#endif //math_templateLapack_hpp</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="comment">\ingroup template_lapack</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> dataT&gt;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;MXLAPACK_INT gesdd(<span class="keywordtype">char</span> JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, dataT *A, MXLAPACK_INT LDA, dataT *S, dataT * U, MXLAPACK_INT LDU, dataT * VT, MXLAPACK_INT LDVT, dataT *WORK, MXLAPACK_INT  LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT INFO)</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;{</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;   <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;}</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160; </div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">//Declarations of the lapack calls</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">extern &quot;C&quot;</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="comment">   void sgesdd_(MKL_CONST_PTR char * JOBZ, MKL_CONST_PTR MXLAPACK_INT *M, MKL_CONST_PTR MXLAPACK_INT *N, float *A, MKL_CONST_PTR MXLAPACK_INT *LDA, float *S, float * U, MKL_CONST_PTR MXLAPACK_INT *LDU, float * VT, MKL_CONST_PTR MXLAPACK_INT *LDVT, float *WORK, MKL_CONST_PTR MXLAPACK_INT * LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT *INFO);</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="comment">   </span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment">   void dgesdd_(MKL_CONST_PTR char * JOBZ, MKL_CONST_PTR MXLAPACK_INT *M, MKL_CONST_PTR MXLAPACK_INT *N, double *A, MKL_CONST_PTR MXLAPACK_INT *LDA, double *S, double * U, MKL_CONST_PTR MXLAPACK_INT *LDU, double * VT, MKL_CONST_PTR MXLAPACK_INT *LDVT, double *WORK, MKL_CONST_PTR MXLAPACK_INT * LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT *INFO);</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="comment">   </span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160; </div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;<span class="comment">//float specialization of gesdd</span></div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;MXLAPACK_INT gesdd&lt;float&gt;(<span class="keywordtype">char</span> JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, <span class="keywordtype">float</span> *A, MXLAPACK_INT LDA, <span class="keywordtype">float</span> *S, <span class="keywordtype">float</span> * U, MXLAPACK_INT LDU, <span class="keywordtype">float</span> * VT, MXLAPACK_INT LDVT, <span class="keywordtype">float</span> *WORK, MXLAPACK_INT  LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT INFO);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160; </div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;<span class="comment">//double specialization of gesdd</span></div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;MXLAPACK_INT gesdd&lt;double&gt;(<span class="keywordtype">char</span> JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, <span class="keywordtype">double</span> *A, MXLAPACK_INT LDA, <span class="keywordtype">double</span> *S, <span class="keywordtype">double</span> * U, MXLAPACK_INT LDU, <span class="keywordtype">double</span> * VT, MXLAPACK_INT LDVT, <span class="keywordtype">double</span> *WORK, MXLAPACK_INT  LWORK, MXLAPACK_INT * IWORK, MXLAPACK_INT INFO);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;} <span class="comment">//namespace math</span></div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160; </div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="preprocessor">#endif //math_templateLapack_hpp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__template__lapack_html_ga8d6e1e52675070e399efc5344e946b73"><div class="ttname"><a href="group__template__lapack.html#ga8d6e1e52675070e399efc5344e946b73">mx::math::syevr</a></div><div class="ttdeci">MXLAPACK_INT syevr(char JOBZ, char RANGE, char UPLO, MXLAPACK_INT N, dataT *A, MXLAPACK_INT LDA, dataT VL, dataT VU, MXLAPACK_INT IL, MXLAPACK_INT IU, dataT ABSTOL, MXLAPACK_INT *M, dataT *W, dataT *Z, MXLAPACK_INT LDZ, MXLAPACK_INT *ISUPPZ, dataT *WORK, MXLAPACK_INT LWORK, MXLAPACK_INT *IWORK, MXLAPACK_INT LIWORK)</div><div class="ttdoc">Compute selected eigenvalues and, optionally, eigenvectors of a real symmetric matrix.</div><div class="ttdef"><b>Definition:</b> <a href="templateLapack_8hpp_source.html#l00207">templateLapack.hpp:207</a></div></div>
 <div class="ttc" id="agroup__template__lapack_html_ga9fc63c1ca708cd1a4afa5e5f08fb455a"><div class="ttname"><a href="group__template__lapack.html#ga9fc63c1ca708cd1a4afa5e5f08fb455a">mx::math::gesvd</a></div><div class="ttdeci">MXLAPACK_INT gesvd(char JOBU, char JOBVT, MXLAPACK_INT M, MXLAPACK_INT N, dataT *A, MXLAPACK_INT LDA, dataT *S, dataT *U, MXLAPACK_INT LDU, dataT *VT, MXLAPACK_INT LDVT, dataT *WORK, MXLAPACK_INT LWORK)</div><div class="ttdoc">Compute the singular value decomposition (SVD) of a real matrix.</div><div class="ttdef"><b>Definition:</b> <a href="templateLapack_8hpp_source.html#l00396">templateLapack.hpp:396</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:106</a></div></div>
 <div class="ttc" id="agroup__template__lapack_html_ga0449862c934822723f87cee3605ca66a"><div class="ttname"><a href="group__template__lapack.html#ga0449862c934822723f87cee3605ca66a">mx::math::sytrd</a></div><div class="ttdeci">MXLAPACK_INT sytrd(char UPLO, MXLAPACK_INT N, dataT *A, MXLAPACK_INT LDA, dataT *D, dataT *E, dataT *TAU, dataT *WORK, MXLAPACK_INT LWORK, MXLAPACK_INT INFO)</div><div class="ttdoc">Reduce a real symmetric matrix to real symmetric tridiagonal form by an orthogonal similarity transfo...</div><div class="ttdef"><b>Definition:</b> <a href="templateLapack_8hpp_source.html#l00167">templateLapack.hpp:167</a></div></div>
-<div class="ttc" id="atemplateLapack_8hpp_html_ad5b6d9379240bcf6b094dfec725e3651"><div class="ttname"><a href="templateLapack_8hpp.html#ad5b6d9379240bcf6b094dfec725e3651">mx::math::gesdd</a></div><div class="ttdeci">MXLAPACK_INT gesdd(char JOBZ, MXLAPACK_INT M, MXLAPACK_INT N, dataT *A, MXLAPACK_INT LDA, dataT *S, dataT *U, MXLAPACK_INT LDU, dataT *VT, MXLAPACK_INT LDVT, dataT *WORK, MXLAPACK_INT LWORK, MXLAPACK_INT *IWORK, MXLAPACK_INT INFO)</div><div class="ttdoc">Compute the singular value decomposition (SVD) of a real matrix with GESDD.</div><div class="ttdef"><b>Definition:</b> <a href="templateLapack_8hpp_source.html#l00570">templateLapack.hpp:570</a></div></div>
 <div class="ttc" id="agroup__template__lapack_html_ga9b5224c8973688d47eb9f92ea76da804"><div class="ttname"><a href="group__template__lapack.html#ga9b5224c8973688d47eb9f92ea76da804">mx::math::lamch</a></div><div class="ttdeci">dataT lamch(char CMACH)</div><div class="ttdoc">Determine machine parameters.</div><div class="ttdef"><b>Definition:</b> <a href="templateLapack_8hpp_source.html#l00094">templateLapack.hpp:94</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="templateLapack_8hpp.html">templateLapack.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:51 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

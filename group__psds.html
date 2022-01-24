@@ -90,7 +90,8 @@ $(document).ready(function(){initNavTree('group__psds.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">Power Spectra<div class="ingroups"><a class="el" href="group__signal__processing.html">Signal Processing</a></div></div>  </div>
 </div><!--header-->
@@ -115,14 +116,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1averagePeriodogram.html">mx::sigproc::averagePeriodogram&lt; realT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the average periodogram of a time-series.  <a href="classmx_1_1sigproc_1_1averagePeriodogram.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html">mx::sigproc::psdFilter&lt; _realT, _rank, 0 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for filtering noise with PSDs.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html">mx::sigproc::psdFilter&lt; _realT, 1 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for filtering noise with PSDs using CUDA cuFFT.  <a href="classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1sigproc_1_1psdVarMean.html">mx::sigproc::psdVarMean&lt; paramsT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the variance of the mean for a process given its PSD.  <a href="structmx_1_1sigproc_1_1psdVarMean.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__psd__filter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__psd__filter.html">PSD Filter</a></td></tr>
+<tr class="memdesc:group__psd__filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filtering with a PSD to generate correlated noise. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga61cb9edc15367dc46359553a646cd770"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:ga61cb9edc15367dc46359553a646cd770"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga61cb9edc15367dc46359553a646cd770">mx::sigproc::psdVar1sided</a> (realT df, const realT *PSD, size_t sz, realT half=0.5)</td></tr>
@@ -180,18 +181,18 @@ Classes</h2></td></tr>
 <tr class="memitem:ga16e4b43e07eaeb749f091a39cf993c90"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga16e4b43e07eaeb749f091a39cf993c90">mx::sigproc::oneoverf_psd</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, typename eigenArrp::Scalar alpha, typename eigenArrp::Scalar beta=-1)</td></tr>
 <tr class="memdesc:ga16e4b43e07eaeb749f091a39cf993c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a \( 1/|f|^\alpha \) power spectrum.  <a href="group__psds.html#ga16e4b43e07eaeb749f091a39cf993c90">More...</a><br /></td></tr>
 <tr class="separator:ga16e4b43e07eaeb749f091a39cf993c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga83af1f209971a81531d243aaf524dd74"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
-<tr class="memitem:ga83af1f209971a81531d243aaf524dd74"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga83af1f209971a81531d243aaf524dd74">mx::sigproc::vonKarmanPSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT beta, floatT T0, floatT t0, floatT alpha)</td></tr>
-<tr class="memdesc:ga83af1f209971a81531d243aaf524dd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D von Karman power spectrum.  <a href="group__psds.html#ga83af1f209971a81531d243aaf524dd74">More...</a><br /></td></tr>
-<tr class="separator:ga83af1f209971a81531d243aaf524dd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memTemplParams" colspan="2">template&lt;typename floatT , typename floatfT , typename alphaT , typename T0T , typename t0T , typename betaT &gt; </td></tr>
+<tr class="memitem:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga86c40cc15c5d3258a77b9a6efa45f886">mx::sigproc::vonKarmanPSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatfT &gt; &amp;f, alphaT alpha, T0T T0=0, t0T t0=0, betaT beta=1)</td></tr>
+<tr class="memdesc:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D von Karman power spectrum.  <a href="group__psds.html#ga86c40cc15c5d3258a77b9a6efa45f886">More...</a><br /></td></tr>
+<tr class="separator:ga86c40cc15c5d3258a77b9a6efa45f886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadcc05de7369c4f959fc7b870640d022e"><td class="memTemplParams" colspan="2">template&lt;typename floatT &gt; </td></tr>
 <tr class="memitem:gadcc05de7369c4f959fc7b870640d022e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gadcc05de7369c4f959fc7b870640d022e">mx::sigproc::kneePSD</a> (std::vector&lt; floatT &gt; &amp;psd, std::vector&lt; floatT &gt; &amp;f, floatT beta, floatT fn, floatT alpha)</td></tr>
 <tr class="memdesc:gadcc05de7369c4f959fc7b870640d022e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a 1-D "knee" PSD.  <a href="group__psds.html#gadcc05de7369c4f959fc7b870640d022e">More...</a><br /></td></tr>
 <tr class="separator:gadcc05de7369c4f959fc7b870640d022e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaed98346fd5a35b6daba93907e690f66d"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrp , typename eigenArrf &gt; </td></tr>
-<tr class="memitem:gaed98346fd5a35b6daba93907e690f66d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#gaed98346fd5a35b6daba93907e690f66d">mx::sigproc::vonKarman_psd</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, typename eigenArrp::Scalar alpha, typename eigenArrp::Scalar L0=0, typename eigenArrp::Scalar l0=0, typename eigenArrp::Scalar beta=-1)</td></tr>
-<tr class="memdesc:gaed98346fd5a35b6daba93907e690f66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a von Karman power spectrum.  <a href="group__psds.html#gaed98346fd5a35b6daba93907e690f66d">More...</a><br /></td></tr>
-<tr class="separator:gaed98346fd5a35b6daba93907e690f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga424886d0cef466d70ab422d34d2822ce"><td class="memTemplParams" colspan="2">template&lt;typename eigenArrp , typename eigenArrf , typename alphaT , typename L0T , typename l0T , typename betaT &gt; </td></tr>
+<tr class="memitem:ga424886d0cef466d70ab422d34d2822ce"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga424886d0cef466d70ab422d34d2822ce">mx::sigproc::vonKarmanPSD</a> (eigenArrp &amp;psd, eigenArrf &amp;freq, alphaT alpha, L0T L0=0, l0T l0=0, betaT beta=-1)</td></tr>
+<tr class="memdesc:ga424886d0cef466d70ab422d34d2822ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a von Karman power spectrum.  <a href="group__psds.html#ga424886d0cef466d70ab422d34d2822ce">More...</a><br /></td></tr>
+<tr class="separator:ga424886d0cef466d70ab422d34d2822ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="memTemplParams" colspan="2">template&lt;typename vectorTout , typename vectorTin &gt; </td></tr>
 <tr class="memitem:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">mx::sigproc::augment1SidedPSD</a> (vectorTout &amp;psdTwoSided, vectorTin &amp;psdOneSided, bool addZeroFreq=false, typename vectorTin::value_type scale=0.5)</td></tr>
 <tr class="memdesc:ga32e44c6b0cd5ec6927a3f1ca1272a987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Augment a 1-sided PSD to standard 2-sided FFT form.  <a href="group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987">More...</a><br /></td></tr>
@@ -251,7 +252,7 @@ template&lt;typename vectorTout , typename vectorTin &gt; </div>
 <p>To illustrate, the bins are re-ordered as: </p><pre class="fragment">* {1,2,3,4,5} --&gt; {0,1,2,3,4,5,-4,-3,-2,-1}
 * </pre><p>The output is scaled so that the total power remains the same. The 0-freq and Nyquist freq are not scaled.</p>
 <p>Entries in psdOneSided are cast to the value_type of psdTwoSided, for instance to allow for conversion to complex type.</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000050">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000052">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">psdTwoSided</td><td>[out] on return contains the FFT storage order copy of psdOneSided. </td></tr>
@@ -262,9 +263,9 @@ template&lt;typename vectorTout , typename vectorTin &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00783">783</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00794">794</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00073">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::calcCoefficients()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01378">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00075">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::calcCoefficients()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01377">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +301,7 @@ template&lt;typename T &gt; </div>
 <p>Allocates freqTwoSided to hold a flipped copy of freqOneSided. If freqOneSided[0] is not 0, freqTwoSided[0] is set to 0, and the augmented frequency scale is shifted by 1.</p>
 <p>Example:</p>
 <p>{1,2,3,4,5} --&gt; {0,1,2,3,4,5,-4,-3,-2,-1}</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000051">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000053">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">freqTwoSided</td><td>[out] on return contains the FFT storage order copy of freqOneSided. </td></tr>
@@ -309,9 +310,9 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00840">840</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00851">851</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01378">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, and <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01377">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, and <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -360,9 +361,9 @@ template&lt;class realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00185">185</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00187">187</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00303">mx::sigproc::frequencyGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00305">mx::sigproc::frequencyGrid()</a>.</p>
 
 </div>
 </div>
@@ -408,9 +409,9 @@ template&lt;typename eigenArr , typename realParamT &gt; </div>
 
 <p>Create a 2-D frequency grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00303">303</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00305">305</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00185">mx::sigproc::freq_sampling()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00187">mx::sigproc::freq_sampling()</a>.</p>
 
 </div>
 </div>
@@ -444,9 +445,9 @@ template&lt;typename eigenArr &gt; </div>
 
 <p>Create a frequency grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00373">373</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00375">375</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00383">mx::sigproc::frequencyGrid()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00385">mx::sigproc::frequencyGrid()</a>.</p>
 
 </div>
 </div>
@@ -492,9 +493,9 @@ template&lt;typename eigenArr &gt; </div>
 
 <p>Create a frequency grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00383">383</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00385">385</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00373">mx::sigproc::frequencyGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00375">mx::sigproc::frequencyGrid()</a>.</p>
 
 </div>
 </div>
@@ -540,7 +541,7 @@ template&lt;typename realT , typename realParamT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000047">Test:</a></b></dt><dd>Verify creation of a 1D frequency grid <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_frequencyGrid_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000049">Test:</a></b></dt><dd>Verify creation of a 1D frequency grid <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_frequencyGrid_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">vec</td><td>[out] vec the pre-allocated vector, on return contains the frequency grid </td></tr>
@@ -550,7 +551,7 @@ template&lt;typename realT , typename realParamT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00247">247</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00249">249</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
@@ -627,7 +628,7 @@ template&lt;typename floatT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00660">660</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00670">670</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +687,7 @@ template&lt;typename floatT , typename floatParamT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000049">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000051">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">psd</td><td>[in/out] the PSD to normalize, will be altered. </td></tr>
@@ -698,7 +699,7 @@ template&lt;typename floatT , typename floatParamT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00483">483</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00485">485</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -759,7 +760,7 @@ template&lt;typename floatT , typename floatParamT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000048">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000050">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">psd</td><td>[in/out] the PSD to normalize, will be altered. </td></tr>
@@ -771,9 +772,9 @@ template&lt;typename floatT , typename floatParamT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00439">439</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00441">441</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01378">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, and <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01377">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, and <a class="el" href="psdFilter__test_8cpp_source.html#l00218">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -828,9 +829,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00405">405</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00407">407</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00559">mx::sigproc::oneoverf_psd()</a>, and <a class="el" href="psdUtils_8hpp_source.html#l00705">mx::sigproc::vonKarman_psd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00561">mx::sigproc::oneoverf_psd()</a>, and <a class="el" href="psdUtils_8hpp_source.html#l00715">mx::sigproc::vonKarmanPSD()</a>.</p>
 
 </div>
 </div>
@@ -898,9 +899,9 @@ template&lt;typename eigenArrp , typename eigenArrf &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00559">559</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00561">561</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00405">mx::sigproc::oneoverf_norm()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00407">mx::sigproc::oneoverf_norm()</a>.</p>
 
 </div>
 </div>
@@ -955,7 +956,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00423">423</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00425">425</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1004,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000046">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000048">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>[in] the frequency scale of the PSD. </td></tr>
@@ -1013,11 +1014,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00131">131</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00133">133</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00065">mx::sigproc::psdVar1sided()</a>, and <a class="el" href="psdUtils_8hpp_source.html#l00096">mx::sigproc::psdVar2sided()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00067">mx::sigproc::psdVar1sided()</a>, and <a class="el" href="psdUtils_8hpp_source.html#l00098">mx::sigproc::psdVar2sided()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00774">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01378">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00897">mx::sigproc::rebin1SidedPSD()</a>, <a class="el" href="psdUtils__test_8cpp_source.html#l00022">SCENARIO()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00773">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01377">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, <a class="el" href="psdUtils_8hpp_source.html#l00908">mx::sigproc::rebin1SidedPSD()</a>, <a class="el" href="psdUtils__test_8cpp_source.html#l00022">SCENARIO()</a>, and <a class="el" href="speckleAmpPSD_8hpp_source.html#l00054">mx::AO::analysis::speckleAmpPSD()</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1071,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000044">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000046">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">df</td><td>[in] the frequency scale of the PSD </td></tr>
@@ -1081,9 +1082,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00065">65</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00067">67</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="averagePeriodogram_8hpp_source.html#l00356">mx::sigproc::averagePeriodogram&lt; realT &gt;::operator()()</a>, and <a class="el" href="psdUtils_8hpp_source.html#l00131">mx::sigproc::psdVar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="averagePeriodogram_8hpp_source.html#l00356">mx::sigproc::averagePeriodogram&lt; realT &gt;::operator()()</a>, and <a class="el" href="psdUtils_8hpp_source.html#l00133">mx::sigproc::psdVar()</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1138,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000045">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000047">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">df</td><td>[in] the frequency scale of the PSD </td></tr>
@@ -1148,9 +1149,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00096">96</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00098">98</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00131">mx::sigproc::psdVar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="psdUtils_8hpp_source.html#l00133">mx::sigproc::psdVar()</a>.</p>
 
 </div>
 </div>
@@ -1207,7 +1208,7 @@ template&lt;typename eigenArrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00150">150</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00152">152</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1287,22 +1288,22 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00897">897</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00908">908</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00131">mx::sigproc::psdVar()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00133">mx::sigproc::psdVar()</a>.</p>
 
 </div>
 </div>
-<a id="gaed98346fd5a35b6daba93907e690f66d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaed98346fd5a35b6daba93907e690f66d">&#9670;&nbsp;</a></span>vonKarman_psd()</h2>
+<a id="ga424886d0cef466d70ab422d34d2822ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga424886d0cef466d70ab422d34d2822ce">&#9670;&nbsp;</a></span>vonKarmanPSD() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename eigenArrp , typename eigenArrf &gt; </div>
+template&lt;typename eigenArrp , typename eigenArrf , typename alphaT , typename L0T , typename l0T , typename betaT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void mx::sigproc::vonKarman_psd </td>
+          <td class="memname">void mx::sigproc::vonKarmanPSD </td>
           <td>(</td>
           <td class="paramtype">eigenArrp &amp;&#160;</td>
           <td class="paramname"><em>psd</em>, </td>
@@ -1316,25 +1317,25 @@ template&lt;typename eigenArrp , typename eigenArrf &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename eigenArrp::Scalar&#160;</td>
+          <td class="paramtype">alphaT&#160;</td>
           <td class="paramname"><em>alpha</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename eigenArrp::Scalar&#160;</td>
+          <td class="paramtype">L0T&#160;</td>
           <td class="paramname"><em>L0</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename eigenArrp::Scalar&#160;</td>
+          <td class="paramtype">l0T&#160;</td>
           <td class="paramname"><em>l0</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename eigenArrp::Scalar&#160;</td>
+          <td class="paramtype">betaT&#160;</td>
           <td class="paramname"><em>beta</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
@@ -1370,19 +1371,19 @@ template&lt;typename eigenArrp , typename eigenArrf &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00705">705</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00715">715</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00405">mx::sigproc::oneoverf_norm()</a>.</p>
+<p class="reference">References <a class="el" href="psdUtils_8hpp_source.html#l00407">mx::sigproc::oneoverf_norm()</a>.</p>
 
 </div>
 </div>
-<a id="ga83af1f209971a81531d243aaf524dd74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga83af1f209971a81531d243aaf524dd74">&#9670;&nbsp;</a></span>vonKarmanPSD()</h2>
+<a id="ga86c40cc15c5d3258a77b9a6efa45f886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86c40cc15c5d3258a77b9a6efa45f886">&#9670;&nbsp;</a></span>vonKarmanPSD() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename floatT &gt; </div>
+template&lt;typename floatT , typename floatfT , typename alphaT , typename T0T , typename t0T , typename betaT &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">int mx::sigproc::vonKarmanPSD </td>
@@ -1393,32 +1394,32 @@ template&lt;typename floatT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; floatT &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; floatfT &gt; &amp;&#160;</td>
           <td class="paramname"><em>f</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">floatT&#160;</td>
-          <td class="paramname"><em>beta</em>, </td>
+          <td class="paramtype">alphaT&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">floatT&#160;</td>
-          <td class="paramname"><em>T0</em>, </td>
+          <td class="paramtype">T0T&#160;</td>
+          <td class="paramname"><em>T0</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">floatT&#160;</td>
-          <td class="paramname"><em>t0</em>, </td>
+          <td class="paramtype">t0T&#160;</td>
+          <td class="paramname"><em>t0</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">floatT&#160;</td>
-          <td class="paramname"><em>alpha</em>&#160;</td>
+          <td class="paramtype">betaT&#160;</td>
+          <td class="paramname"><em>beta</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1444,15 +1445,15 @@ template&lt;typename floatT &gt; </div>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">psd</td><td>[out] the PSD vector, will be resized. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>[in] the frequency vector </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>[in] the scaling constant </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">T0</td><td>[in] the outer scale </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">t0</td><td>[in] the inner scale </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>[in] the exponent, by convention \( alpha &gt; 0 \). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">T0</td><td>[in] the outer scale, default is 0 (not used). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t0</td><td>[in] the inner scale, default is 0 (not used). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>[in] the scaling constant, default is 1 </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00618">618</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psdUtils_8hpp_source.html#l00621">621</a> of file <a class="el" href="psdUtils_8hpp_source.html">psdUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1462,7 @@ template&lt;typename floatT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

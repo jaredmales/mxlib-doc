@@ -141,6 +141,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gaf2a256ac7d5a7e089aecfff4224920a6">mx::improc::annulusIndices</a> (eigenT &amp;rIm, eigenT &amp;qIm, typename eigenT::Scalar xcen, typename eigenT::Scalar ycen, typename eigenT::Scalar min_r, typename eigenT::Scalar max_r, typename eigenT::Scalar min_q, typename eigenT::Scalar max_q, eigenT *mask=0)</td></tr>
 <tr class="memdesc:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vector indices of an annular region in an image.  <a href="group__image__masks.html#gaf2a256ac7d5a7e089aecfff4224920a6">More...</a><br /></td></tr>
 <tr class="separator:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea00fbf3785d282c66e0703d4f484d9"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:a8ea00fbf3785d282c66e0703d4f484d9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="imageMasks_8hpp.html#a8ea00fbf3785d282c66e0703d4f484d9">mx::improc::reflectImageIndices</a> (const std::vector&lt; size_t &gt; &amp;idxi, int w, int h, realT xc, realT yc)</td></tr>
+<tr class="memdesc:a8ea00fbf3785d282c66e0703d4f484d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect vector indices across the given center pixel.  <a href="imageMasks_8hpp.html#a8ea00fbf3785d282c66e0703d4f484d9">More...</a><br /></td></tr>
+<tr class="separator:a8ea00fbf3785d282c66e0703d4f484d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga917b7b98a203cb1bb70556e9ca3e8a6b"><td class="memTemplParams" colspan="2">template&lt;class eigenT &gt; </td></tr>
 <tr class="memitem:ga917b7b98a203cb1bb70556e9ca3e8a6b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga917b7b98a203cb1bb70556e9ca3e8a6b">mx::improc::applyMask</a> (eigenT &amp;maskedIm, const std::vector&lt; size_t &gt; &amp;idx, typename eigenT::Scalar maskval)</td></tr>
 <tr class="memdesc:ga917b7b98a203cb1bb70556e9ca3e8a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a mask to an image.  <a href="group__image__masks.html#ga917b7b98a203cb1bb70556e9ca3e8a6b">More...</a><br /></td></tr>
@@ -183,6 +187,73 @@ Functions</h2></td></tr>
 <tr class="separator:aab4c88c1c0281e7529af08174ff00252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a8ea00fbf3785d282c66e0703d4f484d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea00fbf3785d282c66e0703d4f484d9">&#9670;&nbsp;</a></span>reflectImageIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;size_t&gt; mx::improc::reflectImageIndices </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>idxi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>xc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>yc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reflect vector indices across the given center pixel. </p>
+<p>This assumes column major order. </p><dl class="section return"><dt>Returns</dt><dd>the vector of reflected indices </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idxi</td><td>[in] the vector indices to reflect </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>[in] the image width </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>[in] the image height </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xc</td><td>[in] the image center x coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yc</td><td>[in] the image center y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00257">257</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>, <a class="el" href="imageUtils_8hpp_source.html#l00046">mx::improc::reflectImageCoords()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00257">mx::improc::reflectImageIndices()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l00257">mx::improc::reflectImageIndices()</a>.</p>
+
+</div>
+</div>
 <a id="aab4c88c1c0281e7529af08174ff00252"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab4c88c1c0281e7529af08174ff00252">&#9670;&nbsp;</a></span>rotateMask()</h2>
 
@@ -220,11 +291,11 @@ template&lt;typename imageT , typename transformT  = cubicConvolTransform&lt;typ
 <p>Rotate a binary mask. </p>
 <p>Sets edge pixels to 0 or 1 depending on the interpolation, being below/above 0.5. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00728">728</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00756">756</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00183">mx::improc::imageRotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00728">mx::improc::rotateMask()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00183">mx::improc::imageRotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00756">mx::improc::rotateMask()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00570">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00728">mx::improc::rotateMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00570">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00756">mx::improc::rotateMask()</a>.</p>
 
 </div>
 </div>
@@ -234,7 +305,7 @@ template&lt;typename imageT , typename transformT  = cubicConvolTransform&lt;typ
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageMasks_8hpp.html">imageMasks.hpp</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:51:59 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

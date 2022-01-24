@@ -11,6 +11,7 @@ var mxError_8hpp =
     [ "MXE_GNUPLOTERR", "group__mxe__errors.html#ga73199b268822c76ed8388114025791d0", null ],
     [ "MXE_INVALIDARG", "group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a", null ],
     [ "MXE_LAPACKERR", "group__mxe__errors.html#ga4920fa5c899bcd6b7c78d3012d8bbe40", null ],
+    [ "MXE_LIBERR", "group__mxe__errors.html#ga5959027972043131caef95d339732ec5", null ],
     [ "MXE_NOTFOUND", "group__mxe__errors.html#gaf6702f3509aa350c39410d26ffac0f18", null ],
     [ "MXE_NOTIMPL", "group__mxe__errors.html#gacabe55cc9097f4dad7ec5b492a25779b", null ],
     [ "MXE_PARAMNOTSET", "group__mxe__errors.html#ga9b57b26b8d9db764202fbe5e6ea981bb", null ],
@@ -20,8 +21,9 @@ var mxError_8hpp =
     [ "MXE_TIMEOUT", "group__mxe__errors.html#gade0138a8712aa54888f6d36756e1ee42", null ],
     [ "mxError", "group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4", null ],
     [ "mxPError", "group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5", null ],
-    [ "errno_CodeToName", "mxError_8hpp.html#gad0cf50f0483ac3d41ddc0f556a18bbc1", null ],
+    [ "errno_CodeToName", "mxError_8hpp.html#gad4f7f7aed4d908abb9cf4bad51ec4dab", null ],
     [ "errno_report", "mxError_8hpp.html#gaedcae323c2891fcbed0eec1e4eebb543", null ],
     [ "error_report", "mxError_8hpp.html#ga56a81b53911bc4cf6de96f0a0b1885c7", null ],
-    [ "MXE_CodeToName", "mxError_8hpp.html#gacc968e47358b648a87d2c64213b1882e", null ]
+    [ "MXE_CodeToDescription", "mxError_8hpp.html#gae7eb7e8aca6b60f4c364ebc0e1e69822", null ],
+    [ "MXE_CodeToName", "mxError_8hpp.html#gab83ea3bc4cd444823884e023ff1fcda7", null ]
 ];

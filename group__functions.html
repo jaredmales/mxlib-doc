@@ -132,10 +132,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf7e3e0d052049a12fd7d4e0190cf5602"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">mx::math::func::jinc</a> (const T &amp;x)</td></tr>
 <tr class="memdesc:gaf7e3e0d052049a12fd7d4e0190cf5602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the the Jinc function.  <a href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">More...</a><br /></td></tr>
 <tr class="separator:gaf7e3e0d052049a12fd7d4e0190cf5602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a702ef04302dc30da61d1f6d19ec87b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga3a702ef04302dc30da61d1f6d19ec87b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__functions.html#ga3a702ef04302dc30da61d1f6d19ec87b">mx::math::func::jinc2</a> (const T &amp;x)</td></tr>
-<tr class="memdesc:ga3a702ef04302dc30da61d1f6d19ec87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Jinc2 function.  <a href="group__functions.html#ga3a702ef04302dc30da61d1f6d19ec87b">More...</a><br /></td></tr>
-<tr class="separator:ga3a702ef04302dc30da61d1f6d19ec87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa37415341730ef4c6de9815c5c8464fa"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:gaa37415341730ef4c6de9815c5c8464fa"><td class="memTemplItemLeft" align="right" valign="top">T2&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__functions.html#gaa37415341730ef4c6de9815c5c8464fa">mx::math::func::jincN</a> (const T1 &amp;v, const T2 &amp;x)</td></tr>
+<tr class="memdesc:gaa37415341730ef4c6de9815c5c8464fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the JincN function.  <a href="group__functions.html#gaa37415341730ef4c6de9815c5c8464fa">More...</a><br /></td></tr>
+<tr class="separator:gaa37415341730ef4c6de9815c5c8464fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1a0583ff2032c5a78e1819d31714dffd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga1a0583ff2032c5a78e1819d31714dffd"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__functions.html#ga1a0583ff2032c5a78e1819d31714dffd">mx::math::func::legendre_p</a> (int n, T x)</td></tr>
 <tr class="memdesc:ga1a0583ff2032c5a78e1819d31714dffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legendre Polynomials.  <a href="group__functions.html#ga1a0583ff2032c5a78e1819d31714dffd">More...</a><br /></td></tr>
@@ -205,7 +205,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="bessel_8hpp_source.html#l00048">48</a> of file <a class="el" href="bessel_8hpp_source.html">bessel.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernike_8hpp_source.html#l00521">mx::sigproc::zernikeQNorm()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernike_8hpp_source.html#l00547">mx::sigproc::zernikeQNorm()</a>.</p>
 
 </div>
 </div>
@@ -281,45 +281,59 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="jinc_8hpp_source.html#l00064">64</a> of file <a class="el" href="jinc_8hpp_source.html">jinc.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="airyPattern_8hpp_source.html#l00059">mx::math::func::airyPattern()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02095">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02127">mx::AO::analysis::F_mod()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02172">mx::AO::analysis::Fm_projMod()</a>, <a class="el" href="jincFuncs_8hpp_source.html#l00026">mx::AO::analysis::jincFuncs()</a>, <a class="el" href="aoPSDs_8hpp_source.html#l00299">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::operator()()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="airyPattern_8hpp_source.html#l00059">mx::math::func::airyPattern()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02171">mx::AO::analysis::Fm_projMod()</a>, <a class="el" href="jincFuncs_8hpp_source.html#l00026">mx::AO::analysis::jincFuncs()</a>, <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>, <a class="el" href="aoPSDs_8hpp_source.html#l00299">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::operator()()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00068">mx::AO::analysis::phiInt_basic()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00134">mx::AO::analysis::phiInt_mod()</a>, and <a class="el" href="zernike_8hpp_source.html#l00661">mx::sigproc::zernikePPiston()</a>.</p>
 
 </div>
 </div>
-<a id="ga3a702ef04302dc30da61d1f6d19ec87b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3a702ef04302dc30da61d1f6d19ec87b">&#9670;&nbsp;</a></span>jinc2()</h2>
+<a id="gaa37415341730ef4c6de9815c5c8464fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa37415341730ef4c6de9815c5c8464fa">&#9670;&nbsp;</a></span>jincN()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T1 , typename T2 &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T mx::math::func::jinc2 </td>
+          <td class="memname">T2 mx::math::func::jincN </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
+          <td class="paramtype">const T1 &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const T2 &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Jinc2 function. </p>
-<p>The Jinc2 function is defined here as </p><p class="formulaDsp">
-\[ Ji_2(x) = \frac{J_2(x)}{x} \]
+<p>Returns the JincN function. </p>
+<p>The JincN function is defined here as </p><p class="formulaDsp">
+\[ Ji_N(x) = \frac{J_N(x)}{x} \]
 </p>
-<p> where \( J_2 \) is the cylindrical bessel function of the first kind of order 2.</p>
-<p>If x is smaller than \( \sqrt{\epsilon} \), returns 0.</p>
-<dl class="section return"><dt>Returns</dt><dd>the value of Ji2(x) </dd></dl>
+<p> where \( J_N \) is the cylindrical bessel function of the first kind of order N, \( N \ge 1 \).</p>
+<p>If \( N == 1 \) this returns <a class="el" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">jinc(x)</a>.</p>
+<p>Otherwise, if x is smaller than \( \sqrt{\epsilon} \), returns 0.</p>
+<dl class="section return"><dt>Returns</dt><dd>the value of JiN(x) </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>[in] the Bessel function order </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>[in] the argument </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="jinc_8hpp_source.html#l00118">118</a> of file <a class="el" href="jinc_8hpp_source.html">jinc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jinc_8hpp_source.html#l00120">120</a> of file <a class="el" href="jinc_8hpp_source.html">jinc.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00299">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::operator()()</a>.</p>
+<p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00299">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::operator()()</a>, <a class="el" href="zernike_8hpp_source.html#l00682">mx::sigproc::zernikePAstig()</a>, <a class="el" href="zernike_8hpp_source.html#l00689">mx::sigproc::zernikePComa()</a>, <a class="el" href="zernike_8hpp_source.html#l00675">mx::sigproc::zernikePDefocus()</a>, <a class="el" href="zernike_8hpp_source.html#l00668">mx::sigproc::zernikePTipTilt()</a>, and <a class="el" href="zernike_8hpp_source.html#l00696">mx::sigproc::zernikePTrefoil()</a>.</p>
 
 </div>
 </div>
@@ -732,7 +746,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:52 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('structmx_1_1app_1_1appConfigurator.htm
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>Class to manage a set of configurable values, and read their values from config/ini files and the command line. </p>
-<p>The configuration files are ini-style, with sections. That is </p><pre class="fragment">key1=value1
+<p>The configuration files are TOML/ini-style, with sections. That is </p><pre class="fragment">key1=value1
 key2=value2
 
 [section1]
@@ -120,11 +120,13 @@ key4=value6_over_
 </li>
 <li>Vectors are input as comma separated lists, as in section1.key4 above. Leading whitespace is stripped from each component of the vector.</li>
 </ul>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd>add handling of += in subsequent files.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd><p class="startdd">add handling of += in subsequent files. </p>
+<p class="enddd">should just swith to strict TOML</p>
+</dd></dl>
 <p>The command line parser handles both short-opt ("-h -vArg -n Arg") and long-opt ("--help --value=Arg --number=Arg") styles.</p>
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>a config=value pair listed in a conf file twice seems to cause a failure, even if they are the same value.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00085">85</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00086">86</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="appConfigurator_8hpp_source.html">app/appConfigurator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -265,7 +267,7 @@ Public Attributes</h2></td></tr>
 
 <p>Iterator for the clOnlyTargets list. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00091">91</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00092">92</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +285,7 @@ Public Attributes</h2></td></tr>
 
 <p>Iterator for the targets unordered_map. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00088">88</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00089">89</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
 </div>
 </div>
@@ -315,9 +317,9 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00043">43</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="configTarget_8hpp_source.html#l00060">mx::app::configTarget::keyword</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00108">nAdded</a>, <a class="el" href="configTarget_8hpp_source.html#l00055">mx::app::configTarget::name</a>, and <a class="el" href="configTarget_8hpp_source.html#l00059">mx::app::configTarget::section</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="configTarget_8hpp_source.html#l00060">mx::app::configTarget::keyword</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00107">nAdded</a>, <a class="el" href="configTarget_8hpp_source.html#l00055">mx::app::configTarget::name</a>, and <a class="el" href="configTarget_8hpp_source.html#l00059">mx::app::configTarget::section</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00062">add()</a>, <a class="el" href="application_8cpp_source.html#l00190">mx::app::application::setupStandardConfig()</a>, <a class="el" href="application_8cpp_source.html#l00195">mx::app::application::setupStandardHelp()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00962">unusedSections()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00062">add()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l01217">mx::AO::analysis::aoAtmosphere&lt; realT &gt;::setupConfig()</a>, <a class="el" href="application_8cpp_source.html#l00190">mx::app::application::setupStandardConfig()</a>, <a class="el" href="application_8cpp_source.html#l00195">mx::app::application::setupStandardHelp()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00967">unusedSections()</a>.</p>
 
 </div>
 </div>
@@ -399,7 +401,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">clt</td><td>[in] The command-line option type, argType::false, argType::true, argType::optional, argType::required </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>[in] The config file section name, can be empty "" </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">kw</td><td>[in] The config file keyword, read in a "keyword=value" pair </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">isReq</td><td>[in] Whether or not this is option is required to be set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isReq</td><td>[in] Whether or not this option is required to be set </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ht</td><td>[in] The type to display in the help message </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">he</td><td>[in] The explanation to display in the help message </td></tr>
   </table>
@@ -431,7 +433,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00035">35</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00097">m_unusedConfigs</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00104">nonOptions</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00098">m_unusedConfigs</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00104">nonOptions</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="application_8cpp_source.html#l00039">mx::app::application::main()</a>.</p>
 
@@ -481,11 +483,11 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01174">1174</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01173">1173</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00097">m_unusedConfigs</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00098">m_unusedConfigs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l01245">configUnused()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l01244">configUnused()</a>.</p>
 
 </div>
 </div>
@@ -540,9 +542,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01245">1245</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01244">1244</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l01174">configUnused()</a>, and <a class="el" href="iniFile_8hpp_source.html#l00057">mx::app::iniFile::makeKey()</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l01173">configUnused()</a>, and <a class="el" href="iniFile_8hpp_source.html#l00057">mx::app::iniFile::makeKey()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +574,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00239">239</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00243">243</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00232">count()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00235">count()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -614,9 +616,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00232">232</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00235">235</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00239">count()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00243">count()</a>.</p>
 
 </div>
 </div>
@@ -665,9 +667,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01027">1027</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01026">1026</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -719,9 +721,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00865">865</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00864">864</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -780,9 +782,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00716">716</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00715">715</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00367">configLog</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00111">m_sources</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00366">configLog</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00110">m_sources</a>.</p>
 
 </div>
 </div>
@@ -838,9 +840,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00939">939</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00938">938</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00367">configLog</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00366">configLog</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>.</p>
 
 </div>
 </div>
@@ -890,9 +892,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00645">645</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00644">644</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -949,9 +951,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00481">481</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00480">480</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -1014,11 +1016,11 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00378">378</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00377">377</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00367">configLog</a>, <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00111">m_sources</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00366">configLog</a>, <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00110">m_sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l01174">configUnused()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00481">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l01100">operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l01173">configUnused()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00480">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l01099">operator()()</a>.</p>
 
 </div>
 </div>
@@ -1075,9 +1077,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00555">555</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00554">554</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00367">configLog</a>, <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00366">configLog</a>, <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>.</p>
 
 </div>
 </div>
@@ -1109,9 +1111,9 @@ false if no value was set. </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00227">227</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00230">230</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -1155,7 +1157,7 @@ false if no value was set. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00219">219</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00227">isSet()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00990">isSetUnused()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00230">isSet()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00995">isSetUnused()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l01239">mx::AO::analysis::aoAtmosphere&lt; realT &gt;::loadConfig()</a>.</p>
 
 </div>
 </div>
@@ -1186,9 +1188,9 @@ false if no value was set. </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00990">990</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00995">995</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00097">m_unusedConfigs</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00219">isSet()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00098">m_unusedConfigs</a>.</p>
 
 </div>
 </div>
@@ -1255,9 +1257,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01100">1100</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l01099">1099</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>.</p>
 
 </div>
 </div>
@@ -1305,7 +1307,7 @@ template&lt;typename typeT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00075">75</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="clOptions_8cpp_source.html#l00071">mx::app::clOptions::add()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="clOptions_8cpp_source.html#l00167">mx::app::clOptions::count()</a>, <a class="el" href="clOptions_8cpp_source.html#l00176">mx::app::clOptions::getAll()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00111">m_sources</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00097">m_unusedConfigs</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00104">nonOptions</a>, <a class="el" href="clOptions_8hpp_source.html#l00070">mx::app::clOptions::nOpts</a>, <a class="el" href="clOptions_8cpp_source.html#l00252">mx::app::clOptions::numUnknown()</a>, <a class="el" href="clOptions_8cpp_source.html#l00242">mx::app::clOptions::optSet()</a>, <a class="el" href="clOptions_8cpp_source.html#l00104">mx::app::clOptions::parse()</a>, and <a class="el" href="clOptions_8cpp_source.html#l00258">mx::app::clOptions::unknown()</a>.</p>
+<p class="reference">References <a class="el" href="clOptions_8cpp_source.html#l00071">mx::app::clOptions::add()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="clOptions_8cpp_source.html#l00167">mx::app::clOptions::count()</a>, <a class="el" href="clOptions_8cpp_source.html#l00176">mx::app::clOptions::getAll()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00110">m_sources</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00098">m_unusedConfigs</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00104">nonOptions</a>, <a class="el" href="clOptions_8hpp_source.html#l00070">mx::app::clOptions::nOpts</a>, <a class="el" href="clOptions_8cpp_source.html#l00252">mx::app::clOptions::numUnknown()</a>, <a class="el" href="clOptions_8cpp_source.html#l00242">mx::app::clOptions::optSet()</a>, <a class="el" href="clOptions_8cpp_source.html#l00104">mx::app::clOptions::parse()</a>, and <a class="el" href="clOptions_8cpp_source.html#l00258">mx::app::clOptions::unknown()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="application_8cpp_source.html#l00128">mx::app::application::reReadConfig()</a>, and <a class="el" href="application_8cpp_source.html#l00092">mx::app::application::setup()</a>.</p>
 
@@ -1350,7 +1352,7 @@ template&lt;typename typeT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00149">149</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="iniFile_8hpp_source.html#l00141">mx::app::iniFile::count()</a>, <a class="el" href="iniFile_8hpp_source.html#l00153">mx::app::iniFile::erase()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00111">m_sources</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00097">m_unusedConfigs</a>, <a class="el" href="mxError_8hpp_source.html#l00159">MXE_ALLOCERR</a>, <a class="el" href="mxError_8hpp_source.html#l00210">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00174">MXE_PARSEERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="iniFile_8hpp_source.html#l00050">mx::app::iniFile::names</a>, <a class="el" href="iniFile_8hpp_source.html#l00094">mx::app::iniFile::parse()</a>, and <a class="el" href="iniFile_8hpp_source.html#l00070">mx::app::iniFile::parseKey()</a>.</p>
+<p class="reference">References <a class="el" href="iniFile_8hpp_source.html#l00141">mx::app::iniFile::count()</a>, <a class="el" href="iniFile_8hpp_source.html#l00153">mx::app::iniFile::erase()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00110">m_sources</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00098">m_unusedConfigs</a>, <a class="el" href="mxError_8hpp_source.html#l00164">MXE_ALLOCERR</a>, <a class="el" href="mxError_8hpp_source.html#l00222">MXE_FILENOTFOUND</a>, <a class="el" href="mxError_8hpp_source.html#l00181">MXE_PARSEERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="iniFile_8hpp_source.html#l00050">mx::app::iniFile::names</a>, <a class="el" href="iniFile_8hpp_source.html#l00094">mx::app::iniFile::parse()</a>, and <a class="el" href="iniFile_8hpp_source.html#l00070">mx::app::iniFile::parseKey()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="application_8cpp_source.html#l00128">mx::app::application::reReadConfig()</a>, and <a class="el" href="application_8cpp_source.html#l00092">mx::app::application::setup()</a>.</p>
 
@@ -1381,9 +1383,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00962">962</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00967">967</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00043">add()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00097">m_unusedConfigs</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00043">add()</a>, and <a class="el" href="appConfigurator_8hpp_source.html#l00098">m_unusedConfigs</a>.</p>
 
 </div>
 </div>
@@ -1414,9 +1416,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00251">251</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00256">256</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00094">m_targets</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00244">verbosity()</a>.</p>
+<p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00248">verbosity()</a>.</p>
 
 </div>
 </div>
@@ -1457,9 +1459,9 @@ template&lt;typename typeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00244">244</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00248">248</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00251">verbosity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00256">verbosity()</a>.</p>
 
 </div>
 </div>
@@ -1507,9 +1509,9 @@ template&lt;typename typeT &gt; </div>
 <p>Call an external logging function whenever a config value is accessed by get or operator(). </p>
 <p>Only called if this is not a nullptr (the default), otherwise no logging or reporting is done. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00367">367</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00366">366</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>.</p>
 
 </div>
 </div>
@@ -1527,9 +1529,9 @@ template&lt;typename typeT &gt; </div>
 
 <p>Flag controlling whether or not to record config sources. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00111">111</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00110">110</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00378">get()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00075">parseCommandLine()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00149">readConfig()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00075">parseCommandLine()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00149">readConfig()</a>.</p>
 
 </div>
 </div>
@@ -1547,9 +1549,9 @@ template&lt;typename typeT &gt; </div>
 
 <p>The targets are stored in an unordered_map for fast access by key. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00094">94</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00095">95</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00043">add()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00035">clear()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00239">count()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00481">get()</a>, <a class="el" href="application_8cpp_source.html#l00268">mx::app::application::help()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00227">isSet()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l01100">operator()()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00075">parseCommandLine()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00149">readConfig()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00251">verbosity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00043">add()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00035">clear()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00243">count()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00480">get()</a>, <a class="el" href="application_8cpp_source.html#l00268">mx::app::application::help()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00230">isSet()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l01099">operator()()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00075">parseCommandLine()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00149">readConfig()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00256">verbosity()</a>.</p>
 
 </div>
 </div>
@@ -1567,9 +1569,9 @@ template&lt;typename typeT &gt; </div>
 
 <p>Config file entries present in the file(s), but not corresponding to a target when parsed. Set aside for possible analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00097">97</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00098">98</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00035">clear()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l01174">configUnused()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00990">isSetUnused()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00075">parseCommandLine()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00149">readConfig()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00962">unusedSections()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00035">clear()</a>, <a class="el" href="appConfigurator_8hpp_source.html#l01173">configUnused()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00995">isSetUnused()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00075">parseCommandLine()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00149">readConfig()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00967">unusedSections()</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1589,7 @@ template&lt;typename typeT &gt; </div>
 
 <p>Running count of options added, used to track order. </p>
 
-<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00108">108</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="appConfigurator_8hpp_source.html#l00107">107</a> of file <a class="el" href="appConfigurator_8hpp_source.html">appConfigurator.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00043">add()</a>.</p>
 
@@ -1623,7 +1625,7 @@ template&lt;typename typeT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>app</b></li><li class="navelem"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">appConfigurator</a></li>
-    <li class="footer">Generated on Sat Sep 11 2021 12:52:00 for mxlib by
+    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
