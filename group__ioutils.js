@@ -6,5 +6,6 @@ var group__ioutils =
     [ "FITS Files", "group__fits__processing.html", "group__fits__processing" ],
     [ "binVector Binary File Format", "group__binvector.html", "group__binvector" ],
     [ "pout", "group__ioutils.html#ga36fe6b69365bf974d587dcaf2894a30b", null ],
+    [ "readRawBinary", "group__ioutils.html#gad4ecdae51542f47d160fe7ac3935ef2c", null ],
     [ "writeRawBinary", "group__ioutils.html#gacd8c8775b9570d83bd9a37fc7e193e24", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jupiter_2180',['jupiter',['../structmx_1_1astro_1_1units_1_1jupiter.html',1,'mx::astro::units']]]
+  ['jupiter_2194',['jupiter',['../structmx_1_1astro_1_1units_1_1jupiter.html',1,'mx::astro::units']]]
 ];

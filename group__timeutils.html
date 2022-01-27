@@ -228,7 +228,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000065">Test:</a></b></dt><dd>Verify calculation of MJD. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_Cal2mjd">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000071">Test:</a></b></dt><dd>Verify calculation of MJD. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_Cal2mjd">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">yr</td><td>[in] Gregorian calendar year </td></tr>
@@ -282,7 +282,7 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000058">Test:</a></b></dt><dd>Verify operation of get_curr_time. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_get_curr_time">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000064">Test:</a></b></dt><dd>Verify operation of get_curr_time. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_get_curr_time">[test doc]</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="timeUtils_8hpp_source.html#l00091">91</a> of file <a class="el" href="timeUtils_8hpp_source.html">timeUtils.hpp</a>.</p>
 
@@ -321,7 +321,7 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000057">Test:</a></b></dt><dd>Verify operation of get_curr_time. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_get_curr_time">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000063">Test:</a></b></dt><dd>Verify operation of get_curr_time. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_get_curr_time">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">tsp</td><td>[out] a timespec to populate with the current time </td></tr>
@@ -353,7 +353,7 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
 
 <p>Parse an ISO8601 date of the form "YYYY-MM-DDTHH:MM:SS.S" and return the modified Julian date (MJD) </p>
 <p>Parsing is currently only for the exact form above, which is the form in a FITS file. See <a href="https://en.wikipedia.org/?title=ISO_8601">https://en.wikipedia.org/?title=ISO_8601</a>. After parsing calls Cal2mjd.</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000067">Test:</a></b></dt><dd>Verify conversion of an ISO 8601 time string to MJD. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_ISO8601date2mjd">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000073">Test:</a></b></dt><dd>Verify conversion of an ISO 8601 time string to MJD. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_ISO8601date2mjd">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fdate</td><td>[in] a standard ISO8601 date string </td></tr>
@@ -430,7 +430,7 @@ template&lt;typename typeT  = double, clockid_t clk_id = CLOCK_REALTIME&gt; </di
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -4 if fdate is not long enough</dd></dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000066">Test:</a></b></dt><dd>Verify parsing of an ISO 8601 time string <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_ISO8601dateBreakdown">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000072">Test:</a></b></dt><dd>Verify parsing of an ISO 8601 time string <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_ISO8601dateBreakdown">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">yr</td><td>[out] Gregorian calendar year </td></tr>
@@ -736,7 +736,7 @@ template&lt;typename floatT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000064">Test:</a></b></dt><dd>Verify parsing of a formatted time string. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_parse_hms">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000070">Test:</a></b></dt><dd>Verify parsing of a formatted time string. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_parse_hms">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">h</td><td>[out] the hour component coverted to floatT </td></tr>
@@ -783,7 +783,7 @@ template&lt;typename floatT &gt; </div>
 
 <p>Adds a time offset to an existing timespec. </p>
 <p>The offset is specified in nanoseconds, which can be greater than 1e9.</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000063">Test:</a></b></dt><dd>Verify operation of timespecAddNsec. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_timespecAddNsec">[test doc]</a> <br  />
+<dl class="test"><dt><b><a class="el" href="test.html#_test000069">Test:</a></b></dt><dd>Verify operation of timespecAddNsec. <a class="el" href="timeUtils__test_8cpp.html#tests_sys_timeUtils_timespecAddNsec">[test doc]</a> <br  />
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -914,7 +914,7 @@ template&lt;typename floatT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
+    <li class="footer">Generated on Thu Jan 27 2022 16:52:54 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

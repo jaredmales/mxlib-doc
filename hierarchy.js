@@ -141,6 +141,10 @@ var hierarchy =
     [ "mx::math::fit::moffat2D_sym_fitter< _realT >", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ],
     [ "mx::err::mxException", "classmx_1_1err_1_1mxException.html", [
       [ "mx::err::allocerr", "classmx_1_1err_1_1allocerr.html", null ],
+      [ "mx::err::filecerr", "classmx_1_1err_1_1filecerr.html", null ],
+      [ "mx::err::fileoerr", "classmx_1_1err_1_1fileoerr.html", null ],
+      [ "mx::err::filererr", "classmx_1_1err_1_1filererr.html", null ],
+      [ "mx::err::filewerr", "classmx_1_1err_1_1filewerr.html", null ],
       [ "mx::err::invalidarg", "classmx_1_1err_1_1invalidarg.html", null ],
       [ "mx::err::liberr", "classmx_1_1err_1_1liberr.html", null ],
       [ "mx::err::notimpl", "classmx_1_1err_1_1notimpl.html", null ],

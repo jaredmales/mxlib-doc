@@ -20,6 +20,6 @@ var group__image__transforms =
     [ "imageRebinSum", "group__image__transforms.html#ga02dc4b162fe62ecfa38109d24c363a9f", null ],
     [ "imageRotate", "group__image__transforms.html#ga3842e84008d9123b8df9962380354f30", null ],
     [ "imageShift", "group__image__transforms.html#ga68362f13937a7a98081e041d10f192a1", null ],
-    [ "imageShiftWP", "group__image__transforms.html#ga23b9a6fb1491ce76e06009083726d5f6", null ],
-    [ "imageShiftWP", "group__image__transforms.html#ga7dbc59cd2a6d420a6c99f427905e2cad", null ]
+    [ "imageShiftWP", "group__image__transforms.html#gae305fb04fe9b356d19af9fc2242a46fd", null ],
+    [ "imageShiftWPScale", "group__image__transforms.html#gadc3ff9248f00bcfeddfe89c9790039a1", null ]
 ];

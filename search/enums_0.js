@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['argtype_3970',['argType',['../clOptions_8hpp.html#a9edcb7ddbb2285c86702f7fe5e3bd128',1,'mx::app']]]
+  ['argtype_4000',['argType',['../clOptions_8hpp.html#a9edcb7ddbb2285c86702f7fe5e3bd128',1,'mx::app']]]
 ];

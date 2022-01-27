@@ -112,12 +112,16 @@ $(document).ready(function(){initNavTree('classmx_1_1err_1_1mxException.html',''
  <div class="center">
   <img src="classmx_1_1err_1_1mxException.png" usemap="#mx::err::mxException_map" alt=""/>
   <map id="mx::err::mxException_map" name="mx::err::mxException_map">
-<area href="classmx_1_1err_1_1allocerr.html" title="mxException for an allocation error" alt="mx::err::allocerr" shape="rect" coords="0,56,126,80"/>
-<area href="classmx_1_1err_1_1invalidarg.html" title="mxException for invalid arguments" alt="mx::err::invalidarg" shape="rect" coords="136,56,262,80"/>
-<area href="classmx_1_1err_1_1liberr.html" title="mxException for errors returned by a library call" alt="mx::err::liberr" shape="rect" coords="272,56,398,80"/>
-<area href="classmx_1_1err_1_1notimpl.html" title="mxException for not implemented features" alt="mx::err::notimpl" shape="rect" coords="408,56,534,80"/>
-<area href="classmx_1_1err_1_1paramnotset.html" title="mxException for parameters which aren&#39;t set" alt="mx::err::paramnotset" shape="rect" coords="544,56,670,80"/>
-<area href="classmx_1_1err_1_1sizeerr.html" title="mxException for a size error" alt="mx::err::sizeerr" shape="rect" coords="680,56,806,80"/>
+<area href="classmx_1_1err_1_1allocerr.html" title="mxException for an allocation error" alt="mx::err::allocerr" shape="rect" coords="136,56,262,80"/>
+<area href="classmx_1_1err_1_1filecerr.html" title="mxException for errors closing a file" alt="mx::err::filecerr" shape="rect" coords="136,112,262,136"/>
+<area href="classmx_1_1err_1_1fileoerr.html" title="mxException for errors on opening a file" alt="mx::err::fileoerr" shape="rect" coords="136,168,262,192"/>
+<area href="classmx_1_1err_1_1filererr.html" title="mxException for errors reading from a file" alt="mx::err::filererr" shape="rect" coords="136,224,262,248"/>
+<area href="classmx_1_1err_1_1filewerr.html" title="mxException for errors writing to a file" alt="mx::err::filewerr" shape="rect" coords="136,280,262,304"/>
+<area href="classmx_1_1err_1_1invalidarg.html" title="mxException for invalid arguments" alt="mx::err::invalidarg" shape="rect" coords="136,336,262,360"/>
+<area href="classmx_1_1err_1_1liberr.html" title="mxException for errors returned by a library call" alt="mx::err::liberr" shape="rect" coords="136,392,262,416"/>
+<area href="classmx_1_1err_1_1notimpl.html" title="mxException for not implemented features" alt="mx::err::notimpl" shape="rect" coords="136,448,262,472"/>
+<area href="classmx_1_1err_1_1paramnotset.html" title="mxException for parameters which aren&#39;t set" alt="mx::err::paramnotset" shape="rect" coords="136,504,262,528"/>
+<area href="classmx_1_1err_1_1sizeerr.html" title="mxException for a size error" alt="mx::err::sizeerr" shape="rect" coords="136,560,262,584"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -130,8 +134,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a579525063c485191a49b8213981cea5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="classmx_1_1err_1_1mxException.html#a579525063c485191a49b8213981cea5b">More...</a><br /></td></tr>
 <tr class="separator:a579525063c485191a49b8213981cea5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed9e5dc7ecec4176e5d261f0b07496b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#a7ed9e5dc7ecec4176e5d261f0b07496b">mxException</a> (const std::string &amp;esrc, const int &amp;ec, const std::string &amp;emnem, const std::string &amp;efile, const int &amp;line, const std::string &amp;expl)</td></tr>
-<tr class="memdesc:a7ed9e5dc7ecec4176e5d261f0b07496b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and fill in each of the values.  <a href="classmx_1_1err_1_1mxException.html#a7ed9e5dc7ecec4176e5d261f0b07496b">More...</a><br /></td></tr>
+<tr class="memdesc:a7ed9e5dc7ecec4176e5d261f0b07496b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and fill in each of the values, except errno.  <a href="classmx_1_1err_1_1mxException.html#a7ed9e5dc7ecec4176e5d261f0b07496b">More...</a><br /></td></tr>
 <tr class="separator:a7ed9e5dc7ecec4176e5d261f0b07496b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7c2f136c0a4483ce5829c4af24114c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#a4d7c2f136c0a4483ce5829c4af24114c">mxException</a> (const std::string &amp;esrc, const int &amp;ec, const std::string &amp;emnem, const int &amp;en, const std::string &amp;efile, const int &amp;line, const std::string &amp;expl)</td></tr>
+<tr class="memdesc:a4d7c2f136c0a4483ce5829c4af24114c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and fill in each of the values, including errno.  <a href="classmx_1_1err_1_1mxException.html#a4d7c2f136c0a4483ce5829c4af24114c">More...</a><br /></td></tr>
+<tr class="separator:a4d7c2f136c0a4483ce5829c4af24114c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7708c890b8be878fdbe67fcfdeac09b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1err_1_1mxException.html">mxException</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#ad7708c890b8be878fdbe67fcfdeac09b">operator=</a> (const <a class="el" href="classmx_1_1err_1_1mxException.html">mxException</a> &amp;e) noexcept</td></tr>
 <tr class="memdesc:ad7708c890b8be878fdbe67fcfdeac09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="classmx_1_1err_1_1mxException.html#ad7708c890b8be878fdbe67fcfdeac09b">More...</a><br /></td></tr>
 <tr class="separator:ad7708c890b8be878fdbe67fcfdeac09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,11 +161,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a36cb1baf1ec9c22f7b2bbdc072ea8fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The source of the exception, such as stdlib or cfitisio or the function name.  <a href="classmx_1_1err_1_1mxException.html#a36cb1baf1ec9c22f7b2bbdc072ea8fa4">More...</a><br /></td></tr>
 <tr class="separator:a36cb1baf1ec9c22f7b2bbdc072ea8fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7fcd104aa368460b023e544ed24cd53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#ac7fcd104aa368460b023e544ed24cd53">m_code</a> {0}</td></tr>
-<tr class="memdesc:ac7fcd104aa368460b023e544ed24cd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The source specific error code.  <a href="classmx_1_1err_1_1mxException.html#ac7fcd104aa368460b023e544ed24cd53">More...</a><br /></td></tr>
+<tr class="memdesc:ac7fcd104aa368460b023e544ed24cd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib error code.  <a href="classmx_1_1err_1_1mxException.html#ac7fcd104aa368460b023e544ed24cd53">More...</a><br /></td></tr>
 <tr class="separator:ac7fcd104aa368460b023e544ed24cd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72dbe8d50c7761a091b78fa48c3e9f6a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#a72dbe8d50c7761a091b78fa48c3e9f6a">m_codeName</a> {&quot;&quot;}</td></tr>
-<tr class="memdesc:a72dbe8d50c7761a091b78fa48c3e9f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mnemonic associated with the error code.  <a href="classmx_1_1err_1_1mxException.html#a72dbe8d50c7761a091b78fa48c3e9f6a">More...</a><br /></td></tr>
+<tr class="memdesc:a72dbe8d50c7761a091b78fa48c3e9f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the error code.  <a href="classmx_1_1err_1_1mxException.html#a72dbe8d50c7761a091b78fa48c3e9f6a">More...</a><br /></td></tr>
 <tr class="separator:a72dbe8d50c7761a091b78fa48c3e9f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a3d9a41f1aca674a8054b6aaee0ef6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#a98a3d9a41f1aca674a8054b6aaee0ef6">m_errno</a> {0}</td></tr>
+<tr class="memdesc:a98a3d9a41f1aca674a8054b6aaee0ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The errno error code (only used if non-zero)  <a href="classmx_1_1err_1_1mxException.html#a98a3d9a41f1aca674a8054b6aaee0ef6">More...</a><br /></td></tr>
+<tr class="separator:a98a3d9a41f1aca674a8054b6aaee0ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d73689ee2a57b12ef570b64b18a5d0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1err_1_1mxException.html#a28d73689ee2a57b12ef570b64b18a5d0">m_file</a> {&quot;&quot;}</td></tr>
 <tr class="memdesc:a28d73689ee2a57b12ef570b64b18a5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The source file where the exception originated.  <a href="classmx_1_1err_1_1mxException.html#a28d73689ee2a57b12ef570b64b18a5d0">More...</a><br /></td></tr>
 <tr class="separator:a28d73689ee2a57b12ef570b64b18a5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +181,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aecf7fb81cac1ad489f709816d20a6286"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecf7fb81cac1ad489f709816d20a6286">&#9670;&nbsp;</a></span>mxException() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf7fb81cac1ad489f709816d20a6286">&#9670;&nbsp;</a></span>mxException() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,14 +205,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00073">73</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00076">76</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>.</p>
+<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>.</p>
 
 </div>
 </div>
 <a id="a579525063c485191a49b8213981cea5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a579525063c485191a49b8213981cea5b">&#9670;&nbsp;</a></span>mxException() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a579525063c485191a49b8213981cea5b">&#9670;&nbsp;</a></span>mxException() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,14 +237,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Copy constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00079">79</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00082">82</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>.</p>
+<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>.</p>
 
 </div>
 </div>
 <a id="a7ed9e5dc7ecec4176e5d261f0b07496b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ed9e5dc7ecec4176e5d261f0b07496b">&#9670;&nbsp;</a></span>mxException() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed9e5dc7ecec4176e5d261f0b07496b">&#9670;&nbsp;</a></span>mxException() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,11 +301,106 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct and fill in each of the values. </p>
+<p>Construct and fill in each of the values, except errno. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">esrc</td><td>[in] the source of the exception, typically the class and function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ec</td><td>[in] the error code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">emnem</td><td>[in] the name of the error code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">efile</td><td>[in] the source file in which the exception occurred, normally __FILE__ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>[in] the line number where the exception was thrown </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expl</td><td>[in] the explanation for why the exception was thrown </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00085">85</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00088">88</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>.</p>
+<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>.</p>
+
+</div>
+</div>
+<a id="a4d7c2f136c0a4483ce5829c4af24114c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d7c2f136c0a4483ce5829c4af24114c">&#9670;&nbsp;</a></span>mxException() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mx::err::mxException::mxException </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>esrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>emnem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>en</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>efile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>expl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct and fill in each of the values, including errno. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">esrc</td><td>[in] the source of the exception, typically the class and function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ec</td><td>[in] the error code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">emnem</td><td>[in] the name of the error code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">en</td><td>[in] the value of errno </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">efile</td><td>[in] the source file in which the exception occurred, normally __FILE__ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>[in] the line number where the exception was thrown </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expl</td><td>[in] the explanation for why the exception was thrown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00100">100</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>.</p>
 
 </div>
 </div>
@@ -330,7 +435,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00112">112</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00129">129</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
 </div>
 </div>
@@ -361,11 +466,11 @@ Protected Attributes</h2></td></tr>
 <p>Build the what string. </p>
 <p>Must be called after updating any values, since the <a class="el" href="classmx_1_1err_1_1mxException.html#a04c68d90f1bf3fdbcc336f46e7044e96" title="Return the details of the exception as a single string.">what()</a> method is const const. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00119">119</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00136">136</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00056">m_code</a>, <a class="el" href="mxException_8hpp_source.html#l00059">m_codeName</a>, <a class="el" href="mxException_8hpp_source.html#l00068">m_explanation</a>, <a class="el" href="mxException_8hpp_source.html#l00062">m_file</a>, <a class="el" href="mxException_8hpp_source.html#l00065">m_line</a>, <a class="el" href="mxException_8hpp_source.html#l00053">m_source</a>, and <a class="el" href="mxException_8hpp_source.html#l00050">m_whatstr</a>.</p>
+<p class="reference">References <a class="el" href="mxError_8cpp_source.html#l00128">mx::errno_CodeToName()</a>, <a class="el" href="mxException_8hpp_source.html#l00056">m_code</a>, <a class="el" href="mxException_8hpp_source.html#l00059">m_codeName</a>, <a class="el" href="mxException_8hpp_source.html#l00062">m_errno</a>, <a class="el" href="mxException_8hpp_source.html#l00071">m_explanation</a>, <a class="el" href="mxException_8hpp_source.html#l00065">m_file</a>, <a class="el" href="mxException_8hpp_source.html#l00068">m_line</a>, <a class="el" href="mxException_8hpp_source.html#l00053">m_source</a>, and <a class="el" href="mxException_8hpp_source.html#l00050">m_whatstr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00073">mxException()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00076">mxException()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -395,9 +500,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Assignment operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00097">97</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00113">113</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, <a class="el" href="mxException_8hpp_source.html#l00056">m_code</a>, <a class="el" href="mxException_8hpp_source.html#l00059">m_codeName</a>, <a class="el" href="mxException_8hpp_source.html#l00068">m_explanation</a>, <a class="el" href="mxException_8hpp_source.html#l00062">m_file</a>, <a class="el" href="mxException_8hpp_source.html#l00065">m_line</a>, and <a class="el" href="mxException_8hpp_source.html#l00053">m_source</a>.</p>
+<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, <a class="el" href="mxException_8hpp_source.html#l00056">m_code</a>, <a class="el" href="mxException_8hpp_source.html#l00059">m_codeName</a>, <a class="el" href="mxException_8hpp_source.html#l00062">m_errno</a>, <a class="el" href="mxException_8hpp_source.html#l00071">m_explanation</a>, <a class="el" href="mxException_8hpp_source.html#l00065">m_file</a>, <a class="el" href="mxException_8hpp_source.html#l00068">m_line</a>, and <a class="el" href="mxException_8hpp_source.html#l00053">m_source</a>.</p>
 
 </div>
 </div>
@@ -426,7 +531,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the details of the exception as a single string. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00137">137</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00164">164</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00050">m_whatstr</a>.</p>
 
@@ -453,11 +558,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The source specific error code. </p>
+<p>The mxlib error code. </p>
 
 <p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00056">56</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -481,11 +586,39 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The mnemonic associated with the error code. </p>
+<p>The name of the error code. </p>
 
 <p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00059">59</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
+
+</div>
+</div>
+<a id="a98a3d9a41f1aca674a8054b6aaee0ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a3d9a41f1aca674a8054b6aaee0ef6">&#9670;&nbsp;</a></span>m_errno</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::err::mxException::m_errno {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The errno error code (only used if non-zero) </p>
+
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00062">62</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -511,9 +644,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The long explanation of the error. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00068">68</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00071">71</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -539,9 +672,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The source file where the exception originated. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00062">62</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00065">65</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -567,9 +700,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The line number of the file where the exception originated. </p>
 
-<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00065">65</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00068">68</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -597,7 +730,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00053">53</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00097">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00113">operator=()</a>.</p>
 
 </div>
 </div>
@@ -625,7 +758,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="mxException_8hpp_source.html#l00050">50</a> of file <a class="el" href="mxException_8hpp_source.html">mxException.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00119">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00137">what()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mxException_8hpp_source.html#l00136">build_what()</a>, and <a class="el" href="mxException_8hpp_source.html#l00164">what()</a>.</p>
 
 </div>
 </div>
@@ -638,7 +771,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>err</b></li><li class="navelem"><a class="el" href="classmx_1_1err_1_1mxException.html">mxException</a></li>
-    <li class="footer">Generated on Sat Jan 22 2022 20:53:53 for mxlib by
+    <li class="footer">Generated on Thu Jan 27 2022 16:52:54 for mxlib by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

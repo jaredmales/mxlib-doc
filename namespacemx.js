@@ -62,13 +62,17 @@ var namespacemx =
       [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ]
     ] ],
     [ "err", null, [
-      [ "allocerr", "classmx_1_1err_1_1allocerr.html", null ],
-      [ "invalidarg", "classmx_1_1err_1_1invalidarg.html", null ],
-      [ "liberr", "classmx_1_1err_1_1liberr.html", null ],
+      [ "allocerr", "classmx_1_1err_1_1allocerr.html", "classmx_1_1err_1_1allocerr" ],
+      [ "filecerr", "classmx_1_1err_1_1filecerr.html", "classmx_1_1err_1_1filecerr" ],
+      [ "fileoerr", "classmx_1_1err_1_1fileoerr.html", "classmx_1_1err_1_1fileoerr" ],
+      [ "filererr", "classmx_1_1err_1_1filererr.html", "classmx_1_1err_1_1filererr" ],
+      [ "filewerr", "classmx_1_1err_1_1filewerr.html", "classmx_1_1err_1_1filewerr" ],
+      [ "invalidarg", "classmx_1_1err_1_1invalidarg.html", "classmx_1_1err_1_1invalidarg" ],
+      [ "liberr", "classmx_1_1err_1_1liberr.html", "classmx_1_1err_1_1liberr" ],
       [ "mxException", "classmx_1_1err_1_1mxException.html", "classmx_1_1err_1_1mxException" ],
-      [ "notimpl", "classmx_1_1err_1_1notimpl.html", null ],
-      [ "paramnotset", "classmx_1_1err_1_1paramnotset.html", null ],
-      [ "sizeerr", "classmx_1_1err_1_1sizeerr.html", null ]
+      [ "notimpl", "classmx_1_1err_1_1notimpl.html", "classmx_1_1err_1_1notimpl" ],
+      [ "paramnotset", "classmx_1_1err_1_1paramnotset.html", "classmx_1_1err_1_1paramnotset" ],
+      [ "sizeerr", "classmx_1_1err_1_1sizeerr.html", "classmx_1_1err_1_1sizeerr" ]
     ] ],
     [ "fits", null, [
       [ "fitsFile", "classmx_1_1fits_1_1fitsFile.html", "classmx_1_1fits_1_1fitsFile" ],

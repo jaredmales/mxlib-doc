@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['excludeangle_3981',['excludeAngle',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda31e090419171bebe25f65eeb5a05120f',1,'mx::improc::HCI']]],
-  ['excludeimno_3982',['excludeImno',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda4f0b51097a25c33d47a612edd4dd70eb',1,'mx::improc::HCI']]],
-  ['excludenone_3983',['excludeNone',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda6ffc2f84e2b15449da555a36819faa69',1,'mx::improc::HCI']]],
-  ['excludepixel_3984',['excludePixel',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda0891b70655197e1f42a28c71a2ce2508',1,'mx::improc::HCI']]]
+  ['excludeangle_4011',['excludeAngle',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda31e090419171bebe25f65eeb5a05120f',1,'mx::improc::HCI']]],
+  ['excludeimno_4012',['excludeImno',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda4f0b51097a25c33d47a612edd4dd70eb',1,'mx::improc::HCI']]],
+  ['excludenone_4013',['excludeNone',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda6ffc2f84e2b15449da555a36819faa69',1,'mx::improc::HCI']]],
+  ['excludepixel_4014',['excludePixel',['../group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda0891b70655197e1f42a28c71a2ce2508',1,'mx::improc::HCI']]]
 ];
