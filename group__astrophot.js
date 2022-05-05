@@ -1,8 +1,8 @@
 var group__astrophot =
 [
     [ "baseSpectrum", "structmx_1_1astro_1_1baseSpectrum.html", [
-      [ "charFlux", "structmx_1_1astro_1_1baseSpectrum.html#adcff013a03af0758db64eec6ab5ccdd4", null ],
-      [ "charFlux", "structmx_1_1astro_1_1baseSpectrum.html#a7f93275bfb91703630366cfb36516b14", null ],
+      [ "charFlux", "structmx_1_1astro_1_1baseSpectrum.html#a7efdfefd6c612bc6ba2b045996a271cc", null ],
+      [ "charFlux", "structmx_1_1astro_1_1baseSpectrum.html#a5d1abd79a838f5a4b5f6842d54b8e503", null ],
       [ "charTrans", "structmx_1_1astro_1_1baseSpectrum.html#a382f0fdb138e9d8cff30c326146e28d8", null ],
       [ "mean", "structmx_1_1astro_1_1baseSpectrum.html#a5bd0475060b8ea142a70e5d5f2dbe626", null ],
       [ "mean", "structmx_1_1astro_1_1baseSpectrum.html#ad31b3569a0d428000c8313c78a3cb36c", null ],

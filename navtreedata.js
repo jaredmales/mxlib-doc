@@ -1,32 +1,34 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
   [ "mxlib", "index.html", [
     [ "User's Guide", "modules.html", "modules" ],
     [ "mxlib", "md__home_jrmales_Source_mxlib_README.html", null ],
-    [ "Test List", "test.html", null ],
     [ "Todo List", "todo.html", null ],
+    [ "Test List", "test.html", null ],
     [ "Bug List", "bug.html", null ],
     [ "Bibliography", "citelist.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -62,24 +64,26 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html",
-"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a1d6b9446a7643f11dbb3def7e26da06c",
-"classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a350770106d3f06580f9a25924cccff23",
-"classmx_1_1err_1_1mxException.html#ad7708c890b8be878fdbe67fcfdeac09b",
-"classmx_1_1fits_1_1fitsHeaderCard.html#aa808fb12dac16dea6da5d09d4208528d",
-"classmx_1_1math_1_1gnuPlot.html#a22ec9126502dc38a0f5e42d795ffbadd",
-"classmx_1_1wfp_1_1fraunhoferPropagator.html#a5d8f63e45cb651756ab1c524805f49ef",
-"fourierTemporalPSD_8hpp.html#ga6a42ec37d19e5e32f560c1d630a44848",
-"group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d",
-"group__image__filters__average.html",
-"group__signal__processing.html#gad5d31dce30144f2a8eddbb999067ebad",
-"imageTransforms_8hpp.html#gae305fb04fe9b356d19af9fc2242a46fd",
-"randomT__test_8cpp.html",
-"structmx_1_1AO_1_1sim_1_1wavefront.html#aa51a0cd10a565c7f90dae6e7841bb874",
-"structmx_1_1astro_1_1units_1_1si.html#a9c4e09e86761c7e0c404d866e8d48cce",
-"structmx_1_1improc_1_1HCIobservation.html#ad3edac12807a23393d5c9ce77293e7a7",
-"structmx_1_1wfp_1_1idealCoronagraph.html#ac5531c818556344a73a9b9da59bcffa5",
-"zernike_8hpp.html#ga407abe55bf5ee048d4a20c3ce99a7514"
+"",
+"binVector_8hpp.html#ga43b571148e52f1041c7f6bd7fcd32752",
+"classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae4d11347ac0833a5f32b55ccfffca7e9",
+"classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9",
+"classmx_1_1fits_1_1fitsHeaderCard.html#a3208bbc04a76581cc1f74bdf194a6d1f",
+"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a98c23aa19ffba39df7461ed8063fdebf",
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a323c98dbc45766c2371b980da8834f50",
+"fitMoffat_8hpp_source.html",
+"group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d",
+"group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4",
+"group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603ea6215ade813de2fd681c606705826b522",
+"group__mxAOSim.html",
+"group__sofa__constants.html#gaaf2d6ce49301fb872ab8cca3bc003a2a",
+"imageFilters_8hpp.html#ga1afe4a2a8aece09b89cb13912cc80bde",
+"processInterface_8cpp.html",
+"structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a5a82cfe4c69cda84d22e99d1768ad78e",
+"structmx_1_1astro_1_1mainSequence.html#a5421100954825ab79b3a9ce2cc9f53ab",
+"structmx_1_1improc_1_1HCIobservation.html#a6acb0aa4707bb79e5bd1e64a0b3d0438",
+"structmx_1_1math_1_1fit_1_1array2FitAiry.html#ac418cb4d9e65d98cdbdf6e04cab8034a",
+"unionmx_1_1fits_1_1fitsHeaderCard_1_1values.html#a1fb9bbb98b71e4fd66bfa926925a4164"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,6 +1,7 @@
 var group__fits__utils =
 [
     [ "fits_write_key", "group__fits__utils.html#ga6795d65800e7a5200bb9beaa8eec088a", null ],
+    [ "fits_write_key< bool >", "group__fits__utils.html#gaf8ffb601e1c1f60500e73cd7b4d16843", null ],
     [ "fitsBITPIX", "group__fits__utils.html#gaa33646845d0fffe078a64dc08ba6bccf", null ],
     [ "fitsErrText", "group__fits__utils.html#ga645c413c9f15927628a2600d2dc1e271", null ],
     [ "fitsHeaderGitStatus", "group__fits__utils.html#ga090671b8b7bacafa7548b80293158622", null ],

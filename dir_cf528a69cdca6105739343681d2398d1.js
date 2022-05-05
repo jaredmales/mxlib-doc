@@ -2,7 +2,7 @@ var dir_cf528a69cdca6105739343681d2398d1 =
 [
     [ "aoAtmosphere.hpp", "aoAtmosphere_8hpp.html", null ],
     [ "aoConstants.hpp", "aoConstants_8hpp.html", "aoConstants_8hpp" ],
-    [ "aoPSDs.hpp", "aoPSDs_8hpp.html", "aoPSDs_8hpp" ],
+    [ "aoPSDs.hpp", "aoPSDs_8hpp.html", null ],
     [ "aoSystem.hpp", "aoSystem_8hpp.html", null ],
     [ "aoWFS.hpp", "aoWFS_8hpp.html", null ],
     [ "clAOLinearPredictor.hpp", "clAOLinearPredictor_8hpp.html", null ],

@@ -5,6 +5,7 @@ var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
     [ "aperturePhotometer.hpp", "aperturePhotometer_8hpp.html", [
       [ "aperturePhotometer", "classmx_1_1improc_1_1aperturePhotometer.html", "classmx_1_1improc_1_1aperturePhotometer" ]
     ] ],
+    [ "circleOuterpix.hpp", "circleOuterpix_8hpp.html", "circleOuterpix_8hpp" ],
     [ "eigenCube.hpp", "eigenCube_8hpp.html", null ],
     [ "eigenImage.hpp", "eigenImage_8hpp.html", "eigenImage_8hpp" ],
     [ "HCIobservation.hpp", "HCIobservation_8hpp.html", "HCIobservation_8hpp" ],
@@ -17,5 +18,6 @@ var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
     [ "imageXCorrFFT.hpp", "imageXCorrFFT_8hpp.html", null ],
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],
     [ "improc.hpp", "improc_8hpp_source.html", null ],
-    [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", "KLIPreduction_8hpp" ]
+    [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", "KLIPreduction_8hpp" ],
+    [ "sourceFinder.hpp", "sourceFinder_8hpp.html", null ]
 ];

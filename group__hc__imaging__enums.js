@@ -1,6 +1,5 @@
 var group__hc__imaging__enums =
 [
-    [ "HCI", "namespacemx_1_1improc_1_1HCI.html", null ],
     [ "combineMethods", "group__hc__imaging__enums.html#ga1af050405983cd62f812ec2c6809603e", [
       [ "noCombine", "group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603ead9e3bafaa6a2919542e13e366f30916f", null ],
       [ "medianCombine", "group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603eaf2b98cc56b125154fa3d0e16ebba0433", null ],

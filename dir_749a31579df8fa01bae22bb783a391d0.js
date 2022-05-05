@@ -10,9 +10,7 @@ var dir_749a31579df8fa01bae22bb783a391d0 =
     [ "legendreModes.hpp", "legendreModes_8hpp_source.html", null ],
     [ "levinsonRecursion.hpp", "levinsonRecursion_8hpp_source.html", null ],
     [ "linearPredictor.hpp", "linearPredictor_8hpp.html", null ],
-    [ "psdFilter.hpp", "psdFilter_8hpp.html", [
-      [ "arrayT", "structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html", null ]
-    ] ],
+    [ "psdFilter.hpp", "psdFilter_8hpp.html", null ],
     [ "psdFilterCuda.hpp", "psdFilterCuda_8hpp.html", null ],
     [ "psdUtils.hpp", "psdUtils_8hpp.html", "psdUtils_8hpp" ],
     [ "psdVarMean.hpp", "psdVarMean_8hpp.html", "psdVarMean_8hpp" ],

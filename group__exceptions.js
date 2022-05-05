@@ -21,6 +21,9 @@ var group__exceptions =
     [ "invalidarg", "classmx_1_1err_1_1invalidarg.html", [
       [ "invalidarg", "classmx_1_1err_1_1invalidarg.html#a254ba3940e662f098d1c4eee876a7573", null ]
     ] ],
+    [ "invalidconfig", "classmx_1_1err_1_1invalidconfig.html", [
+      [ "invalidconfig", "classmx_1_1err_1_1invalidconfig.html#ae15a7cd17f5c33106aae74718313dc04", null ]
+    ] ],
     [ "notimpl", "classmx_1_1err_1_1notimpl.html", [
       [ "notimpl", "classmx_1_1err_1_1notimpl.html#a7e8f2325d655861d64f4d8acd7f9eef4", null ]
     ] ],
