@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['basespectrum_2122',['baseSpectrum',['../structmx_1_1astro_1_1baseSpectrum.html',1,'mx::astro']]],
-  ['basespectrum_3c_20_5fspectrumt_3a_3aunits_3a_3arealt_20_3e_2123',['baseSpectrum&lt; _spectrumT::units::realT &gt;',['../structmx_1_1astro_1_1baseSpectrum.html',1,'mx::astro']]],
-  ['basespectrum_3c_20_5funits_3a_3arealt_20_3e_2124',['baseSpectrum&lt; _units::realT &gt;',['../structmx_1_1astro_1_1baseSpectrum.html',1,'mx::astro']]],
-  ['basicspectrum_2125',['basicSpectrum',['../structmx_1_1astro_1_1basicSpectrum.html',1,'mx::astro']]],
-  ['bilineartransform_2126',['bilinearTransform',['../structmx_1_1improc_1_1bilinearTransform.html',1,'mx::improc']]],
-  ['blackbody_2127',['blackbody',['../structmx_1_1astro_1_1blackbody.html',1,'mx::astro']]]
+  ['basespectrum_2130',['baseSpectrum',['../structmx_1_1astro_1_1baseSpectrum.html',1,'mx::astro']]],
+  ['basespectrum_3c_20_5fspectrumt_3a_3aunits_3a_3arealt_20_3e_2131',['baseSpectrum&lt; _spectrumT::units::realT &gt;',['../structmx_1_1astro_1_1baseSpectrum.html',1,'mx::astro']]],
+  ['basespectrum_3c_20_5funits_3a_3arealt_20_3e_2132',['baseSpectrum&lt; _units::realT &gt;',['../structmx_1_1astro_1_1baseSpectrum.html',1,'mx::astro']]],
+  ['basicspectrum_2133',['basicSpectrum',['../structmx_1_1astro_1_1basicSpectrum.html',1,'mx::astro']]],
+  ['bilineartransform_2134',['bilinearTransform',['../structmx_1_1improc_1_1bilinearTransform.html',1,'mx::improc']]],
+  ['blackbody_2135',['blackbody',['../structmx_1_1astro_1_1blackbody.html',1,'mx::astro']]]
 ];

@@ -64,26 +64,26 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"binVector_8hpp.html#ga43b571148e52f1041c7f6bd7fcd32752",
-"classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae4d11347ac0833a5f32b55ccfffca7e9",
-"classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9",
-"classmx_1_1fits_1_1fitsHeaderCard.html#a3208bbc04a76581cc1f74bdf194a6d1f",
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a98c23aa19ffba39df7461ed8063fdebf",
-"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a323c98dbc45766c2371b980da8834f50",
-"fitMoffat_8hpp_source.html",
-"group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d",
-"group__fits__processing__typedefs.html#gab9bb827e84ee13d7640fe5ecba2b4de4",
-"group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603ea6215ade813de2fd681c606705826b522",
-"group__mxAOSim.html",
-"group__sofa__constants.html#gaaf2d6ce49301fb872ab8cca3bc003a2a",
-"imageFilters_8hpp.html#ga1afe4a2a8aece09b89cb13912cc80bde",
-"processInterface_8cpp.html",
-"structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a5a82cfe4c69cda84d22e99d1768ad78e",
-"structmx_1_1astro_1_1mainSequence.html#a5421100954825ab79b3a9ce2cc9f53ab",
-"structmx_1_1improc_1_1HCIobservation.html#a6acb0aa4707bb79e5bd1e64a0b3d0438",
-"structmx_1_1math_1_1fit_1_1array2FitAiry.html#ac418cb4d9e65d98cdbdf6e04cab8034a",
-"unionmx_1_1fits_1_1fitsHeaderCard_1_1values.html#a1fb9bbb98b71e4fd66bfa926925a4164"
+"ADIDerotator_8cpp.html",
+"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a0630fb3de659c77e50ebac113776d846",
+"classmx_1_1AO_1_1sim_1_1ccdDetector.html#a4b7838647e483e8038b8d55e52fcbe83",
+"classmx_1_1err_1_1filererr.html",
+"classmx_1_1fits_1_1fitsHeaderCard.html#a747db7c74ac1e159c882b0fea6cf5ce0",
+"classmx_1_1math_1_1fit_1_1levmarInterface.html#a0ed27e744bdebd3d070761e5d9451383",
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#aab551481f9c7a608b2211f2557d697f3",
+"fitsUtils_8cpp.html",
+"group__constants.html",
+"group__fits__utils.html#ga8ca40bcb66ef4e5e218619276eeb53f9",
+"group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932add14bcd8628e8b52e259f7118c79baa4",
+"group__mxe__errors.html#ga5959027972043131caef95d339732ec5",
+"group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11",
+"imageMasks_8hpp.html#aab4c88c1c0281e7529af08174ff00252",
+"psdUtils_8hpp.html#ga027c78549a6e53f04ad2194e4962c79e",
+"structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ad8093e47208f0edecb04b752bafc3e25",
+"structmx_1_1astro_1_1mainSequence.html#a961f63bdb367a71f26ec264fd4b4c9ba",
+"structmx_1_1improc_1_1HCIobservation.html#a7d809e9beee1333ffd8c3b8404efe7b3",
+"structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#adc138cc7bcf32eed00fc10bf185e518f",
+"unionmx_1_1fits_1_1fitsHeaderCard_1_1values.html#a8b995727de7b8fd46d35e4b4f46650f2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

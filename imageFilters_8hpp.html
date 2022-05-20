@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp.html',''); initResiz
 </div><div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &quot;<a class="el" href="gslInterpolator_8hpp_source.html">../math/gslInterpolator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vectorUtils_8hpp_source.html">../math/vectorUtils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="geo_8hpp_source.html">../math/geo.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>&quot;</code><br />
 </div>
 <p><a href="imageFilters_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -121,7 +122,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symetric Gaussian smoothing kernel.  <a href="structmx_1_1improc_1_1gaussKernel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Azimuthally variable boxcare smoothing kernel.  <a href="structmx_1_1improc_1_1azBoxKernel.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Azimuthally variable boxcare kernel.  <a href="structmx_1_1improc_1_1azBoxKernel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -134,7 +135,7 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="memTemplParams" colspan="2">template&lt;typename imageOutT , typename imageInT , typename kernelT &gt; </td></tr>
 <tr class="memitem:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">mx::improc::filterImage</a> (imageOutT &amp;fim, imageInT im, kernelT kernel, int maxr=0)</td></tr>
-<tr class="memdesc:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter an image with a kernel.  <a href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">More...</a><br /></td></tr>
+<tr class="memdesc:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter an image with a mean kernel.  <a href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">More...</a><br /></td></tr>
 <tr class="separator:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1afe4a2a8aece09b89cb13912cc80bde"><td class="memTemplParams" colspan="2">template&lt;typename imageTout , typename imageTin &gt; </td></tr>
 <tr class="memitem:ga1afe4a2a8aece09b89cb13912cc80bde"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__filters__average.html#ga1afe4a2a8aece09b89cb13912cc80bde">mx::improc::meanSmooth</a> (imageTout &amp;imOut, const imageTin &amp;imIn, int meanFullWidth, bool rejectMinMax=false)</td></tr>
@@ -153,6 +154,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga48077d7e17ad43cba5990c12a1f7a1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smooth an image using the median in a rectangular box. <br  />
   <a href="group__image__filters__average.html#ga48077d7e17ad43cba5990c12a1f7a1a8">More...</a><br /></td></tr>
 <tr class="separator:ga48077d7e17ad43cba5990c12a1f7a1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af757a924f12ce13b11c7987a7f203947"><td class="memTemplParams" colspan="2">template&lt;typename eigenImT &gt; </td></tr>
+<tr class="memitem:af757a924f12ce13b11c7987a7f203947"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="imageFilters_8hpp.html#af757a924f12ce13b11c7987a7f203947">mx::improc::rowEdgeMedSubtract</a> (eigenImT &amp;im, int ncols)</td></tr>
+<tr class="separator:af757a924f12ce13b11c7987a7f203947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b400eed35d9f86fb19efe73b1fd9bf9"><td class="memTemplParams" colspan="2">template&lt;typename eigenImT &gt; </td></tr>
+<tr class="memitem:a3b400eed35d9f86fb19efe73b1fd9bf9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="imageFilters_8hpp.html#a3b400eed35d9f86fb19efe73b1fd9bf9">mx::improc::colEdgeMedSubtract</a> (eigenImT &amp;im, int nrows)</td></tr>
+<tr class="separator:a3b400eed35d9f86fb19efe73b1fd9bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1c190f10338495e4eb4ca2517c44ed11"><td class="memTemplParams" colspan="2">template&lt;typename vecT , typename eigenImT1 , typename eigenImT2 , typename eigenImT3 &gt; </td></tr>
 <tr class="memitem:ga1c190f10338495e4eb4ca2517c44ed11"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__rad__prof.html#ga1c190f10338495e4eb4ca2517c44ed11">mx::improc::radprof</a> (vecT &amp;rad, vecT &amp;prof, const eigenImT1 &amp;im, const eigenImT2 &amp;radim, const eigenImT3 *mask, bool mean=false, typename eigenImT1::Scalar minr=0)</td></tr>
 <tr class="memdesc:ga1c190f10338495e4eb4ca2517c44ed11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the the radial profile.  <a href="group__rad__prof.html#ga1c190f10338495e4eb4ca2517c44ed11">More...</a><br /></td></tr>
@@ -187,13 +194,100 @@ Functions</h2></td></tr>
 <tr class="memdesc:gaf7c6eb772b13067d4dbd7536330efa11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Form a standard deviation image for each imamge in a cube, and optionally divide the input by it forming a S/N map cube.  <a href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11">More...</a><br /></td></tr>
 <tr class="separator:gaf7c6eb772b13067d4dbd7536330efa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3b400eed35d9f86fb19efe73b1fd9bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b400eed35d9f86fb19efe73b1fd9bf9">&#9670;&nbsp;</a></span>colEdgeMedSubtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename eigenImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::improc::colEdgeMedSubtract </td>
+          <td>(</td>
+          <td class="paramtype">eigenImT &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nrows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">im</td><td>The image to filter </td></tr>
+    <tr><td class="paramname">nrows</td><td>The number of rows on each side of the image to use as the reference </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00620">620</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="imageFilters_8hpp_source.html#l00620">mx::improc::colEdgeMedSubtract()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageFilters_8hpp_source.html#l00620">mx::improc::colEdgeMedSubtract()</a>.</p>
+
+</div>
+</div>
+<a id="af757a924f12ce13b11c7987a7f203947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af757a924f12ce13b11c7987a7f203947">&#9670;&nbsp;</a></span>rowEdgeMedSubtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename eigenImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::improc::rowEdgeMedSubtract </td>
+          <td>(</td>
+          <td class="paramtype">eigenImT &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ncols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">im</td><td>The image to filter </td></tr>
+    <tr><td class="paramname">ncols</td><td>The number of columns on each side of the image to use as the reference </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00593">593</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="imageFilters_8hpp_source.html#l00593">mx::improc::rowEdgeMedSubtract()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageFilters_8hpp_source.html#l00593">mx::improc::rowEdgeMedSubtract()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageFilters_8hpp.html">imageFilters.hpp</a></li>
-    <li class="footer">Generated on Wed May 4 2022 19:10:38 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri May 20 2022 11:30:03 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

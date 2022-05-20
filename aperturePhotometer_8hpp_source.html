@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('aperturePhotometer_8hpp_source.html','
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//***********************************************************************//</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright 2018 Jared R. Males (jaredmales@gmail.com)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright 2018-2022 Jared R. Males (jaredmales@gmail.com)</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// This file is part of mxlib.</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
@@ -144,169 +144,336 @@ $(document).ready(function(){initNavTree('aperturePhotometer_8hpp_source.html','
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  * First call resize with the desired size.  This organizes the radius vector and </span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  * the index image which maps pixels to position in the radius vector.</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  * The call cumPhot with the image, which will sum the flux contained within each radius.</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  * Then call cumPhot with the image, which will sum the flux contained within each radius.</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  * \tparam realT the real floating point type of the data</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html">aperturePhotometer</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="comment"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">   ///Holds the ordered unique radii of the pixels in the image.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">   60</a></span>&#160;<span class="comment"></span>   std::vector&lt;realT&gt; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">   ///Maps a pixel in the image to the position in the radius vector.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">   63</a></span>&#160;<span class="comment"></span>   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;size_t&gt;</a> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keywordtype">bool</span> m_useNanMask {<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> * m_nanMask {<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="comment"></span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">   ///Resize the photometer, recalculating the radius vector and index image.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span><span class="comment">   /** If size is unchanged, nothing is done.</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     * \note Source must be at geometric center of image.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     * </span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * \returns -1 on error </span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">   78</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">resize</a>( <span class="keywordtype">int</span> sizeX, <span class="comment">///&lt; [in] The new size in rows</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;               <span class="keywordtype">int</span> sizeY  <span class="comment">///&lt; [in] The new size in columns</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;             )</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="comment">//Don&#39;t bother if we don&#39;t have to.</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">if</span>( sizeX == <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.rows() &amp;&amp; sizeY == <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.cols()) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.resize(sizeX, sizeY);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">//Get radius of each pixel up front, since we need it twice.</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> radIm;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      radIm.resize(sizeX, sizeY);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">radiusImage</a>( radIm ); <span class="comment">//mx function to fill in the radius array</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      std::map&lt;realT, size_t&gt; unrads; <span class="comment">// Map of unique radii to their indices in the radius vector.</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="comment">//First populate the map</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="comment">//Note: switched order of cols/rows indices for speeed</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;radIm.cols();++i)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;radIm.rows();++j)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;         {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">//unrads[radIm(j,i)] = 0;</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            unrads.insert(std::pair&lt;realT, size_t&gt;( radIm(j,i), 0));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;         }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="comment">//Now fill in the radius vector, and set map values to the indices</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>.resize(unrads.size());</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keyword">typename</span> std::map&lt;realT, size_t&gt;::iterator it;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordtype">int</span> n = 0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordflow">for</span>(it = unrads.begin(); it!=unrads.end(); ++it)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;         <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>[n] = it-&gt;first;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         it-&gt;second = n;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;         ++n;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="comment">//Finally, fill in the index image with index of the radius vector for that pixel.</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="comment">//Note: switched order of cols/rows indices for speeed</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;radIm.cols();++i)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;radIm.rows();++j)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;         {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            it = unrads.find(radIm(j,i));</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>(j,i) = it-&gt;second;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;         }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;   }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">   /// Get the cumulative photometry of an image as a function of radius.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"></span><span class="comment">   /** </span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">     * \note Source must be at geometric center of image.</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">     * </span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">     * \returns -1 on error</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">  137</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>( std::vector&lt;realT&gt; &amp; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>, <span class="comment">///&lt; [out] the cumulative photometry at each point in the radius vector.  Resized.</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> &amp; im,       <span class="comment">///&lt; [in] the image on which to perform the calculation</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                realT maxr = 0                <span class="comment">///&lt; [in] [optional] the maximum radius to which to calculate.  If &lt;= 0 then max possible is used.</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;              )</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      realT xcen = 0.5*(<a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.rows()-1);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      realT ycen = 0.5*(<a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.cols()-1);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keywordflow">if</span>(maxr &lt;= 0) maxr = <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>.back();</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>.resize(<a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>.size(),0);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="comment">//Make sure we stay in bounds</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordtype">int</span> x0 = xcen-maxr;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordflow">if</span>(x0 &lt; 0) x0 = 0;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordtype">int</span> x1 = xcen + maxr;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">if</span>(x1 &gt; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.rows()-1) x1 = <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.rows()-1;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordtype">int</span> y0 = ycen-maxr;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">if</span>(y0 &lt; 0) y0 = 0;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <span class="keywordtype">int</span> y1 = ycen + maxr;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordflow">if</span>(y1 &gt; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.cols()-1) y1 = <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>.rows()-1;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="comment">//First get sum at each unique radius</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="comment">//Note: switched order of cols/rows indices for speeed</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordflow">if</span>(maxr == <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>.back())</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i= y0; i&lt;= y1; ++i)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;         {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=x0; j&lt;=x1; ++j)</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;               <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>[ <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>(j,i) ] += im(j,i);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;         }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i= y0; i&lt;= y1; ++i)</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;         {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=x0; j&lt;=x1; ++j)</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;               <span class="keywordflow">if</span>(<a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>[<a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>(j,i)] &lt;= maxr) <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>[ <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>(j,i) ] += im(j,i);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;         }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="comment">//Now perform cumulative sum</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;<a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>.size(); ++i)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;         <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>[i] += <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>[i-1];</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      }  </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;   }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">   ///Get the radius value at an index of the vector.</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">  193</a></span>&#160;<span class="comment"></span>   realT <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">radius</a>( <span class="keywordtype">size_t</span> i <span class="comment">/**&lt; [in] the index of the radius vector */</span> )</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>[i];</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;   }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;};</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}<span class="comment">//namespace improc </span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}<span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//improc_aperturePhotometer_hpp</span></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a></div><div class="ttdoc">Class for performing aperture photometry on images.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00054">aperturePhotometer.hpp:55</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a0b2010390dcffd13c655d51ba9158ef1"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">mx::improc::aperturePhotometer::m_indexIm</a></div><div class="ttdeci">eigenImage&lt; size_t &gt; m_indexIm</div><div class="ttdoc">Maps a pixel in the image to the position in the radius vector.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00063">aperturePhotometer.hpp:63</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a175ecf7f41f6ca4c4a63af1275093e30"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">mx::improc::aperturePhotometer::radius</a></div><div class="ttdeci">realT radius(size_t i)</div><div class="ttdoc">Get the radius value at an index of the vector.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00193">aperturePhotometer.hpp:193</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a8a27c008bc03ad062d6788ffa164b461"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">mx::improc::aperturePhotometer::cumPhot</a></div><div class="ttdeci">int cumPhot(std::vector&lt; realT &gt; &amp;cumPhot, eigenImage&lt; realT &gt; &amp;im, realT maxr=0)</div><div class="ttdoc">Get the cumulative photometry of an image as a function of radius.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00137">aperturePhotometer.hpp:137</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a97451411af9bd6bdb904471551db92fc"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">mx::improc::aperturePhotometer::m_radius</a></div><div class="ttdeci">std::vector&lt; realT &gt; m_radius</div><div class="ttdoc">Holds the ordered unique radii of the pixels in the image.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00060">aperturePhotometer.hpp:60</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_ab19a67f654989336392a7352c3a52bd0"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">mx::improc::aperturePhotometer::resize</a></div><div class="ttdeci">int resize(int sizeX, int sizeY)</div><div class="ttdoc">Resize the photometer, recalculating the radius vector and index image.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00078">aperturePhotometer.hpp:78</a></div></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  * \ingroup improc</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">  * \tparam realT the real floating point type of the data</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html">aperturePhotometer</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#ae70b6471aaa08d726802218ab3bc4d44">   61</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#ae70b6471aaa08d726802218ab3bc4d44">m_sizeX</a> {0}; <span class="comment">///&lt; The size of the image in X (rows).</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#ae3af9eceddb0b5bdbd395f918a7132ff">   62</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#ae3af9eceddb0b5bdbd395f918a7132ff">m_sizeY</a> {0}; <span class="comment">///&lt; The size of the image in Y (columns).</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#aff205da1d25400546decc01f61774c9f">   64</a></span>&#160;   realT <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#aff205da1d25400546decc01f61774c9f">m_xcen</a> {0}; <span class="comment">///&lt; The x coordinate of the center of the image.  Radii are caculated relative to this point. Default is 0.5*(sizeX-1).</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#aade7857de2effb2a8a096ed7f898772b">   65</a></span>&#160;   realT <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#aade7857de2effb2a8a096ed7f898772b">m_ycen</a> {0}; <span class="comment">///&lt; The y coordinate of the center of the image.  Radii are caculated relative to this point. Default is 0.5*(sizeY-1).</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">   67</a></span>&#160;   std::vector&lt;realT&gt; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>; <span class="comment">///&lt; Holds the ordered unique radii of the pixels in the image.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">   69</a></span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;size_t&gt;</a> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">m_indexIm</a>; <span class="comment">///&lt; Maps a pixel in the image to the position in the radius vector.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">bool</span> m_useNanMask {<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> * m_nanMask {<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   realT m_bgMin;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   realT m_bgMax;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   std::vector&lt;realT&gt; m_bgx;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   std::vector&lt;realT&gt; m_bgy;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <span class="comment"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">   ///Resize the photometer, recalculating the radius vector and index image.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span><span class="comment">   /** If size and center are unchanged, nothing is done.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">     * \note Source must be at geometric center of image.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">     * \returns -1 on error </span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">resize</a>( <span class="keywordtype">int</span> sizeX,  <span class="comment">///&lt; [in] The new size in rows</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;               <span class="keywordtype">int</span> sizeY,  <span class="comment">///&lt; [in] The new size in columns</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;               realT xcen, <span class="comment">///&lt; The x coordinate of the center of the image.  Radii are caculated relative to this point. Default is 0.5*(sizeX-1).</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;               realT ycen  <span class="comment">///&lt; The y coordinate of the center of the image.  Radii are caculated relative to this point. Default is 0.5*(sizeY-1).</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;             );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">   ///Resize the photometer for a centered image, recalculating the radius vector and index image.  </span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span><span class="comment">   /** If size and center are unchanged, nothing is done.  </span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">     * This version uses the geometric center of the image.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">     * \overload</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">     * \returns -1 on error </span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">resize</a>( <span class="keywordtype">int</span> sizeX, <span class="comment">///&lt; [in] The new size in rows</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;               <span class="keywordtype">int</span> sizeY  <span class="comment">///&lt; [in] The new size in columns</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;             );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">   /// Get the cumulative photometry of an image as a function of radius.</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span><span class="comment">   /** </span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">     * \returns -1 on error</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>( std::vector&lt;realT&gt; &amp; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>, <span class="comment">///&lt; [out] the cumulative photometry at each point in the radius vector.  Resized.</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                eigenImage&lt;realT&gt; &amp; im,       <span class="comment">///&lt; [in] the image on which to perform the calculation</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                realT maxr = 0                <span class="comment">///&lt; [in] [optional] the maximum radius to which to calculate.  If &lt;= 0 then max possible is used.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;              );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <span class="comment"></span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">   /// Get the cumulative photometry of an image as a function of radius.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span><span class="comment">   /** </span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">     * \overload</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">     * \returns -1 on error</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>( std::vector&lt;realT&gt; &amp; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>, <span class="comment">///&lt; [out] the cumulative photometry at each point in the radius vector.  Resized.</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                std::vector&lt;realT&gt; &amp; deltaPhot, <span class="comment">///&lt; [out] [optional] the photometry at each point in the radius vector, not-cumulative.  Resized.</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                eigenImage&lt;realT&gt; &amp; im,       <span class="comment">///&lt; [in] the image on which to perform the calculation</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                realT maxr = 0                <span class="comment">///&lt; [in] [optional] the maximum radius to which to calculate.  If &lt;= 0 then max possible is used.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;              );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">   /// Get the cumulative photometry of an image as a function of radius.</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"></span><span class="comment">   /** This is called by the public cumPhot functions.</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">     * \returns 0 on success</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">     * \returns -1 on error</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#ab6d7af2470617185d56f1eaa0af6110f">cumPhotWork</a>( std::vector&lt;realT&gt; &amp; <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>,   <span class="comment">///&lt; [out] the cumulative photometry at each point in the radius vector.  Resized.</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    std::vector&lt;realT&gt; * deltaPhot, <span class="comment">///&lt; [out] if not `nullptr`, this vector is filled with the sum at each radius.</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    eigenImage&lt;realT&gt; &amp; im,         <span class="comment">///&lt; [in] the image on which to perform the calculation</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    realT maxr = 0                  <span class="comment">///&lt; [in] [optional] the maximum radius to which to calculate.  If &lt;= 0 then max possible is used.</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                  );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">   ///Get the radius value at an index of the vector.</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">  153</a></span>&#160;<span class="comment"></span>   realT <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">radius</a>( <span class="keywordtype">size_t</span> i <span class="comment">/**&lt; [in] the index of the radius vector */</span> )</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;   {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a>[i];</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;   }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;   </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   <span class="keywordtype">void</span> bgMin( realT bgm )</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;   {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      m_bgMin = bgm;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   <span class="keywordtype">void</span> bgMax( realT bgx )</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      m_bgMax = bgx;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;   <span class="keywordtype">void</span> bg( realT bgm, realT bgx )</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;   {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      m_bgMin = bgm;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      m_bgMax = bgx;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;   }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">  177</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">aperturePhotometer&lt;realT&gt;::resize</a>( <span class="keywordtype">int</span> sizeX,  </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                       <span class="keywordtype">int</span> sizeY,  </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                       realT xcen, </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                                       realT ycen  </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                     )</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;   <span class="comment">//Don&#39;t bother if we don&#39;t have to.</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;   <span class="keywordflow">if</span>( sizeX == m_sizeX &amp;&amp; sizeY == m_sizeY &amp;&amp; xcen == m_xcen &amp;&amp; ycen == m_ycen) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;   m_sizeX = sizeX;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   m_sizeY = sizeY;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;   m_xcen = xcen;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;   m_ycen = ycen;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   m_indexIm.resize(m_sizeX, m_sizeY);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;   </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   <span class="comment">//Get radius of each pixel up front, since we need it twice.</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> radIm;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;   radIm.resize(m_sizeX, m_sizeY);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   <a class="code" href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">radiusImage</a>( radIm, m_xcen, m_ycen ); <span class="comment">//mx function to fill in the radius array</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;   </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;   std::map&lt;realT, size_t&gt; unrads; <span class="comment">// Map of unique radii to their indices in the radius vector.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;   <span class="comment">//First populate the map</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;radIm.cols();++i)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;   {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;radIm.rows();++j)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;         <span class="comment">//unrads[radIm(j,i)] = 0;</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;         unrads.insert(std::pair&lt;realT, size_t&gt;( radIm(j,i), 0));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;   }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;   </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;   <span class="comment">//Now fill in the radius vector, and set map values to the indices</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;   m_radius.resize(unrads.size());</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;   <span class="keyword">typename</span> std::map&lt;realT, size_t&gt;::iterator it;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;   <span class="keywordtype">int</span> n = 0;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;   <span class="keywordflow">for</span>(it = unrads.begin(); it!=unrads.end(); ++it)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;   {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      m_radius[n] = it-&gt;first;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      it-&gt;second = n;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      ++n;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;   <span class="comment">//Finally, fill in the index image with index of the radius vector for that pixel.</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;radIm.cols();++i)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;   {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;radIm.rows();++j)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;         it = unrads.find(radIm(j,i));</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;         m_indexIm(j,i) = it-&gt;second;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;   }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;   <span class="keywordflow">if</span>(m_bgMax &gt; m_bgMin &amp;&amp; m_bgMin &gt; 0)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;   {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      m_bgx.clear();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      m_bgy.clear();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> cc=0; cc&lt;radIm.cols(); ++cc)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> rr=0; rr&lt; radIm.rows(); ++rr)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;         {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">if</span>(radIm(rr,cc) &gt;= m_bgMin &amp;&amp; radIm(rr,cc) &lt;= m_bgMax)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;               m_bgx.push_back(rr);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;               m_bgy.push_back(cc);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;         }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;   }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">  253</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">aperturePhotometer&lt;realT&gt;::resize</a>( <span class="keywordtype">int</span> sizeX,  </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                                       <span class="keywordtype">int</span> sizeY </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                                     )</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;   realT xcen = 0.5*(1.0*sizeX - 1.0);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;   realT ycen = 0.5*(1.0*sizeY - 1.0);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;   <span class="keywordflow">return</span> resize(sizeX, sizeY, xcen, ycen);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">  265</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">aperturePhotometer&lt;realT&gt;::cumPhot</a>( std::vector&lt;realT&gt; &amp; cumPhot, </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                                        <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> &amp; im,       </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                        realT maxr              </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                      )</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   <span class="keywordflow">return</span> cumPhotWork(cumPhot, <span class="keyword">nullptr</span>, im, maxr);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#ab894a6b52f5b7098880169ec4678a23c">  274</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">aperturePhotometer&lt;realT&gt;::cumPhot</a>( std::vector&lt;realT&gt; &amp; cumPhot,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                        std::vector&lt;realT&gt; &amp; deltaPhot, </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                                        <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> &amp; im,       </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                                        realT maxr                </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                      )</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   <span class="keywordflow">return</span> cumPhotWork(cumPhot, &amp;deltaPhot, im, maxr);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1aperturePhotometer.html#ab6d7af2470617185d56f1eaa0af6110f">  284</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmx_1_1improc_1_1aperturePhotometer.html#ab6d7af2470617185d56f1eaa0af6110f">aperturePhotometer&lt;realT&gt;::cumPhotWork</a>( std::vector&lt;realT&gt; &amp; cumPhot, </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                                            std::vector&lt;realT&gt; * deltaPhot,</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                                            <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;realT&gt;</a> &amp; im,       </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                                            realT maxr                </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                          )</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;   realT xcen = 0.5*(m_indexIm.rows()-1);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   realT ycen = 0.5*(m_indexIm.cols()-1);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;   </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;   <span class="keywordflow">if</span>(maxr &lt;= 0) maxr = m_radius.back();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;   </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;   cumPhot.resize(m_radius.size(),0);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   <span class="comment">//Make sure we stay in bounds</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;   <span class="keywordtype">int</span> x0 = xcen-maxr;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;   <span class="keywordflow">if</span>(x0 &lt; 0) x0 = 0;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;   <span class="keywordtype">int</span> x1 = xcen + maxr;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;   <span class="keywordflow">if</span>(x1 &gt; m_indexIm.rows()-1) x1 = m_indexIm.rows()-1;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;   </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;   <span class="keywordtype">int</span> y0 = ycen-maxr;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;   <span class="keywordflow">if</span>(y0 &lt; 0) y0 = 0;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;   <span class="keywordtype">int</span> y1 = ycen + maxr;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;   <span class="keywordflow">if</span>(y1 &gt; m_indexIm.cols()-1) y1 = m_indexIm.rows()-1;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;   </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;   realT bg = 0;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;   <span class="comment">//If using background annulus, first calc background;</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   <span class="keywordflow">if</span>(m_bgx.size() &gt; 0)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;   {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      std::vector&lt;realT&gt; bgann(m_bgx.size());</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> n=0; n &lt; m_bgx.size(); ++n)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;         bgann[n] = im(m_bgx[n], m_bgy[n]);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      bg = <a class="code" href="group__vectorutils.html#ga9efbdfd637f2a5bb6054c6ee5a163fcc">math::vectorMedian</a>(bgann);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;background: &quot;</span> &lt;&lt; bg &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;   }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;   <span class="comment">//First get sum at each unique radius</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;   <span class="comment">//Note: switched order of cols/rows indices for speeed</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;   <span class="keywordflow">if</span>(maxr == m_radius.back())</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;   {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i= y0; i&lt;= y1; ++i)</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=x0; j&lt;=x1; ++j)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;         {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            cumPhot[ m_indexIm(j,i) ] += im(j,i) - bg;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;         }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;   }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;   {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i= y0; i&lt;= y1; ++i)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=x0; j&lt;=x1; ++j)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;         {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">if</span>(m_radius[m_indexIm(j,i)] &lt;= maxr) cumPhot[ m_indexIm(j,i) ] += im(j,i);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;         }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;   }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;   <span class="comment">//If deltaPhot is desired, output it here.</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;   <span class="keywordflow">if</span>(deltaPhot != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;   {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      deltaPhot-&gt;assign(cumPhot.begin(), cumPhot.end());</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;   }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   <span class="comment">//Now perform cumulative sum</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;cumPhot.size(); ++i)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;   {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      cumPhot[i] += cumPhot[i-1];</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;   }  </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;   </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;}<span class="comment">//namespace improc </span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}<span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//improc_aperturePhotometer_hpp</span></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a></div><div class="ttdoc">Class for performing aperture photometry on images.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00056">aperturePhotometer.hpp:57</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a0b2010390dcffd13c655d51ba9158ef1"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a0b2010390dcffd13c655d51ba9158ef1">mx::improc::aperturePhotometer::m_indexIm</a></div><div class="ttdeci">eigenImage&lt; size_t &gt; m_indexIm</div><div class="ttdoc">Maps a pixel in the image to the position in the radius vector.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00069">aperturePhotometer.hpp:69</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a175ecf7f41f6ca4c4a63af1275093e30"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">mx::improc::aperturePhotometer::radius</a></div><div class="ttdeci">realT radius(size_t i)</div><div class="ttdoc">Get the radius value at an index of the vector.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00153">aperturePhotometer.hpp:153</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a32d2c64a2783283330bf808a32a89f13"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">mx::improc::aperturePhotometer::resize</a></div><div class="ttdeci">int resize(int sizeX, int sizeY, realT xcen, realT ycen)</div><div class="ttdoc">Resize the photometer, recalculating the radius vector and index image.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00177">aperturePhotometer.hpp:177</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a8a27c008bc03ad062d6788ffa164b461"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">mx::improc::aperturePhotometer::cumPhot</a></div><div class="ttdeci">int cumPhot(std::vector&lt; realT &gt; &amp;cumPhot, eigenImage&lt; realT &gt; &amp;im, realT maxr=0)</div><div class="ttdoc">Get the cumulative photometry of an image as a function of radius.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00265">aperturePhotometer.hpp:265</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_a97451411af9bd6bdb904471551db92fc"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">mx::improc::aperturePhotometer::m_radius</a></div><div class="ttdeci">std::vector&lt; realT &gt; m_radius</div><div class="ttdoc">Holds the ordered unique radii of the pixels in the image.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00067">aperturePhotometer.hpp:67</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_aade7857de2effb2a8a096ed7f898772b"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#aade7857de2effb2a8a096ed7f898772b">mx::improc::aperturePhotometer::m_ycen</a></div><div class="ttdeci">realT m_ycen</div><div class="ttdoc">The y coordinate of the center of the image. Radii are caculated relative to this point....</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00065">aperturePhotometer.hpp:65</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_ab6d7af2470617185d56f1eaa0af6110f"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#ab6d7af2470617185d56f1eaa0af6110f">mx::improc::aperturePhotometer::cumPhotWork</a></div><div class="ttdeci">int cumPhotWork(std::vector&lt; realT &gt; &amp;cumPhot, std::vector&lt; realT &gt; *deltaPhot, eigenImage&lt; realT &gt; &amp;im, realT maxr=0)</div><div class="ttdoc">Get the cumulative photometry of an image as a function of radius.</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00284">aperturePhotometer.hpp:284</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_ae3af9eceddb0b5bdbd395f918a7132ff"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#ae3af9eceddb0b5bdbd395f918a7132ff">mx::improc::aperturePhotometer::m_sizeY</a></div><div class="ttdeci">int m_sizeY</div><div class="ttdoc">The size of the image in Y (columns).</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00062">aperturePhotometer.hpp:62</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_ae70b6471aaa08d726802218ab3bc4d44"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#ae70b6471aaa08d726802218ab3bc4d44">mx::improc::aperturePhotometer::m_sizeX</a></div><div class="ttdeci">int m_sizeX</div><div class="ttdoc">The size of the image in X (rows).</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00061">aperturePhotometer.hpp:61</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1aperturePhotometer_html_aff205da1d25400546decc01f61774c9f"><div class="ttname"><a href="classmx_1_1improc_1_1aperturePhotometer.html#aff205da1d25400546decc01f61774c9f">mx::improc::aperturePhotometer::m_xcen</a></div><div class="ttdeci">realT m_xcen</div><div class="ttdoc">The x coordinate of the center of the image. Radii are caculated relative to this point....</div><div class="ttdef"><b>Definition:</b> <a href="aperturePhotometer_8hpp_source.html#l00064">aperturePhotometer.hpp:64</a></div></div>
 <div class="ttc" id="agroup__eigen__image__processing_html_gaa5f4935db90fd971a51c9ffa85fcfa99"><div class="ttname"><a href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">mx::improc::eigenImage</a></div><div class="ttdeci">Eigen::Array&lt; scalarT, -1, -1 &gt; eigenImage</div><div class="ttdoc">Definition of the eigenImage type, which is an alias for Eigen::Array.</div><div class="ttdef"><b>Definition:</b> <a href="eigenImage_8hpp_source.html#l00044">eigenImage.hpp:44</a></div></div>
-<div class="ttc" id="agroup__image__masks_html_ga0b1f9636c839f8361e971f07780136d1"><div class="ttname"><a href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">mx::improc::radiusImage</a></div><div class="ttdeci">void radiusImage(eigenT &amp;m, typename eigenT::Scalar xc, typename eigenT::Scalar yc, typename eigenT::Scalar scale=1)</div><div class="ttdoc">Fills in the cells of an Eigen 2D Array with their radius from the center.</div><div class="ttdef"><b>Definition:</b> <a href="imageMasks_8hpp_source.html#l00047">imageMasks.hpp:47</a></div></div>
+<div class="ttc" id="agroup__image__masks_html_ga0b1f9636c839f8361e971f07780136d1"><div class="ttname"><a href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">mx::improc::radiusImage</a></div><div class="ttdeci">void radiusImage(eigenT &amp;m, typename eigenT::Scalar xc, typename eigenT::Scalar yc, typename eigenT::Scalar scale=1)</div><div class="ttdoc">Fills in the cells of an Eigen 2D Array with their radius from the center.</div><div class="ttdef"><b>Definition:</b> <a href="imageMasks_8hpp_source.html#l00048">imageMasks.hpp:48</a></div></div>
+<div class="ttc" id="agroup__vectorutils_html_ga9efbdfd637f2a5bb6054c6ee5a163fcc"><div class="ttname"><a href="group__vectorutils.html#ga9efbdfd637f2a5bb6054c6ee5a163fcc">mx::math::vectorMedian</a></div><div class="ttdeci">vectorT::value_type vectorMedian(const vectorT &amp;vec, vectorT *work=0)</div><div class="ttdoc">Calculate median of a vector, leaving the vector unaltered.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00247">vectorUtils.hpp:247</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -314,7 +481,7 @@ $(document).ready(function(){initNavTree('aperturePhotometer_8hpp_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="aperturePhotometer_8hpp.html">aperturePhotometer.hpp</a></li>
-    <li class="footer">Generated on Wed May 4 2022 19:10:37 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri May 20 2022 11:30:02 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

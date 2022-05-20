@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('classmx_1_1improc_1_1aperturePhotomete
   <div class="summary">
 <a href="classmx_1_1improc_1_1aperturePhotometer-members.html">List of all members</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">mx::improc::aperturePhotometer&lt; realT &gt; Class Template Reference</div>  </div>
@@ -109,7 +110,7 @@ class mx::improc::aperturePhotometer&lt; realT &gt;</h3>
 <p>This initial version assumes the source is at 0.5*(rows-1) and 0.5*(cols-1). <br  />
 </p>
 <p>First call resize with the desired size. This organizes the radius vector and the index image which maps pixels to position in the radius vector.</p>
-<p>The call cumPhot with the image, which will sum the flux contained within each radius.</p>
+<p>Then call cumPhot with the image, which will sum the flux contained within each radius.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">realT</td><td>the real floating point type of the data </td></tr>
@@ -117,24 +118,49 @@ class mx::improc::aperturePhotometer&lt; realT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00054">54</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00056">56</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="aperturePhotometer_8hpp_source.html">improc/aperturePhotometer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a32d2c64a2783283330bf808a32a89f13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">resize</a> (int sizeX, int sizeY, realT xcen, realT ycen)</td></tr>
+<tr class="memdesc:a32d2c64a2783283330bf808a32a89f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the photometer, recalculating the radius vector and index image.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#a32d2c64a2783283330bf808a32a89f13">More...</a><br /></td></tr>
+<tr class="separator:a32d2c64a2783283330bf808a32a89f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab19a67f654989336392a7352c3a52bd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">resize</a> (int sizeX, int sizeY)</td></tr>
-<tr class="memdesc:ab19a67f654989336392a7352c3a52bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the photometer, recalculating the radius vector and index image.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">More...</a><br /></td></tr>
+<tr class="memdesc:ab19a67f654989336392a7352c3a52bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the photometer for a centered image, recalculating the radius vector and index image. <br  />
+  <a href="classmx_1_1improc_1_1aperturePhotometer.html#ab19a67f654989336392a7352c3a52bd0">More...</a><br /></td></tr>
 <tr class="separator:ab19a67f654989336392a7352c3a52bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a27c008bc03ad062d6788ffa164b461"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a> (std::vector&lt; realT &gt; &amp;cumPhot, <a class="el" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage</a>&lt; realT &gt; &amp;im, realT maxr=0)</td></tr>
 <tr class="memdesc:a8a27c008bc03ad062d6788ffa164b461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cumulative photometry of an image as a function of radius.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">More...</a><br /></td></tr>
 <tr class="separator:a8a27c008bc03ad062d6788ffa164b461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab894a6b52f5b7098880169ec4678a23c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#ab894a6b52f5b7098880169ec4678a23c">cumPhot</a> (std::vector&lt; realT &gt; &amp;cumPhot, std::vector&lt; realT &gt; &amp;deltaPhot, <a class="el" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage</a>&lt; realT &gt; &amp;im, realT maxr=0)</td></tr>
+<tr class="memdesc:ab894a6b52f5b7098880169ec4678a23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cumulative photometry of an image as a function of radius.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#ab894a6b52f5b7098880169ec4678a23c">More...</a><br /></td></tr>
+<tr class="separator:ab894a6b52f5b7098880169ec4678a23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a175ecf7f41f6ca4c4a63af1275093e30"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">radius</a> (size_t i)</td></tr>
 <tr class="memdesc:a175ecf7f41f6ca4c4a63af1275093e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the radius value at an index of the vector.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#a175ecf7f41f6ca4c4a63af1275093e30">More...</a><br /></td></tr>
 <tr class="separator:a175ecf7f41f6ca4c4a63af1275093e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab6d7af2470617185d56f1eaa0af6110f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#ab6d7af2470617185d56f1eaa0af6110f">cumPhotWork</a> (std::vector&lt; realT &gt; &amp;<a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#a8a27c008bc03ad062d6788ffa164b461">cumPhot</a>, std::vector&lt; realT &gt; *deltaPhot, <a class="el" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage</a>&lt; realT &gt; &amp;im, realT maxr=0)</td></tr>
+<tr class="memdesc:ab6d7af2470617185d56f1eaa0af6110f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cumulative photometry of an image as a function of radius.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#ab6d7af2470617185d56f1eaa0af6110f">More...</a><br /></td></tr>
+<tr class="separator:ab6d7af2470617185d56f1eaa0af6110f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ae70b6471aaa08d726802218ab3bc4d44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#ae70b6471aaa08d726802218ab3bc4d44">m_sizeX</a> {0}</td></tr>
+<tr class="memdesc:ae70b6471aaa08d726802218ab3bc4d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the image in X (rows).  <a href="classmx_1_1improc_1_1aperturePhotometer.html#ae70b6471aaa08d726802218ab3bc4d44">More...</a><br /></td></tr>
+<tr class="separator:ae70b6471aaa08d726802218ab3bc4d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3af9eceddb0b5bdbd395f918a7132ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#ae3af9eceddb0b5bdbd395f918a7132ff">m_sizeY</a> {0}</td></tr>
+<tr class="memdesc:ae3af9eceddb0b5bdbd395f918a7132ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the image in Y (columns).  <a href="classmx_1_1improc_1_1aperturePhotometer.html#ae3af9eceddb0b5bdbd395f918a7132ff">More...</a><br /></td></tr>
+<tr class="separator:ae3af9eceddb0b5bdbd395f918a7132ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff205da1d25400546decc01f61774c9f"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#aff205da1d25400546decc01f61774c9f">m_xcen</a> {0}</td></tr>
+<tr class="memdesc:aff205da1d25400546decc01f61774c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The x coordinate of the center of the image. Radii are caculated relative to this point. Default is 0.5*(sizeX-1).  <a href="classmx_1_1improc_1_1aperturePhotometer.html#aff205da1d25400546decc01f61774c9f">More...</a><br /></td></tr>
+<tr class="separator:aff205da1d25400546decc01f61774c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade7857de2effb2a8a096ed7f898772b"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#aade7857de2effb2a8a096ed7f898772b">m_ycen</a> {0}</td></tr>
+<tr class="memdesc:aade7857de2effb2a8a096ed7f898772b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The y coordinate of the center of the image. Radii are caculated relative to this point. Default is 0.5*(sizeY-1).  <a href="classmx_1_1improc_1_1aperturePhotometer.html#aade7857de2effb2a8a096ed7f898772b">More...</a><br /></td></tr>
+<tr class="separator:aade7857de2effb2a8a096ed7f898772b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97451411af9bd6bdb904471551db92fc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">m_radius</a></td></tr>
 <tr class="memdesc:a97451411af9bd6bdb904471551db92fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the ordered unique radii of the pixels in the image.  <a href="classmx_1_1improc_1_1aperturePhotometer.html#a97451411af9bd6bdb904471551db92fc">More...</a><br /></td></tr>
 <tr class="separator:a97451411af9bd6bdb904471551db92fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,15 +170,12 @@ Protected Attributes</h2></td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8a27c008bc03ad062d6788ffa164b461"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a27c008bc03ad062d6788ffa164b461">&#9670;&nbsp;</a></span>cumPhot()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a27c008bc03ad062d6788ffa164b461">&#9670;&nbsp;</a></span>cumPhot() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename realT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::cumPhot </td>
@@ -178,15 +201,9 @@ template&lt;typename realT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the cumulative photometry of an image as a function of radius. </p>
-<dl class="section note"><dt>Note</dt><dd>Source must be at geometric center of image.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error </dd></dl>
@@ -199,9 +216,135 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00137">137</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00265">265</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aperturePhotometer_8hpp_source.html#l00063">mx::improc::aperturePhotometer&lt; realT &gt;::m_indexIm</a>, and <a class="el" href="aperturePhotometer_8hpp_source.html#l00060">mx::improc::aperturePhotometer&lt; realT &gt;::m_radius</a>.</p>
+</div>
+</div>
+<a id="ab894a6b52f5b7098880169ec4678a23c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab894a6b52f5b7098880169ec4678a23c">&#9670;&nbsp;</a></span>cumPhot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::cumPhot </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cumPhot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>deltaPhot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage</a>&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>maxr</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the cumulative photometry of an image as a function of radius. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cumPhot</td><td>the cumulative photometry at each point in the radius vector. Resized. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">deltaPhot</td><td>[optional] the photometry at each point in the radius vector, not-cumulative. Resized. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the image on which to perform the calculation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxr</td><td>[optional] the maximum radius to which to calculate. If &lt;= 0 then max possible is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00274">274</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab6d7af2470617185d56f1eaa0af6110f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d7af2470617185d56f1eaa0af6110f">&#9670;&nbsp;</a></span>cumPhotWork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::cumPhotWork </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cumPhot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; realT &gt; *&#160;</td>
+          <td class="paramname"><em>deltaPhot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage</a>&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>maxr</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the cumulative photometry of an image as a function of radius. </p>
+<p>This is called by the public cumPhot functions.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cumPhot</td><td>the cumulative photometry at each point in the radius vector. Resized. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">deltaPhot</td><td>if not `nullptr`, this vector is filled with the sum at each radius. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the image on which to perform the calculation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxr</td><td>[optional] the maximum radius to which to calculate. If &lt;= 0 then max possible is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00284">284</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="vectorUtils_8hpp_source.html#l00247">mx::math::vectorMedian()</a>.</p>
 
 </div>
 </div>
@@ -239,22 +382,19 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00193">193</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00153">153</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aperturePhotometer_8hpp_source.html#l00060">mx::improc::aperturePhotometer&lt; realT &gt;::m_radius</a>.</p>
+<p class="reference">References <a class="el" href="aperturePhotometer_8hpp_source.html#l00067">mx::improc::aperturePhotometer&lt; realT &gt;::m_radius</a>.</p>
 
 </div>
 </div>
 <a id="ab19a67f654989336392a7352c3a52bd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab19a67f654989336392a7352c3a52bd0">&#9670;&nbsp;</a></span>resize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19a67f654989336392a7352c3a52bd0">&#9670;&nbsp;</a></span>resize() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename realT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::resize </td>
@@ -274,16 +414,14 @@ template&lt;typename realT &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Resize the photometer, recalculating the radius vector and index image. </p>
-<p>If size is unchanged, nothing is done.</p>
-<dl class="section note"><dt>Note</dt><dd>Source must be at geometric center of image.</dd></dl>
+<p>Resize the photometer for a centered image, recalculating the radius vector and index image. <br  />
+ </p>
+<p>If size and center are unchanged, nothing is done. <br  />
+</p>
+<p>This version uses the geometric center of the image.</p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error </dd></dl>
@@ -295,9 +433,69 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00078">78</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00253">253</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="aperturePhotometer_8hpp_source.html#l00063">mx::improc::aperturePhotometer&lt; realT &gt;::m_indexIm</a>, <a class="el" href="aperturePhotometer_8hpp_source.html#l00060">mx::improc::aperturePhotometer&lt; realT &gt;::m_radius</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00047">mx::improc::radiusImage()</a>.</p>
+</div>
+</div>
+<a id="a32d2c64a2783283330bf808a32a89f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d2c64a2783283330bf808a32a89f13">&#9670;&nbsp;</a></span>resize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sizeX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sizeY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>xcen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>ycen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize the photometer, recalculating the radius vector and index image. </p>
+<p>If size and center are unchanged, nothing is done.</p>
+<dl class="section note"><dt>Note</dt><dd>Source must be at geometric center of image.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizeX</td><td>The new size in rows </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizeY</td><td>The new size in columns </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">xcen</td><td>The x coordinate of the center of the image. Radii are caculated relative to this point. Default is 0.5*(sizeX-1). </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">ycen</td><td>The y coordinate of the center of the image. Radii are caculated relative to this point. Default is 0.5*(sizeY-1). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00177">177</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="imageMasks_8hpp_source.html#l00048">mx::improc::radiusImage()</a>.</p>
 
 </div>
 </div>
@@ -326,9 +524,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Maps a pixel in the image to the position in the radius vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00063">63</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="aperturePhotometer_8hpp_source.html#l00137">mx::improc::aperturePhotometer&lt; realT &gt;::cumPhot()</a>, and <a class="el" href="aperturePhotometer_8hpp_source.html#l00078">mx::improc::aperturePhotometer&lt; realT &gt;::resize()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00069">69</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,9 +552,121 @@ template&lt;typename realT &gt; </div>
 
 <p>Holds the ordered unique radii of the pixels in the image. </p>
 
-<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00060">60</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00067">67</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aperturePhotometer_8hpp_source.html#l00137">mx::improc::aperturePhotometer&lt; realT &gt;::cumPhot()</a>, <a class="el" href="aperturePhotometer_8hpp_source.html#l00193">mx::improc::aperturePhotometer&lt; realT &gt;::radius()</a>, and <a class="el" href="aperturePhotometer_8hpp_source.html#l00078">mx::improc::aperturePhotometer&lt; realT &gt;::resize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aperturePhotometer_8hpp_source.html#l00153">mx::improc::aperturePhotometer&lt; realT &gt;::radius()</a>.</p>
+
+</div>
+</div>
+<a id="ae70b6471aaa08d726802218ab3bc4d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70b6471aaa08d726802218ab3bc4d44">&#9670;&nbsp;</a></span>m_sizeX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::m_sizeX {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The size of the image in X (rows). </p>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00061">61</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae3af9eceddb0b5bdbd395f918a7132ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3af9eceddb0b5bdbd395f918a7132ff">&#9670;&nbsp;</a></span>m_sizeY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::m_sizeY {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The size of the image in Y (columns). </p>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00062">62</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aff205da1d25400546decc01f61774c9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff205da1d25400546decc01f61774c9f">&#9670;&nbsp;</a></span>m_xcen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">realT <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::m_xcen {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The x coordinate of the center of the image. Radii are caculated relative to this point. Default is 0.5*(sizeX-1). </p>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00064">64</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aade7857de2effb2a8a096ed7f898772b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade7857de2effb2a8a096ed7f898772b">&#9670;&nbsp;</a></span>m_ycen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">realT <a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">mx::improc::aperturePhotometer</a>&lt; realT &gt;::m_ycen {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The y coordinate of the center of the image. Radii are caculated relative to this point. Default is 0.5*(sizeY-1). </p>
+
+<p class="definition">Definition at line <a class="el" href="aperturePhotometer_8hpp_source.html#l00065">65</a> of file <a class="el" href="aperturePhotometer_8hpp_source.html">aperturePhotometer.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +679,7 @@ template&lt;typename realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="classmx_1_1improc_1_1aperturePhotometer.html">aperturePhotometer</a></li>
-    <li class="footer">Generated on Wed May 4 2022 19:10:39 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri May 20 2022 11:30:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

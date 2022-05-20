@@ -11,5 +11,6 @@ var imageUtils_8hpp =
     [ "imcpy_flipUDLR", "imageUtils_8hpp.html#gae998f07aee3ddef14d64603e8977c6ab", null ],
     [ "reflectImageCoords", "imageUtils_8hpp.html#gaf65345d7ffa9beb0323fc6e51bee978a", null ],
     [ "zeroNaNCube", "imageUtils_8hpp.html#gaa56bbb261dda0b6fe51279394768ec96", null ],
-    [ "zeroNaNs", "imageUtils_8hpp.html#ga7bdc288187662af9655c1a94d57c30c4", null ]
+    [ "zeroNaNs", "imageUtils_8hpp.html#ga7bdc288187662af9655c1a94d57c30c4", null ],
+    [ "zeroNaNs", "imageUtils_8hpp.html#gaa8a644518b2c9a494cf1e3e885a10051", null ]
 ];

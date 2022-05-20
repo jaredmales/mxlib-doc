@@ -269,6 +269,7 @@ var namespacemx =
       [ "applyMask", "group__image__masks.html#ga917b7b98a203cb1bb70556e9ca3e8a6b", null ],
       [ "ccdBleedMask", "group__image__masks.html#ga94800d2710b554ed865a6045a7db2f71", null ],
       [ "circleOuterpix", "group__image__utils.html#ga65c3769a98d954e0998d4a202170a449", null ],
+      [ "colEdgeMedSubtract", "imageFilters_8hpp.html#a3b400eed35d9f86fb19efe73b1fd9bf9", null ],
       [ "combine2ImagesMasked", "group__image__utils.html#ga8f04126be7880d749f6943ee30b89974", null ],
       [ "cutImageRegion", "group__image__masks.html#ga1384d74a322db1c0893395682749d364", null ],
       [ "cutPaddedImage", "group__image__padding.html#gabdc39ef4b33505edd63ec4dc14b54116", null ],
@@ -321,11 +322,13 @@ var namespacemx =
       [ "reflectImageCoords", "group__image__utils.html#gaf65345d7ffa9beb0323fc6e51bee978a", null ],
       [ "reflectImageIndices", "imageMasks_8hpp.html#a8ea00fbf3785d282c66e0703d4f484d9", null ],
       [ "rotateMask", "imageMasks_8hpp.html#aab4c88c1c0281e7529af08174ff00252", null ],
+      [ "rowEdgeMedSubtract", "imageFilters_8hpp.html#af757a924f12ce13b11c7987a7f203947", null ],
       [ "stddevImage", "group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a", null ],
       [ "stddevImage", "group__std__prof.html#ga9bd97f9c825aef0433c17a8bc937493c", null ],
       [ "stddevImageCube", "group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11", null ],
       [ "zeroNaNCube", "group__image__utils.html#gaa56bbb261dda0b6fe51279394768ec96", null ],
-      [ "zeroNaNs", "group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4", null ]
+      [ "zeroNaNs", "group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4", null ],
+      [ "zeroNaNs", "group__image__utils.html#gaa8a644518b2c9a494cf1e3e885a10051", null ]
     ] ],
     [ "ioutils", null, [
       [ "binVTypes", "namespacemx_1_1ioutils_1_1binVTypes.html", null ],

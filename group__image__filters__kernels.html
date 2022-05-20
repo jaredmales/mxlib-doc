@@ -111,14 +111,14 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symetric Gaussian smoothing kernel.  <a href="structmx_1_1improc_1_1gaussKernel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Azimuthally variable boxcare smoothing kernel.  <a href="structmx_1_1improc_1_1azBoxKernel.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Azimuthally variable boxcare kernel.  <a href="structmx_1_1improc_1_1azBoxKernel.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="memTemplParams" colspan="2">template&lt;typename imageOutT , typename imageInT , typename kernelT &gt; </td></tr>
 <tr class="memitem:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">mx::improc::filterImage</a> (imageOutT &amp;fim, imageInT im, kernelT kernel, int maxr=0)</td></tr>
-<tr class="memdesc:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter an image with a kernel.  <a href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">More...</a><br /></td></tr>
+<tr class="memdesc:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter an image with a mean kernel.  <a href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">More...</a><br /></td></tr>
 <tr class="separator:ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -162,11 +162,11 @@ template&lt;typename imageOutT , typename imageInT , typename kernelT &gt; </div
       </table>
 </div><div class="memdoc">
 
-<p>Filter an image with a kernel. </p>
-<p>Applies the kernel to each pixel in the image, storing the filtered result in the output image. The kernel-type (kernelT) must have the following interface: </p><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _arrayT, <span class="keywordtype">size_t</span> kernW=4&gt;</div>
+<p>Filter an image with a mean kernel. </p>
+<p>Applies the kernel to each pixel in the image and sums, storing the filtered result in the output image. The kernel-type (kernelT) must have the following interface: </p><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _arrayT, <span class="keywordtype">size_t</span> kernW&gt;</div>
 <div class="line"><span class="keyword">struct </span>filterKernel</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">typedef</span> _arrayT arrayT;</div>
+<div class="line">    <span class="keyword">typedef</span> _arrayT arrayT; <span class="comment">// arrayT must have an eigen-like interface</span></div>
 <div class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> _arrayT::Scalar arithT;</div>
 <div class="line">  </div>
 <div class="line">    filterKernel()</div>
@@ -174,6 +174,13 @@ template&lt;typename imageOutT , typename imageInT , typename kernelT &gt; </div
 <div class="line">       <span class="comment">//constructor</span></div>
 <div class="line">    }</div>
 <div class="line">  </div>
+<div class="line">    <span class="comment">//The maxWidth function returns the maximum possible full-width (in either direction) of the kernel</span></div>
+<div class="line">    <span class="comment">//Called once</span></div>
+<div class="line">    <span class="keywordtype">int</span> maxWidth()</div>
+<div class="line">    {</div>
+<div class="line">       <span class="comment">//returns the maximum half-width given the configuration</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">//The setKernel function is called for each pixel.</span></div>
 <div class="line">    <span class="keywordtype">void</span> setKernel(arithT x, arithT y, arrayT &amp; kernel)</div>
 <div class="line">    {</div>
@@ -201,7 +208,7 @@ template&lt;typename imageOutT , typename imageInT , typename kernelT &gt; </div
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00206">206</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00248">248</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="imCenterCircleSym_8hpp_source.html#l00106">mx::improc::imCenterCircleSym&lt; realT &gt;::center()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01384">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>.</p>
 
@@ -212,7 +219,7 @@ template&lt;typename imageOutT , typename imageInT , typename kernelT &gt; </div
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 4 2022 19:10:38 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri May 20 2022 11:30:03 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

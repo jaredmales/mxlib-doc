@@ -94,19 +94,20 @@ $(document).ready(function(){initNavTree('structmx_1_1improc_1_1azBoxKernel.html
 <div class="header">
   <div class="summary">
 <a href="structmx_1_1improc_1_1azBoxKernel-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__image__processing.html">Image Processing</a> &#124; <a class="el" href="group__signal__processing.html">Signal Processing</a> &raquo; <a class="el" href="group__image__filters.html">Image Filters</a> &raquo; <a class="el" href="group__image__filters__kernels.html">Filter With Kernels</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<div class="textblock"><h3>template&lt;typename _arrayT, size_t _kernW = 4&gt;<br />
+<div class="textblock"><h3>template&lt;typename _arrayT, size_t _kernW = 2&gt;<br />
 struct mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;</h3>
 
-<p>Azimuthally variable boxcare smoothing kernel. </p>
+<p>Azimuthally variable boxcare kernel. </p>
 <p>Averages the image in a boxcare defined by a radial and azimuthal extent. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00089">89</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00090">90</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="imageFilters_8hpp_source.html">improc/imageFilters.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -114,15 +115,29 @@ struct mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;</h3>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa11a98a2bf6dd1897dff11f2633a1a4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#aa11a98a2bf6dd1897dff11f2633a1a4c">azBoxKernel</a> (arithT radWidth, arithT azWidth)</td></tr>
 <tr class="separator:aa11a98a2bf6dd1897dff11f2633a1a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d71fe1c6bc4e7b00ef1c12390aa03d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#a36d71fe1c6bc4e7b00ef1c12390aa03d">azBoxKernel</a> (arithT radWidth, arithT azWidth, arithT maxAz)</td></tr>
+<tr class="separator:a36d71fe1c6bc4e7b00ef1c12390aa03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a751f97bf455cb0ae3dc6e70c1cb0429c"><td class="memItemLeft" align="right" valign="top">arithT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#a751f97bf455cb0ae3dc6e70c1cb0429c">m_radWidth</a> {0}</td></tr>
+<tr class="memdesc:a751f97bf455cb0ae3dc6e70c1cb0429c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the half-width of the averaging box, in the radial direction, in pixels.  <a href="structmx_1_1improc_1_1azBoxKernel.html#a751f97bf455cb0ae3dc6e70c1cb0429c">More...</a><br /></td></tr>
+<tr class="separator:a751f97bf455cb0ae3dc6e70c1cb0429c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998cb691f6349672b0999b3f3965d3f8"><td class="memItemLeft" align="right" valign="top">arithT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#a998cb691f6349672b0999b3f3965d3f8">m_azWidth</a> {0}</td></tr>
+<tr class="memdesc:a998cb691f6349672b0999b3f3965d3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">the half-width of the averaging box, in the azimuthal direction, in pixels.  <a href="structmx_1_1improc_1_1azBoxKernel.html#a998cb691f6349672b0999b3f3965d3f8">More...</a><br /></td></tr>
+<tr class="separator:a998cb691f6349672b0999b3f3965d3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da95908b96187595e55f6852a0fd61c"><td class="memItemLeft" align="right" valign="top">arithT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#a2da95908b96187595e55f6852a0fd61c">m_maxAz</a> {0}</td></tr>
+<tr class="memdesc:a2da95908b96187595e55f6852a0fd61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum half-width of the averging box in the azimuthal direction, in degrees. &gt;= 0. If 0 or &gt;= 180, then no maximum is enforced.  <a href="structmx_1_1improc_1_1azBoxKernel.html#a2da95908b96187595e55f6852a0fd61c">More...</a><br /></td></tr>
+<tr class="separator:a2da95908b96187595e55f6852a0fd61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa11a98a2bf6dd1897dff11f2633a1a4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa11a98a2bf6dd1897dff11f2633a1a4c">&#9670;&nbsp;</a></span>azBoxKernel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11a98a2bf6dd1897dff11f2633a1a4c">&#9670;&nbsp;</a></span>azBoxKernel() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _arrayT , size_t _kernW = 4&gt; </div>
+template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -159,7 +174,126 @@ template&lt;typename _arrayT , size_t _kernW = 4&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00101">101</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00103">103</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a36d71fe1c6bc4e7b00ef1c12390aa03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d71fe1c6bc4e7b00ef1c12390aa03d">&#9670;&nbsp;</a></span>azBoxKernel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel</a>&lt; _arrayT, _kernW &gt;::<a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">azBoxKernel</a> </td>
+          <td>(</td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>radWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>azWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>maxAz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">radWidth</td><td>the half-width of the averaging box, in the radial direction, in pixels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">azWidth</td><td>the half-width of the averaging box, in the azimuthal direction, in pixels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxAz</td><td>the maximum half-width of the averging box in the azimuthal direction, in degrees. &gt;= 0. If 0 or &gt;= 180, then no maximum is enforced. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00110">110</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="geo_8hpp_source.html#l00078">mx::math::dtor()</a>, and <a class="el" href="imageFilters_8hpp_source.html#l00099">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::m_maxAz</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a998cb691f6349672b0999b3f3965d3f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998cb691f6349672b0999b3f3965d3f8">&#9670;&nbsp;</a></span>m_azWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">arithT <a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel</a>&lt; _arrayT, _kernW &gt;::m_azWidth {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the half-width of the averaging box, in the azimuthal direction, in pixels. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00098">98</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2da95908b96187595e55f6852a0fd61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da95908b96187595e55f6852a0fd61c">&#9670;&nbsp;</a></span>m_maxAz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">arithT <a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel</a>&lt; _arrayT, _kernW &gt;::m_maxAz {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the maximum half-width of the averging box in the azimuthal direction, in degrees. &gt;= 0. If 0 or &gt;= 180, then no maximum is enforced. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00099">99</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageFilters_8hpp_source.html#l00110">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::azBoxKernel()</a>.</p>
+
+</div>
+</div>
+<a id="a751f97bf455cb0ae3dc6e70c1cb0429c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751f97bf455cb0ae3dc6e70c1cb0429c">&#9670;&nbsp;</a></span>m_radWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">arithT <a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel</a>&lt; _arrayT, _kernW &gt;::m_radWidth {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the half-width of the averaging box, in the radial direction, in pixels. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00097">97</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
 
 </div>
 </div>
@@ -172,7 +306,7 @@ template&lt;typename _arrayT , size_t _kernW = 4&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">azBoxKernel</a></li>
-    <li class="footer">Generated on Wed May 4 2022 19:10:39 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri May 20 2022 11:30:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

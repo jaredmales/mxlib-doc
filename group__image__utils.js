@@ -29,5 +29,6 @@ var group__image__utils =
     [ "imcpy_flipUDLR", "group__image__utils.html#gae998f07aee3ddef14d64603e8977c6ab", null ],
     [ "reflectImageCoords", "group__image__utils.html#gaf65345d7ffa9beb0323fc6e51bee978a", null ],
     [ "zeroNaNCube", "group__image__utils.html#gaa56bbb261dda0b6fe51279394768ec96", null ],
-    [ "zeroNaNs", "group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4", null ]
+    [ "zeroNaNs", "group__image__utils.html#ga7bdc288187662af9655c1a94d57c30c4", null ],
+    [ "zeroNaNs", "group__image__utils.html#gaa8a644518b2c9a494cf1e3e885a10051", null ]
 ];
