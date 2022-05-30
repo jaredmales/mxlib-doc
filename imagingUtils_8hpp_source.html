@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('imagingUtils_8hpp_source.html',''); in
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">  * \ingroup imaging</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  */</span>  </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> arrayT&gt; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="group__imaging.html#gaf069c47255c9d0d7432fdf39d02d48be">   72</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__imaging.html#gaf069c47255c9d0d7432fdf39d02d48be">circularPupil</a>( arrayT &amp; m,  <span class="comment">///&lt; [in/out] is the allocated Array.  Dimensions are used to create the pupil.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="group__imaging.html#gaf069c47255c9d0d7432fdf39d02d48be">   72</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__imaging.html#gaf069c47255c9d0d7432fdf39d02d48be">circularPupil</a>( arrayT &amp; m,  <span class="comment">///&lt; [in.out] is the allocated Array.  Dimensions are used to create the pupil.</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                   <span class="keyword">typename</span> arrayT::Scalar eps=0, <span class="comment">///&lt; [in] [optional] is the central obscuration.  0-1, default is 0. </span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                   <span class="keyword">typename</span> arrayT::Scalar rad=0, <span class="comment">///&lt; [in] [optional] is the desired radius. If rad &lt;= 0, then the maximum radius based on dimensions of m is used. Default is 0.</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                   <span class="keyword">typename</span> arrayT::Scalar overscan = 0  <span class="comment">///&lt; [in] [optional] overscan in fractional pixels, to include partial pixels on the edge. Default is 0.</span></div>
@@ -215,7 +215,7 @@ $(document).ready(function(){initNavTree('imagingUtils_8hpp_source.html',''); in
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">  * \tparam arrayT is an Eigen-like array with public typedef Scalar</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">  */</span> </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> arrayT&gt; </div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="imagingUtils_8hpp.html#ab3f1da9aa368329b62030983bab6163e">  120</a></span>&#160;<span class="keywordtype">void</span> drawLine( arrayT &amp; im,  <span class="comment">///&lt; [in/out] The input image, modified.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="imagingUtils_8hpp.html#ab3f1da9aa368329b62030983bab6163e">  120</a></span>&#160;<span class="keywordtype">void</span> drawLine( arrayT &amp; im,  <span class="comment">///&lt; [in.out] The input image, modified.</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;               <span class="keyword">typename</span> arrayT::Scalar x0, <span class="comment">///&lt; [in] the x value, relative to image center, of the starting point</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;               <span class="keyword">typename</span> arrayT::Scalar y0, <span class="comment">///&lt; [in] the y value, relative to image center, of the starting point</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;               <span class="keyword">typename</span> arrayT::Scalar x1,  <span class="comment">///&lt; [in] the x value, relative to image center, of the end point</span></div>
@@ -336,7 +336,7 @@ $(document).ready(function(){initNavTree('imagingUtils_8hpp_source.html',''); in
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">///Apply a tilt to a wavefront </span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">  * \param complexWavefront [in/out] the complex wavefront to tilt, will be modified on output</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">  * \param complexWavefront [in.out] the complex wavefront to tilt, will be modified on output</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">  * \param xTilt [input] the amount of tilt in the x direction, in pixels </span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">  * \param yTilt [input] the amount of tilt in the y direction, in pixels </span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">  * </span></div>
@@ -478,7 +478,7 @@ $(document).ready(function(){initNavTree('imagingUtils_8hpp_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_798a60fe574b319ce1e0453987adc495.html">wfp</a></li><li class="navelem"><a class="el" href="imagingUtils_8hpp.html">imagingUtils.hpp</a></li>
-    <li class="footer">Generated on Mon May 30 2022 09:34:53 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 12:44:57 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

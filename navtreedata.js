@@ -64,26 +64,26 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ADIDerotator_8cpp.html",
-"classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a0630fb3de659c77e50ebac113776d846",
-"classmx_1_1AO_1_1sim_1_1ccdDetector.html#a4b7838647e483e8038b8d55e52fcbe83",
-"classmx_1_1err_1_1filererr.html",
-"classmx_1_1fits_1_1fitsHeaderCard.html#a71c0e9c9aae59315d35a7fa0984a9b43",
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#af842ce04793cecf91d92046acd027379",
-"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html#a75e8f2a8b0884cdda10cc59620b1d3f5",
-"fitsFile_8hpp.html#ga7e37919bc571f3de3c1a0ac0ce71f127",
-"group__astrophot__spectra.html",
-"group__fits__utils.html",
-"group__hc__imaging__enums.html#gga1af050405983cd62f812ec2c6809603eaea9e0fb17ff76149d07a1774f1b5329d",
-"group__mxAO__paths.html#gacdc2275d0092d14ac2a56be9047bca85",
-"group__sofa__constants.html#gabdf4f4aaf52ec1447c5714edbca10c59",
-"imageFilters_8hpp.html#af757a924f12ce13b11c7987a7f203947",
-"planets_8hpp.html",
-"structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a089bb36f50572807d7b813c2212ca3c7",
-"structmx_1_1astro_1_1mainSequence.html#a2f187cb0a14c48fd2deeaa84af5a2985",
-"structmx_1_1improc_1_1HCIobservation.html#a563997e310fdd95df499f51906441576",
-"structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01double_00_01complexDT_01_4.html#a460bb11020407bc7ff6ca9b32a4961c3",
-"timeUtils__test_8cpp.html#af626aba98e3d1affd2d7128785e6587a"
+"",
+"binVector_8hpp.html#ga43b571148e52f1041c7f6bd7fcd32752",
+"classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae4d11347ac0833a5f32b55ccfffca7e9",
+"classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9",
+"classmx_1_1fits_1_1fitsHeaderCard.html#a2fee38a2c3a14751d4bb41b34ae4f86b",
+"classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ae2c0b37bddffbfff48bf3b25f3981652",
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#a2e6781018249fe8f8d3ad4a2cbbf258e",
+"fileUtils_8hpp.html#ga69ffe50a6726766e9c51a653628201f5",
+"group__IPC.html#gadc964de2f62103fc5de709b5bde29603",
+"group__fits__processing__files.html",
+"group__hc__imaging__enums.html#ga3a3e7c3736f2c08bd769c008f59fd932",
+"group__kepler.html#ga02cfa22e91f93dc7da9e52aa9b6ac1b8",
+"group__signal__windows2D.html",
+"group__zernike__basis.html#gabd54621be0068582a7beb52396d71a62",
+"mxlib_8hpp_source.html",
+"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#ab50e160d4d36030070c831f82c9ebf85",
+"structmx_1_1astro_1_1blackbody.html#af5e97253ce734cd636acbf59329b6bba",
+"structmx_1_1improc_1_1HCIobservation.html#a1a31541d32591aad1c0d47d47e163703",
+"structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b",
+"timeUtils_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

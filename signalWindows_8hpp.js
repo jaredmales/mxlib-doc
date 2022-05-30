@@ -17,6 +17,8 @@ var signalWindows_8hpp =
     [ "nuttal", "signalWindows_8hpp.html#gaf6e6213992ff5b695eaf551794af6ff3", null ],
     [ "tukey", "signalWindows_8hpp.html#ga4e4c9c3064f636420531df7b1418d35a", null ],
     [ "tukey", "signalWindows_8hpp.html#ga77c5cd2a0d93d69119d63c332b3a06ca", null ],
-    [ "tukey2d", "signalWindows_8hpp.html#ga05a03c41e310b36c3e9102a2b80c6503", null ],
+    [ "tukey2d", "signalWindows_8hpp.html#ga0730bbb83cbed7a3c155d7fe6aac910f", null ],
+    [ "tukey2d", "signalWindows_8hpp.html#ga01197c3ac5df2b08b5a835dcb26ba58a", null ],
+    [ "tukey2dAnnulus", "signalWindows_8hpp.html#gae1e1b9bc1c3684d102ce98ed72745231", null ],
     [ "tukey2dAnnulus", "signalWindows_8hpp.html#ga339c8fb30ee91b5915ba9ce8a53b8516", null ]
 ];

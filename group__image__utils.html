@@ -449,8 +449,8 @@ template&lt;typename floatT , typename imageT , typename magImageT &gt; </div>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">x</td><td>the x-position of the maximum, in pixels of the input image </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>the y-position of the maximum, in pixels of the input image </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">scale_x</td><td>[in/out] the desired scale or resolution, in pixels &lt; 1, in the x direction. On output contains the actual scale calculated. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">scale_y</td><td>[in/out] the desired scale or resolution, in pixels &lt; 1, in the y direction. On output contains the actual scale calculated. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">scale_x</td><td>[in.out] the desired scale or resolution, in pixels &lt; 1, in the x direction. On output contains the actual scale calculated. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">scale_y</td><td>[in.out] the desired scale or resolution, in pixels &lt; 1, in the y direction. On output contains the actual scale calculated. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">magIm</td><td>the magnified image. This is used as working memory, will be resized. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the image to find the maximum of </td></tr>
   </table>
@@ -525,8 +525,8 @@ template&lt;typename floatT , typename imageT , typename magImageT , typename tr
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">x</td><td>the x-position of the maximum, in pixels of the input image </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>the y-position of the maximum, in pixels of the input image </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">scale_x</td><td>[in/out] the desired scale or resolution, in pixels &lt; 1, in the x direction. On output contains the actual scale calculated. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">scale_y</td><td>[in/out] the desired scale or resolution, in pixels &lt; 1, in the y direction. On output contains the actual scale calculated. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">scale_x</td><td>[in.out] the desired scale or resolution, in pixels &lt; 1, in the x direction. On output contains the actual scale calculated. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">scale_y</td><td>[in.out] the desired scale or resolution, in pixels &lt; 1, in the y direction. On output contains the actual scale calculated. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">magIm</td><td>the magnified image. This is used as working memory, will be resized. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the image to find the maximum of </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">trans</td><td>the transform to use for interpolation </td></tr>
@@ -957,7 +957,7 @@ template&lt;class cubeT &gt; </div>
 <p>Zero any NaNs in an image cube. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">imc</td><td>[in/out] cube which will have any NaN pixels set to zero </td></tr>
+    <tr><td class="paramname">imc</td><td>[in.out] cube which will have any NaN pixels set to zero </td></tr>
   </table>
   </dd>
 </dl>
@@ -991,7 +991,7 @@ template&lt;class imageT &gt; </div>
 <p>Zero any NaNs in an image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">im</td><td>[in/out] image which will have any NaN pixels set to zero </td></tr>
+    <tr><td class="paramname">im</td><td>[in.out] image which will have any NaN pixels set to zero </td></tr>
   </table>
   </dd>
 </dl>
@@ -1034,7 +1034,7 @@ template&lt;class imageT , typename valueT &gt; </div>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">im</td><td>[in/out] image which will have any NaN pixels set to zero </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">im</td><td>[in.out] image which will have any NaN pixels set to zero </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>[optional] The value to set NaN pixels too. Default is 0. </td></tr>
   </table>
   </dd>
@@ -1053,7 +1053,7 @@ template&lt;class imageT , typename valueT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 30 2022 09:34:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 12:44:58 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

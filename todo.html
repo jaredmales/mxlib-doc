@@ -115,8 +115,8 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dd><a class="anchor" id="_todo000003"></a>handle dir_wind averaging across 0/2pi <br  />
   </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a23d0fba4379d6fa4984a039623673361">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::d_opt</a>  ()</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000009"></a>this should be in a separate valideModes function </p>
-<p class="enddd"><a class="anchor" id="_todo000010"></a>investigate why we tolerate m_d_min = 0 here. Is this just a config error?  </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000010"></a>investigate why we tolerate m_d_min = 0 here. Is this just a config error? </p>
+<p class="enddd"><a class="anchor" id="_todo000009"></a>this should be in a separate valideModes function  </p>
 </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae7b9f09b4df51c764243ee5f4ac0431d">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::loadConfig</a>  (<a class="el" href="structmx_1_1app_1_1appConfigurator.html" title="Class to manage a set of configurable values, and read their values from config/ini files and the com...">app::appConfigurator</a> &amp;config)</dt>
 <dd><a class="anchor" id="_todo000013"></a>: "\test Loading aoAtmosphere config settings \ref tests_ao_analysis_aoAtmosphere_config "[test doc]""  </dd>
@@ -174,19 +174,19 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </dd>
 <dt>Member <a class="el" href="structmx_1_1app_1_1iniFile.html#a911db54a89bbfc450a9d506d11ea0da4">mx::app::iniFile::insert</a>  (const char *section, const char *name, const char *value)</dt>
 <dd><a class="anchor" id="_todo000026"></a>need error checking. </dd>
-<dt>Member <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a5d1abd79a838f5a4b5f6842d54b8e503">mx::astro::baseSpectrum&lt; realT &gt;::charFlux</a>  (realT &amp;flambda0, realT &amp;fnu0, realT &amp;fphot0, const realT &amp;lambda_0, const std::vector&lt; realT &gt; &amp;lambda, const std::vector&lt; realT &gt; &amp;trans)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000032"></a>use unit conversions to make it work for everything. </p>
-<p class="enddd">check on integration method, should it be trap? </p>
-</dd>
 <dt>Member <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a7efdfefd6c612bc6ba2b045996a271cc">mx::astro::baseSpectrum&lt; realT &gt;::charFlux</a>  (realT &amp;flambda0, realT &amp;fnu0, realT &amp;fphot0, const realT &amp;lambda_0, const std::vector&lt; realT &gt; &amp;lambda, const filterT &amp;trans)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000031"></a>use unit conversions to make it work for everything. </p>
 <p class="enddd">check on integration method, should it be trap? </p>
 </dd>
+<dt>Member <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a5d1abd79a838f5a4b5f6842d54b8e503">mx::astro::baseSpectrum&lt; realT &gt;::charFlux</a>  (realT &amp;flambda0, realT &amp;fnu0, realT &amp;fphot0, const realT &amp;lambda_0, const std::vector&lt; realT &gt; &amp;lambda, const std::vector&lt; realT &gt; &amp;trans)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000032"></a>use unit conversions to make it work for everything. </p>
+<p class="enddd">check on integration method, should it be trap? </p>
+</dd>
 <dt>Member <a class="el" href="astroDynamics_8hpp.html#a1b4bd8e3ce5dc38f5f554974922becc8">mx::astro::getGMST</a>  (realT &amp;GMST, int Yr, int Mo, int Dy, int hr, int min, realT sec)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000027"></a>handle SOFA error. </p>
-<p class="interdd"><a class="anchor" id="_todo000029"></a>handle SOFA error. </p>
-<p class="interdd"><a class="anchor" id="_todo000030"></a>handle SOFA error. </p>
-<p class="enddd"><a class="anchor" id="_todo000028"></a>handle SOFA error.  </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000030"></a>handle SOFA error. </p>
+<p class="interdd"><a class="anchor" id="_todo000027"></a>handle SOFA error. </p>
+<p class="interdd"><a class="anchor" id="_todo000028"></a>handle SOFA error. </p>
+<p class="enddd"><a class="anchor" id="_todo000029"></a>handle SOFA error.  </p>
 </dd>
 <dt>Member <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad3edac12807a23393d5c9ce77293e7a7">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages</a>  (int coaddCombineMethod, int coaddMaxImno, int coaddMaxTime, std::vector&lt; std::string &gt; &amp;coaddKeywords, std::vector&lt; double &gt; &amp;imageMJD, std::vector&lt; fits::fitsHeader &gt; &amp;heads, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube&lt; realT &gt;</a> &amp;ims)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000033"></a>this should really include end of exposure too. </p>
@@ -265,7 +265,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 30 2022 09:34:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 12:44:58 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
