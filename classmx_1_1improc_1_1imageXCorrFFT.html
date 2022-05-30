@@ -110,12 +110,21 @@ class mx::improc::imageXCorrFFT&lt; _ccImT &gt;</h3>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo:</a></b></dt><dd>This needs to be brought up to the same standard as <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html" title="Find the optimum shift to align two images using the Fourier cross correlation and a peak fit.">imageXCorrFFT</a>. Perhaps folded in as an alternative method?</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
+    <tr><td class="paramname">_ccImT</td><td>is the Eigen-like array type used for image processing. See typedefs. Find the optimum shift to align two images using the FFT cross correlation. The reference image must be the same size as the target image. Both the reference image and the section of target image being analyzed are mean subtracted and variance normalized. An optional mask can be supplied, which limits the pixels used for the mean and variance calculation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Typical usage will be to set the mask, then the reference, then repeatedly call operator() to determine the shifts for a sequence of imaages. No new heap allocations take place on these calls to operator(), and the reference image is not re-normalized on each call.</p>
+<p>The shift is reported in pixels such that if the mxlib imageShift function is used to shift the input image by the negative of the shifts, it will align with the reference at the center of the array.</p>
+<p>Three peak finding methods are provided. xcorrPeakMethod::centroid uses center of light, xcorrPeakMethod::centroid uses Gaussian centroiding, and xcorrPeakMethod::interp uses interpolation to find the peak to a given tolerance.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
     <tr><td class="paramname">_ccImT</td><td>is the Eigen-like array type used for image processing. See typedefs. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00056">56</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00080">80</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="imageXCorrFFT_8hpp_source.html">improc/imageXCorrFFT.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -148,18 +157,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75b98aad66425f4b344eaaedb04d35d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a75b98aad66425f4b344eaaedb04d35d0">imageXCorrFFT</a> (int <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a4bed6148c1848a28ebe6eb086b74baca">maxLag</a>)</td></tr>
 <tr class="memdesc:a75b98aad66425f4b344eaaedb04d35d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting maxLag.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a75b98aad66425f4b344eaaedb04d35d0">More...</a><br /></td></tr>
 <tr class="separator:a75b98aad66425f4b344eaaedb04d35d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c02a06f8c1f9396d422142c877fbaf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a1c02a06f8c1f9396d422142c877fbaf3">resize</a> (int nrows, int ncols)</td></tr>
+<tr class="memdesc:a1c02a06f8c1f9396d422142c877fbaf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cross-correlation images.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a1c02a06f8c1f9396d422142c877fbaf3">More...</a><br /></td></tr>
+<tr class="separator:a1c02a06f8c1f9396d422142c877fbaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bed6148c1848a28ebe6eb086b74baca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a4bed6148c1848a28ebe6eb086b74baca">maxLag</a> ()</td></tr>
 <tr class="memdesc:a4bed6148c1848a28ebe6eb086b74baca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current maximum lag.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a4bed6148c1848a28ebe6eb086b74baca">More...</a><br /></td></tr>
 <tr class="separator:a4bed6148c1848a28ebe6eb086b74baca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddd187fe9ad0d8f635ea8175304a5ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5ddd187fe9ad0d8f635ea8175304a5ee">maxLag</a> (int ml)</td></tr>
 <tr class="memdesc:a5ddd187fe9ad0d8f635ea8175304a5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum lag.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a5ddd187fe9ad0d8f635ea8175304a5ee">More...</a><br /></td></tr>
 <tr class="separator:a5ddd187fe9ad0d8f635ea8175304a5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c02a06f8c1f9396d422142c877fbaf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a1c02a06f8c1f9396d422142c877fbaf3">resize</a> (int nrows, int ncols)</td></tr>
-<tr class="memdesc:a1c02a06f8c1f9396d422142c877fbaf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cross-correlation images.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a1c02a06f8c1f9396d422142c877fbaf3">More...</a><br /></td></tr>
-<tr class="separator:a1c02a06f8c1f9396d422142c877fbaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f8fc93d98bf328b2ee664c0e42b10d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5f8fc93d98bf328b2ee664c0e42b10d0">setReference</a> (const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;im0)</td></tr>
-<tr class="memdesc:a5f8fc93d98bf328b2ee664c0e42b10d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the reference image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a5f8fc93d98bf328b2ee664c0e42b10d0">More...</a><br /></td></tr>
-<tr class="separator:a5f8fc93d98bf328b2ee664c0e42b10d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf5365bb3317d52ce6cf3814e36ff28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a8cf5365bb3317d52ce6cf3814e36ff28">tol</a> ()</td></tr>
+<tr class="memdesc:a8cf5365bb3317d52ce6cf3814e36ff28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tolerance of the interpolated-magnified image, in pixels.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a8cf5365bb3317d52ce6cf3814e36ff28">More...</a><br /></td></tr>
+<tr class="separator:a8cf5365bb3317d52ce6cf3814e36ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138312ccabf504dc7be43d758e32862c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a138312ccabf504dc7be43d758e32862c">tol</a> (<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a> nt)</td></tr>
+<tr class="memdesc:a138312ccabf504dc7be43d758e32862c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the tolerance of the interpolated-magnified image, in pixels.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a138312ccabf504dc7be43d758e32862c">More...</a><br /></td></tr>
+<tr class="separator:a138312ccabf504dc7be43d758e32862c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a2ef17dba9caf46aac16a9dce6b657"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aa7a2ef17dba9caf46aac16a9dce6b657">maskIm</a> (const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;mask)</td></tr>
+<tr class="memdesc:aa7a2ef17dba9caf46aac16a9dce6b657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the mask image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#aa7a2ef17dba9caf46aac16a9dce6b657">More...</a><br /></td></tr>
+<tr class="separator:aa7a2ef17dba9caf46aac16a9dce6b657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e81018a91ed44e33580afbc7fb245e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ae4e81018a91ed44e33580afbc7fb245e">maskIm</a> ()</td></tr>
+<tr class="memdesc:ae4e81018a91ed44e33580afbc7fb245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the mask image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#ae4e81018a91ed44e33580afbc7fb245e">More...</a><br /></td></tr>
+<tr class="separator:ae4e81018a91ed44e33580afbc7fb245e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae521535ffb63ff34e3bc793049cfc153"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ae521535ffb63ff34e3bc793049cfc153">refIm</a> (const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;im0)</td></tr>
+<tr class="memdesc:ae521535ffb63ff34e3bc793049cfc153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the reference image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#ae521535ffb63ff34e3bc793049cfc153">More...</a><br /></td></tr>
+<tr class="separator:ae521535ffb63ff34e3bc793049cfc153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40667d4c8da8c92df3943c8bec33310f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a40667d4c8da8c92df3943c8bec33310f">refIm</a> ()</td></tr>
+<tr class="memdesc:a40667d4c8da8c92df3943c8bec33310f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the reference image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a40667d4c8da8c92df3943c8bec33310f">More...</a><br /></td></tr>
+<tr class="separator:a40667d4c8da8c92df3943c8bec33310f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad869061214f43ede26547eb442557835"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad869061214f43ede26547eb442557835">normIm</a> ()</td></tr>
+<tr class="memdesc:ad869061214f43ede26547eb442557835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the normalized image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad869061214f43ede26547eb442557835">More...</a><br /></td></tr>
+<tr class="separator:ad869061214f43ede26547eb442557835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ed958319eee6054dd03b623a130425"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a24ed958319eee6054dd03b623a130425">ccIm</a> ()</td></tr>
+<tr class="memdesc:a24ed958319eee6054dd03b623a130425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the cross correlation image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a24ed958319eee6054dd03b623a130425">More...</a><br /></td></tr>
+<tr class="separator:a24ed958319eee6054dd03b623a130425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc5ed50393fc96ac7ead8b774beec26"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a7fc5ed50393fc96ac7ead8b774beec26">magIm</a> ()</td></tr>
+<tr class="memdesc:a7fc5ed50393fc96ac7ead8b774beec26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the magnified image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a7fc5ed50393fc96ac7ead8b774beec26">More...</a><br /></td></tr>
+<tr class="separator:a7fc5ed50393fc96ac7ead8b774beec26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39909aed586d39feaf010d359cc19979"><td class="memTemplParams" colspan="2">template&lt;class imT &gt; </td></tr>
 <tr class="memitem:a39909aed586d39feaf010d359cc19979"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a39909aed586d39feaf010d359cc19979">operator()</a> (<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a> &amp;xShift, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a> &amp;yShift, const imT &amp;im)</td></tr>
 <tr class="memdesc:a39909aed586d39feaf010d359cc19979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conduct the cross correlation to a specified tolerance.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a39909aed586d39feaf010d359cc19979">More...</a><br /></td></tr>
@@ -175,10 +208,31 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a179923f88756d97d90f55c162a3b2709"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum lag to consider in the initial cross-correlation. <br  />
   <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a179923f88756d97d90f55c162a3b2709">More...</a><br /></td></tr>
 <tr class="separator:a179923f88756d97d90f55c162a3b2709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab78a6937089acaae4ea4c0942dfa00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#abab78a6937089acaae4ea4c0942dfa00">m_tol</a> {0.1}</td></tr>
+<tr class="memdesc:abab78a6937089acaae4ea4c0942dfa00"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tolerance of the interpolated-magnified image, in pixels.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#abab78a6937089acaae4ea4c0942dfa00">More...</a><br /></td></tr>
+<tr class="separator:abab78a6937089acaae4ea4c0942dfa00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005aedf7edf899a9689ad6e414b9264e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a005aedf7edf899a9689ad6e414b9264e">m_magSize</a> {0}</td></tr>
+<tr class="memdesc:a005aedf7edf899a9689ad6e414b9264e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnified size of the ccIm when using interp. Set as function of m_tol and m_maxLag.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a005aedf7edf899a9689ad6e414b9264e">More...</a><br /></td></tr>
+<tr class="separator:a005aedf7edf899a9689ad6e414b9264e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Working Memory</div></td></tr>
+<tr class="memitem:adbd68a381330987df1aa5a39fec563e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#adbd68a381330987df1aa5a39fec563e3">m_refIm</a></td></tr>
+<tr class="memdesc:adbd68a381330987df1aa5a39fec563e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The normalized reference image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#adbd68a381330987df1aa5a39fec563e3">More...</a><br /></td></tr>
+<tr class="separator:adbd68a381330987df1aa5a39fec563e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfca249835db7a74908359eb9cad5b37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#acfca249835db7a74908359eb9cad5b37">m_maskIm</a></td></tr>
+<tr class="memdesc:acfca249835db7a74908359eb9cad5b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask image to use, may be needed for proper normalization even if refIm has 0 mask applied.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#acfca249835db7a74908359eb9cad5b37">More...</a><br /></td></tr>
+<tr class="separator:acfca249835db7a74908359eb9cad5b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67671d22255ea5d58b8771f94e6a5d25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a67671d22255ea5d58b8771f94e6a5d25">m_haveMask</a> {false}</td></tr>
+<tr class="memdesc:a67671d22255ea5d58b8771f94e6a5d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that a mask has been provided.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a67671d22255ea5d58b8771f94e6a5d25">More...</a><br /></td></tr>
+<tr class="separator:a67671d22255ea5d58b8771f94e6a5d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139ef19cc8f6552a74f462dc83b7741b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a139ef19cc8f6552a74f462dc83b7741b">m_normIm</a></td></tr>
+<tr class="memdesc:a139ef19cc8f6552a74f462dc83b7741b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The normalized image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a139ef19cc8f6552a74f462dc83b7741b">More...</a><br /></td></tr>
+<tr class="separator:a139ef19cc8f6552a74f462dc83b7741b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80d4250ef6f771528cde2169d0ec95c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a80d4250ef6f771528cde2169d0ec95c3">m_ccIm</a></td></tr>
 <tr class="memdesc:a80d4250ef6f771528cde2169d0ec95c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cross-correlation image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a80d4250ef6f771528cde2169d0ec95c3">More...</a><br /></td></tr>
 <tr class="separator:a80d4250ef6f771528cde2169d0ec95c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e71899f74f1d99356cf0714cb6b43a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5e71899f74f1d99356cf0714cb6b43a8">m_magIm</a></td></tr>
+<tr class="memdesc:a5e71899f74f1d99356cf0714cb6b43a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The magnified image, used if m_peakMethod == xcorrPeakMethod::interp.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a5e71899f74f1d99356cf0714cb6b43a8">More...</a><br /></td></tr>
+<tr class="separator:a5e71899f74f1d99356cf0714cb6b43a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e700ceba3b2922400aa7967941ccfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e01a55e1cd95ef7499f768b7ed1f23c">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a94e700ceba3b2922400aa7967941ccfd">m_ftIm0</a></td></tr>
 <tr class="memdesc:a94e700ceba3b2922400aa7967941ccfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the FT of the reference image.  <a href="classmx_1_1improc_1_1imageXCorrFFT.html#a94e700ceba3b2922400aa7967941ccfd">More...</a><br /></td></tr>
 <tr class="separator:a94e700ceba3b2922400aa7967941ccfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +263,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>the Eigen-like array type used for image processing </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00059">59</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00083">83</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -229,7 +283,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>Complex eigen array type with Scalar==complexT. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00069">69</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00093">93</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +303,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>Complex floating point type. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00065">65</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00089">89</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +323,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>Real eigen array type. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00067">67</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00091">91</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +343,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>the scalar type of the image type </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00063">63</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00087">87</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +363,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>the scalar type of the image type </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00061">61</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00085">85</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +384,7 @@ template&lt;class ccImT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00163">163</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00249">249</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -362,11 +416,107 @@ template&lt;class ccImT &gt; </div>
 
 <p>Constructor setting maxLag. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00168">168</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00254">254</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a24ed958319eee6054dd03b623a130425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ed958319eee6054dd03b623a130425">&#9670;&nbsp;</a></span>ccIm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::ccIm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the cross correlation image. </p>
+<dl class="section return"><dt>Returns</dt><dd>a const referent to m_ccIm. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00393">393</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7fc5ed50393fc96ac7ead8b774beec26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc5ed50393fc96ac7ead8b774beec26">&#9670;&nbsp;</a></span>magIm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::magIm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the magnified image. </p>
+<dl class="section return"><dt>Returns</dt><dd>a const referent to m_magIm. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00399">399</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4e81018a91ed44e33580afbc7fb245e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e81018a91ed44e33580afbc7fb245e">&#9670;&nbsp;</a></span>maskIm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::maskIm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the mask image. </p>
+<dl class="section return"><dt>Returns</dt><dd>a const referance to the mask image. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00326">326</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa7a2ef17dba9caf46aac16a9dce6b657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7a2ef17dba9caf46aac16a9dce6b657">&#9670;&nbsp;</a></span>maskIm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::maskIm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the mask image. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>the new mask image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00317">317</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a4bed6148c1848a28ebe6eb086b74baca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bed6148c1848a28ebe6eb086b74baca">&#9670;&nbsp;</a></span>maxLag() <span class="overload">[1/2]</span></h2>
 
@@ -384,7 +534,7 @@ template&lt;class ccImT &gt; </div>
 <p>Get the current maximum lag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_maxLag </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00174">174</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00288">288</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -414,7 +564,28 @@ template&lt;class ccImT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00180">180</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00294">294</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad869061214f43ede26547eb442557835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad869061214f43ede26547eb442557835">&#9670;&nbsp;</a></span>normIm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::normIm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the normalized image. </p>
+<dl class="section return"><dt>Returns</dt><dd>a const referent to m_normIm. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00387">387</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -467,9 +638,9 @@ template&lt;class imT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00241">241</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00406">406</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageUtils_8hpp_source.html#l00189">mx::improc::imageMaxInterp()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageUtils_8hpp_source.html#l00137">mx::improc::imageVariance()</a>, <a class="el" href="mxError_8hpp_source.html#l00164">MXE_SIZEERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageUtils_8hpp_source.html#l00137">mx::improc::imageVariance()</a>, and <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
 
 </div>
 </div>
@@ -516,6 +687,7 @@ template&lt;class im0T , class imT &gt; </div>
 </div><div class="memdoc">
 
 <p>Conduct the cross correlation to a specified tolerance. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error </dd></dl>
@@ -523,13 +695,66 @@ template&lt;class im0T , class imT &gt; </div>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">xShift</td><td>the x shift of im w.r.t. im0, in pixels </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">yShift</td><td>the y shift of im w.r.t. im0, in pixels </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">im0</td><td>the reference image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">im0</td><td>a new reference image </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the image to cross-correlate with the reference </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00306">306</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00498">498</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a40667d4c8da8c92df3943c8bec33310f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40667d4c8da8c92df3943c8bec33310f">&#9670;&nbsp;</a></span>refIm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::refIm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the reference image. </p>
+<dl class="section return"><dt>Returns</dt><dd>a const referent to m_refIm. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00381">381</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae521535ffb63ff34e3bc793049cfc153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae521535ffb63ff34e3bc793049cfc153">&#9670;&nbsp;</a></span>refIm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::refIm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td>
+          <td class="paramname"><em>im0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the reference image. </p>
+<p>Normalizes the reference image by mean subtraction and variance division. Applies the mask first if supplied. Then Fourier transform and conjugates the result.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00332">332</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00286">mx::improc::imageShiftWP()</a>, <a class="el" href="imageUtils_8hpp_source.html#l00137">mx::improc::imageVariance()</a>, <a class="el" href="mxError_8hpp_source.html#l00164">MXE_SIZEERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00021">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -574,12 +799,12 @@ template&lt;class ccImT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00186">186</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00260">260</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5f8fc93d98bf328b2ee664c0e42b10d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f8fc93d98bf328b2ee664c0e42b10d0">&#9670;&nbsp;</a></span>setReference()</h2>
+<a id="a8cf5365bb3317d52ce6cf3814e36ff28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf5365bb3317d52ce6cf3814e36ff28">&#9670;&nbsp;</a></span>tol() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -587,24 +812,45 @@ template&lt;class ccImT &gt; </div>
 template&lt;class ccImT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::setReference </td>
+          <td class="memname">ccImT::Scalar <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::tol</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the tolerance of the interpolated-magnified image, in pixels. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_tol. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00301">301</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a138312ccabf504dc7be43d758e32862c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a138312ccabf504dc7be43d758e32862c">&#9670;&nbsp;</a></span>tol() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ccImT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &gt;::tol </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> &amp;&#160;</td>
-          <td class="paramname"><em>im0</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a>&#160;</td>
+          <td class="paramname"><em>nt</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the reference image. </p>
-<p>Normalizes, fourier transforms, and conjugates the reference image</p>
-<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
-<dd>
--1 on error </dd></dl>
+<p>Set the tolerance of the interpolated-magnified image, in pixels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nt</td><td>The new value of the interpolation tolerance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00214">214</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::imageMean</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00286">mx::improc::imageShiftWP()</a>, and <a class="el" href="imageUtils_8hpp_source.html#l00137">mx::improc::imageVariance()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00307">307</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -633,7 +879,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>The cross-correlation image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00080">80</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00113">113</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -661,7 +907,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>FFT object for the backward transfsorm. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00088">88</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00123">123</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -689,7 +935,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>FFT object for the forward transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00086">86</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00121">121</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -717,7 +963,7 @@ template&lt;class _ccImT &gt; </div>
 
 <p>Working memory for the FT of the reference image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00082">82</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00117">117</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -745,7 +991,119 @@ template&lt;class _ccImT &gt; </div>
 
 <p>Working memory for the FFT. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00084">84</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00119">119</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a67671d22255ea5d58b8771f94e6a5d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67671d22255ea5d58b8771f94e6a5d25">&#9670;&nbsp;</a></span>m_haveMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_haveMask {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag indicating that a mask has been provided. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00109">109</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5e71899f74f1d99356cf0714cb6b43a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e71899f74f1d99356cf0714cb6b43a8">&#9670;&nbsp;</a></span>m_magIm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_magIm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The magnified image, used if m_peakMethod == xcorrPeakMethod::interp. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00115">115</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a005aedf7edf899a9689ad6e414b9264e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005aedf7edf899a9689ad6e414b9264e">&#9670;&nbsp;</a></span>m_magSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_magSize {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Magnified size of the ccIm when using interp. Set as function of m_tol and m_maxLag. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00133">133</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acfca249835db7a74908359eb9cad5b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfca249835db7a74908359eb9cad5b37">&#9670;&nbsp;</a></span>m_maskIm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_maskIm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mask image to use, may be needed for proper normalization even if refIm has 0 mask applied. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00107">107</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -774,7 +1132,91 @@ template&lt;class _ccImT &gt; </div>
 <p>The maximum lag to consider in the initial cross-correlation. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00094">94</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00129">129</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a139ef19cc8f6552a74f462dc83b7741b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139ef19cc8f6552a74f462dc83b7741b">&#9670;&nbsp;</a></span>m_normIm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_normIm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The normalized image. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00111">111</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adbd68a381330987df1aa5a39fec563e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd68a381330987df1aa5a39fec563e3">&#9670;&nbsp;</a></span>m_refIm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a37e47175d3ad19090299d056445d2bff">ccImT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_refIm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The normalized reference image. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00105">105</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abab78a6937089acaae4ea4c0942dfa00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab78a6937089acaae4ea4c0942dfa00">&#9670;&nbsp;</a></span>m_tol</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _ccImT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55">Scalar</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _ccImT &gt;::m_tol {0.1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The tolerance of the interpolated-magnified image, in pixels. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00131">131</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -787,7 +1229,7 @@ template&lt;class _ccImT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT</a></li>
-    <li class="footer">Generated on Fri May 20 2022 11:30:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 09:34:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

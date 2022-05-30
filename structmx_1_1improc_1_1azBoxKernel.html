@@ -117,6 +117,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa11a98a2bf6dd1897dff11f2633a1a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36d71fe1c6bc4e7b00ef1c12390aa03d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#a36d71fe1c6bc4e7b00ef1c12390aa03d">azBoxKernel</a> (arithT radWidth, arithT azWidth, arithT maxAz)</td></tr>
 <tr class="separator:a36d71fe1c6bc4e7b00ef1c12390aa03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b749aee12cef337deed902452bbb69e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html#a1b749aee12cef337deed902452bbb69e">setMaxWidth</a> ()</td></tr>
+<tr class="memdesc:a1b749aee12cef337deed902452bbb69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the max width based on the configured az and rad widths.  <a href="structmx_1_1improc_1_1azBoxKernel.html#a1b749aee12cef337deed902452bbb69e">More...</a><br /></td></tr>
+<tr class="separator:a1b749aee12cef337deed902452bbb69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -176,6 +179,8 @@ template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00103">103</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
 
+<p class="reference">References <a class="el" href="imageFilters_8hpp_source.html#l00125">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::setMaxWidth()</a>.</p>
+
 </div>
 </div>
 <a id="a36d71fe1c6bc4e7b00ef1c12390aa03d"></a>
@@ -230,7 +235,43 @@ template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00110">110</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="geo_8hpp_source.html#l00078">mx::math::dtor()</a>, and <a class="el" href="imageFilters_8hpp_source.html#l00099">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::m_maxAz</a>.</p>
+<p class="reference">References <a class="el" href="geo_8hpp_source.html#l00078">mx::math::dtor()</a>, <a class="el" href="imageFilters_8hpp_source.html#l00099">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::m_maxAz</a>, and <a class="el" href="imageFilters_8hpp_source.html#l00125">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::setMaxWidth()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1b749aee12cef337deed902452bbb69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b749aee12cef337deed902452bbb69e">&#9670;&nbsp;</a></span>setMaxWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">mx::improc::azBoxKernel</a>&lt; _arrayT, _kernW &gt;::setMaxWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the max width based on the configured az and rad widths. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00125">125</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="imageFilters_8hpp_source.html#l00098">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::m_azWidth</a>, and <a class="el" href="imageFilters_8hpp_source.html#l00097">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::m_radWidth</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageFilters_8hpp_source.html#l00103">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::azBoxKernel()</a>.</p>
 
 </div>
 </div>
@@ -252,6 +293,8 @@ template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
 <p>the half-width of the averaging box, in the azimuthal direction, in pixels. </p>
 
 <p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00098">98</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="imageFilters_8hpp_source.html#l00125">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::setMaxWidth()</a>.</p>
 
 </div>
 </div>
@@ -295,6 +338,8 @@ template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="imageFilters_8hpp_source.html#l00097">97</a> of file <a class="el" href="imageFilters_8hpp_source.html">imageFilters.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="imageFilters_8hpp_source.html#l00125">mx::improc::azBoxKernel&lt; _arrayT, _kernW &gt;::setMaxWidth()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
@@ -306,7 +351,7 @@ template&lt;typename _arrayT , size_t _kernW = 2&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="structmx_1_1improc_1_1azBoxKernel.html">azBoxKernel</a></li>
-    <li class="footer">Generated on Fri May 20 2022 11:30:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 09:34:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -128,6 +128,7 @@ var group__fits__processing =
       [ "keyword", "classmx_1_1fits_1_1fitsHeaderCard.html#ae0fe2ebbf75d824c5301c4f8bfcaf8c8", null ],
       [ "Long", "classmx_1_1fits_1_1fitsHeaderCard.html#a747db7c74ac1e159c882b0fea6cf5ce0", null ],
       [ "LongLong", "classmx_1_1fits_1_1fitsHeaderCard.html#ab2f2f3d9844422805cf65c8027a42ea5", null ],
+      [ "operator=", "classmx_1_1fits_1_1fitsHeaderCard.html#a1c1a987f57574c62a38d1e3cc27aed78", null ],
       [ "Short", "classmx_1_1fits_1_1fitsHeaderCard.html#aa808fb12dac16dea6da5d09d4208528d", null ],
       [ "String", "classmx_1_1fits_1_1fitsHeaderCard.html#ae0db658a0de81b6f27523c48fae23bd9", null ],
       [ "type", "classmx_1_1fits_1_1fitsHeaderCard.html#a4489146e0e728aae58a9566512b59e5e", null ],

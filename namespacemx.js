@@ -276,6 +276,7 @@ var namespacemx =
       [ "drawLine", "group__image__masks.html#ga7360f9acf0557af17be7f59266d7490f", null ],
       [ "drawLine", "group__image__masks.html#ga65cfd4aa1d7febb4f28018918a1795f2", null ],
       [ "filterImage", "group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618", null ],
+      [ "imageCenterOfLight", "group__image__utils.html#ga8ec38405f24ea85bc1ef32febad31dbf", null ],
       [ "imageDownSample", "group__image__transforms.html#gaa575d47dbaf2c5a20b51d34c2cdc8605", null ],
       [ "imageMagnify", "group__image__transforms.html#ga52ec9fb84769431af66fbbaa39db03a3", null ],
       [ "imageMagnify", "group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694", null ],
@@ -441,7 +442,7 @@ var namespacemx =
         [ "airyPattern", "group__gen__math__airy__pattern.html#ga1fb147037b206b15d1791b34ef8d5fd2", null ],
         [ "airyPattern", "group__gen__math__airy__pattern.html#ga9d86aecb486e4932f0556ed213e20804", null ],
         [ "airyPattern", "group__gen__math__airy__pattern.html#ga5849028cad4f47f3d1cee4362bea6381", null ],
-        [ "airyPattern2D", "group__gen__math__gaussians.html#gae633a67480c9cc483cc65ca266c8b3f7", null ],
+        [ "airyPattern2D", "group__gen__math__airy__pattern.html#gae633a67480c9cc483cc65ca266c8b3f7", null ],
         [ "airyPatternEnclosed", "group__gen__math__airy__pattern.html#ga50f395d863d79be9a5a0f9757d7e4ddc", null ],
         [ "airyPatternEnclosed", "group__gen__math__airy__pattern.html#ga06d6b12c91bfe086948586934871ab7c", null ],
         [ "bessel_j", "group__functions.html#ga655c3bd311c1ec65b66651763ca353b7", null ],
@@ -601,7 +602,7 @@ var namespacemx =
         [ "tukey", "group__signal__windows1D.html#ga4e4c9c3064f636420531df7b1418d35a", null ],
         [ "tukey", "group__signal__windows1D.html#ga77c5cd2a0d93d69119d63c332b3a06ca", null ],
         [ "tukey2d", "group__signal__windows2D.html#ga05a03c41e310b36c3e9102a2b80c6503", null ],
-        [ "tukey2dAnnulus", "group__signal__windows2D.html#ga72dc368e30f27fd1f9cefca8e8a0a0a2", null ]
+        [ "tukey2dAnnulus", "group__signal__windows2D.html#ga339c8fb30ee91b5915ba9ce8a53b8516", null ]
       ] ],
       [ "autocorrelationFromPSD", "structmx_1_1sigproc_1_1autocorrelationFromPSD.html", "structmx_1_1sigproc_1_1autocorrelationFromPSD" ],
       [ "averagePeriodogram", "classmx_1_1sigproc_1_1averagePeriodogram.html", "classmx_1_1sigproc_1_1averagePeriodogram" ],

@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('aoSystem__test_8cpp_source.html',''); 
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;         </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a653693c22e3d16984232ed120165c6c8">D</a>() == 0.0);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac0f4cfa005583bd4f285d550180f6ddb">d_min</a>() == 0.0);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac0f4cfa005583bd4f285d550180f6ddb">d_min</a>(0) == 0.0);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a23d0fba4379d6fa4984a039623673361">d_opt</a>() == 1e-50);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a82c0cc80580fe62c663874dfd87fc24e">optd</a>() == <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a03dbb862928b1b50616a61018abf39a2">optd_delta</a>() == 1.0);</div>
@@ -247,7 +247,7 @@ $(document).ready(function(){initNavTree('aoSystem__test_8cpp_source.html',''); 
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;         aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae7b9f09b4df51c764243ee5f4ac0431d">loadConfig</a>(config);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a653693c22e3d16984232ed120165c6c8">D</a>() == Approx(7.6));</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac0f4cfa005583bd4f285d550180f6ddb">d_min</a>() == Approx(0.122));</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac0f4cfa005583bd4f285d550180f6ddb">d_min</a>(0) == Approx(0.122));</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a82c0cc80580fe62c663874dfd87fc24e">optd</a>() == <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a03dbb862928b1b50616a61018abf39a2">optd_delta</a>() == Approx(0.0037));</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;         REQUIRE(aosys.<a class="code" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a900e04c7902e213678c7c99a35debf2a">lam_wfs</a>() == Approx(800e-9));</div>
@@ -368,7 +368,7 @@ $(document).ready(function(){initNavTree('aoSystem__test_8cpp_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="dir_dcba6dfd410a966f3c2ecded9b1039f6.html">include</a></li><li class="navelem"><a class="el" href="dir_0e93b2ebd5a3f6972a9c7375a32d454f.html">ao</a></li><li class="navelem"><a class="el" href="dir_d9900b7de959505edf138f7fdb302213.html">analysis</a></li><li class="navelem"><a class="el" href="aoSystem__test_8cpp.html">aoSystem_test.cpp</a></li>
-    <li class="footer">Generated on Fri May 20 2022 11:30:03 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 09:34:53 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

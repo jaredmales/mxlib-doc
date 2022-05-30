@@ -1,6 +1,7 @@
 var imageUtils_8hpp =
 [
     [ "combine2ImagesMasked", "imageUtils_8hpp.html#ga8f04126be7880d749f6943ee30b89974", null ],
+    [ "imageCenterOfLight", "imageUtils_8hpp.html#ga8ec38405f24ea85bc1ef32febad31dbf", null ],
     [ "imageMaxInterp", "imageUtils_8hpp.html#ga05880e2f798ef0086d2017c3685ab3fa", null ],
     [ "imageMaxInterp", "imageUtils_8hpp.html#ga54dfc41af4090b82694cc201d0651f64", null ],
     [ "imageMean", "imageUtils_8hpp.html#ga7fa9c9ad263766e2e62151399208eb2c", null ],

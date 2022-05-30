@@ -110,10 +110,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga05a03c41e310b36c3e9102a2b80c6503"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__windows2D.html#ga05a03c41e310b36c3e9102a2b80c6503">mx::sigproc::window::tukey2d</a> (realT *filt, int dim, realT N, realT alpha, realT xc, realT yc)</td></tr>
 <tr class="memdesc:ga05a03c41e310b36c3e9102a2b80c6503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2-D Tukey window.  <a href="group__signal__windows2D.html#ga05a03c41e310b36c3e9102a2b80c6503">More...</a><br /></td></tr>
 <tr class="separator:ga05a03c41e310b36c3e9102a2b80c6503"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga72dc368e30f27fd1f9cefca8e8a0a0a2"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga72dc368e30f27fd1f9cefca8e8a0a0a2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__windows2D.html#ga72dc368e30f27fd1f9cefca8e8a0a0a2">mx::sigproc::window::tukey2dAnnulus</a> (realT *filt, int dim, realT N, realT eps, realT alpha, realT xc, realT yc)</td></tr>
-<tr class="memdesc:ga72dc368e30f27fd1f9cefca8e8a0a0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2-D Tukey window on an annulus.  <a href="group__signal__windows2D.html#ga72dc368e30f27fd1f9cefca8e8a0a0a2">More...</a><br /></td></tr>
-<tr class="separator:ga72dc368e30f27fd1f9cefca8e8a0a0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga339c8fb30ee91b5915ba9ce8a53b8516"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:ga339c8fb30ee91b5915ba9ce8a53b8516"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__windows2D.html#ga339c8fb30ee91b5915ba9ce8a53b8516">mx::sigproc::window::tukey2dAnnulus</a> (realT *filt, int rows, int cols, realT D, realT eps, realT alpha, realT xc, realT yc)</td></tr>
+<tr class="memdesc:ga339c8fb30ee91b5915ba9ce8a53b8516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2-D Tukey window on an annulus.  <a href="group__signal__windows2D.html#ga339c8fb30ee91b5915ba9ce8a53b8516">More...</a><br /></td></tr>
+<tr class="separator:ga339c8fb30ee91b5915ba9ce8a53b8516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga05a03c41e310b36c3e9102a2b80c6503"></a>
@@ -191,8 +191,8 @@ template&lt;typename realT &gt; </div>
 
 </div>
 </div>
-<a id="ga72dc368e30f27fd1f9cefca8e8a0a0a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga72dc368e30f27fd1f9cefca8e8a0a0a2">&#9670;&nbsp;</a></span>tukey2dAnnulus()</h2>
+<a id="ga339c8fb30ee91b5915ba9ce8a53b8516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga339c8fb30ee91b5915ba9ce8a53b8516">&#9670;&nbsp;</a></span>tukey2dAnnulus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,13 +209,19 @@ template&lt;typename realT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dim</em>, </td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>N</em>, </td>
+          <td class="paramname"><em>D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -254,26 +260,27 @@ template&lt;typename realT &gt; </div>
 </p>
 <p>The width of the window is controlled by alpha. alpha = 0 is a cylinder, alpha=1.0 is the Hann window.</p>
 <p>See <a href="https://en.wikipedia.org/wiki/Window_function">https://en.wikipedia.org/wiki/Window_function</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filt</td><td>is a pre-allocated array of size dim x dim. </td></tr>
-    <tr><td class="paramname">dim</td><td>is the size of the array. </td></tr>
-    <tr><td class="paramname">N</td><td>is the outer diameter of the window, nominally N=dim, but this is not required. </td></tr>
-    <tr><td class="paramname">eps</td><td>is the ratio of inner diameter to the outer diameter </td></tr>
-    <tr><td class="paramname">alpha</td><td>controls the window width. </td></tr>
-    <tr><td class="paramname">xc</td><td>is the desired x center of the window. </td></tr>
-    <tr><td class="paramname">yc</td><td>is the desired y center of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">realT</td><td>is a floating point type </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">filt</td><td>a pre-allocated array of size rows x cols (column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rows</td><td>the number of rows in filt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cols</td><td>the number of cols in filt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">D</td><td>the outer diameter of the window </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eps</td><td>the ratio of inner diameter to the outer diameter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>controls the window width. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xc</td><td>the desired x center of the window. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yc</td><td>the desired y center of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="signalWindows_8hpp_source.html#l00431">431</a> of file <a class="el" href="signalWindows_8hpp_source.html">signalWindows.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="signalWindows_8hpp_source.html#l00423">423</a> of file <a class="el" href="signalWindows_8hpp_source.html">signalWindows.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="math_2constants_8hpp_source.html#l00048">mx::math::pi()</a>.</p>
 
@@ -284,7 +291,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri May 20 2022 11:30:03 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon May 30 2022 09:34:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

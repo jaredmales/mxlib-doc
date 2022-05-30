@@ -19,6 +19,7 @@ var group__image__utils =
     ] ],
     [ "circleOuterpix", "group__image__utils.html#ga65c3769a98d954e0998d4a202170a449", null ],
     [ "combine2ImagesMasked", "group__image__utils.html#ga8f04126be7880d749f6943ee30b89974", null ],
+    [ "imageCenterOfLight", "group__image__utils.html#ga8ec38405f24ea85bc1ef32febad31dbf", null ],
     [ "imageMaxInterp", "group__image__utils.html#ga05880e2f798ef0086d2017c3685ab3fa", null ],
     [ "imageMaxInterp", "group__image__utils.html#ga54dfc41af4090b82694cc201d0651f64", null ],
     [ "imageMean", "group__image__utils.html#ga7fa9c9ad263766e2e62151399208eb2c", null ],

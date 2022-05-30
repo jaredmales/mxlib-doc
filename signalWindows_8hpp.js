@@ -18,5 +18,5 @@ var signalWindows_8hpp =
     [ "tukey", "signalWindows_8hpp.html#ga4e4c9c3064f636420531df7b1418d35a", null ],
     [ "tukey", "signalWindows_8hpp.html#ga77c5cd2a0d93d69119d63c332b3a06ca", null ],
     [ "tukey2d", "signalWindows_8hpp.html#ga05a03c41e310b36c3e9102a2b80c6503", null ],
-    [ "tukey2dAnnulus", "signalWindows_8hpp.html#ga72dc368e30f27fd1f9cefca8e8a0a0a2", null ]
+    [ "tukey2dAnnulus", "signalWindows_8hpp.html#ga339c8fb30ee91b5915ba9ce8a53b8516", null ]
 ];

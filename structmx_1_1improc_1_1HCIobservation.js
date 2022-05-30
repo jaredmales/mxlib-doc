@@ -63,6 +63,7 @@ var structmx_1_1improc_1_1HCIobservation =
     [ "m_Nrows", "structmx_1_1improc_1_1HCIobservation.html#a440e3b76850bc8c07e1b156b73b0318a", null ],
     [ "m_outputDir", "structmx_1_1improc_1_1HCIobservation.html#a8d41a3eca38da6dbcd9ddd48a3a5fb64", null ],
     [ "m_preProcess_azUSM_azW", "structmx_1_1improc_1_1HCIobservation.html#ad31e90639d9847863cfacfc3a21d9358", null ],
+    [ "m_preProcess_azUSM_maxAz", "structmx_1_1improc_1_1HCIobservation.html#ae05426a367a8fd352047d41cf2c71108", null ],
     [ "m_preProcess_azUSM_radW", "structmx_1_1improc_1_1HCIobservation.html#a6e54c9830d42f3f003b3540bdd73ed03", null ],
     [ "m_preProcess_beforeCoadd", "structmx_1_1improc_1_1HCIobservation.html#aa0f752fb2c89899a628c54e957ec156c", null ],
     [ "m_preProcess_gaussUSM_fwhm", "structmx_1_1improc_1_1HCIobservation.html#acfd56525f2446a952c37193c9976cb04", null ],

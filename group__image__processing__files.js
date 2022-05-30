@@ -12,6 +12,7 @@ var group__image__processing__files =
     [ "imagePads.hpp", "imagePads_8hpp.html", null ],
     [ "imageTransforms.hpp", "imageTransforms_8hpp.html", null ],
     [ "imageUtils.hpp", "imageUtils_8hpp.html", null ],
+    [ "imageXCorr.hpp", "imageXCorr_8hpp.html", null ],
     [ "imageXCorrDiscrete.hpp", "imageXCorrDiscrete_8hpp.html", null ],
     [ "imageXCorrFFT.hpp", "imageXCorrFFT_8hpp.html", null ],
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],
