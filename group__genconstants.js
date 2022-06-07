@@ -6,6 +6,7 @@ var group__genconstants =
     [ "five_sixths", "group__genconstants.html#gaec32d587b478f115528d7bbfc1ba1b0a", null ],
     [ "five_thirds", "group__genconstants.html#ga4c0ee025fe3d1151a74fe8abf7499ead", null ],
     [ "half_pi", "group__genconstants.html#gab8564534785a26fc8a07e57e74a55ebc", null ],
+    [ "ln_two", "group__genconstants.html#ga658ef62dba9056f38944ea63b4f9a6f4", null ],
     [ "pi", "group__genconstants.html#ga2fc546027d50d95e97c70cc659b6c5db", null ],
     [ "rad2deg", "group__genconstants.html#gaed9869a689e49782f051396daf498522", null ],
     [ "root_two", "group__genconstants.html#ga5a94e6e42bad8b5eaff49f995e130acd", null ],

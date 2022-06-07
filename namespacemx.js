@@ -514,6 +514,7 @@ var namespacemx =
       [ "hadp_impl", "group__template__blas.html#gaafc77f081091e88961c3f43264a7a6da", null ],
       [ "half_pi", "group__genconstants.html#gab8564534785a26fc8a07e57e74a55ebc", null ],
       [ "lamch", "group__template__lapack.html#ga9b5224c8973688d47eb9f92ea76da804", null ],
+      [ "ln_two", "group__genconstants.html#ga658ef62dba9056f38944ea63b4f9a6f4", null ],
       [ "operator!=", "randomT_8hpp.html#a6d21ed82be23ab91bd75e5413dcb7c24", null ],
       [ "operator<<", "randomT_8hpp.html#a1927f2ea108c44e2256e23878b9f370b", null ],
       [ "operator==", "randomT_8hpp.html#ae2897ab49433402954766c981b9d48ca", null ],

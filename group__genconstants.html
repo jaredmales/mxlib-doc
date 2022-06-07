@@ -133,6 +133,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5a94e6e42bad8b5eaff49f995e130acd"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__genconstants.html#ga5a94e6e42bad8b5eaff49f995e130acd">mx::math::root_two</a> ()</td></tr>
 <tr class="memdesc:ga5a94e6e42bad8b5eaff49f995e130acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of sqrt(2)  <a href="group__genconstants.html#ga5a94e6e42bad8b5eaff49f995e130acd">More...</a><br /></td></tr>
 <tr class="separator:ga5a94e6e42bad8b5eaff49f995e130acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga658ef62dba9056f38944ea63b4f9a6f4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga658ef62dba9056f38944ea63b4f9a6f4"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__genconstants.html#ga658ef62dba9056f38944ea63b4f9a6f4">mx::math::ln_two</a> ()</td></tr>
+<tr class="memdesc:ga658ef62dba9056f38944ea63b4f9a6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of ln(2)  <a href="group__genconstants.html#ga658ef62dba9056f38944ea63b4f9a6f4">More...</a><br /></td></tr>
+<tr class="separator:ga658ef62dba9056f38944ea63b4f9a6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaad57627a1fd4a62ab1f2b388df090b1a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gaad57627a1fd4a62ab1f2b388df090b1a"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__genconstants.html#gaad57627a1fd4a62ab1f2b388df090b1a">mx::math::third</a> ()</td></tr>
 <tr class="memdesc:gaad57627a1fd4a62ab1f2b388df090b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of 1/3.  <a href="group__genconstants.html#gaad57627a1fd4a62ab1f2b388df090b1a">More...</a><br /></td></tr>
@@ -195,7 +199,7 @@ template&lt;typename floatT &gt; </div>
 <p>Return 11/6 in the specified precision. </p>
 <p>This constant is used frequently in adaptive optics analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00308">308</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00374">374</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +231,7 @@ template&lt;typename floatT &gt; </div>
 <p>Return 11/3 in the specified precision. </p>
 <p>This constant is used frequently in adaptive optics analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00297">297</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00363">363</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +263,7 @@ template&lt;typename floatT &gt; </div>
 <p>Return 5/6 in the specified precision. </p>
 <p>This constant is used frequently in adaptive optics analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00286">286</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00352">352</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +295,7 @@ template&lt;typename floatT &gt; </div>
 <p>Return 5/3 in the specified precision. </p>
 <p>This constant is used frequently in adaptive optics analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00274">274</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00340">340</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,9 +325,41 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the value of pi/2. </p>
-<p>Wrapper for boost constant. Specializations provided for float, double, and long double. </p>
+<p>Specializations provided for float, double, long double, and quad (if supported). Can default to boost for other types if MX_INCLUDE_BOOST is defined. </p>
 
 <p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00136">136</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ga658ef62dba9056f38944ea63b4f9a6f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga658ef62dba9056f38944ea63b4f9a6f4">&#9670;&nbsp;</a></span>ln_two()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T mx::math::ln_two </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of ln(2) </p>
+<p>Specializations provided for float, double, long double, and quad (if supported). Can default to boost for other types if MX_INCLUDE_BOOST is defined. </p>
+
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00263">263</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,9 +389,9 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the value of pi. </p>
-<p>Wrapper for boost constant. Specializations provided for float, double, and long double. </p>
+<p>Specializations provided for float, double, long double, and quad if supported. Can default to boost for other types if MX_INCLUDE_BOOST is defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00048">48</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00052">52</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="aoConstants_8hpp_source.html#l00029">mx::AO::constants::calcConstants()</a>, <a class="el" href="circleOuterpix_8hpp_source.html#l00056">mx::improc::circleOuterpix()</a>, <a class="el" href="signalWindows_8hpp_source.html#l00109">mx::sigproc::window::genCosine()</a>, <a class="el" href="fraunhoferPropagator_8hpp_source.html#l00265">mx::wfp::fraunhoferPropagator&lt; _wavefrontT &gt;::makeShiftPhase()</a>, <a class="el" href="signalWindows_8hpp_source.html#l00053">mx::sigproc::window::tukey()</a>, <a class="el" href="signalWindows_8hpp_source.html#l00363">mx::sigproc::window::tukey2d()</a>, and <a class="el" href="signalWindows_8hpp_source.html#l00447">mx::sigproc::window::tukey2dAnnulus()</a>.</p>
 
@@ -387,9 +423,9 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the value of 180/pi. </p>
-<p>Wrapper for boost constant. Specializations provided for float, double, and long double. </p>
+<p>Specializations provided for float, double, long double, and quad (if supported). Can default to boost for other types if MX_INCLUDE_BOOST is defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00170">170</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00178">178</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,9 +455,9 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the value of sqrt(2) </p>
-<p>Wrapper for boost constant. Specializations provided for float, double, and long double. </p>
+<p>Specializations provided for float, double, long double, and quad (if supported). Can default to boost for other types if MX_INCLUDE_BOOST is defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00204">204</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00220">220</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +489,7 @@ template&lt;typename floatT &gt; </div>
 <p>Return 17/3 in the specified precision. </p>
 <p>This constant is used frequently in adaptive optics analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00341">341</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00407">407</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +521,7 @@ template&lt;typename floatT &gt; </div>
 <p>Return 6/5 in the specified precision. </p>
 <p>This constant is used frequently in adaptive optics analysis. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00319">319</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00385">385</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -517,7 +553,7 @@ template&lt;typename T &gt; </div>
 <p>Get the value of 1/3. </p>
 <p>Wrapper for boost constant. Specializations provided for float, double, and long double. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00240">240</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00306">306</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -550,7 +586,7 @@ template&lt;typename floatT &gt; </div>
 <p>This constant is used frequently in adaptive optics analysis. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00330">330</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00396">396</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +616,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the value of 2pi. </p>
-<p>Specializations provided for float, double, and long double. </p>
+<p>Specializations provided for float, double, long double, and quad (if supported). Can default to boost for other types if MX_INCLUDE_BOOST is defined. </p>
 
 <p class="definition">Definition at line <a class="el" href="math_2constants_8hpp_source.html#l00094">94</a> of file <a class="el" href="math_2constants_8hpp_source.html">constants.hpp</a>.</p>
 
@@ -591,7 +627,7 @@ template&lt;typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 30 2022 12:44:58 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Jun 6 2022 17:48:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -74,16 +74,16 @@ var NAVTREEINDEX =
 "fileUtils_8hpp.html#ga69ffe50a6726766e9c51a653628201f5",
 "group__IPC.html#gadc964de2f62103fc5de709b5bde29603",
 "group__fits__processing__files.html",
-"group__hc__imaging__enums.html#ga3a3e7c3736f2c08bd769c008f59fd932",
-"group__kepler.html#ga02cfa22e91f93dc7da9e52aa9b6ac1b8",
-"group__signal__windows2D.html",
-"group__zernike__basis.html#gabd54621be0068582a7beb52396d71a62",
-"mxlib_8hpp_source.html",
-"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#ab50e160d4d36030070c831f82c9ebf85",
-"structmx_1_1astro_1_1blackbody.html#af5e97253ce734cd636acbf59329b6bba",
-"structmx_1_1improc_1_1HCIobservation.html#a1a31541d32591aad1c0d47d47e163703",
-"structmx_1_1ioutils_1_1textTable.html#a60ad0f915fa73912b6e3642270f0664b",
-"timeUtils_8hpp.html"
+"group__hc__imaging__enums.html#ga1af050405983cd62f812ec2c6809603e",
+"group__kepler.html",
+"group__signal__windows1D.html#gaf6e6213992ff5b695eaf551794af6ff3",
+"group__zernike__basis.html#gabafece7c97ae73f42d23281e494ff37b",
+"mxlib_8hpp.html",
+"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#aaa33ed4e6cc38965edeea3ae9dc9c946",
+"structmx_1_1astro_1_1blackbody.html#a8d84a6c738e2a6eaf42686ea0d842eeb",
+"structmx_1_1improc_1_1HCIobservation.html#a19d97bae198f395439d60e44b9c59036",
+"structmx_1_1ioutils_1_1textTable.html#a4ef58f3006675514c66691df2af873c8",
+"timeUtils_8cpp.html#gaf4e0942bd452a924c10615f2a1928312"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
