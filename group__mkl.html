@@ -96,26 +96,20 @@ $(document).ready(function(){initNavTree('group__mkl.html',''); initResizable();
 <div class="title">Getting MKL<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a> &raquo; <a class="el" href="group__template__blaslap.html">Templatized BLAS and Lapack</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Instructions for installing the Intel Math Kernel Library (MKL)  
-</p>
-<p>Instructions for installing the Intel Math Kernel Library (MKL) </p>
-<p>To install the MKL: <br  />
-</p>
+<p>Instructions for installing the Intel Math Kernel Library (MKL)</p>
 <ol type="1">
-<li>Download the library from Intel. This requires registration and following some links in emails, etc. Unpack it.</li>
-<li>Install the MKL library by running the install.sh script. The default paths, etc, should be fine. Be sure to do this with root privileges if you can.</li>
-<li><p class="startli">Then add the following line to your profile: </p><pre class="fragment">source /opt/intel/mkl/bin/mklvars.sh intel64</pre><p class="startli">This can be done in your ~/.bashrc or ~/.bash_profile or ~/.bash_aliases file (whichever you use for this). Or to set it for all users add it to /etc/profile.d/mkl.sh (create the file).</p>
-</li>
-<li><p class="startli">You will also need to update ld. The system wide way to do this is to create a file called <code>/etc/ld.so.conf.d/mkl.conf</code> with the contents </p><pre class="fragment">/opt/intel/compilers_and_libraries_2018.3.222/linux/mkl/lib/intel64_lin/ </pre><p> edited as appropriate for your version.</p>
-<p class="startli">Then run </p><pre class="fragment">$ sudo ldconfig </pre> </li>
+<li>To install the MKL: follow the instructions to install the <code>intel-basekit</code> package on the Intel MKL site.</li>
+<li>Next add MKLROOT to your environment, adding it to <code>~/.bashrc</code> or <code>~/.bash_profile</code> or <code>~/.bash_aliases</code> file (whichever you use for this). It should point at the directory that contains <code>include/mkl.h</code> which you may have to search for after installation. Note that there will probably be a symlinked <code>latest</code> directory in <code>/opt/intel/oneapi/mkl</code> so adding <div class="fragment"><div class="line">export MKLROOT=/opt/intel/oneapi/mkl/latest</div>
+</div><!-- fragment --> will be robust against upgrades.</li>
+<li>Add <code>MKLROOT/lib</code> to <code>/etc/ld.so.conf.d/mkl.conf</code> as follows: <pre class="fragment">/opt/intel/oneapi/mkl/latest/lib/intel64/
+</pre> </li>
 </ol>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

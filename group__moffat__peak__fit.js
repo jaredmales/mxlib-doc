@@ -1,5 +1,24 @@
 var group__moffat__peak__fit =
 [
+    [ "array2FitMoffat1D", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html", [
+      [ "setFixed", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html#a500c235071952d5b7e55c53cb7d56b46", null ],
+      [ "coords", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html#af3385c02546c10da519a8560fbdd2b90", null ],
+      [ "data", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html#a11422238219f09954b4eaedfff2c71d6", null ],
+      [ "nx", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html#ab046a7abf254863a8b182eac85eae57d", null ]
+    ] ],
+    [ "moffat1D_fitter", "structmx_1_1math_1_1fit_1_1moffat1D__fitter.html", null ],
+    [ "fitMoffat1D", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html", [
+      [ "alpha", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a81b93d09f2079bcbb22ac29f7886b331", null ],
+      [ "beta", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a13da1d5e9cf212fbf3f473d8b5aa85c8", null ],
+      [ "fwhm", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a923d0a263915b6313a3c37587e910961", null ],
+      [ "I", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#aa42441e4d3152caeb867f4bccfc80ce4", null ],
+      [ "I0", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a913bf2807afc3304001baa5fe0f9bba8", null ],
+      [ "setArray", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a43dc0b3548c0149b479b7d1d2991396f", null ],
+      [ "setArray", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a20009b09f5a945dea12c718c456bb646", null ],
+      [ "setFixed", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#ac6e007d12a1b67f90f42dc09489a47b7", null ],
+      [ "setGuess", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a18534e673a9b51cd0f6911d564b9d9a6", null ],
+      [ "x0", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html#a811f53420aedba1a8ec9cd8e5c9ce2bb", null ]
+    ] ],
     [ "fitMoffat2D", "classmx_1_1math_1_1fit_1_1fitMoffat2D.html", [
       [ "alpha", "classmx_1_1math_1_1fit_1_1fitMoffat2D.html#ae0d85c8f2c73c8023e0b7c8d6a08b8ee", null ],
       [ "beta", "classmx_1_1math_1_1fit_1_1fitMoffat2D.html#aa38a180b8ee57d1deb62841045ec2178", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd":[0,7,5,1,4],
+"classmx_1_1app_1_1application.html#a63a7d712c053f19c0e4a62ab465f99a3":[0,7,5,1,22],
+"classmx_1_1app_1_1application.html#a7812e01cbbf57173533c128520294c67":[0,7,5,1,12],
 "classmx_1_1app_1_1application.html#a7a6becc35e7352488bc37176ebea98e9":[0,7,5,1,30],
 "classmx_1_1app_1_1application.html#a7afe5e76b44114c3bea9b40d3edd184d":[0,7,5,1,34],
 "classmx_1_1app_1_1application.html#a7df88705b8373214f22035761fb293fb":[0,7,5,1,33],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "classmx_1_1fits_1_1fitsHeaderCard.html#a24543861ede93833e265902542088d0c":[0,4,8,2,44],
 "classmx_1_1fits_1_1fitsHeaderCard.html#a246355447b0133ad87a1e1563ce54d7b":[0,7,0,3,2,22],
 "classmx_1_1fits_1_1fitsHeaderCard.html#a246355447b0133ad87a1e1563ce54d7b":[0,4,8,2,22],
-"classmx_1_1fits_1_1fitsHeaderCard.html#a292ab83a34ad5ec129fb2e006e1ffea4":[0,7,0,3,2,45],
-"classmx_1_1fits_1_1fitsHeaderCard.html#a292ab83a34ad5ec129fb2e006e1ffea4":[0,4,8,2,45],
-"classmx_1_1fits_1_1fitsHeaderCard.html#a2a7ce72ae5ad977e273dad8f76857a8e":[0,7,0,3,2,49],
-"classmx_1_1fits_1_1fitsHeaderCard.html#a2a7ce72ae5ad977e273dad8f76857a8e":[0,4,8,2,49]
+"classmx_1_1fits_1_1fitsHeaderCard.html#a292ab83a34ad5ec129fb2e006e1ffea4":[0,7,0,3,2,45]
 };

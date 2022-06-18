@@ -413,6 +413,7 @@ var namespacemx =
         [ "fftw_wisdom_filename", "group__fft.html#ga425a5e598b3a57b1b1d0ffd83a8ffe6b", null ]
       ] ],
       [ "fit", null, [
+        [ "array2FitGaussian1D", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D" ],
         [ "array2FitGaussian2D", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D" ],
         [ "array2FitAiry", "structmx_1_1math_1_1fit_1_1array2FitAiry.html", "structmx_1_1math_1_1fit_1_1array2FitAiry" ],
         [ "airy2D_obs_fitter", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter.html", null ],
@@ -424,6 +425,9 @@ var namespacemx =
         [ "gaussian2D_sym_fitter", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter.html", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter" ],
         [ "gaussian2D_gen_fitter", "structmx_1_1math_1_1fit_1_1gaussian2D__gen__fitter.html", null ],
         [ "fitGaussian2D", "classmx_1_1math_1_1fit_1_1fitGaussian2D.html", "classmx_1_1math_1_1fit_1_1fitGaussian2D" ],
+        [ "array2FitMoffat1D", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D" ],
+        [ "moffat1D_fitter", "structmx_1_1math_1_1fit_1_1moffat1D__fitter.html", null ],
+        [ "fitMoffat1D", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html", "classmx_1_1math_1_1fit_1_1fitMoffat1D" ],
         [ "array2FitMoffat", "structmx_1_1math_1_1fit_1_1array2FitMoffat.html", "structmx_1_1math_1_1fit_1_1array2FitMoffat" ],
         [ "moffat2D_sym_fitter", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ],
         [ "fitMoffat2D", "classmx_1_1math_1_1fit_1_1fitMoffat2D.html", "classmx_1_1math_1_1fit_1_1fitMoffat2D" ],
@@ -736,6 +740,7 @@ var namespacemx =
       [ "tiltWavefront", "group__imaging.html#ga4802aba34c0c75f833e8f058aa871daa", null ]
     ] ],
     [ "dumpGitStatus", "namespacemx.html#aa3de0e92d5db0a60289f27491d1d94f4", null ],
+    [ "dumpGitStatus", "namespacemx.html#abbcc34ab0a12cf091a166734149b1f31", null ],
     [ "errno_CodeToName", "group__error__handling.html#gad4f7f7aed4d908abb9cf4bad51ec4dab", null ],
     [ "errno_report", "group__error__handling.html#gaedcae323c2891fcbed0eec1e4eebb543", null ],
     [ "error_report", "group__error__handling.html#ga56a81b53911bc4cf6de96f0a0b1885c7", null ],

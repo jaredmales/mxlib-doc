@@ -115,7 +115,7 @@ struct mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;</h3>
 </p>
 <p> where \( A_p = 0.0218...\) (see mx::AO::constants::a_PSD ). </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00078">78</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00080">80</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="aoPSDs_8hpp_source.html">ao/analysis/aoPSDs.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -157,9 +157,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e971d6f44505fded8f9bd6de2a4c823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a3e971d6f44505fded8f9bd6de2a4c823">D</a> (realT nd)</td></tr>
 <tr class="memdesc:a3e971d6f44505fded8f9bd6de2a4c823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the aperture diameter.  <a href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a3e971d6f44505fded8f9bd6de2a4c823">More...</a><br /></td></tr>
 <tr class="separator:a3e971d6f44505fded8f9bd6de2a4c823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6c67f3be149200281d70f3b8f4c1db1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#aa6c67f3be149200281d70f3b8f4c1db1">alpha</a> (realT na)</td></tr>
-<tr class="memdesc:aa6c67f3be149200281d70f3b8f4c1db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the PSD index alpha.  <a href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#aa6c67f3be149200281d70f3b8f4c1db1">More...</a><br /></td></tr>
-<tr class="separator:aa6c67f3be149200281d70f3b8f4c1db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4d026370eb58de31313accabe45f95"><td class="memTemplParams" colspan="2">template&lt;class psdParamsT &gt; </td></tr>
 <tr class="memitem:a6b4d026370eb58de31313accabe45f95"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a6b4d026370eb58de31313accabe45f95">operator()</a> (psdParamsT &amp;par, realT k, realT sec_zeta)</td></tr>
 <tr class="memdesc:a6b4d026370eb58de31313accabe45f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the PSD at spatial frequency k and a zenith distance.  <a href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a6b4d026370eb58de31313accabe45f95">More...</a><br /></td></tr>
@@ -171,6 +168,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a539d3080be0fa154b0fa6612aa2871b2"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a539d3080be0fa154b0fa6612aa2871b2">fittingError</a> (<a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">aoAtmosphere</a>&lt; realT &gt; &amp;atm, realT d)</td></tr>
 <tr class="memdesc:a539d3080be0fa154b0fa6612aa2871b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fitting error for an actuator spacing d.  <a href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a539d3080be0fa154b0fa6612aa2871b2">More...</a><br /></td></tr>
 <tr class="separator:a539d3080be0fa154b0fa6612aa2871b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fb2d4f0031b55fc22910f1ce4e6a6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a51fb2d4f0031b55fc22910f1ce4e6a6d">setupConfig</a> (<a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;config)</td></tr>
+<tr class="memdesc:a51fb2d4f0031b55fc22910f1ce4e6a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the configurator to configure this class.  <a href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#a51fb2d4f0031b55fc22910f1ce4e6a6d">More...</a><br /></td></tr>
+<tr class="separator:a51fb2d4f0031b55fc22910f1ce4e6a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fcaa54a6f08ec0fbc15ec856ead81d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#aa1fcaa54a6f08ec0fbc15ec856ead81d">loadConfig</a> (<a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;config)</td></tr>
+<tr class="memdesc:aa1fcaa54a6f08ec0fbc15ec856ead81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the configuration of this class from a configurator.  <a href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html#aa1fcaa54a6f08ec0fbc15ec856ead81d">More...</a><br /></td></tr>
+<tr class="separator:aa1fcaa54a6f08ec0fbc15ec856ead81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -207,7 +210,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Default Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00214">214</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00217">217</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -255,40 +258,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00219">219</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00222">222</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa6c67f3be149200281d70f3b8f4c1db1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6c67f3be149200281d70f3b8f4c1db1">&#9670;&nbsp;</a></span>alpha()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html">mx::AO::analysis::vonKarmanSpectrum</a>&lt; realT &gt;::alpha </td>
-          <td>(</td>
-          <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>na</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the value of the PSD index alpha. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current value of m_alpha, the PSD index. Set the PSD index alpha </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">na</td><td>the new PSD index </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ab99849f116767b2eaf4075afecb3b1c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab99849f116767b2eaf4075afecb3b1c6">&#9670;&nbsp;</a></span>component() <span class="overload">[1/2]</span></h2>
 
@@ -306,7 +280,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of m_component. </p>
 <dl class="section return"><dt>Returns</dt><dd>m_component </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00267">267</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00270">270</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +310,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00273">273</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00276">276</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
@@ -359,7 +333,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of the diameter m_D. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_D, the diameter in m. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00286">286</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00289">289</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +363,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00292">292</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00295">295</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -431,9 +405,40 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00392">392</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00395">395</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="aoAtmosphere_8hpp_source.html#l00664">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::L_0()</a>, and <a class="el" href="aoAtmosphere_8hpp_source.html#l00631">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::r_0()</a>.</p>
+
+</div>
+</div>
+<a id="aa1fcaa54a6f08ec0fbc15ec856ead81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fcaa54a6f08ec0fbc15ec856ead81d">&#9670;&nbsp;</a></span>loadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html">mx::AO::analysis::vonKarmanSpectrum</a>&lt; realT &gt;::loadConfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load the configuration of this class from a configurator. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000004">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings <a class="el" href="aoPSDs__test_8cpp.html#tests_ao_analysis_aoAtmosphere_config">[test doc]</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>the app::configurator object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00434">434</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -500,7 +505,7 @@ template&lt;class psdParamsT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00350">350</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00353">353</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, <a class="el" href="mxError_8hpp_source.html#l00132">MXE_NOTIMPL</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
@@ -556,7 +561,7 @@ template&lt;class psdParamsT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00299">299</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00302">302</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>, <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="mxError_8hpp_source.html#l00140">MXE_PARAMNOTSET</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
 
@@ -579,7 +584,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of m_scintillation. </p>
 <dl class="section return"><dt>Returns</dt><dd>m_scintillation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00255">255</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00258">258</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +614,40 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00261">261</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00264">264</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a51fb2d4f0031b55fc22910f1ce4e6a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fb2d4f0031b55fc22910f1ce4e6a6d">&#9670;&nbsp;</a></span>setupConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html">mx::AO::analysis::vonKarmanSpectrum</a>&lt; realT &gt;::setupConfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">app::appConfigurator</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setup the configurator to configure this class. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000003">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings <a class="el" href="aoPSDs__test_8cpp.html#tests_ao_analysis_aoAtmosphere_config">[test doc]</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>the app::configurator object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00422">422</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00043">mx::app::appConfigurator::add()</a>.</p>
 
 </div>
 </div>
@@ -630,7 +668,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of m_subPiston. </p>
 <dl class="section return"><dt>Returns</dt><dd>m_subPiston </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00230">230</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00233">233</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +698,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00237">237</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00240">240</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -681,7 +719,7 @@ template&lt;typename realT &gt; </div>
 <p>Get the value of m_subTipTilt. </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of m_subTipTilt. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00243">243</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00246">246</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -711,7 +749,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00249">249</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00252">252</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -740,7 +778,7 @@ template&lt;typename realT &gt; </div>
 
 <p>If m_scintillation is true, this controls whether phase (0), amplitude (1), or dispersive contrast (2) is returned. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00086">86</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00088">88</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -768,7 +806,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Diameter used for piston and tip/tilt subtraction, in m. Default is 1 m. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00088">88</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00090">90</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -796,7 +834,7 @@ template&lt;typename realT &gt; </div>
 
 <p>flag controlling whether or not scintillation is included </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00085">85</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00087">87</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +862,7 @@ template&lt;typename realT &gt; </div>
 
 <p>flag controlling whether piston is subtracted from the PSD. Default is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00082">82</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00084">84</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -852,7 +890,7 @@ template&lt;typename realT &gt; </div>
 
 <p>flag controlling whether tip and tilt are subtracted from the PSD. Default is false. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00083">83</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoPSDs_8hpp_source.html#l00085">85</a> of file <a class="el" href="aoPSDs_8hpp_source.html">aoPSDs.hpp</a>.</p>
 
 </div>
 </div>
@@ -865,7 +903,7 @@ template&lt;typename realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1analysis_1_1vonKarmanSpectrum.html">vonKarmanSpectrum</a></li>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:55 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

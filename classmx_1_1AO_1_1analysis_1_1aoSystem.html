@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa5cfce2afec8997cd1eac5a77a8f4bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa5cfce2afec8997cd1eac5a77a8f4bb6">More...</a><br /></td></tr>
 <tr class="separator:aa5cfce2afec8997cd1eac5a77a8f4bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a074df769f56f81de3253f69a3271ea26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a074df769f56f81de3253f69a3271ea26">loadGuyon2005</a> ()</td></tr>
-<tr class="memdesc:a074df769f56f81de3253f69a3271ea26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the default parameters from Guyon, 2005 <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a074df769f56f81de3253f69a3271ea26">More...</a><br /></td></tr>
+<tr class="memdesc:a074df769f56f81de3253f69a3271ea26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the default parameters from Guyon, 2005 <b>[guyon_2005]</b>.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a074df769f56f81de3253f69a3271ea26">More...</a><br /></td></tr>
 <tr class="separator:a074df769f56f81de3253f69a3271ea26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049a0cdfd9532bd31c50d9db3216e9f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a049a0cdfd9532bd31c50d9db3216e9f2">loadMagAOX</a> ()</td></tr>
 <tr class="memdesc:a049a0cdfd9532bd31c50d9db3216e9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load parameters corresponding to the MagAO-X system.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a049a0cdfd9532bd31c50d9db3216e9f2">More...</a><br /></td></tr>
@@ -858,7 +858,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to uncorrected phase, C0. </p>
-<p>Contrast C0 is the uncorrected phase, with the effects of scintillation included. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C0 is the uncorrected phase, with the effects of scintillation included. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section note"><dt>Note</dt><dd>this is the raw PSD, it must be convolved with the PSF for the true contrast.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>C0. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -992,7 +992,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to uncorrected amplitude, C1. </p>
-<p>Contrast C1 is the uncorrected amplitude due to scintillation. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C1 is the uncorrected amplitude due to scintillation. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C0. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1127,7 +1127,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to measurement and time delay errors in phase/OPD at a spatial frequency. </p>
-<p>Contrast C2 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C2 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C2. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1260,7 +1260,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to measurement and time delay errors in amplitude at a spatial frequency. </p>
-<p>Contrast C3 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C3 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C3. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1393,7 +1393,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to scintilation-OPD chromaticity. </p>
-<p>Contrast C4 is due to the chromaticity of scintillation, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C4 is due to the chromaticity of scintillation, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C4. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1528,7 +1528,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to scintilation-amplitude chromaticity. </p>
-<p>Contrast C5 is due to the chromaticity of scintillation, causing the amplitude measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C5 is due to the chromaticity of scintillation, causing the amplitude measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C4. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1664,7 +1664,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to chromaticity of the index of refraction of air. </p>
-<p>Contrast C6 is due to the index of refraction of air being wavelength dependent, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
+<p>Contrast C6 is due to the index of refraction of air being wavelength dependent, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C6. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2612,7 +2612,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02719">2719</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
+<p class="reference">References <a class="el" href="mxlib_8hpp_source.html#l00050">mx::dumpGitStatus()</a>, and <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
 
 </div>
 </div>
@@ -3141,7 +3141,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02840">2840</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02831">2831</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00219">mx::app::appConfigurator::isSet()</a>, and <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
 
@@ -3183,7 +3183,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Load the default parameters from Guyon, 2005 <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>. </p>
+<p>Load the default parameters from Guyon, 2005 <b>[guyon_2005]</b>. </p>
 
 <p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01159">1159</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
@@ -4215,7 +4215,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02804">2804</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02795">2795</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00043">mx::app::appConfigurator::add()</a>.</p>
 
@@ -5963,7 +5963,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem</a></li>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:55 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

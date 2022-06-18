@@ -12,8 +12,10 @@ var hierarchy =
     [ "mx::app::application", "classmx_1_1app_1_1application.html", null ],
     [ "mx::math::fit::array2Fit< realT >", "structmx_1_1math_1_1fit_1_1array2Fit.html", null ],
     [ "mx::math::fit::array2FitAiry< realT >", "structmx_1_1math_1_1fit_1_1array2FitAiry.html", null ],
+    [ "mx::math::fit::array2FitGaussian1D< realT >", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html", null ],
     [ "mx::math::fit::array2FitGaussian2D< realT >", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html", null ],
     [ "mx::math::fit::array2FitMoffat< realT >", "structmx_1_1math_1_1fit_1_1array2FitMoffat.html", null ],
+    [ "mx::math::fit::array2FitMoffat1D< realT >", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html", null ],
     [ "mx::sigproc::psdFilterTypes::arrayT< realT, rank >", "structmx_1_1sigproc_1_1psdFilterTypes_1_1arrayT.html", null ],
     [ "mx::astro::astroFilter< _units, _rsr >", "structmx_1_1astro_1_1astroFilter.html", null ],
     [ "mx::sigproc::autocorrelationFromPSD< T >", "structmx_1_1sigproc_1_1autocorrelationFromPSD.html", null ],
@@ -128,11 +130,15 @@ var hierarchy =
     [ "mx::math::fit::levmarInterface< gaussian1D_fitter< _realT > >", "classmx_1_1math_1_1fit_1_1levmarInterface.html", [
       [ "mx::math::fit::fitGaussian1D< _realT >", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html", null ]
     ] ],
+    [ "mx::math::fit::levmarInterface< moffat1D_fitter< _realT > >", "classmx_1_1math_1_1fit_1_1levmarInterface.html", [
+      [ "mx::math::fit::fitMoffat1D< _realT >", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html", null ]
+    ] ],
     [ "mx::sigproc::linearPredictor< _realT >", "structmx_1_1sigproc_1_1linearPredictor.html", null ],
     [ "mx::sigproc::linearPredictor< realT >", "structmx_1_1sigproc_1_1linearPredictor.html", null ],
     [ "mx::math::logInterpolator< realT >", "classmx_1_1math_1_1logInterpolator.html", null ],
     [ "mx::wfp::lyotCoronagraph< _realT, _fpmaskFloatT >", "structmx_1_1wfp_1_1lyotCoronagraph.html", null ],
     [ "mx::astro::mainSequence< realT >", "structmx_1_1astro_1_1mainSequence.html", null ],
+    [ "mx::math::fit::moffat1D_fitter< _realT >", "structmx_1_1math_1_1fit_1_1moffat1D__fitter.html", null ],
     [ "mx::math::fit::moffat2D_sym_fitter< _realT >", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ],
     [ "mx::err::mxException", "classmx_1_1err_1_1mxException.html", [
       [ "mx::err::allocerr", "classmx_1_1err_1_1allocerr.html", null ],

@@ -98,12 +98,9 @@ $(document).ready(function(){initNavTree('group__gen__math__moffats.html',''); i
 <div class="title">The Moffat Function<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a> &raquo; <a class="el" href="group__functions.html">Special Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Utilities for working with the Moffat function.  
-<a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<p>Utilities for working with the Moffat function. </p>
-<p>The Moffat Function<a class="el" href="citelist.html#CITEREF_moffat_1969">[14]</a>, a.k.a. the Moffat Profile, a.k.a. the Moffat Distribution, has the form </p><p class="formulaDsp">
+<p>Utilities for working with the Moffat function</p>
+<p>The Moffat Function<b>[moffat_1969]</b>, a.k.a. the Moffat Profile, a.k.a. the Moffat Distribution, has the form </p><p class="formulaDsp">
 \[ I(x) = I_{pk}\left[ 1 + \frac{x^2}{\alpha^2}\right]^{-\beta} \]
 </p>
 <p> With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
@@ -178,7 +175,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Find value at position (x) of the 1D arbitrarily-centered symmetric unnormalized Moffat function. </p>
-<p>The Moffat distribution is due to <a class="el" href="citelist.html#CITEREF_moffat_1969">[14]</a>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
+<p>The Moffat distribution is due to <b>[moffat_1969]</b>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
 <p>Here we use the unnormalized general form, most useful for peak fitting.</p>
 <p>This function computes: </p><p class="formulaDsp">
 \[ I(x) = I_0 + I_{pk}\left[ 1 + \frac{(x-x_0)^2}{\alpha^2}\right]^{-\beta} \]
@@ -190,7 +187,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000023">Test:</a></b></dt><dd>Scenario: compiling 1D Moffat function <a class="el" href="moffat__test_8cpp.html#tests_math_func_moffat1D">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Test:</a></b></dt><dd>Scenario: compiling 1D Moffat function <a class="el" href="moffat__test_8cpp.html#tests_math_func_moffat1D">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the x-position at which to evaluate the Moffat function </td></tr>
@@ -272,7 +269,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Find value at position (x,y) of the 2D arbitrarily-centered unnormalized symmetric Moffat function. </p>
-<p>The Moffat distribution is due to <a class="el" href="citelist.html#CITEREF_moffat_1969">[14]</a>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
+<p>The Moffat distribution is due to <b>[moffat_1969]</b>. With \(\beta=1\) it is the Lorentzian or Cauchy distribution. See also <a href="https://en.wikipedia.org/wiki/Moffat_distribution">https://en.wikipedia.org/wiki/Moffat_distribution</a> and <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">https://en.wikipedia.org/wiki/Cauchy_distribution</a>.</p>
 <p>Here we use the unnormalized general form, most useful for peak fitting.</p>
 <p>This function omputes: </p><p class="formulaDsp">
 \[ I(x) = I_0 + I_{pk}\left[ 1 + \frac{(x-x_0)^2 + (y-y_0)^2}{\alpha^2}\right]^{-\beta} \]
@@ -284,7 +281,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Test:</a></b></dt><dd>Scenario: compiling 2D Moffat function <a class="el" href="moffat__test_8cpp.html#tests_math_func_moffat2D">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000026">Test:</a></b></dt><dd>Scenario: compiling 2D Moffat function <a class="el" href="moffat__test_8cpp.html#tests_math_func_moffat2D">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>the x-position at which to evaluate the Moffat function </td></tr>
@@ -342,7 +339,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Test:</a></b></dt><dd>Scenario: compiling Moffat FWHM <a class="el" href="moffat__test_8cpp.html#tests_math_func_moffatFWHM">[test doc]</a></dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000027">Test:</a></b></dt><dd>Scenario: compiling Moffat FWHM <a class="el" href="moffat__test_8cpp.html#tests_math_func_moffatFWHM">[test doc]</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>the width parameter of the Moffat function. </td></tr>
@@ -353,7 +350,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="moffat_8hpp_source.html#l00161">161</a> of file <a class="el" href="moffat_8hpp_source.html">moffat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00209">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::fwhm()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00437">mx::math::fit::fitMoffat1D&lt; _realT &gt;::fwhm()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00595">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::fwhm()</a>.</p>
 
 </div>
 </div>
@@ -362,7 +359,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

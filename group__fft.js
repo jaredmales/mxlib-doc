@@ -1,6 +1,7 @@
 var group__fft =
 [
     [ "fftT< _inputT, _outputT, _rank, 0 >", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html", [
+      [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ab3e421724b9b9385f6deefdd2e1089bd", null ],
       [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a33ed2bf4eb9c4f88a93bef53249373bb", null ],
       [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a7e8e16de205250e15428efe328d9e56e", null ],
       [ "fftT", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a21cbda87f430a270f5c2cf69f3fa81c1", null ],
@@ -20,7 +21,8 @@ var group__fft =
       [ "m_szZ", "classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a321462775601cec870173164b60083ad", null ]
     ] ],
     [ "fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html", [
-      [ "fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html#a872344a04b0783e42bc8681c51b3c009", null ]
+      [ "fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html#a872344a04b0783e42bc8681c51b3c009", null ],
+      [ "~fftwEnvironment", "structmx_1_1math_1_1fft_1_1fftwEnvironment.html#a7b44ea418dbf61060d1e292677e0a3ef", null ]
     ] ],
     [ "Template FFTW", "group__fftw__templates.html", "group__fftw__templates" ],
     [ "Getting FFTW", "group__fftw.html", null ],

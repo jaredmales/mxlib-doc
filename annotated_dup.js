@@ -126,6 +126,7 @@ var annotated_dup =
           [ "fftwTypeSpec< complexLT, long double >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4" ]
         ] ],
         [ "fit", null, [
+          [ "array2FitGaussian1D", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D" ],
           [ "array2FitGaussian2D", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D" ],
           [ "array2FitAiry", "structmx_1_1math_1_1fit_1_1array2FitAiry.html", "structmx_1_1math_1_1fit_1_1array2FitAiry" ],
           [ "airy2D_obs_fitter", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter.html", null ],
@@ -137,6 +138,9 @@ var annotated_dup =
           [ "gaussian2D_sym_fitter", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter.html", "structmx_1_1math_1_1fit_1_1gaussian2D__sym__fitter" ],
           [ "gaussian2D_gen_fitter", "structmx_1_1math_1_1fit_1_1gaussian2D__gen__fitter.html", null ],
           [ "fitGaussian2D", "classmx_1_1math_1_1fit_1_1fitGaussian2D.html", "classmx_1_1math_1_1fit_1_1fitGaussian2D" ],
+          [ "array2FitMoffat1D", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D" ],
+          [ "moffat1D_fitter", "structmx_1_1math_1_1fit_1_1moffat1D__fitter.html", null ],
+          [ "fitMoffat1D", "classmx_1_1math_1_1fit_1_1fitMoffat1D.html", "classmx_1_1math_1_1fit_1_1fitMoffat1D" ],
           [ "array2FitMoffat", "structmx_1_1math_1_1fit_1_1array2FitMoffat.html", "structmx_1_1math_1_1fit_1_1array2FitMoffat" ],
           [ "moffat2D_sym_fitter", "structmx_1_1math_1_1fit_1_1moffat2D__sym__fitter.html", null ],
           [ "fitMoffat2D", "classmx_1_1math_1_1fit_1_1fitMoffat2D.html", "classmx_1_1math_1_1fit_1_1fitMoffat2D" ],

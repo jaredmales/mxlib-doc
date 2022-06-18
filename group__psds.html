@@ -99,11 +99,8 @@ $(document).ready(function(){initNavTree('group__psds.html',''); initResizable()
 <div class="title">Power Spectra<div class="ingroups"><a class="el" href="group__signal__processing.html">Signal Processing</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Tools for generating and manipulating power spectra.  
-<a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<p>Tools for generating and manipulating power spectra. </p>
+<p>Tools for generating and manipulating power spectra</p>
 <p>The mxlib PSD utilities are based on the variance normalization for PSDs. For a 1-sided 1-dimensional PSD that is </p><p class="formulaDsp">
 \[ \sigma^2 = \int_0^{f_{max}} PSD(f) df \]
 </p>
@@ -255,7 +252,7 @@ template&lt;typename vectorTout , typename vectorTin &gt; </div>
 <p>To illustrate, the bins are re-ordered as: </p><pre class="fragment">* {1,2,3,4,5} --&gt; {0,1,2,3,4,5,-4,-3,-2,-1}
 * </pre><p>The output is scaled so that the total power remains the same. The 0-freq and Nyquist freq are not scaled.</p>
 <p>Entries in psdOneSided are cast to the value_type of psdTwoSided, for instance to allow for conversion to complex type.</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000058">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000060">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">psdTwoSided</td><td>on return contains the FFT storage order copy of psdOneSided. </td></tr>
@@ -304,7 +301,7 @@ template&lt;typename T &gt; </div>
 <p>Allocates freqTwoSided to hold a flipped copy of freqOneSided. If freqOneSided[0] is not 0, freqTwoSided[0] is set to 0, and the augmented frequency scale is shifted by 1.</p>
 <p>Example:</p>
 <p>{1,2,3,4,5} --&gt; {0,1,2,3,4,5,-4,-3,-2,-1}</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000059">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000061">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">freqTwoSided</td><td>on return contains the FFT storage order copy of freqOneSided. </td></tr>
@@ -544,7 +541,7 @@ template&lt;typename realT , typename realParamT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000055">Test:</a></b></dt><dd>Verify creation of a 1D frequency grid <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_frequencyGrid_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000057">Test:</a></b></dt><dd>Verify creation of a 1D frequency grid <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_frequencyGrid_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">vec</td><td>vec the pre-allocated vector, on return contains the frequency grid </td></tr>
@@ -690,7 +687,7 @@ template&lt;typename floatT , typename floatParamT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000057">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000059">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">psd</td><td>[in.out] the PSD to normalize, will be altered. </td></tr>
@@ -763,7 +760,7 @@ template&lt;typename floatT , typename floatParamT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000056">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000058">Test:</a></b></dt><dd>Verify scaling and normalization of augment1SidedPSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_augment1SidedPSD">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">psd</td><td>[in.out] the PSD to normalize, will be altered. </td></tr>
@@ -1007,7 +1004,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000054">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000056">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>the frequency scale of the PSD. </td></tr>
@@ -1074,7 +1071,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000052">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000054">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">df</td><td>the frequency scale of the PSD </td></tr>
@@ -1141,7 +1138,7 @@ template&lt;typename realT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000053">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000055">Test:</a></b></dt><dd>Scenario: calculating variance from a 1D PSD. <a class="el" href="psdUtils__test_8cpp.html#tests_sigproc_psdUtils_psdVar_1D">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">df</td><td>the frequency scale of the PSD </td></tr>
@@ -1465,7 +1462,7 @@ template&lt;typename floatT , typename floatfT , typename alphaT , typename T0T 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

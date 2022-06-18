@@ -573,7 +573,7 @@ template&lt;typename realT &gt; </div>
 <p class="formulaDsp">
 \[ \bar{\theta} = \left[\sum_i C_N^2(z_i) \theta_i^{5/3} \right]^{3/5} \]
 </p>
-<p> See Hardy (1998) Section 3.3.6. <a class="el" href="citelist.html#CITEREF_hardy_1998">[10]</a>.</p>
+<p> See Hardy (1998) Section 3.3.6. <b>[hardy_1998]</b>.</p>
 <p>This is only re-calculated if either m_layer_Cn2 or m_layer_v_wind is changed, otherwise this just returns the value of m_dir_wind.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_dir_wind. </dd></dl>
 
@@ -656,7 +656,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>The differential fraction of the turbulence PSD in phase after Fresnel propagation. </p>
-<p>See Equation (25) of Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>.</p>
+<p>See Equation (25) of Guyon (2005) <b>[guyon_2005]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the dX function. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -708,7 +708,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>The differential fraction of the turbulence PSD in amplitude after Fresnel propagation. </p>
-<p>See Equation (27) of Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>.</p>
+<p>See Equation (27) of Guyon (2005) <b>[guyon_2005]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the dY function. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -795,10 +795,10 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the full-width at half-maximum of a seeing limited image for this atmosphere for a large telescope (including L_0) </p>
-<p>Calculate the FWHM of a seeing limited image with the current parameters according to Floyd et al. (2010) <a class="el" href="citelist.html#CITEREF_floyd_2010">[5]</a> </p><p class="formulaDsp">
+<p>Calculate the FWHM of a seeing limited image with the current parameters according to Floyd et al. (2010) <b>[floyd_2010]</b> </p><p class="formulaDsp">
 \[ \epsilon_0 = 0.98\frac{\lambda_{sci}}{r_0(\lambda_sci)}. \]
 </p>
-<p> If there is an outer scale (_L_0 &gt; 0), then a correction is applied according to Tokovinin (2002) <a class="el" href="citelist.html#CITEREF_tokovinin_2002">[24]</a> </p><p class="formulaDsp">
+<p> If there is an outer scale (_L_0 &gt; 0), then a correction is applied according to Tokovinin (2002) <b>[tokovinin_2002]</b> </p><p class="formulaDsp">
 \[ \left( \frac{\epsilon_{vK}}{\epsilon_0}\right)^2 = 1 - 2.183\left( \frac{r_0(\lambda_{sci}}{L_0}\right)^{0.356} \]
 </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the FWHM ( \( \epsilon_{0/vK} \)) for the current atmosphere parameters. </dd></dl>
@@ -833,7 +833,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the full-width at half-maximum of a seeing limited image for this atmosphere for a small telescope (ignoring L_0) </p>
-<p>Calculate the FWHM of a seeing limited image with the current parameters according to Floyd et al. (2010) <a class="el" href="citelist.html#CITEREF_floyd_2010">[5]</a> </p><p class="formulaDsp">
+<p>Calculate the FWHM of a seeing limited image with the current parameters according to Floyd et al. (2010) <b>[floyd_2010]</b> </p><p class="formulaDsp">
 \[ \epsilon_0 = 0.98\frac{\lambda_{sci}}{r_0(\lambda_sci)}. \]
 </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the FWHM for the current atmosphere parameters. </dd></dl>
@@ -1015,7 +1015,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00664">664</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00392">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::fittingError()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00395">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::fittingError()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>.</p>
 
 </div>
 </div>
@@ -1498,7 +1498,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Load the configuration of this class from a configurator. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000002">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings <a class="el" href="aoAtmosphere__test_8cpp.html#tests_ao_analysis_aoAtmosphere_config">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000002">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings <a class="el" href="aoPSDs__test_8cpp.html#tests_ao_analysis_aoAtmosphere_config">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>the app::configurator object </td></tr>
@@ -1527,7 +1527,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Load the default atmosphere model from Guyon (2005). </p>
-<p>Sets the parameters from Table 4 of Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>. </p>
+<p>Sets the parameters from Table 4 of Guyon (2005) <b>[guyon_2005]</b>. </p>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01134">1134</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
@@ -1674,7 +1674,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00631">631</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00392">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::fittingError()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, and <a class="el" href="aoSystem__test_8cpp_source.html#l00020">SCENARIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aoPSDs_8hpp_source.html#l00395">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::fittingError()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, and <a class="el" href="aoSystem__test_8cpp_source.html#l00020">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1848,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Setup the configurator to configure this class. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000001">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings <a class="el" href="aoAtmosphere__test_8cpp.html#tests_ao_analysis_aoAtmosphere_config">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000001">Test:</a></b></dt><dd>Loading <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html" title="A class to specify atmosphere parameters and perform related calculations.">aoAtmosphere</a> config settings <a class="el" href="aoPSDs__test_8cpp.html#tests_ao_analysis_aoAtmosphere_config">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>the app::configurator object </td></tr>
@@ -2036,7 +2036,7 @@ template&lt;typename realT &gt; </div>
 <p class="formulaDsp">
 \[ \bar{v} = \left[\sum_i C_N^2(z_i) v_i^{5/3} \right]^{3/5} \]
 </p>
-<p> See Hardy (1998) Section 3.3.6. <a class="el" href="citelist.html#CITEREF_hardy_1998">[10]</a>.</p>
+<p> See Hardy (1998) Section 3.3.6. <b>[hardy_1998]</b>.</p>
 <p>This is only re-calculated if either m_layer_Cn2 or m_layer_v_wind is changed, otherwise this just returns the value of m_v_wind.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_v_wind. </dd></dl>
 
@@ -2097,7 +2097,7 @@ template&lt;typename _realT &gt; </div>
 <p class="formulaDsp">
 \[ \bar{v} = \sum_i C_N^2(z_i) v_i \]
 </p>
-<p> See Hardy (1998) Section 3.3.6. <a class="el" href="citelist.html#CITEREF_hardy_1998">[10]</a>.</p>
+<p> See Hardy (1998) Section 3.3.6. <b>[hardy_1998]</b>.</p>
 <p>This is only re-calculated if either m_layer_Cn2 or m_layer_v_wind is changed, otherwise this just returns the value of m_v_wind.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_v_wind. </dd></dl>
 
@@ -2159,7 +2159,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>The fraction of the turbulence PSD in phase after Fresnel propagation. </p>
-<p>See Equation (14) of Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>.</p>
+<p>See Equation (14) of Guyon (2005) <b>[guyon_2005]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the X function. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2266,7 +2266,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>The fraction of the turbulence PSD in amplitude after Fresnel propagation. </p>
-<p>See Equation (15) of Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>.</p>
+<p>See Equation (15) of Guyon (2005) <b>[guyon_2005]</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the Y function. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2301,7 +2301,7 @@ template&lt;typename realT &gt; </div>
 <p>Returns the weighted layer height according to the 5/3's turbulence moment. This is defined as </p><p class="formulaDsp">
 \[ \bar{z} = \left[\sum_i C_N^2(z_i) z_i^{5/3} \right]^{3/5} \]
 </p>
-<p> See Hardy (1998) Section 3.3.6 and 3.7.2. <a class="el" href="citelist.html#CITEREF_hardy_1998">[10]</a>.</p>
+<p> See Hardy (1998) Section 3.3.6 and 3.7.2. <b>[hardy_1998]</b>.</p>
 <p>This is only re-calculated if either m_layer_Cn2 orm_layer_z is changed, otherwise this just returns the value of m_z_mean.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_z_mean. </dd></dl>
 
@@ -2771,7 +2771,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">aoAtmosphere</a></li>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:55 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

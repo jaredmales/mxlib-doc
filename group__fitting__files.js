@@ -1,5 +1,6 @@
 var group__fitting__files =
 [
+    [ "array2FitGaussian1D.hpp", "array2FitGaussian1D_8hpp.html", null ],
     [ "array2FitGaussian2D.hpp", "array2FitGaussian2D_8hpp.html", null ],
     [ "fitAiry.hpp", "fitAiry_8hpp.html", null ],
     [ "fitGaussian.hpp", "fitGaussian_8hpp.html", null ],

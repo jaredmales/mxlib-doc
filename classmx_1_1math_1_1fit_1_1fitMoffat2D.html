@@ -113,7 +113,7 @@ class mx::math::fit::fitMoffat2D&lt; fitterT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00077">77</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00463">463</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="fitMoffat_8hpp_source.html">math/fit/fitMoffat.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -341,11 +341,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Return the width parameter. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of alpha </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00191">191</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00577">577</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00209">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::fwhm()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00108">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00595">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::fwhm()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00494">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -377,11 +375,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Return the shape parameter. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00200">200</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00586">586</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00209">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::fwhm()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00108">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00595">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::fwhm()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00494">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -413,9 +409,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Return the full-width at half maximum. </p>
 <dl class="section return"><dt>Returns</dt><dd>the FWHM calculated from alpha and beta </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00209">209</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00595">595</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitMoffat_8hpp_source.html#l00191">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::alpha()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00200">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::beta()</a>, and <a class="el" href="moffat_8hpp_source.html#l00161">mx::math::func::moffatFWHM()</a>.</p>
+<p class="reference">References <a class="el" href="fitMoffat_8hpp_source.html#l00577">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::alpha()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00586">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::beta()</a>, and <a class="el" href="moffat_8hpp_source.html#l00161">mx::math::func::moffatFWHM()</a>.</p>
 
 </div>
 </div>
@@ -447,11 +443,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Get the current value of I, the peak scaling. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of I </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00164">164</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00550">550</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00108">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00494">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -483,11 +477,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Get the current value of I0, the constant. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of I0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00155">155</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00541">541</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00108">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00494">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -543,9 +535,9 @@ template&lt;typename fitterT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00138">138</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00524">524</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitMoffat_8hpp_source.html#l00224">mx::math::fit::array2FitMoffat&lt; realT &gt;::data</a>, <a class="el" href="levmarInterface_8hpp_source.html#l00121">mx::math::fit::levmarInterface&lt; fitterT &gt;::n</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00225">mx::math::fit::array2FitMoffat&lt; realT &gt;::nx</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00226">mx::math::fit::array2FitMoffat&lt; realT &gt;::ny</a>.</p>
+<p class="reference">References <a class="el" href="fitMoffat_8hpp_source.html#l00610">mx::math::fit::array2FitMoffat&lt; realT &gt;::data</a>, <a class="el" href="levmarInterface_8hpp_source.html#l00121">mx::math::fit::levmarInterface&lt; fitterT &gt;::n</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00611">mx::math::fit::array2FitMoffat&lt; realT &gt;::nx</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00612">mx::math::fit::array2FitMoffat&lt; realT &gt;::ny</a>.</p>
 
 </div>
 </div>
@@ -623,9 +615,9 @@ template&lt;typename fitterT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00108">108</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00494">494</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00433">mx::math::fit::levmarInterface&lt; fitterT &gt;::allocate_params()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00191">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::alpha()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00200">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::beta()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00164">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::I()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00155">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::I0()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00247">mx::math::fit::array2FitMoffat&lt; realT &gt;::setFixed()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00173">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::x0()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00182">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::y0()</a>.</p>
+<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00433">mx::math::fit::levmarInterface&lt; fitterT &gt;::allocate_params()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00577">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::alpha()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00586">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::beta()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00550">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::I()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00541">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::I0()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00633">mx::math::fit::array2FitMoffat&lt; realT &gt;::setFixed()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00559">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::x0()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00568">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::y0()</a>.</p>
 
 </div>
 </div>
@@ -702,9 +694,9 @@ template&lt;typename fitterT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00121">121</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00507">507</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
+<p class="reference">References <a class="el" href="fitMoffat_8hpp_source.html#l00577">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::alpha()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00586">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::beta()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00550">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::I()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00541">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::I0()</a>, <a class="el" href="fitMoffat_8hpp_source.html#l00559">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::x0()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00568">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::y0()</a>.</p>
 
 </div>
 </div>
@@ -736,11 +728,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Get the center x-. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of x0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00173">173</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00559">559</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00108">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00494">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -772,11 +762,9 @@ template&lt;typename fitterT &gt; </div>
 <p>Get the center y-coordinate. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of y0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00182">182</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitMoffat_8hpp_source.html#l00568">568</a> of file <a class="el" href="fitMoffat_8hpp_source.html">fitMoffat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="levmarInterface_8hpp_source.html#l00110">mx::math::fit::levmarInterface&lt; fitterT &gt;::p</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00108">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00494">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -789,7 +777,7 @@ template&lt;typename fitterT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><b>fit</b></li><li class="navelem"><a class="el" href="classmx_1_1math_1_1fit_1_1fitMoffat2D.html">fitMoffat2D</a></li>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:55 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -96,13 +96,10 @@ $(document).ready(function(){initNavTree('group__installation.html',''); initRes
 <div class="title">Installation</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Installation of mxlib.  
-</p>
-<p>Installation of mxlib. </p>
 <h1><a class="anchor" id="install_intro"></a>
 Introduction</h1>
-<p>These are instructions for installing the "mxlib" c/c++ library. This is my personal library which I have built up over many years. Along the way I have tried to keep it organized and documented. I have installed it on several different linux systems (running CentOS or Ubuntu). Installation on Mac O/S seems to be broken based on recent reports, but please let me know if you have success.</p>
+<p>These are instructions for installing the "mxlib" c/c++ library. This is my personal library which I have built up over many years. Along the way I have tried to keep it organized and documented. I have installed it on several different linux systems (running CentOS or Ubuntu). Installation on Mac O/S is also possible using Conda.</p>
+<p>The below instructions were updated in June 2022 after a fresh install on Ubuntu 22.04.</p>
 <h1><a class="anchor" id="install_depends"></a>
 Basic Dependencies</h1>
 <p>This is the list of the other libraries and code-bases mxlib depends on. I usually install these from scratch to ensure maximum optimization (though I have little to no quantitative evidence that it matters), but you can probably manage most of these from the O/S package manager. You will need to make sure to install the <code>dev</code> packages.</p>
@@ -116,7 +113,10 @@ Basic Dependencies</h1>
 </ul>
 </li>
 <li>You need the <a href="https://www.gnu.org/software/gsl/">GNU Scientific Library (GSL)</a> (this is probably obtainable from the linux distro package manager, but I recommend building yourself)</li>
-<li>You need the boost c++ library (this is probably obtainable from the linux distro package manager, fine to install with apt or yum)</li>
+<li>You need the boost c++ library (this is probably obtainable from the linux distro package manager, fine to install with apt or yum).<ul>
+<li>On Ubuntu you can install <code>libboost-all-dev</code>.</li>
+</ul>
+</li>
 <li>You need the <a href="http://heasarc.gsfc.nasa.gov/fitsio/">cfitsio </a> FITS library.</li>
 <li>You need a BLAS and LAPACK. <br  />
 <ul>
@@ -125,12 +125,10 @@ Basic Dependencies</h1>
 <li>ATLAS: Another option is ATLAS, see my notes on <a class="el" href="group__atlas.html">installing ATLAS</a>. ATLAS has been successfully used on a recent AMD machine by Jacob Trzaska at UA.</li>
 </ul>
 </li>
-<li>You need <a class="el" href="group__fftw.html">the FFTW library, with at least version 3.3.5</a>. <dl class="section note"><dt>Note</dt><dd>In principle the MKL fftw interface could be used, but this does not yet (Aug 2017) have the "make_planner_thread_safe" routines and only works in float and double. <br  />
-</dd></dl>
+<li>You need <a class="el" href="group__fftw.html">the FFTW library, with at least version 3.3.5</a>. (In principle the MKL fftw interface could be used, but this does not yet (Aug 2017) have the "make_planner_thread_safe" routines and only works in float and double.) <br  />
 </li>
-<li>You need the Eigen matrix library (<a href="http://eigen.tuxfamily.org/index.php">http://eigen.tuxfamily.org/index.php</a>). I am currently on 3.3.4.<ul>
-<li>I normally unpack the Eigen directory in <code>/usr/local/include</code>, but you could also use <code>$HOME/include</code> or anywhere else.</li>
-<li>You must create a symbolic link , such as <code>/usr/include/Eigen --&gt; /path/to/eigen-eigen-xxyyzz/Eigen</code>. The command for this would be <pre class="fragment">$ ln -s /path/to/eigen-eigen-xxyyzz/Eigen /usr/local/include/Eigen </pre> This symbolic link should be placed in any location known to your compiler.</li>
+<li>You need the Eigen matrix library (<a href="http://eigen.tuxfamily.org/index.php">http://eigen.tuxfamily.org/index.php</a>). I am currently on 3.4.0 for mxxlib::dev.<ul>
+<li>It is best to use cmake to configure Eigen and install it. This will ensure that the package config is updated.</li>
 </ul>
 </li>
 </ol>
@@ -163,9 +161,9 @@ Configuring and Building mxlib</h1>
 <li><code>USE_BLAS_FROM</code> can be set to <code>mkl</code>, <code>ATLAS</code>, or <code>Accelerate</code> (macOS only). You may also need to override <code>BLAS_INCLUDES</code>, <code>BLAS_LDFLAGS</code>, and/or <code>BLAS_LDLIBS</code> to set paths and flags. (See <code>mk/MxApp.mk</code> for examples.)</li>
 </ul>
 </li>
-<li>Build <code>mxlib</code> by running <code>make</code> at the top level. This will require <code>sudo</code> privileges to install <code>libsofa</code>. <br  />
+<li>Build <code>mxlib</code> by running <code>make</code> at the top level. <br  />
 </li>
-<li>Install <code>mxlib</code> with <code>make install</code>. <code>sudo</code> may be required depending on the <code>PREFIX</code>.</li>
+<li>Install <code>mxlib</code> with <code>make install</code>. <code>sudo</code> may be required depending on the <code>PREFIX</code>. Possibly <code>sudo -E</code>.</li>
 </ol>
 <h1><a class="anchor" id="build_environment"></a>
 Build Environment</h1>
@@ -181,7 +179,7 @@ Build Environment</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jun 6 2022 17:48:54 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

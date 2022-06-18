@@ -1,5 +1,12 @@
 var group__gaussian__peak__fit =
 [
+    [ "array2FitGaussian1D", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html", [
+      [ "setFixed", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html#aed366679c9937e198ee339ec68038c73", null ],
+      [ "m_coords", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html#abcc694861c405e58d7d54fb11b369a26", null ],
+      [ "m_data", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html#abecada17b6c5d06e452bee2f030f7477", null ],
+      [ "m_mask", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html#a321ccd2f666197e9ec5346c33c83c4b4", null ],
+      [ "m_nx", "structmx_1_1math_1_1fit_1_1array2FitGaussian1D.html#a1ad2512ac5278ee787726be6db114194", null ]
+    ] ],
     [ "array2FitGaussian2D", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html", [
       [ "setFixed", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a8d046b8e754ae693eb34fd258f9205a9", null ],
       [ "data", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#aa6ddf493849b766aca1ff4fb7902a148", null ],
@@ -13,11 +20,13 @@ var group__gaussian__peak__fit =
     ] ],
     [ "gaussian1D_fitter", "structmx_1_1math_1_1fit_1_1gaussian1D__fitter.html", null ],
     [ "fitGaussian1D", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html", [
-      [ "A", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ac53e2c5a27497abde89a1044d7c54e44", null ],
       [ "fit", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#aa6ab4a51d4d5376ad239393efac9405b", null ],
+      [ "G", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a0f5ccea40e8ca15e832830d6d240a368", null ],
       [ "G0", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a4ea31ca9e9342748853d3d59e9e943e3", null ],
       [ "setArray", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ae5792609b749e111ed16ddeac0696432", null ],
-      [ "setGuess", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a2bbee896db98f32e34abf964732f7f9d", null ],
+      [ "setArray", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a4b27092a18d78d851879f8da3d28574a", null ],
+      [ "setFixed", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a84abaa7bfe304115da7e6879947317db", null ],
+      [ "setGuess", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a60c5508efae40db7c11dc34227080d3b", null ],
       [ "sigma", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#a2217d6d43b2fd9954f3189e21e82e021", null ],
       [ "x0", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html#ac13ed4e28104b072f782be19c66e8f29", null ]
     ] ],
