@@ -6,7 +6,7 @@ var classmx_1_1improc_1_1imageXCorrFFT =
     [ "realArrayT", "classmx_1_1improc_1_1imageXCorrFFT.html#a040bbb9e1c2f50fd9ee1af7e2aa500be", null ],
     [ "realT", "classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b", null ],
     [ "Scalar", "classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55", null ],
-    [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html#a13b38e0f269008c4f6e20cc7954f4c23", null ],
+    [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html#ae3e570c1afc1ef37eb25ef4949062667", null ],
     [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html#a75b98aad66425f4b344eaaedb04d35d0", null ],
     [ "ccIm", "classmx_1_1improc_1_1imageXCorrFFT.html#a24ed958319eee6054dd03b623a130425", null ],
     [ "magIm", "classmx_1_1improc_1_1imageXCorrFFT.html#a7fc5ed50393fc96ac7ead8b774beec26", null ],

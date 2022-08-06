@@ -114,7 +114,7 @@ struct mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd><p class="startdd">Split off the integration parameters in a separate structure. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd><p class="startdd">Split off the integration parameters in a separate structure. </p>
 <p class="interdd">once integration parameters are in a separate structure, make this a class with protected members. </p>
 <p class="enddd">GSL error handling</p>
 </dd></dl>
@@ -147,9 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab56bb21f8f422fb7b69cbc283aa455fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ab56bb21f8f422fb7b69cbc283aa455fc">makePSDGrid</a> (const std::string &amp;dir, int mnMax, realT dFreq, realT maxFreq, realT fmax=0)</td></tr>
 <tr class="memdesc:ab56bb21f8f422fb7b69cbc283aa455fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate PSDs over a grid of spatial frequencies.  <a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ab56bb21f8f422fb7b69cbc283aa455fc">More...</a><br /></td></tr>
 <tr class="separator:ab56bb21f8f422fb7b69cbc283aa455fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30414551e9dc26afe7a3b9a3911dda2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a30414551e9dc26afe7a3b9a3911dda2d">analyzePSDGrid</a> (const std::string &amp;subDir, const std::string &amp;psdDir, int mnMax, int mnCon, int lpNc, std::vector&lt; realT &gt; &amp;mags, int lifetimeTrials=0, bool uncontrolledLifetimes=false, bool writePSDs=false, bool writeXfer=false)</td></tr>
-<tr class="memdesc:a30414551e9dc26afe7a3b9a3911dda2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyze a PSD grid under closed-loop control.  <a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a30414551e9dc26afe7a3b9a3911dda2d">More...</a><br /></td></tr>
-<tr class="separator:a30414551e9dc26afe7a3b9a3911dda2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb6727c021b4e46a62f2e94aa50c9be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a8cb6727c021b4e46a62f2e94aa50c9be">analyzePSDGrid</a> (const std::string &amp;subDir, const std::string &amp;psdDir, int mnMax, int mnCon, realT gfixed, int lpNc, std::vector&lt; realT &gt; &amp;mags, int lifetimeTrials=0, bool uncontrolledLifetimes=false, bool writePSDs=false, bool writeXfer=false)</td></tr>
+<tr class="memdesc:a8cb6727c021b4e46a62f2e94aa50c9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyze a PSD grid under closed-loop control.  <a href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a8cb6727c021b4e46a62f2e94aa50c9be">More...</a><br /></td></tr>
+<tr class="separator:a8cb6727c021b4e46a62f2e94aa50c9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d08d8484aa8b3ad45717676afd01952"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a3d08d8484aa8b3ad45717676afd01952">intensityPSD</a> (const std::string &amp;subDir, const std::string &amp;psdDir, const std::string &amp;CvdPath, int mnMax, int mnCon, const std::string &amp;si_or_lp, std::vector&lt; realT &gt; &amp;mags, int lifetimeTrials, bool writePSDs)</td></tr>
 <tr class="separator:a3d08d8484aa8b3ad45717676afd01952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">GSL Integration Tolerances</div></td></tr>
@@ -253,7 +253,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00394">394</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00395">395</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +291,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00401">401</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00402">402</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
 
@@ -314,7 +314,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <p>Destructor. </p>
 <p>Frees GSL workspace if it was allocated. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00413">413</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00414">414</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +336,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <p>Get the current absolute tolerance. </p>
 <dl class="section return"><dt>Returns</dt><dd>_absTol </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00438">438</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00439">439</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -366,12 +366,12 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00432">432</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00433">433</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a30414551e9dc26afe7a3b9a3911dda2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30414551e9dc26afe7a3b9a3911dda2d">&#9670;&nbsp;</a></span>analyzePSDGrid()</h2>
+<a id="a8cb6727c021b4e46a62f2e94aa50c9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb6727c021b4e46a62f2e94aa50c9be">&#9670;&nbsp;</a></span>analyzePSDGrid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -401,6 +401,12 @@ template&lt;typename realT , typename aosysT &gt; </div>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mnCon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>gfixed</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -454,6 +460,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">psdDir</td><td>the directory containing the grid of PSDs. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mnMax</td><td>the maximum value of m and n in the grid. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mnCon</td><td>the maximum value of m and n which can be controlled. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gfixed</td><td>if &gt; 0 then this fixed gain is used in the SI. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">lpNc</td><td>the number of linear predictor coefficients to analyze. If 0 then LP is not analyzed. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mags</td><td>the guide star magnitudes to analyze for. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">lifetimeTrials</td><td>[optional] number of trials used for calculating speckle lifetimes. If 0, lifetimes are not calculated. </td></tr>
@@ -464,7 +471,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00773">773</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00774">774</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fourierModes_8hpp_source.html#l00602">mx::sigproc::makeFourierModeFreqs_Rect()</a>.</p>
 
@@ -508,7 +515,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the frequency of the fastest peak </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00456">456</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00457">457</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -549,7 +556,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02058">2058</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02101">2101</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="binVector_8hpp_source.html#l00240">mx::ioutils::readBinVector()</a>.</p>
 
@@ -613,7 +620,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02078">2078</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02121">2121</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -668,7 +675,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02067">2067</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02110">2110</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, and <a class="el" href="binVector_8hpp_source.html#l00240">mx::ioutils::readBinVector()</a>.</p>
 
@@ -698,7 +705,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Initialize parameters to default values. </p>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00422">422</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00423">423</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -771,9 +778,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>should be able to scale the covar by r0, and possibly D </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>should be able to scale the covar by r0, and possibly D </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01377">1377</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01420">1420</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fourierModes_8hpp_source.html#l00602">mx::sigproc::makeFourierModeFreqs_Rect()</a>.</p>
 
@@ -839,7 +846,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00686">686</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00687">687</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="stringUtils_8hpp_source.html#l00082">mx::ioutils::convertToString()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00171">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>, <a class="el" href="fourierModes_8hpp_source.html#l00602">mx::sigproc::makeFourierModeFreqs_Rect()</a>, <a class="el" href="vectorUtils_8hpp_source.html#l00062">mx::math::vectorScale()</a>, and <a class="el" href="binVector_8hpp_source.html#l00334">mx::ioutils::writeBinVector()</a>.</p>
 
@@ -906,7 +913,7 @@ template&lt;bool parallel&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd><p class="startdd">implement error checking </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd><p class="startdd">implement error checking </p>
 <p class="enddd">handle reports of convergence failures form singleLayerPSD when implemented.</p>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -921,7 +928,7 @@ template&lt;bool parallel&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00665">665</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00666">666</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -942,7 +949,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <p>Get the current relative tolerance. </p>
 <dl class="section return"><dt>Returns</dt><dd>_relTol </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00450">450</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00451">451</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -972,7 +979,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00444">444</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00445">445</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1042,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the temporal PSD for a Fourier mode for a single layer. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd><p class="startdd">implement error checking. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd><p class="startdd">implement error checking. </p>
 <p class="interdd">need a way to track convergence failures in integral without throwing an error. </p>
 <p class="enddd">need better handling of averaging for the -17/3 extension.</p>
 </dd></dl>
@@ -1052,7 +1059,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">479</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">480</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00129">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00119">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00124">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_cq</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_m</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00139">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_mode_i</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00141">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_modeCoeffs</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00123">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_n</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00128">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_p</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00126">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_spatialFilter</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00125">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::m_sq</a>.</p>
 
@@ -1097,7 +1104,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00129">129</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02171">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02137">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02214">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1186,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00119">119</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02171">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02137">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02214">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1201,7 +1208,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00124">124</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1223,7 +1230,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00121">121</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02171">mx::AO::analysis::Fm_projMod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02137">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02214">mx::AO::analysis::Fm_projMod()</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1252,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00122">122</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02137">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1267,7 +1274,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00139">139</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02171">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02214">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1296,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00141">141</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02171">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02214">mx::AO::analysis::Fm_projMod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1318,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00123">123</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02137">mx::AO::analysis::F_basic()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1340,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00128">128</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02094">mx::AO::analysis::F_basic()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02137">mx::AO::analysis::F_basic()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1362,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00126">126</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1377,7 +1384,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00125">125</a> of file <a class="el" href="fourierTemporalPSD_8hpp_source.html">fourierTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02126">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00479">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l02169">mx::AO::analysis::F_mod()</a>, and <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00480">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -1390,7 +1397,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html">fourierTemporalPSD</a></li>
-    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat Aug 6 2022 10:56:08 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

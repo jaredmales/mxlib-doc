@@ -36,14 +36,14 @@ var hierarchy =
     [ "mx::astro::calspecSpectrum< _units >", "structmx_1_1astro_1_1calspecSpectrum.html", null ],
     [ "mx::AO::sim::ccdDetector< _realT >", "classmx_1_1AO_1_1sim_1_1ccdDetector.html", null ],
     [ "mx::astro::units::cgs< _realT >", "structmx_1_1astro_1_1units_1_1cgs.html", null ],
-    [ "mx::sigproc::circularBufferBase< _derivedT, _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBase.html", null ],
-    [ "mx::sigproc::circularBufferBase< circularBufferBranch< _storedT, _indexT >, _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
+    [ "mx::sigproc::circularBufferBase< _derivedT, _storedT, _indexT, _stats >", "classmx_1_1sigproc_1_1circularBufferBase.html", null ],
+    [ "mx::sigproc::circularBufferBase< circularBufferBranch< _storedT, _indexT >, _storedT, _indexT, false >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
       [ "mx::sigproc::circularBufferBranch< _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBranch.html", null ]
     ] ],
-    [ "mx::sigproc::circularBufferBase< circularBufferIndex< _storedT, _indexT >, _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
+    [ "mx::sigproc::circularBufferBase< circularBufferIndex< _storedT, _indexT >, _storedT, _indexT, false >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
       [ "mx::sigproc::circularBufferIndex< _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferIndex.html", null ]
     ] ],
-    [ "mx::sigproc::circularBufferBase< circularBufferMod< _storedT, _indexT >, _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
+    [ "mx::sigproc::circularBufferBase< circularBufferMod< _storedT, _indexT >, _storedT, _indexT, false >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
       [ "mx::sigproc::circularBufferMod< _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferMod.html", null ]
     ] ],
     [ "mx::AO::analysis::clAOLinearPredictor< _realT >", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html", null ],
@@ -195,5 +195,6 @@ var hierarchy =
       [ "mx::AO::analysis::pywfsModAsymptotic< realT, iosT >", "structmx_1_1AO_1_1analysis_1_1pywfsModAsymptotic.html", null ],
       [ "mx::AO::analysis::pywfsUnmod< realT, iosT >", "structmx_1_1AO_1_1analysis_1_1pywfsUnmod.html", null ],
       [ "mx::AO::analysis::shwfs< realT, iosT >", "structmx_1_1AO_1_1analysis_1_1shwfs.html", null ]
-    ] ]
+    ] ],
+    [ "mx::AO::analysis::zernikeTemporalPSD< _realT, aosysT >", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html", null ]
 ];

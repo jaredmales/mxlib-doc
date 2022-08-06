@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa5cfce2afec8997cd1eac5a77a8f4bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa5cfce2afec8997cd1eac5a77a8f4bb6">More...</a><br /></td></tr>
 <tr class="separator:aa5cfce2afec8997cd1eac5a77a8f4bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a074df769f56f81de3253f69a3271ea26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a074df769f56f81de3253f69a3271ea26">loadGuyon2005</a> ()</td></tr>
-<tr class="memdesc:a074df769f56f81de3253f69a3271ea26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the default parameters from Guyon, 2005 <b>[guyon_2005]</b>.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a074df769f56f81de3253f69a3271ea26">More...</a><br /></td></tr>
+<tr class="memdesc:a074df769f56f81de3253f69a3271ea26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the default parameters from Guyon, 2005 <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a074df769f56f81de3253f69a3271ea26">More...</a><br /></td></tr>
 <tr class="separator:a074df769f56f81de3253f69a3271ea26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049a0cdfd9532bd31c50d9db3216e9f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a049a0cdfd9532bd31c50d9db3216e9f2">loadMagAOX</a> ()</td></tr>
 <tr class="memdesc:a049a0cdfd9532bd31c50d9db3216e9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load parameters corresponding to the MagAO-X system.  <a href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a049a0cdfd9532bd31c50d9db3216e9f2">More...</a><br /></td></tr>
@@ -858,7 +858,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to uncorrected phase, C0. </p>
-<p>Contrast C0 is the uncorrected phase, with the effects of scintillation included. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C0 is the uncorrected phase, with the effects of scintillation included. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>this is the raw PSD, it must be convolved with the PSF for the true contrast.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>C0. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -870,7 +870,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02517">2517</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02521">2521</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -908,7 +908,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02528">2528</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02532">2532</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -943,6 +943,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the residual variance due to uncorrected phase at a spatial frequency. </p>
 <p>Used to calculate contrast <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac92e16261e1ee6e5c855794c7e707786">C0()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>variance at (m,n). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the spatial frequency index in u </td></tr>
@@ -951,7 +952,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02508">2508</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02511">2511</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -992,7 +993,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to uncorrected amplitude, C1. </p>
-<p>Contrast C1 is the uncorrected amplitude due to scintillation. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C1 is the uncorrected amplitude due to scintillation. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C0. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1003,7 +1004,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02544">2544</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02549">2549</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1044,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02554">2554</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02559">2559</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1078,6 +1079,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the residual variance due to uncorrected amplitude at a spatial frequency. </p>
 <p>Used to calculate contrast <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a1bfe62ef3f75ad63aabb1c684a46cde3">C1()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>variance at (m,n). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the spatial frequency index in u </td></tr>
@@ -1086,7 +1088,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02534">2534</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02538">2538</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -1127,7 +1129,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to measurement and time delay errors in phase/OPD at a spatial frequency. </p>
-<p>Contrast C2 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C2 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C2. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1138,7 +1140,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02569">2569</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02574">2574</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1180,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02579">2579</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02584">2584</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1221,7 +1223,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02560">2560</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02565">2565</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1260,7 +1262,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to measurement and time delay errors in amplitude at a spatial frequency. </p>
-<p>Contrast C3 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C3 is just the total variance due to time delay and measurement errors, divided by the Strehl ratio. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C3. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1271,7 +1273,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02593">2593</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02598">2598</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1313,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02603">2603</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02608">2608</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1354,7 +1356,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02585">2585</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02590">2590</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1393,7 +1395,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to scintilation-OPD chromaticity. </p>
-<p>Contrast C4 is due to the chromaticity of scintillation, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C4 is due to the chromaticity of scintillation, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C4. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1404,7 +1406,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02621">2621</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02627">2627</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1444,7 +1446,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02631">2631</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02637">2637</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1479,6 +1481,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the residual variance due to scintilation-OPD chromaticity. </p>
 <p>Used to calculate contrast <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5c37e58ab452b3262de774ea7e792610">C4()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>variance at (m,n). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the spatial frequency index in u </td></tr>
@@ -1487,7 +1490,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02609">2609</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02614">2614</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -1528,7 +1531,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to scintilation-amplitude chromaticity. </p>
-<p>Contrast C5 is due to the chromaticity of scintillation, causing the amplitude measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C5 is due to the chromaticity of scintillation, causing the amplitude measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C4. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1539,7 +1542,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02649">2649</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02656">2656</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1579,7 +1582,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02659">2659</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02666">2666</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1615,6 +1618,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Used to calculate contrast <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a16949f92628f72d78cb352462b1248e0">C5()</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>this is the raw PSD, it must be convolved with the PSF for the true contrast.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>variance at (m,n). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the spatial frequency index in u </td></tr>
@@ -1623,7 +1627,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02637">2637</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02643">2643</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -1664,7 +1668,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the contrast due to chromaticity of the index of refraction of air. </p>
-<p>Contrast C6 is due to the index of refraction of air being wavelength dependent, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <b>[guyon_2005]</b>, and the updated derivation in Males &amp; Guyon (2018) <b>[males_guyon_2018]</b>.</p>
+<p>Contrast C6 is due to the index of refraction of air being wavelength dependent, causing the ODP measurement to be slightly incorrect at the science wavelength. See Guyon (2005) <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>, and the updated derivation in Males &amp; Guyon (2018) <a class="el" href="citelist.html#CITEREF_males_guyon_2018">[12]</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>C6. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1675,7 +1679,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02677">2677</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02684">2684</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1715,7 +1719,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02687">2687</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02694">2694</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1762,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02665">2665</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02672">2672</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +1812,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02703">2703</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02711">2711</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1852,7 @@ template&lt;typename imageT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02713">2713</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02721">2721</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1883,6 +1887,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the residual variance due to dispersive anisoplanatism. </p>
 <p>Used to calculate contrast <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ac1a86353503bac11cbe35ed6455b8e14">C7()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>variance at (m,n). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>this needs to handle multiple layers &ndash; do we violate an assumption of L_0 isn't constant? </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the spatial frequency index in u </td></tr>
@@ -1891,7 +1896,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02693">2693</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02700">2700</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -1964,7 +1969,7 @@ template&lt;typename varFuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02428">2428</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02431">2431</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2016,7 +2021,7 @@ template&lt;typename imageT , typename CfuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02484">2484</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02487">2487</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2045,7 +2050,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the component WFE, total WFE, and Strehl ratio. </p>
 <p>This should only be called when something changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02391">2391</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02394">2394</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2069,7 +2074,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02051">2051</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02053">2053</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2103,7 +2108,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02026">2026</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02028">2028</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2125,7 +2130,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02003">2003</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02005">2005</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2149,7 +2154,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01997">1997</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01999">1999</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2182,7 +2187,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01972">1972</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01974">1974</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2441,10 +2446,10 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the optimum actuator spacing. </p>
 <p>Finds the value of m_d_opt where the fitting error is less than than the combined time delay and measurement error.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_d_opt. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>this should be in a separate valideModes function </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>investigate why we tolerate m_d_min = 0 here. Is this just a config error? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>this should be in a separate valideModes function </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>investigate why we tolerate m_d_min = 0 here. Is this just a config error? </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02200">2200</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02203">2203</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
 
@@ -2523,7 +2528,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02089">2089</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02091">2091</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2547,7 +2552,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>the WFE in rad^2 rms at the science wavelength at (m,n). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02083">2083</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02085">2085</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2579,7 +2584,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02057">2057</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02059">2059</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -2610,7 +2615,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02719">2719</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02727">2727</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mxlib_8hpp_source.html#l00050">mx::dumpGitStatus()</a>, and <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
 
@@ -2939,6 +2944,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the fitting error at a specific spatial frequency. <br  />
  </p>
 <dl class="section return"><dt>Returns</dt><dd>the fitting error in rad^2 rms at the science wavelength at (m,n). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>specifies the u component of the spatial frequency </td></tr>
@@ -2947,7 +2953,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01930">1930</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01931">1931</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -2972,7 +2978,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>the total fitting error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01966">1966</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01968">1968</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3004,7 +3010,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01939">1939</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01941">1941</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3133,7 +3139,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 </div><div class="memdoc">
 
 <p>Load the configuration of this class from a configurator. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>: "\test Loading aoAtmosphere config settings \ref tests_ao_analysis_aoAtmosphere_config "[test doc]"" </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd>: "\test Loading aoAtmosphere config settings \ref tests_ao_analysis_aoAtmosphere_config "[test doc]"" </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>the app::configurator object </td></tr>
@@ -3141,7 +3147,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02831">2831</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02840">2840</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00219">mx::app::appConfigurator::isSet()</a>, and <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>.</p>
 
@@ -3183,7 +3189,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Load the default parameters from Guyon, 2005 <b>[guyon_2005]</b>. </p>
+<p>Load the default parameters from Guyon, 2005 <a class="el" href="citelist.html#CITEREF_guyon_2005">[9]</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01159">1159</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
@@ -3590,7 +3596,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the total NCP variance in rad^2. </p>
 <dl class="section return"><dt>Returns</dt><dd>the total NCP variance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02364">2364</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02367">2367</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3633,7 +3639,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02353">2353</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02356">2356</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -3907,7 +3913,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Calculate the optimum exposure time for a given spatial frequency at the optimum actuator spacing. </p>
 <p>Finds the optimum exposure time at \( k = (m/D)\hat{u} + (n/D)\hat{v} \). If optd == false this uses the minimum actuator spacing.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000020">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the optimum expsoure time. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3917,7 +3923,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02191">2191</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02194">2194</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -3963,8 +3969,9 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 
 <p>Calculate the optimum exposure time for a given spatial frequency at a specified actuator spacing. </p>
 <p>Finds the optimum exposure time at \( k = (m/D)\hat{u} + (n/D)\hat{v} \).</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>Check inclusion of X in parameters</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the optimum expsoure time. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the spatial frequency index in u </td></tr>
@@ -3975,7 +3982,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02118">2118</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02120">2120</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="mxError_8hpp_source.html#l00140">MXE_PARAMNOTSET</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, <a class="el" href="mxException_8hpp_source.html#l00382">mxThrowException</a>, and <a class="el" href="roots_8hpp_source.html#l00051">mx::math::quarticRoots()</a>.</p>
 
@@ -4215,7 +4222,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02795">2795</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02803">2803</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="appConfigurator_8cpp_source.html#l00043">mx::app::appConfigurator::add()</a>.</p>
 
@@ -4456,7 +4463,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p> where \( \sigma_{wfe}^2 \) is the current value of m_wfeVar.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_strehl. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02419">2419</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02422">2422</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4503,7 +4510,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02370">2370</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02373">2373</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4603,6 +4610,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>Calculate the time delay at a spatial frequency at the optimum exposure time and the specified actuator spacing. </p>
 <p>Calculates the wavefront phase variance due to time delay at \( f = (m/D)\hat{u} + (n/D)\hat{v} \).</p>
 <dl class="section return"><dt>Returns</dt><dd>the measurement noise in rad^2 rms at the science wavelength </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>handle multiple layers </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>specifies the u component of the spatial frequency </td></tr>
@@ -4638,7 +4646,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>the total WFE due to time delay. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01922">1922</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01923">1923</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4681,7 +4689,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01895">1895</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l01896">1896</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -4703,7 +4711,7 @@ template&lt;typename realT , class inputSpectT , typename iosT &gt; </div>
 <p>If no changes, merely returns m_wfeVar. Calls calcStrehl if there are changes.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_wfeVar; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02411">2411</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aoSystem_8hpp_source.html#l02414">2414</a> of file <a class="el" href="aoSystem_8hpp_source.html">aoSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -5963,7 +5971,7 @@ template&lt;typename realT , class inputSpectT , typename iosT  = std::ostream&g
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html">aoSystem</a></li>
-    <li class="footer">Generated on Fri Jun 17 2022 17:09:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat Aug 6 2022 10:56:08 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

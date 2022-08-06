@@ -14,12 +14,14 @@ var namespacemx =
         [ "clGainOpt", "structmx_1_1AO_1_1analysis_1_1clGainOpt.html", "structmx_1_1AO_1_1analysis_1_1clGainOpt" ],
         [ "fourierCovariance", "structmx_1_1AO_1_1analysis_1_1fourierCovariance.html", "structmx_1_1AO_1_1analysis_1_1fourierCovariance" ],
         [ "fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD" ],
+        [ "zernikeTemporalPSD", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD" ],
         [ "basis", "fourierTemporalPSD_8hpp.html#aa3aa5ac3f2ebf59289762d1635289dc1", [
           [ "basic", "fourierTemporalPSD_8hpp.html#aa3aa5ac3f2ebf59289762d1635289dc1a51eaaade2b4d6be0e4e7d889c5bc2a19", null ],
           [ "modified", "fourierTemporalPSD_8hpp.html#aa3aa5ac3f2ebf59289762d1635289dc1a23bd18db53b6316fb40ffc008831b642", null ]
         ] ],
         [ "F_basic", "group__mxAOAnalytic.html#ga68fe13d24baf657b1dfc036c0cee3d4d", null ],
         [ "F_mod", "group__mxAOAnalytic.html#ga6a42ec37d19e5e32f560c1d630a44848", null ],
+        [ "F_zernike", "group__mxAOAnalytic.html#gab03cd16e9f65c29e25b720013c61f120", null ],
         [ "Fm_projMod", "group__mxAOAnalytic.html#ga5e3d453681f58362c0f3116191ac58af", null ],
         [ "fourierCovarMap", "fourierCovariance_8hpp.html#a831aedbc0132ff9f8f47abbe8a6d40bd", null ],
         [ "fourierPSDMap", "fourierCovariance_8hpp.html#a82b13a00dea588ed8c12bfd595a68e7c", null ],

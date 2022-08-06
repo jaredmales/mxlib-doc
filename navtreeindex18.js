@@ -1,5 +1,11 @@
 var NAVTREEINDEX18 =
 {
+"structmx_1_1improc_1_1gaussKernel.html":[0,4,4,0,0],
+"structmx_1_1improc_1_1imCenterCircleSym.html":[0,4,5,2],
+"structmx_1_1improc_1_1imCenterCircleSym.html#a02174722134c6dc5e6bb17c044fc66c2":[0,4,5,2,14],
+"structmx_1_1improc_1_1imCenterCircleSym.html#a0b4d9caba9d17aad4ab228961b483f55":[0,4,5,2,9],
+"structmx_1_1improc_1_1imCenterCircleSym.html#a37bd57f6377cfe41b93baf3750ceae93":[0,4,5,2,4],
+"structmx_1_1improc_1_1imCenterCircleSym.html#a475e061fcbb196838c7a7ee14facb40f":[0,4,5,2,7],
 "structmx_1_1improc_1_1imCenterCircleSym.html#a543416b159a637637db405fe64750abd":[0,4,5,2,3],
 "structmx_1_1improc_1_1imCenterCircleSym.html#a57ebab2afab6c3bb119c5d2a402016c0":[0,4,5,2,15],
 "structmx_1_1improc_1_1imCenterCircleSym.html#a69114d081fbfd61d11ffec0dd6318448":[0,4,5,2,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX18 =
 "templateCufft_8hpp.html":[8,0,7,0,3],
 "templateCufft_8hpp_source.html":[8,0,7,0,3],
 "templateCurand_8hpp.html":[8,0,7,0,4],
-"templateCurand_8hpp_source.html":[8,0,7,0,4],
-"templateLapack_8cpp.html":[8,0,10,4,1],
-"templateLapack_8cpp_source.html":[8,0,10,4,1],
-"templateLapack_8hpp.html":[8,0,7,18],
-"templateLapack_8hpp.html#ad3320d4dceb545bfd50f651e9a67c4db":[6,0,0,9,49],
-"templateLapack_8hpp.html#ad3320d4dceb545bfd50f651e9a67c4db":[8,0,7,18,2],
-"templateLapack_8hpp.html#ga0449862c934822723f87cee3605ca66a":[8,0,7,18,4]
+"templateCurand_8hpp_source.html":[8,0,7,0,4]
 };

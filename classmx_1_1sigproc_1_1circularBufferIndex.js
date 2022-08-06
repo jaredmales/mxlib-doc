@@ -5,6 +5,7 @@ var classmx_1_1sigproc_1_1circularBufferIndex =
     [ "circularBufferIndex", "classmx_1_1sigproc_1_1circularBufferIndex.html#a3296e6bd9e89eda46b0185e07a69b0a1", null ],
     [ "circularBufferIndex", "classmx_1_1sigproc_1_1circularBufferIndex.html#a85728428bb0f49b312dce9d91455d171", null ],
     [ "at", "classmx_1_1sigproc_1_1circularBufferIndex.html#a9f3f573618b5b07ac545ffc48f8b8847", null ],
+    [ "at", "classmx_1_1sigproc_1_1circularBufferIndex.html#a3ffa115fff622de98fff18c683bf7457", null ],
     [ "setMaxEntries", "classmx_1_1sigproc_1_1circularBufferIndex.html#ae21a018201d2a8933e6aeb6d3fd37e03", null ],
     [ "setWrap", "classmx_1_1sigproc_1_1circularBufferIndex.html#a8f59a4752050f60f8c4c18d6231cd439", null ],
     [ "setWrapStartup", "classmx_1_1sigproc_1_1circularBufferIndex.html#ab87da2695f754a5d808bcec3a61e3f73", null ],

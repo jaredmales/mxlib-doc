@@ -14,7 +14,8 @@ var annotated_dup =
           [ "clGainOptOptGain_OL", "structmx_1_1AO_1_1analysis_1_1clGainOptOptGain__OL.html", null ],
           [ "clGainOpt", "structmx_1_1AO_1_1analysis_1_1clGainOpt.html", "structmx_1_1AO_1_1analysis_1_1clGainOpt" ],
           [ "fourierCovariance", "structmx_1_1AO_1_1analysis_1_1fourierCovariance.html", "structmx_1_1AO_1_1analysis_1_1fourierCovariance" ],
-          [ "fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD" ]
+          [ "fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD" ],
+          [ "zernikeTemporalPSD", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD" ]
         ] ],
         [ "sim", null, [
           [ "ccdDetector", "classmx_1_1AO_1_1sim_1_1ccdDetector.html", "classmx_1_1AO_1_1sim_1_1ccdDetector" ],

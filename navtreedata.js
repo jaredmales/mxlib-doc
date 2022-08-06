@@ -64,26 +64,26 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"binVector_8hpp.html",
-"classmx_1_1AO_1_1analysis_1_1aoSystem.html#ade320163ced08385425705acec5b8158",
-"classmx_1_1app_1_1application.html#a634a9602f1d9769ab6d4671781f2e9fd",
-"classmx_1_1fits_1_1fitsHeaderCard.html#a292ab83a34ad5ec129fb2e006e1ffea4",
-"classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aa858c7154ddf8dc09121b715717864e2",
-"classmx_1_1sigproc_1_1circularBufferIndex.html#a85728428bb0f49b312dce9d91455d171",
-"fileUtils_8cpp.html#ga379e7f089e16c301627f25efd1b1ff68",
-"globals_defs.html",
-"group__fileutils.html#ga69ffe50a6726766e9c51a653628201f5",
-"group__geo.html#ga9aeac3c37b3a9f122ed625f27ce4c5c2",
-"group__imaging__files.html",
-"group__signal__windows1D.html#ga6dc6dd7ec7c5aa94b7e79ac622062f3a",
-"group__zernike__basis.html#ga1f2c1e80f83db73f295c725491db50ce",
-"mxError_8cpp.html#gab83ea3bc4cd444823884e023ff1fcda7",
-"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a283bf2d8bd01ff1fadf26f14c20b7f4f",
-"structmx_1_1astro_1_1baseSpectrum.html#a5725d0e8d9ca2f69a41b4fe21f224e2c",
-"structmx_1_1improc_1_1HCIobservation.html",
-"structmx_1_1improc_1_1imCenterCircleSym.html#a543416b159a637637db405fe64750abd",
-"templateLapack_8hpp.html#ga8d6e1e52675070e399efc5344e946b73"
+"ADIDerotator_8cpp.html",
+"classes.html",
+"classmx_1_1AO_1_1analysis_1_1aoSystem.html#afc7c4d2d6f550838867472599ab7ae92",
+"classmx_1_1app_1_1application.html#aef1b7f38abb9862de25bce184b04053f",
+"classmx_1_1fits_1_1fitsHeaderCard.html#a576c5a1c3f194d7d9e06cc8df9363bab",
+"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a0434ffa569e12a13873a64eadeecfd38",
+"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#a2e6781018249fe8f8d3ad4a2cbbf258e",
+"fileUtils_8hpp.html#ga69ffe50a6726766e9c51a653628201f5",
+"group__IPC.html#gadc964de2f62103fc5de709b5bde29603",
+"group__fits__processing__files.html",
+"group__hc__imaging__enums.html#ga1af050405983cd62f812ec2c6809603e",
+"group__kepler.html",
+"group__signal__windows1D.html#gaef31002892e2ffea93581a3dfceb1e76",
+"group__zernike__basis.html#gaaf5fdab614542171202d1d8226a9bb6e",
+"mxlib_8cpp_source.html",
+"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a818bc179c8c37f97ad69c2578b0ac68f",
+"structmx_1_1astro_1_1astroSpectrum.html#aa6d3276ecce8f453d78b2c5b3499437f",
+"structmx_1_1improc_1_1ADIobservation.html#ae532b5f9ec73a141604aaf5ea06881aa",
+"structmx_1_1improc_1_1gaussKernel.html",
+"templateLapack_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

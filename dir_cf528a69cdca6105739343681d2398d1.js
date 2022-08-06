@@ -12,5 +12,6 @@ var dir_cf528a69cdca6105739343681d2398d1 =
     [ "jincFuncs.hpp", "jincFuncs_8hpp.html", "jincFuncs_8hpp" ],
     [ "speckleAmpPSD.hpp", "speckleAmpPSD_8hpp.html", "speckleAmpPSD_8hpp" ],
     [ "varmapToImage.hpp", "varmapToImage_8hpp.html", "varmapToImage_8hpp" ],
-    [ "wfsNoisePSD.hpp", "wfsNoisePSD_8hpp.html", "wfsNoisePSD_8hpp" ]
+    [ "wfsNoisePSD.hpp", "wfsNoisePSD_8hpp.html", "wfsNoisePSD_8hpp" ],
+    [ "zernikeTemporalPSD.hpp", "zernikeTemporalPSD_8hpp.html", "zernikeTemporalPSD_8hpp" ]
 ];
