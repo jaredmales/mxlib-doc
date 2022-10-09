@@ -125,19 +125,19 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a7c9d06305dfe0b3cd29b0f7112e6c948">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::C7var</a>  (realT m, realT n)</dt>
 <dd><a class="anchor" id="_todo000018"></a>this needs to handle multiple layers &ndash; do we violate an assumption of L_0 isn't constant?  </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a23d0fba4379d6fa4984a039623673361">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::d_opt</a>  ()</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000012"></a>this should be in a separate valideModes function </p>
-<p class="enddd"><a class="anchor" id="_todo000013"></a>investigate why we tolerate m_d_min = 0 here. Is this just a config error?  </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000013"></a>investigate why we tolerate m_d_min = 0 here. Is this just a config error? </p>
+<p class="enddd"><a class="anchor" id="_todo000012"></a>this should be in a separate valideModes function  </p>
 </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#afecd6e31095ce56d6fa91b84adf5032d">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::fittingError</a>  (realT m, realT n)</dt>
 <dd><a class="anchor" id="_todo000010"></a>handle multiple layers  </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#ae7b9f09b4df51c764243ee5f4ac0431d">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::loadConfig</a>  (<a class="el" href="structmx_1_1app_1_1appConfigurator.html" title="Class to manage a set of configurable values, and read their values from config/ini files and the com...">app::appConfigurator</a> &amp;config)</dt>
 <dd><a class="anchor" id="_todo000021"></a>: "\test Loading aoAtmosphere config settings \ref tests_ao_analysis_aoAtmosphere_config "[test doc]""  </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#af0e3f39e0b3fa383db0aeb1a8b0d1073">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS</a>  (realT m, realT n, realT d, int b)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000011"></a>handle multiple layers </p>
-<p class="enddd"><a class="anchor" id="_todo000019"></a>Check inclusion of X in parameters </p>
-</dd>
+<dd><a class="anchor" id="_todo000019"></a>Check inclusion of X in parameters </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a6261f3118fe3b7c22ee0eea65c77bf5b">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS</a>  (realT m, realT n)</dt>
 <dd><a class="anchor" id="_todo000020"></a>Check inclusion of X in parameters </dd>
+<dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#af0e3f39e0b3fa383db0aeb1a8b0d1073">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::optimumTauWFS</a>  (realT m, realT n, realT d, int b)</dt>
+<dd><a class="anchor" id="_todo000011"></a>handle multiple layers  </dd>
 <dt>Member <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoSystem.html#a5ca821999be52dde5e79a9972535af7a">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::timeDelayError</a>  (realT m, realT n, realT d, int b)</dt>
 <dd><a class="anchor" id="_todo000009"></a>handle multiple layers  </dd>
 <dt>Member <a class="el" href="structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a40212ca3b3df5ffc90a70538472182e1">mx::AO::analysis::fourierCovariance&lt; realT, aosysT &gt;::getVariance</a>  (realT &amp;error)</dt>
@@ -204,19 +204,19 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </dd>
 <dt>Member <a class="el" href="structmx_1_1app_1_1iniFile.html#a911db54a89bbfc450a9d506d11ea0da4">mx::app::iniFile::insert</a>  (const char *section, const char *name, const char *value)</dt>
 <dd><a class="anchor" id="_todo000037"></a>need error checking. </dd>
-<dt>Member <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a5d1abd79a838f5a4b5f6842d54b8e503">mx::astro::baseSpectrum&lt; realT &gt;::charFlux</a>  (realT &amp;flambda0, realT &amp;fnu0, realT &amp;fphot0, const realT &amp;lambda_0, const std::vector&lt; realT &gt; &amp;lambda, const std::vector&lt; realT &gt; &amp;trans)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000043"></a>use unit conversions to make it work for everything. </p>
-<p class="enddd">check on integration method, should it be trap? </p>
-</dd>
 <dt>Member <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a7efdfefd6c612bc6ba2b045996a271cc">mx::astro::baseSpectrum&lt; realT &gt;::charFlux</a>  (realT &amp;flambda0, realT &amp;fnu0, realT &amp;fphot0, const realT &amp;lambda_0, const std::vector&lt; realT &gt; &amp;lambda, const filterT &amp;trans)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000042"></a>use unit conversions to make it work for everything. </p>
 <p class="enddd">check on integration method, should it be trap? </p>
 </dd>
+<dt>Member <a class="el" href="structmx_1_1astro_1_1baseSpectrum.html#a5d1abd79a838f5a4b5f6842d54b8e503">mx::astro::baseSpectrum&lt; realT &gt;::charFlux</a>  (realT &amp;flambda0, realT &amp;fnu0, realT &amp;fphot0, const realT &amp;lambda_0, const std::vector&lt; realT &gt; &amp;lambda, const std::vector&lt; realT &gt; &amp;trans)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000043"></a>use unit conversions to make it work for everything. </p>
+<p class="enddd">check on integration method, should it be trap? </p>
+</dd>
 <dt>Member <a class="el" href="astroDynamics_8hpp.html#a1b4bd8e3ce5dc38f5f554974922becc8">mx::astro::getGMST</a>  (realT &amp;GMST, int Yr, int Mo, int Dy, int hr, int min, realT sec)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000038"></a>handle SOFA error. </p>
-<p class="interdd"><a class="anchor" id="_todo000041"></a>handle SOFA error. </p>
 <p class="interdd"><a class="anchor" id="_todo000040"></a>handle SOFA error. </p>
-<p class="enddd"><a class="anchor" id="_todo000039"></a>handle SOFA error.  </p>
+<p class="interdd"><a class="anchor" id="_todo000039"></a>handle SOFA error. </p>
+<p class="enddd"><a class="anchor" id="_todo000041"></a>handle SOFA error.  </p>
 </dd>
 <dt>Member <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad3edac12807a23393d5c9ce77293e7a7">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages</a>  (int coaddCombineMethod, int coaddMaxImno, int coaddMaxTime, std::vector&lt; std::string &gt; &amp;coaddKeywords, std::vector&lt; double &gt; &amp;imageMJD, std::vector&lt; fits::fitsHeader &gt; &amp;heads, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube&lt; realT &gt;</a> &amp;ims)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000044"></a>this should really include end of exposure too. </p>
@@ -293,7 +293,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Aug 6 2022 10:56:08 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

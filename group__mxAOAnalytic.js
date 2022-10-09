@@ -407,7 +407,9 @@ var group__mxAOAnalytic =
       [ "m_f", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#aa2b37d755481ec05983b0fdb6b2a7eb8", null ],
       [ "m_spatialFilter", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a1d912138f22e43d1e84eb5934bce6ed3", null ],
       [ "m_sq", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#ad9230cc505574c686345b1479d9c1474", null ],
-      [ "m_zern_j", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a2db5d92614e3d60c0c323e7fd678299f", null ]
+      [ "m_zern_j", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a2db5d92614e3d60c0c323e7fd678299f", null ],
+      [ "m_zern_m", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a3753025d11dcfc65106d8ba0051f4422", null ],
+      [ "m_zern_n", "structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a7f74797e565923d7980ec0de41490efe", null ]
     ] ],
     [ "AO Constants", "group__aoConstants.html", "group__aoConstants" ],
     [ "F_basic", "group__mxAOAnalytic.html#ga68fe13d24baf657b1dfc036c0cee3d4d", null ],

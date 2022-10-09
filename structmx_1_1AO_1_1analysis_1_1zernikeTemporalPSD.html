@@ -169,6 +169,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2db5d92614e3d60c0c323e7fd678299f"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a2db5d92614e3d60c0c323e7fd678299f">m_zern_j</a> {0}</td></tr>
 <tr class="memdesc:a2db5d92614e3d60c0c323e7fd678299f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current mode number  <a href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a2db5d92614e3d60c0c323e7fd678299f">More...</a><br /></td></tr>
 <tr class="separator:a2db5d92614e3d60c0c323e7fd678299f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3753025d11dcfc65106d8ba0051f4422"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a3753025d11dcfc65106d8ba0051f4422">m_zern_m</a> {0}</td></tr>
+<tr class="memdesc:a3753025d11dcfc65106d8ba0051f4422"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current mode m.  <a href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a3753025d11dcfc65106d8ba0051f4422">More...</a><br /></td></tr>
+<tr class="separator:a3753025d11dcfc65106d8ba0051f4422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f74797e565923d7980ec0de41490efe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a7f74797e565923d7980ec0de41490efe">m_zern_n</a> {0}</td></tr>
+<tr class="memdesc:a7f74797e565923d7980ec0de41490efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current mode n.  <a href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a7f74797e565923d7980ec0de41490efe">More...</a><br /></td></tr>
+<tr class="separator:a7f74797e565923d7980ec0de41490efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e8331aad7e2ab3adc8f8e5618b3af62"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a6e8331aad7e2ab3adc8f8e5618b3af62">m_cq</a> {0}</td></tr>
 <tr class="memdesc:a6e8331aad7e2ab3adc8f8e5618b3af62"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cosine of the wind direction.  <a href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html#a6e8331aad7e2ab3adc8f8e5618b3af62">More...</a><br /></td></tr>
 <tr class="separator:a6e8331aad7e2ab3adc8f8e5618b3af62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +220,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00249">249</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00252">252</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +258,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00256">256</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00259">259</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
 
@@ -275,7 +281,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <p>Destructor. </p>
 <p>Frees GSL workspace if it was allocated. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00268">268</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00271">271</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +303,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <p>Get the current absolute tolerance. </p>
 <dl class="section return"><dt>Returns</dt><dd>_absTol </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00292">292</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00295">295</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +333,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00286">286</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00289">289</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +361,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p>Initialize parameters to default values. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00277">277</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00280">280</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -420,7 +426,7 @@ template&lt;bool parallel&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00460">460</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00464">464</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -441,7 +447,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 <p>Get the current relative tolerance. </p>
 <dl class="section return"><dt>Returns</dt><dd>_relTol </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00304">304</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00307">307</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -471,7 +477,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00298">298</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00301">301</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,9 +543,9 @@ template&lt;typename realT , typename aosysT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">311</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">314</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00115">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_w</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00107">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00111">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_cq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00109">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00113">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_spatialFilter</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00112">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_sq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00110">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_j</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
+<p class="reference">References <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00121">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_w</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00107">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00114">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_cq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00109">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00116">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_spatialFilter</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00115">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_sq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00110">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_j</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00111">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_m</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00112">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_n</a>, <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
 
 </div>
 </div>
@@ -560,7 +566,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>The absolute tolerance to use in the GSL integrator. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00120">120</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00123">123</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -580,9 +586,9 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>The index of the current layer. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00115">115</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00118">118</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00486">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00490">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -602,7 +608,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>The relative tolerance to use in the GSL integrator. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00121">121</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00124">124</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
 </div>
 </div>
@@ -622,9 +628,9 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>Worskspace for the gsl integrators, allocated to WSZ if constructed as worker (with allocate == true). </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00118">118</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00121">121</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -646,7 +652,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00107">107</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00486">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00490">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -666,9 +672,9 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>The cosine of the wind direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00111">111</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00114">114</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -690,7 +696,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00109">109</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00486">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00490">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -710,9 +716,9 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>Flag indicating if a spatial filter is applied. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00113">113</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00116">116</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -732,9 +738,9 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p>The sine of the wind direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00112">112</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00115">115</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -756,7 +762,51 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00110">110</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00486">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00311">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+
+</div>
+</div>
+<a id="a3753025d11dcfc65106d8ba0051f4422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3753025d11dcfc65106d8ba0051f4422">&#9670;&nbsp;</a></span>m_zern_m</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _realT , typename aosysT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html">mx::AO::analysis::zernikeTemporalPSD</a>&lt; _realT, aosysT &gt;::m_zern_m {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current mode m. </p>
+
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00111">111</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00490">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
+
+</div>
+</div>
+<a id="a7f74797e565923d7980ec0de41490efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f74797e565923d7980ec0de41490efe">&#9670;&nbsp;</a></span>m_zern_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _realT , typename aosysT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html">mx::AO::analysis::zernikeTemporalPSD</a>&lt; _realT, aosysT &gt;::m_zern_n {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current mode n. </p>
+
+<p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00112">112</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00490">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>.</p>
 
 </div>
 </div>
@@ -769,7 +819,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html">zernikeTemporalPSD</a></li>
-    <li class="footer">Generated on Sat Aug 6 2022 10:56:08 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -64,26 +64,26 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ADIDerotator_8cpp.html",
-"classes.html",
-"classmx_1_1AO_1_1analysis_1_1aoSystem.html#afc7c4d2d6f550838867472599ab7ae92",
-"classmx_1_1app_1_1application.html#aef1b7f38abb9862de25bce184b04053f",
-"classmx_1_1fits_1_1fitsHeaderCard.html#a576c5a1c3f194d7d9e06cc8df9363bab",
-"classmx_1_1math_1_1fit_1_1fitGaussian2D.html#a0434ffa569e12a13873a64eadeecfd38",
-"classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_011_01_4.html#a2e6781018249fe8f8d3ad4a2cbbf258e",
-"fileUtils_8hpp.html#ga69ffe50a6726766e9c51a653628201f5",
-"group__IPC.html#gadc964de2f62103fc5de709b5bde29603",
-"group__fits__processing__files.html",
-"group__hc__imaging__enums.html#ga1af050405983cd62f812ec2c6809603e",
-"group__kepler.html",
-"group__signal__windows1D.html#gaef31002892e2ffea93581a3dfceb1e76",
-"group__zernike__basis.html#gaaf5fdab614542171202d1d8226a9bb6e",
-"mxlib_8cpp_source.html",
-"structmx_1_1AO_1_1analysis_1_1clGainOpt.html#a818bc179c8c37f97ad69c2578b0ac68f",
-"structmx_1_1astro_1_1astroSpectrum.html#aa6d3276ecce8f453d78b2c5b3499437f",
-"structmx_1_1improc_1_1ADIobservation.html#ae532b5f9ec73a141604aaf5ea06881aa",
-"structmx_1_1improc_1_1gaussKernel.html",
-"templateLapack_8cpp.html"
+"",
+"binVector_8hpp.html",
+"classmx_1_1AO_1_1analysis_1_1aoSystem.html#acd24b1a1ba278cdf1b5628bae6ed9a43",
+"classmx_1_1app_1_1application.html#a290f4c557b4f8bfd80eb71e6e4370268",
+"classmx_1_1fits_1_1fitsHeaderCard.html#a1c1a987f57574c62a38d1e3cc27aed78",
+"classmx_1_1math_1_1fft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a11efb50d3d887e4aa1e2a1bf6746f477",
+"classmx_1_1sigproc_1_1circularBufferBranch.html#a13770fe91ed58aec0e0c572c739b42b0",
+"fftwTemplates_8hpp.html#ga7315f823e56d2cedef44d871858cd0b1",
+"geo_8hpp.html",
+"group__fileutils.html",
+"group__geo.html#ga03d19941cd996137174b767ab992aa13",
+"group__image__utils.html#gaf141b4bb579d7e518007c5761b322a48",
+"group__signal__processing__files.html",
+"group__vectorutils.html#gadda450e35c0814178194b88277f62e00",
+"math_8hpp.html",
+"structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a9483ca9cf2af5e1e60ea3265e748ec62",
+"structmx_1_1app_1_1configTarget.html#a84dd5bea6c530693cf98ee532540c46e",
+"structmx_1_1improc_1_1ADIobservation.html#a05af496d36b2a0401f1a7d913cf0c786",
+"structmx_1_1improc_1_1KLIPreduction.html#ab6ddad339ba965f5b504cd10e11a69aa",
+"structmx_1_1wfp_1_1lyotCoronagraph.html#af0b3d6b119fa8c624d1f625302ee2571"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
