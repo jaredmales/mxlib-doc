@@ -289,12 +289,12 @@ $(document).ready(function(){initNavTree('imagePads_8hpp_source.html',''); initR
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;   <span class="keywordflow">if</span>(stR &lt; 0)</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;   {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;padImage&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;imMask must have at least as many rows as imIn.&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      mxError(<span class="stringliteral">&quot;padImage&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;imMask must have at least as many rows as imIn.&quot;</span>);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;   }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   <span class="keywordflow">if</span>(stC &lt; 0)</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;   {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;padImage&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;imMask must have at least as many columns as imIn.&quot;</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      mxError(<span class="stringliteral">&quot;padImage&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;imMask must have at least as many columns as imIn.&quot;</span>);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;   }</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;   </div>
@@ -375,13 +375,13 @@ $(document).ready(function(){initNavTree('imagePads_8hpp_source.html',''); initR
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="keywordflow">if</span>(2*padSz &gt; imIn.rows())</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   {</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;cutPaddedImage&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;padSz too large, must be &lt; imIn.rows()/2&quot;</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      mxError(<span class="stringliteral">&quot;cutPaddedImage&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;padSz too large, must be &lt; imIn.rows()/2&quot;</span>);</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   }</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;   </div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;   <span class="keywordflow">if</span>(2*padSz &gt; imIn.cols())</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;   {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;cutPaddedImage&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;padSz too large, must be &lt; imIn.cols()/2&quot;</span>);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      mxError(<span class="stringliteral">&quot;cutPaddedImage&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;padSz too large, must be &lt; imIn.cols()/2&quot;</span>);</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;   }</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;   </div>
@@ -400,11 +400,9 @@ $(document).ready(function(){initNavTree('imagePads_8hpp_source.html',''); initR
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}<span class="comment">// namespace mx</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//improc_imagePads_hpp</span></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
 <div class="ttc" id="agroup__image__padding_html_ga854ba8b32332924491c62d5318a713db"><div class="ttname"><a href="group__image__padding.html#ga854ba8b32332924491c62d5318a713db">mx::improc::padImageRef</a></div><div class="ttdeci">int padImageRef(imOutT imOut, imInT imIn, unsigned int padSz, typename imOutT::Scalar value)</div><div class="ttdoc">Pad an image with a constant value for reference types.</div><div class="ttdef"><b>Definition:</b> <a href="imagePads_8hpp_source.html#l00083">imagePads.hpp:83</a></div></div>
 <div class="ttc" id="agroup__image__padding_html_gabdc39ef4b33505edd63ec4dc14b54116"><div class="ttname"><a href="group__image__padding.html#gabdc39ef4b33505edd63ec4dc14b54116">mx::improc::cutPaddedImage</a></div><div class="ttdeci">int cutPaddedImage(imOutT &amp;imOut, const imInT &amp;imIn, unsigned int padSz)</div><div class="ttdoc">Cut down a padded image.</div><div class="ttdef"><b>Definition:</b> <a href="imagePads_8hpp_source.html#l00273">imagePads.hpp:273</a></div></div>
 <div class="ttc" id="agroup__image__padding_html_gafaacecf29a8060fa8bab7c4c74aa2dec"><div class="ttname"><a href="group__image__padding.html#gafaacecf29a8060fa8bab7c4c74aa2dec">mx::improc::padImage</a></div><div class="ttdeci">int padImage(imOutT &amp;imOut, imInT &amp;imIn, imInT &amp;imMask, unsigned int padSz)</div><div class="ttdoc">Pad an image by repeating the values at the edge of a 1/0 mask.</div><div class="ttdef"><b>Definition:</b> <a href="imagePads_8hpp_source.html#l00174">imagePads.hpp:174</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga38fc03054354c04ac079aca53399fc5a"><div class="ttname"><a href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a></div><div class="ttdeci">#define MXE_INVALIDARG</div><div class="ttdoc">An argument was invalid.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00116">mxError.hpp:116</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -412,7 +410,7 @@ $(document).ready(function(){initNavTree('imagePads_8hpp_source.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imagePads_8hpp.html">imagePads.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

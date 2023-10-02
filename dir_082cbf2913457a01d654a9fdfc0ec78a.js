@@ -15,8 +15,12 @@ var dir_082cbf2913457a01d654a9fdfc0ec78a =
     [ "pyramidSensor.hpp", "pyramidSensor_8hpp.html", null ],
     [ "pyramidSensorSepQuad.hpp", "pyramidSensorSepQuad_8hpp.html", null ],
     [ "pywfsSlopeReconstructor.hpp", "pywfsSlopeReconstructor_8hpp_source.html", null ],
-    [ "simulatedAOSystem.hpp", "simulatedAOSystem_8hpp.html", "simulatedAOSystem_8hpp" ],
-    [ "turbAtmosphere.hpp", "turbAtmosphere_8hpp.html", "turbAtmosphere_8hpp" ],
+    [ "simulatedAOSystem.hpp", "simulatedAOSystem_8hpp.html", [
+      [ "simulatedAOSystem", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem" ]
+    ] ],
+    [ "turbAtmosphere.hpp", "turbAtmosphere_8hpp.html", [
+      [ "turbAtmosphere", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", "structmx_1_1AO_1_1sim_1_1turbAtmosphere" ]
+    ] ],
     [ "turbLayer.hpp", "turbLayer_8hpp.html", [
       [ "turbLayer", "structmx_1_1AO_1_1sim_1_1turbLayer.html", "structmx_1_1AO_1_1sim_1_1turbLayer" ]
     ] ],

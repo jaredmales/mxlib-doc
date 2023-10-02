@@ -109,9 +109,6 @@ $(document).ready(function(){initNavTree('fftwTemplates_8hpp.html',''); initResi
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="fftwTemplates_8hpp_source.html">fftwTemplates.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;complex&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;fftw3.h&gt;</code><br />
 </div>
 <p><a href="fftwTemplates_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -128,6 +125,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01long_01double_01_4.html">mx::math::fft::fftwPlanSpec&lt; long double &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1math_1_1fft_1_1fftwPlanSpec.html" title="Specify the type of the plan based on the real type of the data.">fftwPlanSpec</a> for long double.  <a href="structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01long_01double_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01____float128_01_4.html">mx::math::fft::fftwPlanSpec&lt; __float128 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1math_1_1fft_1_1fftwPlanSpec.html" title="Specify the type of the plan based on the real type of the data.">fftwPlanSpec</a> for __float128.  <a href="structmx_1_1math_1_1fft_1_1fftwPlanSpec_3_01____float128_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html">mx::math::fft::fftwTypeSpec&lt; _inputDataT, _outputDataT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure specifying various types based on the FFT input and output data types.  <a href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html#details">More...</a><br /></td></tr>
@@ -159,6 +159,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html">mx::math::fft::fftwTypeSpec&lt; complexLT, long double &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-long-double input and real-long-double output.  <a href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01complexQT_01_4.html">mx::math::fft::fftwTypeSpec&lt; complexQT, complexQT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-quad input and complex-quad output.  <a href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01complexQT_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01____float128_00_01complexQT_01_4.html">mx::math::fft::fftwTypeSpec&lt; __float128, complexQT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for real-quad input and complex-quad output.  <a href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01____float128_00_01complexQT_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01____float128_01_4.html">mx::math::fft::fftwTypeSpec&lt; complexQT, __float128 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="structmx_1_1math_1_1fft_1_1fftwTypeSpec.html" title="A structure specifying various types based on the FFT input and output data types.">fftwTypeSpec</a> for complex-quad input and real-quad output.  <a href="structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01____float128_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -177,6 +186,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gaf9f6cbdfadb65c149391cf7bbf2c979e"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fftw__template__types.html#gaf9f6cbdfadb65c149391cf7bbf2c979e">mx::math::fft::complexLT</a></td></tr>
 <tr class="memdesc:gaf9f6cbdfadb65c149391cf7bbf2c979e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex long double data type.  <a href="group__fftw__template__types.html#gaf9f6cbdfadb65c149391cf7bbf2c979e">More...</a><br /></td></tr>
 <tr class="separator:gaf9f6cbdfadb65c149391cf7bbf2c979e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab01e44a9ab54168bfa876c4e4f314eb1"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; __float128 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fftw__template__types.html#gab01e44a9ab54168bfa876c4e4f314eb1">mx::math::fft::complexQT</a></td></tr>
+<tr class="memdesc:gab01e44a9ab54168bfa876c4e4f314eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The complex __float128 data type.  <a href="group__fftw__template__types.html#gab01e44a9ab54168bfa876c4e4f314eb1">More...</a><br /></td></tr>
+<tr class="separator:gab01e44a9ab54168bfa876c4e4f314eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -235,7 +247,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_6cdd4d2f4f2d35d162926c1e0ab93b1a.html">fft</a></li><li class="navelem"><a class="el" href="fftwTemplates_8hpp.html">fftwTemplates.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

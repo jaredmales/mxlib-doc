@@ -123,12 +123,12 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef KEPLER_TOL</span><span class="comment"></span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">///The default tolerance for solutions to the Kepler problem</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">   28</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define KEPLER_TOL (1e-8)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span><span class="preprocessor">#define KEPLER_TOL (1e-8)</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef KEPLER_ITMAX</span><span class="comment"></span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">///The default maximum number of iterations for solutions to the Kepler problem</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">   33</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define KEPLER_ITMAX (1000)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span><span class="preprocessor">#define KEPLER_ITMAX (1000)</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
@@ -260,8 +260,8 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                   realT &amp; D, <span class="comment">///&lt; [out] is the error after the last iteration</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                   realT e,   <span class="comment">///&lt; [in] is the eccentricity</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                   realT M,   <span class="comment">///&lt; [in] is the mean anomaly</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                   realT tol=<a class="code" href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">KEPLER_TOL</a>,  <span class="comment">///&lt; [in] is the desired tolerance</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                   <span class="keywordtype">long</span> itmax=<a class="code" href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">KEPLER_ITMAX</a>  <span class="comment">///&lt; [in] is the maximum number of iterations</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                   realT tol=KEPLER_TOL,  <span class="comment">///&lt; [in] is the desired tolerance</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                   <span class="keywordtype">long</span> itmax=KEPLER_ITMAX  <span class="comment">///&lt; [in] is the maximum number of iterations</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                 )</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{   </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;   <span class="keywordflow">if</span> (e &lt; 1.0)</div>
@@ -286,7 +286,7 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">///Calculate the next iteration of Danby&#39;s quartic Newton-Raphson method (difference form).</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"></span><span class="comment">//floatT keplerdiff_1(floatT EC, floatT ES, floatT dM, floatT dEi);</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> arithT&gt;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;arithT kepler_danby_diff_1(arithT EC, arithT ES, arithT dM, arithT dEi)</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="kepler_8hpp.html#a5afdbb7cb80fda813d64469ca50c26d1">  191</a></span>&#160;arithT <a class="code" href="kepler_8hpp.html#a5afdbb7cb80fda813d64469ca50c26d1">kepler_danby_diff_1</a>(arithT EC, arithT ES, arithT dM, arithT dEi)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;   arithT cosE0, sinE0, cosdE, sindE, fi, fi1, fi2, fi3, di1, di2, di3;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;   </div>
@@ -320,7 +320,7 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment"> * \retval -1 on exceeding itmax, otherwise reurns the number of iterations.</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> arithT&gt;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keywordtype">long</span> solve_keplerdiff_danby(arithT *dE, arithT *D, arithT e, arithT EC, arithT ES, arithT dM, arithT tol, <span class="keywordtype">long</span> itmax)</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="kepler_8hpp.html#ab2efd5007c212ad297e9d94c62a63934">  225</a></span>&#160;<span class="keywordtype">long</span> <a class="code" href="kepler_8hpp.html#ab2efd5007c212ad297e9d94c62a63934">solve_keplerdiff_danby</a>(arithT *dE, arithT *D, arithT e, arithT EC, arithT ES, arithT dM, arithT tol, <span class="keywordtype">long</span> itmax)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;   <span class="keywordtype">long</span> i;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;   arithT lastdE, sindE, <a class="code" href="group__functions.html#ga9512a2141be94a26558dae41a758ebcd">sign</a>;</div>
@@ -334,7 +334,7 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;   <span class="keywordflow">for</span>(i=0; i &lt; itmax; i++)</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;   {</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      lastdE = (*dE);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      (*dE) = kepler_danby_diff_1(EC, ES, dM, (*dE));</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      (*dE) = <a class="code" href="kepler_8hpp.html#a5afdbb7cb80fda813d64469ca50c26d1">kepler_danby_diff_1</a>(EC, ES, dM, (*dE));</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="comment">//Test for convergence to within tol</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="comment">//Make sure we have iterated at least twice to prevent early convergence</span></div>
@@ -383,7 +383,7 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> * \retval -1 if the conditions aren&#39;t  met by w an df</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> arithT&gt;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keywordtype">int</span> get_W_1pt_z0(arithT &amp;W, arithT x, arithT y, arithT r, arithT f, arithT w)</div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="kepler_8hpp.html#aa3cc46b4ae86a56118d83b33b3610a87">  288</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="kepler_8hpp.html#aa3cc46b4ae86a56118d83b33b3610a87">get_W_1pt_z0</a>(arithT &amp;W, arithT x, arithT y, arithT r, arithT f, arithT w)</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;   arithT sinW, cosW;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   </div>
@@ -392,7 +392,7 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      sinW = y/r;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      cosW = x/r;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;   }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   <span class="keywordflow">else</span> <span class="keywordflow">if</span>(w == <a class="code" href="group__sofa__constants.html#ga9dcb542bc9dbcae41fdb39a689798698">DPI</a> - f)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;   <span class="keywordflow">else</span> <span class="keywordflow">if</span>(w == DPI - f)</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;   {</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      sinW = -y/r;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      cosW = -x/r;</div>
@@ -413,9 +413,9 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div class="ttc" id="agroup__kepler_html_ga20ecc112eb6e955934bee6f44b85f02a"><div class="ttname"><a href="group__kepler.html#ga20ecc112eb6e955934bee6f44b85f02a">mx::astro::kepler_danby_1</a></div><div class="ttdeci">realT kepler_danby_1(realT e, realT M, realT Ei)</div><div class="ttdoc">Calculate the next iteration of Danby's quartic Newton-Raphson method.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00089">kepler.hpp:89</a></div></div>
 <div class="ttc" id="agroup__kepler_html_ga2486776bb73ecc3ebf0c998b50b702a0"><div class="ttname"><a href="group__kepler.html#ga2486776bb73ecc3ebf0c998b50b702a0">mx::astro::hyperbolic_kepler</a></div><div class="ttdeci">long hyperbolic_kepler(realT &amp;E, realT &amp;err, realT e, realT M, realT tol, long itmax)</div><div class="ttdoc">Solve the hyperbolic kepler equation (for e&gt; 1).</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00050">kepler.hpp:50</a></div></div>
 <div class="ttc" id="agroup__kepler_html_ga5e1b17d5531f2ad1e4da06b5fdd6fdc8"><div class="ttname"><a href="group__kepler.html#ga5e1b17d5531f2ad1e4da06b5fdd6fdc8">mx::astro::solve_kepler</a></div><div class="ttdeci">long solve_kepler(realT &amp;E, realT &amp;D, realT e, realT M, realT tol=KEPLER_TOL, long itmax=KEPLER_ITMAX)</div><div class="ttdoc">Solve Kepler's equation for any e. Uses solve_kepler_danby if e &lt; 1.0, hyperbolic_kepler otherwise.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00161">kepler.hpp:161</a></div></div>
-<div class="ttc" id="agroup__sofa__constants_html_ga9dcb542bc9dbcae41fdb39a689798698"><div class="ttname"><a href="group__sofa__constants.html#ga9dcb542bc9dbcae41fdb39a689798698">DPI</a></div><div class="ttdeci">#define DPI</div><div class="ttdoc">Pi (defined in the SOFA library sofam.h)</div><div class="ttdef"><b>Definition:</b> <a href="sofa__constants_8h_source.html#l00012">sofa_constants.h:12</a></div></div>
-<div class="ttc" id="akepler_8hpp_html_a7b401ae9c745645f05a7afba53f0530a"><div class="ttname"><a href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">KEPLER_TOL</a></div><div class="ttdeci">#define KEPLER_TOL</div><div class="ttdoc">The default tolerance for solutions to the Kepler problem.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00028">kepler.hpp:28</a></div></div>
-<div class="ttc" id="akepler_8hpp_html_a92fa5b5d7f060e8ca1e044acf532743d"><div class="ttname"><a href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">KEPLER_ITMAX</a></div><div class="ttdeci">#define KEPLER_ITMAX</div><div class="ttdoc">The default maximum number of iterations for solutions to the Kepler problem.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00033">kepler.hpp:33</a></div></div>
+<div class="ttc" id="akepler_8hpp_html_a5afdbb7cb80fda813d64469ca50c26d1"><div class="ttname"><a href="kepler_8hpp.html#a5afdbb7cb80fda813d64469ca50c26d1">mx::astro::kepler_danby_diff_1</a></div><div class="ttdeci">arithT kepler_danby_diff_1(arithT EC, arithT ES, arithT dM, arithT dEi)</div><div class="ttdoc">Calculate the next iteration of Danby's quartic Newton-Raphson method (difference form).</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00191">kepler.hpp:191</a></div></div>
+<div class="ttc" id="akepler_8hpp_html_aa3cc46b4ae86a56118d83b33b3610a87"><div class="ttname"><a href="kepler_8hpp.html#aa3cc46b4ae86a56118d83b33b3610a87">mx::astro::get_W_1pt_z0</a></div><div class="ttdeci">int get_W_1pt_z0(arithT &amp;W, arithT x, arithT y, arithT r, arithT f, arithT w)</div><div class="ttdoc">Calculate the inclination and the longitude of the ascending node given a point on the orbit projecte...</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00288">kepler.hpp:288</a></div></div>
+<div class="ttc" id="akepler_8hpp_html_ab2efd5007c212ad297e9d94c62a63934"><div class="ttname"><a href="kepler_8hpp.html#ab2efd5007c212ad297e9d94c62a63934">mx::astro::solve_keplerdiff_danby</a></div><div class="ttdeci">long solve_keplerdiff_danby(arithT *dE, arithT *D, arithT e, arithT EC, arithT ES, arithT dM, arithT tol, long itmax)</div><div class="ttdoc">Solve Kepler's equation in difference form using Danby's quartic Newton-Raphson method.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00225">kepler.hpp:225</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 <div class="ttc" id="aunits_8hpp_html"><div class="ttname"><a href="units_8hpp.html">units.hpp</a></div><div class="ttdoc">Unit specifications and conversions.</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -424,7 +424,7 @@ $(document).ready(function(){initNavTree('kepler_8hpp_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0fc3206047eab508bd310c9d22a11fd1.html">astro</a></li><li class="navelem"><a class="el" href="kepler_8hpp.html">kepler.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

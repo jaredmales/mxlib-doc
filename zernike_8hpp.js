@@ -1,6 +1,8 @@
 var zernike_8hpp =
 [
+    [ "noll_j", "zernike_8hpp.html#ga1415fc5af7ae252540fcf5d30e14c2f8", null ],
     [ "noll_nm", "zernike_8hpp.html#gaaf5fdab614542171202d1d8226a9bb6e", null ],
+    [ "nZernRadOrd", "zernike_8hpp.html#ga6524765adacf326f0ffefd4e69626ad4", null ],
     [ "zernike", "zernike_8hpp.html#gac48709d89b56e77c39516212dda14b1a", null ],
     [ "zernike", "zernike_8hpp.html#gad4f21f467e2178d3b06015e26e58f83e", null ],
     [ "zernike", "zernike_8hpp.html#ga56b13961c566d6e49be4f6b70e8848bb", null ],

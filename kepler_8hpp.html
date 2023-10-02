@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('kepler_8hpp.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">kepler.hpp File Reference<div class="ingroups"><a class="el" href="group__genastro.html">Astronomy</a> &raquo; <a class="el" href="group__astrofiles.html">Astronomy Files</a></div></div>  </div>
@@ -108,10 +107,6 @@ $(document).ready(function(){initNavTree('kepler_8hpp.html',''); initResizable()
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="kepler_8hpp_source.html">kepler.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &quot;<a class="el" href="units_8hpp_source.html">units.hpp</a>&quot;</code><br />
 </div>
 <p><a href="kepler_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -120,15 +115,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacemx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemx.html">mx</a></td></tr>
 <tr class="memdesc:namespacemx"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib c++ namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a7b401ae9c745645f05a7afba53f0530a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">KEPLER_TOL</a>&#160;&#160;&#160;(1e-8)</td></tr>
-<tr class="memdesc:a7b401ae9c745645f05a7afba53f0530a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default tolerance for solutions to the Kepler problem.  <a href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">More...</a><br /></td></tr>
-<tr class="separator:a7b401ae9c745645f05a7afba53f0530a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92fa5b5d7f060e8ca1e044acf532743d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">KEPLER_ITMAX</a>&#160;&#160;&#160;(1000)</td></tr>
-<tr class="memdesc:a92fa5b5d7f060e8ca1e044acf532743d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default maximum number of iterations for solutions to the Kepler problem.  <a href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">More...</a><br /></td></tr>
-<tr class="separator:a92fa5b5d7f060e8ca1e044acf532743d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -145,44 +131,265 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga02cfa22e91f93dc7da9e52aa9b6ac1b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Kepler's equation using Danby's quartic Newton-Raphson method.  <a href="group__kepler.html#ga02cfa22e91f93dc7da9e52aa9b6ac1b8">More...</a><br /></td></tr>
 <tr class="separator:ga02cfa22e91f93dc7da9e52aa9b6ac1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5e1b17d5531f2ad1e4da06b5fdd6fdc8"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:ga5e1b17d5531f2ad1e4da06b5fdd6fdc8"><td class="memTemplItemLeft" align="right" valign="top">long&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__kepler.html#ga5e1b17d5531f2ad1e4da06b5fdd6fdc8">mx::astro::solve_kepler</a> (realT &amp;E, realT &amp;D, realT e, realT M, realT tol=<a class="el" href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">KEPLER_TOL</a>, long itmax=<a class="el" href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">KEPLER_ITMAX</a>)</td></tr>
+<tr class="memitem:ga5e1b17d5531f2ad1e4da06b5fdd6fdc8"><td class="memTemplItemLeft" align="right" valign="top">long&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__kepler.html#ga5e1b17d5531f2ad1e4da06b5fdd6fdc8">mx::astro::solve_kepler</a> (realT &amp;E, realT &amp;D, realT e, realT M, realT tol=KEPLER_TOL, long itmax=KEPLER_ITMAX)</td></tr>
 <tr class="memdesc:ga5e1b17d5531f2ad1e4da06b5fdd6fdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Kepler's equation for any e. Uses solve_kepler_danby if e &lt; 1.0, hyperbolic_kepler otherwise.  <a href="group__kepler.html#ga5e1b17d5531f2ad1e4da06b5fdd6fdc8">More...</a><br /></td></tr>
 <tr class="separator:ga5e1b17d5531f2ad1e4da06b5fdd6fdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afdbb7cb80fda813d64469ca50c26d1"><td class="memTemplParams" colspan="2">template&lt;typename arithT &gt; </td></tr>
+<tr class="memitem:a5afdbb7cb80fda813d64469ca50c26d1"><td class="memTemplItemLeft" align="right" valign="top">arithT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="kepler_8hpp.html#a5afdbb7cb80fda813d64469ca50c26d1">mx::astro::kepler_danby_diff_1</a> (arithT EC, arithT ES, arithT dM, arithT dEi)</td></tr>
+<tr class="memdesc:a5afdbb7cb80fda813d64469ca50c26d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the next iteration of Danby's quartic Newton-Raphson method (difference form).  <a href="kepler_8hpp.html#a5afdbb7cb80fda813d64469ca50c26d1">More...</a><br /></td></tr>
+<tr class="separator:a5afdbb7cb80fda813d64469ca50c26d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2efd5007c212ad297e9d94c62a63934"><td class="memTemplParams" colspan="2">template&lt;typename arithT &gt; </td></tr>
+<tr class="memitem:ab2efd5007c212ad297e9d94c62a63934"><td class="memTemplItemLeft" align="right" valign="top">long&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="kepler_8hpp.html#ab2efd5007c212ad297e9d94c62a63934">mx::astro::solve_keplerdiff_danby</a> (arithT *dE, arithT *D, arithT e, arithT EC, arithT ES, arithT dM, arithT tol, long itmax)</td></tr>
+<tr class="memdesc:ab2efd5007c212ad297e9d94c62a63934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Kepler's equation in difference form using Danby's quartic Newton-Raphson method.  <a href="kepler_8hpp.html#ab2efd5007c212ad297e9d94c62a63934">More...</a><br /></td></tr>
+<tr class="separator:ab2efd5007c212ad297e9d94c62a63934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cc46b4ae86a56118d83b33b3610a87"><td class="memTemplParams" colspan="2">template&lt;typename arithT &gt; </td></tr>
+<tr class="memitem:aa3cc46b4ae86a56118d83b33b3610a87"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="kepler_8hpp.html#aa3cc46b4ae86a56118d83b33b3610a87">mx::astro::get_W_1pt_z0</a> (arithT &amp;W, arithT x, arithT y, arithT r, arithT f, arithT w)</td></tr>
+<tr class="memdesc:aa3cc46b4ae86a56118d83b33b3610a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the inclination and the longitude of the ascending node given a point on the orbit projected onto the plane of the sky, the argument of pericenter, the current true radius, and the current true anomaly.  <a href="kepler_8hpp.html#aa3cc46b4ae86a56118d83b33b3610a87">More...</a><br /></td></tr>
+<tr class="separator:aa3cc46b4ae86a56118d83b33b3610a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a92fa5b5d7f060e8ca1e044acf532743d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92fa5b5d7f060e8ca1e044acf532743d">&#9670;&nbsp;</a></span>KEPLER_ITMAX</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa3cc46b4ae86a56118d83b33b3610a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cc46b4ae86a56118d83b33b3610a87">&#9670;&nbsp;</a></span>get_W_1pt_z0()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename arithT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">#define KEPLER_ITMAX&#160;&#160;&#160;(1000)</td>
+          <td class="memname">int mx::astro::get_W_1pt_z0 </td>
+          <td>(</td>
+          <td class="paramtype">arithT &amp;&#160;</td>
+          <td class="paramname"><em>W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The default maximum number of iterations for solutions to the Kepler problem. </p>
+<p>Calculate the inclination and the longitude of the ascending node given a point on the orbit projected onto the plane of the sky, the argument of pericenter, the current true radius, and the current true anomaly. </p>
+<p>Solutions are not always possible. You must check the return value to know if the results are valid. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>[output] the inclination (there will be 2) </td></tr>
+    <tr><td class="paramname">W</td><td>[output] the longitude of the ascending node (there will be 2) </td></tr>
+    <tr><td class="paramname">x</td><td>[input] the x coordinate of the projection onto the reference plane </td></tr>
+    <tr><td class="paramname">y</td><td>[input] the y coordinate of the projection onto the reference plane </td></tr>
+    <tr><td class="paramname">rho</td><td>[input] the projected separation (yes this is redundant to x and y, but it is passed independently for efficiency) </td></tr>
+    <tr><td class="paramname">r</td><td>[input] the physical (3D) separation </td></tr>
+    <tr><td class="paramname">f</td><td>[input] the true anomaly </td></tr>
+    <tr><td class="paramname">w</td><td>[input] the argument of pericenter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>if no solution is possible due to ... </td></tr>
+    <tr><td class="paramname">-2</td><td>if no solution is possible due to z = 0 </td></tr>
+    <tr><td class="paramname">-3</td><td>if no solution is possible due to ... Calculate the longitude of the ascending node given a point on the orbit projected onto the plane of the sky, the argument of pericenter, the current radius, and the current true anomaly. Used for the z = 0, i != 0/PI case. i.e. sin(w+f) = 0, cos(w+f) = +/- 1. w must be either -f or PI - f. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">W</td><td>[output] the longitude of the ascending node. </td></tr>
+    <tr><td class="paramname">x</td><td>[input] the x coordinate of the starting point </td></tr>
+    <tr><td class="paramname">y</td><td>[input] the y coordinate of the starting point </td></tr>
+    <tr><td class="paramname">r</td><td>[input] the current 3D separation from the star </td></tr>
+    <tr><td class="paramname">f</td><td>[input] the current true anomaly </td></tr>
+    <tr><td class="paramname">w</td><td>[input] the argument of pericenter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>if the conditions aren't met by w an df </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="kepler_8hpp_source.html#l00033">33</a> of file <a class="el" href="kepler_8hpp_source.html">kepler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kepler_8hpp_source.html#l00288">288</a> of file <a class="el" href="kepler_8hpp_source.html">kepler.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="kepler_8hpp_source.html#l00288">mx::astro::get_W_1pt_z0()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kepler_8hpp_source.html#l00288">mx::astro::get_W_1pt_z0()</a>.</p>
 
 </div>
 </div>
-<a id="a7b401ae9c745645f05a7afba53f0530a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b401ae9c745645f05a7afba53f0530a">&#9670;&nbsp;</a></span>KEPLER_TOL</h2>
+<a id="a5afdbb7cb80fda813d64469ca50c26d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5afdbb7cb80fda813d64469ca50c26d1">&#9670;&nbsp;</a></span>kepler_danby_diff_1()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename arithT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">#define KEPLER_TOL&#160;&#160;&#160;(1e-8)</td>
+          <td class="memname">arithT mx::astro::kepler_danby_diff_1 </td>
+          <td>(</td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>EC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>ES</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>dM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>dEi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The default tolerance for solutions to the Kepler problem. </p>
+<p>Calculate the next iteration of Danby's quartic Newton-Raphson method (difference form). </p>
 
-<p class="definition">Definition at line <a class="el" href="kepler_8hpp_source.html#l00028">28</a> of file <a class="el" href="kepler_8hpp_source.html">kepler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kepler_8hpp_source.html#l00191">191</a> of file <a class="el" href="kepler_8hpp_source.html">kepler.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="kepler_8hpp_source.html#l00191">mx::astro::kepler_danby_diff_1()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kepler_8hpp_source.html#l00191">mx::astro::kepler_danby_diff_1()</a>, and <a class="el" href="kepler_8hpp_source.html#l00225">mx::astro::solve_keplerdiff_danby()</a>.</p>
+
+</div>
+</div>
+<a id="ab2efd5007c212ad297e9d94c62a63934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2efd5007c212ad297e9d94c62a63934">&#9670;&nbsp;</a></span>solve_keplerdiff_danby()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename arithT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">long mx::astro::solve_keplerdiff_danby </td>
+          <td>(</td>
+          <td class="paramtype">arithT *&#160;</td>
+          <td class="paramname"><em>dE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT *&#160;</td>
+          <td class="paramname"><em>D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>EC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>ES</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>dM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">arithT&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>itmax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solve Kepler's equation in difference form using Danby's quartic Newton-Raphson method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dE</td><td>[output] is the eccentric anomaly </td></tr>
+    <tr><td class="paramname">D</td><td>[output] is the error after the last iteration </td></tr>
+    <tr><td class="paramname">e</td><td>[input] is the eccentricity </td></tr>
+    <tr><td class="paramname">EC</td><td>[input] </td></tr>
+    <tr><td class="paramname">ES</td><td>[input] </td></tr>
+    <tr><td class="paramname">dM</td><td>[input] </td></tr>
+    <tr><td class="paramname">tol</td><td>[input] is the desired tolerance </td></tr>
+    <tr><td class="paramname">itmax</td><td>[input] is the maximum number of iterations </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>on exceeding itmax, otherwise reurns the number of iterations. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="kepler_8hpp_source.html#l00225">225</a> of file <a class="el" href="kepler_8hpp_source.html">kepler.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="kepler_8hpp_source.html#l00191">mx::astro::kepler_danby_diff_1()</a>, <a class="el" href="sign_8hpp_source.html#l00030">mx::math::func::sign()</a>, and <a class="el" href="kepler_8hpp_source.html#l00225">mx::astro::solve_keplerdiff_danby()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kepler_8hpp_source.html#l00225">mx::astro::solve_keplerdiff_danby()</a>.</p>
 
 </div>
 </div>
@@ -192,7 +399,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0fc3206047eab508bd310c9d22a11fd1.html">astro</a></li><li class="navelem"><a class="el" href="kepler_8hpp.html">kepler.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

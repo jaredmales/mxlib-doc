@@ -139,40 +139,45 @@ $(document).ready(function(){initNavTree('gamma_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="comment"></span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/// The Gamma Function</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  * \ingroup functions</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="group__functions.html#gaeaa7e4606b6797a4b48acda0285a0c8c">   48</a></span>&#160;T <a class="code" href="group__functions.html#gaeaa7e4606b6797a4b48acda0285a0c8c">tgamma</a>( T x <span class="comment">/**&lt; [in] the argument of the gamma function*/</span> )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifdef MX_INCLUDE_BOOST</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <span class="keywordflow">return</span> boost::math::tgamma&lt;T&gt;(x);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   static_assert(std::is_fundamental&lt;T&gt;::value || !std::is_fundamental&lt;T&gt;::value, <span class="stringliteral">&quot;tgamma&lt;T&gt; not specialized for type T, and MX_INCLUDE_BOOST is not defined, so I can&#39;t just use boost.&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">float</span> tgamma&lt;float&gt;( <span class="keywordtype">float</span> x);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">double</span> tgamma&lt;double&gt;( <span class="keywordtype">double</span> x );</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> tgamma&lt;long double&gt;( <span class="keywordtype">long</span> <span class="keywordtype">double</span> x );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifdef HASQUAD</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;__float128 tgamma&lt;__float128&gt;( __float128 x );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">/** This is a wrapper for boost.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  * \tparam T a real floating point type</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  * \returns the value of the Gamma Function.</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  * \ingroup gen_math_gamma</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="group__gen__math__gamma.html#gaeaa7e4606b6797a4b48acda0285a0c8c">   53</a></span>&#160;T <a class="code" href="group__gen__math__gamma.html#gaeaa7e4606b6797a4b48acda0285a0c8c">tgamma</a>( T x <span class="comment">/**&lt; [in] the argument of the gamma function*/</span> )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#ifdef MX_INCLUDE_BOOST</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordflow">return</span> boost::math::tgamma&lt;T&gt;(x);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   static_assert(std::is_fundamental&lt;T&gt;::value || !std::is_fundamental&lt;T&gt;::value, <span class="stringliteral">&quot;tgamma&lt;T&gt; not specialized for type T, and MX_INCLUDE_BOOST is not defined, so I can&#39;t just use boost.&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">float</span> tgamma&lt;float&gt;( <span class="keywordtype">float</span> x);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">double</span> tgamma&lt;double&gt;( <span class="keywordtype">double</span> x );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> tgamma&lt;long double&gt;( <span class="keywordtype">long</span> <span class="keywordtype">double</span> x );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//mx_gamma_hpp</span></div>
-<div class="ttc" id="agroup__functions_html_gaeaa7e4606b6797a4b48acda0285a0c8c"><div class="ttname"><a href="group__functions.html#gaeaa7e4606b6797a4b48acda0285a0c8c">mx::math::func::tgamma</a></div><div class="ttdeci">T tgamma(T x)</div><div class="ttdoc">The Gamma Function.</div><div class="ttdef"><b>Definition:</b> <a href="gamma_8hpp_source.html#l00048">gamma.hpp:48</a></div></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifdef HASQUAD</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;__float128 tgamma&lt;__float128&gt;( __float128 x );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//mx_gamma_hpp</span></div>
+<div class="ttc" id="agroup__gen__math__gamma_html_gaeaa7e4606b6797a4b48acda0285a0c8c"><div class="ttname"><a href="group__gen__math__gamma.html#gaeaa7e4606b6797a4b48acda0285a0c8c">mx::math::func::tgamma</a></div><div class="ttdeci">T tgamma(T x)</div><div class="ttdoc">The Gamma Function.</div><div class="ttdef"><b>Definition:</b> <a href="gamma_8hpp_source.html#l00053">gamma.hpp:53</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -180,7 +185,7 @@ $(document).ready(function(){initNavTree('gamma_8hpp_source.html',''); initResiz
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_4e9e59a91b0996cbbf615e490f662000.html">func</a></li><li class="navelem"><a class="el" href="gamma_8hpp.html">gamma.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

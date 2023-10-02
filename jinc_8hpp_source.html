@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('jinc_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>func </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">///Returns the the Jinc function</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/// The Jinc function</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">/** The Jinc function is defined here as</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  * \f[ </span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  *     Ji(x) = \frac{J_1(x)}{x} </span></div>
@@ -156,10 +156,10 @@ $(document).ready(function(){initNavTree('jinc_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">  * </span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">  * \tparam T is an floating point type </span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">  * \ingroup functions</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">  * \ingroup gen_math_bessel</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">   64</a></span>&#160;T <a class="code" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">jinc</a>( <span class="keyword">const</span> T &amp; x <span class="comment">/**&lt; [in] the argument */</span>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group__gen__math__bessel.html#gaf7e3e0d052049a12fd7d4e0190cf5602">   64</a></span>&#160;T <a class="code" href="group__gen__math__bessel.html#gaf7e3e0d052049a12fd7d4e0190cf5602">jinc</a>( <span class="keyword">const</span> T &amp; x <span class="comment">/**&lt; [in] the argument */</span>)</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   T <span class="keyword">const</span> taylor_0_bound = std::numeric_limits&lt;T&gt;::epsilon();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   T <span class="keyword">const</span> taylor_2_bound = root_epsilon&lt;T&gt;();</div>
@@ -199,7 +199,7 @@ $(document).ready(function(){initNavTree('jinc_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;__float128 jinc&lt;__float128&gt;(<span class="keyword">const</span> __float128 &amp; x);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">///Returns the JincN function</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/// The JincN function</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"></span><span class="comment">/** The JincN function is defined here as</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">  * \f[ </span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">  *     Ji_N(x) = \frac{J_N(x)}{x} </span></div>
@@ -212,14 +212,14 @@ $(document).ready(function(){initNavTree('jinc_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">  * </span></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">  * \returns the value of JiN(x)</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">  * \ingroup functions</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">  * \ingroup gen_math_bessel</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt; </div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="group__functions.html#gaa37415341730ef4c6de9815c5c8464fa">  120</a></span>&#160;T2 <a class="code" href="group__functions.html#gaa37415341730ef4c6de9815c5c8464fa">jincN</a>( <span class="keyword">const</span> T1 &amp; v, <span class="comment">///&lt; [in] the Bessel function order</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="group__gen__math__bessel.html#gaa37415341730ef4c6de9815c5c8464fa">  120</a></span>&#160;T2 <a class="code" href="group__gen__math__bessel.html#gaa37415341730ef4c6de9815c5c8464fa">jincN</a>( <span class="keyword">const</span> T1 &amp; v, <span class="comment">///&lt; [in] the Bessel function order</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          <span class="keyword">const</span> T2 &amp; x  <span class="comment">///&lt; [in] the argument </span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        )</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;   <span class="keywordflow">if</span>(v == 1) <span class="keywordflow">return</span> <a class="code" href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">jinc</a>(x);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;   <span class="keywordflow">if</span>(v == 1) <span class="keywordflow">return</span> <a class="code" href="group__gen__math__bessel.html#gaf7e3e0d052049a12fd7d4e0190cf5602">jinc</a>(x);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;   T2 <span class="keyword">const</span> taylor_2_bound = root_epsilon&lt;T2&gt;();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      </div>
@@ -282,8 +282,8 @@ $(document).ready(function(){initNavTree('jinc_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//math_func_jinc_hpp</span></div>
 <div class="ttc" id="abessel_8hpp_html"><div class="ttname"><a href="bessel_8hpp.html">bessel.hpp</a></div><div class="ttdoc">Declares and defines Bessel functions of the first kind.</div></div>
-<div class="ttc" id="agroup__functions_html_gaa37415341730ef4c6de9815c5c8464fa"><div class="ttname"><a href="group__functions.html#gaa37415341730ef4c6de9815c5c8464fa">mx::math::func::jincN</a></div><div class="ttdeci">T2 jincN(const T1 &amp;v, const T2 &amp;x)</div><div class="ttdoc">Returns the JincN function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00120">jinc.hpp:120</a></div></div>
-<div class="ttc" id="agroup__functions_html_gaf7e3e0d052049a12fd7d4e0190cf5602"><div class="ttname"><a href="group__functions.html#gaf7e3e0d052049a12fd7d4e0190cf5602">mx::math::func::jinc</a></div><div class="ttdeci">T jinc(const T &amp;x)</div><div class="ttdoc">Returns the the Jinc function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00064">jinc.hpp:64</a></div></div>
+<div class="ttc" id="agroup__gen__math__bessel_html_gaa37415341730ef4c6de9815c5c8464fa"><div class="ttname"><a href="group__gen__math__bessel.html#gaa37415341730ef4c6de9815c5c8464fa">mx::math::func::jincN</a></div><div class="ttdeci">T2 jincN(const T1 &amp;v, const T2 &amp;x)</div><div class="ttdoc">The JincN function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00120">jinc.hpp:120</a></div></div>
+<div class="ttc" id="agroup__gen__math__bessel_html_gaf7e3e0d052049a12fd7d4e0190cf5602"><div class="ttname"><a href="group__gen__math__bessel.html#gaf7e3e0d052049a12fd7d4e0190cf5602">mx::math::func::jinc</a></div><div class="ttdeci">T jinc(const T &amp;x)</div><div class="ttdoc">The Jinc function.</div><div class="ttdef"><b>Definition:</b> <a href="jinc_8hpp_source.html#l00064">jinc.hpp:64</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -291,7 +291,7 @@ $(document).ready(function(){initNavTree('jinc_8hpp_source.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_4e9e59a91b0996cbbf615e490f662000.html">func</a></li><li class="navelem"><a class="el" href="jinc_8hpp.html">jinc.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

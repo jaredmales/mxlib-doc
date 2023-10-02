@@ -95,7 +95,6 @@ $(document).ready(function(){initNavTree('group__IPC.html',''); initResizable();
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
 <a href="#files">Files</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Interprocess Communication<div class="ingroups"><a class="el" href="group__utils.html">General Utilities</a> &raquo; <a class="el" href="group__system.html">System Programming</a></div></div>  </div>
@@ -126,15 +125,6 @@ Files</h2></td></tr>
 <tr class="memdesc:sharedMemSegment_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definitions for the mxlib shared memory facility. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga3b6eb66cf7e8a23b450f0461388e8055"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IPC.html#ga3b6eb66cf7e8a23b450f0461388e8055">MX_IPC_KEYLEN</a>&#160;&#160;&#160;1024</td></tr>
-<tr class="memdesc:ga3b6eb66cf7e8a23b450f0461388e8055"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum length of the IPC key string.  <a href="group__IPC.html#ga3b6eb66cf7e8a23b450f0461388e8055">More...</a><br /></td></tr>
-<tr class="separator:ga3b6eb66cf7e8a23b450f0461388e8055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadc964de2f62103fc5de709b5bde29603"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IPC.html#gadc964de2f62103fc5de709b5bde29603">MX_IPC_PI_BUFSZ</a>&#160;&#160;&#160;128</td></tr>
-<tr class="memdesc:gadc964de2f62103fc5de709b5bde29603"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process interface buffer size.  <a href="group__IPC.html#gadc964de2f62103fc5de709b5bde29603">More...</a><br /></td></tr>
-<tr class="separator:gadc964de2f62103fc5de709b5bde29603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gad572d6eb65fb310bbe7c7d8bdffe5d50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__IPC.html#gad572d6eb65fb310bbe7c7d8bdffe5d50">mx::ipc::command_response</a> (const char *cmd, char *resp, size_t respsz)</td></tr>
@@ -144,43 +134,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:gad8d9d346f607afac51c31260af068244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a command (with parameters) passed in using fork/exec.  <a href="group__IPC.html#gad8d9d346f607afac51c31260af068244">More...</a><br /></td></tr>
 <tr class="separator:gad8d9d346f607afac51c31260af068244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga3b6eb66cf7e8a23b450f0461388e8055"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3b6eb66cf7e8a23b450f0461388e8055">&#9670;&nbsp;</a></span>MX_IPC_KEYLEN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MX_IPC_KEYLEN&#160;&#160;&#160;1024</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The maximum length of the IPC key string. </p>
-
-<p class="definition">Definition at line <a class="el" href="ipc_8hpp_source.html#l00044">44</a> of file <a class="el" href="ipc_8hpp_source.html">ipc.hpp</a>.</p>
-
-</div>
-</div>
-<a id="gadc964de2f62103fc5de709b5bde29603"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadc964de2f62103fc5de709b5bde29603">&#9670;&nbsp;</a></span>MX_IPC_PI_BUFSZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MX_IPC_PI_BUFSZ&#160;&#160;&#160;128</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The process interface buffer size. </p>
-
-<p class="definition">Definition at line <a class="el" href="ipc_8hpp_source.html#l00047">47</a> of file <a class="el" href="ipc_8hpp_source.html">ipc.hpp</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gad572d6eb65fb310bbe7c7d8bdffe5d50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad572d6eb65fb310bbe7c7d8bdffe5d50">&#9670;&nbsp;</a></span>command_response()</h2>
@@ -233,8 +186,6 @@ Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="processInterface_8cpp_source.html#l00043">43</a> of file <a class="el" href="processInterface_8cpp_source.html">processInterface.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="ipc_8hpp_source.html#l00047">MX_IPC_PI_BUFSZ</a>.</p>
 
 </div>
 </div>
@@ -295,8 +246,6 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="processInterface_8cpp_source.html#l00071">71</a> of file <a class="el" href="processInterface_8cpp_source.html">processInterface.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00238">MXE_PROCERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="mxError_8hpp_source.html#l00096">mxPError</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="gitRepo_8cpp_source.html#l00176">mx::sys::gitRepo::getGitFileState()</a>, <a class="el" href="gitRepo_8cpp_source.html#l00109">mx::sys::gitRepo::getGitHash()</a>, <a class="el" href="gitRepo_8cpp_source.html#l00149">mx::sys::gitRepo::getGitModified()</a>, and <a class="el" href="gitRepo_8cpp_source.html#l00069">mx::sys::gitRepo::getGitName()</a>.</p>
 
 </div>
@@ -306,7 +255,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

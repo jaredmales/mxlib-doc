@@ -1,5 +1,6 @@
 var group__image__reg =
 [
+    [ "imagePeakInterp", "structmx_1_1improc_1_1imagePeakInterp.html", null ],
     [ "imageXCorrDiscrete", "classmx_1_1improc_1_1imageXCorrDiscrete.html", [
       [ "ccImT", "classmx_1_1improc_1_1imageXCorrDiscrete.html#a97f771e3d5bdfe1c41639ff8a3cec83b", null ],
       [ "Scalar", "classmx_1_1improc_1_1imageXCorrDiscrete.html#a0ed7bfe34b50acd3fa186ec5dbeb261a", null ],
@@ -34,14 +35,17 @@ var group__image__reg =
       [ "realArrayT", "classmx_1_1improc_1_1imageXCorrFFT.html#a040bbb9e1c2f50fd9ee1af7e2aa500be", null ],
       [ "realT", "classmx_1_1improc_1_1imageXCorrFFT.html#a902784fefe7b6b6476619d999e0ed46b", null ],
       [ "Scalar", "classmx_1_1improc_1_1imageXCorrFFT.html#a6b9050131ee6452a269b67a698565c55", null ],
-      [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html#ae3e570c1afc1ef37eb25ef4949062667", null ],
+      [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html#a13b38e0f269008c4f6e20cc7954f4c23", null ],
       [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html#a75b98aad66425f4b344eaaedb04d35d0", null ],
       [ "ccIm", "classmx_1_1improc_1_1imageXCorrFFT.html#a24ed958319eee6054dd03b623a130425", null ],
+      [ "findPeak", "classmx_1_1improc_1_1imageXCorrFFT.html#a8ae7a94599f3a114b36e2a5b1dc18779", null ],
       [ "magIm", "classmx_1_1improc_1_1imageXCorrFFT.html#a7fc5ed50393fc96ac7ead8b774beec26", null ],
       [ "maskIm", "classmx_1_1improc_1_1imageXCorrFFT.html#ae4e81018a91ed44e33580afbc7fb245e", null ],
       [ "maskIm", "classmx_1_1improc_1_1imageXCorrFFT.html#aa7a2ef17dba9caf46aac16a9dce6b657", null ],
       [ "maxLag", "classmx_1_1improc_1_1imageXCorrFFT.html#a4bed6148c1848a28ebe6eb086b74baca", null ],
       [ "maxLag", "classmx_1_1improc_1_1imageXCorrFFT.html#a5ddd187fe9ad0d8f635ea8175304a5ee", null ],
+      [ "normalize", "classmx_1_1improc_1_1imageXCorrFFT.html#a0d06b64a900b971f3aeca30b8a6ee484", null ],
+      [ "normalize", "classmx_1_1improc_1_1imageXCorrFFT.html#a496fadff7d4b00523f31e8dfa6f07a2e", null ],
       [ "normIm", "classmx_1_1improc_1_1imageXCorrFFT.html#ad869061214f43ede26547eb442557835", null ],
       [ "operator()", "classmx_1_1improc_1_1imageXCorrFFT.html#a39909aed586d39feaf010d359cc19979", null ],
       [ "operator()", "classmx_1_1improc_1_1imageXCorrFFT.html#aa37285ef49bff106d3e7446d6962cf9e", null ],
@@ -62,6 +66,8 @@ var group__image__reg =
       [ "m_maxLag", "classmx_1_1improc_1_1imageXCorrFFT.html#a179923f88756d97d90f55c162a3b2709", null ],
       [ "m_normIm", "classmx_1_1improc_1_1imageXCorrFFT.html#a139ef19cc8f6552a74f462dc83b7741b", null ],
       [ "m_refIm", "classmx_1_1improc_1_1imageXCorrFFT.html#adbd68a381330987df1aa5a39fec563e3", null ],
+      [ "m_refX0", "classmx_1_1improc_1_1imageXCorrFFT.html#aa51e65de4040b00a019ea42f35a0263a", null ],
+      [ "m_refY0", "classmx_1_1improc_1_1imageXCorrFFT.html#a6b984132f3928644cff78b025830853a", null ],
       [ "m_tol", "classmx_1_1improc_1_1imageXCorrFFT.html#abab78a6937089acaae4ea4c0942dfa00", null ]
     ] ],
     [ "imCenterCircleSym", "structmx_1_1improc_1_1imCenterCircleSym.html", [
@@ -82,5 +88,23 @@ var group__image__reg =
       [ "minRad", "structmx_1_1improc_1_1imCenterCircleSym.html#a02174722134c6dc5e6bb17c044fc66c2", null ],
       [ "smGrid", "structmx_1_1improc_1_1imCenterCircleSym.html#a57ebab2afab6c3bb119c5d2a402016c0", null ],
       [ "smWidth", "structmx_1_1improc_1_1imCenterCircleSym.html#ab7e023386011700a537a220f39f779f2", null ]
+    ] ],
+    [ "imCenterRadon", "structmx_1_1improc_1_1imCenterRadon.html", [
+      [ "center", "structmx_1_1improc_1_1imCenterRadon.html#a257a2b0f28e05fe6366ac89a10bd907f", null ],
+      [ "dumpResults", "structmx_1_1improc_1_1imCenterRadon.html#a297cbcb6b7b03bd642fe30b883f019cf", null ],
+      [ "dumpResults", "structmx_1_1improc_1_1imCenterRadon.html#a4627b032973aba70ab1eee2d50dd3d4d", null ],
+      [ "fitGrid", "structmx_1_1improc_1_1imCenterRadon.html#a4f45862125cc5aa94316ad3ce40c1730", null ],
+      [ "m_angTolPix", "structmx_1_1improc_1_1imCenterRadon.html#ad78b1065fd18498c36221b9cf5c34463", null ],
+      [ "m_dPix", "structmx_1_1improc_1_1imCenterRadon.html#a8d12138915f708ef3af1ffd699d15311", null ],
+      [ "m_dRad", "structmx_1_1improc_1_1imCenterRadon.html#a5789b9d7264f3ec0fb2936fd464db6b5", null ],
+      [ "m_fit", "structmx_1_1improc_1_1imCenterRadon.html#aab4201053f015c87a49ec78003fa9a95", null ],
+      [ "m_grid", "structmx_1_1improc_1_1imCenterRadon.html#adcfc9135020f852d3c40d01aba0ce3a5", null ],
+      [ "m_guessWidth", "structmx_1_1improc_1_1imCenterRadon.html#a5d5828103566cac87221056b3057319f", null ],
+      [ "m_maxPix", "structmx_1_1improc_1_1imCenterRadon.html#adaa8060681215bbac6372e378a8e2880", null ],
+      [ "m_maxRad", "structmx_1_1improc_1_1imCenterRadon.html#a582c940b09e4b5684ebd0a598e43d952", null ],
+      [ "m_minRad", "structmx_1_1improc_1_1imCenterRadon.html#ab649a4aebdfa164f110835137f91a360", null ],
+      [ "m_peakTol", "structmx_1_1improc_1_1imCenterRadon.html#a4b97c49148a75f22afefdf79bdb20ece", null ],
+      [ "m_x0", "structmx_1_1improc_1_1imCenterRadon.html#a46fd360fbccdadb945f97d21f3677d3b", null ],
+      [ "m_y0", "structmx_1_1improc_1_1imCenterRadon.html#addb978cf439e22f9092a85195dc17bf8", null ]
     ] ]
 ];

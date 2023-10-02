@@ -165,7 +165,7 @@ $(document).ready(function(){initNavTree('cahoyAlbedos_8hpp_source.html',''); in
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;cahoyAlbedos::fileName&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;invalid separation (params.sep)&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         mxError(<span class="stringliteral">&quot;cahoyAlbedos::fileName&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;invalid separation (params.sep)&quot;</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;         <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
@@ -255,7 +255,7 @@ $(document).ready(function(){initNavTree('cahoyAlbedos_8hpp_source.html',''); in
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            rawSpect.<a class="code" href="structmx_1_1astro_1_1astroSpectrum.html#a36f67962750fef1c130e24b85006e34e">setParameters</a>({_sep[i], metal, _phase[j]});            </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span>( rawSpect.<a class="code" href="structmx_1_1astro_1_1astroSpectrum.html#a32ba8f3aa6c95326b56299b5e606668d">setSpectrum</a>(lambda) &lt; 0)</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;               <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;cahoGrid::loadGrid&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Error reading albedo spectrum.&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;               mxError(<span class="stringliteral">&quot;cahoGrid::loadGrid&quot;</span>, MXE_FILERERR, <span class="stringliteral">&quot;Error reading albedo spectrum.&quot;</span>);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;               <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            </div>
@@ -289,7 +289,7 @@ $(document).ready(function(){initNavTree('cahoyAlbedos_8hpp_source.html',''); in
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keywordflow">if</span>(lambda.size() != this-&gt;_spectrum.size())</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;cahoyGrid::setSpectrum&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;wavelength grid (lambda) is not the same size as used for openGrid, or loadGrid not yet called.&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;         mxError(<span class="stringliteral">&quot;cahoyGrid::setSpectrum&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;wavelength grid (lambda) is not the same size as used for openGrid, or loadGrid not yet called.&quot;</span>);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;         <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      </div>
@@ -356,9 +356,6 @@ $(document).ready(function(){initNavTree('cahoyAlbedos_8hpp_source.html',''); in
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//mx_astro_cahoyAlbedos_hpp</span></div>
 <div class="ttc" id="agroup__asciiutils_html_ga9fe661b3cbe3a0d32041f4a6bfc59c5d"><div class="ttname"><a href="group__asciiutils.html#ga9fe661b3cbe3a0d32041f4a6bfc59c5d">mx::ioutils::readColumns</a></div><div class="ttdeci">int readColumns(const std::string &amp;fname, arrTs &amp;... arrays)</div><div class="ttdoc">Read in columns from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="readColumns_8hpp_source.html#l00139">readColumns.hpp:139</a></div></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga1cb55d92155f8f1425930d8d2db08ca1"><div class="ttname"><a href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a></div><div class="ttdeci">#define MXE_FILERERR</div><div class="ttdoc">An error occurred while reading from a file.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00214">mxError.hpp:214</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga38fc03054354c04ac079aca53399fc5a"><div class="ttname"><a href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a></div><div class="ttdeci">#define MXE_INVALIDARG</div><div class="ttdoc">An argument was invalid.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00116">mxError.hpp:116</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1astroSpectrum_html"><div class="ttname"><a href="structmx_1_1astro_1_1astroSpectrum.html">mx::astro::astroSpectrum</a></div><div class="ttdoc">Class to manage an astronomical spectrum.</div><div class="ttdef"><b>Definition:</b> <a href="astroSpectrum_8hpp_source.html#l00279">astroSpectrum.hpp:280</a></div></div>
 <div class="ttc" id="astructmx_1_1astro_1_1astroSpectrum_html_a32ba8f3aa6c95326b56299b5e606668d"><div class="ttname"><a href="structmx_1_1astro_1_1astroSpectrum.html#a32ba8f3aa6c95326b56299b5e606668d">mx::astro::astroSpectrum::setSpectrum</a></div><div class="ttdeci">int setSpectrum(gridT &amp;lambda)</div><div class="ttdoc">Load the spectrum and interpolate it onto a wavelength scale.</div><div class="ttdef"><b>Definition:</b> <a href="astroSpectrum_8hpp_source.html#l00337">astroSpectrum.hpp:337</a></div></div>
@@ -382,7 +379,7 @@ $(document).ready(function(){initNavTree('cahoyAlbedos_8hpp_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0fc3206047eab508bd310c9d22a11fd1.html">astro</a></li><li class="navelem"><a class="el" href="cahoyAlbedos_8hpp.html">cahoyAlbedos.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

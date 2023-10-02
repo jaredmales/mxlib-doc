@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('randomT__test_8cpp_source.html',''); i
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  * </span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  * \anchor tests_math_randomT_basic</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="randomT__test_8cpp.html#adb0077ef6ff74c1881f396815cc4bea1">   18</a></span>&#160;<a class="code" href="randomT__test_8cpp.html#adb0077ef6ff74c1881f396815cc4bea1">SCENARIO</a>( <span class="stringliteral">&quot;testing randomT basics with std&quot;</span>, <span class="stringliteral">&quot;[math::randomT]&quot;</span> ) </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="randomT__test_8cpp.html#a86b271ca5afa9f5b1b870c19ec59bdfe">   18</a></span>&#160;<a class="code" href="randomT__test_8cpp.html#a86b271ca5afa9f5b1b870c19ec59bdfe">SCENARIO</a>( <span class="stringliteral">&quot;Verify compilation and basic operation of randomT with std::distributions&quot;</span>, <span class="stringliteral">&quot;[math::randomT]&quot;</span> ) </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   GIVEN(<span class="stringliteral">&quot;a uniform distribution is desired&quot;</span>)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   {</div>
@@ -201,9 +201,9 @@ $(document).ready(function(){initNavTree('randomT__test_8cpp_source.html',''); i
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">  * </span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">  * \anchor tests_math_randomT_basic_laplace</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="randomT__test_8cpp.html#aafb57754b3cddb37afc96b445864f512">  106</a></span>&#160;<a class="code" href="randomT__test_8cpp.html#adb0077ef6ff74c1881f396815cc4bea1">SCENARIO</a>( <span class="stringliteral">&quot;testing randomT with lapace basics&quot;</span>, <span class="stringliteral">&quot;[math::laplace_distribution]&quot;</span> ) </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="randomT__test_8cpp.html#a4383eab7c2bbc8da4864fe11867d9499">  106</a></span>&#160;<a class="code" href="randomT__test_8cpp.html#a86b271ca5afa9f5b1b870c19ec59bdfe">SCENARIO</a>( <span class="stringliteral">&quot;Verify compilation and basic operation of randomT with the Lapace distribution&quot;</span>, <span class="stringliteral">&quot;[math::laplace_distribution]&quot;</span> ) </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   GIVEN(<span class="stringliteral">&quot;a uniform distribution is desired&quot;</span>)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   GIVEN(<span class="stringliteral">&quot;a laplace distribution is desired&quot;</span>)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      WHEN(<span class="stringliteral">&quot;two double random numbers from same generator requested&quot;</span>)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      {</div>
@@ -244,14 +244,14 @@ $(document).ready(function(){initNavTree('randomT__test_8cpp_source.html',''); i
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 <div class="ttc" id="aclassmx_1_1math_1_1randomT_html"><div class="ttname"><a href="classmx_1_1math_1_1randomT.html">mx::math::randomT</a></div><div class="ttdoc">A random number type, which functions like any other arithmetic type.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00060">randomT.hpp:61</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1randomT_html_a7da7340c64948a3ba1136f5ffcf46bf0"><div class="ttname"><a href="classmx_1_1math_1_1randomT.html#a7da7340c64948a3ba1136f5ffcf46bf0">mx::math::randomT::seed</a></div><div class="ttdeci">void seed(typename ranengT::result_type seedval)</div><div class="ttdoc">Set the seed of the random engine.</div><div class="ttdef"><b>Definition:</b> <a href="randomT_8hpp_source.html#l00096">randomT.hpp:96</a></div></div>
-<div class="ttc" id="arandomT__test_8cpp_html_adb0077ef6ff74c1881f396815cc4bea1"><div class="ttname"><a href="randomT__test_8cpp.html#adb0077ef6ff74c1881f396815cc4bea1">SCENARIO</a></div><div class="ttdeci">SCENARIO(&quot;testing randomT basics with std&quot;, &quot;[math::randomT]&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="randomT__test_8cpp_source.html#l00018">randomT_test.cpp:18</a></div></div>
+<div class="ttc" id="arandomT__test_8cpp_html_a86b271ca5afa9f5b1b870c19ec59bdfe"><div class="ttname"><a href="randomT__test_8cpp.html#a86b271ca5afa9f5b1b870c19ec59bdfe">SCENARIO</a></div><div class="ttdeci">SCENARIO(&quot;Verify compilation and basic operation of randomT with std::distributions&quot;, &quot;[math::randomT]&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="randomT__test_8cpp_source.html#l00018">randomT_test.cpp:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="dir_dcba6dfd410a966f3c2ecded9b1039f6.html">include</a></li><li class="navelem"><a class="el" href="dir_649687cf5a84a2e9a6bc038fbfe0adde.html">math</a></li><li class="navelem"><a class="el" href="randomT__test_8cpp.html">randomT_test.cpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

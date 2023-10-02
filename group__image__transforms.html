@@ -229,7 +229,7 @@ Typedefs</h2></td></tr>
 
 <p>Typedef for <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html" title="Transformation by cubic convolution interpolation.">cubicConvolTransform</a> with double precision. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00168">168</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00178">178</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +247,7 @@ Typedefs</h2></td></tr>
 
 <p>Typedef for <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html" title="Transformation by cubic convolution interpolation.">cubicConvolTransform</a> with single precision. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00163">163</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00173">173</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,9 +282,9 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
 
 <p>Down-sample an image, reducing its size while conserving the total flux. </p>
 <p>If the old size is an integer multiple of the new size, this is just a re-bin. If not an integer multiple, the image is interpolated after performing the closest re-bin, and then re-normalized to conserve flux.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd>Allow selection of interpolator, providing a default version. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000051">Todo:</a></b></dt><dd>Allow selection of interpolator, providing a default version. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00841">841</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00851">851</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pywfsSlopeReconstructor_8hpp_source.html#l00361">mx::AO::sim::pywfsSlopeReconstructor&lt; _floatT &gt;::calcMeasurement()</a>, and <a class="el" href="ccdDetector_8hpp_source.html#l00303">mx::AO::sim::ccdDetector&lt; _realT &gt;::exposeImage()</a>.</p>
 
@@ -337,7 +337,7 @@ template&lt;typename arrOutT , typename arrInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00642">642</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00652">652</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +385,7 @@ template&lt;typename arrOutT , typename arrInT , typename transformT &gt; </div>
 <div class="line"><span class="comment">//add image to im1</span></div>
 <div class="line">im2.resize(1024,1024);</div>
 <div class="line"><a class="code" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">imageMagnify</a>(im2,im1, cubicConvolTransform&lt;double&gt;());</div>
-<div class="ttc" id="agroup__image__transforms_html_ga3e35a0db70c18656ab9f54558e8bd694"><div class="ttname"><a href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">mx::improc::imageMagnify</a></div><div class="ttdeci">void imageMagnify(arrOutT &amp;transim, const arrInT &amp;im, transformT trans)</div><div class="ttdoc">Magnify an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00551">imageTransforms.hpp:551</a></div></div>
+<div class="ttc" id="agroup__image__transforms_html_ga3e35a0db70c18656ab9f54558e8bd694"><div class="ttname"><a href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">mx::improc::imageMagnify</a></div><div class="ttdeci">void imageMagnify(arrOutT &amp;transim, const arrInT &amp;im, transformT trans)</div><div class="ttdoc">Magnify an image.</div><div class="ttdef"><b>Definition:</b> <a href="imageTransforms_8hpp_source.html#l00561">imageTransforms.hpp:561</a></div></div>
 </div><!-- fragment --><p> In this exmple, the image in im1 will be magnified by <code>1023.0/511.0 = 2.002x</code> and placed in im2.</p>
 <p>This transform function does not handle edges. If treatment of edges is desired, you must pad the input image using the desired strategy before calling this function. Note that the padded-size of the input image will affect the magnification factor.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -405,9 +405,9 @@ template&lt;typename arrOutT , typename arrInT , typename transformT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00551">551</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00561">561</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="imageUtils_8hpp_source.html#l00200">mx::improc::imageMaxInterp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageUtils_8hpp_source.html#l00202">mx::improc::imageMaxInterp()</a>.</p>
 
 </div>
 </div>
@@ -449,9 +449,9 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00720">720</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00730">730</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00680">mx::improc::imageRebinSum()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00690">mx::improc::imageRebinSum()</a>.</p>
 
 </div>
 </div>
@@ -522,9 +522,9 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00733">733</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00743">743</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00680">mx::improc::imageRebinSum()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00690">mx::improc::imageRebinSum()</a>.</p>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00748">748</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00758">758</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -632,7 +632,7 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00787">787</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00797">797</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
@@ -683,7 +683,7 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00653">653</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00663">663</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 </div>
 </div>
@@ -754,9 +754,9 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00680">680</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00690">690</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="imageTransforms_8hpp_source.html#l00720">mx::improc::imageRebinMean()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageTransforms_8hpp_source.html#l00730">mx::improc::imageRebinMean()</a>.</p>
 
 </div>
 </div>
@@ -821,9 +821,9 @@ template&lt;typename transformT , typename arrT , typename arrT2 , typename floa
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00185">185</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00195">195</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00597">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::derotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00757">mx::improc::rotateMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00608">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::derotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00774">mx::improc::rotateMask()</a>.</p>
 
 </div>
 </div>
@@ -899,9 +899,9 @@ template&lt;typename arrOutT , typename arrInT , typename floatT1 , typename flo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00443">443</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00453">453</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00286">mx::improc::imageShiftWP()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00296">mx::improc::imageShiftWP()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="imageTransforms__test_8cpp_source.html#l00025">SCENARIO()</a>, <a class="el" href="turbLayer_8hpp_source.html#l00188">mx::AO::sim::turbLayer&lt; _realT &gt;::shift()</a>, and <a class="el" href="turbLayer_8hpp_source.html#l00232">mx::AO::sim::turbLayer&lt; _realT &gt;::shiftRandom()</a>.</p>
 
@@ -974,9 +974,9 @@ template&lt;typename outputArrT , typename inputArrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00286">286</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00296">296</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="imageTransforms_8hpp_source.html#l00443">mx::improc::imageShift()</a>, <a class="el" href="imageXCorrFFT_8hpp_source.html#l00322">mx::improc::imageXCorrFFT&lt; _ccImT &gt;::refIm()</a>, <a class="el" href="turbLayer_8hpp_source.html#l00188">mx::AO::sim::turbLayer&lt; _realT &gt;::shift()</a>, and <a class="el" href="turbLayer_8hpp_source.html#l00232">mx::AO::sim::turbLayer&lt; _realT &gt;::shiftRandom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageTransforms_8hpp_source.html#l00453">mx::improc::imageShift()</a>, <a class="el" href="imageXCorrFFT_8hpp_source.html#l00387">mx::improc::imageXCorrFFT&lt; _ccImT &gt;::refIm()</a>, <a class="el" href="turbLayer_8hpp_source.html#l00188">mx::AO::sim::turbLayer&lt; _realT &gt;::shift()</a>, and <a class="el" href="turbLayer_8hpp_source.html#l00232">mx::AO::sim::turbLayer&lt; _realT &gt;::shiftRandom()</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1048,7 @@ template&lt;typename outputArrT , typename inputArrT , typename scaleArrT &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00379">379</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00389">389</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1057,7 @@ template&lt;typename outputArrT , typename inputArrT , typename scaleArrT &gt; <
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -68,6 +68,7 @@ var structmx_1_1improc_1_1HCIobservation =
     [ "m_preProcess_beforeCoadd", "structmx_1_1improc_1_1HCIobservation.html#aa0f752fb2c89899a628c54e957ec156c", null ],
     [ "m_preProcess_gaussUSM_fwhm", "structmx_1_1improc_1_1HCIobservation.html#acfd56525f2446a952c37193c9976cb04", null ],
     [ "m_preProcess_mask", "structmx_1_1improc_1_1HCIobservation.html#a1b14c36a493b7fe0c08c4817a86f6aa4", null ],
+    [ "m_preProcess_medianUSM_fwhm", "structmx_1_1improc_1_1HCIobservation.html#a3284e6d093f5c0f60606177ac521ff43", null ],
     [ "m_preProcess_only", "structmx_1_1improc_1_1HCIobservation.html#a0ae97ef09bff56c99c9c277eff1581c9", null ],
     [ "m_preProcess_outputPrefix", "structmx_1_1improc_1_1HCIobservation.html#a4280e70bb553a5bba6c2617df594bcff", null ],
     [ "m_preProcess_subradprof", "structmx_1_1improc_1_1HCIobservation.html#a906b977a9a3f90c406131a5d278ddd1c", null ],

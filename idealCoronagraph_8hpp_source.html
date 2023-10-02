@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('idealCoronagraph_8hpp_source.html','')
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;   <span class="keywordflow">if</span>(_wfSz &lt;= 0)</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;   {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;idealCoronagraph&quot;</span>, <a class="code" href="group__mxe__errors.html#ga9b57b26b8d9db764202fbe5e6ea981bb">MXE_PARAMNOTSET</a>, <span class="stringliteral">&quot;Must set wavefront size (wfSz) before setting up coronagraph.&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      mxError(<span class="stringliteral">&quot;idealCoronagraph&quot;</span>, MXE_PARAMNOTSET, <span class="stringliteral">&quot;Must set wavefront size (wfSz) before setting up coronagraph.&quot;</span>);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;   }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
@@ -306,7 +306,7 @@ $(document).ready(function(){initNavTree('idealCoronagraph_8hpp_source.html','')
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;   <span class="keywordflow">if</span>( _fileDir == <span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;   {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;idealCoronagraph&quot;</span>, <a class="code" href="group__mxe__errors.html#ga9b57b26b8d9db764202fbe5e6ea981bb">MXE_PARAMNOTSET</a>, <span class="stringliteral">&quot;file directory (fileDir) not set.&quot;</span>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      mxError(<span class="stringliteral">&quot;idealCoronagraph&quot;</span>, MXE_PARAMNOTSET, <span class="stringliteral">&quot;file directory (fileDir) not set.&quot;</span>);</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;   }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
@@ -321,7 +321,7 @@ $(document).ready(function(){initNavTree('idealCoronagraph_8hpp_source.html','')
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;   <span class="keywordflow">if</span>( pupilPlane.rows() != _realPupil.rows() || pupilPlane.cols() != _realPupil.cols())</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;   {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;idealCoronagraph&quot;</span>, <a class="code" href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a>, <span class="stringliteral">&quot;pupilPlane wavefront size does not match realPupil&quot;</span>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      mxError(<span class="stringliteral">&quot;idealCoronagraph&quot;</span>, MXE_SIZEERR, <span class="stringliteral">&quot;pupilPlane wavefront size does not match realPupil&quot;</span>);</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;   }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
@@ -383,14 +383,11 @@ $(document).ready(function(){initNavTree('idealCoronagraph_8hpp_source.html','')
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;} <span class="comment">//namespace mx</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__idealCoronagraph_hpp__</span></div>
-<div class="ttc" id="aclassmx_1_1fits_1_1fitsFile_html"><div class="ttname"><a href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a></div><div class="ttdoc">Class to manage interactions with a FITS file.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00052">fitsFile.hpp:53</a></div></div>
-<div class="ttc" id="aclassmx_1_1fits_1_1fitsFile_html_afebe4be8ad09af722f3f77f755ddfc67"><div class="ttname"><a href="classmx_1_1fits_1_1fitsFile.html#afebe4be8ad09af722f3f77f755ddfc67">mx::fits::fitsFile::read</a></div><div class="ttdeci">int read(dataT *data)</div><div class="ttdoc">Read the contents of the FITS file into an array.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00721">fitsFile.hpp:721</a></div></div>
+<div class="ttc" id="aclassmx_1_1fits_1_1fitsFile_html"><div class="ttname"><a href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a></div><div class="ttdoc">Class to manage interactions with a FITS file.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00053">fitsFile.hpp:54</a></div></div>
+<div class="ttc" id="aclassmx_1_1fits_1_1fitsFile_html_afebe4be8ad09af722f3f77f755ddfc67"><div class="ttname"><a href="classmx_1_1fits_1_1fitsFile.html#afebe4be8ad09af722f3f77f755ddfc67">mx::fits::fitsFile::read</a></div><div class="ttdeci">int read(dataT *data)</div><div class="ttdoc">Read the contents of the FITS file into an array.</div><div class="ttdef"><b>Definition:</b> <a href="fitsFile_8hpp_source.html#l00828">fitsFile.hpp:828</a></div></div>
 <div class="ttc" id="aclassmx_1_1wfp_1_1fraunhoferPropagator_html"><div class="ttname"><a href="classmx_1_1wfp_1_1fraunhoferPropagator.html">mx::wfp::fraunhoferPropagator&lt; complexFieldT &gt;</a></div></div>
 <div class="ttc" id="afraunhoferPropagator_8hpp_html"><div class="ttname"><a href="fraunhoferPropagator_8hpp.html">fraunhoferPropagator.hpp</a></div><div class="ttdoc">Declares and defines a class for Fraunhofer propagation of optical wavefronts.</div></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
 <div class="ttc" id="agroup__image__padding_html_gab9baabf74f9be8972dd5742468e9950e"><div class="ttname"><a href="group__image__padding.html#gab9baabf74f9be8972dd5742468e9950e">mx::improc::padImage</a></div><div class="ttdeci">int padImage(imOutT &amp;imOut, imInT &amp;imIn, unsigned int padSz, typename imOutT::Scalar value)</div><div class="ttdoc">Pad an image with a constant value.</div><div class="ttdef"><b>Definition:</b> <a href="imagePads_8hpp_source.html#l00057">imagePads.hpp:57</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga91bc075cebce532574429af628b3c3b0"><div class="ttname"><a href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a></div><div class="ttdeci">#define MXE_SIZEERR</div><div class="ttdoc">A size was invalid or calculated incorrectly.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00164">mxError.hpp:164</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga9b57b26b8d9db764202fbe5e6ea981bb"><div class="ttname"><a href="group__mxe__errors.html#ga9b57b26b8d9db764202fbe5e6ea981bb">MXE_PARAMNOTSET</a></div><div class="ttdeci">#define MXE_PARAMNOTSET</div><div class="ttdoc">A parameter was not set.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00140">mxError.hpp:140</a></div></div>
 <div class="ttc" id="aimagingUtils_8hpp_html"><div class="ttname"><a href="imagingUtils_8hpp.html">imagingUtils.hpp</a></div><div class="ttdoc">Utilities for modeling image formation.</div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 <div class="ttc" id="astructmx_1_1wfp_1_1idealCoronagraph_html"><div class="ttname"><a href="structmx_1_1wfp_1_1idealCoronagraph.html">mx::wfp::idealCoronagraph</a></div><div class="ttdoc">The Ideal Coronagraph.</div><div class="ttdef"><b>Definition:</b> <a href="idealCoronagraph_8hpp_source.html#l00055">idealCoronagraph.hpp:56</a></div></div>
@@ -414,7 +411,7 @@ $(document).ready(function(){initNavTree('idealCoronagraph_8hpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_798a60fe574b319ce1e0453987adc495.html">wfp</a></li><li class="navelem"><a class="el" href="idealCoronagraph_8hpp.html">idealCoronagraph.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('linearPredictor_8hpp_source.html','');
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      realT tmpCond = condition;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      _setCondition = condition;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <a class="code" href="group__eigen__lapack.html#gaa4510e1a9565b324625079ffd516ee21">math::eigenPseudoInverse</a>(PInv, tmpCond, _nRejected,  Rmat, condition);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <a class="code" href="group__eigen__lapack.html#gad2286dbce09f336de82ef781364866e8">math::eigenPseudoInverse</a>(PInv, tmpCond, _nRejected,  Rmat, condition);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      _actCondition = tmpCond;</div>
@@ -286,7 +286,7 @@ $(document).ready(function(){initNavTree('linearPredictor_8hpp_source.html','');
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;} <span class="comment">//namespace mx</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//linearPredictor_hpp</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="ttc" id="agroup__eigen__lapack_html_gaa4510e1a9565b324625079ffd516ee21"><div class="ttname"><a href="group__eigen__lapack.html#gaa4510e1a9565b324625079ffd516ee21">mx::math::eigenPseudoInverse</a></div><div class="ttdeci">int eigenPseudoInverse(Eigen::Array&lt; dataT, -1, -1 &gt; &amp;PInv, dataT &amp;condition, int &amp;nRejected, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;U, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;S, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;VT, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;A, dataT &amp;maxCondition, int interact=MX_PINV_NO_INTERACT)</div><div class="ttdoc">Calculate the pseudo-inverse of a patrix using the SVD.</div><div class="ttdef"><b>Definition:</b> <a href="eigenLapack_8hpp_source.html#l00411">eigenLapack.hpp:411</a></div></div>
+<div class="ttc" id="agroup__eigen__lapack_html_gad2286dbce09f336de82ef781364866e8"><div class="ttname"><a href="group__eigen__lapack.html#gad2286dbce09f336de82ef781364866e8">mx::math::eigenPseudoInverse</a></div><div class="ttdeci">int eigenPseudoInverse(Eigen::Array&lt; dataT, -1, -1 &gt; &amp;PInv, dataT &amp;condition, int &amp;nRejected, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;U, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;S, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;VT, Eigen::Array&lt; dataT, -1, -1 &gt; &amp;A, dataT &amp;maxCondition, dataT &amp;alpha=0, int interact=MX_PINV_NO_INTERACT)</div><div class="ttdoc">Calculate the pseudo-inverse of a patrix using the SVD.</div><div class="ttdef"><b>Definition:</b> <a href="eigenLapack_8hpp_source.html#l00439">eigenLapack.hpp:439</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 <div class="ttc" id="astructmx_1_1sigproc_1_1linearPredictor_html"><div class="ttname"><a href="structmx_1_1sigproc_1_1linearPredictor.html">mx::sigproc::linearPredictor</a></div><div class="ttdoc">A class to support linear prediction.</div><div class="ttdef"><b>Definition:</b> <a href="linearPredictor_8hpp_source.html#l00051">linearPredictor.hpp:52</a></div></div>
 <div class="ttc" id="astructmx_1_1sigproc_1_1linearPredictor_html_a225e3398fdfc44857abfae01688274e8"><div class="ttname"><a href="structmx_1_1sigproc_1_1linearPredictor.html#a225e3398fdfc44857abfae01688274e8">mx::sigproc::linearPredictor::calcCoefficients</a></div><div class="ttdeci">int calcCoefficients(std::vector&lt; realT &gt; &amp;ac, size_t Nc, realT condition=0, size_t extrap=0)</div><div class="ttdoc">Calculate the LP coefficients given an autocorrelation.</div><div class="ttdef"><b>Definition:</b> <a href="linearPredictor_8hpp_source.html#l00065">linearPredictor.hpp:65</a></div></div>
@@ -296,7 +296,7 @@ $(document).ready(function(){initNavTree('linearPredictor_8hpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="linearPredictor_8hpp.html">linearPredictor.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

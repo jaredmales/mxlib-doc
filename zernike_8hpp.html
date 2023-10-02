@@ -104,17 +104,9 @@ $(document).ready(function(){initNavTree('zernike_8hpp.html',''); initResizable(
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>Working with the Zernike polynomials. </p>
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>)</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000070">Todo:</a></b></dt><dd>the basic zernike polys should be in math::func.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000074">Todo:</a></b></dt><dd>the basic zernike polys should be in math::func.</dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="bessel_8hpp_source.html">../math/func/bessel.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="jinc_8hpp_source.html">../math/func/jinc.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="factorial_8hpp_source.html">../math/func/factorial.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sign_8hpp_source.html">../math/func/sign.hpp</a>&quot;</code><br />
-<code>#include &quot;../math/constants.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../mxError.hpp</a>&quot;</code><br />
 </div>
 <p><a href="zernike_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -130,6 +122,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gaaf5fdab614542171202d1d8226a9bb6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#gaaf5fdab614542171202d1d8226a9bb6e">mx::sigproc::noll_nm</a> (int &amp;n, int &amp;m, int j)</td></tr>
 <tr class="memdesc:gaaf5fdab614542171202d1d8226a9bb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Zernike coefficients n,m corrresponding the Noll index j.  <a href="group__zernike__basis.html#gaaf5fdab614542171202d1d8226a9bb6e">More...</a><br /></td></tr>
 <tr class="separator:gaaf5fdab614542171202d1d8226a9bb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1415fc5af7ae252540fcf5d30e14c2f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#ga1415fc5af7ae252540fcf5d30e14c2f8">mx::sigproc::noll_j</a> (unsigned n, int m)</td></tr>
+<tr class="memdesc:ga1415fc5af7ae252540fcf5d30e14c2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Noll index j corresponding to Zernike coefficients n,m.  <a href="group__zernike__basis.html#ga1415fc5af7ae252540fcf5d30e14c2f8">More...</a><br /></td></tr>
+<tr class="separator:ga1415fc5af7ae252540fcf5d30e14c2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6524765adacf326f0ffefd4e69626ad4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#ga6524765adacf326f0ffefd4e69626ad4">mx::sigproc::nZernRadOrd</a> (unsigned n)</td></tr>
+<tr class="memdesc:ga6524765adacf326f0ffefd4e69626ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of Zernikes up to and including a radial order.  <a href="group__zernike__basis.html#ga6524765adacf326f0ffefd4e69626ad4">More...</a><br /></td></tr>
+<tr class="separator:ga6524765adacf326f0ffefd4e69626ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae64ae7b6ea0261fde0ad6d6b3d1599d6"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:gae64ae7b6ea0261fde0ad6d6b3d1599d6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#gae64ae7b6ea0261fde0ad6d6b3d1599d6">mx::sigproc::zernikeRCoeffs</a> (std::vector&lt; realT &gt; &amp;c, int n, int m)</td></tr>
 <tr class="memdesc:gae64ae7b6ea0261fde0ad6d6b3d1599d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the coefficients of a Zernike radial polynomial.  <a href="group__zernike__basis.html#gae64ae7b6ea0261fde0ad6d6b3d1599d6">More...</a><br /></td></tr>
@@ -217,7 +215,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_749a31579df8fa01bae22bb783a391d0.html">sigproc</a></li><li class="navelem"><a class="el" href="zernike_8hpp.html">zernike.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

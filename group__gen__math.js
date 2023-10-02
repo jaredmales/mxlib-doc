@@ -1,6 +1,8 @@
 var group__gen__math =
 [
     [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html", [
+      [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html#ac4edcc3b15a5c39c93f9ae438da61b56", null ],
+      [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html#a07cf1b7173062868fc544308270317bc", null ],
       [ "accum", "classmx_1_1math_1_1histogramUniform.html#a2bb6a0101972ac3f7beb98a82754d22a", null ],
       [ "accum", "classmx_1_1math_1_1histogramUniform.html#a63d21acb3e72b59bd18dbabbf8d6b93e", null ],
       [ "binLeft", "classmx_1_1math_1_1histogramUniform.html#ab864e665f4dcc7295479f916d0618091", null ],
@@ -12,9 +14,9 @@ var group__gen__math =
       [ "reset", "classmx_1_1math_1_1histogramUniform.html#aedec78a99c860df85efd944cf2bbcf82", null ],
       [ "setup", "classmx_1_1math_1_1histogramUniform.html#a45cd5535aae5b533ad5b4a76bcc4ab21", null ],
       [ "_freqs", "classmx_1_1math_1_1histogramUniform.html#ac26989e12917173947d145d5b8974a36", null ],
-      [ "_max", "classmx_1_1math_1_1histogramUniform.html#ad532e561a4a99ae134a9807adae55799", null ],
-      [ "_min", "classmx_1_1math_1_1histogramUniform.html#adb3dd7e506a813c57ab4933efc9f9e26", null ],
-      [ "_width", "classmx_1_1math_1_1histogramUniform.html#a3c1c0efcea25c4e0006539472c815079", null ]
+      [ "m_max", "classmx_1_1math_1_1histogramUniform.html#aab1812792a6541ec917668d8a20a5729", null ],
+      [ "m_min", "classmx_1_1math_1_1histogramUniform.html#a8ab0cdbd16bce9c523a18963e919f277", null ],
+      [ "m_width", "classmx_1_1math_1_1histogramUniform.html#a4ee0bbda990e37542027913ed0ee34d5", null ]
     ] ],
     [ "Constants and units", "group__constants.html", "group__constants" ],
     [ "Geometry and Geodesy", "group__geo.html", "group__geo" ],

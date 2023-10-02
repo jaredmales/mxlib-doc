@@ -1,6 +1,6 @@
 var weibull_8hpp =
 [
-    [ "weibull", "group__functions.html#ga7855e05008832880aa2a4da1df058170", null ],
-    [ "weibull", "group__functions.html#gaa4c8f60b09f4a020426dda2da95429ab", null ],
-    [ "weibull_lambda", "group__functions.html#ga5117fc1d2f42142647ee366d406039d8", null ]
+    [ "weibull", "weibull_8hpp.html#ga0bb1f3f96bdafff3ee0a6b967a98d67f", null ],
+    [ "weibull", "weibull_8hpp.html#gaa4b959eb831a070f7286a41c91bff978", null ],
+    [ "weibull_lambda", "weibull_8hpp.html#ga32afe13c1318e284cfb03aa9439714ee", null ]
 ];

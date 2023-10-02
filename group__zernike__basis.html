@@ -101,6 +101,12 @@ $(document).ready(function(){initNavTree('group__zernike__basis.html',''); initR
 <tr class="memitem:gaaf5fdab614542171202d1d8226a9bb6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#gaaf5fdab614542171202d1d8226a9bb6e">mx::sigproc::noll_nm</a> (int &amp;n, int &amp;m, int j)</td></tr>
 <tr class="memdesc:gaaf5fdab614542171202d1d8226a9bb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Zernike coefficients n,m corrresponding the Noll index j.  <a href="group__zernike__basis.html#gaaf5fdab614542171202d1d8226a9bb6e">More...</a><br /></td></tr>
 <tr class="separator:gaaf5fdab614542171202d1d8226a9bb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1415fc5af7ae252540fcf5d30e14c2f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#ga1415fc5af7ae252540fcf5d30e14c2f8">mx::sigproc::noll_j</a> (unsigned n, int m)</td></tr>
+<tr class="memdesc:ga1415fc5af7ae252540fcf5d30e14c2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Noll index j corresponding to Zernike coefficients n,m.  <a href="group__zernike__basis.html#ga1415fc5af7ae252540fcf5d30e14c2f8">More...</a><br /></td></tr>
+<tr class="separator:ga1415fc5af7ae252540fcf5d30e14c2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6524765adacf326f0ffefd4e69626ad4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#ga6524765adacf326f0ffefd4e69626ad4">mx::sigproc::nZernRadOrd</a> (unsigned n)</td></tr>
+<tr class="memdesc:ga6524765adacf326f0ffefd4e69626ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of Zernikes up to and including a radial order.  <a href="group__zernike__basis.html#ga6524765adacf326f0ffefd4e69626ad4">More...</a><br /></td></tr>
+<tr class="separator:ga6524765adacf326f0ffefd4e69626ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae64ae7b6ea0261fde0ad6d6b3d1599d6"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:gae64ae7b6ea0261fde0ad6d6b3d1599d6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__zernike__basis.html#gae64ae7b6ea0261fde0ad6d6b3d1599d6">mx::sigproc::zernikeRCoeffs</a> (std::vector&lt; realT &gt; &amp;c, int n, int m)</td></tr>
 <tr class="memdesc:gae64ae7b6ea0261fde0ad6d6b3d1599d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the coefficients of a Zernike radial polynomial.  <a href="group__zernike__basis.html#gae64ae7b6ea0261fde0ad6d6b3d1599d6">More...</a><br /></td></tr>
@@ -183,6 +189,51 @@ $(document).ready(function(){initNavTree('group__zernike__basis.html',''); initR
 <tr class="separator:ga534c0e4786e8e990815e54eadca1d9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga1415fc5af7ae252540fcf5d30e14c2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1415fc5af7ae252540fcf5d30e14c2f8">&#9670;&nbsp;</a></span>noll_j()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::sigproc::noll_j </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Noll index j corresponding to Zernike coefficients n,m. </p>
+<p>Calculates the value j for(n,m) following Noll (1976) <a class="el" href="citelist.html#CITEREF_noll_1976">[16]</a> See also: <a href="http://en.wikipedia.org/wiki/Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials</a></p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&gt;=</td><td>0 on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error (n-m odd) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>n the radial index of the Zernike polynomial </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>m the azimuthal index of the Zernnike polynomial. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gaaf5fdab614542171202d1d8226a9bb6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaaf5fdab614542171202d1d8226a9bb6e">&#9670;&nbsp;</a></span>noll_nm()</h2>
 
@@ -225,7 +276,7 @@ $(document).ready(function(){initNavTree('group__zernike__basis.html',''); initR
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000062">Test:</a></b></dt><dd>Scenario: testing noll_nm <a class="el" href="zernike__test_8cpp.html#tests_sigproc_zernike_noll_nm">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000068">Test:</a></b></dt><dd>Scenario: testing noll_nm <a class="el" href="zernike__test_8cpp.html#tests_sigproc_zernike_noll_nm">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">n</td><td>n the radial index of the Zernike polynomial </td></tr>
@@ -237,9 +288,43 @@ $(document).ready(function(){initNavTree('group__zernike__basis.html',''); initR
 
 <p class="definition">Definition at line <a class="el" href="zernike_8cpp_source.html#l00038">38</a> of file <a class="el" href="zernike_8cpp_source.html">zernike.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="sign_8hpp_source.html#l00030">mx::math::func::sign()</a>.</p>
+<p class="reference">References <a class="el" href="sign_8hpp_source.html#l00030">mx::math::func::sign()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernike__test_8cpp_source.html#l00018">SCENARIO()</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>, <a class="el" href="zernike_8hpp_source.html#l00334">mx::sigproc::zernike()</a>, and <a class="el" href="zernike_8hpp_source.html#l00605">mx::sigproc::zernikeQNorm()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernike__test_8cpp_source.html#l00018">SCENARIO()</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::singleLayerPSD()</a>, <a class="el" href="zernike_8hpp_source.html#l00356">mx::sigproc::zernike()</a>, and <a class="el" href="zernike_8hpp_source.html#l00627">mx::sigproc::zernikeQNorm()</a>.</p>
+
+</div>
+</div>
+<a id="ga6524765adacf326f0ffefd4e69626ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6524765adacf326f0ffefd4e69626ad4">&#9670;&nbsp;</a></span>nZernRadOrd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::sigproc::nZernRadOrd </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of Zernikes up to and including a radial order. </p>
+<p>Calculates the total number of Zernike polynomials through radial order <code>n</code>. See Noll (1976) <a class="el" href="citelist.html#CITEREF_noll_1976">[16]</a> See also: <a href="http://en.wikipedia.org/wiki/Zernike_polynomials">http://en.wikipedia.org/wiki/Zernike_polynomials</a></p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">the</td><td>number of </td></tr>
+    <tr><td class="paramname">-1</td><td>on error (n-m odd) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>[n] the radial order </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -295,7 +380,7 @@ template&lt;typename arrayT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00489">489</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00511">511</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +450,7 @@ template&lt;typename arrayT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00439">439</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00461">461</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,7 +512,7 @@ template&lt;typename arrayT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00466">466</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00488">488</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 </div>
 </div>
@@ -504,7 +589,7 @@ template&lt;typename arrayT , typename calcRealT , int overscan = 2&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00375">375</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00397">397</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +651,7 @@ template&lt;typename realT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00334">334</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00356">356</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>.</p>
 
@@ -637,7 +722,7 @@ template&lt;typename realT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00297">297</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00319">319</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -715,7 +800,7 @@ template&lt;typename realT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00242">242</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00264">264</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>.</p>
 
@@ -776,7 +861,7 @@ template&lt;typename cubeT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00509">509</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00531">531</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="zernikeBasis_8hpp_source.html#l00030">mx::AO::makeZernikeBasis()</a>.</p>
 
@@ -808,7 +893,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00682">682</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00704">704</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>.</p>
 
@@ -840,7 +925,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00689">689</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00711">711</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>.</p>
 
@@ -872,7 +957,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00675">675</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00697">697</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>.</p>
 
@@ -904,7 +989,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00661">661</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00683">683</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00064">mx::math::func::jinc()</a>.</p>
 
@@ -936,7 +1021,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00668">668</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00690">690</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>.</p>
 
@@ -968,7 +1053,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00696">696</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00718">718</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="jinc_8hpp_source.html#l00120">mx::math::func::jincN()</a>.</p>
 
@@ -1016,7 +1101,7 @@ template&lt;typename arrayT &gt; </div>
 
 <p>Fill in an Eigen-like array with the square-normed Fourier transform of a Zernike polynomial. </p>
 <p>The array is filled in with the values of |Q(k,phi)|^2 according to Equation (8) of Noll (1976) <a class="el" href="citelist.html#CITEREF_noll_1976">[16]</a>.</p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000064">Test:</a></b></dt><dd>Scenario: testing zernikeQNorm <a class="el" href="zernike__test_8cpp.html#tests_sigproc_zernike_zernikeQNorm">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000070">Test:</a></b></dt><dd>Scenario: testing zernikeQNorm <a class="el" href="zernike__test_8cpp.html#tests_sigproc_zernike_zernikeQNorm">[test doc]</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error</dd></dl>
@@ -1036,11 +1121,11 @@ template&lt;typename arrayT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00628">628</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00650">650</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, and <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernike_8hpp_source.html#l00605">mx::sigproc::zernikeQNorm()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernike_8hpp_source.html#l00627">mx::sigproc::zernikeQNorm()</a>.</p>
 
 </div>
 </div>
@@ -1096,9 +1181,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00605">605</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00627">627</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>, and <a class="el" href="zernike_8hpp_source.html#l00628">mx::sigproc::zernikeQNorm()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>, and <a class="el" href="zernike_8hpp_source.html#l00650">mx::sigproc::zernikeQNorm()</a>.</p>
 
 </div>
 </div>
@@ -1144,8 +1229,8 @@ template&lt;typename realT &gt; </div>
 
 <p>Calculate the square-normed Fourier transform of a Zernike polynomial at position (k,phi) </p>
 <p>Implements Equation (8) of Noll (1976) <a class="el" href="citelist.html#CITEREF_noll_1976">[16]</a>.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000071">Todo:</a></b></dt><dd>need a more robust jinc_n function for n &gt; 1</dd></dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000063">Test:</a></b></dt><dd>Scenario: testing zernikeQNorm <a class="el" href="zernike__test_8cpp.html#tests_sigproc_zernike_zernikeQNorm">[test doc]</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000075">Todo:</a></b></dt><dd>need a more robust jinc_n function for n &gt; 1</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000069">Test:</a></b></dt><dd>Scenario: testing zernikeQNorm <a class="el" href="zernike__test_8cpp.html#tests_sigproc_zernike_zernikeQNorm">[test doc]</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the value of |Q(k,phi)|^2</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -1163,9 +1248,9 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00547">547</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00569">569</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="bessel_8hpp_source.html#l00048">mx::math::func::bessel_j()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
+<p class="reference">References <a class="el" href="bessel_8hpp_source.html#l00049">mx::math::func::bessel_j()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00490">mx::AO::analysis::F_zernike()</a>, and <a class="el" href="zernike__test_8cpp_source.html#l00271">SCENARIO()</a>.</p>
 
@@ -1229,9 +1314,9 @@ template&lt;typename realT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00192">192</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00214">214</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="zernike_8hpp_source.html#l00081">mx::sigproc::zernikeRCoeffs()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="zernike_8hpp_source.html#l00103">mx::sigproc::zernikeRCoeffs()</a>.</p>
 
 </div>
 </div>
@@ -1300,9 +1385,9 @@ template&lt;typename realT , typename calcRealT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00138">138</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00160">160</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
 </div>
 </div>
@@ -1363,11 +1448,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00081">81</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zernike_8hpp_source.html#l00103">103</a> of file <a class="el" href="zernike_8hpp_source.html">zernike.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>, <a class="el" href="mxError_8hpp_source.html#l00116">MXE_INVALIDARG</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="zernike_8hpp_source.html#l00192">mx::sigproc::zernikeR()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="zernike_8hpp_source.html#l00214">mx::sigproc::zernikeR()</a>.</p>
 
 </div>
 </div>
@@ -1376,7 +1461,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

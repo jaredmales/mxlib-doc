@@ -107,15 +107,6 @@ $(document).ready(function(){initNavTree('influenceFunctions_8hpp.html',''); ini
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
-</div><div class="textblock"><code>#include &quot;<a class="el" href="eigenCube_8hpp_source.html">../improc/eigenCube.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="gaussian_8hpp_source.html">../math/func/gaussian.hpp</a>&quot;</code><br />
-<code>#include &quot;../improc/fitsFile.hpp&quot;</code><br />
-<code>#include &lt;mx/eigenUtils.hpp&gt;</code><br />
-<code>#include &lt;mx/gnuPlot.hpp&gt;</code><br />
-<code>#include &lt;mx/pout.hpp&gt;</code><br />
-<code>#include &lt;mx/randomT.hpp&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="aoPaths_8hpp_source.html">aoPaths.hpp</a>&quot;</code><br />
 </div>
 <p><a href="influenceFunctions_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -135,10 +126,10 @@ Functions</h2></td></tr>
 <tr class="memitem:af996b47ba0bb38a8db4fb39a80e27d0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="influenceFunctions_8hpp.html#af996b47ba0bb38a8db4fb39a80e27d0f">mx::AO::ifPInv</a> (const std::string &amp;dmName, realT maxCondition=-1)</td></tr>
 <tr class="memdesc:af996b47ba0bb38a8db4fb39a80e27d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the pseudo-inverse and mirror modes for a set of influence functions.  <a href="influenceFunctions_8hpp.html#af996b47ba0bb38a8db4fb39a80e27d0f">More...</a><br /></td></tr>
 <tr class="separator:af996b47ba0bb38a8db4fb39a80e27d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a832def7f95a4ed3dad7a1e0e91e422c1"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
-<tr class="memitem:a832def7f95a4ed3dad7a1e0e91e422c1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="influenceFunctions_8hpp.html#a832def7f95a4ed3dad7a1e0e91e422c1">mx::AO::m2cMatrix</a> (Eigen::Array&lt; realT, -1, -1 &gt; &amp;M2c, Eigen::Array&lt; realT, -1, -1 &gt; &amp;Ap, mx::eigenCube&lt; realT &gt; &amp;M)</td></tr>
-<tr class="memdesc:a832def7f95a4ed3dad7a1e0e91e422c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the modes-to-commands matrix for a set of modes.  <a href="influenceFunctions_8hpp.html#a832def7f95a4ed3dad7a1e0e91e422c1">More...</a><br /></td></tr>
-<tr class="separator:a832def7f95a4ed3dad7a1e0e91e422c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931699a3cf9473ddcd714c491b194cff"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:a931699a3cf9473ddcd714c491b194cff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="influenceFunctions_8hpp.html#a931699a3cf9473ddcd714c491b194cff">mx::AO::m2cMatrix</a> (Eigen::Array&lt; realT, -1, -1 &gt; &amp;M2c, Eigen::Array&lt; realT, -1, -1 &gt; &amp;Ap, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; realT &gt; &amp;M)</td></tr>
+<tr class="memdesc:a931699a3cf9473ddcd714c491b194cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the modes-to-commands matrix for a set of modes.  <a href="influenceFunctions_8hpp.html#a931699a3cf9473ddcd714c491b194cff">More...</a><br /></td></tr>
+<tr class="separator:a931699a3cf9473ddcd714c491b194cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13abc2303834fd02735990e03e87ea2f"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:a13abc2303834fd02735990e03e87ea2f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="influenceFunctions_8hpp.html#a13abc2303834fd02735990e03e87ea2f">mx::AO::m2cMatrix</a> (const std::string &amp;dmName, const std::string &amp;basisName)</td></tr>
 <tr class="memdesc:a13abc2303834fd02735990e03e87ea2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the modes-to-commands matrix for a set of modes.  <a href="influenceFunctions_8hpp.html#a13abc2303834fd02735990e03e87ea2f">More...</a><br /></td></tr>
@@ -197,11 +188,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00368">368</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00369">369</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00368">mx::AO::ifPInv()</a>.</p>
+<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00369">mx::AO::ifPInv()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l00828">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00368">mx::AO::ifPInv()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00369">mx::AO::ifPInv()</a>.</p>
 
 </div>
 </div>
@@ -298,7 +289,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00234">234</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="gaussian_8hpp_source.html#l00065">mx::math::func::fwhm2sigma()</a>, <a class="el" href="gaussian_8hpp_source.html#l00127">mx::math::func::gaussian2D()</a>, and <a class="el" href="influenceFunctions_8hpp_source.html#l00234">mx::AO::influenceFunctionsGaussian()</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00156">mx::fits::fitsHeader::append()</a>, <a class="el" href="gaussian_8hpp_source.html#l00065">mx::math::func::fwhm2sigma()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00375">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="influenceFunctions_8hpp_source.html#l00234">mx::AO::influenceFunctionsGaussian()</a>, <a class="el" href="randomT_8hpp_source.html#l00096">mx::math::randomT&lt; typeT, _ranengT, _randistT &gt;::seed()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01301">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00234">mx::AO::influenceFunctionsGaussian()</a>.</p>
 
@@ -349,14 +340,14 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00479">479</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00480">480</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00460">mx::AO::m2cMatrix()</a>.</p>
+<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00461">mx::AO::m2cMatrix()</a>.</p>
 
 </div>
 </div>
-<a id="a832def7f95a4ed3dad7a1e0e91e422c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a832def7f95a4ed3dad7a1e0e91e422c1">&#9670;&nbsp;</a></span>m2cMatrix() <span class="overload">[2/2]</span></h2>
+<a id="a931699a3cf9473ddcd714c491b194cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931699a3cf9473ddcd714c491b194cff">&#9670;&nbsp;</a></span>m2cMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +369,7 @@ template&lt;typename realT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mx::eigenCube&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1eigenCube.html">mx::improc::eigenCube</a>&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>M</em>&#160;</td>
         </tr>
         <tr>
@@ -417,11 +408,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00460">460</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00461">461</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00460">mx::AO::m2cMatrix()</a>.</p>
+<p class="reference">References <a class="el" href="eigenCube_8hpp_source.html#l00393">mx::improc::eigenCube&lt; dataT &gt;::asVectors()</a>, and <a class="el" href="influenceFunctions_8hpp_source.html#l00461">mx::AO::m2cMatrix()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00460">mx::AO::m2cMatrix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00461">mx::AO::m2cMatrix()</a>.</p>
 
 </div>
 </div>
@@ -458,11 +449,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00513">513</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00514">514</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00513">mx::AO::modalDMM2cMatrix()</a>.</p>
+<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00514">mx::AO::modalDMM2cMatrix()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l00828">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00513">mx::AO::modalDMM2cMatrix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00514">mx::AO::modalDMM2cMatrix()</a>.</p>
 
 </div>
 </div>
@@ -510,11 +501,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00554">554</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="influenceFunctions_8hpp_source.html#l00555">555</a> of file <a class="el" href="influenceFunctions_8hpp_source.html">influenceFunctions.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00554">mx::AO::modesOnDM()</a>.</p>
+<p class="reference">References <a class="el" href="influenceFunctions_8hpp_source.html#l00555">mx::AO::modesOnDM()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00554">mx::AO::modesOnDM()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="influenceFunctions_8hpp_source.html#l00555">mx::AO::modesOnDM()</a>.</p>
 
 </div>
 </div>
@@ -524,7 +515,7 @@ template&lt;typename realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="influenceFunctions_8hpp.html">influenceFunctions.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

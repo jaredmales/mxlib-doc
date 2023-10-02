@@ -107,9 +107,6 @@ $(document).ready(function(){initNavTree('roots_8hpp.html',''); initResizable();
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="roots_8hpp_source.html">roots.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;complex&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
 </div>
 <p><a href="roots_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -121,18 +118,270 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a8b6821f647d70eb18004272a2e73192b"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:a8b6821f647d70eb18004272a2e73192b"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="roots_8hpp.html#a8b6821f647d70eb18004272a2e73192b">mx::math::cubicDescriminant</a> (const realT &amp;a, const realT &amp;b, const realT &amp;c, const realT &amp;d)</td></tr>
+<tr class="memdesc:a8b6821f647d70eb18004272a2e73192b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the descriminant for the general cubic.  <a href="roots_8hpp.html#a8b6821f647d70eb18004272a2e73192b">More...</a><br /></td></tr>
+<tr class="separator:a8b6821f647d70eb18004272a2e73192b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab6d7681e5726c4df7b5a3e44c5b609"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:a4ab6d7681e5726c4df7b5a3e44c5b609"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="roots_8hpp.html#a4ab6d7681e5726c4df7b5a3e44c5b609">mx::math::cubicDescriminant</a> (const realT &amp;p, const realT &amp;q)</td></tr>
+<tr class="memdesc:a4ab6d7681e5726c4df7b5a3e44c5b609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the descriminant for the depressed cubic.  <a href="roots_8hpp.html#a4ab6d7681e5726c4df7b5a3e44c5b609">More...</a><br /></td></tr>
+<tr class="separator:a4ab6d7681e5726c4df7b5a3e44c5b609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912a5000ba024623dc28ca073d85adad"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:a912a5000ba024623dc28ca073d85adad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="roots_8hpp.html#a912a5000ba024623dc28ca073d85adad">mx::math::cubicDepressed</a> (realT &amp;p, realT &amp;q, const realT &amp;a, const realT &amp;b, const realT &amp;c, const realT &amp;d)</td></tr>
+<tr class="memdesc:a912a5000ba024623dc28ca073d85adad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a general cubic equation to depressed form.  <a href="roots_8hpp.html#a912a5000ba024623dc28ca073d85adad">More...</a><br /></td></tr>
+<tr class="separator:a912a5000ba024623dc28ca073d85adad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f9995e8b68f142fc47611881ccdf02"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
+<tr class="memitem:a54f9995e8b68f142fc47611881ccdf02"><td class="memTemplItemLeft" align="right" valign="top">realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="roots_8hpp.html#a54f9995e8b68f142fc47611881ccdf02">mx::math::cubicRealRoot</a> (const realT &amp;p, const realT &amp;q)</td></tr>
+<tr class="memdesc:a54f9995e8b68f142fc47611881ccdf02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the real root for a depressed cubic with negative descriminant.  <a href="roots_8hpp.html#a54f9995e8b68f142fc47611881ccdf02">More...</a><br /></td></tr>
+<tr class="separator:a54f9995e8b68f142fc47611881ccdf02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga81076cc4c49ea225efacf54b824570cc"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:ga81076cc4c49ea225efacf54b824570cc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">mx::math::quarticRoots</a> (std::vector&lt; std::complex&lt; realT &gt; &gt; &amp;x, realT a, realT b, realT c, realT d, realT e)</td></tr>
 <tr class="memdesc:ga81076cc4c49ea225efacf54b824570cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the roots of the general quartic equation.  <a href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">More...</a><br /></td></tr>
 <tr class="separator:ga81076cc4c49ea225efacf54b824570cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a912a5000ba024623dc28ca073d85adad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912a5000ba024623dc28ca073d85adad">&#9670;&nbsp;</a></span>cubicDepressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::math::cubicDepressed </td>
+          <td>(</td>
+          <td class="paramtype">realT &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a general cubic equation to depressed form. </p>
+<p>The general cubic is </p><p class="formulaDsp">
+\[ ax^3 + bx^2 + cx + d = 0 \]
+</p>
+<p> which can be converted to compressed form </p><p class="formulaDsp">
+\[ t^3 + pt + q = 0 \]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p</td><td>the 1st order coefficient of the depressed cubic </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">q</td><td>the 0th order coefficient of the depressed cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>the 3rd order coefficient of the general cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>the 2nd order coefficient of the general cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>the 1st order coefficient of the general cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>the 0th order coefficient of the general cubic </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="roots_8hpp_source.html#l00081">81</a> of file <a class="el" href="roots_8hpp_source.html">roots.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="roots_8hpp_source.html#l00081">mx::math::cubicDepressed()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="roots_8hpp_source.html#l00081">mx::math::cubicDepressed()</a>.</p>
+
+</div>
+</div>
+<a id="a8b6821f647d70eb18004272a2e73192b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6821f647d70eb18004272a2e73192b">&#9670;&nbsp;</a></span>cubicDescriminant() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT mx::math::cubicDescriminant </td>
+          <td>(</td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the descriminant for the general cubic. </p>
+<dl class="section return"><dt>Returns</dt><dd>the descriminant </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>the 3rd order coefficient of the general cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>the 2nd order coefficient of the general cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>the 1st order coefficient of the general cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>the 0th order coefficient of the general cubic </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="roots_8hpp_source.html#l00044">44</a> of file <a class="el" href="roots_8hpp_source.html">roots.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00060">mx::astro::constants::c()</a>, and <a class="el" href="roots_8hpp_source.html#l00044">mx::math::cubicDescriminant()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="roots_8hpp_source.html#l00044">mx::math::cubicDescriminant()</a>.</p>
+
+</div>
+</div>
+<a id="a4ab6d7681e5726c4df7b5a3e44c5b609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab6d7681e5726c4df7b5a3e44c5b609">&#9670;&nbsp;</a></span>cubicDescriminant() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT mx::math::cubicDescriminant </td>
+          <td>(</td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the descriminant for the depressed cubic. </p>
+<dl class="section return"><dt>Returns</dt><dd>the descriminant </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>the 0th order coefficient of the depressed cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">q</td><td>the 0th order coefficient of the depressed cubic </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="roots_8hpp_source.html#l00062">62</a> of file <a class="el" href="roots_8hpp_source.html">roots.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="roots_8hpp_source.html#l00044">mx::math::cubicDescriminant()</a>.</p>
+
+</div>
+</div>
+<a id="a54f9995e8b68f142fc47611881ccdf02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f9995e8b68f142fc47611881ccdf02">&#9670;&nbsp;</a></span>cubicRealRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">realT mx::math::cubicRealRoot </td>
+          <td>(</td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const realT &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the real root for a depressed cubic with negative descriminant. </p>
+<dl class="section return"><dt>Returns</dt><dd>the real root for a depressed cubic defined by <code>p</code> and <code>q</code> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if there are 3 real roots </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>the 1st order coefficient of the depressed cubic </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">q</td><td>the 0th order coefficient of the depressed cubic </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="roots_8hpp_source.html#l00101">101</a> of file <a class="el" href="roots_8hpp_source.html">roots.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="roots_8hpp_source.html#l00101">mx::math::cubicRealRoot()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="roots_8hpp_source.html#l00101">mx::math::cubicRealRoot()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="roots_8hpp.html">roots.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

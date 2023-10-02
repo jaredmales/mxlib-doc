@@ -139,70 +139,71 @@ $(document).ready(function(){initNavTree('bessel_8hpp_source.html',''); initResi
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="comment"></span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/// Bessel Functions of the First Kind.</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  * \ingroup functions</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="group__functions.html#ga655c3bd311c1ec65b66651763ca353b7">   48</a></span>&#160;T2 <a class="code" href="group__functions.html#ga655c3bd311c1ec65b66651763ca353b7">bessel_j</a>( T1 v, <span class="comment">///&lt; [in] </span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;             T2 x  <span class="comment">///&lt; [in]</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;           )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#ifdef MX_INCLUDE_BOOST</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keywordflow">return</span> boost::math::cyl_bessel_j&lt;T1, T2&gt;(v,x);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   static_assert(std::is_fundamental&lt;T1&gt;::value || !std::is_fundamental&lt;T1&gt;::value, <span class="stringliteral">&quot;bessel_j&lt;T1,T2&gt; not specialized for type T1 and/or T2, and MX_INCLUDE_BOOST is not defined, so I can&#39;t just use boost.&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">float</span> bessel_j&lt;float, float&gt;( <span class="keywordtype">float</span> v, </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                              <span class="keywordtype">float</span> x</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">float</span> bessel_j&lt;int, float&gt;( <span class="keywordtype">int</span> v,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                            <span class="keywordtype">float</span> x</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                          );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">double</span> bessel_j&lt;double, double&gt;( <span class="keywordtype">double</span> v, </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                 <span class="keywordtype">double</span> x</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                               );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">double</span> bessel_j&lt;int, double&gt;( <span class="keywordtype">int</span> v,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                              <span class="keywordtype">double</span> x</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                            );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> bessel_j&lt;long double, long double&gt;( <span class="keywordtype">long</span> <span class="keywordtype">double</span> v, </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                 <span class="keywordtype">long</span> <span class="keywordtype">double</span> x</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                               );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> bessel_j&lt;int, long double&gt;( <span class="keywordtype">int</span> v,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                              <span class="keywordtype">long</span> <span class="keywordtype">double</span> x</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                            );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#ifdef HASQUAD</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;__float128 bessel_j&lt;__float128, __float128&gt;( __float128 v, </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                             __float128 x</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                           );</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;__float128 bessel_j&lt;int, __float128&gt;( <span class="keywordtype">int</span> v,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                      __float128 x</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                    );</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">/** This is a wrapper for boost.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  * \ingroup gen_math_bessel</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group__gen__math__bessel.html#ga655c3bd311c1ec65b66651763ca353b7">   49</a></span>&#160;T2 <a class="code" href="group__gen__math__bessel.html#ga655c3bd311c1ec65b66651763ca353b7">bessel_j</a>( T1 v, <span class="comment">///&lt; [in] </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;             T2 x  <span class="comment">///&lt; [in]</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;           )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifdef MX_INCLUDE_BOOST</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordflow">return</span> boost::math::cyl_bessel_j&lt;T1, T2&gt;(v,x);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   static_assert(std::is_fundamental&lt;T1&gt;::value || !std::is_fundamental&lt;T1&gt;::value, <span class="stringliteral">&quot;bessel_j&lt;T1,T2&gt; not specialized for type T1 and/or T2, and MX_INCLUDE_BOOST is not defined, so I can&#39;t just use boost.&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">float</span> bessel_j&lt;float, float&gt;( <span class="keywordtype">float</span> v, </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                              <span class="keywordtype">float</span> x</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                            );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">float</span> bessel_j&lt;int, float&gt;( <span class="keywordtype">int</span> v,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                            <span class="keywordtype">float</span> x</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                          );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">double</span> bessel_j&lt;double, double&gt;( <span class="keywordtype">double</span> v, </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                 <span class="keywordtype">double</span> x</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                               );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">double</span> bessel_j&lt;int, double&gt;( <span class="keywordtype">int</span> v,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                              <span class="keywordtype">double</span> x</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                            );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> bessel_j&lt;long double, long double&gt;( <span class="keywordtype">long</span> <span class="keywordtype">double</span> v, </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                 <span class="keywordtype">long</span> <span class="keywordtype">double</span> x</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                               );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> bessel_j&lt;int, long double&gt;( <span class="keywordtype">int</span> v,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                              <span class="keywordtype">long</span> <span class="keywordtype">double</span> x</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                            );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#ifdef HASQUAD</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;__float128 bessel_j&lt;__float128, __float128&gt;( __float128 v, </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                             __float128 x</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                           );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;__float128 bessel_j&lt;int, __float128&gt;( <span class="keywordtype">int</span> v,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                      __float128 x</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                    );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//mx_bessel_hpp</span></div>
-<div class="ttc" id="agroup__functions_html_ga655c3bd311c1ec65b66651763ca353b7"><div class="ttname"><a href="group__functions.html#ga655c3bd311c1ec65b66651763ca353b7">mx::math::func::bessel_j</a></div><div class="ttdeci">T2 bessel_j(T1 v, T2 x)</div><div class="ttdoc">Bessel Functions of the First Kind.</div><div class="ttdef"><b>Definition:</b> <a href="bessel_8hpp_source.html#l00048">bessel.hpp:48</a></div></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//mx_bessel_hpp</span></div>
+<div class="ttc" id="agroup__gen__math__bessel_html_ga655c3bd311c1ec65b66651763ca353b7"><div class="ttname"><a href="group__gen__math__bessel.html#ga655c3bd311c1ec65b66651763ca353b7">mx::math::func::bessel_j</a></div><div class="ttdeci">T2 bessel_j(T1 v, T2 x)</div><div class="ttdoc">Bessel Functions of the First Kind.</div><div class="ttdef"><b>Definition:</b> <a href="bessel_8hpp_source.html#l00049">bessel.hpp:49</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -210,7 +211,7 @@ $(document).ready(function(){initNavTree('bessel_8hpp_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_4e9e59a91b0996cbbf615e490f662000.html">func</a></li><li class="navelem"><a class="el" href="bessel_8hpp.html">bessel.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

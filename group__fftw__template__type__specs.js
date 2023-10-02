@@ -41,5 +41,14 @@ var group__fftw__template__type__specs =
     ] ],
     [ "fftwTypeSpec< complexLT, long double >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html", [
       [ "realT", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexLT_00_01long_01double_01_4.html#a2e58cef78153b40f51912dfbd86eded1", null ]
+    ] ],
+    [ "fftwTypeSpec< complexQT, complexQT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01complexQT_01_4.html", [
+      [ "realT", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01complexQT_01_4.html#ac22f5b22b8313876d8e8c0f814633389", null ]
+    ] ],
+    [ "fftwTypeSpec< __float128, complexQT >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01____float128_00_01complexQT_01_4.html", [
+      [ "realT", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01____float128_00_01complexQT_01_4.html#a25dc2a4acbe9bf32d65d43640f36fb8b", null ]
+    ] ],
+    [ "fftwTypeSpec< complexQT, __float128 >", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01____float128_01_4.html", [
+      [ "realT", "structmx_1_1math_1_1fft_1_1fftwTypeSpec_3_01complexQT_00_01____float128_01_4.html#a52185a6ce0f5b6f5ad2f0e95fd5e4675", null ]
     ] ]
 ];

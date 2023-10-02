@@ -183,8 +183,8 @@ $(document).ready(function(){initNavTree('orbitUtils_8hpp_source.html',''); init
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    realT e,               <span class="comment">///&lt; [in] is the eccentricity</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    realT M,               <span class="comment">///&lt; [in] is the mean anomaly</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    realT a,               <span class="comment">///&lt; [in] is the semi-major axis</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    realT tol=<a class="code" href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">KEPLER_TOL</a>,  <span class="comment">///&lt; [in] is the desired tolerance</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordtype">long</span> itmax=<a class="code" href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">KEPLER_ITMAX</a> <span class="comment">///&lt; [in] is the maximum number of iterations</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    realT tol=KEPLER_TOL,  <span class="comment">///&lt; [in] is the desired tolerance</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordtype">long</span> itmax=KEPLER_ITMAX <span class="comment">///&lt; [in] is the maximum number of iterations</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                  )</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;   <span class="keywordtype">long</span> its;</div>
@@ -429,8 +429,6 @@ $(document).ready(function(){initNavTree('orbitUtils_8hpp_source.html',''); init
 <div class="ttc" id="agroup__orbits_html_gaf04530685af21f97cb3d96448d74283b"><div class="ttname"><a href="group__orbits.html#gaf04530685af21f97cb3d96448d74283b">mx::astro::orbitPeriod</a></div><div class="ttdeci">units::realT orbitPeriod(typename units::realT m1, typename units::realT m2, typename units::realT a)</div><div class="ttdoc">Calculate the period of an orbit, given the masses and semi-major axis.</div><div class="ttdef"><b>Definition:</b> <a href="orbitUtils_8hpp_source.html#l00028">orbitUtils.hpp:28</a></div></div>
 <div class="ttc" id="agroup__orbits_html_gaf3b16baed2a7a1419ae7f5102ead882f"><div class="ttname"><a href="group__orbits.html#gaf3b16baed2a7a1419ae7f5102ead882f">mx::astro::orbitMeanAnol</a></div><div class="ttdeci">realT orbitMeanAnol(realT t, realT t0, realT P)</div><div class="ttdoc">Calculate the mean anomaly at time t, given the time of pericenter passage t0 and period P.</div><div class="ttdef"><b>Definition:</b> <a href="orbitUtils_8hpp_source.html#l00063">orbitUtils.hpp:63</a></div></div>
 <div class="ttc" id="akepler_8hpp_html"><div class="ttname"><a href="kepler_8hpp.html">kepler.hpp</a></div><div class="ttdoc">Declarations for the utilities related to the Kepler problem.</div></div>
-<div class="ttc" id="akepler_8hpp_html_a7b401ae9c745645f05a7afba53f0530a"><div class="ttname"><a href="kepler_8hpp.html#a7b401ae9c745645f05a7afba53f0530a">KEPLER_TOL</a></div><div class="ttdeci">#define KEPLER_TOL</div><div class="ttdoc">The default tolerance for solutions to the Kepler problem.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00028">kepler.hpp:28</a></div></div>
-<div class="ttc" id="akepler_8hpp_html_a92fa5b5d7f060e8ca1e044acf532743d"><div class="ttname"><a href="kepler_8hpp.html#a92fa5b5d7f060e8ca1e044acf532743d">KEPLER_ITMAX</a></div><div class="ttdeci">#define KEPLER_ITMAX</div><div class="ttdoc">The default maximum number of iterations for solutions to the Kepler problem.</div><div class="ttdef"><b>Definition:</b> <a href="kepler_8hpp_source.html#l00033">kepler.hpp:33</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -438,7 +436,7 @@ $(document).ready(function(){initNavTree('orbitUtils_8hpp_source.html',''); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0fc3206047eab508bd310c9d22a11fd1.html">astro</a></li><li class="navelem"><a class="el" href="orbitUtils_8hpp.html">orbitUtils.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

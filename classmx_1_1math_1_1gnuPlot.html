@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classmx_1_1math_1_1gnuPlot.html',''); 
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>An interactive c++ interface to gnuplot. </p>
 <p>Spawns a gnuplot sesssion and communicates with it.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>Use mxError for error reporting.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000060">Todo:</a></b></dt><dd>Use mxError for error reporting.</dd></dl>
 <p>An example of using <a class="el" href="classmx_1_1math_1_1gnuPlot.html" title="An interactive c++ interface to gnuplot.">gnuPlot</a> to plot data from a file: </p><div class="fragment"><div class="line">gnuPlot gp; <span class="comment">//This automatically connects, and is now ready to plot.</span></div>
 <div class="line"> </div>
 <div class="line">gp.plot(<span class="stringliteral">&quot;my_data_file.dat&quot;</span>, <span class="stringliteral">&quot;u 1:2 w l&quot;</span>); <span class="comment">//Plots the data in the file</span></div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('classmx_1_1math_1_1gnuPlot.html',''); 
 <div class="line">  std::cout &lt;&lt; response &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00155">155</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00192">192</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="gnuPlot_8hpp_source.html">math/plot/gnuPlot.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -167,6 +167,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a253e2f10c2c851a9273a0d7f4c2d7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a8a253e2f10c2c851a9273a0d7f4c2d7c">replot</a> ()</td></tr>
 <tr class="memdesc:a8a253e2f10c2c851a9273a0d7f4c2d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issue the <b>replot</b> command.  <a href="classmx_1_1math_1_1gnuPlot.html#a8a253e2f10c2c851a9273a0d7f4c2d7c">More...</a><br /></td></tr>
 <tr class="separator:a8a253e2f10c2c851a9273a0d7f4c2d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3368b2aab38e3e834ef33892a31df95e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a3368b2aab38e3e834ef33892a31df95e">xrange</a> (double x0, double x1)</td></tr>
+<tr class="memdesc:a3368b2aab38e3e834ef33892a31df95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the x-axis range.  <a href="classmx_1_1math_1_1gnuPlot.html#a3368b2aab38e3e834ef33892a31df95e">More...</a><br /></td></tr>
+<tr class="separator:a3368b2aab38e3e834ef33892a31df95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa187e9983aafe029ca81556fc02a3663"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa187e9983aafe029ca81556fc02a3663">xrange</a> ()</td></tr>
+<tr class="memdesc:aa187e9983aafe029ca81556fc02a3663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unset the x-axis range.  <a href="classmx_1_1math_1_1gnuPlot.html#aa187e9983aafe029ca81556fc02a3663">More...</a><br /></td></tr>
+<tr class="separator:aa187e9983aafe029ca81556fc02a3663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37102a5699b0569a999dcb6bcbef89c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ac37102a5699b0569a999dcb6bcbef89c">yrange</a> (double y0, double y1)</td></tr>
+<tr class="memdesc:ac37102a5699b0569a999dcb6bcbef89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the y-axis range.  <a href="classmx_1_1math_1_1gnuPlot.html#ac37102a5699b0569a999dcb6bcbef89c">More...</a><br /></td></tr>
+<tr class="separator:ac37102a5699b0569a999dcb6bcbef89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921d9e07dd593caea272954f28e54211"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a921d9e07dd593caea272954f28e54211">yrange</a> ()</td></tr>
+<tr class="memdesc:a921d9e07dd593caea272954f28e54211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unset the y-axis range.  <a href="classmx_1_1math_1_1gnuPlot.html#a921d9e07dd593caea272954f28e54211">More...</a><br /></td></tr>
+<tr class="separator:a921d9e07dd593caea272954f28e54211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f47b391a08d3d542c36169d68b8dab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a73f47b391a08d3d542c36169d68b8dab">logy</a> ()</td></tr>
 <tr class="memdesc:a73f47b391a08d3d542c36169d68b8dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the y axis to log scale.  <a href="classmx_1_1math_1_1gnuPlot.html#a73f47b391a08d3d542c36169d68b8dab">More...</a><br /></td></tr>
 <tr class="separator:a73f47b391a08d3d542c36169d68b8dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,44 +197,119 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f6d5c9b4202bd561e6f8603b7730781"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a7f6d5c9b4202bd561e6f8603b7730781">ulogxy</a> ()</td></tr>
 <tr class="memdesc:a7f6d5c9b4202bd561e6f8603b7730781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unset the x and y axes from log scale.  <a href="classmx_1_1math_1_1gnuPlot.html#a7f6d5c9b4202bd561e6f8603b7730781">More...</a><br /></td></tr>
 <tr class="separator:a7f6d5c9b4202bd561e6f8603b7730781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71760e6276d8175014f2ebd4051da67a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a71760e6276d8175014f2ebd4051da67a">plot</a> (const std::string &amp;fname, const std::string &amp;modifiers=&quot;&quot;)</td></tr>
-<tr class="memdesc:a71760e6276d8175014f2ebd4051da67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issue a plot command with a n separate lines specified by gplot_spec structures.  <a href="classmx_1_1math_1_1gnuPlot.html#a71760e6276d8175014f2ebd4051da67a">More...</a><br /></td></tr>
-<tr class="separator:a71760e6276d8175014f2ebd4051da67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc89af8a1b2fd8c6c99b979d99e1c16"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
-<tr class="memitem:a8dc89af8a1b2fd8c6c99b979d99e1c16"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a8dc89af8a1b2fd8c6c99b979d99e1c16">plot</a> (const dataT *y, size_t N, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;)</td></tr>
-<tr class="memdesc:a8dc89af8a1b2fd8c6c99b979d99e1c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from an array.  <a href="classmx_1_1math_1_1gnuPlot.html#a8dc89af8a1b2fd8c6c99b979d99e1c16">More...</a><br /></td></tr>
-<tr class="separator:a8dc89af8a1b2fd8c6c99b979d99e1c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af65d581dcfbdcb0ecfd43d302546d10b"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
-<tr class="memitem:af65d581dcfbdcb0ecfd43d302546d10b"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#af65d581dcfbdcb0ecfd43d302546d10b">plot</a> (const std::vector&lt; dataT &gt; &amp;y, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;)</td></tr>
-<tr class="memdesc:af65d581dcfbdcb0ecfd43d302546d10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from a vector.  <a href="classmx_1_1math_1_1gnuPlot.html#af65d581dcfbdcb0ecfd43d302546d10b">More...</a><br /></td></tr>
-<tr class="separator:af65d581dcfbdcb0ecfd43d302546d10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ec9126502dc38a0f5e42d795ffbadd"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
-<tr class="memitem:a22ec9126502dc38a0f5e42d795ffbadd"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a22ec9126502dc38a0f5e42d795ffbadd">plot</a> (const dataTx *x, const dataTy *y, size_t N, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;)</td></tr>
-<tr class="memdesc:a22ec9126502dc38a0f5e42d795ffbadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from arrays.  <a href="classmx_1_1math_1_1gnuPlot.html#a22ec9126502dc38a0f5e42d795ffbadd">More...</a><br /></td></tr>
-<tr class="separator:a22ec9126502dc38a0f5e42d795ffbadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f881e7535f380de783b841fd96691c6"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
-<tr class="memitem:a9f881e7535f380de783b841fd96691c6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a9f881e7535f380de783b841fd96691c6">plot</a> (const std::vector&lt; dataTx &gt; &amp;x, const std::vector&lt; dataTy &gt; &amp;y, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;)</td></tr>
-<tr class="memdesc:a9f881e7535f380de783b841fd96691c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from vectors.  <a href="classmx_1_1math_1_1gnuPlot.html#a9f881e7535f380de783b841fd96691c6">More...</a><br /></td></tr>
-<tr class="separator:a9f881e7535f380de783b841fd96691c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a5667ecb287ffebc2fade843a60fd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot</a> (const std::string &amp;fname, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a27a5667ecb287ffebc2fade843a60fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot from a file specifying all curve components.  <a href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">More...</a><br /></td></tr>
+<tr class="separator:a27a5667ecb287ffebc2fade843a60fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506a4fc79281a4332c28a9ad4a412bb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a506a4fc79281a4332c28a9ad4a412bb9">plot</a> (const std::string &amp;fname, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a506a4fc79281a4332c28a9ad4a412bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot from a file without specifying the title.  <a href="classmx_1_1math_1_1gnuPlot.html#a506a4fc79281a4332c28a9ad4a412bb9">More...</a><br /></td></tr>
+<tr class="separator:a506a4fc79281a4332c28a9ad4a412bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ca3456e8ea46a456e1cb260e077d54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a56ca3456e8ea46a456e1cb260e077d54">plot</a> (const std::string &amp;fname, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a56ca3456e8ea46a456e1cb260e077d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot from a file without modifiers.  <a href="classmx_1_1math_1_1gnuPlot.html#a56ca3456e8ea46a456e1cb260e077d54">More...</a><br /></td></tr>
+<tr class="separator:a56ca3456e8ea46a456e1cb260e077d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a13a1995514309ac043ccd4ab18482e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a1a13a1995514309ac043ccd4ab18482e">plot</a> (const std::string &amp;fname)</td></tr>
+<tr class="memdesc:a1a13a1995514309ac043ccd4ab18482e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot from a file without specifying the name or any modifiers.  <a href="classmx_1_1math_1_1gnuPlot.html#a1a13a1995514309ac043ccd4ab18482e">More...</a><br /></td></tr>
+<tr class="separator:a1a13a1995514309ac043ccd4ab18482e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0feaba44c4d8b47d2244af6948a165"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:a0d0feaba44c4d8b47d2244af6948a165"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a0d0feaba44c4d8b47d2244af6948a165">plot</a> (const dataT *y, size_t N, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a0d0feaba44c4d8b47d2244af6948a165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from an array.  <a href="classmx_1_1math_1_1gnuPlot.html#a0d0feaba44c4d8b47d2244af6948a165">More...</a><br /></td></tr>
+<tr class="separator:a0d0feaba44c4d8b47d2244af6948a165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbd547235e63f447652985d131f9d8a"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:affbd547235e63f447652985d131f9d8a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#affbd547235e63f447652985d131f9d8a">plot</a> (const dataT *y, size_t N, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:affbd547235e63f447652985d131f9d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from an array.  <a href="classmx_1_1math_1_1gnuPlot.html#affbd547235e63f447652985d131f9d8a">More...</a><br /></td></tr>
+<tr class="separator:affbd547235e63f447652985d131f9d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ab8ab81984eb5d27a0fbc37104ed43"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:ab9ab8ab81984eb5d27a0fbc37104ed43"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ab9ab8ab81984eb5d27a0fbc37104ed43">plot</a> (const dataT *y, size_t N, const std::string &amp;name)</td></tr>
+<tr class="memdesc:ab9ab8ab81984eb5d27a0fbc37104ed43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from an array.  <a href="classmx_1_1math_1_1gnuPlot.html#ab9ab8ab81984eb5d27a0fbc37104ed43">More...</a><br /></td></tr>
+<tr class="separator:ab9ab8ab81984eb5d27a0fbc37104ed43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab317f1a1c25f6d30beb233f21bd990e2"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:ab317f1a1c25f6d30beb233f21bd990e2"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ab317f1a1c25f6d30beb233f21bd990e2">plot</a> (const dataT *y, size_t N)</td></tr>
+<tr class="memdesc:ab317f1a1c25f6d30beb233f21bd990e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from an array.  <a href="classmx_1_1math_1_1gnuPlot.html#ab317f1a1c25f6d30beb233f21bd990e2">More...</a><br /></td></tr>
+<tr class="separator:ab317f1a1c25f6d30beb233f21bd990e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03fa44856121d158b8e18548c6e6177"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:ad03fa44856121d158b8e18548c6e6177"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ad03fa44856121d158b8e18548c6e6177">plot</a> (const std::vector&lt; dataT &gt; &amp;y, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:ad03fa44856121d158b8e18548c6e6177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from a vector.  <a href="classmx_1_1math_1_1gnuPlot.html#ad03fa44856121d158b8e18548c6e6177">More...</a><br /></td></tr>
+<tr class="separator:ad03fa44856121d158b8e18548c6e6177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3dec89b43636ec77760598efdf080bb"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:ac3dec89b43636ec77760598efdf080bb"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ac3dec89b43636ec77760598efdf080bb">plot</a> (const std::vector&lt; dataT &gt; &amp;y, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:ac3dec89b43636ec77760598efdf080bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from a vector.  <a href="classmx_1_1math_1_1gnuPlot.html#ac3dec89b43636ec77760598efdf080bb">More...</a><br /></td></tr>
+<tr class="separator:ac3dec89b43636ec77760598efdf080bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e602f6908747d4f362aa1f2c0b23e7b"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:a4e602f6908747d4f362aa1f2c0b23e7b"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a4e602f6908747d4f362aa1f2c0b23e7b">plot</a> (const std::vector&lt; dataT &gt; &amp;y, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a4e602f6908747d4f362aa1f2c0b23e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from a vector.  <a href="classmx_1_1math_1_1gnuPlot.html#a4e602f6908747d4f362aa1f2c0b23e7b">More...</a><br /></td></tr>
+<tr class="separator:a4e602f6908747d4f362aa1f2c0b23e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb63f98c74e3f5dbcab742aab167819e"><td class="memTemplParams" colspan="2">template&lt;typename dataT &gt; </td></tr>
+<tr class="memitem:afb63f98c74e3f5dbcab742aab167819e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#afb63f98c74e3f5dbcab742aab167819e">plot</a> (const std::vector&lt; dataT &gt; &amp;y)</td></tr>
+<tr class="memdesc:afb63f98c74e3f5dbcab742aab167819e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot data from a vector.  <a href="classmx_1_1math_1_1gnuPlot.html#afb63f98c74e3f5dbcab742aab167819e">More...</a><br /></td></tr>
+<tr class="separator:afb63f98c74e3f5dbcab742aab167819e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182ec219bf238b569afe02533c5462f5"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:a182ec219bf238b569afe02533c5462f5"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a182ec219bf238b569afe02533c5462f5">plot</a> (const dataTx *x, const dataTy *y, size_t N, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a182ec219bf238b569afe02533c5462f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from arrays.  <a href="classmx_1_1math_1_1gnuPlot.html#a182ec219bf238b569afe02533c5462f5">More...</a><br /></td></tr>
+<tr class="separator:a182ec219bf238b569afe02533c5462f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56db4643ca993004c93290cd68fd9f83"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:a56db4643ca993004c93290cd68fd9f83"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a56db4643ca993004c93290cd68fd9f83">plot</a> (const dataTx *x, const dataTy *y, size_t N, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a56db4643ca993004c93290cd68fd9f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from arrays.  <a href="classmx_1_1math_1_1gnuPlot.html#a56db4643ca993004c93290cd68fd9f83">More...</a><br /></td></tr>
+<tr class="separator:a56db4643ca993004c93290cd68fd9f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb2e539f84216a3ba1481aca3fb30ed"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:abdb2e539f84216a3ba1481aca3fb30ed"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#abdb2e539f84216a3ba1481aca3fb30ed">plot</a> (const dataTx *x, const dataTy *y, size_t N, const std::string &amp;name)</td></tr>
+<tr class="memdesc:abdb2e539f84216a3ba1481aca3fb30ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from arrays.  <a href="classmx_1_1math_1_1gnuPlot.html#abdb2e539f84216a3ba1481aca3fb30ed">More...</a><br /></td></tr>
+<tr class="separator:abdb2e539f84216a3ba1481aca3fb30ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a5ea78e747370eac4d3d0cc397aa35"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:a02a5ea78e747370eac4d3d0cc397aa35"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a02a5ea78e747370eac4d3d0cc397aa35">plot</a> (const dataTx *x, const dataTy *y, size_t N)</td></tr>
+<tr class="memdesc:a02a5ea78e747370eac4d3d0cc397aa35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from arrays.  <a href="classmx_1_1math_1_1gnuPlot.html#a02a5ea78e747370eac4d3d0cc397aa35">More...</a><br /></td></tr>
+<tr class="separator:a02a5ea78e747370eac4d3d0cc397aa35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61047d45d1a354529e889598ac817f7a"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:a61047d45d1a354529e889598ac817f7a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a61047d45d1a354529e889598ac817f7a">plot</a> (const std::vector&lt; dataTx &gt; &amp;x, const std::vector&lt; dataTy &gt; &amp;y, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a61047d45d1a354529e889598ac817f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from vectors.  <a href="classmx_1_1math_1_1gnuPlot.html#a61047d45d1a354529e889598ac817f7a">More...</a><br /></td></tr>
+<tr class="separator:a61047d45d1a354529e889598ac817f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28c7967e96b561a695a754bbba09012"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:ac28c7967e96b561a695a754bbba09012"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ac28c7967e96b561a695a754bbba09012">plot</a> (const std::vector&lt; dataTx &gt; &amp;x, const std::vector&lt; dataTy &gt; &amp;y, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:ac28c7967e96b561a695a754bbba09012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from vectors.  <a href="classmx_1_1math_1_1gnuPlot.html#ac28c7967e96b561a695a754bbba09012">More...</a><br /></td></tr>
+<tr class="separator:ac28c7967e96b561a695a754bbba09012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b4db2d585700f04f0f37faf8ed052e"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:a16b4db2d585700f04f0f37faf8ed052e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a16b4db2d585700f04f0f37faf8ed052e">plot</a> (const std::vector&lt; dataTx &gt; &amp;x, const std::vector&lt; dataTy &gt; &amp;y, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a16b4db2d585700f04f0f37faf8ed052e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from vectors.  <a href="classmx_1_1math_1_1gnuPlot.html#a16b4db2d585700f04f0f37faf8ed052e">More...</a><br /></td></tr>
+<tr class="separator:a16b4db2d585700f04f0f37faf8ed052e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefca5b8984ab4df01ea100395389788"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
+<tr class="memitem:acefca5b8984ab4df01ea100395389788"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#acefca5b8984ab4df01ea100395389788">plot</a> (const std::vector&lt; dataTx &gt; &amp;x, const std::vector&lt; dataTy &gt; &amp;y)</td></tr>
+<tr class="memdesc:acefca5b8984ab4df01ea100395389788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot y vs. x data from vectors.  <a href="classmx_1_1math_1_1gnuPlot.html#acefca5b8984ab4df01ea100395389788">More...</a><br /></td></tr>
+<tr class="separator:acefca5b8984ab4df01ea100395389788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a361ae146acb72ff2bcb4dd2f30c11"><td class="memTemplParams" colspan="2">template&lt;typename dataTx , typename dataTy &gt; </td></tr>
-<tr class="memitem:a59a361ae146acb72ff2bcb4dd2f30c11"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a59a361ae146acb72ff2bcb4dd2f30c11">point</a> (dataTx x, dataTy y, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;)</td></tr>
+<tr class="memitem:a59a361ae146acb72ff2bcb4dd2f30c11"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a59a361ae146acb72ff2bcb4dd2f30c11">point</a> (dataTx x, dataTy y, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>=&quot;&quot;, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>=&quot;&quot;)</td></tr>
 <tr class="memdesc:a59a361ae146acb72ff2bcb4dd2f30c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot a single point.  <a href="classmx_1_1math_1_1gnuPlot.html#a59a361ae146acb72ff2bcb4dd2f30c11">More...</a><br /></td></tr>
 <tr class="separator:a59a361ae146acb72ff2bcb4dd2f30c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf5f730d661a9e4579b09a4906b1082b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#acf5f730d661a9e4579b09a4906b1082b">circle</a> (double xcen, double ycen, double radius, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;, int npoints=10)</td></tr>
+<tr class="memitem:acf5f730d661a9e4579b09a4906b1082b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#acf5f730d661a9e4579b09a4906b1082b">circle</a> (double xcen, double ycen, double radius, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>=&quot;&quot;, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>=&quot;&quot;, int npoints=10)</td></tr>
 <tr class="memdesc:acf5f730d661a9e4579b09a4906b1082b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a circle on the plot.  <a href="classmx_1_1math_1_1gnuPlot.html#acf5f730d661a9e4579b09a4906b1082b">More...</a><br /></td></tr>
 <tr class="separator:acf5f730d661a9e4579b09a4906b1082b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b7f7eafaa4f54b1b85cab970d7116d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a16b7f7eafaa4f54b1b85cab970d7116d">circle</a> (double radius, const std::string &amp;modifiers=&quot;&quot;, const std::string &amp;title=&quot;&quot;, int npoints=10)</td></tr>
+<tr class="memitem:a16b7f7eafaa4f54b1b85cab970d7116d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a16b7f7eafaa4f54b1b85cab970d7116d">circle</a> (double radius, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>=&quot;&quot;, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>=&quot;&quot;, int npoints=10)</td></tr>
 <tr class="memdesc:a16b7f7eafaa4f54b1b85cab970d7116d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a circle on the plot around the origin.  <a href="classmx_1_1math_1_1gnuPlot.html#a16b7f7eafaa4f54b1b85cab970d7116d">More...</a><br /></td></tr>
 <tr class="separator:a16b7f7eafaa4f54b1b85cab970d7116d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9f7649b1180ecf07ac919b775dcef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#aff9f7649b1180ecf07ac919b775dcef4">clear</a> ()</td></tr>
+<tr class="memdesc:aff9f7649b1180ecf07ac919b775dcef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all the curves.  <a href="classmx_1_1math_1_1gnuPlot.html#aff9f7649b1180ecf07ac919b775dcef4">More...</a><br /></td></tr>
+<tr class="separator:aff9f7649b1180ecf07ac919b775dcef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585f46ef311604d30f2b2de7d155ba99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a585f46ef311604d30f2b2de7d155ba99">reset</a> ()</td></tr>
+<tr class="memdesc:a585f46ef311604d30f2b2de7d155ba99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all the curves and reset plot configuration.  <a href="classmx_1_1math_1_1gnuPlot.html#a585f46ef311604d30f2b2de7d155ba99">More...</a><br /></td></tr>
+<tr class="separator:a585f46ef311604d30f2b2de7d155ba99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9485a6b3b5fa84c602a0b9069ddef821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a9485a6b3b5fa84c602a0b9069ddef821">listCurves</a> ()</td></tr>
+<tr class="memdesc:a9485a6b3b5fa84c602a0b9069ddef821"><td class="mdescLeft">&#160;</td><td class="mdescRight">List the curves and their specifications.  <a href="classmx_1_1math_1_1gnuPlot.html#a9485a6b3b5fa84c602a0b9069ddef821">More...</a><br /></td></tr>
+<tr class="separator:a9485a6b3b5fa84c602a0b9069ddef821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0dde526ef9c96d309475a843466dc0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a> (const std::string &amp;name, const std::string &amp;modifiers)</td></tr>
+<tr class="memdesc:aa0dde526ef9c96d309475a843466dc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify the modifiers for a curve.  <a href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">More...</a><br /></td></tr>
+<tr class="separator:aa0dde526ef9c96d309475a843466dc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343e01ae10e53684a990581c6216efee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a> (const std::string &amp;name, const std::string &amp;title)</td></tr>
+<tr class="memdesc:a343e01ae10e53684a990581c6216efee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify the title for a curve.  <a href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">More...</a><br /></td></tr>
+<tr class="separator:a343e01ae10e53684a990581c6216efee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a18a0e6fe628c42ff69861484bbb9d3dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a18a0e6fe628c42ff69861484bbb9d3dd">plotImpl</a> (const void *y, size_t Nbytes, const std::string &amp;binary, const std::string &amp;modifiers, const std::string &amp;title)</td></tr>
-<tr class="memdesc:a18a0e6fe628c42ff69861484bbb9d3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of 1-D binary plotting.  <a href="classmx_1_1math_1_1gnuPlot.html#a18a0e6fe628c42ff69861484bbb9d3dd">More...</a><br /></td></tr>
-<tr class="separator:a18a0e6fe628c42ff69861484bbb9d3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a035c0868147a05679a3e32703119bb53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a035c0868147a05679a3e32703119bb53">plotImpl</a> (const void *x, const void *y, size_t Npts, size_t sizex, size_t sizey, const std::string &amp;binaryx, const std::string &amp;binaryy, const std::string &amp;modifiers, const std::string &amp;title)</td></tr>
-<tr class="memdesc:a035c0868147a05679a3e32703119bb53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of 2-d binary plotting.  <a href="classmx_1_1math_1_1gnuPlot.html#a035c0868147a05679a3e32703119bb53">More...</a><br /></td></tr>
-<tr class="separator:a035c0868147a05679a3e32703119bb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5ebdd6fa6c7a4a063b921990d55fb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl</a> (const void *y, size_t Nbytes, const std::string &amp;binary, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a6e5ebdd6fa6c7a4a063b921990d55fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of 1-D binary plotting.  <a href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">More...</a><br /></td></tr>
+<tr class="separator:a6e5ebdd6fa6c7a4a063b921990d55fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f902933fb501e4608ff100c7030ef2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a54f902933fb501e4608ff100c7030ef2">plotImpl</a> (const void *x, const void *y, size_t Npts, size_t sizex, size_t sizey, const std::string &amp;binaryx, const std::string &amp;binaryy, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers</a>, const std::string &amp;<a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title</a>, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a54f902933fb501e4608ff100c7030ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of 2-d binary plotting.  <a href="classmx_1_1math_1_1gnuPlot.html#a54f902933fb501e4608ff100c7030ef2">More...</a><br /></td></tr>
+<tr class="separator:a54f902933fb501e4608ff100c7030ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c5780148fce7937200be0217e9db6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#a19c5780148fce7937200be0217e9db6e">doPlotCommand</a> ()</td></tr>
+<tr class="memdesc:a19c5780148fce7937200be0217e9db6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issue the plot command for all the curves.  <a href="classmx_1_1math_1_1gnuPlot.html#a19c5780148fce7937200be0217e9db6e">More...</a><br /></td></tr>
+<tr class="separator:a19c5780148fce7937200be0217e9db6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac462c8513259d6604898e16a9a782cea"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1gnuPlot.html#ac462c8513259d6604898e16a9a782cea">openTempFile</a> (char *fname)</td></tr>
 <tr class="memdesc:ac462c8513259d6604898e16a9a782cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a temporary binary file, and provide the filename.  <a href="classmx_1_1math_1_1gnuPlot.html#ac462c8513259d6604898e16a9a782cea">More...</a><br /></td></tr>
 <tr class="separator:ac462c8513259d6604898e16a9a782cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,7 +370,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Check for a response from gnuplot. </p>
 <p>It typically takes some time for a response from gnuplot to become readable, whether an error occurs or not. It is often 0.3 seconds or more. If there is no error, there will be no response so waiting for a response to check for errors after every command can be very time consuming. Thus it is a choice whether to check for errors from gnuplot after every command, and what timeout to use.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000057">Todo:</a></b></dt><dd>investigate having a second thread monitor for responses.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd>investigate having a second thread monitor for responses.</dd></dl>
 <p>gnuplot terminates all outputs with <code>\n\n</code>, so this reads up to these two characters. It then strips any leading and trailing whitespace. If the response begins with <code>gnuplot&gt;</code>, then the response is an error. In this case, checkResponse returns -1 and the gpError flag is set. If gpError is not set but the return value is -1, then some other error occurred (check <code>errno</code>).</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -420,6 +507,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aff9f7649b1180ecf07ac919b775dcef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9f7649b1180ecf07ac919b775dcef4">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::math::gnuPlot::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear all the curves. </p>
+
+</div>
+</div>
 <a id="ad1b9c12b07d0efeff7fb9f66bc648cc6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1b9c12b07d0efeff7fb9f66bc648cc6">&#9670;&nbsp;</a></span>command()</h2>
 
@@ -463,6 +569,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="reference">Referenced by <a class="el" href="eigenLapack_8hpp_source.html#l00439">mx::math::eigenPseudoInverse()</a>.</p>
+
 </div>
 </div>
 <a id="a590851a4be9e1d597346a5c805f3812a"></a>
@@ -489,6 +597,33 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a19c5780148fce7937200be0217e9db6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c5780148fce7937200be0217e9db6e">&#9670;&nbsp;</a></span>doPlotCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::doPlotCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Issue the plot command for all the curves. </p>
 
 </div>
 </div>
@@ -578,6 +713,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9485a6b3b5fa84c602a0b9069ddef821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9485a6b3b5fa84c602a0b9069ddef821">&#9670;&nbsp;</a></span>listCurves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::math::gnuPlot::listCurves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List the curves and their specifications. </p>
+
+</div>
+</div>
 <a id="aead94042511a8fe79f7a22241446bd42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aead94042511a8fe79f7a22241446bd42">&#9670;&nbsp;</a></span>logx()</h2>
 
@@ -658,6 +812,47 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="reference">Referenced by <a class="el" href="eigenLapack_8hpp_source.html#l00439">mx::math::eigenPseudoInverse()</a>.</p>
+
+</div>
+</div>
+<a id="aa0dde526ef9c96d309475a843466dc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0dde526ef9c96d309475a843466dc0a">&#9670;&nbsp;</a></span>modifiers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::math::gnuPlot::modifiers </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modifiers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modify the modifiers for a curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the curve </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>the new modifiers </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="gnuPlot_8hpp_source.html#l00852">plot()</a>, and <a class="el" href="gnuPlot_8hpp_source.html#l01004">point()</a>.</p>
+
 </div>
 </div>
 <a id="ac462c8513259d6604898e16a9a782cea"></a>
@@ -688,8 +883,59 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8dc89af8a1b2fd8c6c99b979d99e1c16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dc89af8a1b2fd8c6c99b979d99e1c16">&#9670;&nbsp;</a></span>plot() <span class="overload">[1/5]</span></h2>
+<a id="ab317f1a1c25f6d30beb233f21bd990e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab317f1a1c25f6d30beb233f21bd990e2">&#9670;&nbsp;</a></span>plot() <span class="overload">[1/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const dataT *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot data from an array. </p>
+<p>Copies the data in the array to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t ''
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00882">882</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>.</p>
+
+</div>
+</div>
+<a id="affbd547235e63f447652985d131f9d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbd547235e63f447652985d131f9d8a">&#9670;&nbsp;</a></span>plot() <span class="overload">[2/20]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -712,13 +958,13 @@ template&lt;typename dataT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>modifiers</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>modifiers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -729,8 +975,8 @@ template&lt;typename dataT &gt; </div>
 </div><div class="memdoc">
 
 <p>Plot data from an array. </p>
-<p>Copies the data in the array to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment"> plot "temp-file-name" binary format="%dataT" u 1 t "title" &lt;modifiers&gt;
-</pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
+<p>Copies the data in the array to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t '' &lt;modifiers&gt;
+* </pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
@@ -742,20 +988,209 @@ template&lt;typename dataT &gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>[optional] contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>[optional] contains the title of the data set, default is an empty string and no key on the plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of this curve </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00505">505</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00863">863</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a18a0e6fe628c42ff69861484bbb9d3dd">plotImpl()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>.</p>
 
 </div>
 </div>
-<a id="a22ec9126502dc38a0f5e42d795ffbadd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22ec9126502dc38a0f5e42d795ffbadd">&#9670;&nbsp;</a></span>plot() <span class="overload">[2/5]</span></h2>
+<a id="a0d0feaba44c4d8b47d2244af6948a165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0feaba44c4d8b47d2244af6948a165">&#9670;&nbsp;</a></span>plot() <span class="overload">[3/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const dataT *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot data from an array. </p>
+<p>Copies the data in the array to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t "title" &lt;modifiers&gt;
+* </pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>contains the title of the data set, default is an empty string and no key on the plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of this curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00852">852</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title()</a>.</p>
+
+</div>
+</div>
+<a id="ab9ab8ab81984eb5d27a0fbc37104ed43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ab8ab81984eb5d27a0fbc37104ed43">&#9670;&nbsp;</a></span>plot() <span class="overload">[4/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const dataT *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot data from an array. </p>
+<p>Copies the data in the array to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t '' &lt;modifiers&gt;
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of this curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00873">873</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>.</p>
+
+</div>
+</div>
+<a id="a02a5ea78e747370eac4d3d0cc397aa35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a5ea78e747370eac4d3d0cc397aa35">&#9670;&nbsp;</a></span>plot() <span class="overload">[5/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataTx , typename dataTy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const dataTx *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dataTy *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot y vs. x data from arrays. </p>
+<p>Copies the data in the arrays to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataTx%dataTy" u 1:2 t ''
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a pointer to an array of data for the independent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data for the dependent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the arrays </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00957">957</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>.</p>
+
+</div>
+</div>
+<a id="a56db4643ca993004c93290cd68fd9f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56db4643ca993004c93290cd68fd9f83">&#9670;&nbsp;</a></span>plot() <span class="overload">[6/20]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -784,13 +1219,92 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>modifiers</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>modifiers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot y vs. x data from arrays. </p>
+<p>Copies the data in the arrays to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataTx%dataTy" u 1:2 t '' &lt;modifiers&gt;
+* </pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a pointer to an array of data for the independent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data for the dependent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the arrays </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of the curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00936">936</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>.</p>
+
+</div>
+</div>
+<a id="a182ec219bf238b569afe02533c5462f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182ec219bf238b569afe02533c5462f5">&#9670;&nbsp;</a></span>plot() <span class="overload">[7/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataTx , typename dataTy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const dataTx *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dataTy *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -815,20 +1329,123 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a pointer to an array of data for the independent variable </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data for the dependent variable </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the arrays </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>[optional] contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>[optional] contains the title of the data set, default is an empty string and no key on the plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>contains the title of the data set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of the curve </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00526">526</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00924">924</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a18a0e6fe628c42ff69861484bbb9d3dd">plotImpl()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title()</a>.</p>
 
 </div>
 </div>
-<a id="a71760e6276d8175014f2ebd4051da67a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71760e6276d8175014f2ebd4051da67a">&#9670;&nbsp;</a></span>plot() <span class="overload">[3/5]</span></h2>
+<a id="abdb2e539f84216a3ba1481aca3fb30ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb2e539f84216a3ba1481aca3fb30ed">&#9670;&nbsp;</a></span>plot() <span class="overload">[8/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataTx , typename dataTy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const dataTx *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dataTy *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot y vs. x data from arrays. </p>
+<p>Copies the data in the arrays to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataTx%dataTy" u 1:2 t ''
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a pointer to an array of data for the independent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a pointer to an array of data for the dependent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>the length of the arrays </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of the curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00947">947</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a6e5ebdd6fa6c7a4a063b921990d55fb0">plotImpl()</a>.</p>
+
+</div>
+</div>
+<a id="a1a13a1995514309ac043ccd4ab18482e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a13a1995514309ac043ccd4ab18482e">&#9670;&nbsp;</a></span>plot() <span class="overload">[9/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot from a file without specifying the name or any modifiers. </p>
+<p>The file name is used for the identifying name</p>
+<p>Forms the gnuplot plot command as follows: </p><pre class="fragment">* plot '&lt;fname&gt;' t ''
+* </pre><p> The modifiers string can contain any modifiers such as <em>using</em>, etc. Should generally not include <em>title</em>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fname</td><td>the name (with full path) of the file containing data to plot </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a506a4fc79281a4332c28a9ad4a412bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506a4fc79281a4332c28a9ad4a412bb9">&#9670;&nbsp;</a></span>plot() <span class="overload">[10/20]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -843,7 +1460,13 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>modifiers</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -853,13 +1476,69 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Issue a plot command with a n separate lines specified by gplot_spec structures. </p>
-<p>Forms the plot command as follows </p><pre class="fragment">  plot &lt;plot_specs[0]&gt;, /
-       &lt;plot_specs[1]&gt;, /
-       ---
-       &lt;plot_specs[n-1]&gt;
-</pre><p> Plot from a file Forms the gnuplot plot command as follows: </p><pre class="fragment">plot "&lt;fname&gt;" &lt;modifiers&gt;
-</pre><p> The modifiers string can contain any modifiers such as <em>using</em>, <em>title</em>, etc.</p>
+<p>Plot from a file without specifying the title. </p>
+<p>Forms the gnuplot plot command as follows: </p><pre class="fragment">* plot '&lt;fname&gt;' &lt;modifiers&gt; t ''
+* </pre><p> The modifiers string can contain any modifiers such as <em>using</em>, etc. Should generally not include <em>title</em>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fname</td><td>the name (with full path) of the file containing data to plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name for this curve. If "" then the curve# is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27a5667ecb287ffebc2fade843a60fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a5667ecb287ffebc2fade843a60fd4">&#9670;&nbsp;</a></span>plot() <span class="overload">[11/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot from a file specifying all curve components. </p>
+<p>Forms the gnuplot plot command as follows: </p><pre class="fragment">* plot '&lt;fname&gt;' &lt;modifiers&gt; t '&lt;title&gt;'
+* </pre><p> The modifiers string can contain any modifiers such as <em>using</em>, etc. Should generally not include <em>title</em>.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
@@ -870,17 +1549,105 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fname</td><td>the name (with full path) of the file containing data to plot </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>[optional] contains any modifiers to the plot command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>the title for this curve </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name for this curve. If "" then curve# is used. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="gnuPlot_8hpp_source.html#l00537">plot()</a>, and <a class="el" href="gnuPlot_8hpp_source.html#l00547">point()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eigenLapack_8hpp_source.html#l00439">mx::math::eigenPseudoInverse()</a>, <a class="el" href="gnuPlot_8hpp_source.html#l00966">plot()</a>, and <a class="el" href="gnuPlot_8hpp_source.html#l01004">point()</a>.</p>
 
 </div>
 </div>
-<a id="af65d581dcfbdcb0ecfd43d302546d10b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af65d581dcfbdcb0ecfd43d302546d10b">&#9670;&nbsp;</a></span>plot() <span class="overload">[4/5]</span></h2>
+<a id="a56ca3456e8ea46a456e1cb260e077d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ca3456e8ea46a456e1cb260e077d54">&#9670;&nbsp;</a></span>plot() <span class="overload">[12/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot from a file without modifiers. </p>
+<p>The file name is used for the identifying name</p>
+<p>Forms the gnuplot plot command as follows: </p><pre class="fragment">* plot '&lt;fname&gt;' &lt;modifiers&gt; t ''
+* </pre><p> The modifiers string can contain any modifiers such as <em>using</em>, etc. Should generally not include <em>title</em>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fname</td><td>the name (with full path) of the file containing data to plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name for this curve. If "" then the curve# is used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb63f98c74e3f5dbcab742aab167819e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb63f98c74e3f5dbcab742aab167819e">&#9670;&nbsp;</a></span>plot() <span class="overload">[13/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; dataT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot data from a vector. </p>
+<p>Copies the data in the vector to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t '' 
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>the vector containing the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00917">917</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac3dec89b43636ec77760598efdf080bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3dec89b43636ec77760598efdf080bb">&#9670;&nbsp;</a></span>plot() <span class="overload">[14/20]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,13 +1664,13 @@ template&lt;typename dataT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>modifiers</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>modifiers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -914,8 +1681,8 @@ template&lt;typename dataT &gt; </div>
 </div><div class="memdoc">
 
 <p>Plot data from a vector. </p>
-<p>Copies the data in the vector to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment"> plot "temp-file-name" binary format="%dataT" u 1 t "title" &lt;modifiers&gt;
-</pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
+<p>Copies the data in the vector to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t '' &lt;modifiers&gt;
+* </pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
@@ -926,18 +1693,186 @@ template&lt;typename dataT &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>the vector containing the data </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>[optional] contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>[optional] contains the title of the data set, default is an empty string and no key on the plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of this curve </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00515">515</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00900">900</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>.</p>
 
 </div>
 </div>
-<a id="a9f881e7535f380de783b841fd96691c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f881e7535f380de783b841fd96691c6">&#9670;&nbsp;</a></span>plot() <span class="overload">[5/5]</span></h2>
+<a id="ad03fa44856121d158b8e18548c6e6177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03fa44856121d158b8e18548c6e6177">&#9670;&nbsp;</a></span>plot() <span class="overload">[15/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; dataT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot data from a vector. </p>
+<p>Copies the data in the vector to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t "title" &lt;modifiers&gt;
+* </pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>the vector containing the data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>contains the title of the data set, default is an empty string and no key on the plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of this curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00890">890</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title()</a>.</p>
+
+</div>
+</div>
+<a id="a4e602f6908747d4f362aa1f2c0b23e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e602f6908747d4f362aa1f2c0b23e7b">&#9670;&nbsp;</a></span>plot() <span class="overload">[16/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; dataT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot data from a vector. </p>
+<p>Copies the data in the vector to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataT" u 1 t '' 
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>the vector containing the data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of this curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00909">909</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acefca5b8984ab4df01ea100395389788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefca5b8984ab4df01ea100395389788">&#9670;&nbsp;</a></span>plot() <span class="overload">[17/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataTx , typename dataTy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; dataTx &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; dataTy &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot y vs. x data from vectors. </p>
+<p>Copies the data in the vectors to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataTx%dataTy" u 1:2 t ''
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a vector of data for the independent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a vector of data for the dependent variable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00996">996</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot()</a>.</p>
+
+</div>
+</div>
+<a id="ac28c7967e96b561a695a754bbba09012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28c7967e96b561a695a754bbba09012">&#9670;&nbsp;</a></span>plot() <span class="overload">[18/20]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -960,13 +1895,85 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>modifiers</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>modifiers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot y vs. x data from vectors. </p>
+<p>Copies the data in the vectors to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment"> plot "temp-file-name" binary format="%dataTx%dataTy" u 1:2 t '' &lt;modifiers&gt;
+</pre><p> The modifiers string <b>must</b> <b>NOT</b> contain the <b>binary</b>, <b>format</b>, <b>using</b>, or the <b>title</b> modifiers, but can contain any other modifiers. Title is specified so that the name of the temporary file name is not printed on the plot.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a vector of data for the independent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a vector of data for the dependent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of the curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00977">977</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot()</a>.</p>
+
+</div>
+</div>
+<a id="a61047d45d1a354529e889598ac817f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61047d45d1a354529e889598ac817f7a">&#9670;&nbsp;</a></span>plot() <span class="overload">[19/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataTx , typename dataTy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; dataTx &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; dataTy &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -990,20 +1997,79 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a vector of data for the independent variable </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a vector of data for the dependent variable </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>[optional] contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>[optional] contains the title of the data set, default is an empty string and no key on the plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifiers</td><td>contains any modifiers to the plot command other than <b>binary</b>, <b>format</b>, <b>using</b>, and <b>title</b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>contains the title of the data set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of the curve </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00537">537</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00966">966</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a71760e6276d8175014f2ebd4051da67a">plot()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title()</a>.</p>
 
 </div>
 </div>
-<a id="a035c0868147a05679a3e32703119bb53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a035c0868147a05679a3e32703119bb53">&#9670;&nbsp;</a></span>plotImpl() <span class="overload">[1/2]</span></h2>
+<a id="a16b4db2d585700f04f0f37faf8ed052e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b4db2d585700f04f0f37faf8ed052e">&#9670;&nbsp;</a></span>plot() <span class="overload">[20/20]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataTx , typename dataTy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::plot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; dataTx &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; dataTy &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot y vs. x data from vectors. </p>
+<p>Copies the data in the vectors to a temporary binary file, and then forms the gnuplot plot command as follows: </p><pre class="fragment">*  plot "temp-file-name" binary format="%dataTx%dataTy" u 1:2 t ''
+* </pre><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">-1</td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>a vector of data for the independent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>a vector of data for the dependent variable </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the identifying name of the curve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00987">987</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot()</a>.</p>
+
+</div>
+</div>
+<a id="a54f902933fb501e4608ff100c7030ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f902933fb501e4608ff100c7030ef2">&#9670;&nbsp;</a></span>plotImpl() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1063,7 +2129,13 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em>&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1082,8 +2154,8 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 </div>
 </div>
-<a id="a18a0e6fe628c42ff69861484bbb9d3dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18a0e6fe628c42ff69861484bbb9d3dd">&#9670;&nbsp;</a></span>plotImpl() <span class="overload">[2/2]</span></h2>
+<a id="a6e5ebdd6fa6c7a4a063b921990d55fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5ebdd6fa6c7a4a063b921990d55fb0">&#9670;&nbsp;</a></span>plotImpl() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1119,7 +2191,13 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em>&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1136,7 +2214,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>Implementation of 1-D binary plotting. </p>
 
-<p class="reference">Referenced by <a class="el" href="gnuPlot_8hpp_source.html#l00505">plot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gnuPlot_8hpp_source.html#l00852">plot()</a>.</p>
 
 </div>
 </div>
@@ -1199,9 +2277,9 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00547">547</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l01004">1004</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a71760e6276d8175014f2ebd4051da67a">plot()</a>.</p>
+<p class="reference">References <a class="el" href="classmx_1_1math_1_1gnuPlot.html#aa0dde526ef9c96d309475a843466dc0a">modifiers()</a>, <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot()</a>, and <a class="el" href="classmx_1_1math_1_1gnuPlot.html#a343e01ae10e53684a990581c6216efee">title()</a>.</p>
 
 </div>
 </div>
@@ -1228,6 +2306,64 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a585f46ef311604d30f2b2de7d155ba99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585f46ef311604d30f2b2de7d155ba99">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::math::gnuPlot::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear all the curves and reset plot configuration. </p>
+
+</div>
+</div>
+<a id="a343e01ae10e53684a990581c6216efee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343e01ae10e53684a990581c6216efee">&#9670;&nbsp;</a></span>title()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mx::math::gnuPlot::title </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modify the title for a curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the curve </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>the new title </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="gnuPlot_8hpp_source.html#l00852">plot()</a>, and <a class="el" href="gnuPlot_8hpp_source.html#l01004">point()</a>.</p>
 
 </div>
 </div>
@@ -1313,6 +2449,120 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 </div>
 </div>
+<a id="aa187e9983aafe029ca81556fc02a3663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa187e9983aafe029ca81556fc02a3663">&#9670;&nbsp;</a></span>xrange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::xrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unset the x-axis range. </p>
+<p>Sends the command: </p><pre class="fragment">* unset xrange
+* </pre><dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+
+</div>
+</div>
+<a id="a3368b2aab38e3e834ef33892a31df95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3368b2aab38e3e834ef33892a31df95e">&#9670;&nbsp;</a></span>xrange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::xrange </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the x-axis range. </p>
+<p>Sends the command: </p><pre class="fragment">* set xrange [x0:x1]
+* </pre><dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+
+</div>
+</div>
+<a id="a921d9e07dd593caea272954f28e54211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921d9e07dd593caea272954f28e54211">&#9670;&nbsp;</a></span>yrange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::yrange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unset the y-axis range. </p>
+<p>Sends the command: </p><pre class="fragment">* unset yrange
+* </pre><dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+
+</div>
+</div>
+<a id="ac37102a5699b0569a999dcb6bcbef89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37102a5699b0569a999dcb6bcbef89c">&#9670;&nbsp;</a></span>yrange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mx::math::gnuPlot::yrange </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the y-axis range. </p>
+<p>Sends the command: </p><pre class="fragment">* set yrange [y0:y1]
+* </pre><dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on error </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a71a989156ce03aa41dcfb33197cc7540"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71a989156ce03aa41dcfb33197cc7540">&#9670;&nbsp;</a></span>_deleteTemp</h2>
@@ -1336,7 +2586,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>Flag to control whether temporary files are deleted on destruction. Default is true (files deleted). </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00188">188</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00225">225</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1362,7 +2612,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>File descriptor for the gnuplot stderr fifo. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00177">177</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00214">214</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1388,7 +2638,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>File name of the gnuplot stderr fifo. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00174">174</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00211">211</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1415,7 +2665,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 <p>Where to create gnuplot stderr fifo. </p>
 <p>Default is /dev/shm/ </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00171">171</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00208">208</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1441,7 +2691,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>Set to true if the response indicates a gnuplot error. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00162">162</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00199">199</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +2717,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>File stream for the gnuplot interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00166">166</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00203">203</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1493,7 +2743,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 
 <p>Vector of all temporary file names opened, used for removal on destruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00185">185</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00222">222</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +2770,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 <p>Location of temporary files. </p>
 <p>Default is /dev/shm/ </p>
 
-<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00182">182</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gnuPlot_8hpp_source.html#l00219">219</a> of file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +2783,7 @@ template&lt;typename dataTx , typename dataTy &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><a class="el" href="classmx_1_1math_1_1gnuPlot.html">gnuPlot</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:05 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -313,7 +313,7 @@ $(document).ready(function(){initNavTree('array2FitGaussian2D_8hpp_source.html',
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;   {</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">if</span>(sigma_x || sigma_y || theta)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;array2FitGaussian2D::setFixed&quot;</span>, <a class="code" href="group__mxe__errors.html#gacabe55cc9097f4dad7ec5b492a25779b">MXE_NOTIMPL</a>, <span class="stringliteral">&quot;cannot fix sigma_x, sigma_y, and theta separately&quot;</span>);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;         mxError(<span class="stringliteral">&quot;array2FitGaussian2D::setFixed&quot;</span>, MXE_NOTIMPL, <span class="stringliteral">&quot;cannot fix sigma_x, sigma_y, and theta separately&quot;</span>);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      </div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      m_sigma_x_idx = idx++;</div>
@@ -652,8 +652,6 @@ $(document).ready(function(){initNavTree('array2FitGaussian2D_8hpp_source.html',
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//math_fit_array2FitGaussian2D_hpp</span></div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga0b594d836faba33b6db38fa588320c21"><div class="ttname"><a href="group__dimensioned__constants.html#ga0b594d836faba33b6db38fa588320c21">mx::astro::constants::G</a></div><div class="ttdeci">constexpr units::realT G()</div><div class="ttdoc">Newton's Gravitational Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00051">constants.hpp:51</a></div></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_gacabe55cc9097f4dad7ec5b492a25779b"><div class="ttname"><a href="group__mxe__errors.html#gacabe55cc9097f4dad7ec5b492a25779b">MXE_NOTIMPL</a></div><div class="ttdeci">#define MXE_NOTIMPL</div><div class="ttdoc">A component or technique is not implemented.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00132">mxError.hpp:132</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 <div class="ttc" id="astructmx_1_1math_1_1fit_1_1array2FitGaussian2D_html"><div class="ttname"><a href="structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html">mx::math::fit::array2FitGaussian2D</a></div><div class="ttdoc">Wrapper for a native array to pass to levmarInterface, with 2D Gaussian details.</div><div class="ttdef"><b>Definition:</b> <a href="array2FitGaussian2D_8hpp_source.html#l00046">array2FitGaussian2D.hpp:47</a></div></div>
 <div class="ttc" id="astructmx_1_1math_1_1fit_1_1array2FitGaussian2D_html_a0313eea4805155ef7b08543f545fb84f"><div class="ttname"><a href="structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0313eea4805155ef7b08543f545fb84f">mx::math::fit::array2FitGaussian2D::m_sigma_x_idx</a></div><div class="ttdeci">int m_sigma_x_idx</div><div class="ttdoc">Index of sigma_x in the parameters. Re-used for a.</div><div class="ttdef"><b>Definition:</b> <a href="array2FitGaussian2D_8hpp_source.html#l00072">array2FitGaussian2D.hpp:72</a></div></div>
@@ -671,7 +669,7 @@ $(document).ready(function(){initNavTree('array2FitGaussian2D_8hpp_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_6db95d63ecdf0969fe78c6ed6d247181.html">fit</a></li><li class="navelem"><a class="el" href="array2FitGaussian2D_8hpp.html">array2FitGaussian2D.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

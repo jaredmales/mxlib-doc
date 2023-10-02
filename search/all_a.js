@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['h_768',['h',['../group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca',1,'mx::astro::constants']]],
-  ['h_769',['H',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a9b25de78b1b974650b98730ac5566013',1,'mx::AO::analysis::aoAtmosphere::H()'],['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a7f74f5075420b5923c0166490d6d063d',1,'mx::AO::analysis::aoAtmosphere::H(realT nH)']]],
+  ['h_768',['H',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a9b25de78b1b974650b98730ac5566013',1,'mx::AO::analysis::aoAtmosphere::H()'],['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a7f74f5075420b5923c0166490d6d063d',1,'mx::AO::analysis::aoAtmosphere::H(realT nH)']]],
+  ['h_769',['h',['../group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca',1,'mx::astro::constants']]],
   ['h_5fks_770',['H_Ks',['../structmx_1_1astro_1_1mainSequence.html#aa70518952637aa9f619e7d51045d7353',1,'mx::astro::mainSequence::H_Ks(realT numType)'],['../structmx_1_1astro_1_1mainSequence.html#a157122bc62eb4b46ea1a5bd511edcb93',1,'mx::astro::mainSequence::H_Ks(const std::string &amp;spType)']]],
   ['h_5fobs_771',['h_obs',['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a179fac867e581ddf8d920f151b1c2d0d',1,'mx::AO::analysis::aoAtmosphere::h_obs()'],['../classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a48ced2eebd3a309f31d27d1701fbeb6b',1,'mx::AO::analysis::aoAtmosphere::h_obs(realT nh)']]],
   ['hadd_772',['hadd',['../group__template__blas.html#ga533678f811dd6bda72bf578e50ede88c',1,'mx::math']]],
@@ -9,7 +9,7 @@ var searchData=
   ['hadp_774',['hadp',['../group__template__blas.html#ga1621ce1a597b9fb9447f3ca296679e7c',1,'mx::math']]],
   ['hadp_5fimpl_775',['hadp_impl',['../group__template__blas.html#gaafc77f081091e88961c3f43264a7a6da',1,'mx::math']]],
   ['half_5fpi_776',['half_pi',['../group__genconstants.html#gab8564534785a26fc8a07e57e74a55ebc',1,'mx::math']]],
-  ['hamming_777',['hamming',['../group__signal__windows1D.html#ga826e0ac8973511cbdb4fa17244bef047',1,'mx::sigproc::window::hamming(std::vector&lt; realT &gt; &amp;filt)'],['../group__signal__windows1D.html#gab495ee7853f8b94c172221fde102aa70',1,'mx::sigproc::window::hamming(realT *filt, int N)']]],
+  ['hamming_777',['hamming',['../group__signal__windows1D.html#gab495ee7853f8b94c172221fde102aa70',1,'mx::sigproc::window::hamming(realT *filt, int N)'],['../group__signal__windows1D.html#ga826e0ac8973511cbdb4fa17244bef047',1,'mx::sigproc::window::hamming(std::vector&lt; realT &gt; &amp;filt)']]],
   ['handler_778',['handler',['../structmx_1_1app_1_1iniFile.html#a0759c467e32c94b932dc9e6e8b626b24',1,'mx::app::iniFile']]],
   ['hann_779',['hann',['../group__signal__windows1D.html#gad4206316596a9b44903423d77d3aa485',1,'mx::sigproc::window::hann(realT *filt, int N)'],['../group__signal__windows1D.html#ga539672e52833e55f97ac2bae806f05c1',1,'mx::sigproc::window::hann(std::vector&lt; realT &gt; &amp;filt)']]],
   ['has_5fvalue_5ftype_3c_20t_2c_20void_5ft_3c_20typename_20t_3a_3avalue_5ftype_20_3e_20_3e_780',['has_value_type&lt; T, void_t&lt; typename T::value_type &gt; &gt;',['../structmx_1_1meta_1_1has__value__type_3_01T_00_01void__t_3_01typename_01T_1_1value__type_01_4_01_4.html',1,'mx::meta']]],
@@ -26,7 +26,7 @@ var searchData=
   ['helptype_791',['helpType',['../structmx_1_1app_1_1configTarget.html#a90be787745ee522bad7ef4fecd083717',1,'mx::app::configTarget']]],
   ['high_20contrast_20imaging_792',['High Contrast Imaging',['../group__hc__imaging.html',1,'']]],
   ['high_20contrast_20imaging_20files_793',['High Contrast Imaging Files',['../group__hc__imaging__files.html',1,'']]],
-  ['histogramuniform_794',['histogramUniform',['../classmx_1_1math_1_1histogramUniform.html',1,'mx::math']]],
+  ['histogramuniform_794',['histogramUniform',['../classmx_1_1math_1_1histogramUniform.html#a07cf1b7173062868fc544308270317bc',1,'mx::math::histogramUniform::histogramUniform(realT mn, realT mx, realT w)'],['../classmx_1_1math_1_1histogramUniform.html#ac4edcc3b15a5c39c93f9ae438da61b56',1,'mx::math::histogramUniform::histogramUniform()'],['../classmx_1_1math_1_1histogramUniform.html',1,'mx::math::histogramUniform&lt; realT &gt;']]],
   ['histogramuniform_2ehpp_795',['histogramUniform.hpp',['../histogramUniform_8hpp.html',1,'']]],
   ['hostptrt_796',['hostPtrT',['../structmx_1_1cuda_1_1cudaPtr.html#ad96daf5e0b5e298df040435e8045fe8b',1,'mx::cuda::cudaPtr']]],
   ['hrminsecfromday_797',['hrMinSecFromDay',['../astroDynamics_8hpp.html#a7479ae330274e40d6e76a181aa3ea77c',1,'mx::astro']]],

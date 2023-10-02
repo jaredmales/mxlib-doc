@@ -347,7 +347,7 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;   fin = fopen(fname.c_str(), <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;   <span class="keywordflow">if</span>(fin == 0)</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;   {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error from fopen [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      mxPError(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error from fopen [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;   }</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
@@ -359,11 +359,11 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="comment">//Have to handle case where EOF reached but no error.</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordflow">if</span>(errno != 0)</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;         <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error reading data size [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;         mxPError(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error reading data size [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      }</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Error reading data size, did not read enough bytes. [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;         mxError(<span class="stringliteral">&quot;readBinVector&quot;</span>, MXE_FILERERR, <span class="stringliteral">&quot;Error reading data size, did not read enough bytes. [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      }</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      fclose(fin);</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <span class="keywordflow">return</span> -1;</div>
@@ -371,7 +371,7 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;   <span class="keywordflow">if</span>( typecode != binVectorTypeCode&lt;dataT&gt;() )</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;   {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, <a class="code" href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a>, <span class="stringliteral">&quot;Mismatch between type dataT and type in file [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      mxError(<span class="stringliteral">&quot;readBinVector&quot;</span>, MXE_SIZEERR, <span class="stringliteral">&quot;Mismatch between type dataT and type in file [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      fclose(fin);</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   }</div>
@@ -385,11 +385,11 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="comment">//Have to handle case where EOF reached but no error.</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keywordflow">if</span>(errno != 0)</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;         <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error reading vector size [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;         mxPError(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error reading vector size [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      }</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Error reading vector size, did not read enough bytes [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;         mxError(<span class="stringliteral">&quot;readBinVector&quot;</span>, MXE_FILERERR, <span class="stringliteral">&quot;Error reading vector size, did not read enough bytes [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      }</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      fclose(fin);</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <span class="keywordflow">return</span> -1;</div>
@@ -405,11 +405,11 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="comment">//Have to handle case where EOF reached but no error.</span></div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keywordflow">if</span>(errno != 0)</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;         <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error reading data [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;         mxPError(<span class="stringliteral">&quot;readBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error reading data [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      }</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;         <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;readBinVector&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Did not read enough data [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;         mxError(<span class="stringliteral">&quot;readBinVector&quot;</span>, MXE_FILERERR, <span class="stringliteral">&quot;Did not read enough data [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      }</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      fclose(fin);</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keywordflow">return</span> -1;</div>
@@ -442,14 +442,14 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;   fout = fopen(fname.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;   <span class="keywordflow">if</span>(fout == 0)</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;   {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error from fopen [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      mxPError(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error from fopen [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;   }</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;   nwr = fwrite( &amp;typecode, <span class="keyword">sizeof</span>(<a class="code" href="group__binvector.html#ga5207aff4cd7f5b298565bd281bc8dd26">binVTypeT</a>), 1, fout);</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;   <span class="keywordflow">if</span>(nwr != 1)</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;   {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error writing typecode [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      mxPError(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error writing typecode [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      fclose(fout);</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;   }</div>
@@ -457,7 +457,7 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;   nwr = fwrite( &amp;sz, <span class="keyword">sizeof</span>(<a class="code" href="binVector_8hpp.html#a70a37e6cab3be179c0c2c9a0eab9531a">binVSizeT</a>), 1, fout);</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;   <span class="keywordflow">if</span>(nwr != 1)</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;   {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error writing vector size [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      mxPError(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error writing vector size [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      fclose(fout);</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;   }</div>
@@ -465,7 +465,7 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;   nwr = fwrite( vec.data(), <span class="keyword">sizeof</span>(dataT), vec.size(), fout);</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;   <span class="keywordflow">if</span>(nwr != sz)</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;   {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error writing data [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      mxPError(<span class="stringliteral">&quot;writeBinVector&quot;</span>, errno, <span class="stringliteral">&quot;Error writing data [&quot;</span> + fname + <span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      fclose(fout);</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;   }</div>
@@ -485,10 +485,6 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div class="ttc" id="agroup__binvector_html_ga44de518a25c5287f0f3d4c9f80acf11d"><div class="ttname"><a href="group__binvector.html#ga44de518a25c5287f0f3d4c9f80acf11d">mx::ioutils::binVectorTypeCode</a></div><div class="ttdeci">binVTypeT binVectorTypeCode()</div><div class="ttdoc">Get the integer type code corresponding to the type.</div></div>
 <div class="ttc" id="agroup__binvector_html_ga5207aff4cd7f5b298565bd281bc8dd26"><div class="ttname"><a href="group__binvector.html#ga5207aff4cd7f5b298565bd281bc8dd26">mx::ioutils::binVTypeT</a></div><div class="ttdeci">uint64_t binVTypeT</div><div class="ttdoc">The type of binVector type codes.</div><div class="ttdef"><b>Definition:</b> <a href="binVector_8hpp_source.html#l00062">binVector.hpp:62</a></div></div>
 <div class="ttc" id="agroup__binvector_html_gacb8b9ebf8b2fd06daaa235e54e644378"><div class="ttname"><a href="group__binvector.html#gacb8b9ebf8b2fd06daaa235e54e644378">mx::ioutils::readBinVector</a></div><div class="ttdeci">int readBinVector(std::vector&lt; dataT &gt; &amp;vec, const std::string &amp;fname)</div><div class="ttdoc">Read a BinVector file from disk.</div><div class="ttdef"><b>Definition:</b> <a href="binVector_8hpp_source.html#l00240">binVector.hpp:240</a></div></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
-<div class="ttc" id="agroup__error__macros_html_gad4e5d5d54d751af7aad7400576e486d5"><div class="ttname"><a href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a></div><div class="ttdeci">#define mxPError(esrc, ecode, expl)</div><div class="ttdoc">This reports a standard library error, taking after perror.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00096">mxError.hpp:96</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga1cb55d92155f8f1425930d8d2db08ca1"><div class="ttname"><a href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a></div><div class="ttdeci">#define MXE_FILERERR</div><div class="ttdoc">An error occurred while reading from a file.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00214">mxError.hpp:214</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga91bc075cebce532574429af628b3c3b0"><div class="ttname"><a href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a></div><div class="ttdeci">#define MXE_SIZEERR</div><div class="ttdoc">A size was invalid or calculated incorrectly.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00164">mxError.hpp:164</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -496,7 +492,7 @@ $(document).ready(function(){initNavTree('binVector_8hpp_source.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_6895d4f394f35c99cbb9eae210940ca9.html">ioutils</a></li><li class="navelem"><a class="el" href="binVector_8hpp.html">binVector.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

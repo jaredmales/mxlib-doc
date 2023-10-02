@@ -14,5 +14,6 @@ var dir_749a31579df8fa01bae22bb783a391d0 =
     [ "psdUtils.hpp", "psdUtils_8hpp.html", "psdUtils_8hpp" ],
     [ "psdVarMean.hpp", "psdVarMean_8hpp.html", "psdVarMean_8hpp" ],
     [ "signalWindows.hpp", "signalWindows_8hpp.html", "signalWindows_8hpp" ],
+    [ "sigproc.hpp", "sigproc_8hpp.html", null ],
     [ "zernike.hpp", "zernike_8hpp.html", "zernike_8hpp" ]
 ];

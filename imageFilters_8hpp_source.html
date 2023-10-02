@@ -257,7 +257,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;         std::stringstream errs;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;         errs &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; kernW &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; <a class="code" href="structmx_1_1improc_1_1azBoxKernel.html#a751f97bf455cb0ae3dc6e70c1cb0429c">m_radWidth</a> &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; <a class="code" href="structmx_1_1improc_1_1azBoxKernel.html#a998cb691f6349672b0999b3f3965d3f8">m_azWidth</a> &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; m_maxWidth &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; y &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; rad0 &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; sinq &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; cosq;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;         errs &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; w &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; <a class="code" href="group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca">h</a> &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;  </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         <a class="code" href="group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d">mxThrowException</a>(<a class="code" href="classmx_1_1err_1_1sizeerr.html">err::sizeerr</a>, <span class="stringliteral">&quot;azBoxKernel::setKernel&quot;</span>, <span class="stringliteral">&quot;width bigger than 2*maxWidth.  This is a bug.  Details: &quot;</span> + errs.str());</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         mxThrowException(<a class="code" href="classmx_1_1err_1_1sizeerr.html">err::sizeerr</a>, <span class="stringliteral">&quot;azBoxKernel::setKernel&quot;</span>, <span class="stringliteral">&quot;width bigger than 2*maxWidth.  This is a bug.  Details: &quot;</span> + errs.str());</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca">h</a> &gt; m_maxWidth*2)</div>
@@ -265,7 +265,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;         std::stringstream errs;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;         errs &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; kernW &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; <a class="code" href="structmx_1_1improc_1_1azBoxKernel.html#a751f97bf455cb0ae3dc6e70c1cb0429c">m_radWidth</a> &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; <a class="code" href="structmx_1_1improc_1_1azBoxKernel.html#a998cb691f6349672b0999b3f3965d3f8">m_azWidth</a> &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; m_maxWidth &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; y &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; rad0 &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; sinq &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; cosq;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;         errs &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; w &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; <a class="code" href="group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca">h</a> &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;  </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;         <a class="code" href="group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d">mxThrowException</a>(err::sizeerr, <span class="stringliteral">&quot;azBoxKernel::setKernel&quot;</span>, <span class="stringliteral">&quot;height bigger than 2*maxWidth.  This is a bug.  Details: &quot;</span> + errs.str());</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;         mxThrowException(err::sizeerr, <span class="stringliteral">&quot;azBoxKernel::setKernel&quot;</span>, <span class="stringliteral">&quot;height bigger than 2*maxWidth.  This is a bug.  Details: &quot;</span> + errs.str());</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      kernel.resize(w, <a class="code" href="group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca">h</a>);</div>
@@ -300,7 +300,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;               <span class="keywordflow">if</span>(<a class="code" href="structmx_1_1improc_1_1azBoxKernel.html#a2da95908b96187595e55f6852a0fd61c">m_maxAz</a> &gt; 0) <span class="comment">//Only check this if needed.</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;               {</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                  q2 = atan2(y+yP-ycen, x+xP-xcen);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                  dq = <a class="code" href="group__geo.html#gacd188a1f72156491abce8b4c2ad9d393">math::angleDiff</a>(q,q2);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                  dq = math::angleDiff&lt;math::radiansT&lt;arithT&gt;&gt;(q,q2);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                  <span class="keywordflow">if</span>(fabs(dq) &gt; <a class="code" href="structmx_1_1improc_1_1azBoxKernel.html#a2da95908b96187595e55f6852a0fd61c">m_maxAz</a>)</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                  {</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                     kernel(i,j) = 0;</div>
@@ -316,7 +316,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      arithT ksum = kernel.sum();</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">if</span>(ksum == 0)</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;         <a class="code" href="group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d">mxThrowException</a>(err::invalidconfig, <span class="stringliteral">&quot;azBoxKernel::setKernel&quot;</span>, <span class="stringliteral">&quot;kernel sum 0 at &quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;,&quot;</span> + std::to_string(y));</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;         mxThrowException(err::invalidconfig, <span class="stringliteral">&quot;azBoxKernel::setKernel&quot;</span>, <span class="stringliteral">&quot;kernel sum 0 at &quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;,&quot;</span> + std::to_string(y));</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      kernel /= ksum;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;   }</div>
@@ -1243,124 +1243,124 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;      r1 += dr;</div>
 <div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;   }</div>
 <div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;      </div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;   <span class="comment">/* And finally, interpolate onto the radius image */</span></div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;   stdIm.resize(dim1, dim2);</div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;   <a class="code" href="classmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator&lt;math::gsl_interp_linear&lt;double&gt;</a>&gt; interp(std_r, std_v);</div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;   </div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;dim1;++i)</div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;   {</div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;dim2;++j)</div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;      {</div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;         <span class="keywordflow">if</span>(rad(i,j) &lt; minRad || rad(i,j) &gt; maxRad)</div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;         {</div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;            stdIm(i,j) = 0;</div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;         }</div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;         {</div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;            stdIm(i,j) = interp( ((<span class="keywordtype">double</span>) rad(i,j)) );</div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;            <span class="keywordflow">if</span>(divide) stdIm(i,j) = im(i,j) / stdIm(i,j);</div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;         }</div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;      }</div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;   }</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;   </div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;}</div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160; <span class="comment"></span></div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;<span class="comment">/// Form a standard deviation image, and optionally divide the input by it to form a S/N map.</span></div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;<span class="comment"></span><span class="comment">/** The standard deviation profile is calculated using linear interpolation on a 1 pixel grid</span></div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="comment">  * This version creates a radius map on each call, and calls the above version.  This should not </span></div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="comment">  * be used for repeated alls, rather create a radius map ahead of time.</span></div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;<span class="comment">  * \overload </span></div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;   std::cerr &lt;&lt; std_r.size() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std_v.size() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;   </div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;   <span class="comment">/* And finally, interpolate onto the radius image */</span></div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;   stdIm.resize(dim1, dim2);</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;   <a class="code" href="classmx_1_1math_1_1gslInterpolator.html">math::gslInterpolator&lt;math::gsl_interp_linear&lt;double&gt;</a>&gt; interp(std_r, std_v);</div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;   </div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;dim1;++i)</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;   {</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;dim2;++j)</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;      {</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;         <span class="keywordflow">if</span>(rad(i,j) &lt; minRad || rad(i,j) &gt; maxRad)</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;         {</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;            stdIm(i,j) = 0;</div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;         }</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;         {</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;            stdIm(i,j) = interp( ((<span class="keywordtype">double</span>) rad(i,j)) );</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;            <span class="keywordflow">if</span>(divide) stdIm(i,j) = im(i,j) / stdIm(i,j);</div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;         }</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;      }</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;   }</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;   </div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;}</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160; <span class="comment"></span></div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;<span class="comment">/// Form a standard deviation image, and optionally divide the input by it to form a S/N map.</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="comment"></span><span class="comment">/** The standard deviation profile is calculated using linear interpolation on a 1 pixel grid</span></div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;<span class="comment">  * This version creates a radius map on each call, and calls the above version.  This should not </span></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;<span class="comment">  * be used for repeated alls, rather create a radius map ahead of time.</span></div>
 <div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="comment">  * \tparam eigenImT the eigen array type of the output and non-reference images</span></div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="comment">  * \overload </span></div>
 <div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenImT, <span class="keyword">typename</span> eigenImT1, <span class="keyword">typename</span> eigenImT2&gt;</div>
-<div class="line"><a name="l01182"></a><span class="lineno"><a class="line" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a"> 1182</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">stddevImage</a>( eigenImT &amp; stdIm,                 <span class="comment">///&lt; [out] the standard deviation image.  This will be resized.</span></div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;                  <span class="keyword">const</span> eigenImT1 &amp; im,             <span class="comment">///&lt; [in] the image to form the standard deviation profile of, never altered.</span></div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;                  <span class="keyword">const</span> eigenImT2 &amp; mask,           <span class="comment">///&lt; [in] a 1/0 mask.  0 pixels are excluded from the std-dev calculations.</span></div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                  <span class="keyword">typename</span> eigenImT::Scalar minRad, <span class="comment">///&lt; [in] the minimum radius to analyze</span></div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                  <span class="keyword">typename</span> eigenImT::Scalar maxRad, <span class="comment">///&lt; [in] the maximum radius to analyze</span></div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                  <span class="keywordtype">bool</span> divide = <span class="keyword">false</span>               <span class="comment">///&lt; [in] [optional] if true, the output is the input image is divided by the std-dev profile, i.e. a S/N map.  default is false.</span></div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;                )</div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;{   </div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;   <span class="keywordtype">int</span> dim1 = im.cols();</div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;   <span class="keywordtype">int</span> dim2 = im.rows();</div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;   </div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;typename eigenImT::Scalar&gt;</a> rad;</div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;   rad.resize(dim1, dim2);</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;   </div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;   <a class="code" href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">radiusImage</a>(rad);</div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;   <a class="code" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">stddevImage</a>(stdIm, im, rad, mask, minRad, maxRad, divide );</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;   </div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;}</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;<span class="comment">/// Form a standard deviation image for each imamge in a cube, and optionally divide the input by it forming a S/N map cube.</span></div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;<span class="comment"></span><span class="comment">/** The standard deviation profile is calculated using linear interpolation on a 1 pixel grid</span></div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;<span class="comment">  * \tparam eigencubeT is the eigen cube type of the input and output cubes.</span></div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="comment">  * \tparam eigenImT the eigen array type of the output and non-reference images.</span></div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenCubeT, <span class="keyword">typename</span> eigenCubeT1, <span class="keyword">typename</span> eigenImT&gt;</div>
-<div class="line"><a name="l01210"></a><span class="lineno"><a class="line" href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11"> 1210</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11">stddevImageCube</a>( eigenCubeT &amp; stdImc,              <span class="comment">///&lt; [out]  the standard deviation image cube.  This will be resized.</span></div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;                      <span class="keyword">const</span> eigenCubeT1 &amp; imc,          <span class="comment">///&lt; [in] the image cube to form the standard deviation profile of. </span></div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                      <span class="keyword">const</span> eigenImT &amp; mask,            <span class="comment">///&lt; [in] a 1/0 mask.  0 pixels are excluded from the std-dev calculations.</span></div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;                      <span class="keyword">typename</span> eigenImT::Scalar minRad, <span class="comment">///&lt; [in] the minimum radius to analyze</span></div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;                      <span class="keyword">typename</span> eigenImT::Scalar maxRad, <span class="comment">///&lt; [in] the maximum radius to analyze</span></div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;                      <span class="keywordtype">bool</span> divide = <span class="keyword">false</span>               <span class="comment">///&lt; [in] [optional] if true, the output is the input image is divided by the std-dev profile, i.e. a S/N map.  default is false.</span></div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;                    )</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;{</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;   <span class="keywordtype">int</span> dim1 = imc.cols();</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;   <span class="keywordtype">int</span> dim2 = imc.rows();</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;   </div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;typename eigenCubeT::Scalar&gt;</a> rad;</div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;   rad.resize(dim1, dim2);</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;   </div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;   <a class="code" href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">radiusImage</a>(rad);</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;<span class="comment">  * \tparam eigenImT the eigen array type of the output and non-reference images</span></div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenImT, <span class="keyword">typename</span> eigenImT1, <span class="keyword">typename</span> eigenImT2&gt;</div>
+<div class="line"><a name="l01184"></a><span class="lineno"><a class="line" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a"> 1184</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">stddevImage</a>( eigenImT &amp; stdIm,                 <span class="comment">///&lt; [out] the standard deviation image.  This will be resized.</span></div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                  <span class="keyword">const</span> eigenImT1 &amp; im,             <span class="comment">///&lt; [in] the image to form the standard deviation profile of, never altered.</span></div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                  <span class="keyword">const</span> eigenImT2 &amp; mask,           <span class="comment">///&lt; [in] a 1/0 mask.  0 pixels are excluded from the std-dev calculations.</span></div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                  <span class="keyword">typename</span> eigenImT::Scalar minRad, <span class="comment">///&lt; [in] the minimum radius to analyze</span></div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;                  <span class="keyword">typename</span> eigenImT::Scalar maxRad, <span class="comment">///&lt; [in] the maximum radius to analyze</span></div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;                  <span class="keywordtype">bool</span> divide = <span class="keyword">false</span>               <span class="comment">///&lt; [in] [optional] if true, the output is the input image is divided by the std-dev profile, i.e. a S/N map.  default is false.</span></div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;                )</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;{   </div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;   <span class="keywordtype">int</span> dim1 = im.cols();</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;   <span class="keywordtype">int</span> dim2 = im.rows();</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;   </div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;typename eigenImT::Scalar&gt;</a> rad;</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;   rad.resize(dim1, dim2);</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;   </div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;   <a class="code" href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">radiusImage</a>(rad);</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;   <a class="code" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">stddevImage</a>(stdIm, im, rad, mask, minRad, maxRad, divide );</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;   </div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;}</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;<span class="comment">/// Form a standard deviation image for each imamge in a cube, and optionally divide the input by it forming a S/N map cube.</span></div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;<span class="comment"></span><span class="comment">/** The standard deviation profile is calculated using linear interpolation on a 1 pixel grid</span></div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;<span class="comment">  * \tparam eigencubeT is the eigen cube type of the input and output cubes.</span></div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment">  * \tparam eigenImT the eigen array type of the output and non-reference images.</span></div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> eigenCubeT, <span class="keyword">typename</span> eigenCubeT1, <span class="keyword">typename</span> eigenImT&gt;</div>
+<div class="line"><a name="l01212"></a><span class="lineno"><a class="line" href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11"> 1212</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11">stddevImageCube</a>( eigenCubeT &amp; stdImc,              <span class="comment">///&lt; [out]  the standard deviation image cube.  This will be resized.</span></div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;                      <span class="keyword">const</span> eigenCubeT1 &amp; imc,          <span class="comment">///&lt; [in] the image cube to form the standard deviation profile of. </span></div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;                      <span class="keyword">const</span> eigenImT &amp; mask,            <span class="comment">///&lt; [in] a 1/0 mask.  0 pixels are excluded from the std-dev calculations.</span></div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;                      <span class="keyword">typename</span> eigenImT::Scalar minRad, <span class="comment">///&lt; [in] the minimum radius to analyze</span></div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;                      <span class="keyword">typename</span> eigenImT::Scalar maxRad, <span class="comment">///&lt; [in] the maximum radius to analyze</span></div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;                      <span class="keywordtype">bool</span> divide = <span class="keyword">false</span>               <span class="comment">///&lt; [in] [optional] if true, the output is the input image is divided by the std-dev profile, i.e. a S/N map.  default is false.</span></div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;                    )</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;{</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;   <span class="keywordtype">int</span> dim1 = imc.cols();</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;   <span class="keywordtype">int</span> dim2 = imc.rows();</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;   </div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;   <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;typename eigenCubeT::Scalar&gt;</a> rad;</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;   rad.resize(dim1, dim2);</div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;   </div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;   stdImc.resize(imc.rows(), imc.cols(), imc.planes());</div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;   <a class="code" href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">radiusImage</a>(rad);</div>
 <div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;   </div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;   <span class="comment">//#pragma omp parallel for</span></div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; imc.planes(); ++i)</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;   {</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;      <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;typename eigenCubeT::Scalar&gt;</a> im, stdIm;</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;      </div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;      im = imc.image(i);</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;   stdImc.resize(imc.rows(), imc.cols(), imc.planes());</div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;   </div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;   <span class="comment">//#pragma omp parallel for</span></div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; imc.planes(); ++i)</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;   {</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;      <a class="code" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">eigenImage&lt;typename eigenCubeT::Scalar&gt;</a> im, stdIm;</div>
 <div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;      </div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;      <a class="code" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">stddevImage</a>(stdIm, im, rad, mask, minRad, maxRad, divide );</div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160; </div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;      stdImc.image(i) = stdIm;</div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;      </div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;   }</div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;}</div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;<span class="comment">///@}</span></div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;      im = imc.image(i);</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;      </div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;      <a class="code" href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">stddevImage</a>(stdIm, im, rad, mask, minRad, maxRad, divide );</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160; </div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;      stdImc.image(i) = stdIm;</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;      </div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;   }</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;}</div>
 <div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;} <span class="comment">//namespace improc </span></div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160; </div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__imageFilters_hpp__  </span></div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;<span class="comment">///@}</span></div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;} <span class="comment">//namespace improc </span></div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;} <span class="comment">//namespace mx</span></div>
 <div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160; </div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160; </div>
-<div class="ttc" id="aclassmx_1_1err_1_1sizeerr_html"><div class="ttname"><a href="classmx_1_1err_1_1sizeerr.html">mx::err::sizeerr</a></div><div class="ttdoc">mxException for a size error</div><div class="ttdef"><b>Definition:</b> <a href="mxException_8hpp_source.html#l00239">mxException.hpp:240</a></div></div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__imageFilters_hpp__  </span></div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160; </div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160; </div>
+<div class="ttc" id="aclassmx_1_1err_1_1sizeerr_html"><div class="ttname"><a href="classmx_1_1err_1_1sizeerr.html">mx::err::sizeerr</a></div><div class="ttdoc">mxException for a size error</div><div class="ttdef"><b>Definition:</b> <a href="mxException_8hpp_source.html#l00238">mxException.hpp:239</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1gslInterpolator_html"><div class="ttname"><a href="classmx_1_1math_1_1gslInterpolator.html">mx::math::gslInterpolator</a></div><div class="ttdoc">Class to manage interpolation using the GSL interpolation library.</div><div class="ttdef"><b>Definition:</b> <a href="gslInterpolator_8hpp_source.html#l00081">gslInterpolator.hpp:82</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga48a5d9609fd9405c69f13f8cecb19ee9"><div class="ttname"><a href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">mx::astro::constants::c</a></div><div class="ttdeci">constexpr units::realT c()</div><div class="ttdoc">The speed of light.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00060">constants.hpp:60</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga92d6c2dc8ec62c1ef61873a40deba9ca"><div class="ttname"><a href="group__dimensioned__constants.html#ga92d6c2dc8ec62c1ef61873a40deba9ca">mx::astro::constants::h</a></div><div class="ttdeci">constexpr units::realT h()</div><div class="ttdoc">Planck Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00091">constants.hpp:91</a></div></div>
 <div class="ttc" id="agroup__eigen__image__processing_html_gaa5f4935db90fd971a51c9ffa85fcfa99"><div class="ttname"><a href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">mx::improc::eigenImage</a></div><div class="ttdeci">Eigen::Array&lt; scalarT, -1, -1 &gt; eigenImage</div><div class="ttdoc">Definition of the eigenImage type, which is an alias for Eigen::Array.</div><div class="ttdef"><b>Definition:</b> <a href="eigenImage_8hpp_source.html#l00044">eigenImage.hpp:44</a></div></div>
-<div class="ttc" id="agroup__exceptions_html_gad94a7fa7d77d8184ea8493d80dd6c30d"><div class="ttname"><a href="group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d">mxThrowException</a></div><div class="ttdeci">#define mxThrowException(extype, src, expl)</div><div class="ttdoc">Throw an exception. This macro takes care of the file and line.</div><div class="ttdef"><b>Definition:</b> <a href="mxException_8hpp_source.html#l00382">mxException.hpp:382</a></div></div>
-<div class="ttc" id="agroup__geo_html_ga92a420eb057d344c22e3973c29030489"><div class="ttname"><a href="group__geo.html#ga92a420eb057d344c22e3973c29030489">mx::math::dtor</a></div><div class="ttdeci">realT dtor(realT q)</div><div class="ttdoc">Convert from degrees to radians.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00078">geo.hpp:78</a></div></div>
-<div class="ttc" id="agroup__geo_html_gacd188a1f72156491abce8b4c2ad9d393"><div class="ttname"><a href="group__geo.html#gacd188a1f72156491abce8b4c2ad9d393">mx::math::angleDiff</a></div><div class="ttdeci">realT angleDiff(realT q1, realT q2)</div><div class="ttdoc">Calculate the difference between two angles, correctly across 0/360.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00157">geo.hpp:157</a></div></div>
+<div class="ttc" id="agroup__geo_html_ga92a420eb057d344c22e3973c29030489"><div class="ttname"><a href="group__geo.html#ga92a420eb057d344c22e3973c29030489">mx::math::dtor</a></div><div class="ttdeci">realT dtor(realT q)</div><div class="ttdoc">Convert from degrees to radians.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00132">geo.hpp:132</a></div></div>
 <div class="ttc" id="agroup__image__filters__average_html_ga48077d7e17ad43cba5990c12a1f7a1a8"><div class="ttname"><a href="group__image__filters__average.html#ga48077d7e17ad43cba5990c12a1f7a1a8">mx::improc::medianSmooth</a></div><div class="ttdeci">int medianSmooth(imageTout &amp;imOut, const imageTin &amp;imIn, int medianFullWidth)</div><div class="ttdoc">Smooth an image using the median in a rectangular box.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00722">imageFilters.hpp:722</a></div></div>
 <div class="ttc" id="agroup__image__filters__average_html_ga88d8d193f100661b836617bfb218d7e6"><div class="ttname"><a href="group__image__filters__average.html#ga88d8d193f100661b836617bfb218d7e6">mx::improc::meanSmooth</a></div><div class="ttdeci">int meanSmooth(imageTout &amp;imOut, int &amp;xMax, int &amp;yMax, typename imageTout::Scalar &amp;pMax, const imageTin &amp;imIn, int meanFullWidth, bool rejectMinMax=false)</div><div class="ttdoc">Smooth an image using the mean in a rectangular box, optionally rejecting the highest and lowest valu...</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00566">imageFilters.hpp:566</a></div></div>
 <div class="ttc" id="agroup__image__filters__kernels_html_ga6fa4c2dcfdcbc1c2f90cccec1ee66618"><div class="ttname"><a href="group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618">mx::improc::filterImage</a></div><div class="ttdeci">void filterImage(imageOutT &amp;fim, imageInT im, kernelT kernel, int maxr=0)</div><div class="ttdoc">Filter an image with a mean kernel.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00277">imageFilters.hpp:277</a></div></div>
-<div class="ttc" id="agroup__image__masks_html_ga0b1f9636c839f8361e971f07780136d1"><div class="ttname"><a href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">mx::improc::radiusImage</a></div><div class="ttdeci">void radiusImage(eigenT &amp;m, typename eigenT::Scalar xc, typename eigenT::Scalar yc, typename eigenT::Scalar scale=1)</div><div class="ttdoc">Fills in the cells of an Eigen 2D Array with their radius from the center.</div><div class="ttdef"><b>Definition:</b> <a href="imageMasks_8hpp_source.html#l00048">imageMasks.hpp:48</a></div></div>
+<div class="ttc" id="agroup__image__masks_html_ga0b1f9636c839f8361e971f07780136d1"><div class="ttname"><a href="group__image__masks.html#ga0b1f9636c839f8361e971f07780136d1">mx::improc::radiusImage</a></div><div class="ttdeci">void radiusImage(eigenT &amp;m, typename eigenT::Scalar xc, typename eigenT::Scalar yc, typename eigenT::Scalar scale=1)</div><div class="ttdoc">Fills in the cells of an Eigen 2D Array with their radius from the center.</div><div class="ttdef"><b>Definition:</b> <a href="imageMasks_8hpp_source.html#l00049">imageMasks.hpp:49</a></div></div>
 <div class="ttc" id="agroup__rad__prof_html_gac680f02c29b02463d9cd3106196c7e4b"><div class="ttname"><a href="group__rad__prof.html#gac680f02c29b02463d9cd3106196c7e4b">mx::improc::radprof</a></div><div class="ttdeci">void radprof(vecT &amp;rad, vecT &amp;prof, const eigenImT1 &amp;im, bool mean=false, double dr=1)</div><div class="ttdoc">Calculate the the radial profile.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l00973">imageFilters.hpp:973</a></div></div>
 <div class="ttc" id="agroup__rad__prof_html_gaf4fbc0937d06158b15966b01f016735b"><div class="ttname"><a href="group__rad__prof.html#gaf4fbc0937d06158b15966b01f016735b">mx::improc::radprofim</a></div><div class="ttdeci">void radprofim(radprofT &amp;radprof, eigenImT &amp;im, bool subtract=false, bool mean=false)</div><div class="ttdoc">Form a radial profile image, and optionally subtract it from the input.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l01052">imageFilters.hpp:1052</a></div></div>
-<div class="ttc" id="agroup__std__prof_html_ga8583f8c86c11fbcd06b8e454c0ef340a"><div class="ttname"><a href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">mx::improc::stddevImage</a></div><div class="ttdeci">void stddevImage(eigenImT &amp;stdIm, const eigenImT1 &amp;im, const eigenImT2 &amp;mask, typename eigenImT::Scalar minRad, typename eigenImT::Scalar maxRad, bool divide=false)</div><div class="ttdoc">Form a standard deviation image, and optionally divide the input by it to form a S/N map.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l01182">imageFilters.hpp:1182</a></div></div>
-<div class="ttc" id="agroup__std__prof_html_gaf7c6eb772b13067d4dbd7536330efa11"><div class="ttname"><a href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11">mx::improc::stddevImageCube</a></div><div class="ttdeci">void stddevImageCube(eigenCubeT &amp;stdImc, const eigenCubeT1 &amp;imc, const eigenImT &amp;mask, typename eigenImT::Scalar minRad, typename eigenImT::Scalar maxRad, bool divide=false)</div><div class="ttdoc">Form a standard deviation image for each imamge in a cube, and optionally divide the input by it form...</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l01210">imageFilters.hpp:1210</a></div></div>
+<div class="ttc" id="agroup__std__prof_html_ga8583f8c86c11fbcd06b8e454c0ef340a"><div class="ttname"><a href="group__std__prof.html#ga8583f8c86c11fbcd06b8e454c0ef340a">mx::improc::stddevImage</a></div><div class="ttdeci">void stddevImage(eigenImT &amp;stdIm, const eigenImT1 &amp;im, const eigenImT2 &amp;mask, typename eigenImT::Scalar minRad, typename eigenImT::Scalar maxRad, bool divide=false)</div><div class="ttdoc">Form a standard deviation image, and optionally divide the input by it to form a S/N map.</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l01184">imageFilters.hpp:1184</a></div></div>
+<div class="ttc" id="agroup__std__prof_html_gaf7c6eb772b13067d4dbd7536330efa11"><div class="ttname"><a href="group__std__prof.html#gaf7c6eb772b13067d4dbd7536330efa11">mx::improc::stddevImageCube</a></div><div class="ttdeci">void stddevImageCube(eigenCubeT &amp;stdImc, const eigenCubeT1 &amp;imc, const eigenImT &amp;mask, typename eigenImT::Scalar minRad, typename eigenImT::Scalar maxRad, bool divide=false)</div><div class="ttdoc">Form a standard deviation image for each imamge in a cube, and optionally divide the input by it form...</div><div class="ttdef"><b>Definition:</b> <a href="imageFilters_8hpp_source.html#l01212">imageFilters.hpp:1212</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga3344de7d024e6d60f8d33275e2824b1a"><div class="ttname"><a href="group__vectorutils.html#ga3344de7d024e6d60f8d33275e2824b1a">mx::math::vectorMedianInPlace</a></div><div class="ttdeci">vectorT::value_type vectorMedianInPlace(vectorT &amp;vec)</div><div class="ttdoc">Calculate median of a vector in-place, altering the vector.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00218">vectorUtils.hpp:218</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga850df03265dfac30158fbf6a4090406a"><div class="ttname"><a href="group__vectorutils.html#ga850df03265dfac30158fbf6a4090406a">mx::math::vectorVariance</a></div><div class="ttdeci">valueT vectorVariance(const valueT *vec, size_t sz, valueT mean)</div><div class="ttdoc">Calculate the variance of a vector relative to a supplied mean value.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00282">vectorUtils.hpp:282</a></div></div>
 <div class="ttc" id="agroup__vectorutils_html_ga9efbdfd637f2a5bb6054c6ee5a163fcc"><div class="ttname"><a href="group__vectorutils.html#ga9efbdfd637f2a5bb6054c6ee5a163fcc">mx::math::vectorMedian</a></div><div class="ttdeci">vectorT::value_type vectorMedian(const vectorT &amp;vec, vectorT *work=0)</div><div class="ttdoc">Calculate median of a vector, leaving the vector unaltered.</div><div class="ttdef"><b>Definition:</b> <a href="vectorUtils_8hpp_source.html#l00247">vectorUtils.hpp:247</a></div></div>
@@ -1382,7 +1382,7 @@ $(document).ready(function(){initNavTree('imageFilters_8hpp_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageFilters_8hpp.html">imageFilters.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

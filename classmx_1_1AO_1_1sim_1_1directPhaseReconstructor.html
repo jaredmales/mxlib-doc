@@ -338,6 +338,24 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nPix</b> {0}</td></t
 <tr class="memdesc:a6ea2c9e1b86b3237e963e72684c021aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the WFS image, in columns.  <a href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a6ea2c9e1b86b3237e963e72684c021aa">More...</a><br /></td></tr>
 <tr class="separator:a6ea2c9e1b86b3237e963e72684c021aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">The Reconstructor</div></td></tr>
+<tr class="memitem:ae91b0dd8aec4e89da9aa0c37e6d05308"><td class="memItemLeft" align="right" valign="top"><a id="ae91b0dd8aec4e89da9aa0c37e6d05308"></a>
+cublasHandle_t *&#160;</td><td class="memItemRight" valign="bottom"><b>m_cublasHandle</b></td></tr>
+<tr class="separator:ae91b0dd8aec4e89da9aa0c37e6d05308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc27e104c9c02a0c1ab5850efff4486f"><td class="memItemLeft" align="right" valign="top"><a id="acc27e104c9c02a0c1ab5850efff4486f"></a>
+<a class="el" href="structmx_1_1cuda_1_1cudaPtr.html">cuda::cudaPtr</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_one</b></td></tr>
+<tr class="separator:acc27e104c9c02a0c1ab5850efff4486f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bddb043c3660529735f2057b94beeb"><td class="memItemLeft" align="right" valign="top"><a id="a00bddb043c3660529735f2057b94beeb"></a>
+<a class="el" href="structmx_1_1cuda_1_1cudaPtr.html">cuda::cudaPtr</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_zero</b></td></tr>
+<tr class="separator:a00bddb043c3660529735f2057b94beeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d2092056c563377dcaf37357cf3e7e"><td class="memItemLeft" align="right" valign="top"><a id="ac9d2092056c563377dcaf37357cf3e7e"></a>
+<a class="el" href="structmx_1_1cuda_1_1cudaPtr.html">cuda::cudaPtr</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_devRecon</b></td></tr>
+<tr class="separator:ac9d2092056c563377dcaf37357cf3e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63bb44fad73ba86ccd7bb9c888aa16b9"><td class="memItemLeft" align="right" valign="top"><a id="a63bb44fad73ba86ccd7bb9c888aa16b9"></a>
+<a class="el" href="structmx_1_1cuda_1_1cudaPtr.html">cuda::cudaPtr</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_devSlopes</b></td></tr>
+<tr class="separator:a63bb44fad73ba86ccd7bb9c888aa16b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d167e216848836cb57358aa10ba5436"><td class="memItemLeft" align="right" valign="top"><a id="a1d167e216848836cb57358aa10ba5436"></a>
+<a class="el" href="structmx_1_1cuda_1_1cudaPtr.html">cuda::cudaPtr</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_devAmps</b></td></tr>
+<tr class="separator:a1d167e216848836cb57358aa10ba5436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b9debd1bc6dbfb52f4b28c852e87f5f"><td class="memItemLeft" align="right" valign="top">Eigen::Array&lt; realT,-1,-1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a8b9debd1bc6dbfb52f4b28c852e87f5f">m_recon</a></td></tr>
 <tr class="memdesc:a8b9debd1bc6dbfb52f4b28c852e87f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reconstructor matrix.  <a href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html#a8b9debd1bc6dbfb52f4b28c852e87f5f">More...</a><br /></td></tr>
 <tr class="separator:a8b9debd1bc6dbfb52f4b28c852e87f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1403,7 +1421,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00301">301</a> of file <a class="el" href="directPhaseReconstructor_8hpp_source.html">directPhaseReconstructor.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00721">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00828">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -1623,6 +1641,8 @@ template&lt;typename measurementT , typename wfsImageT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00334">334</a> of file <a class="el" href="directPhaseReconstructor_8hpp_source.html">directPhaseReconstructor.hpp</a>.</p>
 
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00071">mx::astro::constants::k()</a>.</p>
+
 </div>
 </div>
 <a id="a8ab9d14b769855f6f863d5c43486752e"></a>
@@ -1721,7 +1741,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00439">439</a> of file <a class="el" href="directPhaseReconstructor_8hpp_source.html">directPhaseReconstructor.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00156">mx::fits::fitsHeader::append()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01273">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00156">mx::fits::fitsHeader::append()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01301">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -2214,7 +2234,7 @@ template&lt;typename realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>sim</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html">directPhaseReconstructor</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

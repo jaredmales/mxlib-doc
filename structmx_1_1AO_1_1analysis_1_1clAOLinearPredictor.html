@@ -122,15 +122,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2da559a2955e86a811e76a447c05acdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the LP coefficients for a turbulence PSD and a noise PSD.  <a href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a2da559a2955e86a811e76a447c05acdc">More...</a><br /></td></tr>
 <tr class="separator:a2da559a2955e86a811e76a447c05acdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a5e4bec6657b49156e551c8895df64"><td class="memTemplParams" colspan="2">template&lt;bool printout = false&gt; </td></tr>
-<tr class="memitem:a31a5e4bec6657b49156e551c8895df64"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a31a5e4bec6657b49156e551c8895df64">_regularizeCoefficients</a> (realT &amp;min_var, realT &amp;min_sc, realT precision, realT max_sc, <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">clGainOpt</a>&lt; realT &gt; &amp;go_lp, std::vector&lt; realT &gt; &amp;PSDt, std::vector&lt; realT &gt; &amp;PSDn, int Nc)</td></tr>
+<tr class="memitem:a31a5e4bec6657b49156e551c8895df64"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a31a5e4bec6657b49156e551c8895df64">_regularizeCoefficients</a> (realT &amp;min_var, realT &amp;min_sc, realT precision, realT max_sc, clGainOpt&lt; realT &gt; &amp;go_lp, std::vector&lt; realT &gt; &amp;PSDt, std::vector&lt; realT &gt; &amp;PSDn, int Nc)</td></tr>
 <tr class="memdesc:a31a5e4bec6657b49156e551c8895df64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worker function for regularizing the PSD for coefficient calculation.  <a href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a31a5e4bec6657b49156e551c8895df64">More...</a><br /></td></tr>
 <tr class="separator:a31a5e4bec6657b49156e551c8895df64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9483ca9cf2af5e1e60ea3265e748ec62"><td class="memTemplParams" colspan="2">template&lt;bool printout = false&gt; </td></tr>
-<tr class="memitem:a9483ca9cf2af5e1e60ea3265e748ec62"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a9483ca9cf2af5e1e60ea3265e748ec62">regularizeCoefficients</a> (realT &amp;gmax_lp, realT &amp;gopt_lp, realT &amp;var_lp, <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">clGainOpt</a>&lt; realT &gt; &amp;go_lp, std::vector&lt; realT &gt; &amp;PSDt, std::vector&lt; realT &gt; &amp;PSDn, int Nc)</td></tr>
+<tr class="memitem:a9483ca9cf2af5e1e60ea3265e748ec62"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a9483ca9cf2af5e1e60ea3265e748ec62">regularizeCoefficients</a> (realT &amp;gmax_lp, realT &amp;gopt_lp, realT &amp;var_lp, clGainOpt&lt; realT &gt; &amp;go_lp, std::vector&lt; realT &gt; &amp;PSDt, std::vector&lt; realT &gt; &amp;PSDn, int Nc)</td></tr>
 <tr class="memdesc:a9483ca9cf2af5e1e60ea3265e748ec62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regularize the PSD and calculate the associated LP coefficients.  <a href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a9483ca9cf2af5e1e60ea3265e748ec62">More...</a><br /></td></tr>
 <tr class="separator:a9483ca9cf2af5e1e60ea3265e748ec62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab842a4afff5448f3e6ee4e59b9403245"><td class="memTemplParams" colspan="2">template&lt;bool printout = false&gt; </td></tr>
-<tr class="memitem:ab842a4afff5448f3e6ee4e59b9403245"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#ab842a4afff5448f3e6ee4e59b9403245">optimizeNc</a> (realT &amp;gmax_lp, realT &amp;gopt_lp, int &amp;Nc, realT &amp;var_lp, <a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">clGainOpt</a>&lt; realT &gt; &amp;go_lp, std::vector&lt; realT &gt; &amp;PSDt, std::vector&lt; realT &gt; &amp;PSDn, int minNc, int maxNc)</td></tr>
+<tr class="memitem:ab842a4afff5448f3e6ee4e59b9403245"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#ab842a4afff5448f3e6ee4e59b9403245">optimizeNc</a> (realT &amp;gmax_lp, realT &amp;gopt_lp, int &amp;Nc, realT &amp;var_lp, clGainOpt&lt; realT &gt; &amp;go_lp, std::vector&lt; realT &gt; &amp;PSDt, std::vector&lt; realT &gt; &amp;PSDn, int minNc, int maxNc)</td></tr>
 <tr class="memdesc:ab842a4afff5448f3e6ee4e59b9403245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regularize the PSD and calculate the associated LP coefficients.  <a href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#ab842a4afff5448f3e6ee4e59b9403245">More...</a><br /></td></tr>
 <tr class="separator:ab842a4afff5448f3e6ee4e59b9403245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -181,7 +181,7 @@ template&lt;bool printout = false&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">clGainOpt</a>&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramtype">clGainOpt&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>go_lp</em>, </td>
         </tr>
         <tr>
@@ -240,7 +240,7 @@ template&lt;bool printout = false&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00111">111</a> of file <a class="el" href="clAOLinearPredictor_8hpp_source.html">clAOLinearPredictor.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="clGainOpt_8hpp_source.html#l00496">mx::AO::analysis::clGainOpt&lt; _realT &gt;::a()</a>, <a class="el" href="clGainOpt_8hpp_source.html#l00466">mx::AO::analysis::clGainOpt&lt; _realT &gt;::b()</a>, <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00075">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::calcCoefficients()</a>, <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00056">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::m_gmax_lp</a>, <a class="el" href="clGainOpt_8hpp_source.html#l00882">mx::AO::analysis::clGainOpt&lt; _realT &gt;::maxStableGain()</a>, and <a class="el" href="clGainOpt_8hpp_source.html#l01010">mx::AO::analysis::clGainOpt&lt; _realT &gt;::optGainOpenLoop()</a>.</p>
+<p class="reference">References <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00075">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::calcCoefficients()</a>, and <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00056">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::m_gmax_lp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +359,7 @@ template&lt;bool printout = false&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">clGainOpt</a>&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramtype">clGainOpt&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>go_lp</em>, </td>
         </tr>
         <tr>
@@ -458,7 +458,7 @@ template&lt;bool printout = false&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clGainOpt.html">clGainOpt</a>&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramtype">clGainOpt&lt; realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>go_lp</em>, </td>
         </tr>
         <tr>
@@ -515,7 +515,7 @@ template&lt;bool printout = false&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00188">188</a> of file <a class="el" href="clAOLinearPredictor_8hpp_source.html">clAOLinearPredictor.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="clGainOpt_8hpp_source.html#l00496">mx::AO::analysis::clGainOpt&lt; _realT &gt;::a()</a>, <a class="el" href="clGainOpt_8hpp_source.html#l00466">mx::AO::analysis::clGainOpt&lt; _realT &gt;::b()</a>, <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00075">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::calcCoefficients()</a>, <a class="el" href="clGainOpt_8hpp_source.html#l00882">mx::AO::analysis::clGainOpt&lt; _realT &gt;::maxStableGain()</a>, and <a class="el" href="clGainOpt_8hpp_source.html#l01010">mx::AO::analysis::clGainOpt&lt; _realT &gt;::optGainOpenLoop()</a>.</p>
+<p class="reference">References <a class="el" href="clAOLinearPredictor_8hpp_source.html#l00075">mx::AO::analysis::clAOLinearPredictor&lt; _realT &gt;::calcCoefficients()</a>.</p>
 
 </div>
 </div>
@@ -551,7 +551,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html">clAOLinearPredictor</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

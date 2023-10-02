@@ -114,7 +114,7 @@ struct mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo:</a></b></dt><dd><p class="startdd">Split off the integration parameters in a separate structure. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000029">Todo:</a></b></dt><dd><p class="startdd">Split off the integration parameters in a separate structure. </p>
 <p class="interdd">once integration parameters are in a separate structure, make this a class with protected members. </p>
 <p class="enddd">GSL error handling</p>
 </dd></dl>
@@ -259,8 +259,6 @@ template&lt;typename realT , typename aosysT &gt; </div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00259">259</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
 
 </div>
 </div>
@@ -414,7 +412,7 @@ template&lt;bool parallel&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo:</a></b></dt><dd><p class="startdd">implement error checking </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd><p class="startdd">implement error checking </p>
 <p class="enddd">handle reports of convergence failures form singleLayerPSD when implemented.</p>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -528,7 +526,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate the temporal PSD for a Fourier mode for a single layer. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000029">Todo:</a></b></dt><dd><p class="startdd">implement error checking. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo:</a></b></dt><dd><p class="startdd">implement error checking. </p>
 <p class="interdd">need a way to track convergence failures in integral without throwing an error. </p>
 <p class="enddd">need better handling of averaging for the -17/3 extension.</p>
 </dd></dl>
@@ -545,7 +543,7 @@ template&lt;typename realT , typename aosysT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00314">314</a> of file <a class="el" href="zernikeTemporalPSD_8hpp_source.html">zernikeTemporalPSD.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00121">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_w</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00107">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00114">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_cq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00109">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00116">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_spatialFilter</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00115">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_sq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00110">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_j</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00111">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_m</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00112">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_n</a>, <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>, and <a class="el" href="fourierCovariance_8hpp_source.html#l00048">WSZ</a>.</p>
+<p class="reference">References <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00118">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_layer_i</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00121">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::_w</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00107">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_aosys</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00114">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_cq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00109">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_f</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00116">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_spatialFilter</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00115">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_sq</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00110">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_j</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00111">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_m</a>, <a class="el" href="zernikeTemporalPSD_8hpp_source.html#l00112">mx::AO::analysis::zernikeTemporalPSD&lt; _realT, aosysT &gt;::m_zern_n</a>, and <a class="el" href="zernike_8cpp_source.html#l00038">mx::sigproc::noll_nm()</a>.</p>
 
 </div>
 </div>
@@ -819,7 +817,7 @@ template&lt;typename _realT , typename aosysT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1analysis_1_1zernikeTemporalPSD.html">zernikeTemporalPSD</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

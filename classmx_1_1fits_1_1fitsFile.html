@@ -114,7 +114,7 @@ class mx::fits::fitsFile&lt; dataT &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00052">52</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00053">53</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="fitsFile_8hpp_source.html">ioutils/fits/fitsFile.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -159,27 +159,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac108e287543f1804657009cbfcf5dc83"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ac108e287543f1804657009cbfcf5dc83">getSize</a> (size_t axis)</td></tr>
 <tr class="memdesc:ac108e287543f1804657009cbfcf5dc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of a specific dimension.  <a href="classmx_1_1fits_1_1fitsFile.html#ac108e287543f1804657009cbfcf5dc83">More...</a><br /></td></tr>
 <tr class="separator:ac108e287543f1804657009cbfcf5dc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Reading Basic Arrays</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These methods read FITS data into basic or raw arrays specified by a pointer. </p>
-</div></td></tr>
-<tr class="memitem:afebe4be8ad09af722f3f77f755ddfc67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#afebe4be8ad09af722f3f77f755ddfc67">read</a> (dataT *data)</td></tr>
-<tr class="memdesc:afebe4be8ad09af722f3f77f755ddfc67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array.  <a href="classmx_1_1fits_1_1fitsFile.html#afebe4be8ad09af722f3f77f755ddfc67">More...</a><br /></td></tr>
-<tr class="separator:afebe4be8ad09af722f3f77f755ddfc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f10693617abd2335afa3acdee4de87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ac0f10693617abd2335afa3acdee4de87">read</a> (dataT *data, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;head)</td></tr>
-<tr class="memdesc:ac0f10693617abd2335afa3acdee4de87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array.  <a href="classmx_1_1fits_1_1fitsFile.html#ac0f10693617abd2335afa3acdee4de87">More...</a><br /></td></tr>
-<tr class="separator:ac0f10693617abd2335afa3acdee4de87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c1d888423a437f37ac5a7a0287c27ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a9c1d888423a437f37ac5a7a0287c27ef">read</a> (dataT *data, const std::string &amp;fname)</td></tr>
-<tr class="memdesc:a9c1d888423a437f37ac5a7a0287c27ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array.  <a href="classmx_1_1fits_1_1fitsFile.html#a9c1d888423a437f37ac5a7a0287c27ef">More...</a><br /></td></tr>
-<tr class="separator:a9c1d888423a437f37ac5a7a0287c27ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6686d4c0bffe62f605acf04f7bc1364"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ae6686d4c0bffe62f605acf04f7bc1364">read</a> (dataT *data, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;head, const std::string &amp;fname)</td></tr>
-<tr class="memdesc:ae6686d4c0bffe62f605acf04f7bc1364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array and read the header.  <a href="classmx_1_1fits_1_1fitsFile.html#ae6686d4c0bffe62f605acf04f7bc1364">More...</a><br /></td></tr>
-<tr class="separator:ae6686d4c0bffe62f605acf04f7bc1364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6195284014e242f1b8836a1b9df0d722"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a6195284014e242f1b8836a1b9df0d722">read</a> (dataT *im, const std::vector&lt; std::string &gt; &amp;flist)</td></tr>
-<tr class="memdesc:a6195284014e242f1b8836a1b9df0d722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from a vector list of files into an image cube.  <a href="classmx_1_1fits_1_1fitsFile.html#a6195284014e242f1b8836a1b9df0d722">More...</a><br /></td></tr>
-<tr class="separator:a6195284014e242f1b8836a1b9df0d722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86bf8e1a66f19c0502044d01d92a0fe9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a86bf8e1a66f19c0502044d01d92a0fe9">read</a> (dataT *im, std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, const std::vector&lt; std::string &gt; &amp;flist)</td></tr>
-<tr class="memdesc:a86bf8e1a66f19c0502044d01d92a0fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from a vector of files into an image cube with individual headers.  <a href="classmx_1_1fits_1_1fitsFile.html#a86bf8e1a66f19c0502044d01d92a0fe9">More...</a><br /></td></tr>
-<tr class="separator:a86bf8e1a66f19c0502044d01d92a0fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Reading Eigen Arrays</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods read FITS data into array types with an Eigen-like interface. </p>
 </div></td></tr>
@@ -255,6 +234,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b3efa19f2dc57ddc3bca6b611c285c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a6b3efa19f2dc57ddc3bca6b611c285c5">setReadSize</a> (long x0, long y0, long xpix, long ypix)</td></tr>
 <tr class="memdesc:a6b3efa19f2dc57ddc3bca6b611c285c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to read only a subset of the pixels in the file.  <a href="classmx_1_1fits_1_1fitsFile.html#a6b3efa19f2dc57ddc3bca6b611c285c5">More...</a><br /></td></tr>
 <tr class="separator:a6b3efa19f2dc57ddc3bca6b611c285c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6cbfa0560e8ea0adf1d0573cadd04e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a7d6cbfa0560e8ea0adf1d0573cadd04e">setCubeReadSize</a> ()</td></tr>
+<tr class="memdesc:a7d6cbfa0560e8ea0adf1d0573cadd04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to read all frames from a cube.  <a href="classmx_1_1fits_1_1fitsFile.html#a7d6cbfa0560e8ea0adf1d0573cadd04e">More...</a><br /></td></tr>
+<tr class="separator:a7d6cbfa0560e8ea0adf1d0573cadd04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d92b187cbc1646148d6240098abe5e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a2d92b187cbc1646148d6240098abe5e5">setCubeReadSize</a> (long z0, long zframes)</td></tr>
+<tr class="memdesc:a2d92b187cbc1646148d6240098abe5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of frames to read from a cube.  <a href="classmx_1_1fits_1_1fitsFile.html#a2d92b187cbc1646148d6240098abe5e5">More...</a><br /></td></tr>
+<tr class="separator:a2d92b187cbc1646148d6240098abe5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -276,30 +261,61 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a09d1633ef43b19a5608982a5cfca1e98"><td class="memItemLeft" align="right" valign="top">long *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a09d1633ef43b19a5608982a5cfca1e98">m_naxes</a> {nullptr}</td></tr>
 <tr class="memdesc:a09d1633ef43b19a5608982a5cfca1e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of each dimension.  <a href="classmx_1_1fits_1_1fitsFile.html#a09d1633ef43b19a5608982a5cfca1e98">More...</a><br /></td></tr>
 <tr class="separator:a09d1633ef43b19a5608982a5cfca1e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b2c04c73d35d9560b9c89630285de3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ae7b2c04c73d35d9560b9c89630285de3">m_isOpen</a></td></tr>
+<tr class="memitem:ae7b2c04c73d35d9560b9c89630285de3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ae7b2c04c73d35d9560b9c89630285de3">m_isOpen</a> {false}</td></tr>
 <tr class="memdesc:ae7b2c04c73d35d9560b9c89630285de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating whether the file is open or not.  <a href="classmx_1_1fits_1_1fitsFile.html#ae7b2c04c73d35d9560b9c89630285de3">More...</a><br /></td></tr>
 <tr class="separator:ae7b2c04c73d35d9560b9c89630285de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a468a611e18fa38bc192fd3065c220b17"><td class="memItemLeft" align="right" valign="top">dataT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a468a611e18fa38bc192fd3065c220b17">m_nulval</a></td></tr>
+<tr class="memitem:a468a611e18fa38bc192fd3065c220b17"><td class="memItemLeft" align="right" valign="top">dataT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a468a611e18fa38bc192fd3065c220b17">m_nulval</a> {0}</td></tr>
 <tr class="memdesc:a468a611e18fa38bc192fd3065c220b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value to replace null values with.  <a href="classmx_1_1fits_1_1fitsFile.html#a468a611e18fa38bc192fd3065c220b17">More...</a><br /></td></tr>
 <tr class="separator:a468a611e18fa38bc192fd3065c220b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac1792d11da2727bc1e14b2f62f5ed2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#aac1792d11da2727bc1e14b2f62f5ed2a">m_anynul</a></td></tr>
+<tr class="memitem:aac1792d11da2727bc1e14b2f62f5ed2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#aac1792d11da2727bc1e14b2f62f5ed2a">m_anynul</a> {0}</td></tr>
 <tr class="memdesc:aac1792d11da2727bc1e14b2f62f5ed2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records whether any null values were replaced.  <a href="classmx_1_1fits_1_1fitsFile.html#aac1792d11da2727bc1e14b2f62f5ed2a">More...</a><br /></td></tr>
 <tr class="separator:aac1792d11da2727bc1e14b2f62f5ed2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e3c3682d0a641955d7482ffda1a1e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#aa7e3c3682d0a641955d7482ffda1a1e1">m_noComment</a></td></tr>
+<tr class="memitem:aa7e3c3682d0a641955d7482ffda1a1e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#aa7e3c3682d0a641955d7482ffda1a1e1">m_noComment</a> {0}</td></tr>
 <tr class="memdesc:aa7e3c3682d0a641955d7482ffda1a1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to control whether the comment string is read.  <a href="classmx_1_1fits_1_1fitsFile.html#aa7e3c3682d0a641955d7482ffda1a1e1">More...</a><br /></td></tr>
 <tr class="separator:aa7e3c3682d0a641955d7482ffda1a1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad08dc03b352ee79db56673f98d645aaf"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ad08dc03b352ee79db56673f98d645aaf">m_x0</a></td></tr>
+<tr class="memitem:ad08dc03b352ee79db56673f98d645aaf"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ad08dc03b352ee79db56673f98d645aaf">m_x0</a> {-1}</td></tr>
 <tr class="memdesc:ad08dc03b352ee79db56673f98d645aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The starting x-pixel to read from.  <a href="classmx_1_1fits_1_1fitsFile.html#ad08dc03b352ee79db56673f98d645aaf">More...</a><br /></td></tr>
 <tr class="separator:ad08dc03b352ee79db56673f98d645aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79a4006011f900a6a0c0d7250af8f01e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a79a4006011f900a6a0c0d7250af8f01e">m_y0</a></td></tr>
+<tr class="memitem:a79a4006011f900a6a0c0d7250af8f01e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a79a4006011f900a6a0c0d7250af8f01e">m_y0</a> {-1}</td></tr>
 <tr class="memdesc:a79a4006011f900a6a0c0d7250af8f01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The starting y-pixel to read from.  <a href="classmx_1_1fits_1_1fitsFile.html#a79a4006011f900a6a0c0d7250af8f01e">More...</a><br /></td></tr>
 <tr class="separator:a79a4006011f900a6a0c0d7250af8f01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae086138cbbe2852a981e814f93883e47"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ae086138cbbe2852a981e814f93883e47">m_xpix</a></td></tr>
+<tr class="memitem:ae086138cbbe2852a981e814f93883e47"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ae086138cbbe2852a981e814f93883e47">m_xpix</a> {-1}</td></tr>
 <tr class="memdesc:ae086138cbbe2852a981e814f93883e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of x-pixels to read.  <a href="classmx_1_1fits_1_1fitsFile.html#ae086138cbbe2852a981e814f93883e47">More...</a><br /></td></tr>
 <tr class="separator:ae086138cbbe2852a981e814f93883e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705d56dd96fa5fdc76ed219e7d275d16"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a705d56dd96fa5fdc76ed219e7d275d16">m_ypix</a></td></tr>
+<tr class="memitem:a705d56dd96fa5fdc76ed219e7d275d16"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a705d56dd96fa5fdc76ed219e7d275d16">m_ypix</a> {-1}</td></tr>
 <tr class="memdesc:a705d56dd96fa5fdc76ed219e7d275d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of y-pixels to read.  <a href="classmx_1_1fits_1_1fitsFile.html#a705d56dd96fa5fdc76ed219e7d275d16">More...</a><br /></td></tr>
 <tr class="separator:a705d56dd96fa5fdc76ed219e7d275d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795c51c0f6b4c2f8538a8775305f6565"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a795c51c0f6b4c2f8538a8775305f6565">m_z0</a> {-1}</td></tr>
+<tr class="memdesc:a795c51c0f6b4c2f8538a8775305f6565"><td class="mdescLeft">&#160;</td><td class="mdescRight">The starting frame to read from a cube.  <a href="classmx_1_1fits_1_1fitsFile.html#a795c51c0f6b4c2f8538a8775305f6565">More...</a><br /></td></tr>
+<tr class="separator:a795c51c0f6b4c2f8538a8775305f6565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f12f407f4c877d37588cca83dbd0110"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a4f12f407f4c877d37588cca83dbd0110">m_zframes</a> {-1}</td></tr>
+<tr class="memdesc:a4f12f407f4c877d37588cca83dbd0110"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of frames to read from a cube.  <a href="classmx_1_1fits_1_1fitsFile.html#a4f12f407f4c877d37588cca83dbd0110">More...</a><br /></td></tr>
+<tr class="separator:a4f12f407f4c877d37588cca83dbd0110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Reading Basic Arrays</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp76f143aef8b93542a32f6e7c59011af5"></a>These methods read FITS data into basic or raw arrays specified by a pointer. </p>
+</td></tr>
+<tr class="memitem:a6a0a79157eddbf55866d62a59dbd3e5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a6a0a79157eddbf55866d62a59dbd3e5c">pixarrs</a> (long **fpix, long **lpix, long **inc)</td></tr>
+<tr class="memdesc:a6a0a79157eddbf55866d62a59dbd3e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in the read-size arrays for reading a subset (always used)  <a href="classmx_1_1fits_1_1fitsFile.html#a6a0a79157eddbf55866d62a59dbd3e5c">More...</a><br /></td></tr>
+<tr class="separator:a6a0a79157eddbf55866d62a59dbd3e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebe4be8ad09af722f3f77f755ddfc67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#afebe4be8ad09af722f3f77f755ddfc67">read</a> (dataT *data)</td></tr>
+<tr class="memdesc:afebe4be8ad09af722f3f77f755ddfc67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array.  <a href="classmx_1_1fits_1_1fitsFile.html#afebe4be8ad09af722f3f77f755ddfc67">More...</a><br /></td></tr>
+<tr class="separator:afebe4be8ad09af722f3f77f755ddfc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f10693617abd2335afa3acdee4de87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ac0f10693617abd2335afa3acdee4de87">read</a> (dataT *data, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;head)</td></tr>
+<tr class="memdesc:ac0f10693617abd2335afa3acdee4de87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array.  <a href="classmx_1_1fits_1_1fitsFile.html#ac0f10693617abd2335afa3acdee4de87">More...</a><br /></td></tr>
+<tr class="separator:ac0f10693617abd2335afa3acdee4de87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1d888423a437f37ac5a7a0287c27ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a9c1d888423a437f37ac5a7a0287c27ef">read</a> (dataT *data, const std::string &amp;fname)</td></tr>
+<tr class="memdesc:a9c1d888423a437f37ac5a7a0287c27ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array.  <a href="classmx_1_1fits_1_1fitsFile.html#a9c1d888423a437f37ac5a7a0287c27ef">More...</a><br /></td></tr>
+<tr class="separator:a9c1d888423a437f37ac5a7a0287c27ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6686d4c0bffe62f605acf04f7bc1364"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#ae6686d4c0bffe62f605acf04f7bc1364">read</a> (dataT *data, <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &amp;head, const std::string &amp;fname)</td></tr>
+<tr class="memdesc:ae6686d4c0bffe62f605acf04f7bc1364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the contents of the FITS file into an array and read the header.  <a href="classmx_1_1fits_1_1fitsFile.html#ae6686d4c0bffe62f605acf04f7bc1364">More...</a><br /></td></tr>
+<tr class="separator:ae6686d4c0bffe62f605acf04f7bc1364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6195284014e242f1b8836a1b9df0d722"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a6195284014e242f1b8836a1b9df0d722">read</a> (dataT *im, const std::vector&lt; std::string &gt; &amp;flist)</td></tr>
+<tr class="memdesc:a6195284014e242f1b8836a1b9df0d722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from a vector list of files into an image cube.  <a href="classmx_1_1fits_1_1fitsFile.html#a6195284014e242f1b8836a1b9df0d722">More...</a><br /></td></tr>
+<tr class="separator:a6195284014e242f1b8836a1b9df0d722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bf8e1a66f19c0502044d01d92a0fe9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1fits_1_1fitsFile.html#a86bf8e1a66f19c0502044d01d92a0fe9">read</a> (dataT *im, std::vector&lt; <a class="el" href="classmx_1_1fits_1_1fitsHeader.html">fitsHeader</a> &gt; &amp;heads, const std::vector&lt; std::string &gt; &amp;flist)</td></tr>
+<tr class="memdesc:a86bf8e1a66f19c0502044d01d92a0fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from a vector of files into an image cube with individual headers.  <a href="classmx_1_1fits_1_1fitsFile.html#a86bf8e1a66f19c0502044d01d92a0fe9">More...</a><br /></td></tr>
+<tr class="separator:a86bf8e1a66f19c0502044d01d92a0fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a74cdb64aecc08cbc91b6242c9a89a036"></a>
@@ -318,7 +334,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00527">527</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00562">562</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +375,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00533">533</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00568">568</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +395,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00540">540</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00575">575</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,9 +419,9 @@ template&lt;typename dataT &gt; </div>
 <dd>
 -1 on error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00644">644</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00681">681</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00222">MXE_FILECERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>.</p>
 
 </div>
 </div>
@@ -433,7 +449,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>One time initialization common to all constructors. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00513">513</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00557">557</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +470,7 @@ template&lt;typename dataT &gt; </div>
 <p>Get the current value of m_fileName. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_fileName. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00548">548</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00583">583</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -498,7 +514,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00554">554</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00589">589</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +534,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Get the number of dimensions (i.e. m_naxis) </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00674">674</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00711">711</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -538,7 +554,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Get the total size. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00682">682</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00719">719</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +578,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Get the size of a specific dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00701">701</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00738">738</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +601,8 @@ template&lt;typename dataT &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the current value of m_naxes for the specified dimension. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current value of m_naxes for the specified dimension </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_naxes for the specified dimension. -1 if no such dimension</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000084">Test:</a></b></dt><dd>Scenario: <a class="el" href="classmx_1_1fits_1_1fitsFile.html" title="Class to manage interactions with a FITS file.">fitsFile</a> calculating subimage sizes [test doc] </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>the dimension </td></tr>
@@ -593,7 +610,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00579">579</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00614">614</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -612,9 +629,10 @@ template&lt;typename dataT &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the current value of m_naxis. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current value of m_naxis </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_naxis</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000083">Test:</a></b></dt><dd>Scenario: <a class="el" href="classmx_1_1fits_1_1fitsFile.html" title="Class to manage interactions with a FITS file.">fitsFile</a> calculating subimage sizes [test doc] </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00573">573</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00608">608</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -639,9 +657,9 @@ template&lt;typename dataT &gt; </div>
 <dd>
 -1 on error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00587">587</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00624">624</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00198">MXE_FILEOERR</a>, <a class="el" href="mxError_8hpp_source.html#l00214">MXE_FILERERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>.</p>
 
 </div>
 </div>
@@ -674,7 +692,65 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00638">638</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00675">675</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a0a79157eddbf55866d62a59dbd3e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0a79157eddbf55866d62a59dbd3e5c">&#9670;&nbsp;</a></span>pixarrs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::pixarrs </td>
+          <td>(</td>
+          <td class="paramtype">long **&#160;</td>
+          <td class="paramname"><em>fpix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long **&#160;</td>
+          <td class="paramname"><em>lpix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long **&#160;</td>
+          <td class="paramname"><em>inc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill in the read-size arrays for reading a subset (always used) </p>
+<dl class="section note"><dt>Note</dt><dd>this allocates with new. You are responsible for calling delete.</dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000085">Test:</a></b></dt><dd>Scenario: <a class="el" href="classmx_1_1fits_1_1fitsFile.html" title="Class to manage interactions with a FITS file.">fitsFile</a> calculating subimage sizes [test doc] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fpix</td><td>Populated with the lower left pixel to read. Is allocated. </td></tr>
+    <tr><td class="paramname">lpix</td><td>Populated with the upper right pixel to read. Is allocated. </td></tr>
+    <tr><td class="paramname">inc</td><td>The increment. Is allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00754">754</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -713,6 +789,7 @@ template&lt;typename arrT &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000082">Todo:</a></b></dt><dd>this can probably be made part of one read function (or call read(data *)) with a call to resize with SFINAE </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>is the array, which will be resized as necessary using its resize(int, int) member </td></tr>
@@ -720,9 +797,9 @@ template&lt;typename arrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00897">897</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00980">980</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00214">MXE_FILERERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>.</p>
 
 </div>
 </div>
@@ -779,7 +856,7 @@ template&lt;typename arrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00983">983</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01037">1037</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -836,7 +913,7 @@ template&lt;typename arrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00974">974</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01028">1028</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -900,7 +977,7 @@ template&lt;typename arrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00994">994</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01048">1048</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -965,9 +1042,9 @@ template&lt;typename cubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01009">1009</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01063">1063</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00214">MXE_FILERERR</a>, <a class="el" href="mxError_8hpp_source.html#l00140">MXE_PARAMNOTSET</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1108,7 @@ template&lt;typename cubeT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01122">1122</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01150">1150</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1058,6 +1135,7 @@ template&lt;typename dataT &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
 -1 on error </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000081">Todo:</a></b></dt><dd>test if there is a speed difference for full reads for fits_read_pix/subset </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>an allocated arrray large enough to hold the entire image </td></tr>
@@ -1065,11 +1143,11 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00721">721</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00828">828</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00214">MXE_FILERERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="simulatedAOSystem_8hpp_source.html#l00356">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::initSystem()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00438">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00274">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadApodizer()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00283">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadFocalMask()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00321">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadLyotStop()</a>, <a class="el" href="idealCoronagraph_8hpp_source.html#l00191">mx::wfp::idealCoronagraph&lt; _realT &gt;::loadPupil()</a>, <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00301">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;::loadRecon()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00759">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01350">mx::improc::HCIobservation&lt; _realT &gt;::readMask()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00346">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01838">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00968">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aoWFS_8hpp_source.html#l00301">mx::AO::analysis::calculatedWFS&lt; realT, iosT &gt;::beta_p()</a>, <a class="el" href="aoWFS_8hpp_source.html#l00338">mx::AO::analysis::calculatedWFS&lt; realT, iosT &gt;::beta_r()</a>, <a class="el" href="influenceFunctions_8hpp_source.html#l00369">mx::AO::ifPInv()</a>, <a class="el" href="simulatedAOSystem_8hpp_source.html#l00356">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::initSystem()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00438">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00274">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadApodizer()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00283">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadFocalMask()</a>, <a class="el" href="lyotCoronagraph_8hpp_source.html#l00321">mx::wfp::lyotCoronagraph&lt; _realT, _fpmaskFloatT &gt;::loadLyotStop()</a>, <a class="el" href="idealCoronagraph_8hpp_source.html#l00191">mx::wfp::idealCoronagraph&lt; _realT &gt;::loadPupil()</a>, <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00301">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;::loadRecon()</a>, <a class="el" href="influenceFunctions_8hpp_source.html#l00514">mx::AO::modalDMM2cMatrix()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00765">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01359">mx::improc::HCIobservation&lt; _realT &gt;::readMask()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00346">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::readPSFSub()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01896">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00977">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>.</p>
 
 </div>
 </div>
@@ -1114,7 +1192,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00793">793</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00874">874</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1237,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00782">782</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00863">863</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1289,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00802">802</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00884">884</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1252,9 +1330,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00813">813</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00140">MXE_PARAMNOTSET</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00896">896</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1302,9 +1378,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00839">839</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00140">MXE_PARAMNOTSET</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00922">922</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1338,9 +1412,9 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01131">1131</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01159">1159</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00156">mx::fits::fitsHeader::append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00066">mx::fits::fitsHeader::begin()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00071">mx::fits::fitsHeader::end()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00102">mx::fits::fitsHeader::erase()</a>, <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00214">MXE_FILERERR</a>, <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>, and <a class="el" href="fitsHeader_8cpp_source.html#l00086">mx::fits::fitsHeader::size()</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00156">mx::fits::fitsHeader::append()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00066">mx::fits::fitsHeader::begin()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00071">mx::fits::fitsHeader::end()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00102">mx::fits::fitsHeader::erase()</a>, <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, and <a class="el" href="fitsHeader_8cpp_source.html#l00086">mx::fits::fitsHeader::size()</a>.</p>
 
 </div>
 </div>
@@ -1385,7 +1459,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01248">1248</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01276">1276</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1503,69 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01257">1257</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01285">1285</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d6cbfa0560e8ea0adf1d0573cadd04e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6cbfa0560e8ea0adf1d0573cadd04e">&#9670;&nbsp;</a></span>setCubeReadSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::setCubeReadSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set to read all frames from a cube. </p>
+
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01486">1486</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2d92b187cbc1646148d6240098abe5e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d92b187cbc1646148d6240098abe5e5">&#9670;&nbsp;</a></span>setCubeReadSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::setCubeReadSize </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>z0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>zframes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the number of frames to read from a cube. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000087">Test:</a></b></dt><dd>Scenario: <a class="el" href="classmx_1_1fits_1_1fitsFile.html" title="Class to manage interactions with a FITS file.">fitsFile</a> calculating subimage sizes [test doc] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">z0</td><td>is the starting frame to read </td></tr>
+    <tr><td class="paramname">zframes</td><td>is the number of frames to read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01493">1493</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1449,9 +1585,9 @@ template&lt;typename dataT &gt; </div>
 
 <p>Set to read all the pixels in the file. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01436">1436</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01464">1464</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l00759">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01838">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00968">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l00765">mx::improc::HCIobservation&lt; _realT &gt;::readFiles()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01896">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l00977">mx::improc::HCIobservation&lt; _realT &gt;::readRDIFiles()</a>.</p>
 
 </div>
 </div>
@@ -1496,6 +1632,7 @@ template&lt;typename dataT &gt; </div>
 </div><div class="memdoc">
 
 <p>Set to read only a subset of the pixels in the file. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000086">Test:</a></b></dt><dd>Scenario: <a class="el" href="classmx_1_1fits_1_1fitsFile.html" title="Class to manage interactions with a FITS file.">fitsFile</a> calculating subimage sizes [test doc] </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x0</td><td>is the starting x-pixel to read </td></tr>
@@ -1506,7 +1643,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01445">1445</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01473">1473</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1564,7 +1701,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01365">1365</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01393">1393</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1630,7 +1767,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01375">1375</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01403">1403</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1695,11 +1832,11 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01273">1273</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01301">1301</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00066">mx::fits::fitsHeader::begin()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00071">mx::fits::fitsHeader::end()</a>, <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>, <a class="el" href="mxError_8hpp_source.html#l00198">MXE_FILEOERR</a>, <a class="el" href="mxError_8hpp_source.html#l00206">MXE_FILEWERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00066">mx::fits::fitsHeader::begin()</a>, <a class="el" href="fitsHeader_8cpp_source.html#l00071">mx::fits::fitsHeader::end()</a>, and <a class="el" href="fitsUtils_8cpp_source.html#l00175">mx::fits::fitsErrText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="simulatedAOSystem_8hpp_source.html#l00321">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::~simulatedAOSystem()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00570">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01658">mx::improc::HCIobservation&lt; _realT &gt;::outputPreProcessed()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01764">mx::improc::HCIobservation&lt; _realT &gt;::outputPSFSub()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00447">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>, <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00439">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;::saveRMat()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00779">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01718">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="simulatedAOSystem_8hpp_source.html#l00321">mx::AO::sim::simulatedAOSystem&lt; _realT, _wfsT, _reconT, _filterT, _dmT, _turbSeqT, _coronT &gt;::~simulatedAOSystem()</a>, <a class="el" href="pupil_8hpp_source.html#l00028">mx::AO::circularPupil()</a>, <a class="el" href="influenceFunctions_8hpp_source.html#l00234">mx::AO::influenceFunctionsGaussian()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00581">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01716">mx::improc::HCIobservation&lt; _realT &gt;::outputPreProcessed()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01822">mx::improc::HCIobservation&lt; _realT &gt;::outputPSFSub()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00447">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>, <a class="el" href="directPhaseReconstructor_8hpp_source.html#l00439">mx::AO::sim::directPhaseReconstructor&lt; realT &gt;::saveRMat()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00780">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01776">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1895,7 @@ template&lt;typename arrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01413">1413</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01441">1441</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1824,7 +1961,7 @@ template&lt;typename arrT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01425">1425</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01453">1453</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1889,7 +2026,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01386">1386</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01414">1414</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1961,7 +2098,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01398">1398</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l01426">1426</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1978,7 +2115,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_anynul</td>
+          <td class="memname">int <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_anynul {0}</td>
         </tr>
       </table>
   </td>
@@ -1990,7 +2127,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Records whether any null values were replaced. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00076">76</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00079">79</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2018,7 +2155,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The path to the file. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00058">58</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00061">61</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2046,7 +2183,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The cfitsio data structure. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00061">61</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00064">64</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2062,7 +2199,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_isOpen</td>
+          <td class="memname">bool <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_isOpen {false}</td>
         </tr>
       </table>
   </td>
@@ -2074,7 +2211,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Flag indicating whether the file is open or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00070">70</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00073">73</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2102,7 +2239,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The size of each dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00067">67</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00070">70</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2130,7 +2267,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The dimensions of the image (1D, 2D, 3D etc) </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00064">64</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00067">67</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2146,7 +2283,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_noComment</td>
+          <td class="memname">int <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_noComment {0}</td>
         </tr>
       </table>
   </td>
@@ -2158,7 +2295,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Flag to control whether the comment string is read. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00079">79</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00082">82</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2174,7 +2311,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">dataT <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_nulval</td>
+          <td class="memname">dataT <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_nulval {0}</td>
         </tr>
       </table>
   </td>
@@ -2186,7 +2323,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The value to replace null values with. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00073">73</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00076">76</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2202,7 +2339,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_x0</td>
+          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_x0 {-1}</td>
         </tr>
       </table>
   </td>
@@ -2214,7 +2351,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The starting x-pixel to read from. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00083">83</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00086">86</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2230,7 +2367,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_xpix</td>
+          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_xpix {-1}</td>
         </tr>
       </table>
   </td>
@@ -2242,7 +2379,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The number of x-pixels to read. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00089">89</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00092">92</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2258,7 +2395,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_y0</td>
+          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_y0 {-1}</td>
         </tr>
       </table>
   </td>
@@ -2270,7 +2407,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>The starting y-pixel to read from. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00086">86</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00089">89</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2286,7 +2423,7 @@ template&lt;typename dataT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_ypix</td>
+          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_ypix {-1}</td>
         </tr>
       </table>
   </td>
@@ -2298,7 +2435,63 @@ template&lt;typename dataT &gt; </div>
 
 <p>The number of y-pixels to read. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00092">92</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00095">95</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a795c51c0f6b4c2f8538a8775305f6565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795c51c0f6b4c2f8538a8775305f6565">&#9670;&nbsp;</a></span>m_z0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_z0 {-1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The starting frame to read from a cube. </p>
+
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00098">98</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4f12f407f4c877d37588cca83dbd0110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f12f407f4c877d37588cca83dbd0110">&#9670;&nbsp;</a></span>m_zframes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long <a class="el" href="classmx_1_1fits_1_1fitsFile.html">mx::fits::fitsFile</a>&lt; dataT &gt;::m_zframes {-1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of frames to read from a cube. </p>
+
+<p class="definition">Definition at line <a class="el" href="fitsFile_8hpp_source.html#l00101">101</a> of file <a class="el" href="fitsFile_8hpp_source.html">fitsFile.hpp</a>.</p>
 
 </div>
 </div>
@@ -2311,7 +2504,7 @@ template&lt;typename dataT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>fits</b></li><li class="navelem"><a class="el" href="classmx_1_1fits_1_1fitsFile.html">fitsFile</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:05 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

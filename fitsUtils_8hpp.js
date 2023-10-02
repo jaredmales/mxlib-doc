@@ -1,6 +1,5 @@
 var fitsUtils_8hpp =
 [
-    [ "stdValWidth", "fitsUtils_8hpp.html#a4c5195a4197fde3527ab43f539456e1c", null ],
     [ "fits_write_key", "fitsUtils_8hpp.html#ga6795d65800e7a5200bb9beaa8eec088a", null ],
     [ "fits_write_key< bool >", "fitsUtils_8hpp.html#gaf8ffb601e1c1f60500e73cd7b4d16843", null ],
     [ "fitsBITPIX", "fitsUtils_8hpp.html#gaa33646845d0fffe078a64dc08ba6bccf", null ],

@@ -94,8 +94,7 @@ $(document).ready(function(){initNavTree('gnuPlot_8hpp.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">gnuPlot.hpp File Reference<div class="ingroups"><a class="el" href="group__gen__math.html">General Mathematics</a> &raquo; <a class="el" href="group__plotting.html">Plotting Data</a> &raquo; <a class="el" href="group__plotting__files.html">Files</a></div></div>  </div>
 </div><!--header-->
@@ -108,21 +107,6 @@ $(document).ready(function(){initNavTree('gnuPlot_8hpp.html',''); initResizable(
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="gnuPlot_8hpp_source.html">gnuPlot.hpp</a>.</p>
-</div><div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;fcntl.h&gt;</code><br />
-<code>#include &lt;poll.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &quot;../constants.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="mxError_8hpp_source.html">../../mxError.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="timeUtils_8hpp_source.html">../../sys/timeUtils.hpp</a>&quot;</code><br />
 </div>
 <p><a href="gnuPlot_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -137,19 +121,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacemx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemx.html">mx</a></td></tr>
 <tr class="memdesc:namespacemx"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib c++ namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga66c1d010a3b3d3086a97a19c964a1862"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__plotting.html#ga66c1d010a3b3d3086a97a19c964a1862">MX_GP_FNAME_SZ</a>&#160;&#160;&#160;(128)</td></tr>
-<tr class="memdesc:ga66c1d010a3b3d3086a97a19c964a1862"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the string for managing the stderr fifo.  <a href="group__plotting.html#ga66c1d010a3b3d3086a97a19c964a1862">More...</a><br /></td></tr>
-<tr class="separator:ga66c1d010a3b3d3086a97a19c964a1862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb7fe463f1ac14c18ef51775b544eb32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__plotting.html#gaeb7fe463f1ac14c18ef51775b544eb32">MX_GP_TEMP_SZ</a>&#160;&#160;&#160;(128)</td></tr>
-<tr class="memdesc:gaeb7fe463f1ac14c18ef51775b544eb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the string for managing temporary file names.  <a href="group__plotting.html#gaeb7fe463f1ac14c18ef51775b544eb32">More...</a><br /></td></tr>
-<tr class="separator:gaeb7fe463f1ac14c18ef51775b544eb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3742b3dd161bc2a870b0cf97c789e57e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__plotting.html#ga3742b3dd161bc2a870b0cf97c789e57e">MX_GP_FC_TIME</a>&#160;&#160;&#160;(10000)</td></tr>
-<tr class="separator:ga3742b3dd161bc2a870b0cf97c789e57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ca2c751de21219457d8ce1680cdfe52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__plotting.html#ga9ca2c751de21219457d8ce1680cdfe52">MX_GP_FC_RETRIES</a>&#160;&#160;&#160;(10)</td></tr>
-<tr class="separator:ga9ca2c751de21219457d8ce1680cdfe52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -157,7 +128,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_4ff8661d8c23ce74cba2e29c678ba90e.html">plot</a></li><li class="navelem"><a class="el" href="gnuPlot_8hpp.html">gnuPlot.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -40,6 +40,7 @@ var group__psds =
     [ "augment1SidedPSD", "group__psds.html#ga32e44c6b0cd5ec6927a3f1ca1272a987", null ],
     [ "augment1SidedPSDFreq", "group__psds.html#ga9be4feb5c4ac0b44608a726306b0311a", null ],
     [ "freq_sampling", "group__psds.html#gad62e6e7fd9fde862c407f3d6613e6374", null ],
+    [ "frequency_grid1D", "group__psds.html#gac4e3f7c1c2541d12a71f2f35a3730ce3", null ],
     [ "frequencyGrid", "group__psds.html#ga027c78549a6e53f04ad2194e4962c79e", null ],
     [ "frequencyGrid", "group__psds.html#ga204b4a6d60ae3d3ef3fb53ce2fe71266", null ],
     [ "frequencyGrid", "group__psds.html#ga505c909ca8b9ba63f1b31056ddb069c2", null ],

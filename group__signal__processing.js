@@ -8,7 +8,7 @@ var group__signal__processing =
       [ "calcCoefficients", "structmx_1_1sigproc_1_1linearPredictor.html#a225e3398fdfc44857abfae01688274e8", null ]
     ] ],
     [ "Power Spectra", "group__psds.html", "group__psds" ],
-    [ "The Fourier Basis", "group__fourier__basis.html", "group__fourier__basis" ],
+    [ "The Fourier Basis", "group__fourier__basis.html", null ],
     [ "The Zernike Basis", "group__zernike__basis.html", "group__zernike__basis" ],
     [ "Window Functions", "group__signal__windows.html", "group__signal__windows" ],
     [ "Image Filters", "group__image__filters.html", "group__image__filters" ],

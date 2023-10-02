@@ -54,6 +54,5 @@ var group__exceptions =
     ] ],
     [ "liberr", "classmx_1_1err_1_1liberr.html", [
       [ "liberr", "classmx_1_1err_1_1liberr.html#a664ecd2bc127fa03cf9f247efafa0ee1", null ]
-    ] ],
-    [ "mxThrowException", "group__exceptions.html#gad94a7fa7d77d8184ea8493d80dd6c30d", null ]
+    ] ]
 ];

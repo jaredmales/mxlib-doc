@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('randomSeed_8hpp_source.html',''); init
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordflow">if</span>(fd &lt; 0)</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;randomSeed&quot;</span>, errno, <span class="stringliteral">&quot;error opening /dev/urandom&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      mxPError(<span class="stringliteral">&quot;randomSeed&quot;</span>, errno, <span class="stringliteral">&quot;error opening /dev/urandom&quot;</span>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;         </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   }</div>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('randomSeed_8hpp_source.html',''); init
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   <span class="keywordflow">if</span>(rv &lt; 0)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <a class="code" href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a>(<span class="stringliteral">&quot;randomSeed&quot;</span>, errno, <span class="stringliteral">&quot;Error on read from /dev/urandom.&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      mxPError(<span class="stringliteral">&quot;randomSeed&quot;</span>, errno, <span class="stringliteral">&quot;Error on read from /dev/urandom.&quot;</span>);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      close(fd);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   }</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('randomSeed_8hpp_source.html',''); init
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   <span class="keywordflow">if</span>(rv &lt; sz)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;randomSeed&quot;</span>, <a class="code" href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a>, <span class="stringliteral">&quot;Read from /dev/urandom did not return enough bytes&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      mxError(<span class="stringliteral">&quot;randomSeed&quot;</span>, MXE_FILERERR, <span class="stringliteral">&quot;Read from /dev/urandom did not return enough bytes&quot;</span>);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;         </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   }</div>
@@ -209,9 +209,6 @@ $(document).ready(function(){initNavTree('randomSeed_8hpp_source.html',''); init
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//mx_math_randomSeed_hpp</span></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
-<div class="ttc" id="agroup__error__macros_html_gad4e5d5d54d751af7aad7400576e486d5"><div class="ttname"><a href="group__error__macros.html#gad4e5d5d54d751af7aad7400576e486d5">mxPError</a></div><div class="ttdeci">#define mxPError(esrc, ecode, expl)</div><div class="ttdoc">This reports a standard library error, taking after perror.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00096">mxError.hpp:96</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga1cb55d92155f8f1425930d8d2db08ca1"><div class="ttname"><a href="group__mxe__errors.html#ga1cb55d92155f8f1425930d8d2db08ca1">MXE_FILERERR</a></div><div class="ttdeci">#define MXE_FILERERR</div><div class="ttdoc">An error occurred while reading from a file.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00214">mxError.hpp:214</a></div></div>
 <div class="ttc" id="agroup__random_html_gaeb426e265b950d0038ec44a928b6d649"><div class="ttname"><a href="group__random.html#gaeb426e265b950d0038ec44a928b6d649">mx::math::randomSeed</a></div><div class="ttdeci">int randomSeed(intT &amp;seedval)</div><div class="ttdoc">Get a value to use as a random seed.</div><div class="ttdef"><b>Definition:</b> <a href="randomSeed_8hpp_source.html#l00057">randomSeed.hpp:57</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -220,7 +217,7 @@ $(document).ready(function(){initNavTree('randomSeed_8hpp_source.html',''); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="randomSeed_8hpp.html">randomSeed.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

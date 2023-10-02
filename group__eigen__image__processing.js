@@ -22,7 +22,22 @@ var group__eigen__image__processing =
     ] ],
     [ "is_eigenCube", "structmx_1_1improc_1_1is__eigenCube.html", null ],
     [ "eigenArrPlanes", "structmx_1_1improc_1_1eigenArrPlanes.html", null ],
+    [ "milkImage", "classmx_1_1improc_1_1milkImage.html", [
+      [ "dataT", "classmx_1_1improc_1_1milkImage.html#a82e9ff31bfd87e90df00eaa0d4eec492", null ],
+      [ "milkImage", "classmx_1_1improc_1_1milkImage.html#a357d73d03191375d86eb936f7e55be5c", null ],
+      [ "milkImage", "classmx_1_1improc_1_1milkImage.html#a74437e8572400632d1aead7086e77fc7", null ],
+      [ "open", "classmx_1_1improc_1_1milkImage.html#af3696401a34980394bf88bf1ff9938b9", null ],
+      [ "operator eigenMap< dataT >", "classmx_1_1improc_1_1milkImage.html#a0c1cf5f8e3ceeb2dc7ff9ab79ce8ba0e", null ],
+      [ "post", "classmx_1_1improc_1_1milkImage.html#ae24406f161a9d2474c293eb4e7f9e2b1", null ],
+      [ "reopen", "classmx_1_1improc_1_1milkImage.html#abde2e3e41523f14f2893b9f39439ab8a", null ],
+      [ "unchanged", "classmx_1_1improc_1_1milkImage.html#aeff57055031e1eff1b904e055c976f9f", null ],
+      [ "m_image", "classmx_1_1improc_1_1milkImage.html#a75a7300b4ebb0e0c024f2d09ecefa851", null ],
+      [ "m_name", "classmx_1_1improc_1_1milkImage.html#a89c2963b72b7b93e40da5204428401ad", null ],
+      [ "m_size_0", "classmx_1_1improc_1_1milkImage.html#af8c18c1eaf2a89eb5e1279be5ee8c1c1", null ],
+      [ "m_size_1", "classmx_1_1improc_1_1milkImage.html#a44b9ab2c851eafe33844b840da4b622f", null ]
+    ] ],
     [ "eigenImage", "group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99", null ],
+    [ "eigenMap", "group__eigen__image__processing.html#gaeb2fa3440c68cd49893374fabbfe8dc7", null ],
     [ "imageMedian", "group__eigen__image__processing.html#ga7c15ce5d1256dfdf2962fb96fc7b9190", null ],
     [ "imageMedian", "group__eigen__image__processing.html#gaf2c33450cd88c7a23d561ca21bdae7fd", null ]
 ];

@@ -15,6 +15,7 @@ var group__fits__processing =
       [ "naxis", "classmx_1_1fits_1_1fitsFile.html#ab8759fbd0fcb56b83820e1a44fb14f09", null ],
       [ "open", "classmx_1_1fits_1_1fitsFile.html#a5a4e0367036575d36ca2ee8661cd37d6", null ],
       [ "open", "classmx_1_1fits_1_1fitsFile.html#aefb248aac3f444d87b68046ce5e26d19", null ],
+      [ "pixarrs", "classmx_1_1fits_1_1fitsFile.html#a6a0a79157eddbf55866d62a59dbd3e5c", null ],
       [ "read", "classmx_1_1fits_1_1fitsFile.html#a0d46711842cd0fd3a2b77cf778cc3e7c", null ],
       [ "read", "classmx_1_1fits_1_1fitsFile.html#abd911e17a230c1c23cc261bff1b502c0", null ],
       [ "read", "classmx_1_1fits_1_1fitsFile.html#abe12314123f9b3a2f2b0109cc85c3b86", null ],
@@ -30,6 +31,8 @@ var group__fits__processing =
       [ "readHeader", "classmx_1_1fits_1_1fitsFile.html#a678c1c0aa2d2626810c3520b5f46bcb9", null ],
       [ "readHeader", "classmx_1_1fits_1_1fitsFile.html#abaea17f6bc9429401d35a5ebbb28cb21", null ],
       [ "readHeader", "classmx_1_1fits_1_1fitsFile.html#a3ed78dfc7db0269e2db56913207c5b14", null ],
+      [ "setCubeReadSize", "classmx_1_1fits_1_1fitsFile.html#a7d6cbfa0560e8ea0adf1d0573cadd04e", null ],
+      [ "setCubeReadSize", "classmx_1_1fits_1_1fitsFile.html#a2d92b187cbc1646148d6240098abe5e5", null ],
       [ "setReadSize", "classmx_1_1fits_1_1fitsFile.html#a6f4c36a0c6c1c95e5fb6841820cc7762", null ],
       [ "setReadSize", "classmx_1_1fits_1_1fitsFile.html#a6b3efa19f2dc57ddc3bca6b611c285c5", null ],
       [ "write", "classmx_1_1fits_1_1fitsFile.html#a90e1f799fa3f23bd20a1757e1afead5a", null ],
@@ -50,7 +53,9 @@ var group__fits__processing =
       [ "m_x0", "classmx_1_1fits_1_1fitsFile.html#ad08dc03b352ee79db56673f98d645aaf", null ],
       [ "m_xpix", "classmx_1_1fits_1_1fitsFile.html#ae086138cbbe2852a981e814f93883e47", null ],
       [ "m_y0", "classmx_1_1fits_1_1fitsFile.html#a79a4006011f900a6a0c0d7250af8f01e", null ],
-      [ "m_ypix", "classmx_1_1fits_1_1fitsFile.html#a705d56dd96fa5fdc76ed219e7d275d16", null ]
+      [ "m_ypix", "classmx_1_1fits_1_1fitsFile.html#a705d56dd96fa5fdc76ed219e7d275d16", null ],
+      [ "m_z0", "classmx_1_1fits_1_1fitsFile.html#a795c51c0f6b4c2f8538a8775305f6565", null ],
+      [ "m_zframes", "classmx_1_1fits_1_1fitsFile.html#a4f12f407f4c877d37588cca83dbd0110", null ]
     ] ],
     [ "fitsHeader", "classmx_1_1fits_1_1fitsHeader.html", [
       [ "headerIterator", "classmx_1_1fits_1_1fitsHeader.html#a1855c213f7ddcf34c00f8e062319a0d0", null ],

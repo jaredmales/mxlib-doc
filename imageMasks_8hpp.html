@@ -107,9 +107,6 @@ $(document).ready(function(){initNavTree('imageMasks_8hpp.html',''); initResizab
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
-</div><div class="textblock"><code>#include &quot;../math/constants.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="eigenImage_8hpp_source.html">eigenImage.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>&quot;</code><br />
 </div>
 <p><a href="imageMasks_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -129,22 +126,22 @@ Functions</h2></td></tr>
 <tr class="memitem:gac65a4fe6489e4a02901d7fcfcbc2bc78"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gac65a4fe6489e4a02901d7fcfcbc2bc78">mx::improc::radiusImage</a> (eigenT &amp;m, typename eigenT::Scalar scale=1)</td></tr>
 <tr class="memdesc:gac65a4fe6489e4a02901d7fcfcbc2bc78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of Eigen-like 2D Array with their radius from the canonical center.  <a href="group__image__masks.html#gac65a4fe6489e4a02901d7fcfcbc2bc78">More...</a><br /></td></tr>
 <tr class="separator:gac65a4fe6489e4a02901d7fcfcbc2bc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga21943153161703f5a45e0b78c5c9cc0c"><td class="memTemplParams" colspan="2">template&lt;class eigenT &gt; </td></tr>
-<tr class="memitem:ga21943153161703f5a45e0b78c5c9cc0c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga21943153161703f5a45e0b78c5c9cc0c">mx::improc::angleImage</a> (eigenT &amp;m, typename eigenT::Scalar xc, typename eigenT::Scalar yc, typename eigenT::Scalar scale=math::rad2deg&lt; typename eigenT::Scalar &gt;())</td></tr>
-<tr class="memdesc:ga21943153161703f5a45e0b78c5c9cc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of an Eigen-like 2D Array with their angle relative to the center.  <a href="group__image__masks.html#ga21943153161703f5a45e0b78c5c9cc0c">More...</a><br /></td></tr>
-<tr class="separator:ga21943153161703f5a45e0b78c5c9cc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaddb20715d1b7bbf028b64218c1216cec"><td class="memTemplParams" colspan="2">template&lt;class eigenT &gt; </td></tr>
-<tr class="memitem:gaddb20715d1b7bbf028b64218c1216cec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gaddb20715d1b7bbf028b64218c1216cec">mx::improc::angleImage</a> (eigenT &amp;m, typename eigenT::Scalar scale=math::rad2deg&lt; typename eigenT::Scalar &gt;())</td></tr>
-<tr class="memdesc:gaddb20715d1b7bbf028b64218c1216cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of Eigen 2D Array with their angle relative the canonical center.  <a href="group__image__masks.html#gaddb20715d1b7bbf028b64218c1216cec">More...</a><br /></td></tr>
-<tr class="separator:gaddb20715d1b7bbf028b64218c1216cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3f940d4320b8f87ba6c844f38f52d8eb"><td class="memTemplParams" colspan="2">template&lt;class eigenT &gt; </td></tr>
-<tr class="memitem:ga3f940d4320b8f87ba6c844f38f52d8eb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga3f940d4320b8f87ba6c844f38f52d8eb">mx::improc::radAngImage</a> (eigenT &amp;rIm, eigenT &amp;qIm, typename eigenT::Scalar xc, typename eigenT::Scalar yc, typename eigenT::Scalar rscale=1, typename eigenT::Scalar qscale=math::rad2deg&lt; typename eigenT::Scalar &gt;())</td></tr>
-<tr class="memdesc:ga3f940d4320b8f87ba6c844f38f52d8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of Eigen-like arrays with their radius amd angle relative to the center.  <a href="group__image__masks.html#ga3f940d4320b8f87ba6c844f38f52d8eb">More...</a><br /></td></tr>
-<tr class="separator:ga3f940d4320b8f87ba6c844f38f52d8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="memTemplParams" colspan="2">template&lt;typename eigenT &gt; </td></tr>
-<tr class="memitem:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gaf2a256ac7d5a7e089aecfff4224920a6">mx::improc::annulusIndices</a> (eigenT &amp;rIm, eigenT &amp;qIm, typename eigenT::Scalar xcen, typename eigenT::Scalar ycen, typename eigenT::Scalar min_r, typename eigenT::Scalar max_r, typename eigenT::Scalar min_q, typename eigenT::Scalar max_q, eigenT *mask=0)</td></tr>
-<tr class="memdesc:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vector indices of an annular region in an image.  <a href="group__image__masks.html#gaf2a256ac7d5a7e089aecfff4224920a6">More...</a><br /></td></tr>
-<tr class="separator:gaf2a256ac7d5a7e089aecfff4224920a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa71a7b3138a37805e1a179c29818f1c6"><td class="memTemplParams" colspan="2">template&lt;class angleT , class eigenT &gt; </td></tr>
+<tr class="memitem:gaa71a7b3138a37805e1a179c29818f1c6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gaa71a7b3138a37805e1a179c29818f1c6">mx::improc::angleImage</a> (eigenT &amp;m, typename angleT::realT xc, typename angleT::realT yc)</td></tr>
+<tr class="memdesc:gaa71a7b3138a37805e1a179c29818f1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of an Eigen-like 2D Array with their angle relative to the center.  <a href="group__image__masks.html#gaa71a7b3138a37805e1a179c29818f1c6">More...</a><br /></td></tr>
+<tr class="separator:gaa71a7b3138a37805e1a179c29818f1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71b571a9854f0ef32fdcd0cd314adb57"><td class="memTemplParams" colspan="2">template&lt;class angleT , class eigenT &gt; </td></tr>
+<tr class="memitem:ga71b571a9854f0ef32fdcd0cd314adb57"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga71b571a9854f0ef32fdcd0cd314adb57">mx::improc::angleImage</a> (eigenT &amp;m)</td></tr>
+<tr class="memdesc:ga71b571a9854f0ef32fdcd0cd314adb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of Eigen 2D Array with their angle relative the canonical center.  <a href="group__image__masks.html#ga71b571a9854f0ef32fdcd0cd314adb57">More...</a><br /></td></tr>
+<tr class="separator:ga71b571a9854f0ef32fdcd0cd314adb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8273d1bb45b573cce329bf72910fa3f"><td class="memTemplParams" colspan="2">template&lt;class angleT , class eigenT1 , class eigenT2 &gt; </td></tr>
+<tr class="memitem:gae8273d1bb45b573cce329bf72910fa3f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gae8273d1bb45b573cce329bf72910fa3f">mx::improc::radAngImage</a> (eigenT1 &amp;rIm, eigenT2 &amp;qIm, typename angleT::realT xc, typename angleT::realT yc, typename angleT::realT rscale=1)</td></tr>
+<tr class="memdesc:gae8273d1bb45b573cce329bf72910fa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of Eigen-like arrays with their radius amd angle relative to the center.  <a href="group__image__masks.html#gae8273d1bb45b573cce329bf72910fa3f">More...</a><br /></td></tr>
+<tr class="separator:gae8273d1bb45b573cce329bf72910fa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9f2da084a2935cd967fba939931adf0"><td class="memTemplParams" colspan="2">template&lt;typename angleT , typename eigenT1 , typename eigenT2 , typename eigenT3  = eigenT1&gt; </td></tr>
+<tr class="memitem:gaf9f2da084a2935cd967fba939931adf0"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gaf9f2da084a2935cd967fba939931adf0">mx::improc::annulusIndices</a> (const eigenT1 &amp;rIm, const eigenT2 &amp;qIm, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q, eigenT3 *mask=0)</td></tr>
+<tr class="memdesc:gaf9f2da084a2935cd967fba939931adf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vector indices of an annular region in an image.  <a href="group__image__masks.html#gaf9f2da084a2935cd967fba939931adf0">More...</a><br /></td></tr>
+<tr class="separator:gaf9f2da084a2935cd967fba939931adf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ea00fbf3785d282c66e0703d4f484d9"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:a8ea00fbf3785d282c66e0703d4f484d9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="imageMasks_8hpp.html#a8ea00fbf3785d282c66e0703d4f484d9">mx::improc::reflectImageIndices</a> (const std::vector&lt; size_t &gt; &amp;idxi, int w, int h, realT xc, realT yc)</td></tr>
 <tr class="memdesc:a8ea00fbf3785d282c66e0703d4f484d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect vector indices across the given center pixel.  <a href="imageMasks_8hpp.html#a8ea00fbf3785d282c66e0703d4f484d9">More...</a><br /></td></tr>
@@ -161,10 +158,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2d696afa3bb716882cd4c6bd38b1fc70"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga2d696afa3bb716882cd4c6bd38b1fc70">mx::improc::maskCircle</a> (arrayT &amp;m, typename arrayT::Scalar rad, typename arrayT::Scalar val, typename arrayT::Scalar pixbuf=0.5)</td></tr>
 <tr class="memdesc:ga2d696afa3bb716882cd4c6bd38b1fc70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask a circle in an image at the standard center.  <a href="group__image__masks.html#ga2d696afa3bb716882cd4c6bd38b1fc70">More...</a><br /></td></tr>
 <tr class="separator:ga2d696afa3bb716882cd4c6bd38b1fc70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7afad242e9dfc108048e277d4a9f25d4"><td class="memTemplParams" colspan="2">template&lt;class arrayT &gt; </td></tr>
-<tr class="memitem:ga7afad242e9dfc108048e277d4a9f25d4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga7afad242e9dfc108048e277d4a9f25d4">mx::improc::maskEllipse</a> (arrayT &amp;m, typename arrayT::Scalar xcen, typename arrayT::Scalar ycen, typename arrayT::Scalar xrad, typename arrayT::Scalar yrad, typename arrayT::Scalar val=0, typename arrayT::Scalar pixbuf=0.5)</td></tr>
-<tr class="memdesc:ga7afad242e9dfc108048e277d4a9f25d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask an ellipse in an image.  <a href="group__image__masks.html#ga7afad242e9dfc108048e277d4a9f25d4">More...</a><br /></td></tr>
-<tr class="separator:ga7afad242e9dfc108048e277d4a9f25d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58c410ba180c1b5bc129f5601c7e930d"><td class="memTemplParams" colspan="2">template&lt;class arrayT &gt; </td></tr>
+<tr class="memitem:ga58c410ba180c1b5bc129f5601c7e930d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga58c410ba180c1b5bc129f5601c7e930d">mx::improc::maskEllipse</a> (arrayT &amp;m, typename arrayT::Scalar xcen, typename arrayT::Scalar ycen, typename arrayT::Scalar xrad, typename arrayT::Scalar yrad, typename arrayT::Scalar ang, typename arrayT::Scalar val=0, typename arrayT::Scalar pixbuf=0.5)</td></tr>
+<tr class="memdesc:ga58c410ba180c1b5bc129f5601c7e930d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask an ellipse in an image.  <a href="group__image__masks.html#ga58c410ba180c1b5bc129f5601c7e930d">More...</a><br /></td></tr>
+<tr class="separator:ga58c410ba180c1b5bc129f5601c7e930d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7360f9acf0557af17be7f59266d7490f"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:ga7360f9acf0557af17be7f59266d7490f"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga7360f9acf0557af17be7f59266d7490f">mx::improc::drawLine</a> (eigenImage&lt; realT &gt; &amp;mask, realT x0, realT y0, realT x1, realT y1, realT val)</td></tr>
 <tr class="memdesc:ga7360f9acf0557af17be7f59266d7490f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a thin (1-pixel) line from one point to another.  <a href="group__image__masks.html#ga7360f9acf0557af17be7f59266d7490f">More...</a><br /></td></tr>
@@ -250,11 +247,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00258">258</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00264">264</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>, <a class="el" href="imageUtils_8hpp_source.html#l00046">mx::improc::reflectImageCoords()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00258">mx::improc::reflectImageIndices()</a>.</p>
+<p class="reference">References <a class="el" href="astro_2constants_8hpp_source.html#l00091">mx::astro::constants::h()</a>, <a class="el" href="imageUtils_8hpp_source.html#l00046">mx::improc::reflectImageCoords()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00264">mx::improc::reflectImageIndices()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l00258">mx::improc::reflectImageIndices()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l00264">mx::improc::reflectImageIndices()</a>.</p>
 
 </div>
 </div>
@@ -295,11 +292,11 @@ template&lt;typename imageT , typename transformT  = cubicConvolTransform&lt;typ
 <p>Rotate a binary mask. </p>
 <p>Sets edge pixels to 0 or 1 depending on the interpolation, being below/above 0.5. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00757">757</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00774">774</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00185">mx::improc::imageRotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00757">mx::improc::rotateMask()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00195">mx::improc::imageRotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00774">mx::improc::rotateMask()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00570">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00757">mx::improc::rotateMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00581">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00774">mx::improc::rotateMask()</a>.</p>
 
 </div>
 </div>
@@ -309,7 +306,7 @@ template&lt;typename imageT , typename transformT  = cubicConvolTransform&lt;typ
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageMasks_8hpp.html">imageMasks.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

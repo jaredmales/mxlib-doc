@@ -134,62 +134,143 @@ $(document).ready(function(){initNavTree('roots_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>math </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/// Find the roots of the general quartic equation</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span><span class="comment">/** Finds the roots of</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">  * \f[</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    f(x) = a x^4 + b x^3 + c x^2 + d x + e</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    \f]</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  * using the general formula for quartic roots. See https://en.wikipedia.org/wiki/Quartic_function.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  * \tparam realT is the floating point type used for calculations.</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  * \ingroup gen_math</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">quarticRoots</a>( std::vector&lt;std::complex&lt;realT&gt; &gt; &amp; x, <span class="comment">///&lt; [out] On exit contains the 4 roots, is resized to length 4.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                   realT a, <span class="comment">///&lt; [in] the coefficient of the \f$x^4\f$ term.</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                   realT b, <span class="comment">///&lt; [in] the coefficient of the \f$x^3\f$ term.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   realT <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>, <span class="comment">///&lt; [in] the coefficient of the \f$x^2\f$ term.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                   realT d, <span class="comment">///&lt; [in] the coefficient of the \f$x^1\f$ term. </span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                   realT e  <span class="comment">///&lt; [in] the coefficient of the \f$x^0\f$ term. </span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                 )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   std::complex&lt;realT&gt; p, q, S, Q, Delta0, Delta1;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   p = (8.0*a*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> - 3.0*b*b)/(8.0*a*a);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   q = (b*b*b - 4.0*a*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> + 8.0*a*a*d)/(8.0*a*a*a);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   Delta0 = <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> - 3.0*b*d + 12.0*a*e;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   Delta1 = 2.0*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> - 9.0*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*d + 27.0*b*b*e + 27.0*a*d*d - 72.0*a*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*e;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   Q = pow( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)* (Delta1 + sqrt( Delta1*Delta1 - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(4)*Delta0*Delta0*Delta0)), 1./3.);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   S = <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2.0/3.0)*p + <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(1.0/(3.0*a))*(Q + Delta0/Q));</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   x.resize(4);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   x[0] = -b/(4*a) - S + <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p + q/S);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   x[1] = -b/(4*a) - S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p + q/S);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   x[2] = -b/(4*a) + S + <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p - q/S);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   x[3] = -b/(4*a) + S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p - q/S);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">//quarticRoots</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">//namespace math</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//math_roots_hpp</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">   /// Calculate the descriminant for the general cubic</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">  * \returns the descriminant</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="roots_8hpp.html#a8b6821f647d70eb18004272a2e73192b">   44</a></span>&#160;realT <a class="code" href="roots_8hpp.html#a8b6821f647d70eb18004272a2e73192b">cubicDescriminant</a>( <span class="keyword">const</span> realT &amp; a, <span class="comment">///&lt; [in] the 3rd order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                         <span class="keyword">const</span> realT &amp; b, <span class="comment">///&lt; [in] the 2nd order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                         <span class="keyword">const</span> realT &amp; <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>, <span class="comment">///&lt; [in] the 1st order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                         <span class="keyword">const</span> realT &amp; d  <span class="comment">///&lt; [in] the 0th order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                       )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <span class="keywordflow">return</span> 18*a*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*d</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;             - 4*b*b*b*d</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                  + b*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                       - 4*a*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                           - 27*a*a*d*d;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/// Calculate the descriminant for the depressed cubic</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">  * \returns the descriminant</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="roots_8hpp.html#a4ab6d7681e5726c4df7b5a3e44c5b609">   62</a></span>&#160;realT <a class="code" href="roots_8hpp.html#a8b6821f647d70eb18004272a2e73192b">cubicDescriminant</a>( <span class="keyword">const</span> realT &amp; p, <span class="comment">///&lt; [in] the 0th order coefficient of the depressed cubic</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                         <span class="keyword">const</span> realT &amp; q  <span class="comment">///&lt; [in] the 0th order coefficient of the depressed cubic</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                       )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordflow">return</span> -1*(4*p*p*p + 27*q*q);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/// Convert a general cubic equation to depressed form</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span><span class="comment">/** The general cubic is</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">  * \f[</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">  * ax^3 + bx^2 + cx + d = 0</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">  * \f]</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">  * which can be converted to compressed form</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">  * \f[</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">  * t^3 + pt + q = 0</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">  * \f]</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="roots_8hpp.html#a912a5000ba024623dc28ca073d85adad">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="roots_8hpp.html#a912a5000ba024623dc28ca073d85adad">cubicDepressed</a>( realT &amp; p,       <span class="comment">///&lt; [out] the 1st order coefficient of the depressed cubic</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                     realT &amp; q,       <span class="comment">///&lt; [out] the 0th order coefficient of the depressed cubic</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                     <span class="keyword">const</span> realT &amp; a, <span class="comment">///&lt; [in] the 3rd order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                     <span class="keyword">const</span> realT &amp; b, <span class="comment">///&lt; [in] the 2nd order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                     <span class="keyword">const</span> realT &amp; <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>, <span class="comment">///&lt; [in] the 1st order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                     <span class="keyword">const</span> realT &amp; d  <span class="comment">///&lt; [in] the 0th order coefficient of the general cubic</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                   )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   p = (3*a*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>-b*b)/(3*a*a);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   q = (2*b*b*b-9*a*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>+27*a*a*d)/(27*a*a*a);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/// Calculate the real root for a depressed cubic with negative descriminant</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">  * \returns the real root for a depressed cubic defined by \p p and \p q</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">  * \throws std::runtime_error if there are 3 real roots</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="roots_8hpp.html#a54f9995e8b68f142fc47611881ccdf02">  101</a></span>&#160;realT <a class="code" href="roots_8hpp.html#a54f9995e8b68f142fc47611881ccdf02">cubicRealRoot</a>( <span class="keyword">const</span> realT &amp; p, <span class="comment">///&lt; [in] the 1st order coefficient of the depressed cubic</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                     <span class="keyword">const</span> realT &amp; q  <span class="comment">///&lt; [in] the 0th order coefficient of the depressed cubic</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                   )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   realT D = q*q/4 + p*p*p/27;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <span class="keywordflow">if</span>(D &lt; 0) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;cannot apply Cardano&#39;s formula, find roots using....&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   D = sqrt(D);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;   realT u1 = -q/2 + D;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   realT u2 = -q/2 - D;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="keywordflow">return</span> std::cbrt(u1) + std::cbrt(u2);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">/// Find the roots of the general quartic equation</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span><span class="comment">/** Finds the roots of</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">  * \f[</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    f(x) = a x^4 + b x^3 + c x^2 + d x + e</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    \f]</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">  * using the general formula for quartic roots. See https://en.wikipedia.org/wiki/Quartic_function.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">  * \tparam realT is the floating point type used for calculations.</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">  * \ingroup gen_math</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">  129</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">quarticRoots</a>( std::vector&lt;std::complex&lt;realT&gt; &gt; &amp; x, <span class="comment">///&lt; [out] On exit contains the 4 roots, is resized to length 4.</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                   realT a, <span class="comment">///&lt; [in] the coefficient of the \f$x^4\f$ term.</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                   realT b, <span class="comment">///&lt; [in] the coefficient of the \f$x^3\f$ term.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                   realT <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>, <span class="comment">///&lt; [in] the coefficient of the \f$x^2\f$ term.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                   realT d, <span class="comment">///&lt; [in] the coefficient of the \f$x^1\f$ term. </span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                   realT e  <span class="comment">///&lt; [in] the coefficient of the \f$x^0\f$ term. </span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                 )</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   std::complex&lt;realT&gt; p, q, S, Q, Delta0, Delta1;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   p = (8.0*a*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> - 3.0*b*b)/(8.0*a*a);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;   </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   q = (b*b*b - 4.0*a*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> + 8.0*a*a*d)/(8.0*a*a*a);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;   </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   Delta0 = <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> - 3.0*b*d + 12.0*a*e;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   Delta1 = 2.0*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> - 9.0*b*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*d + 27.0*b*b*e + 27.0*a*d*d - 72.0*a*<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>*e;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   Q = pow( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)* (Delta1 + sqrt( Delta1*Delta1 - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(4)*Delta0*Delta0*Delta0)), 1./3.);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;   </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   S = <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2.0/3.0)*p + <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(1.0/(3.0*a))*(Q + Delta0/Q));</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;   </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;   x.resize(4);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;   </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;   x[0] = -b/(4*a) - S + <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p + q/S);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   x[1] = -b/(4*a) - S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p + q/S);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;   x[2] = -b/(4*a) + S + <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p - q/S);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;   x[3] = -b/(4*a) + S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(0.5)*sqrt( <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(-4)*S*S - <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(2)*p - q/S);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;   </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;} <span class="comment">//quarticRoots</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;} <span class="comment">//namespace math</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//math_roots_hpp</span></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga48a5d9609fd9405c69f13f8cecb19ee9"><div class="ttname"><a href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">mx::astro::constants::c</a></div><div class="ttdeci">constexpr units::realT c()</div><div class="ttdoc">The speed of light.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00060">constants.hpp:60</a></div></div>
-<div class="ttc" id="agroup__gen__math_html_ga81076cc4c49ea225efacf54b824570cc"><div class="ttname"><a href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">mx::math::quarticRoots</a></div><div class="ttdeci">void quarticRoots(std::vector&lt; std::complex&lt; realT &gt; &gt; &amp;x, realT a, realT b, realT c, realT d, realT e)</div><div class="ttdoc">Find the roots of the general quartic equation.</div><div class="ttdef"><b>Definition:</b> <a href="roots_8hpp_source.html#l00051">roots.hpp:51</a></div></div>
+<div class="ttc" id="agroup__gen__math_html_ga81076cc4c49ea225efacf54b824570cc"><div class="ttname"><a href="group__gen__math.html#ga81076cc4c49ea225efacf54b824570cc">mx::math::quarticRoots</a></div><div class="ttdeci">void quarticRoots(std::vector&lt; std::complex&lt; realT &gt; &gt; &amp;x, realT a, realT b, realT c, realT d, realT e)</div><div class="ttdoc">Find the roots of the general quartic equation.</div><div class="ttdef"><b>Definition:</b> <a href="roots_8hpp_source.html#l00129">roots.hpp:129</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
+<div class="ttc" id="aroots_8hpp_html_a54f9995e8b68f142fc47611881ccdf02"><div class="ttname"><a href="roots_8hpp.html#a54f9995e8b68f142fc47611881ccdf02">mx::math::cubicRealRoot</a></div><div class="ttdeci">realT cubicRealRoot(const realT &amp;p, const realT &amp;q)</div><div class="ttdoc">Calculate the real root for a depressed cubic with negative descriminant.</div><div class="ttdef"><b>Definition:</b> <a href="roots_8hpp_source.html#l00101">roots.hpp:101</a></div></div>
+<div class="ttc" id="aroots_8hpp_html_a8b6821f647d70eb18004272a2e73192b"><div class="ttname"><a href="roots_8hpp.html#a8b6821f647d70eb18004272a2e73192b">mx::math::cubicDescriminant</a></div><div class="ttdeci">realT cubicDescriminant(const realT &amp;a, const realT &amp;b, const realT &amp;c, const realT &amp;d)</div><div class="ttdoc">Calculate the descriminant for the general cubic.</div><div class="ttdef"><b>Definition:</b> <a href="roots_8hpp_source.html#l00044">roots.hpp:44</a></div></div>
+<div class="ttc" id="aroots_8hpp_html_a912a5000ba024623dc28ca073d85adad"><div class="ttname"><a href="roots_8hpp.html#a912a5000ba024623dc28ca073d85adad">mx::math::cubicDepressed</a></div><div class="ttdeci">void cubicDepressed(realT &amp;p, realT &amp;q, const realT &amp;a, const realT &amp;b, const realT &amp;c, const realT &amp;d)</div><div class="ttdoc">Convert a general cubic equation to depressed form.</div><div class="ttdef"><b>Definition:</b> <a href="roots_8hpp_source.html#l00081">roots.hpp:81</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="roots_8hpp.html">roots.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

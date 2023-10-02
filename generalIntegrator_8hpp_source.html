@@ -483,7 +483,7 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;   <span class="keywordflow">if</span>( gains.size() != (<span class="keywordtype">size_t</span>) m_closingGains.cols())</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;   {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;generalIntegrator::closingGains&quot;</span>, <a class="code" href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a>, <span class="stringliteral">&quot;input gain vector not same size as number of modes&quot;</span>);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      mxError(<span class="stringliteral">&quot;generalIntegrator::closingGains&quot;</span>, MXE_SIZEERR, <span class="stringliteral">&quot;input gain vector not same size as number of modes&quot;</span>);</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <span class="keywordflow">return</span> -1; <span class="comment">///\retval -1 on vector size mismatch</span></div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;   }</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
@@ -586,7 +586,7 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;{</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;   <span class="keywordflow">if</span>(i &lt; 0 || i &gt;= m_nModes)</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;   {</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;generalIntegrator::gain&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;mode index out of range&quot;</span>);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;      mxError(<span class="stringliteral">&quot;generalIntegrator::gain&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;mode index out of range&quot;</span>);</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;      <span class="keywordflow">return</span> 0; <span class="comment">///\retval 0 if the mode doesn&#39;t exist.</span></div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;   }</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
@@ -598,7 +598,7 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;{</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;   <span class="keywordflow">if</span>(i &lt; 0 || i &gt;= m_nModes)</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;   {</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;generalIntegrator::gain&quot;</span>, <a class="code" href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a>, <span class="stringliteral">&quot;mode index out of range&quot;</span>);</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;      mxError(<span class="stringliteral">&quot;generalIntegrator::gain&quot;</span>, MXE_INVALIDARG, <span class="stringliteral">&quot;mode index out of range&quot;</span>);</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;      <span class="keywordflow">return</span> 0; <span class="comment">///\retval 0 if the mode doesn&#39;t exist.</span></div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;   }</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
@@ -625,7 +625,7 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;   <span class="keywordflow">if</span>( gains.size() != (<span class="keywordtype">size_t</span>) m_gains.cols())</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;   {</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;generalIntegrator::gains&quot;</span>, <a class="code" href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a>, <span class="stringliteral">&quot;input gain vector not same size as number of modes&quot;</span>);</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      mxError(<span class="stringliteral">&quot;generalIntegrator::gains&quot;</span>, MXE_SIZEERR, <span class="stringliteral">&quot;input gain vector not same size as number of modes&quot;</span>);</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      <span class="keywordflow">return</span> -1; <span class="comment">///\retval -1 on vector size mismatch</span></div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;   }</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160; </div>
@@ -648,7 +648,7 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;   <span class="keywordflow">if</span>(!fin.good())</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;   {</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <a class="code" href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a>(<span class="stringliteral">&quot;generalIntegrator::gains&quot;</span>, <a class="code" href="group__mxe__errors.html#gaddf00185293413a55b84677b7db799c5">MXE_FILEOERR</a>, <span class="stringliteral">&quot;could not open gan file&quot;</span>);</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      mxError(<span class="stringliteral">&quot;generalIntegrator::gains&quot;</span>, MXE_FILEOERR, <span class="stringliteral">&quot;could not open gan file&quot;</span>);</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;      <span class="keywordflow">return</span> -1; <span class="comment">/// \retval -1 if file open fails</span></div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;   }</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; </div>
@@ -836,10 +836,6 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1generalIntegrator_html_af3ba6cc74c13fee4c060821f22e571a6"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1generalIntegrator.html#af3ba6cc74c13fee4c060821f22e571a6">mx::AO::sim::generalIntegrator::m_gains</a></div><div class="ttdeci">imageT m_gains</div><div class="ttdoc">Column-vector of gains.</div><div class="ttdef"><b>Definition:</b> <a href="generalIntegrator_8hpp_source.html#l00084">generalIntegrator.hpp:84</a></div></div>
 <div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1generalIntegrator_html_aff5dab80968b8e40ef8553f1f68c6ffb"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1generalIntegrator.html#aff5dab80968b8e40ef8553f1f68c6ffb">mx::AO::sim::generalIntegrator::m_nModes</a></div><div class="ttdeci">int m_nModes</div><div class="ttdoc">The number of modes being filtered.</div><div class="ttdef"><b>Definition:</b> <a href="generalIntegrator_8hpp_source.html#l00064">generalIntegrator.hpp:64</a></div></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_gaff0edddeb4620b93d42c08d638627506"><div class="ttname"><a href="group__dimensioned__constants.html#gaff0edddeb4620b93d42c08d638627506">mx::astro::constants::k</a></div><div class="ttdeci">constexpr units::realT k()</div><div class="ttdoc">Boltzmann Constant.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00071">constants.hpp:71</a></div></div>
-<div class="ttc" id="agroup__error__macros_html_ga96f883b366ff6e1e3932a301c3bab5d4"><div class="ttname"><a href="group__error__macros.html#ga96f883b366ff6e1e3932a301c3bab5d4">mxError</a></div><div class="ttdeci">#define mxError(esrc, ecode, expl)</div><div class="ttdoc">This reports an mxlib specific error.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00079">mxError.hpp:79</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga38fc03054354c04ac079aca53399fc5a"><div class="ttname"><a href="group__mxe__errors.html#ga38fc03054354c04ac079aca53399fc5a">MXE_INVALIDARG</a></div><div class="ttdeci">#define MXE_INVALIDARG</div><div class="ttdoc">An argument was invalid.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00116">mxError.hpp:116</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_ga91bc075cebce532574429af628b3c3b0"><div class="ttname"><a href="group__mxe__errors.html#ga91bc075cebce532574429af628b3c3b0">MXE_SIZEERR</a></div><div class="ttdeci">#define MXE_SIZEERR</div><div class="ttdoc">A size was invalid or calculated incorrectly.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00164">mxError.hpp:164</a></div></div>
-<div class="ttc" id="agroup__mxe__errors_html_gaddf00185293413a55b84677b7db799c5"><div class="ttname"><a href="group__mxe__errors.html#gaddf00185293413a55b84677b7db799c5">MXE_FILEOERR</a></div><div class="ttdeci">#define MXE_FILEOERR</div><div class="ttdoc">An error occurred while opening a file.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00198">mxError.hpp:198</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -847,7 +843,7 @@ $(document).ready(function(){initNavTree('generalIntegrator_8hpp_source.html',''
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_082cbf2913457a01d654a9fdfc0ec78a.html">sim</a></li><li class="navelem"><a class="el" href="generalIntegrator_8hpp.html">generalIntegrator.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('basis_8hpp.html',''); initResizable();
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">basis.hpp File Reference<div class="ingroups"><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo; <a class="el" href="group__mxAO__files.html">Adaptive Optics Files</a></div></div>  </div>
@@ -108,15 +107,6 @@ $(document).ready(function(){initNavTree('basis_8hpp.html',''); initResizable();
 <dl class="section author"><dt>Author</dt><dd>Jared R. Males (<a href="#" onclick="location.href='mai'+'lto:'+'jar'+'ed'+'mal'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">jared<span style="display: none;">.nosp@m.</span>male<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="basis_8hpp_source.html">basis.hpp</a>.</p>
-</div><div class="textblock"><code>#include &quot;<a class="el" href="fitsFile_8hpp_source.html">../ioutils/fits/fitsFile.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="fourierModes_8hpp_source.html">../sigproc/fourierModes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="gramSchmidt_8hpp_source.html">../sigproc/gramSchmidt.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="imageFilters_8hpp_source.html">../improc/imageFilters.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="imagePads_8hpp_source.html">../improc/imagePads.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="eigenCube_8hpp_source.html">../improc/eigenCube.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="signalWindows_8hpp_source.html">../sigproc/signalWindows.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="eigenLapack_8hpp_source.html">../math/eigenLapack.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="aoPaths_8hpp_source.html">aoPaths.hpp</a>&quot;</code><br />
 </div>
 <p><a href="basis_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -125,15 +115,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacemx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemx.html">mx</a></td></tr>
 <tr class="memdesc:namespacemx"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mxlib c++ namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:acf1d2fe46b5d8c5cba78f0dc86a8fe96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basis_8hpp.html#acf1d2fe46b5d8c5cba78f0dc86a8fe96">MXAO_ORTHO_METHOD_SGS</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:acf1d2fe46b5d8c5cba78f0dc86a8fe96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant to specify using the stabilized Gramm Schmidt (SGS) orthogonalization procedure.  <a href="basis_8hpp.html#acf1d2fe46b5d8c5cba78f0dc86a8fe96">More...</a><br /></td></tr>
-<tr class="separator:acf1d2fe46b5d8c5cba78f0dc86a8fe96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73bcb351f33ea847f194123f3edfc8d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basis_8hpp.html#a73bcb351f33ea847f194123f3edfc8d9">MXAO_ORTHO_METHOD_SVD</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a73bcb351f33ea847f194123f3edfc8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant to specify using the singular value decomposition (SVD) for orthogonalizing a modal basis.  <a href="basis_8hpp.html#a73bcb351f33ea847f194123f3edfc8d9">More...</a><br /></td></tr>
-<tr class="separator:a73bcb351f33ea847f194123f3edfc8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -147,43 +128,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2b65e17af4f3bdb229fdc3153bd021cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate an orthogonal projection of a basis on a pupil.  <a href="basis_8hpp.html#a2b65e17af4f3bdb229fdc3153bd021cc">More...</a><br /></td></tr>
 <tr class="separator:a2b65e17af4f3bdb229fdc3153bd021cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="acf1d2fe46b5d8c5cba78f0dc86a8fe96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf1d2fe46b5d8c5cba78f0dc86a8fe96">&#9670;&nbsp;</a></span>MXAO_ORTHO_METHOD_SGS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MXAO_ORTHO_METHOD_SGS&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constant to specify using the stabilized Gramm Schmidt (SGS) orthogonalization procedure. </p>
-
-<p class="definition">Definition at line <a class="el" href="basis_8hpp_source.html#l00083">83</a> of file <a class="el" href="basis_8hpp_source.html">basis.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a73bcb351f33ea847f194123f3edfc8d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73bcb351f33ea847f194123f3edfc8d9">&#9670;&nbsp;</a></span>MXAO_ORTHO_METHOD_SVD</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MXAO_ORTHO_METHOD_SVD&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constant to specify using the singular value decomposition (SVD) for orthogonalizing a modal basis. </p>
-
-<p class="definition">Definition at line <a class="el" href="basis_8hpp_source.html#l00088">88</a> of file <a class="el" href="basis_8hpp_source.html">basis.hpp</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2fda237bc5404371293bd9ee592e0170"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fda237bc5404371293bd9ee592e0170">&#9670;&nbsp;</a></span>applyPupil2Basis()</h2>
@@ -283,7 +227,7 @@ template&lt;typename realT &gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">basisName</td><td>the name of the basis to orthogonalize </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pupilName</td><td>the name of the pupil on which to orthogonalize. <br  />
  </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>either <a class="el" href="basis_8hpp.html#acf1d2fe46b5d8c5cba78f0dc86a8fe96">MXAO_ORTHO_METHOD_SGS</a> (for SGS) or <a class="el" href="basis_8hpp.html#a73bcb351f33ea847f194123f3edfc8d9">MXAO_ORTHO_METHOD_SVD</a> (for SVD)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>either MXAO_ORTHO_METHOD_SGS (for SGS) or MXAO_ORTHO_METHOD_SVD (for SVD)</td></tr>
   </table>
   </dd>
 </dl>
@@ -304,7 +248,7 @@ template&lt;typename realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="basis_8hpp.html">basis.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

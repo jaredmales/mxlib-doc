@@ -146,17 +146,17 @@ $(document).ready(function(){initNavTree('logistic_8hpp_source.html',''); initRe
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  * The parameter \f$ a \f$ controls how fast the function rises.  Here it is specified by the</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  * value \f$ f(t_{1/2}) = x\f$, where \f$ 0 &lt; x &lt; 1 \f$.</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  * \param x [input] the value at which the rist time is specified.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  * \param thalf [input] half the rise time, or the time after 0 when f(t) = x.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  * \returns the value of a</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">  * \returns the value of a</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">  * \tparam floatT is the floating point type of the arguments and the returned value.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">  * \tparam floatT is the floating point type of the arguments and the returned value.</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">  * \ingroup functions</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="group__functions.html#gaf0615a3bf1da560abf889e15e4a99140">   61</a></span>&#160;floatT <a class="code" href="group__functions.html#gaf0615a3bf1da560abf889e15e4a99140">logistic_param</a>(floatT x, floatT thalf)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">  * \ingroup gen_math_logistic</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="group__gen__math__logistic.html#gaf0615a3bf1da560abf889e15e4a99140">   59</a></span>&#160;floatT <a class="code" href="group__gen__math__logistic.html#gaf0615a3bf1da560abf889e15e4a99140">logistic_param</a>( floatT x,    <span class="comment">///&lt; [in] the value at which the rise time is specified.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                       floatT thalf <span class="comment">///&lt; [in]  half the rise time, or the time after 0 when f(t) = x.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                     )</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordflow">return</span> -log( 1.0/x - 1)/thalf;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
@@ -175,10 +175,10 @@ $(document).ready(function(){initNavTree('logistic_8hpp_source.html',''); initRe
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">  * </span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">  * \tparam floatT is the floating point type of the arguments and the returned value.</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">  * \ingroup functions</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">  * \ingroup gen_math_logistic</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> <span class="keywordtype">float</span>T&gt;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="group__functions.html#ga764f78457f1ca51b4cae2590c34e0c83">   83</a></span>&#160;floatT <a class="code" href="group__functions.html#ga764f78457f1ca51b4cae2590c34e0c83">logistic</a>(floatT t, floatT t0 = 0, floatT a = 1)</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="group__gen__math__logistic.html#ga764f78457f1ca51b4cae2590c34e0c83">   83</a></span>&#160;floatT <a class="code" href="group__gen__math__logistic.html#ga764f78457f1ca51b4cae2590c34e0c83">logistic</a>(floatT t, floatT t0 = 0, floatT a = 1)</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keywordflow">return</span> 1.0/(1.0 + exp( -a*(t-t0)));</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
@@ -191,8 +191,8 @@ $(document).ready(function(){initNavTree('logistic_8hpp_source.html',''); initRe
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__logistic_hpp__</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="ttc" id="agroup__functions_html_ga764f78457f1ca51b4cae2590c34e0c83"><div class="ttname"><a href="group__functions.html#ga764f78457f1ca51b4cae2590c34e0c83">mx::math::func::logistic</a></div><div class="ttdeci">floatT logistic(floatT t, floatT t0=0, floatT a=1)</div><div class="ttdoc">Return the value of the logistic function.</div><div class="ttdef"><b>Definition:</b> <a href="logistic_8hpp_source.html#l00083">logistic.hpp:83</a></div></div>
-<div class="ttc" id="agroup__functions_html_gaf0615a3bf1da560abf889e15e4a99140"><div class="ttname"><a href="group__functions.html#gaf0615a3bf1da560abf889e15e4a99140">mx::math::func::logistic_param</a></div><div class="ttdeci">floatT logistic_param(floatT x, floatT thalf)</div><div class="ttdoc">Return the logistic function parameter for a specified rise time.</div><div class="ttdef"><b>Definition:</b> <a href="logistic_8hpp_source.html#l00061">logistic.hpp:61</a></div></div>
+<div class="ttc" id="agroup__gen__math__logistic_html_ga764f78457f1ca51b4cae2590c34e0c83"><div class="ttname"><a href="group__gen__math__logistic.html#ga764f78457f1ca51b4cae2590c34e0c83">mx::math::func::logistic</a></div><div class="ttdeci">floatT logistic(floatT t, floatT t0=0, floatT a=1)</div><div class="ttdoc">Return the value of the logistic function.</div><div class="ttdef"><b>Definition:</b> <a href="logistic_8hpp_source.html#l00083">logistic.hpp:83</a></div></div>
+<div class="ttc" id="agroup__gen__math__logistic_html_gaf0615a3bf1da560abf889e15e4a99140"><div class="ttname"><a href="group__gen__math__logistic.html#gaf0615a3bf1da560abf889e15e4a99140">mx::math::func::logistic_param</a></div><div class="ttdeci">floatT logistic_param(floatT x, floatT thalf)</div><div class="ttdoc">Return the logistic function parameter for a specified rise time.</div><div class="ttdef"><b>Definition:</b> <a href="logistic_8hpp_source.html#l00059">logistic.hpp:59</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -200,7 +200,7 @@ $(document).ready(function(){initNavTree('logistic_8hpp_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_4e9e59a91b0996cbbf615e490f662000.html">func</a></li><li class="navelem"><a class="el" href="logistic_8hpp.html">logistic.hpp</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

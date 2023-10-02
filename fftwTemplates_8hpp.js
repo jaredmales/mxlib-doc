@@ -3,6 +3,7 @@ var fftwTemplates_8hpp =
     [ "complexDT", "fftwTemplates_8hpp.html#ga04eb266ccb8a26e19e2ad3e18710b186", null ],
     [ "complexFT", "fftwTemplates_8hpp.html#gaaee17190ac1de21ddf02c40ec00a83ff", null ],
     [ "complexLT", "fftwTemplates_8hpp.html#gaf9f6cbdfadb65c149391cf7bbf2c979e", null ],
+    [ "complexQT", "fftwTemplates_8hpp.html#gab01e44a9ab54168bfa876c4e4f314eb1", null ],
     [ "fftw_cleanup", "fftwTemplates_8hpp.html#ga706980381ed5326fc89958d70386c1e1", null ],
     [ "fftw_cleanup_threads", "fftwTemplates_8hpp.html#ga20636ea4d4bce1f5591f210b00a88fd7", null ],
     [ "fftw_destroy_plan", "fftwTemplates_8hpp.html#ga5610a5a0f43ab849923925cd2e9f06ff", null ],

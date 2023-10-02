@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('classmx_1_1AO_1_1analysis_1_1aoAtmosph
 class mx::AO::analysis::aoAtmosphere&lt; _realT &gt;</h3>
 
 <p>A class to specify atmosphere parameters and perform related calculations. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Add layer outer scales.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Add layer outer scales.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">realT</td><td>is the real floating type in which all calculations are performed. </td></tr>
@@ -397,7 +397,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a37e2b762b4ae75c96a78c93f757c1828"><td class="mdescLeft">&#160;</td><td class="mdescRight">\( C_n^2 \) averaged direction  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a37e2b762b4ae75c96a78c93f757c1828">More...</a><br /></td></tr>
 <tr class="separator:a37e2b762b4ae75c96a78c93f757c1828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa59fb6bc5d5f5ce19384b62743c1a80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#afa59fb6bc5d5f5ce19384b62743c1a80">m_z_mean_updated</a> {false}</td></tr>
-<tr class="memdesc:afa59fb6bc5d5f5ce19384b62743c1a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether or not m_z_mean has been update after changes  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#afa59fb6bc5d5f5ce19384b62743c1a80">More...</a><br /></td></tr>
+<tr class="memdesc:afa59fb6bc5d5f5ce19384b62743c1a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether or not m_z_mean has been updated after changes  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#afa59fb6bc5d5f5ce19384b62743c1a80">More...</a><br /></td></tr>
 <tr class="separator:afa59fb6bc5d5f5ce19384b62743c1a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6b9446a7643f11dbb3def7e26da06c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a63c41da9874421704b63da70a4663a18">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a1d6b9446a7643f11dbb3def7e26da06c">m_z_mean</a></td></tr>
 <tr class="memdesc:a1d6b9446a7643f11dbb3def7e26da06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">\( C_n^2 \) averaged layer height  <a href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#a1d6b9446a7643f11dbb3def7e26da06c">More...</a><br /></td></tr>
@@ -709,8 +709,6 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00643">643</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mxError_8hpp_source.html#l00164">MXE_SIZEERR</a>, and <a class="el" href="mxError_8hpp_source.html#l00079">mxError</a>.</p>
-
 </div>
 </div>
 <a id="a0672da7d6b5b209f2d0b47bdd0f0bf28"></a>
@@ -768,7 +766,7 @@ template&lt;typename iosT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>update for new vector components (L_0, etc.) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>update for new vector components (L_0, etc.) </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ios</td><td>a std::ostream-like stream. </td></tr>
@@ -899,7 +897,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the greenwood frequency at the reference wavelength. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>derive full value of the constant </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>derive full value of the constant </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01193">1193</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
@@ -961,7 +959,7 @@ template&lt;typename realT &gt; </div>
 \[ \left( \frac{\epsilon_{vK}}{\epsilon_0}\right)^2 = 1 - 2.183\left( \frac{r_0(\lambda_{sci}}{L_0}\right)^{0.356} \]
 </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the FWHM ( \( \epsilon_{0/vK} \)) for the current atmosphere parameters. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>this needs to handle layers with different L_0 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>this needs to handle layers with different L_0 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">lam_sci</td><td>the wavelength of the science observation. </td></tr>
@@ -1174,7 +1172,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00751">751</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00476">mx::AO::analysis::fourierCovarMap()</a>.</p>
 
 </div>
 </div>
@@ -1835,7 +1833,7 @@ template&lt;typename realT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00682">682</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00469">mx::AO::analysis::fourierCovarMap()</a>, and <a class="el" href="aoSystem__test_8cpp_source.html#l00020">SCENARIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierCovariance_8hpp_source.html#l00476">mx::AO::analysis::fourierCovarMap()</a>, and <a class="el" href="aoSystem__test_8cpp_source.html#l00020">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -2038,7 +2036,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Get tau_0 at the reference wavelength. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>derive full value of the constant </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>derive full value of the constant </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l01205">1205</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
@@ -2140,7 +2138,7 @@ template&lt;typename realT &gt; </div>
 
 <p>Recalculate m_v_wind. </p>
 <p>Called by <a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html#aa59d0ef0ee9385f3206c0a291be72286" title="Get the 5/3 moment weighted mean wind speed.">v_wind()</a> whenever m_v_wind_updated is true.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>handle dir_wind averaging across 0/2pi <br  />
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>handle dir_wind averaging across 0/2pi <br  />
  </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00980">980</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
@@ -3029,7 +3027,7 @@ template&lt;typename _realT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>whether or not m_z_mean has been update after changes </p>
+<p>whether or not m_z_mean has been updated after changes </p>
 
 <p class="definition">Definition at line <a class="el" href="aoAtmosphere_8hpp_source.html#l00092">92</a> of file <a class="el" href="aoAtmosphere_8hpp_source.html">aoAtmosphere.hpp</a>.</p>
 
@@ -3044,7 +3042,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html">aoAtmosphere</a></li>
-    <li class="footer">Generated on Sat Oct 8 2022 23:28:09 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
