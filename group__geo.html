@@ -119,10 +119,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga150fa0a60f353b760a8c227379b4f9f7"><td class="memTemplItemLeft" align="right" valign="top">angleT::realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geo.html#ga150fa0a60f353b760a8c227379b4f9f7">mx::math::angleDiff</a> (typename angleT::realT q1, typename angleT::realT q2)</td></tr>
 <tr class="memdesc:ga150fa0a60f353b760a8c227379b4f9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the difference between two angles, correctly across 0/360.  <a href="group__geo.html#ga150fa0a60f353b760a8c227379b4f9f7">More...</a><br /></td></tr>
 <tr class="separator:ga150fa0a60f353b760a8c227379b4f9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01164953efd13eaf0cc4ea7d1910a9aa"><td class="memTemplParams" colspan="2">template&lt;class angleT &gt; </td></tr>
-<tr class="memitem:ga01164953efd13eaf0cc4ea7d1910a9aa"><td class="memTemplItemLeft" align="right" valign="top">angleT::realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa">mx::math::angleMean</a> (std::vector&lt; typename angleT::realT &gt; &amp;q)</td></tr>
-<tr class="memdesc:ga01164953efd13eaf0cc4ea7d1910a9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the mean of a set of angles, correctly across 0/360.  <a href="group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa">More...</a><br /></td></tr>
-<tr class="separator:ga01164953efd13eaf0cc4ea7d1910a9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8196d2c1a79c10f905881181a2577591"><td class="memTemplParams" colspan="2">template&lt;class angleT &gt; </td></tr>
+<tr class="memitem:ga8196d2c1a79c10f905881181a2577591"><td class="memTemplItemLeft" align="right" valign="top">angleT::realT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geo.html#ga8196d2c1a79c10f905881181a2577591">mx::math::angleMean</a> (const std::vector&lt; typename angleT::realT &gt; &amp;q)</td></tr>
+<tr class="memdesc:ga8196d2c1a79c10f905881181a2577591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the mean of a set of angles, correctly across 0/360.  <a href="group__geo.html#ga8196d2c1a79c10f905881181a2577591">More...</a><br /></td></tr>
+<tr class="separator:ga8196d2c1a79c10f905881181a2577591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga03d19941cd996137174b767ab992aa13"><td class="memTemplParams" colspan="2">template&lt;int degrad = 0, typename realT &gt; </td></tr>
 <tr class="memitem:ga03d19941cd996137174b767ab992aa13"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geo.html#ga03d19941cd996137174b767ab992aa13">mx::math::continueAngles</a> (std::vector&lt; realT &gt; &amp;angles, realT threshold=0.75)</td></tr>
 <tr class="memdesc:ga03d19941cd996137174b767ab992aa13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a vector of angles continuous, fixing the 0/360 crossing.  <a href="group__geo.html#ga03d19941cd996137174b767ab992aa13">More...</a><br /></td></tr>
@@ -184,8 +184,8 @@ template&lt;class angleT &gt; </div>
 
 </div>
 </div>
-<a id="ga01164953efd13eaf0cc4ea7d1910a9aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga01164953efd13eaf0cc4ea7d1910a9aa">&#9670;&nbsp;</a></span>angleMean()</h2>
+<a id="ga8196d2c1a79c10f905881181a2577591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8196d2c1a79c10f905881181a2577591">&#9670;&nbsp;</a></span>angleMean()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +195,7 @@ template&lt;class angleT &gt; </div>
         <tr>
           <td class="memname">angleT::realT mx::math::angleMean </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; typename angleT::realT &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; typename angleT::realT &gt; &amp;&#160;</td>
           <td class="paramname"><em>q</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,22 +205,21 @@ template&lt;class angleT &gt; </div>
 <p>Calculate the mean of a set of angles, correctly across 0/360. </p>
 <p>Calculates the mean by decomposing into vectors and averaging the components. This accounts for crossing 0/360. <br  />
 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">q</td><td>vector of angles to average.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the mean angle</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">degrad</td><td>controls whether angles are degrees (false) or radians (true) </td></tr>
-    <tr><td class="paramname">realT</td><td>is the type in which to do arithmetic </td></tr>
+    <tr><td class="paramname">angleT</td><td>is the angle type, either radians&lt;realT&gt; or degrees&lt;realT&gt;. angleT::realT is the type in which to do arithmetic. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">q</td><td>vector of angles to average. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="geo_8hpp_source.html#l00230">230</a> of file <a class="el" href="geo_8hpp_source.html">geo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geo_8hpp_source.html#l00227">227</a> of file <a class="el" href="geo_8hpp_source.html">geo.hpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +307,7 @@ template&lt;int degrad = 0, typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="geo_8hpp_source.html#l00260">260</a> of file <a class="el" href="geo_8hpp_source.html">geo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geo_8hpp_source.html#l00257">257</a> of file <a class="el" href="geo_8hpp_source.html">geo.hpp</a>.</p>
 
 </div>
 </div>
@@ -397,7 +396,7 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="geo_8hpp_source.html#l00307">307</a> of file <a class="el" href="geo_8hpp_source.html">geo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geo_8hpp_source.html#l00304">304</a> of file <a class="el" href="geo_8hpp_source.html">geo.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +438,7 @@ template&lt;typename realT &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:12 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

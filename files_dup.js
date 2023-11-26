@@ -3,6 +3,7 @@ var files_dup =
     [ "ao", "dir_4a0bf71ba3138a6abb584fb74c18f794.html", "dir_4a0bf71ba3138a6abb584fb74c18f794" ],
     [ "app", "dir_98ff7954eb3842da01d2ae02361edfa5.html", "dir_98ff7954eb3842da01d2ae02361edfa5" ],
     [ "astro", "dir_0fc3206047eab508bd310c9d22a11fd1.html", "dir_0fc3206047eab508bd310c9d22a11fd1" ],
+    [ "base", "dir_ab1c81409f0df724f17c9ef30afee877.html", "dir_ab1c81409f0df724f17c9ef30afee877" ],
     [ "doc", "dir_e68e8157741866f444e17edd764ebbae.html", "dir_e68e8157741866f444e17edd764ebbae" ],
     [ "improc", "dir_36e4a5df511904fcb54b5d9f3b8bffb0.html", "dir_36e4a5df511904fcb54b5d9f3b8bffb0" ],
     [ "ioutils", "dir_6895d4f394f35c99cbb9eae210940ca9.html", "dir_6895d4f394f35c99cbb9eae210940ca9" ],

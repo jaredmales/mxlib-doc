@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dispamplitude_4222',['dispAmplitude',['../aoPSDs_8hpp.html#a0391d7a0cbd341612e1385560ea9c36fa1881a31639caa4d33d553a88a7da3959',1,'mx::AO::analysis::PSDComponent']]],
-  ['dispphase_4223',['dispPhase',['../aoPSDs_8hpp.html#a0391d7a0cbd341612e1385560ea9c36fad7324e009fdd796c041bc53935641b00',1,'mx::AO::analysis::PSDComponent']]]
+  ['dispamplitude_4278',['dispAmplitude',['../aoPSDs_8hpp.html#a0391d7a0cbd341612e1385560ea9c36fa1881a31639caa4d33d553a88a7da3959',1,'mx::AO::analysis::PSDComponent']]],
+  ['dispphase_4279',['dispPhase',['../aoPSDs_8hpp.html#a0391d7a0cbd341612e1385560ea9c36fad7324e009fdd796c041bc53935641b00',1,'mx::AO::analysis::PSDComponent']]]
 ];

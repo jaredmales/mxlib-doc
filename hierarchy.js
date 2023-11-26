@@ -6,7 +6,7 @@ var hierarchy =
     [ "mx::math::fit::airy2D_obs_fitter_ps_eps< _realT >", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter__ps__eps.html", null ],
     [ "mx::AO::analysis::aoAtmosphere< _realT >", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html", null ],
     [ "mx::AO::analysis::aoAtmosphere< realT >", "classmx_1_1AO_1_1analysis_1_1aoAtmosphere.html", null ],
-    [ "mx::AO::analysis::aoSystem< realT, inputSpectT, iosT >", "classmx_1_1AO_1_1analysis_1_1aoSystem.html", null ],
+    [ "mx::AO::analysis::aoSystem< _realT, _inputSpectT, iosT >", "classmx_1_1AO_1_1analysis_1_1aoSystem.html", null ],
     [ "mx::improc::aperturePhotometer< realT >", "classmx_1_1improc_1_1aperturePhotometer.html", null ],
     [ "mx::app::appConfigurator", "structmx_1_1app_1_1appConfigurator.html", null ],
     [ "mx::app::application", "classmx_1_1app_1_1application.html", null ],
@@ -39,6 +39,10 @@ var hierarchy =
     [ "mx::astro::calspecSpectrum< _units >", "structmx_1_1astro_1_1calspecSpectrum.html", null ],
     [ "mx::AO::sim::ccdDetector< _realT >", "classmx_1_1AO_1_1sim_1_1ccdDetector.html", null ],
     [ "mx::astro::units::cgs< _realT >", "structmx_1_1astro_1_1units_1_1cgs.html", null ],
+    [ "mx::base::changeable", "classmx_1_1base_1_1changeable.html", [
+      [ "mx::AO::sim::turbAtmosphere< aoSystemT >", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", null ],
+      [ "mx::AO::sim::turbAtmosphere< _aoSystemT >", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", null ]
+    ] ],
     [ "mx::sigproc::circularBufferBase< _derivedT, _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBase.html", null ],
     [ "mx::sigproc::circularBufferBase< circularBufferBranch< _storedT, _indexT >, _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBase.html", [
       [ "mx::sigproc::circularBufferBranch< _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferBranch.html", null ]
@@ -202,8 +206,8 @@ var hierarchy =
     [ "mx::meta::trueFalseT< true >", "structmx_1_1meta_1_1trueFalseT_3_01true_01_4.html", [
       [ "mx::meta::has_value_type< T, void_t< typename T::value_type > >", "structmx_1_1meta_1_1has__value__type_3_01T_00_01void__t_3_01typename_01T_1_1value__type_01_4_01_4.html", null ]
     ] ],
-    [ "mx::AO::sim::turbAtmosphere< _realT >", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", null ],
-    [ "mx::AO::sim::turbLayer< _realT >", "structmx_1_1AO_1_1sim_1_1turbLayer.html", null ],
+    [ "mx::AO::sim::turbLayer< _aoSystemT >", "structmx_1_1AO_1_1sim_1_1turbLayer.html", null ],
+    [ "mx::AO::sim::turbSubHarmonic< _turbAtmosphereT >", "classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html", null ],
     [ "mx::meta::typeDescription< T >", "structmx_1_1meta_1_1typeDescription.html", null ],
     [ "mx::fits::fitsHeaderCard::values", "unionmx_1_1fits_1_1fitsHeaderCard_1_1values.html", null ],
     [ "mx::astro::venusAlbedo< _units >", "structmx_1_1astro_1_1venusAlbedo.html", null ],

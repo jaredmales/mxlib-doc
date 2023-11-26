@@ -49,6 +49,7 @@ var namespacemx =
         [ "simulatedAOSystem", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem" ],
         [ "turbAtmosphere", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", "structmx_1_1AO_1_1sim_1_1turbAtmosphere" ],
         [ "turbLayer", "structmx_1_1AO_1_1sim_1_1turbLayer.html", "structmx_1_1AO_1_1sim_1_1turbLayer" ],
+        [ "turbSubHarmonic", "classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html", "classmx_1_1AO_1_1sim_1_1turbSubHarmonic" ],
         [ "wavefront", "structmx_1_1AO_1_1sim_1_1wavefront.html", "structmx_1_1AO_1_1sim_1_1wavefront" ]
       ] ],
       [ "applyPupil2Basis", "basis_8hpp.html#a2fda237bc5404371293bd9ee592e0170", null ],
@@ -163,6 +164,9 @@ var namespacemx =
       [ "solve_kepler_danby", "group__kepler.html#ga02cfa22e91f93dc7da9e52aa9b6ac1b8", null ],
       [ "solve_keplerdiff_danby", "kepler_8hpp.html#ab2efd5007c212ad297e9d94c62a63934", null ]
     ] ],
+    [ "base", null, [
+      [ "changeable", "classmx_1_1base_1_1changeable.html", "classmx_1_1base_1_1changeable" ]
+    ] ],
     [ "cuda", null, [
       [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ],
       [ "cublasTaxpy", "group__cublas.html#gaa16199fd5cf6fb5f698138edc6aa1bc6", null ],
@@ -273,6 +277,7 @@ var namespacemx =
       [ "eigenMap", "group__eigen__image__processing.html#gaeb2fa3440c68cd49893374fabbfe8dc7", null ],
       [ "angleImage", "group__image__masks.html#ga71b571a9854f0ef32fdcd0cd314adb57", null ],
       [ "angleImage", "group__image__masks.html#gaa71a7b3138a37805e1a179c29818f1c6", null ],
+      [ "annulusBoundingRect", "group__image__masks.html#gadceb1f3d289b4974808233a7a0259d91", null ],
       [ "annulusIndices", "group__image__masks.html#gaf9f2da084a2935cd967fba939931adf0", null ],
       [ "applyMask", "group__image__masks.html#ga917b7b98a203cb1bb70556e9ca3e8a6b", null ],
       [ "ccdBleedMask", "group__image__masks.html#ga94800d2710b554ed865a6045a7db2f71", null ],
@@ -536,7 +541,7 @@ var namespacemx =
       [ "poissonDistT", "group__random.html#ga3ddc6e269a1ccbbb0e6db4aec00639c1", null ],
       [ "uniDistT", "group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9", null ],
       [ "angleDiff", "group__geo.html#ga150fa0a60f353b760a8c227379b4f9f7", null ],
-      [ "angleMean", "group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa", null ],
+      [ "angleMean", "group__geo.html#ga8196d2c1a79c10f905881181a2577591", null ],
       [ "angleMod", "group__geo.html#ga33318ab56f6a879156ba527e10f34261", null ],
       [ "calcKLModes", "group__eigen__lapack.html#ga769d73daca9dec74c654d049d8b14967", null ],
       [ "continueAngles", "group__geo.html#ga03d19941cd996137174b767ab992aa13", null ],
@@ -546,8 +551,8 @@ var namespacemx =
       [ "cubicRealRoot", "roots_8hpp.html#a54f9995e8b68f142fc47611881ccdf02", null ],
       [ "dtor", "group__geo.html#ga92a420eb057d344c22e3973c29030489", null ],
       [ "eigenGESDD", "group__eigen__lapack.html#gadca9861cad94ddee5f7723078fcfc075", null ],
-      [ "eigenPseudoInverse", "group__eigen__lapack.html#ga34ca9099b1659487d51d2f3b8ee7dc35", null ],
-      [ "eigenPseudoInverse", "group__eigen__lapack.html#gad2286dbce09f336de82ef781364866e8", null ],
+      [ "eigenPseudoInverse", "group__eigen__lapack.html#ga65e79e34424facd0b11a3852e1ef1a2d", null ],
+      [ "eigenPseudoInverse", "group__eigen__lapack.html#gaed083a74298fc8b75884f37bfae97b42", null ],
       [ "eigenSYEVR", "group__eigen__lapack.html#gad42125e6d5a2dbd332b81660b06e52ad", null ],
       [ "eigenSYRK", "group__eigen__lapack.html#ga9c4fc17379b2d70e1f7deb476edd43b9", null ],
       [ "eleven_sixths", "group__genconstants.html#ga41ddf79c8f6f9442a53e81b8e02a69c4", null ],

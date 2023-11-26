@@ -25,6 +25,7 @@ var annotated_dup =
           [ "simulatedAOSystem", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem" ],
           [ "turbAtmosphere", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", "structmx_1_1AO_1_1sim_1_1turbAtmosphere" ],
           [ "turbLayer", "structmx_1_1AO_1_1sim_1_1turbLayer.html", "structmx_1_1AO_1_1sim_1_1turbLayer" ],
+          [ "turbSubHarmonic", "classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html", "classmx_1_1AO_1_1sim_1_1turbSubHarmonic" ],
           [ "wavefront", "structmx_1_1AO_1_1sim_1_1wavefront.html", "structmx_1_1AO_1_1sim_1_1wavefront" ]
         ] ]
       ] ],
@@ -57,6 +58,9 @@ var annotated_dup =
         [ "cahoyGrid", "structmx_1_1astro_1_1cahoyGrid.html", "structmx_1_1astro_1_1cahoyGrid" ],
         [ "phoenixSpectrum", "structmx_1_1astro_1_1phoenixSpectrum.html", "structmx_1_1astro_1_1phoenixSpectrum" ],
         [ "mainSequence", "structmx_1_1astro_1_1mainSequence.html", "structmx_1_1astro_1_1mainSequence" ]
+      ] ],
+      [ "base", null, [
+        [ "changeable", "classmx_1_1base_1_1changeable.html", "classmx_1_1base_1_1changeable" ]
       ] ],
       [ "cuda", null, [
         [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ]

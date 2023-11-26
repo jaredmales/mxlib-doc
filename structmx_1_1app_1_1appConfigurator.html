@@ -123,7 +123,7 @@ key4=value6_over_
 </li>
 <li>Vectors are input as comma separated lists, as in section1.key4 above. Leading whitespace is stripped from each component of the vector.</li>
 </ul>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd><p class="startdd">add handling of += in subsequent files. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000038">Todo:</a></b></dt><dd><p class="startdd">add handling of += in subsequent files. </p>
 <p class="enddd">should just swith to strict TOML</p>
 </dd></dl>
 <p>The command line parser handles both short-opt ("-h -vArg -n Arg") and long-opt ("--help --value=Arg --number=Arg") styles.</p>
@@ -322,7 +322,7 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="appConfigurator_8hpp_source.html#l00101">clOnlyTargets</a>, <a class="el" href="configTarget_8hpp_source.html#l00060">mx::app::configTarget::keyword</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00095">m_targets</a>, <a class="el" href="appConfigurator_8hpp_source.html#l00107">nAdded</a>, <a class="el" href="configTarget_8hpp_source.html#l00055">mx::app::configTarget::name</a>, and <a class="el" href="configTarget_8hpp_source.html#l00059">mx::app::configTarget::section</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00062">add()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l01334">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::setupConfig()</a>, <a class="el" href="aoPSDs_8hpp_source.html#l00428">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::setupConfig()</a>, <a class="el" href="aoSystem_8hpp_source.html#l02808">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::setupConfig()</a>, <a class="el" href="application_8cpp_source.html#l00190">mx::app::application::setupStandardConfig()</a>, <a class="el" href="application_8cpp_source.html#l00195">mx::app::application::setupStandardHelp()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00967">unusedSections()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8cpp_source.html#l00062">add()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l01335">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::setupConfig()</a>, <a class="el" href="aoPSDs_8hpp_source.html#l00428">mx::AO::analysis::vonKarmanSpectrum&lt; realT &gt;::setupConfig()</a>, <a class="el" href="aoSystem_8hpp_source.html#l02812">mx::AO::analysis::aoSystem&lt; _realT, _inputSpectT, iosT &gt;::setupConfig()</a>, <a class="el" href="application_8cpp_source.html#l00190">mx::app::application::setupStandardConfig()</a>, <a class="el" href="application_8cpp_source.html#l00195">mx::app::application::setupStandardHelp()</a>, and <a class="el" href="appConfigurator_8cpp_source.html#l00967">unusedSections()</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1160,7 @@ false if no value was set. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="appConfigurator_8cpp_source.html#l00219">219</a> of file <a class="el" href="appConfigurator_8cpp_source.html">appConfigurator.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00230">isSet()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00995">isSetUnused()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l01357">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::loadConfig()</a>, and <a class="el" href="aoSystem_8hpp_source.html#l02848">mx::AO::analysis::aoSystem&lt; realT, inputSpectT, iosT &gt;::loadConfig()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="appConfigurator_8hpp_source.html#l00377">get()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00230">isSet()</a>, <a class="el" href="appConfigurator_8cpp_source.html#l00995">isSetUnused()</a>, <a class="el" href="aoAtmosphere_8hpp_source.html#l01358">mx::AO::analysis::aoAtmosphere&lt; _realT &gt;::loadConfig()</a>, and <a class="el" href="aoSystem_8hpp_source.html#l02852">mx::AO::analysis::aoSystem&lt; _realT, _inputSpectT, iosT &gt;::loadConfig()</a>.</p>
 
 </div>
 </div>
@@ -1343,8 +1343,8 @@ template&lt;typename typeT &gt; </div>
 </div><div class="memdoc">
 
 <p>Read and parse a config/ini file, updating the targets. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000038">Todo:</a></b></dt><dd>handle += here, by appending to the last value as if a vector. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000083">Todo:</a></b></dt><dd>update error handling to include &gt;0 (line numer of parse error) and -2 memory allocation error. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo:</a></b></dt><dd>handle += here, by appending to the last value as if a vector. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000084">Todo:</a></b></dt><dd>update error handling to include &gt;0 (line numer of parse error) and -2 memory allocation error. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fname</td><td>the config file name </td></tr>
@@ -1628,7 +1628,7 @@ template&lt;typename typeT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>app</b></li><li class="navelem"><a class="el" href="structmx_1_1app_1_1appConfigurator.html">appConfigurator</a></li>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:05 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:12 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

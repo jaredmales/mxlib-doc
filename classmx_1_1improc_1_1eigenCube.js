@@ -3,6 +3,7 @@ var classmx_1_1improc_1_1eigenCube =
     [ "eigenCube", "classmx_1_1improc_1_1eigenCube.html#adcc66e14bbe299ee26712fec516404f5", null ],
     [ "eigenCube", "classmx_1_1improc_1_1eigenCube.html#ad13e3af2cb7be2ccfa61271751e0ca38", null ],
     [ "asVectors", "classmx_1_1improc_1_1eigenCube.html#aec7098ccdc4fb4a546b5b052a66934c8", null ],
+    [ "clear", "classmx_1_1improc_1_1eigenCube.html#a6a85c50b27f8f14e11c66b2d854ebc71", null ],
     [ "Covar", "classmx_1_1improc_1_1eigenCube.html#a3f33ac1f221c66dfeb6998c406954779", null ],
     [ "cube", "classmx_1_1improc_1_1eigenCube.html#aa9b7f5b18741343a5b4be12665ae7f77", null ],
     [ "image", "classmx_1_1improc_1_1eigenCube.html#af81b1c69b2c9e1c376ec70d562dbebe9", null ],

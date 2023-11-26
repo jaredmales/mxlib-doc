@@ -2,6 +2,7 @@ var imageMasks_8hpp =
 [
     [ "angleImage", "imageMasks_8hpp.html#ga71b571a9854f0ef32fdcd0cd314adb57", null ],
     [ "angleImage", "imageMasks_8hpp.html#gaa71a7b3138a37805e1a179c29818f1c6", null ],
+    [ "annulusBoundingRect", "imageMasks_8hpp.html#gadceb1f3d289b4974808233a7a0259d91", null ],
     [ "annulusIndices", "imageMasks_8hpp.html#gaf9f2da084a2935cd967fba939931adf0", null ],
     [ "applyMask", "imageMasks_8hpp.html#ga917b7b98a203cb1bb70556e9ca3e8a6b", null ],
     [ "ccdBleedMask", "imageMasks_8hpp.html#ga94800d2710b554ed865a6045a7db2f71", null ],

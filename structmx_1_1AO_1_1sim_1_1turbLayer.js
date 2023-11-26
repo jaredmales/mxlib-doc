@@ -1,7 +1,8 @@
 var structmx_1_1AO_1_1sim_1_1turbLayer =
 [
-    [ "initRandom", "structmx_1_1AO_1_1sim_1_1turbLayer.html#ab10a17476a6220f403dec668b2efe3fd", null ],
-    [ "shift", "structmx_1_1AO_1_1sim_1_1turbLayer.html#a7166a48ed0ed334ede99749f76b9d833", null ],
-    [ "shiftRandom", "structmx_1_1AO_1_1sim_1_1turbLayer.html#a1fc72fcf568f424b44318b9e2136dd23", null ],
-    [ "uniVar", "structmx_1_1AO_1_1sim_1_1turbLayer.html#a811d6cb9f06279d802df41f99c9d073f", null ]
+    [ "genDealloc", "structmx_1_1AO_1_1sim_1_1turbLayer.html#a1a9b3b40b6190fa1702efeb148ffa685", null ],
+    [ "initRandom", "structmx_1_1AO_1_1sim_1_1turbLayer.html#a74e8d748550377dcad6a73373979026f", null ],
+    [ "shift", "structmx_1_1AO_1_1sim_1_1turbLayer.html#ae02eb6d220908d914964e2541a21382a", null ],
+    [ "shiftRandom", "structmx_1_1AO_1_1sim_1_1turbLayer.html#ae14bdfe1d845208fbc6ba106d3d9928e", null ],
+    [ "uniVar", "structmx_1_1AO_1_1sim_1_1turbLayer.html#a7c857c413421a7de0b0601331188727f", null ]
 ];

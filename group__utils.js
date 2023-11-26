@@ -1,5 +1,6 @@
 var group__utils =
 [
+    [ "Base Classes", "group__base.html", "group__base" ],
     [ "Input/Output Utilities", "group__ioutils.html", "group__ioutils" ],
     [ "Working with time", "group__timeutils.html", "group__timeutils" ],
     [ "Meta-programming Utilities.", "group__meta.html", "group__meta" ],

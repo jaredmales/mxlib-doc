@@ -315,123 +315,120 @@ $(document).ready(function(){initNavTree('geo_8hpp_source.html',''); initResizab
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">///Calculate the mean of a set of angles, correctly across 0/360.</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment"></span><span class="comment">/** Calculates the mean by decomposing into vectors and averaging the components. This accounts for crossing 0/360.  </span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">  * \param q vector of angles to average.</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">  * \returns the mean angle</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">  * \returns the mean angle</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">  * \tparam degrad controls whether angles are degrees (false) or radians (true)</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">  * \tparam realT is the type in which to do arithmetic</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">  * \ingroup geo</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> angleT&gt;</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa">  230</a></span>&#160;<span class="keyword">typename</span> angleT::realT <a class="code" href="group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa">angleMean</a>(std::vector&lt;typename angleT::realT&gt; &amp; q)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{ </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;   static_assert(std::is_floating_point&lt;typename angleT::realT&gt;::value, <span class="stringliteral">&quot;angleMean: realT must be floating point&quot;</span>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;   </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   <span class="keyword">typename</span> angleT::realT s = 0;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;   <span class="keyword">typename</span> angleT::realT <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> = 0;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; q.size(); ++i)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;   {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      s += sin( q[i]/angleT::scale);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> += cos( q[i]/angleT::scale );</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;   }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">  * \tparam angleT is the angle type, either radians&lt;realT&gt; or degrees&lt;realT&gt;.  angleT::realT is the type in which to do arithmetic.</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">  * \ingroup geo</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> angleT&gt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="group__geo.html#ga8196d2c1a79c10f905881181a2577591">  227</a></span>&#160;<span class="keyword">typename</span> angleT::realT <a class="code" href="group__geo.html#ga8196d2c1a79c10f905881181a2577591">angleMean</a>( <span class="keyword">const</span> std::vector&lt;typename angleT::realT&gt; &amp; q <span class="comment">/**&lt; [in] vector of angles to average.*/</span>)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{ </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;   static_assert(std::is_floating_point&lt;typename angleT::realT&gt;::value, <span class="stringliteral">&quot;angleMean: realT must be floating point&quot;</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;   </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;   <span class="keyword">typename</span> angleT::realT s = 0;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;   <span class="keyword">typename</span> angleT::realT <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> = 0;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt; q.size(); ++i)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;   {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      s += sin( q[i]/angleT::scale);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> += cos( q[i]/angleT::scale );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;   }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;   </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;   s /= q.size();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;   <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> /= q.size();</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;   </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   s /= q.size();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;   <a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a> /= q.size();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   <span class="keywordflow">return</span> atan(s/<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>)*angleT::scale ;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">///Make a vector of angles continuous, fixing the 0/360 crossing.</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"></span><span class="comment">/** The vector is modified so it is continuous.</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   <span class="keywordflow">return</span> atan2(s,<a class="code" href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">c</a>)*angleT::scale ;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">///Make a vector of angles continuous, fixing the 0/360 crossing.</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"></span><span class="comment">/** The vector is modified so it is continuous.</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">  * \tparam degrad controls whether angles are degrees (false) or radians (true)</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">  * \tparam realT is the type in which to do arithmetic</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">  * \tparam degrad controls whether angles are degrees (false) or radians (true)</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">  * \tparam realT is the type in which to do arithmetic</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">  *  \ingroup geo</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> degrad = 0, <span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="group__geo.html#ga03d19941cd996137174b767ab992aa13">  260</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__geo.html#ga03d19941cd996137174b767ab992aa13">continueAngles</a>( std::vector&lt;realT&gt; &amp; angles, <span class="comment">///&lt; [in] the vector of angles</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    realT threshold=0.75 <span class="comment">///&lt; [in] [optional] the fraction of a full circle at which to consider a difference in angle discontinuous.</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                  )</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   realT full;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;   </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   <span class="keywordflow">if</span>(degrad) full = two_pi&lt;realT&gt;();</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   <span class="keywordflow">else</span> full = <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(360);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;   threshold*=full;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;   realT adj = 0;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;   </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;   <span class="keywordflow">if</span>( fabs(angles[1] - angles[0]) &gt; threshold)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;   {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">if</span>( angles[1] &gt; angles[0]) adj = -full;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordflow">else</span> adj = full;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      angles[1] += adj;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   <span class="keywordflow">if</span>(angles.size() == 2) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;   </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=2; i&lt; angles.size(); ++i)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;   {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      angles[i] += adj;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">if</span>( fabs(angles[i] - angles[i-1]) &gt; threshold)</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;         <span class="keywordflow">if</span>( angles[i] &gt; angles[i-1]) adj += -full;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;         <span class="keywordflow">else</span> adj += full;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;         angles[i] += adj;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;   }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;   </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;   <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">/// Rotate a point about the origin.</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"></span><span class="comment">/** The rotation is counter-clockwise for positive angles.</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">  * \tparam realT a real floating point type</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">  * </span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">  *  \ingroup geo</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">  */</span> </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
-<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">  307</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">rotatePoint</a>( realT &amp; x0,  <span class="comment">///&lt; [in.out] the x-coordinate of the point to rotate.  On exit contains the rotated value.</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                  realT &amp; y0,  <span class="comment">///&lt; [in.out] the y-coordinate of the point to rotate.  On exit contains the rotated value.</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                  realT angle  <span class="comment">///&lt; [in] the angle by which to rotate [radians]</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                )</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   realT x1;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;   realT y1;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">  *  \ingroup geo</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">int</span> degrad = 0, <span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="group__geo.html#ga03d19941cd996137174b767ab992aa13">  257</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__geo.html#ga03d19941cd996137174b767ab992aa13">continueAngles</a>( std::vector&lt;realT&gt; &amp; angles, <span class="comment">///&lt; [in] the vector of angles</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    realT threshold=0.75 <span class="comment">///&lt; [in] [optional] the fraction of a full circle at which to consider a difference in angle discontinuous.</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                  )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;   realT full;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;   </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;   <span class="keywordflow">if</span>(degrad) full = two_pi&lt;realT&gt;();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;   <span class="keywordflow">else</span> full = <span class="keyword">static_cast&lt;</span>realT<span class="keyword">&gt;</span>(360);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;   threshold*=full;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;   </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;   realT adj = 0;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;   </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;   <span class="keywordflow">if</span>( fabs(angles[1] - angles[0]) &gt; threshold)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;   {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">if</span>( angles[1] &gt; angles[0]) adj = -full;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <span class="keywordflow">else</span> adj = full;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      angles[1] += adj;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;   }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;   </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;   <span class="keywordflow">if</span>(angles.size() == 2) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;   </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=2; i&lt; angles.size(); ++i)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      angles[i] += adj;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">if</span>( fabs(angles[i] - angles[i-1]) &gt; threshold)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;         <span class="keywordflow">if</span>( angles[i] &gt; angles[i-1]) adj += -full;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;         <span class="keywordflow">else</span> adj += full;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;         angles[i] += adj;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;   }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;   </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">/// Rotate a point about the origin.</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"></span><span class="comment">/** The rotation is counter-clockwise for positive angles.</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">  *</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">  * \tparam realT a real floating point type</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">  * </span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">  *  \ingroup geo</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">  */</span> </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> realT&gt;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">  304</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">rotatePoint</a>( realT &amp; x0,  <span class="comment">///&lt; [in.out] the x-coordinate of the point to rotate.  On exit contains the rotated value.</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                  realT &amp; y0,  <span class="comment">///&lt; [in.out] the y-coordinate of the point to rotate.  On exit contains the rotated value.</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                  realT angle  <span class="comment">///&lt; [in] the angle by which to rotate [radians]</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                )</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;   realT x1;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   realT y1;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;   </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   realT cq = cos(angle);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;   realT sq = sin(angle);</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;   </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;   realT cq = cos(angle);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;   realT sq = sin(angle);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;   x1 = x0*cq - y0*sq;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;   y1 = x0*sq + y0*cq;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;   </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;   x1 = x0*cq - y0*sq;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;   y1 = x0*sq + y0*cq;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;   </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;   x0 = x1;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;   y0 = y1;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;   x0 = x1;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;   y0 = y1;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;} <span class="comment">//namespaace math</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;} <span class="comment">//namespace mx</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;} <span class="comment">//namespaace math</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//math_geo_hpp</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//math_geo_hpp</span></div>
 <div class="ttc" id="agroup__dimensioned__constants_html_ga48a5d9609fd9405c69f13f8cecb19ee9"><div class="ttname"><a href="group__dimensioned__constants.html#ga48a5d9609fd9405c69f13f8cecb19ee9">mx::astro::constants::c</a></div><div class="ttdeci">constexpr units::realT c()</div><div class="ttdoc">The speed of light.</div><div class="ttdef"><b>Definition:</b> <a href="astro_2constants_8hpp_source.html#l00060">constants.hpp:60</a></div></div>
-<div class="ttc" id="agroup__geo_html_ga01164953efd13eaf0cc4ea7d1910a9aa"><div class="ttname"><a href="group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa">mx::math::angleMean</a></div><div class="ttdeci">angleT::realT angleMean(std::vector&lt; typename angleT::realT &gt; &amp;q)</div><div class="ttdoc">Calculate the mean of a set of angles, correctly across 0/360.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00230">geo.hpp:230</a></div></div>
-<div class="ttc" id="agroup__geo_html_ga03d19941cd996137174b767ab992aa13"><div class="ttname"><a href="group__geo.html#ga03d19941cd996137174b767ab992aa13">mx::math::continueAngles</a></div><div class="ttdeci">int continueAngles(std::vector&lt; realT &gt; &amp;angles, realT threshold=0.75)</div><div class="ttdoc">Make a vector of angles continuous, fixing the 0/360 crossing.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00260">geo.hpp:260</a></div></div>
+<div class="ttc" id="agroup__geo_html_ga03d19941cd996137174b767ab992aa13"><div class="ttname"><a href="group__geo.html#ga03d19941cd996137174b767ab992aa13">mx::math::continueAngles</a></div><div class="ttdeci">int continueAngles(std::vector&lt; realT &gt; &amp;angles, realT threshold=0.75)</div><div class="ttdoc">Make a vector of angles continuous, fixing the 0/360 crossing.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00257">geo.hpp:257</a></div></div>
 <div class="ttc" id="agroup__geo_html_ga150fa0a60f353b760a8c227379b4f9f7"><div class="ttname"><a href="group__geo.html#ga150fa0a60f353b760a8c227379b4f9f7">mx::math::angleDiff</a></div><div class="ttdeci">angleT::realT angleDiff(typename angleT::realT q1, typename angleT::realT q2)</div><div class="ttdoc">Calculate the difference between two angles, correctly across 0/360.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00191">geo.hpp:191</a></div></div>
 <div class="ttc" id="agroup__geo_html_ga33318ab56f6a879156ba527e10f34261"><div class="ttname"><a href="group__geo.html#ga33318ab56f6a879156ba527e10f34261">mx::math::angleMod</a></div><div class="ttdeci">angleT::realT angleMod(typename angleT::realT q)</div><div class="ttdoc">Calculate the angle modulo full-circle, normalizing to a positive value.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00163">geo.hpp:163</a></div></div>
 <div class="ttc" id="agroup__geo_html_ga3f273f8d9960b886b09a9fce620f1607"><div class="ttname"><a href="group__geo.html#ga3f273f8d9960b886b09a9fce620f1607">mx::math::rtod</a></div><div class="ttdeci">realT rtod(realT q)</div><div class="ttdoc">Convert from radians to degrees.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00147">geo.hpp:147</a></div></div>
+<div class="ttc" id="agroup__geo_html_ga8196d2c1a79c10f905881181a2577591"><div class="ttname"><a href="group__geo.html#ga8196d2c1a79c10f905881181a2577591">mx::math::angleMean</a></div><div class="ttdeci">angleT::realT angleMean(const std::vector&lt; typename angleT::realT &gt; &amp;q)</div><div class="ttdoc">Calculate the mean of a set of angles, correctly across 0/360.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00227">geo.hpp:227</a></div></div>
 <div class="ttc" id="agroup__geo_html_ga92a420eb057d344c22e3973c29030489"><div class="ttname"><a href="group__geo.html#ga92a420eb057d344c22e3973c29030489">mx::math::dtor</a></div><div class="ttdeci">realT dtor(realT q)</div><div class="ttdoc">Convert from degrees to radians.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00132">geo.hpp:132</a></div></div>
-<div class="ttc" id="agroup__geo_html_gafa2f7fd099fa2dbce1b53f39c04451e2"><div class="ttname"><a href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">mx::math::rotatePoint</a></div><div class="ttdeci">void rotatePoint(realT &amp;x0, realT &amp;y0, realT angle)</div><div class="ttdoc">Rotate a point about the origin.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00307">geo.hpp:307</a></div></div>
+<div class="ttc" id="agroup__geo_html_gafa2f7fd099fa2dbce1b53f39c04451e2"><div class="ttname"><a href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">mx::math::rotatePoint</a></div><div class="ttdeci">void rotatePoint(realT &amp;x0, realT &amp;y0, realT angle)</div><div class="ttdoc">Rotate a point about the origin.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00304">geo.hpp:304</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition:</b> <a href="mxError_8hpp_source.html#l00106">mxError.hpp:107</a></div></div>
 <div class="ttc" id="astructmx_1_1math_1_1degradT_html"><div class="ttname"><a href="structmx_1_1math_1_1degradT.html">mx::math::degradT</a></div><div class="ttdoc">Type holding constants related to angle calculations in degrees.</div><div class="ttdef"><b>Definition:</b> <a href="geo_8hpp_source.html#l00081">geo.hpp:81</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -440,7 +437,7 @@ $(document).ready(function(){initNavTree('geo_8hpp_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="geo_8hpp.html">geo.hpp</a></li>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:11 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

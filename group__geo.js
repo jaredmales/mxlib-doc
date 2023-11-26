@@ -1,7 +1,7 @@
 var group__geo =
 [
     [ "angleDiff", "group__geo.html#ga150fa0a60f353b760a8c227379b4f9f7", null ],
-    [ "angleMean", "group__geo.html#ga01164953efd13eaf0cc4ea7d1910a9aa", null ],
+    [ "angleMean", "group__geo.html#ga8196d2c1a79c10f905881181a2577591", null ],
     [ "angleMod", "group__geo.html#ga33318ab56f6a879156ba527e10f34261", null ],
     [ "continueAngles", "group__geo.html#ga03d19941cd996137174b767ab992aa13", null ],
     [ "dtor", "group__geo.html#ga92a420eb057d344c22e3973c29030489", null ],

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: mx::AO::sim::turbAtmosphere&lt; _realT &gt; Struct Template Reference</title>
+<title>mxlib: mx::AO::sim::turbAtmosphere&lt; _aoSystemT &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,135 +94,646 @@ $(document).ready(function(){initNavTree('structmx_1_1AO_1_1sim_1_1turbAtmospher
 <div class="header">
   <div class="summary">
 <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere-members.html">List of all members</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">mx::AO::sim::turbAtmosphere&lt; _realT &gt; Struct Template Reference</div>  </div>
+<div class="title">mx::AO::sim::turbAtmosphere&lt; _aoSystemT &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo; <a class="el" href="group__mxAOSim.html">Simulation of Adaptive Optics</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<div class="textblock"><h3>template&lt;typename _realT&gt;<br />
-struct mx::AO::sim::turbAtmosphere&lt; _realT &gt;</h3>
+<div class="textblock"><h3>template&lt;typename _aoSystemT&gt;<br />
+struct mx::AO::sim::turbAtmosphere&lt; _aoSystemT &gt;</h3>
 
 <p>A turbulent atmosphere simulator. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd><p class="startdd">document this </p>
-<p class="enddd">add facility for switching interpolators </p>
+<p>Generate multi-layer phase screens using PSD filtering with the FFT. Manages the shifting and combination of the phase screens (without propagation).</p>
+<p>The <a class="el" href="classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html">turbSubHarmonic</a> class provides low-frequency sub-harmonics if desired</p>
+<p>The <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a> class manages the actual interpolation.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd><p class="startdd">add facility for switching interpolators </p>
+<p class="enddd">need to include wrap detection when using subharmonics (e.g. frames needs to be right)</p>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00047">47</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00082">82</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="turbAtmosphere_8hpp_source.html">ao/sim/turbAtmosphere.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for mx::AO::sim::turbAtmosphere&lt; _aoSystemT &gt;:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="structmx_1_1AO_1_1sim_1_1turbAtmosphere.png" usemap="#mx::AO::sim::turbAtmosphere_3C_20_5FaoSystemT_20_3E_map" alt=""/>
+  <map id="mx::AO::sim::turbAtmosphere_3C_20_5FaoSystemT_20_3E_map" name="mx::AO::sim::turbAtmosphere_3C_20_5FaoSystemT_20_3E_map">
+<area href="classmx_1_1base_1_1changeable.html" title="A simple class to track member data changes." alt="mx::base::changeable" shape="rect" coords="0,0,263,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0875ff60b0cd531545a614e9df52e3d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a0875ff60b0cd531545a614e9df52e3d9">setup</a> (realT pupD, size_t wfSz, size_t buffSz, realT lam0, realT lam, bool subPist, bool subTip)</td></tr>
-<tr class="memdesc:a0875ff60b0cd531545a614e9df52e3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force generation of new screens if true.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a0875ff60b0cd531545a614e9df52e3d9">More...</a><br /></td></tr>
-<tr class="separator:a0875ff60b0cd531545a614e9df52e3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a312796312670677ab030b26f306c03cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a312796312670677ab030b26f306c03cb">wfPS</a> (realT ps)</td></tr>
-<tr class="memdesc:a312796312670677ab030b26f306c03cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">dummy function for <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html" title="A simulated AO system.">simulatedAOSystem</a>. Does nothing.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a312796312670677ab030b26f306c03cb">More...</a><br /></td></tr>
-<tr class="separator:a312796312670677ab030b26f306c03cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2898b5d852afc2ef162a83c2383f9d13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2898b5d852afc2ef162a83c2383f9d13">wfPS</a> (realT ps)</td></tr>
+<tr class="memdesc:a2898b5d852afc2ef162a83c2383f9d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">dummy function for <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html" title="A simulated AO system.">simulatedAOSystem</a>. Does nothing.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2898b5d852afc2ef162a83c2383f9d13">More...</a><br /></td></tr>
+<tr class="separator:a2898b5d852afc2ef162a83c2383f9d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Construction and Configuration</div></td></tr>
+<tr class="memitem:ad53f8ebd98949cf9314cf5c060a2c160"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad53f8ebd98949cf9314cf5c060a2c160">turbAtmosphere</a> ()</td></tr>
+<tr class="memdesc:ad53f8ebd98949cf9314cf5c060a2c160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default c'tor.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad53f8ebd98949cf9314cf5c060a2c160">More...</a><br /></td></tr>
+<tr class="separator:ad53f8ebd98949cf9314cf5c060a2c160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade82596cd8c4b0ac0aac827bfbf52fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ade82596cd8c4b0ac0aac827bfbf52fd8">setup</a> (uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a511dc05c15a044be1c52de9d5327c8aa">wfSz</a>, uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ae93c96b6a4113f5177cd83a3d73c8b59">buffSz</a>, aoSystemT *<a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#af7430133aeb0bd15032c7bf50e224817">aosys</a>, uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aad838768cc7cc7f002a480be7008b2e3">shLevel</a>)</td></tr>
+<tr class="memdesc:ade82596cd8c4b0ac0aac827bfbf52fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the overall atmosphere.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ade82596cd8c4b0ac0aac827bfbf52fd8">More...</a><br /></td></tr>
+<tr class="separator:ade82596cd8c4b0ac0aac827bfbf52fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511dc05c15a044be1c52de9d5327c8aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a511dc05c15a044be1c52de9d5327c8aa">wfSz</a> (uint32_t ws)</td></tr>
+<tr class="memdesc:a511dc05c15a044be1c52de9d5327c8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the wavefront size.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a511dc05c15a044be1c52de9d5327c8aa">More...</a><br /></td></tr>
+<tr class="separator:a511dc05c15a044be1c52de9d5327c8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdd21b672966032de1c2cd888254779"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a6cdd21b672966032de1c2cd888254779">wfSz</a> ()</td></tr>
+<tr class="memdesc:a6cdd21b672966032de1c2cd888254779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wavefront size.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a6cdd21b672966032de1c2cd888254779">More...</a><br /></td></tr>
+<tr class="separator:a6cdd21b672966032de1c2cd888254779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93c96b6a4113f5177cd83a3d73c8b59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ae93c96b6a4113f5177cd83a3d73c8b59">buffSz</a> (uint32_t bs)</td></tr>
+<tr class="memdesc:ae93c96b6a4113f5177cd83a3d73c8b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the interpolation buffer size.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ae93c96b6a4113f5177cd83a3d73c8b59">More...</a><br /></td></tr>
+<tr class="separator:ae93c96b6a4113f5177cd83a3d73c8b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a79faf54890055081207f08387e6a9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a11a79faf54890055081207f08387e6a9">buffSz</a> ()</td></tr>
+<tr class="memdesc:a11a79faf54890055081207f08387e6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the interpolation buffer size.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a11a79faf54890055081207f08387e6a9">More...</a><br /></td></tr>
+<tr class="separator:a11a79faf54890055081207f08387e6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7430133aeb0bd15032c7bf50e224817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#af7430133aeb0bd15032c7bf50e224817">aosys</a> (aoSystemT *aos)</td></tr>
+<tr class="memdesc:af7430133aeb0bd15032c7bf50e224817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer to an AO system object.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#af7430133aeb0bd15032c7bf50e224817">More...</a><br /></td></tr>
+<tr class="separator:af7430133aeb0bd15032c7bf50e224817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631a6abceebd1bfcddff858990afe6da"><td class="memItemLeft" align="right" valign="top">aoSystemT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a631a6abceebd1bfcddff858990afe6da">aosys</a> ()</td></tr>
+<tr class="memdesc:a631a6abceebd1bfcddff858990afe6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to an AO system object.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a631a6abceebd1bfcddff858990afe6da">More...</a><br /></td></tr>
+<tr class="separator:a631a6abceebd1bfcddff858990afe6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad838768cc7cc7f002a480be7008b2e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aad838768cc7cc7f002a480be7008b2e3">shLevel</a> (uint32_t shl)</td></tr>
+<tr class="memdesc:aad838768cc7cc7f002a480be7008b2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the subharmonic level.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aad838768cc7cc7f002a480be7008b2e3">More...</a><br /></td></tr>
+<tr class="separator:aad838768cc7cc7f002a480be7008b2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ceefc3eae73e1b3cf310e375f62fd9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a63ceefc3eae73e1b3cf310e375f62fd9">shLevel</a> ()</td></tr>
+<tr class="memdesc:a63ceefc3eae73e1b3cf310e375f62fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the subharmonic level.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a63ceefc3eae73e1b3cf310e375f62fd9">More...</a><br /></td></tr>
+<tr class="separator:a63ceefc3eae73e1b3cf310e375f62fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97883487cc52ca05b6b879efd3b5597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aa97883487cc52ca05b6b879efd3b5597">shPreCalc</a> (bool shp)</td></tr>
+<tr class="memdesc:aa97883487cc52ca05b6b879efd3b5597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether subharmonic modes are pre-calculated.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aa97883487cc52ca05b6b879efd3b5597">More...</a><br /></td></tr>
+<tr class="separator:aa97883487cc52ca05b6b879efd3b5597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc49c86eb64443ccf8eb69e4969122a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a8dc49c86eb64443ccf8eb69e4969122a">shPreCalc</a> ()</td></tr>
+<tr class="memdesc:a8dc49c86eb64443ccf8eb69e4969122a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether subharmonic modes are pre-calculated.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a8dc49c86eb64443ccf8eb69e4969122a">More...</a><br /></td></tr>
+<tr class="separator:a8dc49c86eb64443ccf8eb69e4969122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e593e67cc1a32d8279e4cc4a27f2bdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a4e593e67cc1a32d8279e4cc4a27f2bdf">retain</a> (bool rtn)</td></tr>
+<tr class="memdesc:a4e593e67cc1a32d8279e4cc4a27f2bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether memory for screen generation is retained.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a4e593e67cc1a32d8279e4cc4a27f2bdf">More...</a><br /></td></tr>
+<tr class="separator:a4e593e67cc1a32d8279e4cc4a27f2bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7128c61c7de9e01e0f6ea4799f2d2f0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7128c61c7de9e01e0f6ea4799f2d2f0e">retain</a> ()</td></tr>
+<tr class="memdesc:a7128c61c7de9e01e0f6ea4799f2d2f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether memory for screen generation is retained.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7128c61c7de9e01e0f6ea4799f2d2f0e">More...</a><br /></td></tr>
+<tr class="separator:a7128c61c7de9e01e0f6ea4799f2d2f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d45bdb4c8f44bb0947cdc453fca8ae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7d45bdb4c8f44bb0947cdc453fca8ae8">forceGen</a> (bool fg)</td></tr>
+<tr class="memdesc:a7d45bdb4c8f44bb0947cdc453fca8ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether new screen generation is forced.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7d45bdb4c8f44bb0947cdc453fca8ae8">More...</a><br /></td></tr>
+<tr class="separator:a7d45bdb4c8f44bb0947cdc453fca8ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd35495c532b3894267d006217cdb27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3bd35495c532b3894267d006217cdb27">forceGen</a> ()</td></tr>
+<tr class="memdesc:a3bd35495c532b3894267d006217cdb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether new screen generation is forced.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3bd35495c532b3894267d006217cdb27">More...</a><br /></td></tr>
+<tr class="separator:a3bd35495c532b3894267d006217cdb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7de901334f673420039610c7cb276c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ab7de901334f673420039610c7cb276c2">dataDir</a> (const std::string &amp;dd)</td></tr>
+<tr class="memdesc:ab7de901334f673420039610c7cb276c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data directory for saving phase screens.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ab7de901334f673420039610c7cb276c2">More...</a><br /></td></tr>
+<tr class="separator:ab7de901334f673420039610c7cb276c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6227e6f4e75928676d8d3b8553101f3b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a6227e6f4e75928676d8d3b8553101f3b">dataDir</a> ()</td></tr>
+<tr class="memdesc:a6227e6f4e75928676d8d3b8553101f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data directory for saving phase screens.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a6227e6f4e75928676d8d3b8553101f3b">More...</a><br /></td></tr>
+<tr class="separator:a6227e6f4e75928676d8d3b8553101f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760c53fcf5115302dd7605112bd03cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a760c53fcf5115302dd7605112bd03cf2">setLayers</a> (const std::vector&lt; size_t &gt; &amp;scrnSz)</td></tr>
+<tr class="memdesc:a760c53fcf5115302dd7605112bd03cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the layers and prepare them for phase screen generation.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a760c53fcf5115302dd7605112bd03cf2">More...</a><br /></td></tr>
+<tr class="separator:a760c53fcf5115302dd7605112bd03cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a36482b88d6b2e0533830104b42805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ae9a36482b88d6b2e0533830104b42805">setLayers</a> (const size_t scrnSz)</td></tr>
+<tr class="memdesc:ae9a36482b88d6b2e0533830104b42805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the layers and prepare them for phase screen generation.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ae9a36482b88d6b2e0533830104b42805">More...</a><br /></td></tr>
+<tr class="separator:ae9a36482b88d6b2e0533830104b42805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393339747ba3d01ebbb707b3843bcf35"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a393339747ba3d01ebbb707b3843bcf35">nLayers</a> ()</td></tr>
+<tr class="memdesc:a393339747ba3d01ebbb707b3843bcf35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of layers.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a393339747ba3d01ebbb707b3843bcf35">More...</a><br /></td></tr>
+<tr class="separator:a393339747ba3d01ebbb707b3843bcf35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf663c59142efcd1c8be682b72b157ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a>&lt; aoSystemT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#acf663c59142efcd1c8be682b72b157ea">layer</a> (uint32_t n)</td></tr>
+<tr class="memdesc:acf663c59142efcd1c8be682b72b157ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a layer.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#acf663c59142efcd1c8be682b72b157ea">More...</a><br /></td></tr>
+<tr class="separator:acf663c59142efcd1c8be682b72b157ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea627df1d18eff493d3c16a0f38e5d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__random.html#gab8e17d1c5c200c2a0a331d534d0234e0">math::normDistT</a>&lt; realT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a9ea627df1d18eff493d3c16a0f38e5d1">normVar</a> ()</td></tr>
+<tr class="memdesc:a9ea627df1d18eff493d3c16a0f38e5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the random number generator.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a9ea627df1d18eff493d3c16a0f38e5d1">More...</a><br /></td></tr>
+<tr class="separator:a9ea627df1d18eff493d3c16a0f38e5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Screen Generation</div></td></tr>
+<tr class="memitem:a60f18d503218812dfbe50ae208d47f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a60f18d503218812dfbe50ae208d47f62">genLayers</a> ()</td></tr>
+<tr class="memdesc:a60f18d503218812dfbe50ae208d47f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all phase screens.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a60f18d503218812dfbe50ae208d47f62">More...</a><br /></td></tr>
+<tr class="separator:a60f18d503218812dfbe50ae208d47f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmx_1_1base_1_1changeable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmx_1_1base_1_1changeable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmx_1_1base_1_1changeable.html">mx::base::changeable</a></td></tr>
+<tr class="memitem:aaa1e5a020842235757d5687b87899079 inherit pub_methods_classmx_1_1base_1_1changeable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1base_1_1changeable.html#aaa1e5a020842235757d5687b87899079">changed</a> ()</td></tr>
+<tr class="memdesc:aaa1e5a020842235757d5687b87899079 inherit pub_methods_classmx_1_1base_1_1changeable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the counter.  <a href="classmx_1_1base_1_1changeable.html#aaa1e5a020842235757d5687b87899079">More...</a><br /></td></tr>
+<tr class="separator:aaa1e5a020842235757d5687b87899079 inherit pub_methods_classmx_1_1base_1_1changeable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30066900c02e4c55a97b1ba5b28cf349 inherit pub_methods_classmx_1_1base_1_1changeable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1base_1_1changeable.html#aa53950942a2aa7e96cc24528bc491c93">changeT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1base_1_1changeable.html#a30066900c02e4c55a97b1ba5b28cf349">change</a> ()</td></tr>
+<tr class="memdesc:a30066900c02e4c55a97b1ba5b28cf349 inherit pub_methods_classmx_1_1base_1_1changeable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the counter.  <a href="classmx_1_1base_1_1changeable.html#a30066900c02e4c55a97b1ba5b28cf349">More...</a><br /></td></tr>
+<tr class="separator:a30066900c02e4c55a97b1ba5b28cf349 inherit pub_methods_classmx_1_1base_1_1changeable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a917a2f3cb4686ab8dbf88f347fad481c"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a917a2f3cb4686ab8dbf88f347fad481c">_pupD</a> {0}</td></tr>
-<tr class="memdesc:a917a2f3cb4686ab8dbf88f347fad481c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the wavefront in meters. &lt;&ndash;This is really wavefront diameter.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a917a2f3cb4686ab8dbf88f347fad481c">More...</a><br /></td></tr>
-<tr class="separator:a917a2f3cb4686ab8dbf88f347fad481c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a08012f14d57430dcbffe40b921b53"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad4a08012f14d57430dcbffe40b921b53">_wfSz</a> {0}</td></tr>
-<tr class="memdesc:ad4a08012f14d57430dcbffe40b921b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the wavefront in pixels.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad4a08012f14d57430dcbffe40b921b53">More...</a><br /></td></tr>
-<tr class="separator:ad4a08012f14d57430dcbffe40b921b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1650d249bdd3a53e9b0f52fa445ee75"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#af1650d249bdd3a53e9b0f52fa445ee75">_buffSz</a> {0}</td></tr>
-<tr class="memdesc:af1650d249bdd3a53e9b0f52fa445ee75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to apply around wavefront for interpolation.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#af1650d249bdd3a53e9b0f52fa445ee75">More...</a><br /></td></tr>
-<tr class="separator:af1650d249bdd3a53e9b0f52fa445ee75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e2a73a1c29f46c5e0c2ee3f585258e2"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a9e2a73a1c29f46c5e0c2ee3f585258e2">_lambda0</a> {0.5e-6}</td></tr>
-<tr class="memdesc:a9e2a73a1c29f46c5e0c2ee3f585258e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavelength at which r_0 was measured.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a9e2a73a1c29f46c5e0c2ee3f585258e2">More...</a><br /></td></tr>
-<tr class="separator:a9e2a73a1c29f46c5e0c2ee3f585258e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a362109aeb29659a8d3cab2816224cfe4"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a362109aeb29659a8d3cab2816224cfe4">_lambda</a> {0}</td></tr>
-<tr class="memdesc:a362109aeb29659a8d3cab2816224cfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired wavelength of the turbulence.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a362109aeb29659a8d3cab2816224cfe4">More...</a><br /></td></tr>
-<tr class="separator:a362109aeb29659a8d3cab2816224cfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad265a9888ff771d8c315d3565f7eaca5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad265a9888ff771d8c315d3565f7eaca5">_subPiston</a> {true}</td></tr>
-<tr class="memdesc:ad265a9888ff771d8c315d3565f7eaca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to subtract piston from the PSD.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad265a9888ff771d8c315d3565f7eaca5">More...</a><br /></td></tr>
-<tr class="separator:ad265a9888ff771d8c315d3565f7eaca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1c0b86aeb3ed1e0d763d35151664e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3f1c0b86aeb3ed1e0d763d35151664e1">_subTipTilt</a> {false}</td></tr>
-<tr class="memdesc:a3f1c0b86aeb3ed1e0d763d35151664e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to subtract tip/tilt from the PSD.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3f1c0b86aeb3ed1e0d763d35151664e1">More...</a><br /></td></tr>
-<tr class="separator:a3f1c0b86aeb3ed1e0d763d35151664e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf62f2eda33c3c7621201c8331f293db"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a>&lt; realT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aaf62f2eda33c3c7621201c8331f293db">_layers</a></td></tr>
-<tr class="memdesc:aaf62f2eda33c3c7621201c8331f293db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of turbulent layers.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aaf62f2eda33c3c7621201c8331f293db">More...</a><br /></td></tr>
-<tr class="separator:aaf62f2eda33c3c7621201c8331f293db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1dadd65a8c9050a32ad6bc863671d6c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aa1dadd65a8c9050a32ad6bc863671d6c">_frames</a> {0}</td></tr>
-<tr class="memdesc:aa1dadd65a8c9050a32ad6bc863671d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the turbulence sequence.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#aa1dadd65a8c9050a32ad6bc863671d6c">More...</a><br /></td></tr>
-<tr class="separator:aa1dadd65a8c9050a32ad6bc863671d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1be0e5d8a3ef3a8a2bf87993e2ff23c"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ac1be0e5d8a3ef3a8a2bf87993e2ff23c">_F0Photons</a> {0}</td></tr>
-<tr class="memdesc:ac1be0e5d8a3ef3a8a2bf87993e2ff23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photons per square meter from a 0 magnitude star at _lambda.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ac1be0e5d8a3ef3a8a2bf87993e2ff23c">More...</a><br /></td></tr>
-<tr class="separator:ac1be0e5d8a3ef3a8a2bf87993e2ff23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7a9ffc63391f0d45b7594f437610be8"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad7a9ffc63391f0d45b7594f437610be8">_starMag</a> {0}</td></tr>
-<tr class="memdesc:ad7a9ffc63391f0d45b7594f437610be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnitude of the star being observed.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad7a9ffc63391f0d45b7594f437610be8">More...</a><br /></td></tr>
-<tr class="separator:ad7a9ffc63391f0d45b7594f437610be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d59d5638f443e59819f05a623cc55ce"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a8d59d5638f443e59819f05a623cc55ce">_pixVal</a> {0}</td></tr>
-<tr class="memdesc:a8d59d5638f443e59819f05a623cc55ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nominal amplitude value for one pixel, has units of photons/pixel.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a8d59d5638f443e59819f05a623cc55ce">More...</a><br /></td></tr>
-<tr class="separator:a8d59d5638f443e59819f05a623cc55ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0ac753412a5c23952a1183e6bdeef37"><td class="memItemLeft" align="right" valign="top">arrayT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ab0ac753412a5c23952a1183e6bdeef37">_pupil</a> {0}</td></tr>
-<tr class="memdesc:ab0ac753412a5c23952a1183e6bdeef37"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the pupil mask.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ab0ac753412a5c23952a1183e6bdeef37">More...</a><br /></td></tr>
-<tr class="separator:ab0ac753412a5c23952a1183e6bdeef37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ac98b615f94bff9fbcf1d5906bc1bdc"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2ac98b615f94bff9fbcf1d5906bc1bdc">_timeStep</a> {0}</td></tr>
-<tr class="memdesc:a2ac98b615f94bff9fbcf1d5906bc1bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of each iteration, in seconds.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2ac98b615f94bff9fbcf1d5906bc1bdc">More...</a><br /></td></tr>
-<tr class="separator:a2ac98b615f94bff9fbcf1d5906bc1bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d2c0665499d35b5e0894712e422cb10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2d2c0665499d35b5e0894712e422cb10">_nWf</a> {0}</td></tr>
-<tr class="memdesc:a2d2c0665499d35b5e0894712e422cb10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of iterations which have occurred.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a2d2c0665499d35b5e0894712e422cb10">More...</a><br /></td></tr>
-<tr class="separator:a2d2c0665499d35b5e0894712e422cb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120698221d9034e567de1b890ab2b416"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a120698221d9034e567de1b890ab2b416">_forceGen</a> {false}</td></tr>
-<tr class="memdesc:a120698221d9034e567de1b890ab2b416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies a path where phase screens are stored.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a120698221d9034e567de1b890ab2b416">More...</a><br /></td></tr>
-<tr class="separator:a120698221d9034e567de1b890ab2b416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Configuration Data</div></td></tr>
+<tr class="memitem:ad9eb6d3df5f8a9b163f0ec734955b1c1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad9eb6d3df5f8a9b163f0ec734955b1c1">m_wfSz</a> {0}</td></tr>
+<tr class="memdesc:ad9eb6d3df5f8a9b163f0ec734955b1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the wavefront in pixels.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad9eb6d3df5f8a9b163f0ec734955b1c1">More...</a><br /></td></tr>
+<tr class="separator:ad9eb6d3df5f8a9b163f0ec734955b1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202527598451571f3e617b8e33e185b4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a202527598451571f3e617b8e33e185b4">m_buffSz</a> {0}</td></tr>
+<tr class="memdesc:a202527598451571f3e617b8e33e185b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to apply around wavefront for interpolation.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a202527598451571f3e617b8e33e185b4">More...</a><br /></td></tr>
+<tr class="separator:a202527598451571f3e617b8e33e185b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7e82e75569a7ccea4d95181a63aed5"><td class="memItemLeft" align="right" valign="top">aoSystemT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a1d7e82e75569a7ccea4d95181a63aed5">m_aosys</a> {nullptr}</td></tr>
+<tr class="memdesc:a1d7e82e75569a7ccea4d95181a63aed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The AO system object containing all system parameters. See aoSystem.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a1d7e82e75569a7ccea4d95181a63aed5">More...</a><br /></td></tr>
+<tr class="separator:a1d7e82e75569a7ccea4d95181a63aed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d289d402c0fdc955ce0efcabe1229e9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7d289d402c0fdc955ce0efcabe1229e9">m_shLevel</a> {0}</td></tr>
+<tr class="separator:a7d289d402c0fdc955ce0efcabe1229e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfbaf6111ad854dcaac2ad69f9f201a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a5dfbaf6111ad854dcaac2ad69f9f201a">m_shPreCalc</a> {true}</td></tr>
+<tr class="separator:a5dfbaf6111ad854dcaac2ad69f9f201a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28b13e6e0125531f4b33d4d5f9edcfa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad28b13e6e0125531f4b33d4d5f9edcfa">m_retain</a> {false}</td></tr>
+<tr class="separator:ad28b13e6e0125531f4b33d4d5f9edcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc723c0c7ae771374b6acbaf1d9fdf49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#acc723c0c7ae771374b6acbaf1d9fdf49">m_forceGen</a> {true}</td></tr>
+<tr class="separator:acc723c0c7ae771374b6acbaf1d9fdf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3dafb3beff06ea333dcb4893a42454d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ab3dafb3beff06ea333dcb4893a42454d">m_dataDir</a></td></tr>
+<tr class="separator:ab3dafb3beff06ea333dcb4893a42454d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6647e6a1dd1050ac8c657342bc153a15"><td class="memItemLeft" align="right" valign="top">imageT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a6647e6a1dd1050ac8c657342bc153a15">m_pupil</a> {0}</td></tr>
+<tr class="memdesc:a6647e6a1dd1050ac8c657342bc153a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the pupil mask.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a6647e6a1dd1050ac8c657342bc153a15">More...</a><br /></td></tr>
+<tr class="separator:a6647e6a1dd1050ac8c657342bc153a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d2b304ec61ac53b3a179b9b7bf6855"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a74d2b304ec61ac53b3a179b9b7bf6855">m_timeStep</a> {0}</td></tr>
+<tr class="memdesc:a74d2b304ec61ac53b3a179b9b7bf6855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of each iteration, in seconds.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a74d2b304ec61ac53b3a179b9b7bf6855">More...</a><br /></td></tr>
+<tr class="separator:a74d2b304ec61ac53b3a179b9b7bf6855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Internal State</div></td></tr>
+<tr class="memitem:a3aa67109560b3a4cad0e47418b73f5e1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a>&lt; aoSystemT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3aa67109560b3a4cad0e47418b73f5e1">m_layers</a></td></tr>
+<tr class="memdesc:a3aa67109560b3a4cad0e47418b73f5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of turbulent layers.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3aa67109560b3a4cad0e47418b73f5e1">More...</a><br /></td></tr>
+<tr class="separator:a3aa67109560b3a4cad0e47418b73f5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e77438b54ea1ad40e945c38150bc9c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html">turbSubHarmonic</a>&lt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">turbAtmosphere</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a4e77438b54ea1ad40e945c38150bc9c2">m_subHarms</a></td></tr>
+<tr class="memdesc:a4e77438b54ea1ad40e945c38150bc9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sub-harmonic layers.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a4e77438b54ea1ad40e945c38150bc9c2">More...</a><br /></td></tr>
+<tr class="separator:a4e77438b54ea1ad40e945c38150bc9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e56c5444cac1febfb9e8a664f22afd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ac1e56c5444cac1febfb9e8a664f22afd">m_frames</a> {0}</td></tr>
+<tr class="memdesc:ac1e56c5444cac1febfb9e8a664f22afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the turbulence sequence.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ac1e56c5444cac1febfb9e8a664f22afd">More...</a><br /></td></tr>
+<tr class="separator:ac1e56c5444cac1febfb9e8a664f22afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425cdef08ba3d377896c23361e690d52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a425cdef08ba3d377896c23361e690d52">m_nWf</a> {0}</td></tr>
+<tr class="memdesc:a425cdef08ba3d377896c23361e690d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of iterations which have occurred.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a425cdef08ba3d377896c23361e690d52">More...</a><br /></td></tr>
+<tr class="separator:a425cdef08ba3d377896c23361e690d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbca15cbd90a7423cda17073d158631e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__random.html#gab8e17d1c5c200c2a0a331d534d0234e0">math::normDistT</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#adbca15cbd90a7423cda17073d158631e">m_normVar</a></td></tr>
+<tr class="memdesc:adbca15cbd90a7423cda17073d158631e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal random deviate generator. This seeded in the constructor.  <a href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#adbca15cbd90a7423cda17073d158631e">More...</a><br /></td></tr>
+<tr class="separator:adbca15cbd90a7423cda17073d158631e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae246b1251088f60a87e8fcd0b2d2ab"><td class="memItemLeft" align="right" valign="top"><a id="a8ae246b1251088f60a87e8fcd0b2d2ab"></a>
+<a class="el" href="group__eigen__image__processing.html#gaa5f4935db90fd971a51c9ffa85fcfa99">improc::eigenImage</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_phaseWork</b></td></tr>
+<tr class="separator:a8ae246b1251088f60a87e8fcd0b2d2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classmx_1_1base_1_1changeable"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmx_1_1base_1_1changeable')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmx_1_1base_1_1changeable.html">mx::base::changeable</a></td></tr>
+<tr class="memitem:aa53950942a2aa7e96cc24528bc491c93 inherit pub_types_classmx_1_1base_1_1changeable"><td class="memItemLeft" align="right" valign="top">typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1base_1_1changeable.html#aa53950942a2aa7e96cc24528bc491c93">changeT</a></td></tr>
+<tr class="memdesc:aa53950942a2aa7e96cc24528bc491c93 inherit pub_types_classmx_1_1base_1_1changeable"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integer type of the counter.  <a href="classmx_1_1base_1_1changeable.html#aa53950942a2aa7e96cc24528bc491c93">More...</a><br /></td></tr>
+<tr class="separator:aa53950942a2aa7e96cc24528bc491c93 inherit pub_types_classmx_1_1base_1_1changeable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0875ff60b0cd531545a614e9df52e3d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0875ff60b0cd531545a614e9df52e3d9">&#9670;&nbsp;</a></span>setup()</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad53f8ebd98949cf9314cf5c060a2c160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53f8ebd98949cf9314cf5c060a2c160">&#9670;&nbsp;</a></span>turbAtmosphere()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename realT &gt; </div>
+template&lt;typename aoSystemT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; realT &gt;::setup </td>
-          <td>(</td>
-          <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>pupD</em>, </td>
+          <td class="memname"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::<a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">turbAtmosphere</a></td>
         </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default c'tor. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00322">322</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a631a6abceebd1bfcddff858990afe6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631a6abceebd1bfcddff858990afe6da">&#9670;&nbsp;</a></span>aosys() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
+          <td class="memname">aoSystemT * <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::aosys</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the pointer to an AO system object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a1d7e82e75569a7ccea4d95181a63aed5">m_aosys</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00386">386</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af7430133aeb0bd15032c7bf50e224817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7430133aeb0bd15032c7bf50e224817">&#9670;&nbsp;</a></span>aosys() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::aosys </td>
+          <td>(</td>
+          <td class="paramtype">aoSystemT *&#160;</td>
+          <td class="paramname"><em>aos</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the pointer to an AO system object. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a1d7e82e75569a7ccea4d95181a63aed5">m_aosys</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aos</td><td>the new pointer to an AO system object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00376">376</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a11a79faf54890055081207f08387e6a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a79faf54890055081207f08387e6a9">&#9670;&nbsp;</a></span>buffSz() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::buffSz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the interpolation buffer size. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a202527598451571f3e617b8e33e185b4">m_buffSz</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00370">370</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae93c96b6a4113f5177cd83a3d73c8b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae93c96b6a4113f5177cd83a3d73c8b59">&#9670;&nbsp;</a></span>buffSz() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::buffSz </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the interpolation buffer size. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a202527598451571f3e617b8e33e185b4">m_buffSz</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bs</td><td>the new buffer size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00359">359</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6227e6f4e75928676d8d3b8553101f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6227e6f4e75928676d8d3b8553101f3b">&#9670;&nbsp;</a></span>dataDir() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::dataDir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the data directory for saving phase screens. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_dataDir </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00468">468</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab7de901334f673420039610c7cb276c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7de901334f673420039610c7cb276c2">&#9670;&nbsp;</a></span>dataDir() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::dataDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the data directory for saving phase screens. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ab3dafb3beff06ea333dcb4893a42454d">m_dataDir</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dd</td><td>the new data directory for phase screen saving </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00457">457</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3bd35495c532b3894267d006217cdb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd35495c532b3894267d006217cdb27">&#9670;&nbsp;</a></span>forceGen() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::forceGen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get whether new screen generation is forced. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_forceGen </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00451">451</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d45bdb4c8f44bb0947cdc453fca8ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d45bdb4c8f44bb0947cdc453fca8ae8">&#9670;&nbsp;</a></span>forceGen() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::forceGen </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether new screen generation is forced. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#acc723c0c7ae771374b6acbaf1d9fdf49">m_forceGen</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>the new value of the flag controlling whether screen generation is forced </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00440">440</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a60f18d503218812dfbe50ae208d47f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f18d503218812dfbe50ae208d47f62">&#9670;&nbsp;</a></span>genLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::genLayers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate all phase screens. </p>
+<p>Loads them from disk if possible and <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#acc723c0c7ae771374b6acbaf1d9fdf49">m_forceGen</a> == false.</p>
+<p>Deallocates working memory when done, unless <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad28b13e6e0125531f4b33d4d5f9edcfa">m_retain</a> == true. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00556">556</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fitsFile_8hpp_source.html#l00828">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01301">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+
+</div>
+</div>
+<a id="acf663c59142efcd1c8be682b72b157ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf663c59142efcd1c8be682b72b157ea">&#9670;&nbsp;</a></span>layer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a>&lt; aoSystemT &gt; &amp; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::layer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a layer. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to on entry in <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3aa67109560b3a4cad0e47418b73f5e1">m_layers</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00539">539</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a393339747ba3d01ebbb707b3843bcf35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393339747ba3d01ebbb707b3843bcf35">&#9670;&nbsp;</a></span>nLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::nLayers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of layers. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the layers vector <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a3aa67109560b3a4cad0e47418b73f5e1">m_layers</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00533">533</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9ea627df1d18eff493d3c16a0f38e5d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea627df1d18eff493d3c16a0f38e5d1">&#9670;&nbsp;</a></span>normVar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__random.html#gab8e17d1c5c200c2a0a331d534d0234e0">math::normDistT</a>&lt; typename aoSystemT::realT &gt; &amp; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::normVar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the random number generator. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#adbca15cbd90a7423cda17073d158631e">m_normVar</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00550">550</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7128c61c7de9e01e0f6ea4799f2d2f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7128c61c7de9e01e0f6ea4799f2d2f0e">&#9670;&nbsp;</a></span>retain() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::retain</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get whether memory for screen generation is retained. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad28b13e6e0125531f4b33d4d5f9edcfa">m_retain</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00434">434</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e593e67cc1a32d8279e4cc4a27f2bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e593e67cc1a32d8279e4cc4a27f2bdf">&#9670;&nbsp;</a></span>retain() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::retain </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rtn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether memory for screen generation is retained. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad28b13e6e0125531f4b33d4d5f9edcfa">m_retain</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rtn</td><td>the new value of the flag controlling whether memory is retained </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00424">424</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae9a36482b88d6b2e0533830104b42805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a36482b88d6b2e0533830104b42805">&#9670;&nbsp;</a></span>setLayers() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::setLayers </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>scrnSz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setup the layers and prepare them for phase screen generation. </p>
+<p>This sets all layer phase screens to be the same size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scrnSz</td><td>the screen sizes for all layers. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00520">520</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a760c53fcf5115302dd7605112bd03cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760c53fcf5115302dd7605112bd03cf2">&#9670;&nbsp;</a></span>setLayers() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::setLayers </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scrnSz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setup the layers and prepare them for phase screen generation. </p>
+<p>The number of entries in <code>scrnSz</code> must mach the number of layers in the atmosphere of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a1d7e82e75569a7ccea4d95181a63aed5">m_aosys</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scrnSz</td><td>the screen sizes for each layer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00474">474</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ade82596cd8c4b0ac0aac827bfbf52fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade82596cd8c4b0ac0aac827bfbf52fd8">&#9670;&nbsp;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::setup </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>wfSz</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>buffSz</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>lam0</em>, </td>
+          <td class="paramtype">aoSystemT *&#160;</td>
+          <td class="paramname"><em>aosys</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">realT&#160;</td>
-          <td class="paramname"><em>lam</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>subPist</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>subTip</em>&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>shLevel</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -232,35 +743,135 @@ template&lt;typename realT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Force generation of new screens if true. </p>
-<p>Default c'tor Setup the overall atmosphere. </p>
+<p>Setup the overall atmosphere. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pupD</td><td>New value of _pupD, the size of the wavefront in meters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wfSz</td><td>New value of _wfSz, the size of the wavefront in pixels. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffSz</td><td>New value of _buffSz, the size of the interpolation buffer to use. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">lam0</td><td>New value of _lambda0, the wavelength at which r_0 is measured. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">lam</td><td>New value of _lambda, the wavelength at which the phase is specified. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">subPist</td><td>New value of _subPiston, whether or not piston is subtracted from the wavefront phase. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">subTip</td><td>New value of _subTipTilt, whether or not tip/tilt is subtracted from wavefront phase. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wfSz</td><td>The size of the wavefront in pixels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffSz</td><td>The size of the interpolation buffer to use. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aosys</td><td>Pointer to an AO System. See <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a1d7e82e75569a7ccea4d95181a63aed5">m_aosys</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shLevel</td><td>number of subharmonic levels to use. 0 turns off subharmonics. See <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7d289d402c0fdc955ce0efcabe1229e9">m_shLevel</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00141">141</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00328">328</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a312796312670677ab030b26f306c03cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a312796312670677ab030b26f306c03cb">&#9670;&nbsp;</a></span>wfPS()</h2>
+<a id="a63ceefc3eae73e1b3cf310e375f62fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ceefc3eae73e1b3cf310e375f62fd9">&#9670;&nbsp;</a></span>shLevel() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename realT &gt; </div>
+template&lt;typename aoSystemT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; realT &gt;::wfPS </td>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::shLevel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the subharmonic level. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7d289d402c0fdc955ce0efcabe1229e9">m_shLevel</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00402">402</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aad838768cc7cc7f002a480be7008b2e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad838768cc7cc7f002a480be7008b2e3">&#9670;&nbsp;</a></span>shLevel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::shLevel </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>shl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the subharmonic level. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a7d289d402c0fdc955ce0efcabe1229e9">m_shLevel</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shl</td><td>the new subharmonic level </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00392">392</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8dc49c86eb64443ccf8eb69e4969122a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc49c86eb64443ccf8eb69e4969122a">&#9670;&nbsp;</a></span>shPreCalc() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::shPreCalc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get whether subharmonic modes are pre-calculated. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a5dfbaf6111ad854dcaac2ad69f9f201a">m_shPreCalc</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00418">418</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa97883487cc52ca05b6b879efd3b5597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97883487cc52ca05b6b879efd3b5597">&#9670;&nbsp;</a></span>shPreCalc() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::shPreCalc </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>shp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether subharmonic modes are pre-calculated. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#a5dfbaf6111ad854dcaac2ad69f9f201a">m_shPreCalc</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shp</td><td>the new value of flag controlling subharmonic mode precalculation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00408">408</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2898b5d852afc2ef162a83c2383f9d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2898b5d852afc2ef162a83c2383f9d13">&#9670;&nbsp;</a></span>wfPS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::wfPS </td>
           <td>(</td>
           <td class="paramtype">realT&#160;</td>
           <td class="paramname"><em>ps</em></td><td>)</td>
@@ -271,328 +882,476 @@ template&lt;typename realT &gt; </div>
 
 <p>dummy function for <a class="el" href="classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html" title="A simulated AO system.">simulatedAOSystem</a>. Does nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00436">436</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00687">687</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6cdd21b672966032de1c2cd888254779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cdd21b672966032de1c2cd888254779">&#9670;&nbsp;</a></span>wfSz() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::wfSz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the wavefront size. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad9eb6d3df5f8a9b163f0ec734955b1c1">m_wfSz</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00353">353</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a511dc05c15a044be1c52de9d5327c8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511dc05c15a044be1c52de9d5327c8aa">&#9670;&nbsp;</a></span>wfSz() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; aoSystemT &gt;::wfSz </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ws</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the wavefront size. </p>
+<p>see <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad9eb6d3df5f8a9b163f0ec734955b1c1">m_wfSz</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ws</td><td>the new wavefront size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00341">341</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af1650d249bdd3a53e9b0f52fa445ee75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1650d249bdd3a53e9b0f52fa445ee75">&#9670;&nbsp;</a></span>_buffSz</h2>
+<a id="a1d7e82e75569a7ccea4d95181a63aed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7e82e75569a7ccea4d95181a63aed5">&#9670;&nbsp;</a></span>m_aosys</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_buffSz {0}</td>
+          <td class="memname">aoSystemT* <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_aosys {nullptr}</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The AO system object containing all system parameters. See aoSystem. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00101">101</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a202527598451571f3e617b8e33e185b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a202527598451571f3e617b8e33e185b4">&#9670;&nbsp;</a></span>m_buffSz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_buffSz {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Buffer to apply around wavefront for interpolation. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00054">54</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00099">99</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ac1be0e5d8a3ef3a8a2bf87993e2ff23c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1be0e5d8a3ef3a8a2bf87993e2ff23c">&#9670;&nbsp;</a></span>_F0Photons</h2>
+<a id="ab3dafb3beff06ea333dcb4893a42454d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dafb3beff06ea333dcb4893a42454d">&#9670;&nbsp;</a></span>m_dataDir</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_F0Photons {0}</td>
+          <td class="memname">std::string <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_dataDir</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Specifies a path where phase screens are stored. Leaving this unset or "" is equivalent to <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#acc723c0c7ae771374b6acbaf1d9fdf49">m_forceGen<code></code></a>== true. </p>
 
-<p>Photons per square meter from a 0 magnitude star at _lambda. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00066">66</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00124">124</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a120698221d9034e567de1b890ab2b416"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a120698221d9034e567de1b890ab2b416">&#9670;&nbsp;</a></span>_forceGen</h2>
+<a id="acc723c0c7ae771374b6acbaf1d9fdf49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc723c0c7ae771374b6acbaf1d9fdf49">&#9670;&nbsp;</a></span>m_forceGen</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_forceGen {false}</td>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_forceGen {true}</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Force generation of new screens if true. Note that this class does not presently do any checks of saved screens to verify they match the current configuration. Set to true with caution.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd>need check for changes in parameters to decide if saved frames are valid per layer</dd></dl>
 
-<p>Specifies a path where phase screens are stored. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00079">79</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00117">117</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aa1dadd65a8c9050a32ad6bc863671d6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1dadd65a8c9050a32ad6bc863671d6c">&#9670;&nbsp;</a></span>_frames</h2>
+<a id="ac1e56c5444cac1febfb9e8a664f22afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e56c5444cac1febfb9e8a664f22afd">&#9670;&nbsp;</a></span>m_frames</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_frames {0}</td>
+          <td class="memname">size_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_frames {0}</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Length of the turbulence sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00064">64</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00141">141</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a362109aeb29659a8d3cab2816224cfe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a362109aeb29659a8d3cab2816224cfe4">&#9670;&nbsp;</a></span>_lambda</h2>
+<a id="a3aa67109560b3a4cad0e47418b73f5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa67109560b3a4cad0e47418b73f5e1">&#9670;&nbsp;</a></span>m_layers</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_lambda {0}</td>
+          <td class="memname">std::vector&lt;<a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a>&lt;aoSystemT&gt; &gt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_layers</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Desired wavelength of the turbulence. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00057">57</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9e2a73a1c29f46c5e0c2ee3f585258e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e2a73a1c29f46c5e0c2ee3f585258e2">&#9670;&nbsp;</a></span>_lambda0</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_lambda0 {0.5e-6}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Wavelength at which r_0 was measured. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00056">56</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aaf62f2eda33c3c7621201c8331f293db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf62f2eda33c3c7621201c8331f293db">&#9670;&nbsp;</a></span>_layers</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a>&lt;realT&gt; &gt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_layers</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Vector of turbulent layers. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00062">62</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00137">137</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a2d2c0665499d35b5e0894712e422cb10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d2c0665499d35b5e0894712e422cb10">&#9670;&nbsp;</a></span>_nWf</h2>
+<a id="adbca15cbd90a7423cda17073d158631e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbca15cbd90a7423cda17073d158631e">&#9670;&nbsp;</a></span>m_normVar</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_nWf {0}</td>
+          <td class="memname"><a class="el" href="group__random.html#gab8e17d1c5c200c2a0a331d534d0234e0">math::normDistT</a>&lt;realT&gt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_normVar</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Normal random deviate generator. This seeded in the constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00145">145</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a425cdef08ba3d377896c23361e690d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425cdef08ba3d377896c23361e690d52">&#9670;&nbsp;</a></span>m_nWf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_nWf {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Number of iterations which have occurred. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00075">75</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00143">143</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a8d59d5638f443e59819f05a623cc55ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d59d5638f443e59819f05a623cc55ce">&#9670;&nbsp;</a></span>_pixVal</h2>
+<a id="a6647e6a1dd1050ac8c657342bc153a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6647e6a1dd1050ac8c657342bc153a15">&#9670;&nbsp;</a></span>m_pupil</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_pixVal {0}</td>
+          <td class="memname">imageT* <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_pupil {0}</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Nominal amplitude value for one pixel, has units of photons/pixel. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00070">70</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a917a2f3cb4686ab8dbf88f347fad481c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a917a2f3cb4686ab8dbf88f347fad481c">&#9670;&nbsp;</a></span>_pupD</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_pupD {0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Size of the wavefront in meters. &lt;&ndash;This is really wavefront diameter. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00052">52</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab0ac753412a5c23952a1183e6bdeef37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0ac753412a5c23952a1183e6bdeef37">&#9670;&nbsp;</a></span>_pupil</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">arrayT* <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_pupil {0}</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>A pointer to the pupil mask. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00072">72</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00128">128</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad7a9ffc63391f0d45b7594f437610be8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7a9ffc63391f0d45b7594f437610be8">&#9670;&nbsp;</a></span>_starMag</h2>
+<a id="ad28b13e6e0125531f4b33d4d5f9edcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28b13e6e0125531f4b33d4d5f9edcfa">&#9670;&nbsp;</a></span>m_retain</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_starMag {0}</td>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_retain {false}</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether or not to retain working memory after screen generation. One would set to true if many screens will be calculated in monte carlo fashion. For a standard case of one set of screens being shifted by wind velocity, this should be false to minimize memory use. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00111">111</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d289d402c0fdc955ce0efcabe1229e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d289d402c0fdc955ce0efcabe1229e9">&#9670;&nbsp;</a></span>m_shLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_shLevel {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Number of subharmonic levels. 0 means no subharmonics. Generally only 1 level is needed to obtain good Tip/Tilt results. See <a class="el" href="classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html">turbSubHarmonic</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00103">103</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5dfbaf6111ad854dcaac2ad69f9f201a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfbaf6111ad854dcaac2ad69f9f201a">&#9670;&nbsp;</a></span>m_shPreCalc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_shPreCalc {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether or not to pre-calculate the subharmonic modes. This is a trade of speed vs. memory use. See <a class="el" href="classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html">turbSubHarmonic</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00107">107</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e77438b54ea1ad40e945c38150bc9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e77438b54ea1ad40e945c38150bc9c2">&#9670;&nbsp;</a></span>m_subHarms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html">turbSubHarmonic</a>&lt;<a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">turbAtmosphere</a>&gt; &gt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_subHarms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Magnitude of the star being observed. </p>
+<p>Sub-harmonic layers. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00068">68</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00139">139</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad265a9888ff771d8c315d3565f7eaca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad265a9888ff771d8c315d3565f7eaca5">&#9670;&nbsp;</a></span>_subPiston</h2>
+<a id="a74d2b304ec61ac53b3a179b9b7bf6855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d2b304ec61ac53b3a179b9b7bf6855">&#9670;&nbsp;</a></span>m_timeStep</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_subPiston {true}</td>
+          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_timeStep {0}</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Whether or not to subtract piston from the PSD. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00059">59</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a3f1c0b86aeb3ed1e0d763d35151664e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f1c0b86aeb3ed1e0d763d35151664e1">&#9670;&nbsp;</a></span>_subTipTilt</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_subTipTilt {false}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Whether or not to subtract tip/tilt from the PSD. </p>
-
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00060">60</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2ac98b615f94bff9fbcf1d5906bc1bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ac98b615f94bff9fbcf1d5906bc1bdc">&#9670;&nbsp;</a></span>_timeStep</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _realT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_timeStep {0}</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Length of each iteration, in seconds. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00074">74</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00130">130</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad4a08012f14d57430dcbffe40b921b53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4a08012f14d57430dcbffe40b921b53">&#9670;&nbsp;</a></span>_wfSz</h2>
+<a id="ad9eb6d3df5f8a9b163f0ec734955b1c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9eb6d3df5f8a9b163f0ec734955b1c1">&#9670;&nbsp;</a></span>m_wfSz</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _realT &gt;::_wfSz {0}</td>
+          <td class="memname">uint32_t <a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">mx::AO::sim::turbAtmosphere</a>&lt; _aoSystemT &gt;::m_wfSz {0}</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Size of the wavefront in pixels. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00053">53</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbAtmosphere_8hpp_source.html#l00097">97</a> of file <a class="el" href="turbAtmosphere_8hpp_source.html">turbAtmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +1364,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>sim</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbAtmosphere.html">turbAtmosphere</a></li>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:05 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:12 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

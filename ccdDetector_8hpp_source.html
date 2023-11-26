@@ -404,58 +404,63 @@ $(document).ready(function(){initNavTree('ccdDetector_8hpp_source.html',''); ini
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;   <span class="keyword">using</span> poisson_param_t = <span class="keyword">typename</span> std::poisson_distribution&lt;int&gt;::param_type;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;   <span class="keyword">using</span> gamma_param_t = <span class="keyword">typename</span> std::gamma_distribution&lt;realT&gt;::param_type;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   out.resize(m_rows, m_cols);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   <a class="code" href="group__image__transforms.html#gaa575d47dbaf2c5a20b51d34c2cdc8605">improc::imageDownSample</a>(out, in);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;   <span class="keywordflow">if</span>(m_noNoise) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;m_rows;++i)</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;   {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;m_cols;++j)</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;         realT charge = (out(i,j)*m_qe + m_darkCurrent) * m_expTime + m_cic;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;         <span class="keywordflow">if</span>(charge &gt; 1000)</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;         {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            out(i,j) = charge + m_normVar*sqrt(charge);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;         <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;         {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            m_poissonVar.distribution.param(poisson_param_t{charge});</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            out(i,j) = m_poissonVar;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;   BREAD_CRUMB </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;   </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;   out.resize(m_rows, m_cols);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;   BREAD_CRUMB </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;   </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;   <a class="code" href="group__image__transforms.html#gaa575d47dbaf2c5a20b51d34c2cdc8605">improc::imageDownSample</a>(out, in);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;   BREAD_CRUMB </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;   <span class="keywordflow">if</span>(m_noNoise) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;   <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;m_rows;++i)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;   {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;m_cols;++j)</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         realT charge = (out(i,j)*m_qe + m_darkCurrent) * m_expTime + m_cic;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;         <span class="keywordflow">if</span>(charge &gt; 1000)</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;         {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            out(i,j) = charge + m_normVar*sqrt(charge);</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;         }</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;         <span class="keywordflow">if</span>(m_gain &gt; 1)</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;         {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            m_gammaVar.distribution.param(gamma_param_t{out(i,j), m_gain});</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;         <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;         {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            m_poissonVar.distribution.param(poisson_param_t{charge});</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            out(i,j) = m_poissonVar;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;         }</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            out(i,j) = m_gammaVar;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;         }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;         <span class="keywordflow">if</span>(m_gain &gt; 1)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;         {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            m_gammaVar.distribution.param(gamma_param_t{out(i,j), m_gain});</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;         out(i,j) += m_normVar*m_ron;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;         <span class="keywordflow">if</span>(m_gain &gt; 1) out(i,j) /= m_gain;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;         out(i,j) = round(out(i,j));</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;   }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            out(i,j) = m_gammaVar;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;         }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;         out(i,j) += m_normVar*m_ron;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;         <span class="keywordflow">if</span>(m_gain &gt; 1) out(i,j) /= m_gain;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;         out(i,j) = round(out(i,j));</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;   }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;} <span class="comment">//namespace sim</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;} <span class="comment">//namespace AO</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;} <span class="comment">//namespace mx</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ccdDetector_hpp</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;} <span class="comment">//namespace sim</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;} <span class="comment">//namespace AO</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;} <span class="comment">//namespace mx</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ccdDetector_hpp</span></div>
 <div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1ccdDetector_html"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1ccdDetector.html">mx::AO::sim::ccdDetector</a></div><div class="ttdoc">A simulated CCD detector.</div><div class="ttdef"><b>Definition:</b> <a href="ccdDetector_8hpp_source.html#l00038">ccdDetector.hpp:39</a></div></div>
 <div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1ccdDetector_html_a0294b338478dd9d53a6164f8754e56a4"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a0294b338478dd9d53a6164f8754e56a4">mx::AO::sim::ccdDetector::m_ron</a></div><div class="ttdeci">realT m_ron</div><div class="ttdoc">The readout noise, electrons per pixel per read #include &quot;mx/randomT.hpp&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="ccdDetector_8hpp_source.html#l00069">ccdDetector.hpp:69</a></div></div>
 <div class="ttc" id="aclassmx_1_1AO_1_1sim_1_1ccdDetector_html_a148bca433eb273bc4317775fb35ddb20"><div class="ttname"><a href="classmx_1_1AO_1_1sim_1_1ccdDetector.html#a148bca433eb273bc4317775fb35ddb20">mx::AO::sim::ccdDetector::m_darkCurrent</a></div><div class="ttdeci">realT m_darkCurrent</div><div class="ttdoc">The dark current, per pixel per second.</div><div class="ttdef"><b>Definition:</b> <a href="ccdDetector_8hpp_source.html#l00068">ccdDetector.hpp:68</a></div></div>
@@ -482,7 +487,7 @@ $(document).ready(function(){initNavTree('ccdDetector_8hpp_source.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4a0bf71ba3138a6abb584fb74c18f794.html">ao</a></li><li class="navelem"><a class="el" href="dir_082cbf2913457a01d654a9fdfc0ec78a.html">sim</a></li><li class="navelem"><a class="el" href="ccdDetector_8hpp.html">ccdDetector.hpp</a></li>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:04 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:11 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

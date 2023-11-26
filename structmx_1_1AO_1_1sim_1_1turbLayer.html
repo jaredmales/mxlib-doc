@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mxlib: mx::AO::sim::turbLayer&lt; _realT &gt; Struct Template Reference</title>
+<title>mxlib: mx::AO::sim::turbLayer&lt; _aoSystemT &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,51 +97,74 @@ $(document).ready(function(){initNavTree('structmx_1_1AO_1_1sim_1_1turbLayer.htm
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">mx::AO::sim::turbLayer&lt; _realT &gt; Struct Template Reference</div>  </div>
+<div class="title">mx::AO::sim::turbLayer&lt; _aoSystemT &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__imaging.html">Wavefront Propagation</a> &raquo; <a class="el" href="group__mxAO.html">Adaptive Optics</a> &raquo; <a class="el" href="group__mxAOSim.html">Simulation of Adaptive Optics</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<div class="textblock"><h3>template&lt;typename _realT&gt;<br />
-struct mx::AO::sim::turbLayer&lt; _realT &gt;</h3>
+<div class="textblock"><h3>template&lt;typename _aoSystemT&gt;<br />
+struct mx::AO::sim::turbLayer&lt; _aoSystemT &gt;</h3>
 
 <p>Simulation of a single turbulent layer. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd><p class="startdd">document this </p>
-<p class="enddd">add facility for changing interpolator </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd><p class="startdd">document this </p>
+<p class="enddd">add facility for changing interpolator</p>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00034">34</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00055">55</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="turbLayer_8hpp_source.html">ao/sim/turbLayer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7166a48ed0ed334ede99749f76b9d833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a7166a48ed0ed334ede99749f76b9d833">shift</a> (realT dt)</td></tr>
-<tr class="memdesc:a7166a48ed0ed334ede99749f76b9d833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift to a timestep.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a7166a48ed0ed334ede99749f76b9d833">More...</a><br /></td></tr>
-<tr class="separator:a7166a48ed0ed334ede99749f76b9d833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab10a17476a6220f403dec668b2efe3fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ab10a17476a6220f403dec668b2efe3fd">initRandom</a> ()</td></tr>
-<tr class="memdesc:ab10a17476a6220f403dec668b2efe3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed the uniform deviation. Call this if you intend to use shiftRandom.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ab10a17476a6220f403dec668b2efe3fd">More...</a><br /></td></tr>
-<tr class="separator:ab10a17476a6220f403dec668b2efe3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc72fcf568f424b44318b9e2136dd23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a1fc72fcf568f424b44318b9e2136dd23">shiftRandom</a> (bool nofract=false)</td></tr>
-<tr class="memdesc:a1fc72fcf568f424b44318b9e2136dd23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift by a random amount using the uniform distribution.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a1fc72fcf568f424b44318b9e2136dd23">More...</a><br /></td></tr>
-<tr class="separator:a1fc72fcf568f424b44318b9e2136dd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9b3b40b6190fa1702efeb148ffa685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a1a9b3b40b6190fa1702efeb148ffa685">genDealloc</a> ()</td></tr>
+<tr class="memdesc:a1a9b3b40b6190fa1702efeb148ffa685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate memory necessary for phase screen generation.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a1a9b3b40b6190fa1702efeb148ffa685">More...</a><br /></td></tr>
+<tr class="separator:a1a9b3b40b6190fa1702efeb148ffa685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02eb6d220908d914964e2541a21382a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ae02eb6d220908d914964e2541a21382a">shift</a> (realT dt)</td></tr>
+<tr class="memdesc:ae02eb6d220908d914964e2541a21382a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift to a timestep.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ae02eb6d220908d914964e2541a21382a">More...</a><br /></td></tr>
+<tr class="separator:ae02eb6d220908d914964e2541a21382a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e8d748550377dcad6a73373979026f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a74e8d748550377dcad6a73373979026f">initRandom</a> ()</td></tr>
+<tr class="memdesc:a74e8d748550377dcad6a73373979026f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed the uniform deviation. Call this if you intend to use shiftRandom.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a74e8d748550377dcad6a73373979026f">More...</a><br /></td></tr>
+<tr class="separator:a74e8d748550377dcad6a73373979026f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14bdfe1d845208fbc6ba106d3d9928e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ae14bdfe1d845208fbc6ba106d3d9928e">shiftRandom</a> (bool nofract=false)</td></tr>
+<tr class="memdesc:ae14bdfe1d845208fbc6ba106d3d9928e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift by a random amount using the uniform distribution.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ae14bdfe1d845208fbc6ba106d3d9928e">More...</a><br /></td></tr>
+<tr class="separator:ae14bdfe1d845208fbc6ba106d3d9928e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a811d6cb9f06279d802df41f99c9d073f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9">mx::math::uniDistT</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a811d6cb9f06279d802df41f99c9d073f">uniVar</a></td></tr>
-<tr class="memdesc:a811d6cb9f06279d802df41f99c9d073f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniform deviate, used in shiftRandom.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a811d6cb9f06279d802df41f99c9d073f">More...</a><br /></td></tr>
-<tr class="separator:a811d6cb9f06279d802df41f99c9d073f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c857c413421a7de0b0601331188727f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9">mx::math::uniDistT</a>&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a7c857c413421a7de0b0601331188727f">uniVar</a></td></tr>
+<tr class="memdesc:a7c857c413421a7de0b0601331188727f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniform deviate, used in shiftRandom.  <a href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a7c857c413421a7de0b0601331188727f">More...</a><br /></td></tr>
+<tr class="separator:a7c857c413421a7de0b0601331188727f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab10a17476a6220f403dec668b2efe3fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab10a17476a6220f403dec668b2efe3fd">&#9670;&nbsp;</a></span>initRandom()</h2>
+<a id="a1a9b3b40b6190fa1702efeb148ffa685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9b3b40b6190fa1702efeb148ffa685">&#9670;&nbsp;</a></span>genDealloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename realT &gt; </div>
+template&lt;typename aoSystemT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; realT &gt;::initRandom</td>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; aoSystemT &gt;::genDealloc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deallocate memory necessary for phase screen generation. </p>
+
+<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00267">267</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a74e8d748550377dcad6a73373979026f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e8d748550377dcad6a73373979026f">&#9670;&nbsp;</a></span>initRandom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename aoSystemT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; aoSystemT &gt;::initRandom</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -149,20 +172,20 @@ template&lt;typename realT &gt; </div>
 <p>Seed the uniform deviation. Call this if you intend to use shiftRandom. </p>
 <p>This only needs to be called once. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00226">226</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00306">306</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a7166a48ed0ed334ede99749f76b9d833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7166a48ed0ed334ede99749f76b9d833">&#9670;&nbsp;</a></span>shift()</h2>
+<a id="ae02eb6d220908d914964e2541a21382a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae02eb6d220908d914964e2541a21382a">&#9670;&nbsp;</a></span>shift()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename realT &gt; </div>
+template&lt;typename aoSystemT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; realT &gt;::shift </td>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; aoSystemT &gt;::shift </td>
           <td>(</td>
           <td class="paramtype">realT&#160;</td>
           <td class="paramname"><em>dt</em></td><td>)</td>
@@ -179,22 +202,22 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00188">188</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00274">274</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00453">mx::improc::imageShift()</a>, and <a class="el" href="imageTransforms_8hpp_source.html#l00296">mx::improc::imageShiftWP()</a>.</p>
 
 </div>
 </div>
-<a id="a1fc72fcf568f424b44318b9e2136dd23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fc72fcf568f424b44318b9e2136dd23">&#9670;&nbsp;</a></span>shiftRandom()</h2>
+<a id="ae14bdfe1d845208fbc6ba106d3d9928e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14bdfe1d845208fbc6ba106d3d9928e">&#9670;&nbsp;</a></span>shiftRandom()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename realT &gt; </div>
+template&lt;typename aoSystemT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; realT &gt;::shiftRandom </td>
+          <td class="memname">void <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; aoSystemT &gt;::shiftRandom </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>nofract</em> = <code>false</code></td><td>)</td>
@@ -204,7 +227,7 @@ template&lt;typename realT &gt; </div>
 </div><div class="memdoc">
 
 <p>Shift by a random amount using the uniform distribution. </p>
-<p>Call <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#ab10a17476a6220f403dec668b2efe3fd" title="Seed the uniform deviation. Call this if you intend to use shiftRandom.">initRandom()</a> once before calling this method.</p>
+<p>Call <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html#a74e8d748550377dcad6a73373979026f" title="Seed the uniform deviation. Call this if you intend to use shiftRandom.">initRandom()</a> once before calling this method.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nofract</td><td>if true then the fractional part is ignored, and only a whole-pixel shift is executed. Default=false </td></tr>
@@ -212,30 +235,30 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00232">232</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00312">312</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00453">mx::improc::imageShift()</a>, and <a class="el" href="imageTransforms_8hpp_source.html#l00296">mx::improc::imageShiftWP()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a811d6cb9f06279d802df41f99c9d073f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a811d6cb9f06279d802df41f99c9d073f">&#9670;&nbsp;</a></span>uniVar</h2>
+<a id="a7c857c413421a7de0b0601331188727f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c857c413421a7de0b0601331188727f">&#9670;&nbsp;</a></span>uniVar</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _realT &gt; </div>
+template&lt;typename _aoSystemT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9">mx::math::uniDistT</a>&lt;realT&gt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; _realT &gt;::uniVar</td>
+          <td class="memname"><a class="el" href="group__random.html#ga75c8f7ead863d49e23d2ebbc5148bcb9">mx::math::uniDistT</a>&lt;realT&gt; <a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">mx::AO::sim::turbLayer</a>&lt; _aoSystemT &gt;::uniVar</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Uniform deviate, used in shiftRandom. </p>
 
-<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00068">68</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="turbLayer_8hpp_source.html#l00084">84</a> of file <a class="el" href="turbLayer_8hpp_source.html">turbLayer.hpp</a>.</p>
 
 </div>
 </div>
@@ -248,7 +271,7 @@ template&lt;typename _realT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>AO</b></li><li class="navelem"><b>sim</b></li><li class="navelem"><a class="el" href="structmx_1_1AO_1_1sim_1_1turbLayer.html">turbLayer</a></li>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:05 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:12 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

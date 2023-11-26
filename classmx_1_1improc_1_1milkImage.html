@@ -135,9 +135,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3696401a34980394bf88bf1ff9938b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1milkImage.html#af3696401a34980394bf88bf1ff9938b9">open</a> (const std::string &amp;imname)</td></tr>
 <tr class="memdesc:af3696401a34980394bf88bf1ff9938b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open and connect to an image, allocating the eigenMap.  <a href="classmx_1_1improc_1_1milkImage.html#af3696401a34980394bf88bf1ff9938b9">More...</a><br /></td></tr>
 <tr class="separator:af3696401a34980394bf88bf1ff9938b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeff57055031e1eff1b904e055c976f9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1milkImage.html#aeff57055031e1eff1b904e055c976f9f">unchanged</a> ()</td></tr>
-<tr class="memdesc:aeff57055031e1eff1b904e055c976f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the image is still the same as when connected.  <a href="classmx_1_1improc_1_1milkImage.html#aeff57055031e1eff1b904e055c976f9f">More...</a><br /></td></tr>
-<tr class="separator:aeff57055031e1eff1b904e055c976f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546a6b1c28bbbd4cc02dbc028ec3b916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1milkImage.html#a546a6b1c28bbbd4cc02dbc028ec3b916">create</a> (const std::string &amp;imname, uint32_t sz0, uint32_t sz1)</td></tr>
+<tr class="memdesc:a546a6b1c28bbbd4cc02dbc028ec3b916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and connect to an image, allocating the eigenMap.  <a href="classmx_1_1improc_1_1milkImage.html#a546a6b1c28bbbd4cc02dbc028ec3b916">More...</a><br /></td></tr>
+<tr class="separator:a546a6b1c28bbbd4cc02dbc028ec3b916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9554beb9b7c1132841efc00577484a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1milkImage.html#aa9554beb9b7c1132841efc00577484a3">valid</a> ()</td></tr>
+<tr class="memdesc:aa9554beb9b7c1132841efc00577484a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the image is connected and is still the same format as when connected.  <a href="classmx_1_1improc_1_1milkImage.html#aa9554beb9b7c1132841efc00577484a3">More...</a><br /></td></tr>
+<tr class="separator:aa9554beb9b7c1132841efc00577484a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abde2e3e41523f14f2893b9f39439ab8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1milkImage.html#abde2e3e41523f14f2893b9f39439ab8a">reopen</a> ()</td></tr>
 <tr class="memdesc:abde2e3e41523f14f2893b9f39439ab8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reopens the image.  <a href="classmx_1_1improc_1_1milkImage.html#abde2e3e41523f14f2893b9f39439ab8a">More...</a><br /></td></tr>
 <tr class="separator:abde2e3e41523f14f2893b9f39439ab8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,7 +204,7 @@ template&lt;typename dataT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00225">225</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00234">234</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
@@ -231,11 +234,65 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00230">230</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00239">239</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a546a6b1c28bbbd4cc02dbc028ec3b916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546a6b1c28bbbd4cc02dbc028ec3b916">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1improc_1_1milkImage.html">mx::improc::milkImage</a>&lt; <a class="el" href="classmx_1_1improc_1_1milkImage.html#a82e9ff31bfd87e90df00eaa0d4eec492">dataT</a> &gt;::create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>imname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>sz0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>sz1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create and connect to an image, allocating the eigenMap. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if the image type_code does not match dataT. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imname</td><td>The image name, for name.im.shm (the .im.shm should not be given). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sz0</td><td>the x size of the image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sz1</td><td>the y size of the image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00279">279</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+
+</div>
+</div>
 <a id="af3696401a34980394bf88bf1ff9938b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3696401a34980394bf88bf1ff9938b9">&#9670;&nbsp;</a></span>open()</h2>
 
@@ -268,7 +325,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00236">236</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00245">245</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
@@ -301,7 +358,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00270">270</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00323">323</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +384,7 @@ template&lt;typename dataT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00327">327</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00380">380</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,14 +406,14 @@ template&lt;typename dataT &gt; </div>
 <p>Same as </p><div class="fragment"><div class="line">close();</div>
 <div class="line"><a class="code" href="classmx_1_1improc_1_1milkImage.html#af3696401a34980394bf88bf1ff9938b9">open</a>(<a class="code" href="classmx_1_1improc_1_1milkImage.html#a89c2963b72b7b93e40da5204428401ad">m_name</a>);</div>
 <div class="ttc" id="aclassmx_1_1improc_1_1milkImage_html_a89c2963b72b7b93e40da5204428401ad"><div class="ttname"><a href="classmx_1_1improc_1_1milkImage.html#a89c2963b72b7b93e40da5204428401ad">mx::improc::milkImage::m_name</a></div><div class="ttdeci">std::string m_name</div><div class="ttdoc">The image name, from name.im.shm (the .im.shm should not be given).</div><div class="ttdef"><b>Definition:</b> <a href="milkImage_8hpp_source.html#l00154">milkImage.hpp:154</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1milkImage_html_af3696401a34980394bf88bf1ff9938b9"><div class="ttname"><a href="classmx_1_1improc_1_1milkImage.html#af3696401a34980394bf88bf1ff9938b9">mx::improc::milkImage::open</a></div><div class="ttdeci">void open(const std::string &amp;imname)</div><div class="ttdoc">Open and connect to an image, allocating the eigenMap.</div><div class="ttdef"><b>Definition:</b> <a href="milkImage_8hpp_source.html#l00236">milkImage.hpp:236</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1milkImage_html_af3696401a34980394bf88bf1ff9938b9"><div class="ttname"><a href="classmx_1_1improc_1_1milkImage.html#af3696401a34980394bf88bf1ff9938b9">mx::improc::milkImage::open</a></div><div class="ttdeci">void open(const std::string &amp;imname)</div><div class="ttdoc">Open and connect to an image, allocating the eigenMap.</div><div class="ttdef"><b>Definition:</b> <a href="milkImage_8hpp_source.html#l00245">milkImage.hpp:245</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00286">286</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00339">339</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aeff57055031e1eff1b904e055c976f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeff57055031e1eff1b904e055c976f9f">&#9670;&nbsp;</a></span>unchanged()</h2>
+<a id="aa9554beb9b7c1132841efc00577484a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9554beb9b7c1132841efc00577484a3">&#9670;&nbsp;</a></span>valid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,18 +421,18 @@ template&lt;typename dataT &gt; </div>
 template&lt;typename dataT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classmx_1_1improc_1_1milkImage.html">mx::improc::milkImage</a>&lt; <a class="el" href="classmx_1_1improc_1_1milkImage.html#a82e9ff31bfd87e90df00eaa0d4eec492">dataT</a> &gt;::unchanged</td>
+          <td class="memname">bool <a class="el" href="classmx_1_1improc_1_1milkImage.html">mx::improc::milkImage</a>&lt; <a class="el" href="classmx_1_1improc_1_1milkImage.html#a82e9ff31bfd87e90df00eaa0d4eec492">dataT</a> &gt;::valid</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if the image is still the same as when connected. </p>
+<p>Checks if the image is connected and is still the same format as when connected. </p>
 <p>Checks on pointer value, size[], and data_type.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if no changes </dd>
+<dl class="section return"><dt>Returns</dt><dd>true if connected and no changes </dd>
 <dd>
-false if something changed. all maps are now invalid. </dd></dl>
+false if not connected or something changed. All maps are now invalid. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00308">308</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="milkImage_8hpp_source.html#l00361">361</a> of file <a class="el" href="milkImage_8hpp_source.html">milkImage.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,7 +558,7 @@ template&lt;typename _dataT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="classmx_1_1improc_1_1milkImage.html">milkImage</a></li>
-    <li class="footer">Generated on Mon Oct 2 2023 04:04:05 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Nov 26 2023 10:58:12 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

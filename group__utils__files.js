@@ -1,6 +1,7 @@
 var group__utils__files =
 [
     [ "Application Files", "group__mxApp__files.html", "group__mxApp__files" ],
+    [ "changeable.hpp", "changeable_8hpp.html", null ],
     [ "trueFalseT.hpp", "trueFalseT_8hpp.html", null ],
     [ "typeDescription.hpp", "typeDescription_8hpp.html", null ],
     [ "typeTraits.hpp", "typeTraits_8hpp.html", null ],

@@ -1,5 +1,7 @@
 var structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD =
 [
+    [ "complexT", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a97c436aa4e55ed2929a65a6e6161fd35", null ],
+    [ "realT", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a87593bb7a248087c37d221638c9e3d0b", null ],
     [ "fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#af1a8f37c50455be851ff279b6c7091bf", null ],
     [ "fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ae0fc9dd6789e66b18903a400e8e105a3", null ],
     [ "~fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a658bfbcb710a93ab45dba3c31d70582e", null ],
