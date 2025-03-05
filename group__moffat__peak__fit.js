@@ -5,6 +5,7 @@ var group__moffat__peak__fit =
       [ "dy", "classmx_1_1math_1_1fit_1_1fitEmpirical2DGen.html#acb7dfa86e4eef7565e7639813886aedb", null ],
       [ "scale", "classmx_1_1math_1_1fit_1_1fitEmpirical2DGen.html#ab2a57779ffff5a967460dd142a5decbc", null ],
       [ "setArray", "classmx_1_1math_1_1fit_1_1fitEmpirical2DGen.html#a22df4caad4fa97a5eaae413060845b0e", null ],
+      [ "setArray", "classmx_1_1math_1_1fit_1_1fitEmpirical2DGen.html#ad53863ae550c92cf94cdf0b574bb4a48", null ],
       [ "setFixed", "classmx_1_1math_1_1fit_1_1fitEmpirical2DGen.html#abb274770a4bb355acab0e5444d1d54e2", null ],
       [ "setGuess", "classmx_1_1math_1_1fit_1_1fitEmpirical2DGen.html#ad8e060e516493c7725fc649f212f788b", null ]
     ] ],
@@ -14,7 +15,8 @@ var group__moffat__peak__fit =
       [ "m_nx", "structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#aa421283ead34f94c03c8f20f7c1a0903", null ],
       [ "m_ny", "structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#acf226204c53f297e133dc0d42fff2e51", null ],
       [ "m_ref", "structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#ada62489f59ad47fa24891061aa3cf390", null ],
-      [ "m_refShifted", "structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#aa2afcd8dad6d49f7ebb6ec9a11787dd8", null ]
+      [ "m_refShifted", "structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#aa2afcd8dad6d49f7ebb6ec9a11787dd8", null ],
+      [ "m_weights", "structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#a14029a3ba469535ff4cd9691910f82e1", null ]
     ] ],
     [ "mx::math::fit::empirical2D_fitter< _realT >", "structmx_1_1math_1_1fit_1_1empirical2D__fitter.html", null ],
     [ "mx::math::fit::array2FitMoffat1D< realT >", "structmx_1_1math_1_1fit_1_1array2FitMoffat1D.html", [

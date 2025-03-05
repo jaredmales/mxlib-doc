@@ -27,5 +27,7 @@ var searchData=
   ['fouriertemporalpsd_2ehpp_24',['fourierTemporalPSD.hpp',['../fourierTemporalPSD_8hpp.html',1,'']]],
   ['fraunhoferpropagator_2ehpp_25',['fraunhoferPropagator.hpp',['../fraunhoferPropagator_8hpp.html',1,'']]],
   ['fraunhoferpropagatorcuda_2ehpp_26',['fraunhoferPropagatorCuda.hpp',['../fraunhoferPropagatorCuda_8hpp.html',1,'']]],
-  ['ft_2ehpp_27',['ft.hpp',['../ft_8hpp.html',1,'']]]
+  ['ft_2ehpp_27',['ft.hpp',['../ft_8hpp.html',1,'']]],
+  ['fttypes_2ehpp_28',['ftTypes.hpp',['../ftTypes_8hpp.html',1,'']]],
+  ['ftutils_2ehpp_29',['ftUtils.hpp',['../ftUtils_8hpp.html',1,'']]]
 ];

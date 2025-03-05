@@ -21,7 +21,10 @@ var searchData=
   ['cloptions_18',['clOptions',['../structmx_1_1app_1_1clOptions.html',1,'mx::app']]],
   ['configtarget_19',['configTarget',['../structmx_1_1app_1_1configTarget.html',1,'mx::app']]],
   ['cubicconvoltransform_20',['cubicConvolTransform',['../structmx_1_1improc_1_1cubicConvolTransform.html',1,'mx::improc']]],
-  ['cudaptr_21',['cudaPtr',['../structmx_1_1cuda_1_1cudaPtr.html',1,'mx::cuda']]],
-  ['cudaptr_3c_20complext_20_3e_22',['cudaPtr&lt; complexT &gt;',['../structmx_1_1cuda_1_1cudaPtr.html',1,'mx::cuda']]],
-  ['cudaptr_3c_20realt_20_3e_23',['cudaPtr&lt; realT &gt;',['../structmx_1_1cuda_1_1cudaPtr.html',1,'mx::cuda']]]
+  ['cublashandle_21',['cublasHandle',['../structmx_1_1cuda_1_1cublasHandle.html',1,'mx::cuda']]],
+  ['cudaptr_22',['cudaPtr',['../structmx_1_1cuda_1_1cudaPtr.html',1,'mx::cuda']]],
+  ['cudaptr_3c_20complext_20_3e_23',['cudaPtr&lt; complexT &gt;',['../structmx_1_1cuda_1_1cudaPtr.html',1,'mx::cuda']]],
+  ['cudaptr_3c_20realt_20_3e_24',['cudaPtr&lt; realT &gt;',['../structmx_1_1cuda_1_1cudaPtr.html',1,'mx::cuda']]],
+  ['cusolverdnhandle_25',['cusolverDnHandle',['../structmx_1_1cuda_1_1cusolverDnHandle.html',1,'mx::cuda']]],
+  ['cusolverdnparams_26',['cusolverDnParams',['../structmx_1_1cuda_1_1cusolverDnParams.html',1,'mx::cuda']]]
 ];

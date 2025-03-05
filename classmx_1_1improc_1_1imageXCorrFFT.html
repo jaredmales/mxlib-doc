@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('classmx_1_1improc_1_1imageXCorrFFT.htm
 <div class="textblock"><div class="compoundTemplParams">template&lt;class _realImageT&gt;<br />
 class mx::improc::imageXCorrFFT&lt; _realImageT &gt;</div><p>Find the optimum shift to align two images using the FFT cross correlation. </p>
 <p>The reference image must be the same size as the target image. Both the reference image and the target image being analyzed can be masked, normalized by mean subtraction and variance division, and windowed. Seperate masks and windows for the reference and target image are used.</p>
-<p>The reference mask, reference window, and normalization flag must be set before setting the reference (unless using the defaults). If the reference window, reference window, or normalization flag are changed then the reference must be set again. After configuring the reference, then operator() can be called repeatedly to determine the shifts for a sequence of imaages. The mask and window can be changed between calls without requiring resetting the reference. No new heap allocations take place on these calls to operator(), and the reference image is not re-normalized on each call.</p>
+<p>The reference mask, reference window, and normalization flag must be set before setting the reference (unless using the defaults). If the reference mask, reference window, or normalization flag are changed then the reference must be set again. After configuring the reference, then operator() can be called repeatedly to determine the shifts for a sequence of imaages. The mask and window can be changed between calls without requiring resetting the reference. No new heap allocations take place on these calls to operator(), and the reference image is not re-normalized on each call.</p>
 <p>The shift is reported in pixels such that if the mxlib imageShift function is used to shift the input image by the negative of the shifts, it will align with the reference at the center of the array.</p>
 <p>Several peak finding methods are provided:</p><ul>
 <li>xcorrPeakMethod::centerOfLight uses center of light</li>
@@ -128,14 +128,15 @@ class mx::improc::imageXCorrFFT&lt; _realImageT &gt;</div><p>Find the optimum sh
 <li>xcorrPeakMethod::interpPeak uses interpolation to find the peak to a given tolerance.</li>
 <li>xcorrPeakMethod::none will just return the coordinate of the max pixel</li>
 </ul>
+<p>This class uses the real-to-complex transforms of FFTW by default. This should offer improved speed and memory use. For testing the complex-to-complex transforms can be used by defining <code>XCFFT_C2C</code> before including this file.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">_realImageT</td><td>is the Eigen-like array type used for image processing. See typedefs. </td></tr>
+    <tr><td class="paramname">_realImageT</td><td>is the Eigen-like array type used for image processing. Must have a real floating point Scalar type (float, double, etc.). See typedefs. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00073">73</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00081">81</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="imageXCorrFFT_8hpp_source.html">improc/imageXCorrFFT.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -167,21 +168,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afefb45fd02b2bc2c0006186dfe75d665" id="r_afefb45fd02b2bc2c0006186dfe75d665"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#afefb45fd02b2bc2c0006186dfe75d665">cols</a> ()</td></tr>
 <tr class="memdesc:afefb45fd02b2bc2c0006186dfe75d665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of columns in the input images.  <br /></td></tr>
 <tr class="separator:afefb45fd02b2bc2c0006186dfe75d665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dc52a9ee47537bd4be259493a5b832d" id="r_a3dc52a9ee47537bd4be259493a5b832d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3dc52a9ee47537bd4be259493a5b832d">oversamp</a> (<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> os)</td></tr>
-<tr class="memdesc:a3dc52a9ee47537bd4be259493a5b832d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the oversampling factor.  <br /></td></tr>
-<tr class="separator:a3dc52a9ee47537bd4be259493a5b832d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf6ce6d1d65e055e7d633dbeca710116" id="r_acf6ce6d1d65e055e7d633dbeca710116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#acf6ce6d1d65e055e7d633dbeca710116">oversamp</a> ()</td></tr>
-<tr class="memdesc:acf6ce6d1d65e055e7d633dbeca710116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the oversampling factor.  <br /></td></tr>
-<tr class="separator:acf6ce6d1d65e055e7d633dbeca710116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2e0709baa7104f878dae3d47194ea0" id="r_abb2e0709baa7104f878dae3d47194ea0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#abb2e0709baa7104f878dae3d47194ea0">padFactor</a> (<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> os)</td></tr>
+<tr class="memdesc:abb2e0709baa7104f878dae3d47194ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the padding factor.  <br /></td></tr>
+<tr class="separator:abb2e0709baa7104f878dae3d47194ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064b8acc6930ed31e6f717b15b37b53e" id="r_a064b8acc6930ed31e6f717b15b37b53e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a064b8acc6930ed31e6f717b15b37b53e">padFactor</a> ()</td></tr>
+<tr class="memdesc:a064b8acc6930ed31e6f717b15b37b53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the padding factor.  <br /></td></tr>
+<tr class="separator:a064b8acc6930ed31e6f717b15b37b53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d10e69803837ee254e4bbdf768e4c75" id="r_a9d10e69803837ee254e4bbdf768e4c75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9d10e69803837ee254e4bbdf768e4c75">rowsPadded</a> ()</td></tr>
 <tr class="memdesc:a9d10e69803837ee254e4bbdf768e4c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of rows in the padded cross-correlation.  <br /></td></tr>
 <tr class="separator:a9d10e69803837ee254e4bbdf768e4c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15737ea106cf83f2fee433c8053788c1" id="r_a15737ea106cf83f2fee433c8053788c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a15737ea106cf83f2fee433c8053788c1">colsPadded</a> ()</td></tr>
 <tr class="memdesc:a15737ea106cf83f2fee433c8053788c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of rows in the padded cross-correlation.  <br /></td></tr>
 <tr class="separator:a15737ea106cf83f2fee433c8053788c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9836f7e41a850a4ba2d808eb4b12978d" id="r_a9836f7e41a850a4ba2d808eb4b12978d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d">resize</a> (int nrows, int ncols, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3dc52a9ee47537bd4be259493a5b832d">oversamp</a>)</td></tr>
-<tr class="memdesc:a9836f7e41a850a4ba2d808eb4b12978d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cross-correlation problem based on input image size.  <br /></td></tr>
-<tr class="separator:a9836f7e41a850a4ba2d808eb4b12978d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c036b644f86e63a04c4c1797a880110" id="r_a3c036b644f86e63a04c4c1797a880110"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110">resize</a> (int nrows, int ncols, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#abb2e0709baa7104f878dae3d47194ea0">padFactor</a>)</td></tr>
+<tr class="memdesc:a3c036b644f86e63a04c4c1797a880110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cross-correlation problem based on input image size.  <br /></td></tr>
+<tr class="separator:a3c036b644f86e63a04c4c1797a880110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a120f7709507b7c2c1834097e25416148" id="r_a120f7709507b7c2c1834097e25416148"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a120f7709507b7c2c1834097e25416148">resize</a> (int nrows, int ncols)</td></tr>
 <tr class="memdesc:a120f7709507b7c2c1834097e25416148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cross-correlation problem based on input image size.  <br /></td></tr>
 <tr class="separator:a120f7709507b7c2c1834097e25416148"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,9 +228,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab75ec782b95bff05e1371c37904495d9" id="r_ab75ec782b95bff05e1371c37904495d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ab75ec782b95bff05e1371c37904495d9">normalize</a> ()</td></tr>
 <tr class="memdesc:ab75ec782b95bff05e1371c37904495d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current value of the normalize flag.  <br /></td></tr>
 <tr class="separator:ab75ec782b95bff05e1371c37904495d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5beb13597bb22f2f787d514406a86c7c" id="r_a5beb13597bb22f2f787d514406a86c7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5beb13597bb22f2f787d514406a86c7c">refIm</a> (const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;im0, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3dc52a9ee47537bd4be259493a5b832d">oversamp</a>)</td></tr>
-<tr class="memdesc:a5beb13597bb22f2f787d514406a86c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the reference image.  <br /></td></tr>
-<tr class="separator:a5beb13597bb22f2f787d514406a86c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3018359d7803a5d8edfef9f41628321" id="r_ab3018359d7803a5d8edfef9f41628321"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ab3018359d7803a5d8edfef9f41628321">refIm</a> (const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;im0, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#abb2e0709baa7104f878dae3d47194ea0">padFactor</a>)</td></tr>
+<tr class="memdesc:ab3018359d7803a5d8edfef9f41628321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the reference image.  <br /></td></tr>
+<tr class="separator:ab3018359d7803a5d8edfef9f41628321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a0bbead8ced01812f017a52efd6ae7" id="r_a80a0bbead8ced01812f017a52efd6ae7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a80a0bbead8ced01812f017a52efd6ae7">refIm</a> (const <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;im0)</td></tr>
 <tr class="memdesc:a80a0bbead8ced01812f017a52efd6ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the reference image.  <br /></td></tr>
 <tr class="separator:a80a0bbead8ced01812f017a52efd6ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,9 +296,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a0c181d8374721c7b1046d53859b34078" id="r_a0c181d8374721c7b1046d53859b34078"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0c181d8374721c7b1046d53859b34078">m_cols</a> { 0 }</td></tr>
 <tr class="memdesc:a0c181d8374721c7b1046d53859b34078"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of columns in the images.  <br /></td></tr>
 <tr class="separator:a0c181d8374721c7b1046d53859b34078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba9dbe9368379fbc1af4a14ad1340559" id="r_aba9dbe9368379fbc1af4a14ad1340559"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aba9dbe9368379fbc1af4a14ad1340559">m_oversamp</a> { 1 }</td></tr>
-<tr class="memdesc:aba9dbe9368379fbc1af4a14ad1340559"><td class="mdescLeft">&#160;</td><td class="mdescRight">The oversampling factor for the CC.  <br /></td></tr>
-<tr class="separator:aba9dbe9368379fbc1af4a14ad1340559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa8065c35d26bcbb8a03b73af8220b5" id="r_a5aa8065c35d26bcbb8a03b73af8220b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5aa8065c35d26bcbb8a03b73af8220b5">m_padFactor</a> { 1 }</td></tr>
+<tr class="memdesc:a5aa8065c35d26bcbb8a03b73af8220b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The padding factor for the CC.  <br /></td></tr>
+<tr class="separator:a5aa8065c35d26bcbb8a03b73af8220b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42e08d59b029fd450a7c68f0854df96" id="r_af42e08d59b029fd450a7c68f0854df96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af42e08d59b029fd450a7c68f0854df96">m_padFactorR</a> { 1 }</td></tr>
+<tr class="separator:af42e08d59b029fd450a7c68f0854df96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62bd155898b505ecaac6a7293b0318b" id="r_ad62bd155898b505ecaac6a7293b0318b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad62bd155898b505ecaac6a7293b0318b">m_padFactorC</a> { 1 }</td></tr>
+<tr class="separator:ad62bd155898b505ecaac6a7293b0318b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d03c1c7456406fd6a7bd919822d979" id="r_a11d03c1c7456406fd6a7bd919822d979"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a11d03c1c7456406fd6a7bd919822d979">m_rowsPadded</a> { 0 }</td></tr>
 <tr class="memdesc:a11d03c1c7456406fd6a7bd919822d979"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of rows in the padded CC.  <br /></td></tr>
 <tr class="separator:a11d03c1c7456406fd6a7bd919822d979"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,12 +342,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a1c564bf9750b83b16a7717c0433e0834"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum lag to consider in the initial cross-correlation. Default is 5.  <br /></td></tr>
 <tr class="separator:a1c564bf9750b83b16a7717c0433e0834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a073f138d903eba62bb2bd074f7a4899b" id="r_a073f138d903eba62bb2bd074f7a4899b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a073f138d903eba62bb2bd074f7a4899b">m_tol</a> { 0.1 }</td></tr>
-<tr class="memdesc:a073f138d903eba62bb2bd074f7a4899b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tolerance of the interpolated-magnified image, in pixels.  <br /></td></tr>
 <tr class="separator:a073f138d903eba62bb2bd074f7a4899b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcdc3f81ff6715598b07c4eb4e465414" id="r_afcdc3f81ff6715598b07c4eb4e465414"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#afcdc3f81ff6715598b07c4eb4e465414">m_magSize</a> { 0 }</td></tr>
-<tr class="memdesc:afcdc3f81ff6715598b07c4eb4e465414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnified size of the ccIm when using interp. Set as function of m_tol and m_maxLag.  <br /></td></tr>
 <tr class="separator:afcdc3f81ff6715598b07c4eb4e465414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Peak Finding Tools</div></td></tr>
+<tr class="memitem:a260660a84e89c45434ac323df1191dc3" id="r_a260660a84e89c45434ac323df1191dc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a260660a84e89c45434ac323df1191dc3">m_mag</a> { 1 }</td></tr>
+<tr class="separator:a260660a84e89c45434ac323df1191dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc5771f87e2c0a26b1f4508fd77f438" id="r_afcc5771f87e2c0a26b1f4508fd77f438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#afcc5771f87e2c0a26b1f4508fd77f438">m_peakMethod</a> { xcorrPeakMethod::interpPeak }</td></tr>
+<tr class="memdesc:afcc5771f87e2c0a26b1f4508fd77f438"><td class="mdescLeft">&#160;</td><td class="mdescRight">The peak finding method to use.  <br /></td></tr>
+<tr class="separator:afcc5771f87e2c0a26b1f4508fd77f438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Working Memory Member Data</h2></td></tr>
 <tr class="memitem:a0ec836aa244f16045ecc15ad116ad945" id="r_a0ec836aa244f16045ecc15ad116ad945"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a0ec836aa244f16045ecc15ad116ad945">m_refACIm</a></td></tr>
@@ -364,18 +371,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a7b078b20439c9ae8fa6257c04e88906c" id="r_a7b078b20439c9ae8fa6257c04e88906c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a198086813cd2077c94909ae620ca9b51">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a7b078b20439c9ae8fa6257c04e88906c">m_ftIm0</a></td></tr>
 <tr class="memdesc:a7b078b20439c9ae8fa6257c04e88906c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the FT of the reference image.  <br /></td></tr>
 <tr class="separator:a7b078b20439c9ae8fa6257c04e88906c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb14cac0e6051e6a3cc5714332461326" id="r_aeb14cac0e6051e6a3cc5714332461326"><td class="memItemLeft" align="right" valign="top">math::ft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aeb14cac0e6051e6a3cc5714332461326">m_fft_fwd</a></td></tr>
-<tr class="memdesc:aeb14cac0e6051e6a3cc5714332461326"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the forward transform.  <br /></td></tr>
-<tr class="separator:aeb14cac0e6051e6a3cc5714332461326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c6fc39fb4cc022d62a8f640e100fdf" id="r_ae7c6fc39fb4cc022d62a8f640e100fdf"><td class="memItemLeft" align="right" valign="top">math::ft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ae7c6fc39fb4cc022d62a8f640e100fdf">m_fft_bwd</a></td></tr>
-<tr class="memdesc:ae7c6fc39fb4cc022d62a8f640e100fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the backward transfsorm.  <br /></td></tr>
-<tr class="separator:ae7c6fc39fb4cc022d62a8f640e100fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14cb536927a63950e46378acf1a5e1db" id="r_a14cb536927a63950e46378acf1a5e1db"><td class="memItemLeft" align="right" valign="top">math::ft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a14cb536927a63950e46378acf1a5e1db">m_fft_fwd</a></td></tr>
-<tr class="memdesc:a14cb536927a63950e46378acf1a5e1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the forward transform.  <br /></td></tr>
-<tr class="separator:a14cb536927a63950e46378acf1a5e1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8eee3c7224c18878710193cd31cbde8" id="r_ac8eee3c7224c18878710193cd31cbde8"><td class="memItemLeft" align="right" valign="top">math::ft::fftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>, 2, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ac8eee3c7224c18878710193cd31cbde8">m_fft_bwd</a></td></tr>
-<tr class="memdesc:ac8eee3c7224c18878710193cd31cbde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the backward transfsorm.  <br /></td></tr>
-<tr class="separator:ac8eee3c7224c18878710193cd31cbde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d2358f35866aed744fb9e95170e8aeb" id="r_a7d2358f35866aed744fb9e95170e8aeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a198086813cd2077c94909ae620ca9b51">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a7d2358f35866aed744fb9e95170e8aeb">m_ftWork</a></td></tr>
 <tr class="memdesc:a7d2358f35866aed744fb9e95170e8aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the FFT.  <br /></td></tr>
 <tr class="separator:a7d2358f35866aed744fb9e95170e8aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -386,8 +381,19 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a67d6482dd1e1cbc1ce63148b7fcd739e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the padded inverse FFT input.  <br /></td></tr>
 <tr class="separator:a67d6482dd1e1cbc1ce63148b7fcd739e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95838babb52a7658ffac6a63d1a85dff" id="r_a95838babb52a7658ffac6a63d1a85dff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a198086813cd2077c94909ae620ca9b51">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a95838babb52a7658ffac6a63d1a85dff">m_ftWorkPaddedOut</a></td></tr>
-<tr class="memdesc:a95838babb52a7658ffac6a63d1a85dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the FFT output.  <br /></td></tr>
+<tr class="memdesc:a95838babb52a7658ffac6a63d1a85dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the FFT and MFT output.  <br /></td></tr>
 <tr class="separator:a95838babb52a7658ffac6a63d1a85dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258460d27cb76b3dc9b8a12532962731" id="r_a258460d27cb76b3dc9b8a12532962731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a198086813cd2077c94909ae620ca9b51">complexArrayT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a258460d27cb76b3dc9b8a12532962731">m_mtWorkPadded</a></td></tr>
+<tr class="memdesc:a258460d27cb76b3dc9b8a12532962731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the MFT for xcorrPeakMethod::mftOversamp.  <br /></td></tr>
+<tr class="separator:a258460d27cb76b3dc9b8a12532962731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3086577119ef5fe6f96a4462c65fdc30" id="r_a3086577119ef5fe6f96a4462c65fdc30"><td class="memItemLeft" align="right" valign="top">math::ft::fftT&lt; fftOutT, fftInT, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3086577119ef5fe6f96a4462c65fdc30">m_fft_fwd</a></td></tr>
+<tr class="memdesc:a3086577119ef5fe6f96a4462c65fdc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the forward transform.  <br /></td></tr>
+<tr class="separator:a3086577119ef5fe6f96a4462c65fdc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab14abd0dd6d2b4e3e29f4d420d62d61" id="r_aab14abd0dd6d2b4e3e29f4d420d62d61"><td class="memItemLeft" align="right" valign="top">math::ft::fftT&lt; fftInT, fftOutT, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aab14abd0dd6d2b4e3e29f4d420d62d61">m_fft_bwd</a></td></tr>
+<tr class="memdesc:aab14abd0dd6d2b4e3e29f4d420d62d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT object for the backward transform.  <br /></td></tr>
+<tr class="separator:aab14abd0dd6d2b4e3e29f4d420d62d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b84c9cbfbd3dcbc987191c3bc3156de" id="r_a8b84c9cbfbd3dcbc987191c3bc3156de"><td class="memItemLeft" align="right" valign="top">math::ft::mftT&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a8b84c9cbfbd3dcbc987191c3bc3156de">m_mft_bwd</a></td></tr>
+<tr class="separator:a8b84c9cbfbd3dcbc987191c3bc3156de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a198086813cd2077c94909ae620ca9b51" name="a198086813cd2077c94909ae620ca9b51"></a>
@@ -406,7 +412,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Complex eigen array type with Scalar==complexT. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00082">82</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00099">99</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +432,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Complex floating point type. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00080">80</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00088">88</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +452,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>the Eigen-like array type used for image processing </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00076">76</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00084">84</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +472,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>the scalar type of the image type </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00078">78</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00086">86</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -490,7 +496,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00513">513</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00533">533</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +521,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the cross correlation image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referent to m_ccIm. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00967">967</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01009">1009</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00021">SCENARIO()</a>, and <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00170">SCENARIO()</a>.</p>
 
@@ -539,10 +545,10 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Get the number of columns in the input images. </p>
-<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
+<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_cols </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00525">525</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00545">545</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -564,10 +570,10 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Get the number of rows in the padded cross-correlation. </p>
-<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
+<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_colsPadded </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00563">563</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00583">583</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,9 +620,9 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00979">979</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01021">1021</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageUtils_8hpp_source.html#l00200">mx::improc::imageCenterOfLight()</a>, and <a class="el" href="imageTransforms_8hpp_source.html#l00570">mx::improc::imageMagnify()</a>.</p>
+<p class="reference">References <a class="el" href="ftUtils_8hpp_source.html#l00105">mx::math::ft::augmentR2CFFTOutput()</a>, <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502">backward</a>, <a class="el" href="imageUtils_8hpp_source.html#l00230">mx::improc::imageCenterOfLight()</a>, and <a class="el" href="imageTransforms_8hpp_source.html#l00571">mx::improc::imageMagnify()</a>.</p>
 
 </div>
 </div>
@@ -640,7 +646,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the value of the haveMask flag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_haveMask </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00699">699</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00738">738</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +670,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the value of the haveRefMask flag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_haveRefMask </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00678">678</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00717">717</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -688,7 +694,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the value of the haveRefWindow flag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_haveRefWindow </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00722">722</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00761">761</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -712,7 +718,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the value of the haveWindow flag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_haveWindow </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00743">743</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00782">782</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +742,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the magnified image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referent to m_magIm. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00973">973</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01015">1015</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,7 +766,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the mask image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referance to the mask image. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00693">693</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00732">732</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -794,7 +800,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00684">684</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00723">723</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -818,7 +824,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the current maximum lag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_maxLag </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00893">893</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00928">928</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -848,7 +854,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00886">886</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00921">921</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00021">SCENARIO()</a>, and <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00170">SCENARIO()</a>.</p>
 
@@ -874,7 +880,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the current value of the normalize flag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_normalize </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00759">759</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00798">798</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -905,7 +911,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00749">749</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00788">788</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -929,7 +935,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the normalized image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referent to m_normIm. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00961">961</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01003">1003</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -982,7 +988,9 @@ template&lt;class imT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01068">1068</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01160">1160</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ftUtils_8hpp_source.html#l00074">mx::math::ft::padC2CFFTOutput()</a>, and <a class="el" href="ftUtils_8hpp_source.html#l00050">mx::math::ft::padR2CFFTOutput()</a>.</p>
 
 </div>
 </div>
@@ -1043,12 +1051,12 @@ template&lt;class im0T , class imT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01177">1177</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l01249">1249</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="acf6ce6d1d65e055e7d633dbeca710116" name="acf6ce6d1d65e055e7d633dbeca710116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf6ce6d1d65e055e7d633dbeca710116">&#9670;&#160;</a></span>oversamp() <span class="overload">[1/2]</span></h2>
+<a id="a064b8acc6930ed31e6f717b15b37b53e" name="a064b8acc6930ed31e6f717b15b37b53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064b8acc6930ed31e6f717b15b37b53e">&#9670;&#160;</a></span>padFactor() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1056,7 +1064,7 @@ template&lt;class im0T , class imT &gt; </div>
 template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">::realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt;::oversamp </td>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">::realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt;::padFactor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1064,15 +1072,15 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
       </table>
 </div><div class="memdoc">
 
-<p>Get the oversampling factor. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current value of m_oversamp </dd></dl>
+<p>Get the padding factor. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_padFactor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00551">551</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00571">571</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a3dc52a9ee47537bd4be259493a5b832d" name="a3dc52a9ee47537bd4be259493a5b832d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dc52a9ee47537bd4be259493a5b832d">&#9670;&#160;</a></span>oversamp() <span class="overload">[2/2]</span></h2>
+<a id="abb2e0709baa7104f878dae3d47194ea0" name="abb2e0709baa7104f878dae3d47194ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2e0709baa7104f878dae3d47194ea0">&#9670;&#160;</a></span>padFactor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1080,7 +1088,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt;::oversamp </td>
+          <td class="memname">int <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &gt;::padFactor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td>
           <td class="paramname"><em>os</em></td><td>)</td>
@@ -1089,17 +1097,17 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
       </table>
 </div><div class="memdoc">
 
-<p>Set the oversampling factor. </p>
-<p>This can also be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>. The oversampling factor must be greater than or equal to 1.</p>
-<p>If m_rows and m_cols are both greater than 0 this calls <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize(int, int, realT)</a>. </p>
+<p>Set the padding factor. </p>
+<p>This can also be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>. The padding factor must be greater than or equal to 1.</p>
+<p>If m_rows and m_cols are both greater than 0 this calls <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize(int, int, realT)</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">os</td><td>the new oversampling factor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">os</td><td>the new padding factor </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00531">531</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00551">551</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1123,7 +1131,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the reference auto-correlation image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referent to m_refACIm. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00943">943</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00985">985</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1155,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the reference image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referent to m_refIm. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00874">874</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00909">909</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1178,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Set the reference image. </p>
-<p>Calls <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5beb13597bb22f2f787d514406a86c7c" title="Set the reference image.">refIm(const realImageT &amp;, realT)</a> with the current value of m_oversamp.</p>
+<p>Calls <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ab3018359d7803a5d8edfef9f41628321" title="Set the reference image.">refIm(const realImageT &amp;, realT)</a> with the current value of m_padFactor.</p>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
@@ -1182,12 +1190,12 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00868">868</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00903">903</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5beb13597bb22f2f787d514406a86c7c" name="a5beb13597bb22f2f787d514406a86c7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5beb13597bb22f2f787d514406a86c7c">&#9670;&#160;</a></span>refIm() <span class="overload">[3/3]</span></h2>
+<a id="ab3018359d7803a5d8edfef9f41628321" name="ab3018359d7803a5d8edfef9f41628321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3018359d7803a5d8edfef9f41628321">&#9670;&#160;</a></span>refIm() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1204,7 +1212,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td>
-          <td class="paramname"><em>oversamp</em>&#160;</td>
+          <td class="paramname"><em>padFactor</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1220,7 +1228,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <li>If desired, normalizes the reference image by mean subtraction and variance division.</li>
 <li>Applies the window if supplied.</li>
 <li>Stores the result as m_refIm</li>
-<li>Resizes working memory with a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize()</a></li>
+<li>Resizes working memory with a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize()</a></li>
 <li>Shifts to FFT order and Fourier transforms and conjugates the result.</li>
 <li>Calls operator() to measure the reference shifts</li>
 <li>Stores the resultant auto-correlation in m_refACIm</li>
@@ -1231,14 +1239,14 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">im0</td><td>The new reference image  </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">oversamp</td><td>[optional] the oversampling factor to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">padFactor</td><td>[optional] the padding factor to use </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00765">765</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00804">804</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00293">mx::improc::imageShiftWP()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00294">mx::improc::imageShiftWP()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00021">SCENARIO()</a>, and <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00170">SCENARIO()</a>.</p>
 
@@ -1264,7 +1272,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the reference mask image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const reference to the reference mask image. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00672">672</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00711">711</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1297,7 +1305,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00661">661</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00700">700</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1321,7 +1329,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the value of the reference valid flag. </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of m_refValid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00880">880</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00915">915</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1345,7 +1353,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the reference window image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referance to the reference window image. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00716">716</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00755">755</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1387,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00705">705</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00744">744</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1411,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the x-shift of the reference image to itself. </p>
 <dl class="section return"><dt>Returns</dt><dd>m_refX0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00949">949</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00991">991</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1427,7 +1435,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the y-shift of the reference image to itself. </p>
 <dl class="section return"><dt>Returns</dt><dd>m_refY0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00955">955</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00997">997</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1460,7 +1468,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Set the size of the cross-correlation problem based on input image size. </p>
-<p>Calls <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize(int, int, realT)</a> with the current value of m_oversamp.</p>
+<p>Calls <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize(int, int, realT)</a> with the current value of m_padFactor.</p>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
@@ -1473,12 +1481,12 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00655">655</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00694">694</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a9836f7e41a850a4ba2d808eb4b12978d" name="a9836f7e41a850a4ba2d808eb4b12978d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9836f7e41a850a4ba2d808eb4b12978d">&#9670;&#160;</a></span>resize() <span class="overload">[2/2]</span></h2>
+<a id="a3c036b644f86e63a04c4c1797a880110" name="a3c036b644f86e63a04c4c1797a880110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c036b644f86e63a04c4c1797a880110">&#9670;&#160;</a></span>resize() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1501,7 +1509,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>&#160;</td>
-          <td class="paramname"><em>oversamp</em>&#160;</td>
+          <td class="paramname"><em>padFactor</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1512,8 +1520,8 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Set the size of the cross-correlation problem based on input image size. </p>
-<p>This resizes all working memory and conducts fftw planning. If there are no changes to size or oversampling, this returns immediately making no changes.</p>
-<p>If there are changes to size or oversampling the reference is invalidated.</p>
+<p>This resizes all working memory and conducts fftw planning. If there are no changes to size or padding, this returns immediately making no changes.</p>
+<p>If there are changes to size or padding the reference is invalidated.</p>
 <p>If nrows or ncols is 0, this resizes all working memory to 0.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
 <dd>
@@ -1522,12 +1530,12 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nrows</td><td>the number of rows in the images to register  </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ncols</td><td>the number of columns in the images to register  </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">oversamp</td><td>the oversampling factor. Must be <code>&gt;=</code> 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">padFactor</td><td>the padding factor. Must be <code>&gt;=</code> 1. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00569">569</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00589">589</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502">backward</a>, and <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8">forward</a>.</p>
 
@@ -1551,10 +1559,10 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Get the number of rows in the input images. </p>
-<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
+<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_rows </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00519">519</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00539">539</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1576,10 +1584,10 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 </div><div class="memdoc">
 
 <p>Get the number of rows in the padded cross-correlation. </p>
-<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9836f7e41a850a4ba2d808eb4b12978d" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
+<p>This can only be set by a call to <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110" title="Set the size of the cross-correlation problem based on input image size.">resize()</a> or <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a36ab433fdf73c55f71176115887f9cdf" title="Get a reference to the reference image.">refIm()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_rowsPadded </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00557">557</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00577">577</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1603,7 +1611,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get the tolerance of the interpolated-magnified image, in pixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current value of m_tol. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00899">899</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00934">934</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1633,7 +1641,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00905">905</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00940">940</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="imageXCorrFFT__test_8cpp_source.html#l00170">SCENARIO()</a>.</p>
 
@@ -1659,7 +1667,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
 <p>Get a reference to the window image. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const referance to the window image. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00737">737</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00776">776</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1693,7 +1701,7 @@ template&lt;class <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#af
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00728">728</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00767">767</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1722,7 +1730,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The cross-correlation image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00148">148</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00177">177</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1750,7 +1758,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The number of columns in the images. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00090">90</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00107">107</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1778,119 +1786,47 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The number of columns in the padded CC. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00096">96</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00119">119</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ae7c6fc39fb4cc022d62a8f640e100fdf" name="ae7c6fc39fb4cc022d62a8f640e100fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7c6fc39fb4cc022d62a8f640e100fdf">&#9670;&#160;</a></span>m_fft_bwd <span class="overload">[1/2]</span></h2>
+<a id="aab14abd0dd6d2b4e3e29f4d420d62d61" name="aab14abd0dd6d2b4e3e29f4d420d62d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab14abd0dd6d2b4e3e29f4d420d62d61">&#9670;&#160;</a></span>m_fft_bwd</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class _realImageT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">math::ft::fftT&lt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2, 0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_fft_bwd</td>
+          <td class="memname">math::ft::fftT&lt;fftInT, fftOutT, 2&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_fft_bwd</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>FFT object for the backward transfsorm. </p>
+<p>FFT object for the backward transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00172">172</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00198">198</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ac8eee3c7224c18878710193cd31cbde8" name="ac8eee3c7224c18878710193cd31cbde8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8eee3c7224c18878710193cd31cbde8">&#9670;&#160;</a></span>m_fft_bwd <span class="overload">[2/2]</span></h2>
+<a id="a3086577119ef5fe6f96a4462c65fdc30" name="a3086577119ef5fe6f96a4462c65fdc30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3086577119ef5fe6f96a4462c65fdc30">&#9670;&#160;</a></span>m_fft_fwd</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class _realImageT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">math::ft::fftT&lt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>, 2, 0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_fft_bwd</td>
+          <td class="memname">math::ft::fftT&lt;fftOutT, fftInT, 2&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_fft_fwd</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>FFT object for the backward transfsorm. </p>
-
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00178">178</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aeb14cac0e6051e6a3cc5714332461326" name="aeb14cac0e6051e6a3cc5714332461326"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb14cac0e6051e6a3cc5714332461326">&#9670;&#160;</a></span>m_fft_fwd <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class _realImageT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">math::ft::fftT&lt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2, 0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_fft_fwd</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>FFT object for the forward transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00170">170</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a14cb536927a63950e46378acf1a5e1db" name="a14cb536927a63950e46378acf1a5e1db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14cb536927a63950e46378acf1a5e1db">&#9670;&#160;</a></span>m_fft_fwd <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class _realImageT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">math::ft::fftT&lt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2, 0&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_fft_fwd</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>FFT object for the forward transform. </p>
-
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00176">176</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00196">196</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1918,7 +1854,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Working memory for the FT of the reference image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00152">152</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00181">181</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1938,7 +1874,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Working memory for the FFT. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00155">155</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00184">184</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1958,7 +1894,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Working memory for the FFT input. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00158">158</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00187">187</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1978,7 +1914,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Working memory for the padded inverse FFT input. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00161">161</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00190">190</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -1996,9 +1932,9 @@ template&lt;class _realImageT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Working memory for the FFT output. </p>
+<p>Working memory for the FFT and MFT output. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00164">164</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00192">192</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2026,7 +1962,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Flag indicating that a mask has been provided. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00106">106</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00129">129</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2054,7 +1990,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Flag indicating that a referece mask has been provided. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00101">101</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00124">124</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2082,7 +2018,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Flag indicating that a window has been provided for the reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00110">110</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00133">133</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2110,7 +2046,34 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Flag indicating that a window has been provided. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00114">114</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00137">137</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a260660a84e89c45434ac323df1191dc3" name="a260660a84e89c45434ac323df1191dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260660a84e89c45434ac323df1191dc3">&#9670;&#160;</a></span>m_mag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _realImageT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_mag { 1 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The magnification, in principle is 1/m_tol but will vary slightly based on integer array sizes </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00155">155</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2138,7 +2101,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The magnified image, used if m_peakMethod == xcorrPeakMethod::interpPeak. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00150">150</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00179">179</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2163,10 +2126,9 @@ template&lt;class _realImageT &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>Magnified size of the ccIm when using interp. Set as function of m_tol and m_maxLag. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00128">128</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00152">152</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2193,7 +2155,7 @@ template&lt;class _realImageT &gt; </div>
 </div><div class="memdoc">
 <p>Mask image to use, may be needed for proper normalization even if refIm has 0 mask applied. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00103">103</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00126">126</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2221,7 +2183,46 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The maximum lag to consider in the initial cross-correlation. Default is 5. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00124">124</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00147">147</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8b84c9cbfbd3dcbc987191c3bc3156de" name="a8b84c9cbfbd3dcbc987191c3bc3156de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b84c9cbfbd3dcbc987191c3bc3156de">&#9670;&#160;</a></span>m_mft_bwd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _realImageT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">math::ft::mftT&lt;<a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a456574af86781272d16bb1f76a7e9cae">complexT</a>, 2&gt; <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_mft_bwd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MFT object used to oversample the peak for xcorrPeakMethod::mftOversamp </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00200">200</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a258460d27cb76b3dc9b8a12532962731" name="a258460d27cb76b3dc9b8a12532962731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a258460d27cb76b3dc9b8a12532962731">&#9670;&#160;</a></span>m_mtWorkPadded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _realImageT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#a198086813cd2077c94909ae620ca9b51">complexArrayT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_mtWorkPadded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Working memory for the MFT for xcorrPeakMethod::mftOversamp. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00194">194</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2248,7 +2249,7 @@ template&lt;class _realImageT &gt; </div>
 </div><div class="memdoc">
 <p>Flag specifying whether images should be normalized prior to performing the cross-correlation </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00116">116</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00139">139</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2276,12 +2277,12 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The normalized image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00146">146</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00175">175</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aba9dbe9368379fbc1af4a14ad1340559" name="aba9dbe9368379fbc1af4a14ad1340559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba9dbe9368379fbc1af4a14ad1340559">&#9670;&#160;</a></span>m_oversamp</h2>
+<a id="a5aa8065c35d26bcbb8a03b73af8220b5" name="a5aa8065c35d26bcbb8a03b73af8220b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa8065c35d26bcbb8a03b73af8220b5">&#9670;&#160;</a></span>m_padFactor</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2292,7 +2293,7 @@ template&lt;class _realImageT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_oversamp { 1 }</td>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_padFactor { 1 }</td>
         </tr>
       </table>
   </td>
@@ -2302,9 +2303,91 @@ template&lt;class _realImageT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The oversampling factor for the CC. </p>
+<p>The padding factor for the CC. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00092">92</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00109">109</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad62bd155898b505ecaac6a7293b0318b" name="ad62bd155898b505ecaac6a7293b0318b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62bd155898b505ecaac6a7293b0318b">&#9670;&#160;</a></span>m_padFactorC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _realImageT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_padFactorC { 1 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The actual padding factor for cols of the CC set based on the resultant array sizes. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00114">114</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af42e08d59b029fd450a7c68f0854df96" name="af42e08d59b029fd450a7c68f0854df96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42e08d59b029fd450a7c68f0854df96">&#9670;&#160;</a></span>m_padFactorR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _realImageT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_padFactorR { 1 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The actual padding factor for rows of the CC set based on the resultant array sizes. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00111">111</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afcc5771f87e2c0a26b1f4508fd77f438" name="afcc5771f87e2c0a26b1f4508fd77f438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc5771f87e2c0a26b1f4508fd77f438">&#9670;&#160;</a></span>m_peakMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _realImageT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a> <a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a>&lt; _realImageT &gt;::m_peakMethod { xcorrPeakMethod::interpPeak }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The peak finding method to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00159">159</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2332,7 +2415,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The auto-correlation image of the reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00138">138</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00167">167</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2360,7 +2443,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The normalized reference image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00119">119</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00142">142</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2387,7 +2470,7 @@ template&lt;class _realImageT &gt; </div>
 </div><div class="memdoc">
 <p>Mask image to use for the reference, may be needed for proper normalization even if refIm has 0 mask applied. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00098">98</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00121">121</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2414,7 +2497,7 @@ template&lt;class _realImageT &gt; </div>
 </div><div class="memdoc">
 <p>Flag indicating whether the reference is valid. It can be invalidated if a mask, window, or normalize is set after the reference is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00121">121</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00144">144</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2442,7 +2525,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Window image to use for the reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00108">108</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00131">131</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2469,7 +2552,7 @@ template&lt;class _realImageT &gt; </div>
 </div><div class="memdoc">
 <p>The x-shift of the reference image to itself using the selected algorithm, used as coordinate origin </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00140">140</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00169">169</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2496,7 +2579,7 @@ template&lt;class _realImageT &gt; </div>
 </div><div class="memdoc">
 <p>The x-shift of the reference image to itself using the selected algorithm, used as coordinate origin </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00143">143</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00172">172</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2524,7 +2607,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The number of rows in the images. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00088">88</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00105">105</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2552,7 +2635,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>The number of rows in the padded CC. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00094">94</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00117">117</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2577,10 +2660,9 @@ template&lt;class _realImageT &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>For xcorrPeakMethod::interpPeak, the tolerance of the interpolated-magnified image, in pixels. </p>
 
-<p>The tolerance of the interpolated-magnified image, in pixels. </p>
-
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00126">126</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00149">149</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2608,7 +2690,7 @@ template&lt;class _realImageT &gt; </div>
 
 <p>Window image for the target image. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00112">112</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageXCorrFFT_8hpp_source.html#l00135">135</a> of file <a class="el" href="imageXCorrFFT_8hpp_source.html">imageXCorrFFT.hpp</a>.</p>
 
 </div>
 </div>
@@ -2621,7 +2703,7 @@ template&lt;class _realImageT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

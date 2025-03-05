@@ -6,6 +6,7 @@ var structmx_1_1improc_1_1ADIobservation =
     [ "ADIobservation", "structmx_1_1improc_1_1ADIobservation.html#a4a5f128fd9f72397b49ccbca68010644", null ],
     [ "derotate", "structmx_1_1improc_1_1ADIobservation.html#aa5d8fdeeadff4c040097f75769a55e26", null ],
     [ "injectFake", "structmx_1_1improc_1_1ADIobservation.html#a195ffa54c21b4b78d4679f449cdf2ddd", null ],
+    [ "injectFake", "structmx_1_1improc_1_1ADIobservation.html#ae52db1a61ce3184fa543606828f1e552", null ],
     [ "makeMaskCube", "structmx_1_1improc_1_1ADIobservation.html#ae70fa5f4b1ee12f958a7e3f5b0fe4a9d", null ],
     [ "postCoadd", "structmx_1_1improc_1_1ADIobservation.html#ae532b5f9ec73a141604aaf5ea06881aa", null ],
     [ "postRDICoadd", "structmx_1_1improc_1_1ADIobservation.html#a91ab8817240805cba1ec6675d4289a4a", null ],

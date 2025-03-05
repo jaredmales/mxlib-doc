@@ -12,5 +12,6 @@ var searchData=
   ['stars_2ehpp_9',['stars.hpp',['../stars_8hpp.html',1,'']]],
   ['stringutils_2ecpp_10',['stringUtils.cpp',['../stringUtils_8cpp.html',1,'']]],
   ['stringutils_2ehpp_11',['stringUtils.hpp',['../stringUtils_8hpp.html',1,'']]],
-  ['sys_2ehpp_12',['sys.hpp',['../sys_8hpp.html',1,'']]]
+  ['syevdxt_2ehpp_12',['syevdxT.hpp',['../syevdxT_8hpp.html',1,'']]],
+  ['sys_2ehpp_13',['sys.hpp',['../sys_8hpp.html',1,'']]]
 ];

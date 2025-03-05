@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('structmx_1_1math_1_1fit_1_1array2FitEm
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">typename</a> realT&gt;<br />
 struct mx::math::fit::array2FitEmpirical&lt; realT &gt;</div><p>Wrapper for a native array to pass to <a class="el" href="classmx_1_1math_1_1fit_1_1levmarInterface.html">levmarInterface</a>, with empirical function fit details. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00153">153</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00160">160</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="fitEmpirical_8hpp_source.html">math/fit/fitEmpirical.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -139,6 +139,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ada62489f59ad47fa24891061aa3cf390" id="r_ada62489f59ad47fa24891061aa3cf390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">const</a> eigenImage&lt; realT &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#ada62489f59ad47fa24891061aa3cf390">m_ref</a> { <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">nullptr</a> }</td></tr>
 <tr class="memdesc:ada62489f59ad47fa24891061aa3cf390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the reference image to fit to the data.  <br /></td></tr>
 <tr class="separator:ada62489f59ad47fa24891061aa3cf390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14029a3ba469535ff4cd9691910f82e1" id="r_a14029a3ba469535ff4cd9691910f82e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">const</a> eigenImage&lt; realT &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#a14029a3ba469535ff4cd9691910f82e1">m_weights</a> { <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">nullptr</a> }</td></tr>
+<tr class="memdesc:a14029a3ba469535ff4cd9691910f82e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the weight image.  <br /></td></tr>
+<tr class="separator:a14029a3ba469535ff4cd9691910f82e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2afcd8dad6d49f7ebb6ec9a11787dd8" id="r_aa2afcd8dad6d49f7ebb6ec9a11787dd8"><td class="memItemLeft" align="right" valign="top">eigenImage&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1math_1_1fit_1_1array2FitEmpirical.html#aa2afcd8dad6d49f7ebb6ec9a11787dd8">m_refShifted</a></td></tr>
 <tr class="memdesc:aa2afcd8dad6d49f7ebb6ec9a11787dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Working memory for the shifted reference image.  <br /></td></tr>
 <tr class="separator:aa2afcd8dad6d49f7ebb6ec9a11787dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,11 +198,11 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 <p>Set whether each parameter is fixed. </p>
 <p>Sets the parameter indices appropriately. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00192">192</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00214">214</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="math_2constants_8hpp_source.html#l00404">mx::math::six_fifths()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00090">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00089">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setFixed()</a>.</p>
 
 </div>
 </div>
@@ -220,7 +223,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>Pointer to the data array. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00155">155</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00162">162</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 
 </div>
 </div>
@@ -240,9 +243,9 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>X dimension of the array. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00159">159</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00167">167</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00111">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00110">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setArray()</a>.</p>
 
 </div>
 </div>
@@ -262,9 +265,9 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>Y dimension of the array. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00160">160</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00168">168</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00111">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00110">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setArray()</a>.</p>
 
 </div>
 </div>
@@ -284,7 +287,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>Pointer to the reference image to fit to the data. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00156">156</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00163">163</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 
 </div>
 </div>
@@ -304,7 +307,27 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>Working memory for the shifted reference image. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00157">157</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00165">165</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a14029a3ba469535ff4cd9691910f82e1" name="a14029a3ba469535ff4cd9691910f82e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14029a3ba469535ff4cd9691910f82e1">&#9670;&#160;</a></span>m_weights</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">typename</a> realT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">const</a> eigenImage&lt;realT&gt;* <a class="el" href="structmx_1_1math_1_1fit_1_1array2FitEmpirical.html">mx::math::fit::array2FitEmpirical</a>&lt; realT &gt;::m_weights { <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">nullptr</a> }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the weight image. </p>
+
+<p class="definition">Definition at line <a class="el" href="fitEmpirical_8hpp_source.html#l00164">164</a> of file <a class="el" href="fitEmpirical_8hpp_source.html">fitEmpirical.hpp</a>.</p>
 
 </div>
 </div>
@@ -317,7 +340,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><b>fit</b></li><li class="navelem"><a class="el" href="structmx_1_1math_1_1fit_1_1array2FitEmpirical.html">array2FitEmpirical</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

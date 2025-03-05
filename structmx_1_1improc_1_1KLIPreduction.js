@@ -14,7 +14,7 @@ var structmx_1_1improc_1_1KLIPreduction =
     [ "m_includeMethod", "structmx_1_1improc_1_1KLIPreduction.html#acf29f23afd170a6349c1499285a7cddf", null ],
     [ "m_includeRefNum", "structmx_1_1improc_1_1KLIPreduction.html#a560e2608933e66128315c08d6bfa3bba", null ],
     [ "m_maxDPx", "structmx_1_1improc_1_1KLIPreduction.html#a359d028d7855d52615ebb823b12ad16a", null ],
-    [ "m_meanSubMethod", "structmx_1_1improc_1_1KLIPreduction.html#a25ef353723267ddb403208e336345070", null ],
+    [ "m_meanSubMethod", "structmx_1_1improc_1_1KLIPreduction.html#a078e0e308bb6e971ed627d2139b87acb", null ],
     [ "m_minDPx", "structmx_1_1improc_1_1KLIPreduction.html#a316976219b36a9cdd449e8c30987220a", null ],
     [ "m_Nmodes", "structmx_1_1improc_1_1KLIPreduction.html#ab6ddad339ba965f5b504cd10e11a69aa", null ],
     [ "m_pixelTSNormMethod", "structmx_1_1improc_1_1KLIPreduction.html#a221639ba9f0ad7b21c7ccf84dd367141", null ],

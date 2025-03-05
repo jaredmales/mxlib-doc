@@ -30,5 +30,5 @@ var searchData=
   ['turbatmosphere_27',['turbAtmosphere',['../structmx_1_1AO_1_1sim_1_1turbAtmosphere.html#ad53f8ebd98949cf9314cf5c060a2c160',1,'mx::AO::sim::turbAtmosphere']]],
   ['two_5fpi_28',['two_pi',['../group__genconstants.html#gaa95cded918cf443eee346a1bbe9e1a7d',1,'mx::math']]],
   ['twosqrt2log2_29',['twosqrt2log2',['../group__gen__math__gaussians.html#gaea298d0b93e57fab9423f5c5d9ae605b',1,'mx::math::func']]],
-  ['type_30',['type',['../classmx_1_1fits_1_1fitsHeaderCard.html#acacd5d6059b06e51d90b265c55d7892f',1,'mx::fits::fitsHeaderCard::type(const int &amp;t)'],['../classmx_1_1fits_1_1fitsHeaderCard.html#a4489146e0e728aae58a9566512b59e5e',1,'mx::fits::fitsHeaderCard::type()']]]
+  ['type_30',['type',['../classmx_1_1fits_1_1fitsHeaderCard.html#acacd5d6059b06e51d90b265c55d7892f',1,'mx::fits::fitsHeaderCard::type(const int &amp;t)'],['../classmx_1_1fits_1_1fitsHeaderCard.html#a3c3a9a9ae13e1097e605d37cb5663944',1,'mx::fits::fitsHeaderCard::type() const']]]
 ];

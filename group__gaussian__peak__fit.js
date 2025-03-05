@@ -16,7 +16,8 @@ var group__gaussian__peak__fit =
       [ "m_theta_idx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#adc138cc7bcf32eed00fc10bf185e518f", null ],
       [ "mask", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#aeede583a06002d27cee220af8b6c7c4b", null ],
       [ "nx", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a8d485b3f4ae4de9cc49058f8425f616c", null ],
-      [ "ny", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0fc7eb07025ecad3214b97a5d8b27c7e", null ]
+      [ "ny", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#a0fc7eb07025ecad3214b97a5d8b27c7e", null ],
+      [ "weights", "structmx_1_1math_1_1fit_1_1array2FitGaussian2D.html#ab5e8b2237e6b8dbf9100b9157274c94e", null ]
     ] ],
     [ "mx::math::fit::gaussian1D_fitter< _realT >", "structmx_1_1math_1_1fit_1_1gaussian1D__fitter.html", null ],
     [ "mx::math::fit::fitGaussian1D< _realT >", "classmx_1_1math_1_1fit_1_1fitGaussian1D.html", [

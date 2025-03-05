@@ -24,11 +24,13 @@ var group__hc__imaging__enums =
       [ "mx::improc::HCI::includeAngle", "group__hc__imaging__enums.html#gga07bf7856b4aa1ecc2be95da87ab4178ea893973affb7219213b57328cd9a587f1", null ],
       [ "mx::improc::HCI::includeImno", "group__hc__imaging__enums.html#gga07bf7856b4aa1ecc2be95da87ab4178ea1968e6c678052392b26e1a9349e8278a", null ]
     ] ],
-    [ "mx::improc::HCI::meansubMethods", "group__hc__imaging__enums.html#ga3a3e7c3736f2c08bd769c008f59fd932", [
-      [ "mx::improc::HCI::imageMean", "group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c", null ],
-      [ "mx::improc::HCI::imageMedian", "group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a73eab21610ba81f8b49cfd57d5db75ae", null ],
-      [ "mx::improc::HCI::imageMode", "group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a12c1eda0fc72a44e12e8293cab8881cb", null ],
-      [ "mx::improc::HCI::meanImage", "group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932ad6beb545402e72fa027703e8a7fda306", null ],
-      [ "mx::improc::HCI::medianImage", "group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932add14bcd8628e8b52e259f7118c79baa4", null ]
+    [ "mx::improc::HCI::meanSubMethod", "group__hc__imaging__enums.html#ga890294240c6557c1faf0137c4ef1ce19", [
+      [ "mx::improc::HCI::meanSubMethod::none", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a334c4a4c42fdb79d7ebc3e73b517e6f8", null ],
+      [ "mx::improc::HCI::meanSubMethod::meanImage", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a9b4189fb40ab6084b44fe877d69c19e7", null ],
+      [ "mx::improc::HCI::meanSubMethod::medianImage", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a5896a88faf2ba7bc9d354ef8265125da", null ],
+      [ "mx::improc::HCI::meanSubMethod::imageMean", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a50cfb3ee15f4676776f9dc7d4f382855", null ],
+      [ "mx::improc::HCI::meanSubMethod::imageMedian", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a1f7e9798caa53c2b4f99ba7e902fbf82", null ],
+      [ "mx::improc::HCI::meanSubMethod::imageMode", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a48e928b39283574fa711c1a11e3c4a75", null ],
+      [ "mx::improc::HCI::meanSubMethod::unknown", "group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19aad921d60486366258809553a3db49a4a", null ]
     ] ]
 ];

@@ -9,6 +9,7 @@ var classmx_1_1ipc_1_1ompLoopWatcher =
     [ "clearOutput", "classmx_1_1ipc_1_1ompLoopWatcher.html#a87d722caa4c16548490280219612fa31", null ],
     [ "increment", "classmx_1_1ipc_1_1ompLoopWatcher.html#a3b499d8e0f944c9a9d842142d36a4483", null ],
     [ "incrementAndOutputStatus", "classmx_1_1ipc_1_1ompLoopWatcher.html#ac9eb5582499664ff8baf86d4c88d200d", null ],
+    [ "outputFinalStatus", "classmx_1_1ipc_1_1ompLoopWatcher.html#a882f296efeef14ae4b4aaf0ed950f060", null ],
     [ "outputStatus", "classmx_1_1ipc_1_1ompLoopWatcher.html#a5b6845c772ca22dd607f68d3e3bb0768", null ],
     [ "_counter", "classmx_1_1ipc_1_1ompLoopWatcher.html#aaad159b2c55caf7bbab5308e73af7bab", null ],
     [ "_nLoops", "classmx_1_1ipc_1_1ompLoopWatcher.html#a58406e3d4a8917d3d5cda71c09cfd6be", null ],

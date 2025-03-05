@@ -216,7 +216,7 @@ $(document).ready(function(){initNavTree('airyPattern_8hpp_source.html',''); ini
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> realT&gt;</div>
 <div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__gen__math__airy__pattern.html#ga5849028cad4f47f3d1cee4362bea6381">   93</a></span>realT <a class="code hl_function" href="group__gen__math__airy__pattern.html#ga1fb147037b206b15d1791b34ef8d5fd2">airyPattern</a>( realT x,  <span class="comment">///&lt; [in] is the x-coordinate in units of pixels</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                   realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">y</a>,  <span class="comment">///&lt; [in] is the y-coordinate in units of pixels</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                   realT y,  <span class="comment">///&lt; [in] is the y-coordinate in units of pixels</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                   realT A0, <span class="comment">///&lt; [in] constant value added to the Airy pattern</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                   realT A,  <span class="comment">///&lt; [in] peak scale of the Airy pattern.</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                   realT x0, <span class="comment">///&lt; [in] is the x-center in units of pixels</span></div>
@@ -225,7 +225,7 @@ $(document).ready(function(){initNavTree('airyPattern_8hpp_source.html',''); ini
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                   realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">eps</a> <span class="comment">///&lt; [in] is the ratio of the circular central obscuration diameter to the diameter.</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>)</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    realT r = <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sqrt</a>( <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">pow</a>( x - x0, 2 ) + <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">pow</a>( <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">y</a> - y0, 2 ) ) * ps;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    realT r = <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sqrt</a>( <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">pow</a>( x - x0, 2 ) + <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">pow</a>( y - y0, 2 ) ) * ps;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> A0 + A * <a class="code hl_function" href="group__gen__math__airy__pattern.html#ga1fb147037b206b15d1791b34ef8d5fd2">airyPattern</a>( r, <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">eps</a> );</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
@@ -396,7 +396,7 @@ $(document).ready(function(){initNavTree('airyPattern_8hpp_source.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_4e9e59a91b0996cbbf615e490f662000.html">func</a></li><li class="navelem"><a class="el" href="airyPattern_8hpp.html">airyPattern.hpp</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:43 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

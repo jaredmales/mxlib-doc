@@ -155,6 +155,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c378aee91fc06fed9d2a33a36e59fde" id="r_a9c378aee91fc06fed9d2a33a36e59fde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#a9c378aee91fc06fed9d2a33a36e59fde">cubicConvolKernel</a> (<a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a> d)</td></tr>
 <tr class="memdesc:a9c378aee91fc06fed9d2a33a36e59fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the kernel value for a given residual.  <br /></td></tr>
 <tr class="separator:a9c378aee91fc06fed9d2a33a36e59fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba60efeb665fcef475305dbee7f2383" id="r_a1ba60efeb665fcef475305dbee7f2383"><td class="memTemplParams" colspan="2">template&lt;typename arrT , typename <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a> &gt; </td></tr>
+<tr class="memitem:a1ba60efeb665fcef475305dbee7f2383"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#a1ba60efeb665fcef475305dbee7f2383">operator()</a> (arrT &amp;kern, <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a> x, <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a> y)</td></tr>
+<tr class="separator:a1ba60efeb665fcef475305dbee7f2383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -323,6 +326,59 @@ template&lt;typename _arithT &gt; </div>
 
 <p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00097">mx::improc::cubicConvolTransform&lt; _arithT &gt;::cubic</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="imageTransforms_8hpp_source.html#l00133">mx::improc::cubicConvolTransform&lt; _arithT &gt;::operator()()</a>.</p>
+
+</div>
+</div>
+<a id="a1ba60efeb665fcef475305dbee7f2383" name="a1ba60efeb665fcef475305dbee7f2383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba60efeb665fcef475305dbee7f2383">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _arithT &gt; </div>
+<div class="memtemplate">
+template&lt;typename arrT , typename <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html">mx::improc::cubicConvolTransform</a>&lt; _arithT &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">arrT &amp;&#160;</td>
+          <td class="paramname"><em>kern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html#ae1aca0c37a43cb762d3d950cfe30a45b">arithT</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>why is this arithT not just the class's arithT? </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00133">133</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00120">mx::improc::cubicConvolTransform&lt; _arithT &gt;::cubicConvolKernel()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -357,7 +413,7 @@ template&lt;typename _arithT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="structmx_1_1improc_1_1cubicConvolTransform.html">cubicConvolTransform</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -277,7 +277,7 @@ $(document).ready(function(){initNavTree('levmarInterface_8hpp_source.html','');
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment"></span> </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">    /// Covariance matrix corresponding to LS solution; mxm.</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment"></span><span class="comment">    /** Here this is allocated to size m-x-m by allocate_work, but if you don&#39;t want it</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">     * allcoated and calculated</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">     * allocated and calculated</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">     * set \ref getCovar to false and NULL will be passed.</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classmx_1_1math_1_1fit_1_1levmarInterface.html#a0ed27e744bdebd3d070761e5d9451383">  162</a></span>    realT *<a class="code hl_variable" href="classmx_1_1math_1_1fit_1_1levmarInterface.html#a0ed27e744bdebd3d070761e5d9451383">covar</a>;</div>
@@ -381,15 +381,15 @@ $(document).ready(function(){initNavTree('levmarInterface_8hpp_source.html','');
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">    /// Set one of the minimization options to val</span></div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment"></span><span class="comment">    /** The options correspond to:</span></div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">     * 0: the scale factor of the initial \f$ \mu \f$</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">     * 0: the scale factor of the initial \f$ \mu \f$, default is 1e-3.</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">     * 1: \f$ \epsilon_1 \f$ Stopping threshold for ||J^T e||_inf</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">     * 1: \f$ \epsilon_1 \f$ Stopping threshold for ||J^T e||_inf, default is 1e-17.</span></div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment">     * 2: \f$ \epsilon_1 \f$ Stopping threshold for ||Dp||_2</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment">     * 2: \f$ \epsilon_2 \f$ Stopping threshold for ||Dp||_2, default is 1e-17.</span></div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">     * 3: \f$ \epsilon_1 \f$ Stopping threshold for ||e||_2</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">     * 3: \f$ \epsilon_3 \f$ Stopping threshold for ||e||_2, default is 1e-17.</span></div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">     * 4: \f$ \Delta_{diff}\f$ Stepsize for finite differences</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">     * 4: \f$ \Delta_{diff}\f$ Stepsize for finite differences, default is 1e-6.</span></div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment">     *</span></div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">     * \param n is the option number</span></div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">     * \param val is the value to set</span></div>
@@ -1144,7 +1144,7 @@ $(document).ready(function(){initNavTree('levmarInterface_8hpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="dir_6db95d63ecdf0969fe78c6ed6d247181.html">fit</a></li><li class="navelem"><a class="el" href="levmarInterface_8hpp.html">levmarInterface.hpp</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:43 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

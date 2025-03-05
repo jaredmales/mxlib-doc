@@ -494,7 +494,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p class="reference">References <a class="el" href="math_2constants_8hpp_source.html#l00404">mx::math::six_fifths()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00477">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitEmpirical_8hpp_source.html#l00090">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setFixed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitMoffat_8hpp_source.html#l00477">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setFixed()</a>, and <a class="el" href="fitEmpirical_8hpp_source.html#l00089">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setFixed()</a>.</p>
 
 </div>
 </div>
@@ -742,7 +742,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, and <a class="el" href="math_2constants_8hpp_source.html#l00404">mx::math::six_fifths()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitGaussian_8hpp_source.html#l00218">mx::math::fit::fitGaussian1D&lt; _realT &gt;::fit()</a>, and <a class="el" href="fitGaussian_8hpp_source.html#l00440">mx::math::fit::fitGaussian2D&lt; fitterT &gt;::fit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitGaussian_8hpp_source.html#l00218">mx::math::fit::fitGaussian1D&lt; _realT &gt;::fit()</a>, and <a class="el" href="fitGaussian_8hpp_source.html#l00441">mx::math::fit::fitGaussian2D&lt; fitterT &gt;::fit()</a>.</p>
 
 </div>
 </div>
@@ -1221,11 +1221,11 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>Set one of the minimization options to val. </p>
 <p>The options correspond to:</p>
-<p>0: the scale factor of the initial \( \mu \)</p>
-<p>1: \( \epsilon_1 \) Stopping threshold for ||J^T e||_inf</p>
-<p>2: \( \epsilon_1 \) Stopping threshold for ||Dp||_2</p>
-<p>3: \( \epsilon_1 \) Stopping threshold for ||e||_2</p>
-<p>4: \( \Delta_{diff}\) Stepsize for finite differences</p>
+<p>0: the scale factor of the initial \( \mu \), default is 1e-3.</p>
+<p>1: \( \epsilon_1 \) Stopping threshold for ||J^T e||_inf, default is 1e-17.</p>
+<p>2: \( \epsilon_2 \) Stopping threshold for ||Dp||_2, default is 1e-17.</p>
+<p>3: \( \epsilon_3 \) Stopping threshold for ||e||_2, default is 1e-17.</p>
+<p>4: \( \Delta_{diff}\) Stepsize for finite differences, default is 1e-6.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>is the option number </td></tr>
@@ -1337,7 +1337,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 </div><div class="memdoc">
 
 <p>Covariance matrix corresponding to LS solution; mxm. </p>
-<p>Here this is allocated to size m-x-m by allocate_work, but if you don't want it allcoated and calculated set <a class="el" href="classmx_1_1math_1_1fit_1_1levmarInterface.html#af691fec6060d65c20db6d4bfdc7f2cee">getCovar</a> to false and NULL will be passed. </p>
+<p>Here this is allocated to size m-x-m by allocate_work, but if you don't want it allocated and calculated set <a class="el" href="classmx_1_1math_1_1fit_1_1levmarInterface.html#af691fec6060d65c20db6d4bfdc7f2cee">getCovar</a> to false and NULL will be passed. </p>
 
 <p class="definition">Definition at line <a class="el" href="levmarInterface_8hpp_source.html#l00162">162</a> of file <a class="el" href="levmarInterface_8hpp_source.html">levmarInterface.hpp</a>.</p>
 
@@ -1528,7 +1528,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p class="definition">Definition at line <a class="el" href="levmarInterface_8hpp_source.html#l00133">133</a> of file <a class="el" href="levmarInterface_8hpp_source.html">levmarInterface.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00111">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setArray()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00110">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setArray()</a>, and <a class="el" href="fitMoffat_8hpp_source.html#l00507">mx::math::fit::fitMoffat2D&lt; fitterT &gt;::setArray()</a>.</p>
 
 </div>
 </div>
@@ -1606,7 +1606,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p class="definition">Definition at line <a class="el" href="levmarInterface_8hpp_source.html#l00122">122</a> of file <a class="el" href="levmarInterface_8hpp_source.html">levmarInterface.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00133">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::dx()</a>, <a class="el" href="fitEmpirical_8hpp_source.html#l00142">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::dy()</a>, <a class="el" href="fitEmpirical_8hpp_source.html#l00124">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::scale()</a>, <a class="el" href="fitAiry_8hpp_source.html#l00097">mx::math::fit::fitAiry2D&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitAiry_8hpp_source.html#l00112">mx::math::fit::fitAiry2D&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitAiry_8hpp_source.html#l00129">mx::math::fit::fitAiry2D&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitExpModGaussian_8hpp_source.html#l00091">mx::math::fit::fitExpModGaussian&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitWeibull_8hpp_source.html#l00104">mx::math::fit::fitWeibull&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitGammaDistribution_8hpp_source.html#l00119">mx::math::fit::fitGammaDistribution&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitExpModGaussian_8hpp_source.html#l00106">mx::math::fit::fitExpModGaussian&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitEmpirical_8hpp_source.html#l00100">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitWeibull_8hpp_source.html#l00091">mx::math::fit::fitWeibull&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitGammaDistribution_8hpp_source.html#l00106">mx::math::fit::fitGammaDistribution&lt; fitterT &gt;::setGuess()</a>, and <a class="el" href="fitGammaDistribution_8hpp_source.html#l00091">mx::math::fit::fitGammaDistribution&lt; fitterT &gt;::setGuess()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitEmpirical_8hpp_source.html#l00141">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::dx()</a>, <a class="el" href="fitEmpirical_8hpp_source.html#l00150">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::dy()</a>, <a class="el" href="fitEmpirical_8hpp_source.html#l00132">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::scale()</a>, <a class="el" href="fitAiry_8hpp_source.html#l00097">mx::math::fit::fitAiry2D&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitAiry_8hpp_source.html#l00112">mx::math::fit::fitAiry2D&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitAiry_8hpp_source.html#l00129">mx::math::fit::fitAiry2D&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitExpModGaussian_8hpp_source.html#l00091">mx::math::fit::fitExpModGaussian&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitWeibull_8hpp_source.html#l00104">mx::math::fit::fitWeibull&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitGammaDistribution_8hpp_source.html#l00119">mx::math::fit::fitGammaDistribution&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitExpModGaussian_8hpp_source.html#l00106">mx::math::fit::fitExpModGaussian&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitEmpirical_8hpp_source.html#l00099">mx::math::fit::fitEmpirical2DGen&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitWeibull_8hpp_source.html#l00091">mx::math::fit::fitWeibull&lt; fitterT &gt;::setGuess()</a>, <a class="el" href="fitGammaDistribution_8hpp_source.html#l00106">mx::math::fit::fitGammaDistribution&lt; fitterT &gt;::setGuess()</a>, and <a class="el" href="fitGammaDistribution_8hpp_source.html#l00091">mx::math::fit::fitGammaDistribution&lt; fitterT &gt;::setGuess()</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1680,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><b>fit</b></li><li class="navelem"><a class="el" href="classmx_1_1math_1_1fit_1_1levmarInterface.html">levmarInterface</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -155,14 +155,22 @@ Functions</h2></td></tr>
 <tr class="memitem:gae8273d1bb45b573cce329bf72910fa3f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gae8273d1bb45b573cce329bf72910fa3f">mx::improc::radAngImage</a> (eigenT1 &amp;rIm, eigenT2 &amp;qIm, typename angleT::realT xc, typename angleT::realT yc, typename angleT::realT rscale=1)</td></tr>
 <tr class="memdesc:gae8273d1bb45b573cce329bf72910fa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills in the cells of Eigen-like arrays with their radius amd angle relative to the center.  <br /></td></tr>
 <tr class="separator:gae8273d1bb45b573cce329bf72910fa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadc9830ea55885c6593a6db22802b3755" id="r_gadc9830ea55885c6593a6db22802b3755"><td class="memTemplParams" colspan="2">template&lt;typename angleT , typename eigenT1 , typename eigenT2 , typename eigenT3  = eigenT1&gt; </td></tr>
-<tr class="memitem:gadc9830ea55885c6593a6db22802b3755"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gadc9830ea55885c6593a6db22802b3755">mx::improc::annulusIndices</a> (const eigenT1 &amp;rIm, const eigenT2 &amp;qIm, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q, eigenT3 *mask=0)</td></tr>
-<tr class="memdesc:gadc9830ea55885c6593a6db22802b3755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vector indices of an annular region in an image.  <br /></td></tr>
-<tr class="separator:gadc9830ea55885c6593a6db22802b3755"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadceb1f3d289b4974808233a7a0259d91" id="r_gadceb1f3d289b4974808233a7a0259d91"><td class="memTemplParams" colspan="2">template&lt;typename angleT &gt; </td></tr>
-<tr class="memitem:gadceb1f3d289b4974808233a7a0259d91"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gadceb1f3d289b4974808233a7a0259d91">mx::improc::annulusBoundingRect</a> (int &amp;x0, int &amp;y0, int &amp;x1, int &amp;y1, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q)</td></tr>
-<tr class="memdesc:gadceb1f3d289b4974808233a7a0259d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coordinates of the bounding rectangle of an annulus.  <br /></td></tr>
-<tr class="separator:gadceb1f3d289b4974808233a7a0259d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0397043fabdb9a239c49000f187ffb70" id="r_ga0397043fabdb9a239c49000f187ffb70"><td class="memTemplParams" colspan="2">template&lt;typename vecT , typename angleT , typename eigenT1 , typename eigenT2 , typename eigenT3  = eigenT1&gt; </td></tr>
+<tr class="memitem:ga0397043fabdb9a239c49000f187ffb70"><td class="memTemplItemLeft" align="right" valign="top">vecT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga0397043fabdb9a239c49000f187ffb70">mx::improc::annulusCoordsWorker</a> (const eigenT1 &amp;rIm, const eigenT2 &amp;qIm, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q, eigenT3 *mask=0, typename angleT::realT pixbuf=0)</td></tr>
+<tr class="memdesc:ga0397043fabdb9a239c49000f187ffb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coordinates of an annular region in an image.  <br /></td></tr>
+<tr class="separator:ga0397043fabdb9a239c49000f187ffb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb760fb7a23da1e0103b214e611c1cd3" id="r_gabb760fb7a23da1e0103b214e611c1cd3"><td class="memTemplParams" colspan="2">template&lt;typename angleT , typename eigenT1 , typename eigenT2 , typename eigenT3  = eigenT1&gt; </td></tr>
+<tr class="memitem:gabb760fb7a23da1e0103b214e611c1cd3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gabb760fb7a23da1e0103b214e611c1cd3">mx::improc::annulusCoords</a> (const eigenT1 &amp;rIm, const eigenT2 &amp;qIm, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q, eigenT3 *mask=0, typename angleT::realT pixbuf=0)</td></tr>
+<tr class="memdesc:gabb760fb7a23da1e0103b214e611c1cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the array coordinates of an annular region in an image.  <br /></td></tr>
+<tr class="separator:gabb760fb7a23da1e0103b214e611c1cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefae7dce4d66824ca834653c8d33c9ea" id="r_gaefae7dce4d66824ca834653c8d33c9ea"><td class="memTemplParams" colspan="2">template&lt;typename angleT , typename eigenT1 , typename eigenT2 , typename eigenT3  = eigenT1&gt; </td></tr>
+<tr class="memitem:gaefae7dce4d66824ca834653c8d33c9ea"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#gaefae7dce4d66824ca834653c8d33c9ea">mx::improc::annulusIndices</a> (const eigenT1 &amp;rIm, const eigenT2 &amp;qIm, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q, eigenT3 *mask=0, typename angleT::realT pixbuf=0)</td></tr>
+<tr class="memdesc:gaefae7dce4d66824ca834653c8d33c9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vector indices of an annular region in an image.  <br /></td></tr>
+<tr class="separator:gaefae7dce4d66824ca834653c8d33c9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e79a6c60138ae9bb0547b8d7e4e76f1" id="r_ga1e79a6c60138ae9bb0547b8d7e4e76f1"><td class="memTemplParams" colspan="2">template&lt;typename angleT &gt; </td></tr>
+<tr class="memitem:ga1e79a6c60138ae9bb0547b8d7e4e76f1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga1e79a6c60138ae9bb0547b8d7e4e76f1">mx::improc::annulusBoundingRect</a> (int &amp;x0, int &amp;y0, int &amp;x1, int &amp;y1, typename angleT::realT xcen, typename angleT::realT ycen, typename angleT::realT min_r, typename angleT::realT max_r, typename angleT::realT min_q, typename angleT::realT max_q, typename angleT::realT pixbuf=0)</td></tr>
+<tr class="memdesc:ga1e79a6c60138ae9bb0547b8d7e4e76f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coordinates of the bounding rectangle of an annulus.  <br /></td></tr>
+<tr class="separator:ga1e79a6c60138ae9bb0547b8d7e4e76f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7d7b6129b7386164fe0df0ca843093" id="r_a1c7d7b6129b7386164fe0df0ca843093"><td class="memTemplParams" colspan="2">template&lt;typename realT &gt; </td></tr>
 <tr class="memitem:a1c7d7b6129b7386164fe0df0ca843093"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="imageMasks_8hpp.html#a1c7d7b6129b7386164fe0df0ca843093">mx::improc::reflectImageIndices</a> (const std::vector&lt; size_t &gt; &amp;idxi, int w, int h, realT xc, realT yc)</td></tr>
 <tr class="memdesc:a1c7d7b6129b7386164fe0df0ca843093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect vector indices across the given center pixel.  <br /></td></tr>
@@ -171,6 +179,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga917b7b98a203cb1bb70556e9ca3e8a6b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga917b7b98a203cb1bb70556e9ca3e8a6b">mx::improc::applyMask</a> (eigenT &amp;maskedIm, const std::vector&lt; size_t &gt; &amp;idx, typename eigenT::Scalar maskval)</td></tr>
 <tr class="memdesc:ga917b7b98a203cb1bb70556e9ca3e8a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a mask to an image.  <br /></td></tr>
 <tr class="separator:ga917b7b98a203cb1bb70556e9ca3e8a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06e288a97e432b6bfd1f0e8397d3515b" id="r_ga06e288a97e432b6bfd1f0e8397d3515b"><td class="memTemplParams" colspan="2">template&lt;class eigenT &gt; </td></tr>
+<tr class="memitem:ga06e288a97e432b6bfd1f0e8397d3515b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga06e288a97e432b6bfd1f0e8397d3515b">mx::improc::applyMask</a> (eigenT &amp;maskedIm, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;coord, typename eigenT::Scalar maskval)</td></tr>
+<tr class="memdesc:ga06e288a97e432b6bfd1f0e8397d3515b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a mask to an image.  <br /></td></tr>
+<tr class="separator:ga06e288a97e432b6bfd1f0e8397d3515b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1215edda0f9c5376eeadf1acf3ad4307" id="r_ga1215edda0f9c5376eeadf1acf3ad4307"><td class="memTemplParams" colspan="2">template&lt;class arrayT &gt; </td></tr>
 <tr class="memitem:ga1215edda0f9c5376eeadf1acf3ad4307"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__image__masks.html#ga1215edda0f9c5376eeadf1acf3ad4307">mx::improc::maskCircle</a> (arrayT &amp;m, typename arrayT::Scalar xcen, typename arrayT::Scalar ycen, typename arrayT::Scalar rad, typename arrayT::Scalar val, typename arrayT::Scalar pixbuf=0.5)</td></tr>
 <tr class="memdesc:ga1215edda0f9c5376eeadf1acf3ad4307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask a circle in an image.  <br /></td></tr>
@@ -272,11 +284,11 @@ template&lt;typename realT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00335">335</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00447">447</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageUtils_8hpp_source.html#l00061">mx::improc::reflectImageCoords()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00335">mx::improc::reflectImageIndices()</a>.</p>
+<p class="reference">References <a class="el" href="imageUtils_8hpp_source.html#l00091">mx::improc::reflectImageCoords()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00447">mx::improc::reflectImageIndices()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l00335">mx::improc::reflectImageIndices()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l00447">mx::improc::reflectImageIndices()</a>.</p>
 
 </div>
 </div>
@@ -317,11 +329,11 @@ template&lt;typename imageT , typename transformT  = cubicConvolTransform&lt;typ
 <p>Rotate a binary mask. </p>
 <p>Sets edge pixels to 0 or 1 depending on the interpolation, being below/above 0.5. </p>
 
-<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l00877">877</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="imageMasks_8hpp_source.html#l01009">1009</a> of file <a class="el" href="imageMasks_8hpp_source.html">imageMasks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00193">mx::improc::imageRotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00877">mx::improc::rotateMask()</a>.</p>
+<p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00194">mx::improc::imageRotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l01009">mx::improc::rotateMask()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00595">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l00877">mx::improc::rotateMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00622">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l01009">mx::improc::rotateMask()</a>.</p>
 
 </div>
 </div>
@@ -331,7 +343,7 @@ template&lt;typename imageT , typename transformT  = cubicConvolTransform&lt;typ
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageMasks_8hpp.html">imageMasks.hpp</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:43 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

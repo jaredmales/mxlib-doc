@@ -124,7 +124,7 @@ class mx::math::ft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</div><p>Fast Fouri
 <p>Planning is done with "measure" to achieve optimum performance at the cost of extra time during the planning step. This can be mitigated using "wisdom", managed by <a class="el" href="structmx_1_1math_1_1ft_1_1fftwEnvironment.html">fftwEnvironment</a>.</p>
 <p>Calls to the FFTW plan functions are protected by <code>\#pragma omp critical</code> directives unless MX_FFTW_NOOMP is define prior to the first inclusion of this file. This means that you do not need to use the <code>fftw_make_planner_thread_safe</code> facility in FFTW.</p>
 <dl class="section note"><dt>Note</dt><dd>I recommend not using fftw_make_planner_thread_safe or specifying number of threads in <a class="el" href="structmx_1_1math_1_1ft_1_1fftwEnvironment.html">fftwEnvironment</a>.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd><p class="startdd">add execute interface with fftw like signature </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000067">Todo:</a></b></dt><dd><p class="startdd">add execute interface with fftw like signature </p>
 <p class="enddd">add plan interface where user passes in pointers (to avoid allocations)</p>
 </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -138,7 +138,7 @@ class mx::math::ft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</div><p>Fast Fouri
 
 <p class="definition">Definition at line <a class="el" href="fftT_8hpp_source.html#l00077">77</a> of file <a class="el" href="fftT_8hpp_source.html">fftT.hpp</a>.</p>
 </div>
-<p><code>#include &lt;<a class="el" href="fftT_8hpp_source.html">math/fft/fftT.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="fftT_8hpp_source.html">math/ft/fftT.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,9 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b77563c7679e5259d8f19848a29075e" id="r_a8b77563c7679e5259d8f19848a29075e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a8b77563c7679e5259d8f19848a29075e">destroyPlan</a> ()</td></tr>
 <tr class="memdesc:a8b77563c7679e5259d8f19848a29075e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy (de-allocate) the plan.  <br /></td></tr>
 <tr class="separator:a8b77563c7679e5259d8f19848a29075e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa997a98d09860ad730beeab21ff01e7c" id="r_aa997a98d09860ad730beeab21ff01e7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">ft::dir</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aa997a98d09860ad730beeab21ff01e7c">dir</a> ()</td></tr>
-<tr class="memdesc:aa997a98d09860ad730beeab21ff01e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the direction of this FFT.  <br /></td></tr>
-<tr class="separator:aa997a98d09860ad730beeab21ff01e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2561db2b1d3430eb62a5ecdb24d195" id="r_aae2561db2b1d3430eb62a5ecdb24d195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">ft::dir</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#aae2561db2b1d3430eb62a5ecdb24d195">direction</a> ()</td></tr>
+<tr class="memdesc:aae2561db2b1d3430eb62a5ecdb24d195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the direction of this FFT.  <br /></td></tr>
+<tr class="separator:aae2561db2b1d3430eb62a5ecdb24d195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a5e49b4a48c5abd7519da553deb44eb" id="r_a7a5e49b4a48c5abd7519da553deb44eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a7a5e49b4a48c5abd7519da553deb44eb">doPlan</a> (<a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">const</a> <a class="el" href="structmx_1_1meta_1_1trueFalseT.html">meta::trueFalseT</a>&lt; <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">false</a> &gt; &amp;<a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">inPlace</a>)</td></tr>
 <tr class="memdesc:a7a5e49b4a48c5abd7519da553deb44eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the FFTW planning routine for an out-of-place transform.  <br /></td></tr>
 <tr class="separator:a7a5e49b4a48c5abd7519da553deb44eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,9 +193,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac99b88c0f3e6bd0291cf4f2301922755" id="r_ac99b88c0f3e6bd0291cf4f2301922755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">dir</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#ac99b88c0f3e6bd0291cf4f2301922755">m_dir</a> { <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8">dir::forward</a> }</td></tr>
-<tr class="memdesc:ac99b88c0f3e6bd0291cf4f2301922755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction of this FFT, either <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8" title="Specifies the forward transform.">dir::forward</a> (default) or <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502" title="Specifies the backward transform.">dir::backward</a>.  <br /></td></tr>
-<tr class="separator:ac99b88c0f3e6bd0291cf4f2301922755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a73ea8d667e0a2d5f04ffead9ee05a" id="r_a23a73ea8d667e0a2d5f04ffead9ee05a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">dir</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a23a73ea8d667e0a2d5f04ffead9ee05a">m_direction</a> { <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8">dir::forward</a> }</td></tr>
+<tr class="memdesc:a23a73ea8d667e0a2d5f04ffead9ee05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction of this FFT, either <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8" title="Specifies the forward transform.">dir::forward</a> (default) or <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502" title="Specifies the backward transform.">dir::backward</a>.  <br /></td></tr>
+<tr class="separator:a23a73ea8d667e0a2d5f04ffead9ee05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bf262483caf62d4110103e2859c9b4d" id="r_a7bf262483caf62d4110103e2859c9b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html#a7bf262483caf62d4110103e2859c9b4d">m_szX</a> { 0 }</td></tr>
 <tr class="memdesc:a7bf262483caf62d4110103e2859c9b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the x dimension.  <br /></td></tr>
 <tr class="separator:a7bf262483caf62d4110103e2859c9b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -457,8 +457,8 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 </div>
 </div>
-<a id="aa997a98d09860ad730beeab21ff01e7c" name="aa997a98d09860ad730beeab21ff01e7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa997a98d09860ad730beeab21ff01e7c">&#9670;&#160;</a></span>dir()</h2>
+<a id="aae2561db2b1d3430eb62a5ecdb24d195" name="aae2561db2b1d3430eb62a5ecdb24d195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2561db2b1d3430eb62a5ecdb24d195">&#9670;&#160;</a></span>direction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +466,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">typename</a> <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_inputT</a> , <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">typename</a> <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_outputT</a> , <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">size_t</a> _rank&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">ft::dir</a> mx::math::ft::fftT&lt; <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_inputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_outputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_rank</a>, 0 &gt;::dir </td>
+          <td class="memname"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">ft::dir</a> mx::math::ft::fftT&lt; <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_inputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_outputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_rank</a>, 0 &gt;::direction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -476,7 +476,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 
 <p>Get the direction of this FFT. </p>
 <p>The direction is either <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8" title="Specifies the forward transform.">dir::forward</a> or <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502" title="Specifies the backward transform.">dir::backward</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>the current value of m_dir. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current value of m_direction. </dd></dl>
 
 </div>
 </div>
@@ -786,8 +786,8 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac99b88c0f3e6bd0291cf4f2301922755" name="ac99b88c0f3e6bd0291cf4f2301922755"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac99b88c0f3e6bd0291cf4f2301922755">&#9670;&#160;</a></span>m_dir</h2>
+<a id="a23a73ea8d667e0a2d5f04ffead9ee05a" name="a23a73ea8d667e0a2d5f04ffead9ee05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a73ea8d667e0a2d5f04ffead9ee05a">&#9670;&#160;</a></span>m_direction</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -798,7 +798,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">dir</a> mx::math::ft::fftT&lt; <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_inputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_outputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_rank</a>, 0 &gt;::m_dir { <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8">dir::forward</a> }</td>
+          <td class="memname"><a class="el" href="group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696">dir</a> mx::math::ft::fftT&lt; <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_inputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_outputT</a>, <a class="el" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">_rank</a>, 0 &gt;::m_direction { <a class="el" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a965dbaac085fc891bfbbd4f9d145bbc8">dir::forward</a> }</td>
         </tr>
       </table>
   </td>
@@ -927,7 +927,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>math/fft/<a class="el" href="fftT_8hpp_source.html">fftT.hpp</a></li>
+<li>math/ft/<a class="el" href="fftT_8hpp_source.html">fftT.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -935,7 +935,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><b>ft</b></li><li class="navelem"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html">fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

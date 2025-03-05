@@ -8,6 +8,5 @@ var group__fits__utils =
     [ "mx::fits::fitsPopulateCard", "group__fits__utils.html#gab6719078e1e86a3b90e3de9c172af712", null ],
     [ "mx::fits::fitsStripApost", "group__fits__utils.html#ga4f1c3fd683cda0567bb497210936ae9b", null ],
     [ "mx::fits::fitsType", "group__fits__utils.html#ga2545d98be6143f7d2229903d24c267a4", null ],
-    [ "mx::fits::headersToValues", "group__fits__utils.html#ga8ca40bcb66ef4e5e218619276eeb53f9", null ],
-    [ "mx::fits::headersToValues", "group__fits__utils.html#ga290fc6540094490a7fa8d9faf2a34b09", null ]
+    [ "mx::fits::headersToValues", "group__fits__utils.html#ga3fe3c9a41f5f10f343c5f6ba05d3d8d7", null ]
 ];

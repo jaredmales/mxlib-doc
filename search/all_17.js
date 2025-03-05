@@ -13,7 +13,7 @@ var searchData=
   ['units_10',['Constants and units',['../group__constants.html',1,'']]],
   ['units_2ehpp_11',['units.hpp',['../units_8hpp.html',1,'']]],
   ['univar_12',['uniVar',['../structmx_1_1AO_1_1sim_1_1turbLayer.html#a7c857c413421a7de0b0601331188727f',1,'mx::AO::sim::turbLayer']]],
-  ['unknown_13',['unknown',['../namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2aad921d60486366258809553a3db49a4a',1,'mx::improc::HCI::unknown'],['../structmx_1_1app_1_1clOptions.html#aee2fb3bede7d28c33bdb20063045e7d0',1,'mx::app::clOptions::unknown()']]],
+  ['unknown_13',['unknown',['../namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2aad921d60486366258809553a3db49a4a',1,'mx::improc::HCI::unknown'],['../group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19aad921d60486366258809553a3db49a4a',1,'mx::improc::HCI::unknown'],['../structmx_1_1app_1_1clOptions.html#aee2fb3bede7d28c33bdb20063045e7d0',1,'mx::app::clOptions::unknown()']]],
   ['unshiftpupil_14',['unshiftPupil',['../classmx_1_1wfp_1_1fraunhoferPropagator.html#a10d2e268ef357b2cc992d082770e72ed',1,'mx::wfp::fraunhoferPropagator']]],
   ['unusedsections_15',['unusedSections',['../structmx_1_1app_1_1appConfigurator.html#a8e8f0032611be1785afa8e3c384d76c3',1,'mx::app::appConfigurator']]],
   ['up_20to_20date_16',['Keeping SOFA Up To date',['../group__astro__sofa.html#sofa_updating',1,'']]],
@@ -22,7 +22,7 @@ var searchData=
   ['upload_19',['upload',['../structmx_1_1cuda_1_1cudaPtr.html#ae94bac1088c517a932372770f561343a',1,'mx::cuda::cudaPtr::upload(const hostPtrT *src, size_t sz)'],['../structmx_1_1cuda_1_1cudaPtr.html#a75f7ad28dea16ebc380959efd35e5510',1,'mx::cuda::cudaPtr::upload(const hostPtrT *src)']]],
   ['usebasic_20',['useBasic',['../structmx_1_1AO_1_1analysis_1_1fourierCovariance.html#a80a25355b83af950d4c17823be125f97',1,'mx::AO::analysis::fourierCovariance']]],
   ['usemedian_21',['usemedian',['../classmx_1_1improc_1_1sourceFinder.html#a48e06e26efec56a8dee9187cb0c57865',1,'mx::improc::sourceFinder::useMedian()'],['../classmx_1_1improc_1_1sourceFinder.html#a7e62590637d7ee2341cb55001c58c731',1,'mx::improc::sourceFinder::useMedian(const bool &amp;useMed)']]],
-  ['ushort_22',['ushort',['../unionmx_1_1fits_1_1fitsHeaderCard_1_1values.html#a96696a37bdce7c776d0f80b2f3f83ffd',1,'mx::fits::fitsHeaderCard::values::UShort'],['../classmx_1_1fits_1_1fitsHeaderCard.html#a911747cfe9e71f2ae8afd3988be7c9fd',1,'mx::fits::fitsHeaderCard::UShort()']]],
+  ['ushort_22',['ushort',['../classmx_1_1fits_1_1fitsHeaderCard.html#a911747cfe9e71f2ae8afd3988be7c9fd',1,'mx::fits::fitsHeaderCard::UShort()'],['../unionmx_1_1fits_1_1fitsHeaderCard_1_1values.html#a96696a37bdce7c776d0f80b2f3f83ffd',1,'mx::fits::fitsHeaderCard::values::UShort']]],
   ['utilities_23',['utilities',['../group__asciiutils.html',1,'ASCII I/O Utilities'],['../group__fileutils.html',1,'File System Utilities'],['../group__fits__utils.html',1,'FITS Utilities'],['../group__utils.html',1,'General Utilities'],['../group__image__utils.html',1,'Image Utilities'],['../group__ioutils.html',1,'Input/Output Utilities'],['../group__meta.html',1,'Meta-programming Utilities.'],['../group__mtutils.html',1,'Multi-threading Utilities'],['../group__vectorutils.html',1,'Vector Utilities']]],
   ['utility_20files_24',['Utility Files',['../group__utils__files.html',1,'']]]
 ];

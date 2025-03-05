@@ -64,7 +64,10 @@ var annotated_dup =
         [ "changeable", "classmx_1_1base_1_1changeable.html", "classmx_1_1base_1_1changeable" ]
       ] ],
       [ "cuda", null, [
-        [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ]
+        [ "cublasHandle", "structmx_1_1cuda_1_1cublasHandle.html", "structmx_1_1cuda_1_1cublasHandle" ],
+        [ "cudaPtr", "structmx_1_1cuda_1_1cudaPtr.html", "structmx_1_1cuda_1_1cudaPtr" ],
+        [ "cusolverDnHandle", "structmx_1_1cuda_1_1cusolverDnHandle.html", "structmx_1_1cuda_1_1cusolverDnHandle" ],
+        [ "cusolverDnParams", "structmx_1_1cuda_1_1cusolverDnParams.html", "structmx_1_1cuda_1_1cusolverDnParams" ]
       ] ],
       [ "err", null, [
         [ "allocerr", "classmx_1_1err_1_1allocerr.html", "classmx_1_1err_1_1allocerr" ],
@@ -187,6 +190,7 @@ var annotated_dup =
         [ "histogramUniform", "classmx_1_1math_1_1histogramUniform.html", "classmx_1_1math_1_1histogramUniform" ],
         [ "laplace_distribution", "classmx_1_1math_1_1laplace__distribution.html", "classmx_1_1math_1_1laplace__distribution" ],
         [ "logInterpolator", "classmx_1_1math_1_1logInterpolator.html", "classmx_1_1math_1_1logInterpolator" ],
+        [ "point2D", "classmx_1_1math_1_1point2D.html", "classmx_1_1math_1_1point2D" ],
         [ "randomT", "classmx_1_1math_1_1randomT.html", "classmx_1_1math_1_1randomT" ],
         [ "syevrMem", "structmx_1_1math_1_1syevrMem.html", null ]
       ] ],

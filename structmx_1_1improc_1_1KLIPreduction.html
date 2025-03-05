@@ -130,7 +130,7 @@ struct mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00113">113</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00083">83</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="KLIPreduction_8hpp_source.html">improc/KLIPreduction.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -185,7 +185,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a33c53f6db2d2d3ca9fa603827001dc9d inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in the target files.  <br /></td></tr>
 <tr class="separator:a33c53f6db2d2d3ca9fa603827001dc9d inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33327db1d17a62bd8574f6bb84a4d53f inherit pub_methods_structmx_1_1improc_1_1ADIobservation" id="r_a33327db1d17a62bd8574f6bb84a4d53f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a33327db1d17a62bd8574f6bb84a4d53f">postReadFiles</a> ()</td></tr>
-<tr class="memdesc:a33327db1d17a62bd8574f6bb84a4d53f inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post target read actions, including fake injection.  <br /></td></tr>
+<tr class="memdesc:a33327db1d17a62bd8574f6bb84a4d53f inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actions to take after the files are first read in by <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a>.  <br /></td></tr>
 <tr class="separator:a33327db1d17a62bd8574f6bb84a4d53f inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae532b5f9ec73a141604aaf5ea06881aa inherit pub_methods_structmx_1_1improc_1_1ADIobservation" id="r_ae532b5f9ec73a141604aaf5ea06881aa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ae532b5f9ec73a141604aaf5ea06881aa">postCoadd</a> ()</td></tr>
 <tr class="memdesc:ae532b5f9ec73a141604aaf5ea06881aa inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post target coadd actions.  <br /></td></tr>
@@ -209,8 +209,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa5d8fdeeadff4c040097f75769a55e26 inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-rotate the PSF subtracted images.  <br /></td></tr>
 <tr class="separator:aa5d8fdeeadff4c040097f75769a55e26 inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a195ffa54c21b4b78d4679f449cdf2ddd inherit pub_methods_structmx_1_1improc_1_1ADIobservation" id="r_a195ffa54c21b4b78d4679f449cdf2ddd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a195ffa54c21b4b78d4679f449cdf2ddd">injectFake</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; realT &gt; &amp;ims, std::vector&lt; std::string &gt; &amp;fileList, derotFunctObj &amp;derotF, realT RDIfluxScale, realT RDISepScale)</td></tr>
-<tr class="memdesc:a195ffa54c21b4b78d4679f449cdf2ddd inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inect the fake plants.  <br /></td></tr>
+<tr class="memdesc:a195ffa54c21b4b78d4679f449cdf2ddd inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inkect the fake plants.  <br /></td></tr>
 <tr class="separator:a195ffa54c21b4b78d4679f449cdf2ddd inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52db1a61ce3184fa543606828f1e552 inherit pub_methods_structmx_1_1improc_1_1ADIobservation" id="r_ae52db1a61ce3184fa543606828f1e552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ae52db1a61ce3184fa543606828f1e552">injectFake</a> (eigenImageT &amp;fakePSF, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; realT &gt; &amp;ims, int image_i, realT derotAngle, realT PA, realT sep, realT contrast, realT scale, realT RDIfluxScale, realT RDISepScale)</td></tr>
+<tr class="memdesc:ae52db1a61ce3184fa543606828f1e552 inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the fake planet into a single image.  <br /></td></tr>
+<tr class="separator:ae52db1a61ce3184fa543606828f1e552 inherit pub_methods_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structmx_1_1improc_1_1HCIobservation"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structmx_1_1improc_1_1HCIobservation')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation&lt; _realT &gt;</a></td></tr>
 <tr class="memitem:a484029d62593ab06e15b95746a66f4d6 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_a484029d62593ab06e15b95746a66f4d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a484029d62593ab06e15b95746a66f4d6">readPSFSub</a> (const std::string &amp;dir, const std::string &amp;prefix, const std::string &amp;ext, size_t nReductions)</td></tr>
 <tr class="memdesc:a484029d62593ab06e15b95746a66f4d6 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in already PSF-subtracted files.  <br /></td></tr>
@@ -260,6 +263,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6151455607be072a3230dd8f10451ac inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_ae6151455607be072a3230dd8f10451ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ae6151455607be072a3230dd8f10451ac">preProcess</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
 <tr class="memdesc:ae6151455607be072a3230dd8f10451ac inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do the pre-processing.  <br /></td></tr>
 <tr class="separator:ae6151455607be072a3230dd8f10451ac inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae070ba2a4a00b24efcf46eb8da1f81 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_a5ae070ba2a4a00b24efcf46eb8da1f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a5ae070ba2a4a00b24efcf46eb8da1f81">preProcess_meanSub</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
+<tr class="memdesc:a5ae070ba2a4a00b24efcf46eb8da1f81 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do mean subtraction as part of pre-processing.  <br /></td></tr>
+<tr class="separator:a5ae070ba2a4a00b24efcf46eb8da1f81 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80c204eb103cf2e15383dd3b83ec5b8 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_aa80c204eb103cf2e15383dd3b83ec5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#aa80c204eb103cf2e15383dd3b83ec5b8">preProcess_pixelTSNorm</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
+<tr class="memdesc:aa80c204eb103cf2e15383dd3b83ec5b8 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do pixel time-series normalization as part of pre-processing.  <br /></td></tr>
+<tr class="separator:aa80c204eb103cf2e15383dd3b83ec5b8 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68d20a4e16e5cfbe6d9a95295406e151 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_a68d20a4e16e5cfbe6d9a95295406e151"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a68d20a4e16e5cfbe6d9a95295406e151">readWeights</a> ()</td></tr>
 <tr class="memdesc:a68d20a4e16e5cfbe6d9a95295406e151 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the image weights from m_weightFile.  <br /></td></tr>
 <tr class="separator:a68d20a4e16e5cfbe6d9a95295406e151 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,9 +293,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a25ef353723267ddb403208e336345070" id="r_a25ef353723267ddb403208e336345070"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#a25ef353723267ddb403208e336345070">m_meanSubMethod</a> { <a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c">HCI::imageMean</a> }</td></tr>
-<tr class="memdesc:a25ef353723267ddb403208e336345070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify how the data are centered for PCA within each search region.  <br /></td></tr>
-<tr class="separator:a25ef353723267ddb403208e336345070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078e0e308bb6e971ed627d2139b87acb" id="r_a078e0e308bb6e971ed627d2139b87acb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__hc__imaging__enums.html#ga890294240c6557c1faf0137c4ef1ce19">HCI::meanSubMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#a078e0e308bb6e971ed627d2139b87acb">m_meanSubMethod</a> { <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a50cfb3ee15f4676776f9dc7d4f382855">HCI::meanSubMethod::imageMean</a> }</td></tr>
+<tr class="memdesc:a078e0e308bb6e971ed627d2139b87acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify how the data are centered for PCA within each search region.  <br /></td></tr>
+<tr class="separator:a078e0e308bb6e971ed627d2139b87acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a221639ba9f0ad7b21c7ccf84dd367141" id="r_a221639ba9f0ad7b21c7ccf84dd367141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2">HCI::pixelTSNormMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1KLIPreduction.html#a221639ba9f0ad7b21c7ccf84dd367141">m_pixelTSNormMethod</a> {<a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a334c4a4c42fdb79d7ebc3e73b517e6f8">HCI::pixelTSNormMethod::none</a>}</td></tr>
 <tr class="memdesc:a221639ba9f0ad7b21c7ccf84dd367141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify if each pixel time-series is normalized.  <br /></td></tr>
 <tr class="separator:a221639ba9f0ad7b21c7ccf84dd367141"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,11 +338,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a81cad929933febb4746c5d97ce095bd1 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation" id="r_a81cad929933febb4746c5d97ce095bd1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a81cad929933febb4746c5d97ce095bd1">m_fakeContrast</a></td></tr>
 <tr class="memdesc:a81cad929933febb4746c5d97ce095bd1 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contrast(s) of the fake planet(s)  <br /></td></tr>
 <tr class="separator:a81cad929933febb4746c5d97ce095bd1 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28f3fb17eab7ed0710e7027dbc4f3650 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation" id="r_a28f3fb17eab7ed0710e7027dbc4f3650"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a28f3fb17eab7ed0710e7027dbc4f3650">m_RDIFluxScale</a></td></tr>
-<tr class="memdesc:a28f3fb17eab7ed0710e7027dbc4f3650 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flux scaling to apply to fake planets injected in RDI. Would depend on the assumed spectrum in SDI.  <br /></td></tr>
+<tr class="memitem:a28f3fb17eab7ed0710e7027dbc4f3650 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation" id="r_a28f3fb17eab7ed0710e7027dbc4f3650"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a28f3fb17eab7ed0710e7027dbc4f3650">m_RDIFluxScale</a> { 1 }</td></tr>
 <tr class="separator:a28f3fb17eab7ed0710e7027dbc4f3650 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57ee9ed35c4bd6014f37f4a4f974ab3 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation" id="r_ac57ee9ed35c4bd6014f37f4a4f974ab3"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ac57ee9ed35c4bd6014f37f4a4f974ab3">m_RDISepScale</a></td></tr>
-<tr class="memdesc:ac57ee9ed35c4bd6014f37f4a4f974ab3 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling to apply to fake planet separation in RDI. Would be ratio of wavelengths for SDI.  <br /></td></tr>
+<tr class="memitem:ac57ee9ed35c4bd6014f37f4a4f974ab3 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation" id="r_ac57ee9ed35c4bd6014f37f4a4f974ab3"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ac57ee9ed35c4bd6014f37f4a4f974ab3">m_RDISepScale</a> { 1 }</td></tr>
 <tr class="separator:ac57ee9ed35c4bd6014f37f4a4f974ab3 inherit pub_attribs_structmx_1_1improc_1_1ADIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_structmx_1_1improc_1_1HCIobservation"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structmx_1_1improc_1_1HCIobservation')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html">mx::improc::HCIobservation&lt; _realT &gt;</a></td></tr>
 <tr class="memitem:a262271f198fa84ea584bcd24a6e27967 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a262271f198fa84ea584bcd24a6e27967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a262271f198fa84ea584bcd24a6e27967">m_tgtIms</a></td></tr>
@@ -485,6 +492,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:acfd56525f2446a952c37193c9976cb04 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_acfd56525f2446a952c37193c9976cb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#acfd56525f2446a952c37193c9976cb04">m_preProcess_gaussUSM_fwhm</a> { 0 }</td></tr>
 <tr class="memdesc:acfd56525f2446a952c37193c9976cb04 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel FWHM for symmetric Gaussian unsharp mask (USM)  <br /></td></tr>
 <tr class="separator:acfd56525f2446a952c37193c9976cb04 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d8a23da72741a19e98f86b2edeaecf inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a60d8a23da72741a19e98f86b2edeaecf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__hc__imaging__enums.html#ga890294240c6557c1faf0137c4ef1ce19">HCI::meanSubMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a60d8a23da72741a19e98f86b2edeaecf">m_preProcess_meanSubMethod</a> { <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a334c4a4c42fdb79d7ebc3e73b517e6f8">HCI::meanSubMethod::none</a> }</td></tr>
+<tr class="memdesc:a60d8a23da72741a19e98f86b2edeaecf inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mean subtraction method during pre-processing.  <br /></td></tr>
+<tr class="separator:a60d8a23da72741a19e98f86b2edeaecf inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3ecf7bc0b09787ed308f7dcb3328a2 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a9b3ecf7bc0b09787ed308f7dcb3328a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2">HCI::pixelTSNormMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a9b3ecf7bc0b09787ed308f7dcb3328a2">m_preProcess_pixelTSNormMethod</a> { <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a334c4a4c42fdb79d7ebc3e73b517e6f8">HCI::pixelTSNormMethod::none</a> }</td></tr>
+<tr class="memdesc:a9b3ecf7bc0b09787ed308f7dcb3328a2 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify if each pixel time-series is normalized.  <br /></td></tr>
+<tr class="separator:a9b3ecf7bc0b09787ed308f7dcb3328a2 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48db0843efe359642fa57174a17268df inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a48db0843efe359642fa57174a17268df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a48db0843efe359642fa57174a17268df">m_pixelTSSigma</a> { 3 }</td></tr>
+<tr class="memdesc:a48db0843efe359642fa57174a17268df inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sigma-clipping parameter for pixel time-series normalization.  <br /></td></tr>
+<tr class="separator:a48db0843efe359642fa57174a17268df inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4280e70bb553a5bba6c2617df594bcff inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a4280e70bb553a5bba6c2617df594bcff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a4280e70bb553a5bba6c2617df594bcff">m_preProcess_outputPrefix</a></td></tr>
 <tr class="memdesc:a4280e70bb553a5bba6c2617df594bcff inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path and file prefix to output the pre-processed images.  <br /></td></tr>
 <tr class="separator:a4280e70bb553a5bba6c2617df594bcff inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -505,7 +521,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7116ccd6d4c5af44f66733302f24922a inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a7116ccd6d4c5af44f66733302f24922a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a7116ccd6d4c5af44f66733302f24922a">m_auxDataDir</a> { &quot;/tmp/klipReduceAux/&quot; }</td></tr>
 <tr class="memdesc:a7116ccd6d4c5af44f66733302f24922a inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location for temporary auxilliary output files (e.g. masks)  <br /></td></tr>
 <tr class="separator:a7116ccd6d4c5af44f66733302f24922a inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_ad55f01a04f1e6bddb1c8385ad9b3e4ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad55f01a04f1e6bddb1c8385ad9b3e4ef">m_moveAuxDataDir</a> {true}</td></tr>
+<tr class="memitem:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_ad55f01a04f1e6bddb1c8385ad9b3e4ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad55f01a04f1e6bddb1c8385ad9b3e4ef">m_moveAuxDataDir</a> { true }</td></tr>
 <tr class="memdesc:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to move the temp. aux files.  <br /></td></tr>
 <tr class="separator:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb46d49228f0d70e1a84440bc13772a6 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_adb46d49228f0d70e1a84440bc13772a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#adb46d49228f0d70e1a84440bc13772a6">m_doWriteFinim</a> { 1 }</td></tr>
@@ -556,7 +572,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00372">372</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00342">342</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +621,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00377">377</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00347">347</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -644,7 +660,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00385">385</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00355">355</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +729,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00391">391</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00361">361</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -762,7 +778,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00402">402</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00372">372</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -819,9 +835,9 @@ template&lt;typename realT , class derotFunctObj , typename evCalcT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00414">414</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00384">384</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="eigenCube_8hpp_source.html#l00382">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00042">mx::improc::HCI::imageMean</a>, <a class="el" href="eigenImage_8hpp_source.html#l00122">mx::improc::imageMedian()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00044">mx::improc::HCI::imageMedian</a>, <a class="el" href="eigenCube_8hpp_source.html#l00435">mx::improc::eigenCube&lt; dataT &gt;::mean()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00048">mx::improc::HCI::meanImage</a>, <a class="el" href="eigenCube_8hpp_source.html#l00555">mx::improc::eigenCube&lt; dataT &gt;::median()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00049">mx::improc::HCI::medianImage</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a334c4a4c42fdb79d7ebc3e73b517e6f8">mx::improc::HCI::none</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a288452d7320665eb4c7df0992c0d5023">mx::improc::HCI::rmsSigmaClipped</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2aad921d60486366258809553a3db49a4a">mx::improc::HCI::unknown</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00293">mx::math::vectorVariance()</a>.</p>
+<p class="reference">References <a class="el" href="eigenCube_8hpp_source.html#l00382">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a50cfb3ee15f4676776f9dc7d4f382855">mx::improc::HCI::imageMean</a>, <a class="el" href="eigenImage_8hpp_source.html#l00122">mx::improc::imageMedian()</a>, <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a1f7e9798caa53c2b4f99ba7e902fbf82">mx::improc::HCI::imageMedian</a>, <a class="el" href="eigenCube_8hpp_source.html#l00435">mx::improc::eigenCube&lt; dataT &gt;::mean()</a>, <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a9b4189fb40ab6084b44fe877d69c19e7">mx::improc::HCI::meanImage</a>, <a class="el" href="eigenCube_8hpp_source.html#l00555">mx::improc::eigenCube&lt; dataT &gt;::median()</a>, <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a5896a88faf2ba7bc9d354ef8265125da">mx::improc::HCI::medianImage</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a334c4a4c42fdb79d7ebc3e73b517e6f8">mx::improc::HCI::none</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a288452d7320665eb4c7df0992c0d5023">mx::improc::HCI::rmsSigmaClipped</a>, <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2aad921d60486366258809553a3db49a4a">mx::improc::HCI::unknown</a>, and <a class="el" href="vectorUtils_8hpp_source.html#l00293">mx::math::vectorVariance()</a>.</p>
 
 </div>
 </div>
@@ -880,11 +896,11 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00571">571</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00540">540</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="imageMasks_8hpp_source.html#l00832">mx::improc::cutImageRegion()</a>, <a class="el" href="geo_8hpp_source.html#l00138">mx::math::dtor()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00075">mx::improc::HCI::excludeAngle</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00076">mx::improc::HCI::excludeImno</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00073">mx::improc::HCI::excludeNone</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00074">mx::improc::HCI::excludePixel</a>, <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00382">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01318">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="imageMasks_8hpp_source.html#l00964">mx::improc::cutImageRegion()</a>, <a class="el" href="geo_8hpp_source.html#l00138">mx::math::dtor()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00045">mx::improc::HCI::excludeAngle</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00046">mx::improc::HCI::excludeImno</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00043">mx::improc::HCI::excludeNone</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00044">mx::improc::HCI::excludePixel</a>, <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00382">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01329">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="KLIPreduction_8hpp_source.html#l00319">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="KLIPreduction_8hpp_source.html#l00289">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>.</p>
 
 </div>
 </div>
@@ -951,9 +967,9 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00319">319</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00289">289</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="KLIPreduction_8hpp_source.html#l00571">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>.</p>
+<p class="reference">References <a class="el" href="KLIPreduction_8hpp_source.html#l00540">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::regions()</a>.</p>
 
 </div>
 </div>
@@ -1010,9 +1026,9 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT &gt; </di
 </div><div class="memdoc">
 <p>omp_get_num_threads();</p>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00978">978</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00947">947</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="eigenCube_8hpp_source.html#l00406">mx::improc::eigenCube&lt; dataT &gt;::asVectors()</a>, <a class="el" href="eigenLapack_8hpp_source.html#l00321">mx::math::calcKLModes()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00376">mx::improc::eigenCube&lt; dataT &gt;::cube()</a>, <a class="el" href="eigenLapack_8hpp_source.html#l00062">mx::math::eigenSYRK()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00073">mx::improc::HCI::excludeNone</a>, <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00225">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>, <a class="el" href="imageMasks_8hpp_source.html#l00859">mx::improc::insertImageRegion()</a>, <a class="el" href="imageMasks_8hpp_source.html#l00418">mx::improc::maskCircle()</a>, <a class="el" href="math_2constants_8hpp_source.html#l00404">mx::math::six_fifths()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01318">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="eigenCube_8hpp_source.html#l00406">mx::improc::eigenCube&lt; dataT &gt;::asVectors()</a>, <a class="el" href="eigenLapack_8hpp_source.html#l00539">mx::math::calcKLModes()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00376">mx::improc::eigenCube&lt; dataT &gt;::cube()</a>, <a class="el" href="eigenLapack_8hpp_source.html#l00062">mx::math::eigenSYRK()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00043">mx::improc::HCI::excludeNone</a>, <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00274">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>, <a class="el" href="imageMasks_8hpp_source.html#l00991">mx::improc::insertImageRegion()</a>, <a class="el" href="imageMasks_8hpp_source.html#l00550">mx::improc::maskCircle()</a>, <a class="el" href="math_2constants_8hpp_source.html#l00404">mx::math::six_fifths()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01329">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1053,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <li><b><a class="el" href="group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda4f0b51097a25c33d47a612edd4dd70eb" title="Exclude by number of images.">HCI::excludeImno</a></b> = exclude based on number of images </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00236">236</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00206">206</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1077,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <li><b><a class="el" href="group__hc__imaging__enums.html#gga7bedc230d1b422b72f51ddcec55deaeda4f0b51097a25c33d47a612edd4dd70eb" title="Exclude by number of images.">HCI::excludeImno</a></b> = exclude based on number of images </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00248">248</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00218">218</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1104,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <li><b><a class="el" href="group__hc__imaging__enums.html#gga07bf7856b4aa1ecc2be95da87ab4178ea1968e6c678052392b26e1a9349e8278a" title="include images which are closest in imno to the target">HCI::includeImno</a></b> = the m_includeRefNum of the remaining images which are closest in image number to the target are included </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00271">271</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00241">241</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1109,7 +1125,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <p>Number of reference images to include in the covariance matrix. </p>
 <p>If &gt; 0, then at most this many images, determined by highest cross-correlation, are included. This is determined after rotational/image-number exclusion. If == 0, then all reference images are included. </p>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00256">256</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00226">226</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1128,12 +1144,12 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 </div><div class="memdoc">
 <p>Specify the maximum pixel difference at the inner edge of the search region </p>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00224">224</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00194">194</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a25ef353723267ddb403208e336345070" name="a25ef353723267ddb403208e336345070"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ef353723267ddb403208e336345070">&#9670;&#160;</a></span>m_meanSubMethod</h2>
+<a id="a078e0e308bb6e971ed627d2139b87acb" name="a078e0e308bb6e971ed627d2139b87acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078e0e308bb6e971ed627d2139b87acb">&#9670;&#160;</a></span>m_meanSubMethod</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1141,21 +1157,21 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="structmx_1_1improc_1_1KLIPreduction.html">mx::improc::KLIPreduction</a>&lt; _realT, _derotFunctObj, _evCalcT &gt;::m_meanSubMethod { <a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c">HCI::imageMean</a> }</td>
+          <td class="memname"><a class="el" href="group__hc__imaging__enums.html#ga890294240c6557c1faf0137c4ef1ce19">HCI::meanSubMethod</a> <a class="el" href="structmx_1_1improc_1_1KLIPreduction.html">mx::improc::KLIPreduction</a>&lt; _realT, _derotFunctObj, _evCalcT &gt;::m_meanSubMethod { <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a50cfb3ee15f4676776f9dc7d4f382855">HCI::meanSubMethod::imageMean</a> }</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Specify how the data are centered for PCA within each search region. </p>
 <p>Can have the following values:</p><ul>
-<li><b><a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a69ba58352594ec3263eee773d16d4d6c">HCI::imageMean</a></b> = the mean of each image (within the search region) is subtracted from itself</li>
-<li><b><a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a73eab21610ba81f8b49cfd57d5db75ae">HCI::imageMedian</a></b> = the median of each image (within the search region) is subtracted from itself</li>
-<li><b><a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932a12c1eda0fc72a44e12e8293cab8881cb">HCI::imageMode</a></b> = the mode of each image (within the search region) is subtracted from itself</li>
-<li><b><a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932ad6beb545402e72fa027703e8a7fda306" title="The mean image of the data is subtracted from each image.">HCI::meanImage</a></b> = the mean image of the data is subtracted from each image</li>
-<li><b><a class="el" href="group__hc__imaging__enums.html#gga3a3e7c3736f2c08bd769c008f59fd932add14bcd8628e8b52e259f7118c79baa4" title="The median image of the data is subtracted from each image.">HCI::medianImage</a></b> = the median image of the data is subtracted from each image </li>
+<li><b><a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a50cfb3ee15f4676776f9dc7d4f382855">HCI::meanSubMethod::imageMean</a></b> = the mean of each image (within the search region) is subtracted from itself</li>
+<li><b><a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a1f7e9798caa53c2b4f99ba7e902fbf82">HCI::meanSubMethod::imageMedian</a></b> = the median of each image (within the search region) is subtracted from itself</li>
+<li><b><a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a48e928b39283574fa711c1a11e3c4a75">HCI::meanSubMethod::imageMode</a></b> = the mode of each image (within the search region) is subtracted from itself</li>
+<li><b><a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a9b4189fb40ab6084b44fe877d69c19e7" title="The mean image of the data is subtracted from each image.">HCI::meanSubMethod::meanImage</a></b> = the mean image of the data is subtracted from each image</li>
+<li><b><a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a5896a88faf2ba7bc9d354ef8265125da" title="The median image of the data is subtracted from each image.">HCI::meanSubMethod::medianImage</a></b> = the median image of the data is subtracted from each image </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00188">188</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00158">158</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1190,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 </div><div class="memdoc">
 <p>Specify the minimum pixel difference at the inner edge of the search region </p>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00220">220</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00190">190</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1196,7 +1212,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <p>The output image is a cube with a plane for each entry in m_Nmodes. Only the number of eigenvalues required for the maximum value of m_Nmodes are calculated, so this can have an important impact on speed.</p>
 <p>Can be initialized as: </p><div class="fragment"><div class="line">red.m_Nmodes={5,10,15,20};</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00214">214</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00184">184</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1221,7 +1237,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <li><b><a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a288452d7320665eb4c7df0992c0d5023" title="the sigma clipped rms of the pixel time series">HCI::pixelTSNormMethod::rmsSigmaClipped</a></b>: divide by the sigma-slipped time-series rms. The sigma is provided by m_pixelTSSigma. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00197">197</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00167">167</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1257,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 
 <p>Sigma-clipping parameter for pixel time-series normalization. </p>
 
-<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00199">199</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KLIPreduction_8hpp_source.html#l00169">169</a> of file <a class="el" href="KLIPreduction_8hpp_source.html">KLIPreduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1270,7 @@ template&lt;typename _realT , class _derotFunctObj , typename _evCalcT  = double
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="structmx_1_1improc_1_1KLIPreduction.html">KLIPreduction</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

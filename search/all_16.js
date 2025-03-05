@@ -91,7 +91,7 @@ var searchData=
   ['turbsubharmonic_88',['turbSubHarmonic',['../classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html',1,'mx::AO::sim']]],
   ['two_5fpi_89',['two_pi',['../group__genconstants.html#gaa95cded918cf443eee346a1bbe9e1a7d',1,'mx::math']]],
   ['twosqrt2log2_90',['twosqrt2log2',['../group__gen__math__gaussians.html#gaea298d0b93e57fab9423f5c5d9ae605b',1,'mx::math::func']]],
-  ['type_91',['type',['../structmx_1_1meta_1_1typeDescription.html#a60bdac9177317a467f51a540ef413784',1,'mx::meta::typeDescription::type'],['../classmx_1_1fits_1_1fitsHeaderCard.html#a4489146e0e728aae58a9566512b59e5e',1,'mx::fits::fitsHeaderCard::type()'],['../classmx_1_1fits_1_1fitsHeaderCard.html#acacd5d6059b06e51d90b265c55d7892f',1,'mx::fits::fitsHeaderCard::type(const int &amp;t)']]],
+  ['type_91',['type',['../structmx_1_1meta_1_1typeDescription.html#a60bdac9177317a467f51a540ef413784',1,'mx::meta::typeDescription::type'],['../classmx_1_1fits_1_1fitsHeaderCard.html#a3c3a9a9ae13e1097e605d37cb5663944',1,'mx::fits::fitsHeaderCard::type() const'],['../classmx_1_1fits_1_1fitsHeaderCard.html#acacd5d6059b06e51d90b265c55d7892f',1,'mx::fits::fitsHeaderCard::type(const int &amp;t)']]],
   ['type_20specification_92',['Type Specification',['../group__fftw__template__type__specs.html',1,'']]],
   ['typedefs_93',['fitsFile typedefs',['../group__fits__processing__typedefs.html',1,'']]],
   ['typedescription_94',['typeDescription',['../structmx_1_1meta_1_1typeDescription.html',1,'mx::meta']]],

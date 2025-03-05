@@ -166,6 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b6845c772ca22dd607f68d3e3bb0768" id="r_a5b6845c772ca22dd607f68d3e3bb0768"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html#a5b6845c772ca22dd607f68d3e3bb0768">outputStatus</a> ()</td></tr>
 <tr class="memdesc:a5b6845c772ca22dd607f68d3e3bb0768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output current status.  <br /></td></tr>
 <tr class="separator:a5b6845c772ca22dd607f68d3e3bb0768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882f296efeef14ae4b4aaf0ed950f060" id="r_a882f296efeef14ae4b4aaf0ed950f060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html#a882f296efeef14ae4b4aaf0ed950f060">outputFinalStatus</a> ()</td></tr>
+<tr class="memdesc:a882f296efeef14ae4b4aaf0ed950f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a final report about elapsed time.  <br /></td></tr>
+<tr class="separator:a882f296efeef14ae4b4aaf0ed950f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9eb5582499664ff8baf86d4c88d200d" id="r_ac9eb5582499664ff8baf86d4c88d200d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html#ac9eb5582499664ff8baf86d4c88d200d">incrementAndOutputStatus</a> ()</td></tr>
 <tr class="memdesc:ac9eb5582499664ff8baf86d4c88d200d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment and output status.  <br /></td></tr>
 <tr class="separator:ac9eb5582499664ff8baf86d4c88d200d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,7 +250,7 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00185">185</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00199">199</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00092">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_counter</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00091">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_nLoops</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00097">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_output</a>, and <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>.</p>
 
@@ -282,11 +285,11 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 
 <p>Advance the counter by a number of steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00110">110</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00113">113</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00092">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_counter</a>, and <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00207">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::advance()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00237">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::advanceAndOutputStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00221">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::advance()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00286">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::advanceAndOutputStatus()</a>.</p>
 
 </div>
 </div>
@@ -317,11 +320,11 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 
 <p>Increment the counter. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00100">100</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00103">103</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00092">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_counter</a>, and <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00198">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::increment()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00225">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00212">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::increment()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00274">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>.</p>
 
 </div>
 </div>
@@ -352,11 +355,11 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 
 <p>Perform the output. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00120">120</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00123">123</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00092">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_counter</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00091">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_nLoops</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00237">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::advanceAndOutputStatus()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00225">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00216">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::outputStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00286">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::advanceAndOutputStatus()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00274">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::incrementAndOutputStatus()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00230">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::outputStatus()</a>.</p>
 
 </div>
 </div>
@@ -389,9 +392,9 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <p>Advance the counter by a number of steps. </p>
 <p>Call this once per loop. It contains an omp critical directive. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00207">207</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00221">221</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00110">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_advance()</a>.</p>
+<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00113">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_advance()</a>.</p>
 
 </div>
 </div>
@@ -424,9 +427,9 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <p>Advance and output status. </p>
 <p>Call this to advance and then give a status update. Has only one omp critical directive for the two steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00237">237</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00286">286</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00110">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_advance()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00120">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
+<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00113">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_advance()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00123">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
 
 </div>
 </div>
@@ -458,7 +461,7 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <p>Clear the output line of any text. </p>
 <p>If printing pretty and not printing new lines, this writes a line of blank spaces and carriage returns to clear out the last status update. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00250">250</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00299">299</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -490,9 +493,9 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <p>Increment the counter. </p>
 <p>Call this once per loop. It contains an omp critical directive. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00198">198</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00212">212</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00100">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_increment()</a>.</p>
+<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00103">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_increment()</a>.</p>
 
 </div>
 </div>
@@ -524,11 +527,44 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <p>Increment and output status. </p>
 <p>Call this to increment and then give a status update. Has only one omp critical directive for the two steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00225">225</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00274">274</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00100">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_increment()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00120">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
+<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00103">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_increment()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00123">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00784">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00463">mx::AO::analysis::fourierCovarMap()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00321">mx::AO::analysis::fourierVarVec()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01514">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00696">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::makePSDGrid()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01417">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00978">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>, <a class="el" href="zernikeCovariance_8hpp_source.html#l00370">mx::AO::analysis::zernikeCovarMap()</a>, and <a class="el" href="zernikeCovariance_8hpp_source.html#l00225">mx::AO::analysis::zernikeVarVec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00784">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00463">mx::AO::analysis::fourierCovarMap()</a>, <a class="el" href="fourierCovariance_8hpp_source.html#l00321">mx::AO::analysis::fourierVarVec()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l01514">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::intensityPSD()</a>, <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00696">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::makePSDGrid()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01549">mx::improc::HCIobservation&lt; _realT &gt;::preProcess()</a>, <a class="el" href="KLIPreduction_8hpp_source.html#l00947">mx::improc::KLIPreduction&lt; _realT, _derotFunctObj, _evCalcT &gt;::worker()</a>, <a class="el" href="zernikeCovariance_8hpp_source.html#l00370">mx::AO::analysis::zernikeCovarMap()</a>, and <a class="el" href="zernikeCovariance_8hpp_source.html#l00225">mx::AO::analysis::zernikeVarVec()</a>.</p>
+
+</div>
+</div>
+<a id="a882f296efeef14ae4b4aaf0ed950f060" name="a882f296efeef14ae4b4aaf0ed950f060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882f296efeef14ae4b4aaf0ed950f060">&#9670;&#160;</a></span>outputFinalStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _printLoops = true, bool _printPercent = true, bool _printNLine = false, bool _time = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html">mx::ipc::ompLoopWatcher</a>&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::outputFinalStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output a final report about elapsed time. </p>
+
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00237">237</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00092">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_counter</a>.</p>
 
 </div>
 </div>
@@ -560,9 +596,9 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <p>Output current status. </p>
 <p>Call this whenever you want a status update. It contains an omp critical directive. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00216">216</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00230">230</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00120">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
+<p class="reference">References <a class="el" href="ompLoopWatcher_8hpp_source.html#l00123">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
 
 </div>
 </div>
@@ -593,7 +629,7 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 
 <p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00092">92</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00185">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::ompLoopWatcher()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00110">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_advance()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00100">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_increment()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00120">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00199">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::ompLoopWatcher()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00113">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_advance()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00103">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_increment()</a>, <a class="el" href="ompLoopWatcher_8hpp_source.html#l00123">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00237">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::outputFinalStatus()</a>.</p>
 
 </div>
 </div>
@@ -623,7 +659,7 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 
 <p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00091">91</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00185">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::ompLoopWatcher()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00120">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00199">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::ompLoopWatcher()</a>, and <a class="el" href="ompLoopWatcher_8hpp_source.html#l00123">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::_outputStatus()</a>.</p>
 
 </div>
 </div>
@@ -653,7 +689,7 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 
 <p class="definition">Definition at line <a class="el" href="ompLoopWatcher_8hpp_source.html#l00097">97</a> of file <a class="el" href="ompLoopWatcher_8hpp_source.html">ompLoopWatcher.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00185">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::ompLoopWatcher()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ompLoopWatcher_8hpp_source.html#l00199">mx::ipc::ompLoopWatcher&lt; _outputT, _printPretty, _printLoops, _printPercent, _printNLine, _time &gt;::ompLoopWatcher()</a>.</p>
 
 </div>
 </div>
@@ -666,7 +702,7 @@ template&lt;class _outputT  = std::ostream, bool _printPretty = true, bool _prin
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>ipc</b></li><li class="navelem"><a class="el" href="classmx_1_1ipc_1_1ompLoopWatcher.html">ompLoopWatcher</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

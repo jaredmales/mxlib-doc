@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['meansubmethods_0',['meansubMethods',['../group__hc__imaging__enums.html#ga3a3e7c3736f2c08bd769c008f59fd932',1,'mx::improc::HCI']]]
+  ['meansubmethod_0',['meanSubMethod',['../group__hc__imaging__enums.html#ga890294240c6557c1faf0137c4ef1ce19',1,'mx::improc::HCI']]]
 ];

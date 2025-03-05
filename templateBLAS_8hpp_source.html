@@ -220,12 +220,12 @@ $(document).ready(function(){initNavTree('templateBLAS_8hpp_source.html',''); in
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__template__blas.html#gaafc77f081091e88961c3f43264a7a6da">   97</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__template__blas.html#gaafc77f081091e88961c3f43264a7a6da">hadp_impl</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">N</a>, dataT *<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">__restrict__</a> Y, dataT *<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">__restrict__</a> X )</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    dataT *x = (dataT *)<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">__builtin_assume_aligned</a>( X, 16 );</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    dataT *<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">y</a> = (dataT *)<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">__builtin_assume_aligned</a>( Y, 16 );</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    dataT *y = (dataT *)<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">__builtin_assume_aligned</a>( Y, 16 );</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#pragma omp simd</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a> = 0; <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a> &lt; <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">N</a>; <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a>++ )</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        x[<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a>] *= <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">y</a>[<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a>];</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        x[<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a>] *= y[<a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">i</a>];</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
 </div>
@@ -490,7 +490,7 @@ $(document).ready(function(){initNavTree('templateBLAS_8hpp_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="templateBLAS_8hpp.html">templateBLAS.hpp</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:43 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

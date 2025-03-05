@@ -13,7 +13,7 @@ var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
     [ "imagePeakInterp.hpp", "imagePeakInterp_8hpp.html", null ],
     [ "imageTransforms.hpp", "imageTransforms_8hpp.html", "imageTransforms_8hpp" ],
     [ "imageUtils.hpp", "imageUtils_8hpp.html", "imageUtils_8hpp" ],
-    [ "imageXCorr.hpp", "imageXCorr_8hpp.html", null ],
+    [ "imageXCorr.hpp", "imageXCorr_8hpp.html", "imageXCorr_8hpp" ],
     [ "imageXCorrDiscrete.hpp", "imageXCorrDiscrete_8hpp.html", null ],
     [ "imageXCorrFFT.hpp", "imageXCorrFFT_8hpp.html", null ],
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],

@@ -1,8 +1,8 @@
 var dir_fba38f648377aa56ae5d69782adf9e53 =
 [
     [ "cuda", "dir_32daa4c7a3a3be840bccba6e90c9ee4d.html", "dir_32daa4c7a3a3be840bccba6e90c9ee4d" ],
-    [ "fft", "dir_6cdd4d2f4f2d35d162926c1e0ab93b1a.html", "dir_6cdd4d2f4f2d35d162926c1e0ab93b1a" ],
     [ "fit", "dir_6db95d63ecdf0969fe78c6ed6d247181.html", "dir_6db95d63ecdf0969fe78c6ed6d247181" ],
+    [ "ft", "dir_5e1a4b68891c784ffc8c13332b3b0e2e.html", "dir_5e1a4b68891c784ffc8c13332b3b0e2e" ],
     [ "func", "dir_4e9e59a91b0996cbbf615e490f662000.html", "dir_4e9e59a91b0996cbbf615e490f662000" ],
     [ "plot", "dir_4ff8661d8c23ce74cba2e29c678ba90e.html", "dir_4ff8661d8c23ce74cba2e29c678ba90e" ],
     [ "constants.hpp", "math_2constants_8hpp_source.html", null ],
@@ -14,6 +14,7 @@ var dir_fba38f648377aa56ae5d69782adf9e53 =
     [ "logInterpolator.hpp", "logInterpolator_8hpp.html", null ],
     [ "logRadProfIntegrator.hpp", "logRadProfIntegrator_8hpp_source.html", null ],
     [ "math.hpp", "math_8hpp.html", null ],
+    [ "point2D.hpp", "point2D_8hpp.html", "point2D_8hpp" ],
     [ "radprofIntegral.hpp", "radprofIntegral_8hpp.html", "radprofIntegral_8hpp" ],
     [ "randomSeed.hpp", "randomSeed_8hpp.html", "randomSeed_8hpp" ],
     [ "randomT.hpp", "randomT_8hpp.html", "randomT_8hpp" ],

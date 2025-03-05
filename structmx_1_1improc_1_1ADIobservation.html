@@ -189,7 +189,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a33c53f6db2d2d3ca9fa603827001dc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in the target files.  <br /></td></tr>
 <tr class="separator:a33c53f6db2d2d3ca9fa603827001dc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33327db1d17a62bd8574f6bb84a4d53f" id="r_a33327db1d17a62bd8574f6bb84a4d53f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a33327db1d17a62bd8574f6bb84a4d53f">postReadFiles</a> ()</td></tr>
-<tr class="memdesc:a33327db1d17a62bd8574f6bb84a4d53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post target read actions, including fake injection.  <br /></td></tr>
+<tr class="memdesc:a33327db1d17a62bd8574f6bb84a4d53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actions to take after the files are first read in by <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a>.  <br /></td></tr>
 <tr class="separator:a33327db1d17a62bd8574f6bb84a4d53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae532b5f9ec73a141604aaf5ea06881aa" id="r_ae532b5f9ec73a141604aaf5ea06881aa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ae532b5f9ec73a141604aaf5ea06881aa">postCoadd</a> ()</td></tr>
 <tr class="memdesc:ae532b5f9ec73a141604aaf5ea06881aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post target coadd actions.  <br /></td></tr>
@@ -261,6 +261,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6151455607be072a3230dd8f10451ac inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_ae6151455607be072a3230dd8f10451ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ae6151455607be072a3230dd8f10451ac">preProcess</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
 <tr class="memdesc:ae6151455607be072a3230dd8f10451ac inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do the pre-processing.  <br /></td></tr>
 <tr class="separator:ae6151455607be072a3230dd8f10451ac inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae070ba2a4a00b24efcf46eb8da1f81 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_a5ae070ba2a4a00b24efcf46eb8da1f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a5ae070ba2a4a00b24efcf46eb8da1f81">preProcess_meanSub</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
+<tr class="memdesc:a5ae070ba2a4a00b24efcf46eb8da1f81 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do mean subtraction as part of pre-processing.  <br /></td></tr>
+<tr class="separator:a5ae070ba2a4a00b24efcf46eb8da1f81 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80c204eb103cf2e15383dd3b83ec5b8 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_aa80c204eb103cf2e15383dd3b83ec5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#aa80c204eb103cf2e15383dd3b83ec5b8">preProcess_pixelTSNorm</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a> &gt; &amp;ims)</td></tr>
+<tr class="memdesc:aa80c204eb103cf2e15383dd3b83ec5b8 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do pixel time-series normalization as part of pre-processing.  <br /></td></tr>
+<tr class="separator:aa80c204eb103cf2e15383dd3b83ec5b8 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68d20a4e16e5cfbe6d9a95295406e151 inherit pub_methods_structmx_1_1improc_1_1HCIobservation" id="r_a68d20a4e16e5cfbe6d9a95295406e151"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a68d20a4e16e5cfbe6d9a95295406e151">readWeights</a> ()</td></tr>
 <tr class="memdesc:a68d20a4e16e5cfbe6d9a95295406e151 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the image weights from m_weightFile.  <br /></td></tr>
 <tr class="separator:a68d20a4e16e5cfbe6d9a95295406e151 inherit pub_methods_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -302,15 +308,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81cad929933febb4746c5d97ce095bd1" id="r_a81cad929933febb4746c5d97ce095bd1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; realT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a81cad929933febb4746c5d97ce095bd1">m_fakeContrast</a></td></tr>
 <tr class="memdesc:a81cad929933febb4746c5d97ce095bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contrast(s) of the fake planet(s)  <br /></td></tr>
 <tr class="separator:a81cad929933febb4746c5d97ce095bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28f3fb17eab7ed0710e7027dbc4f3650" id="r_a28f3fb17eab7ed0710e7027dbc4f3650"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a28f3fb17eab7ed0710e7027dbc4f3650">m_RDIFluxScale</a></td></tr>
-<tr class="memdesc:a28f3fb17eab7ed0710e7027dbc4f3650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flux scaling to apply to fake planets injected in RDI. Would depend on the assumed spectrum in SDI.  <br /></td></tr>
+<tr class="memitem:a28f3fb17eab7ed0710e7027dbc4f3650" id="r_a28f3fb17eab7ed0710e7027dbc4f3650"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a28f3fb17eab7ed0710e7027dbc4f3650">m_RDIFluxScale</a> { 1 }</td></tr>
 <tr class="separator:a28f3fb17eab7ed0710e7027dbc4f3650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57ee9ed35c4bd6014f37f4a4f974ab3" id="r_ac57ee9ed35c4bd6014f37f4a4f974ab3"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ac57ee9ed35c4bd6014f37f4a4f974ab3">m_RDISepScale</a></td></tr>
-<tr class="memdesc:ac57ee9ed35c4bd6014f37f4a4f974ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling to apply to fake planet separation in RDI. Would be ratio of wavelengths for SDI.  <br /></td></tr>
+<tr class="memitem:ac57ee9ed35c4bd6014f37f4a4f974ab3" id="r_ac57ee9ed35c4bd6014f37f4a4f974ab3"><td class="memItemLeft" align="right" valign="top">realT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ac57ee9ed35c4bd6014f37f4a4f974ab3">m_RDISepScale</a> { 1 }</td></tr>
 <tr class="separator:ac57ee9ed35c4bd6014f37f4a4f974ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a195ffa54c21b4b78d4679f449cdf2ddd" id="r_a195ffa54c21b4b78d4679f449cdf2ddd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#a195ffa54c21b4b78d4679f449cdf2ddd">injectFake</a> (<a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; realT &gt; &amp;ims, std::vector&lt; std::string &gt; &amp;fileList, derotFunctObj &amp;derotF, realT RDIfluxScale, realT RDISepScale)</td></tr>
-<tr class="memdesc:a195ffa54c21b4b78d4679f449cdf2ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inect the fake plants.  <br /></td></tr>
+<tr class="memdesc:a195ffa54c21b4b78d4679f449cdf2ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inkect the fake plants.  <br /></td></tr>
 <tr class="separator:a195ffa54c21b4b78d4679f449cdf2ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52db1a61ce3184fa543606828f1e552" id="r_ae52db1a61ce3184fa543606828f1e552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html#ae52db1a61ce3184fa543606828f1e552">injectFake</a> (eigenImageT &amp;fakePSF, <a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; realT &gt; &amp;ims, int image_i, realT derotAngle, realT PA, realT sep, realT contrast, realT scale, realT RDIfluxScale, realT RDISepScale)</td></tr>
+<tr class="memdesc:ae52db1a61ce3184fa543606828f1e552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the fake planet into a single image.  <br /></td></tr>
+<tr class="separator:ae52db1a61ce3184fa543606828f1e552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -471,6 +478,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acfd56525f2446a952c37193c9976cb04 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_acfd56525f2446a952c37193c9976cb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#acfd56525f2446a952c37193c9976cb04">m_preProcess_gaussUSM_fwhm</a> { 0 }</td></tr>
 <tr class="memdesc:acfd56525f2446a952c37193c9976cb04 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel FWHM for symmetric Gaussian unsharp mask (USM)  <br /></td></tr>
 <tr class="separator:acfd56525f2446a952c37193c9976cb04 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d8a23da72741a19e98f86b2edeaecf inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a60d8a23da72741a19e98f86b2edeaecf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__hc__imaging__enums.html#ga890294240c6557c1faf0137c4ef1ce19">HCI::meanSubMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a60d8a23da72741a19e98f86b2edeaecf">m_preProcess_meanSubMethod</a> { <a class="el" href="group__hc__imaging__enums.html#gga890294240c6557c1faf0137c4ef1ce19a334c4a4c42fdb79d7ebc3e73b517e6f8">HCI::meanSubMethod::none</a> }</td></tr>
+<tr class="memdesc:a60d8a23da72741a19e98f86b2edeaecf inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mean subtraction method during pre-processing.  <br /></td></tr>
+<tr class="separator:a60d8a23da72741a19e98f86b2edeaecf inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3ecf7bc0b09787ed308f7dcb3328a2 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a9b3ecf7bc0b09787ed308f7dcb3328a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2">HCI::pixelTSNormMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a9b3ecf7bc0b09787ed308f7dcb3328a2">m_preProcess_pixelTSNormMethod</a> { <a class="el" href="namespacemx_1_1improc_1_1HCI.html#a7170f159586d1f8738838311eb8773e2a334c4a4c42fdb79d7ebc3e73b517e6f8">HCI::pixelTSNormMethod::none</a> }</td></tr>
+<tr class="memdesc:a9b3ecf7bc0b09787ed308f7dcb3328a2 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify if each pixel time-series is normalized.  <br /></td></tr>
+<tr class="separator:a9b3ecf7bc0b09787ed308f7dcb3328a2 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48db0843efe359642fa57174a17268df inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a48db0843efe359642fa57174a17268df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a0e9943fe7020609c6969d205cc02977e">realT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a48db0843efe359642fa57174a17268df">m_pixelTSSigma</a> { 3 }</td></tr>
+<tr class="memdesc:a48db0843efe359642fa57174a17268df inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sigma-clipping parameter for pixel time-series normalization.  <br /></td></tr>
+<tr class="separator:a48db0843efe359642fa57174a17268df inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4280e70bb553a5bba6c2617df594bcff inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a4280e70bb553a5bba6c2617df594bcff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a4280e70bb553a5bba6c2617df594bcff">m_preProcess_outputPrefix</a></td></tr>
 <tr class="memdesc:a4280e70bb553a5bba6c2617df594bcff inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path and file prefix to output the pre-processed images.  <br /></td></tr>
 <tr class="separator:a4280e70bb553a5bba6c2617df594bcff inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -491,7 +507,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a7116ccd6d4c5af44f66733302f24922a inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_a7116ccd6d4c5af44f66733302f24922a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a7116ccd6d4c5af44f66733302f24922a">m_auxDataDir</a> { &quot;/tmp/klipReduceAux/&quot; }</td></tr>
 <tr class="memdesc:a7116ccd6d4c5af44f66733302f24922a inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location for temporary auxilliary output files (e.g. masks)  <br /></td></tr>
 <tr class="separator:a7116ccd6d4c5af44f66733302f24922a inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_ad55f01a04f1e6bddb1c8385ad9b3e4ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad55f01a04f1e6bddb1c8385ad9b3e4ef">m_moveAuxDataDir</a> {true}</td></tr>
+<tr class="memitem:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_ad55f01a04f1e6bddb1c8385ad9b3e4ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad55f01a04f1e6bddb1c8385ad9b3e4ef">m_moveAuxDataDir</a> { true }</td></tr>
 <tr class="memdesc:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to move the temp. aux files.  <br /></td></tr>
 <tr class="separator:ad55f01a04f1e6bddb1c8385ad9b3e4ef inherit pub_attribs_structmx_1_1improc_1_1HCIobservation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb46d49228f0d70e1a84440bc13772a6 inherit pub_attribs_structmx_1_1improc_1_1HCIobservation" id="r_adb46d49228f0d70e1a84440bc13772a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmx_1_1improc_1_1HCIobservation.html#adb46d49228f0d70e1a84440bc13772a6">m_doWriteFinim</a> { 1 }</td></tr>
@@ -555,7 +571,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00225">225</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00240">240</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +607,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00233">233</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00248">248</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -658,7 +674,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00239">239</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00254">254</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -697,7 +713,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00250">250</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00265">265</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -721,14 +737,14 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>De-rotate the PSF subtracted images. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00637">637</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00664">664</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, and <a class="el" href="imageTransforms_8hpp_source.html#l00193">mx::improc::imageRotate()</a>.</p>
+<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, and <a class="el" href="imageTransforms_8hpp_source.html#l00194">mx::improc::imageRotate()</a>.</p>
 
 </div>
 </div>
 <a id="a195ffa54c21b4b78d4679f449cdf2ddd" name="a195ffa54c21b4b78d4679f449cdf2ddd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a195ffa54c21b4b78d4679f449cdf2ddd">&#9670;&#160;</a></span>injectFake()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a195ffa54c21b4b78d4679f449cdf2ddd">&#9670;&#160;</a></span>injectFake() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -773,7 +789,10 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Inect the fake plants. </p>
+<p>Inkect the fake plants. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000048">Todo:</a></b></dt><dd><p class="startdd">should pad the fake before calling the single image version </p>
+<p class="enddd">throw exceptions for all errors, and switch to void </p>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">ims</td><td>[in.out] the image cube in which to inject the fakes.  </td></tr>
@@ -784,9 +803,96 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00441">441</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00468">468</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00030">mx::improc::HCI::list</a>, <a class="el" href="fileUtils_8cpp_source.html#l00071">mx::ioutils::pathFilename()</a>, <a class="el" href="fitsFile_8hpp_source.html#l00825">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="readColumns_8hpp_source.html#l00138">mx::ioutils::readColumns()</a>, and <a class="el" href="ADIobservation_8hpp_source.html#l00029">mx::improc::HCI::single</a>.</p>
+<p class="reference">References <a class="el" href="timeUtils_8hpp_source.html#l00090">mx::sys::get_curr_time()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00030">mx::improc::HCI::list</a>, <a class="el" href="fileUtils_8cpp_source.html#l00071">mx::ioutils::pathFilename()</a>, <a class="el" href="fitsFile_8hpp_source.html#l00829">mx::fits::fitsFile&lt; dataT &gt;::read()</a>, <a class="el" href="readColumns_8hpp_source.html#l00138">mx::ioutils::readColumns()</a>, and <a class="el" href="ADIobservation_8hpp_source.html#l00029">mx::improc::HCI::single</a>.</p>
+
+</div>
+</div>
+<a id="ae52db1a61ce3184fa543606828f1e552" name="ae52db1a61ce3184fa543606828f1e552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52db1a61ce3184fa543606828f1e552">&#9670;&#160;</a></span>injectFake() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _realT , class _derotFunctObj &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structmx_1_1improc_1_1ADIobservation.html">mx::improc::ADIobservation</a>&lt; _realT, _derotFunctObj &gt;::injectFake </td>
+          <td>(</td>
+          <td class="paramtype">eigenImageT &amp;&#160;</td>
+          <td class="paramname"><em>fakePSF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmx_1_1improc_1_1eigenCube.html">eigenCube</a>&lt; realT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>derotAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>PA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>sep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>contrast</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>RDIfluxScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">realT&#160;</td>
+          <td class="paramname"><em>RDISepScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inject the fake planet into a single image. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd><p class="startdd">should pad the fake before this point </p>
+<p class="enddd">throw exceptions for all errors, and switch to void </p>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00559">559</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="imagePads_8hpp_source.html#l00275">mx::improc::cutPaddedImage()</a>, <a class="el" href="geo_8hpp_source.html#l00138">mx::math::dtor()</a>, <a class="el" href="eigenCube_8hpp_source.html#l00382">mx::improc::eigenCube&lt; dataT &gt;::image()</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00462">mx::improc::imageShift()</a>, and <a class="el" href="imagePads_8hpp_source.html#l00058">mx::improc::padImage()</a>.</p>
 
 </div>
 </div>
@@ -825,9 +931,9 @@ template&lt;typename realT , class derotFunctObj &gt; </div>
 
 <p>Reimplemented from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#acda6d3229e537d1207d4e90b07ae332f">mx::improc::HCIobservation&lt; _realT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00595">595</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00622">622</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00052">mx::ioutils::createDirectories()</a>, <a class="el" href="imageMasks_8hpp_source.html#l00877">mx::improc::rotateMask()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01318">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00052">mx::ioutils::createDirectories()</a>, <a class="el" href="imageMasks_8hpp_source.html#l01009">mx::improc::rotateMask()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l01329">mx::fits::fitsFile&lt; dataT &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -861,7 +967,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Reimplemented from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#a94e90ffa44d8fb55d308afd0cf816151">mx::improc::HCIobservation&lt; _realT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00300">300</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00327">327</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -895,7 +1001,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Reimplemented from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#adf5d93b78a2eeef63615e749f03470b2">mx::improc::HCIobservation&lt; _realT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00344">344</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00371">371</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -928,7 +1034,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Reimplemented from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ac608658213c0843e6a518c4997430e4a">mx::improc::HCIobservation&lt; _realT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00331">331</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00358">358</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -957,11 +1063,19 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Post target read actions, including fake injection. </p>
+<p>Actions to take after the files are first read in by <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a>. </p>
+<p>Exracts the angle keywords from the FITS headers, and checks that a valid value is found for each file. Performs fake planet injectio if configured.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>returns -1 if an error occurs. </p>
 
 <p>Reimplemented from <a class="el" href="structmx_1_1improc_1_1HCIobservation.html#ad2fdb1f25a15d2491153331eb9862930">mx::improc::HCIobservation&lt; _realT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00283">283</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00298">298</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -985,7 +1099,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 <p>Read in the target files. </p>
 <p>First sets up the keywords, then calls <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a> readFiles </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00257">257</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00272">272</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1032,9 +1146,9 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 <p>Read in already PSF-subtracted files. </p>
 <p>Used to take up final processing after applying some non-klipReduce processing steps to PSF-subtracted images. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00351">351</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00378">378</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00095">mx::fits::fitsHeader::count()</a>, <a class="el" href="fileUtils_8cpp_source.html#l00164">mx::ioutils::getFileNames()</a>, <a class="el" href="stringUtils_8hpp_source.html#l00282">mx::ioutils::parseStringVector()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l00825">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="fitsHeader_8cpp_source.html#l00095">mx::fits::fitsHeader::count()</a>, <a class="el" href="fileUtils_8cpp_source.html#l00164">mx::ioutils::getFileNames()</a>, <a class="el" href="stringUtils_8hpp_source.html#l00282">mx::ioutils::parseStringVector()</a>, and <a class="el" href="fitsFile_8hpp_source.html#l00829">mx::fits::fitsFile&lt; dataT &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +1172,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 <p>Read in the RDI files. </p>
 <p>First sets up the keywords, then calls <a class="el" href="structmx_1_1improc_1_1HCIobservation.html" title="The basic high contrast imaging data type.">HCIobservation</a> readRDIFiles </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00307">307</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00334">334</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1193,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Contrast(s) of the fake planet(s) </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00175">175</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00181">181</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1213,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>FITS file containing the fake planet PSF to inject or a list of fake images. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00169">169</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00175">175</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1233,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Method for reading fake files, either <a class="el" href="group__hc__imaging__enums.html#ggaa4632f2eeb028535ac549ddc8b2a80d8a921f15cfa93e1e38a928077036ac7854" title="A single PSF is used.">HCI::single</a> or <a class="el" href="group__hc__imaging__enums.html#ggaa4632f2eeb028535ac549ddc8b2a80d8aa7fdb9121f22a6140916828b4a4b7664" title="A list of PSF files, one per input image, is used.">HCI::list</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00167">167</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00173">173</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1253,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Position angles(s) of the fake planet(s) </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00174">174</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00180">180</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1273,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>One-column text file containing a scale factor for each point in time. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00171">171</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00177">177</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1293,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 
 <p>Separation(s) of the fake planet(s) </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00173">173</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00179">179</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1192,16 +1306,13 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 template&lt;typename _realT , class _derotFunctObj &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1improc_1_1ADIobservation.html">mx::improc::ADIobservation</a>&lt; _realT, _derotFunctObj &gt;::m_RDIFluxScale</td>
+          <td class="memname">realT <a class="el" href="structmx_1_1improc_1_1ADIobservation.html">mx::improc::ADIobservation</a>&lt; _realT, _derotFunctObj &gt;::m_RDIFluxScale { 1 }</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">        1 }</div>
-</div><!-- fragment -->
 <p>Flux scaling to apply to fake planets injected in RDI. Would depend on the assumed spectrum in SDI. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00177">177</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00183">183</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1214,16 +1325,13 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 template&lt;typename _realT , class _derotFunctObj &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">realT <a class="el" href="structmx_1_1improc_1_1ADIobservation.html">mx::improc::ADIobservation</a>&lt; _realT, _derotFunctObj &gt;::m_RDISepScale</td>
+          <td class="memname">realT <a class="el" href="structmx_1_1improc_1_1ADIobservation.html">mx::improc::ADIobservation</a>&lt; _realT, _derotFunctObj &gt;::m_RDISepScale { 1 }</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">        1 }</div>
-</div><!-- fragment -->
 <p>Scaling to apply to fake planet separation in RDI. Would be ratio of wavelengths for SDI. </p>
 
-<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00179">179</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ADIobservation_8hpp_source.html#l00185">185</a> of file <a class="el" href="ADIobservation_8hpp_source.html">ADIobservation.hpp</a>.</p>
 
 </div>
 </div>
@@ -1236,7 +1344,7 @@ template&lt;typename _realT , class _derotFunctObj &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>improc</b></li><li class="navelem"><a class="el" href="structmx_1_1improc_1_1ADIobservation.html">ADIobservation</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:44 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

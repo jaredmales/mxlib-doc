@@ -151,19 +151,27 @@ $(document).ready(function(){initNavTree('imageXCorr_8hpp_source.html',''); init
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>improc</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">enum class</span> xcorrPeakMethod</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    centerOfLight,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    gaussFit,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    interpPeak,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    none</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace improc</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace mx</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">// imageXCorr_hpp</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"></span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/// Methods for finding the cross-correlation peak</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"></span><span class="comment">/**</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">  * \ingroup image_reg</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">  */</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">   39</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    centerOfLight,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    gaussFit,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    interpPeak,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    mftOversamp,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    none</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace improc</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace mx</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// imageXCorr_hpp</span></div>
+<div class="ttc" id="agroup__image__reg_html_ga9c13cefccbf12a4c920c19ecc9428954"><div class="ttname"><a href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">mx::improc::xcorrPeakMethod</a></div><div class="ttdeci">xcorrPeakMethod</div><div class="ttdoc">Methods for finding the cross-correlation peak.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorr_8hpp_source.html#l00039">imageXCorr.hpp:40</a></div></div>
 <div class="ttc" id="anamespacemx_html"><div class="ttname"><a href="namespacemx.html">mx</a></div><div class="ttdoc">The mxlib c++ namespace.</div><div class="ttdef"><b>Definition</b> <a href="mxError_8hpp_source.html#l00105">mxError.hpp:106</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -171,7 +179,7 @@ $(document).ready(function(){initNavTree('imageXCorr_8hpp_source.html',''); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageXCorr_8hpp.html">imageXCorr.hpp</a></li>
-    <li class="footer">Generated on Wed Jan 1 2025 23:00:43 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

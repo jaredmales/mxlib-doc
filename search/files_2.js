@@ -11,5 +11,8 @@ var searchData=
   ['cloptions_2ehpp_8',['clOptions.hpp',['../clOptions_8hpp.html',1,'']]],
   ['configtarget_2ehpp_9',['configTarget.hpp',['../configTarget_8hpp.html',1,'']]],
   ['constants_2ehpp_10',['constants.hpp',['../astro_2constants_8hpp.html',1,'']]],
-  ['cudaptr_2ehpp_11',['cudaPtr.hpp',['../cudaPtr_8hpp.html',1,'']]]
+  ['cublashandle_2ehpp_11',['cublasHandle.hpp',['../cublasHandle_8hpp.html',1,'']]],
+  ['cudaptr_2ehpp_12',['cudaPtr.hpp',['../cudaPtr_8hpp.html',1,'']]],
+  ['cusolverdnhandle_2ehpp_13',['cusolverDnHandle.hpp',['../cusolverDnHandle_8hpp.html',1,'']]],
+  ['cusolverdnparams_2ehpp_14',['cusolverDnParams.hpp',['../cusolverDnParams_8hpp.html',1,'']]]
 ];

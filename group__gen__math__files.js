@@ -10,6 +10,7 @@ var group__gen__math__files =
     [ "gslInterpolator.hpp", "gslInterpolator_8hpp.html", null ],
     [ "histogramUniform.hpp", "histogramUniform_8hpp.html", null ],
     [ "logInterpolator.hpp", "logInterpolator_8hpp.html", null ],
+    [ "point2D.hpp", "point2D_8hpp.html", null ],
     [ "radprofIntegral.hpp", "radprofIntegral_8hpp.html", null ],
     [ "randomSeed.hpp", "randomSeed_8hpp.html", null ],
     [ "randomT.hpp", "randomT_8hpp.html", null ],
