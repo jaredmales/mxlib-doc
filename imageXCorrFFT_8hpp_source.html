@@ -1128,336 +1128,325 @@ $(document).ready(function(){initNavTree('imageXCorrFFT_8hpp_source.html',''); i
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span> </div>
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    m_mag = ( m_magSize - 1.0 ) / ( ( 2. * m_maxLag + 1 ) - 1.0 );</div>
 <div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    <span class="keywordflow">if</span>( m_refIm.rows() != m_rows || m_refIm.cols() != m_cols || m_rows == 0 || m_cols == 0 )</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span> </div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    <span class="comment">// Find the reference shift</span></div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    m_refX0 = 0;</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    m_refY0 = 0;</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    operator()( m_refX0, m_refY0, m_refIm );</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>}</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    m_refValid = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span> </div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>}</div>
 </div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span> </div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span><span class="keywordtype">void</span> <a class="code hl_class" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT&lt;realImageT&gt;::peakMethod</a>( <a class="code hl_enumeration" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a> xpm )</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>{</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    m_peakMethod = xpm;</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span> </div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    <span class="keywordflow">if</span>( xpm == xcorrPeakMethod::mftOversamp )</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>    {</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        m_refValid = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    }</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span> </div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>    <span class="keywordflow">if</span>( m_refIm.rows() != m_rows || m_refIm.cols() != m_cols || m_rows == 0 || m_cols == 0 )</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    {</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    }</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span><span class="keywordtype">void</span> <a class="code hl_class" href="classmx_1_1improc_1_1imageXCorrFFT.html">imageXCorrFFT&lt;realImageT&gt;::peakMethod</a>( <a class="code hl_enumeration" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a> xpm )</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>{</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keywordflow">if</span>(xpm != m_peakMethod)</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>    {</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        m_peakMethod = xpm;</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span> </div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>        m_refValid = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    }</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    </div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>}</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span> </div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span><a class="code hl_enumeration" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a> imageXCorrFFT&lt;realImageT&gt;::peakMethod()</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>{</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <span class="keywordflow">return</span> m_peakMethod;</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>}</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span> </div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    <span class="comment">// Find the reference shift</span></div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    m_refX0 = 0;</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    m_refY0 = 0;</div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    operator()( m_refX0, m_refY0, m_refIm );</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
+<div class="foldopen" id="foldopen00973" data-start="{" data-end="}">
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a8e2ae4ad8895ab90b616219c962f4083">  973</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a8e2ae4ad8895ab90b616219c962f4083">imageXCorrFFT&lt;realImageT&gt;::refACIm</a>()</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>{</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <span class="keywordflow">return</span> m_refACIm;</div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>}</div>
+</div>
 <div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span> </div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span><a class="code hl_enumeration" href="group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954">xcorrPeakMethod</a> imageXCorrFFT&lt;realImageT&gt;::peakMethod()</div>
+<div class="foldopen" id="foldopen00979" data-start="{" data-end="}">
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e2846b355b0cc6963a00d6fe9b59bdb">  979</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">imageXCorrFFT&lt;realImageT&gt;::realT</a> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e2846b355b0cc6963a00d6fe9b59bdb">imageXCorrFFT&lt;realImageT&gt;::refX0</a>()</div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>{</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    <span class="keywordflow">return</span> m_peakMethod;</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    <span class="keywordflow">return</span> m_refX0;</div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>}</div>
+</div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span> </div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
 <div class="foldopen" id="foldopen00985" data-start="{" data-end="}">
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a8e2ae4ad8895ab90b616219c962f4083">  985</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a8e2ae4ad8895ab90b616219c962f4083">imageXCorrFFT&lt;realImageT&gt;::refACIm</a>()</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad4ee5b1d41a409d30d129556e7ec3123">  985</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">imageXCorrFFT&lt;realImageT&gt;::realT</a> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad4ee5b1d41a409d30d129556e7ec3123">imageXCorrFFT&lt;realImageT&gt;::refY0</a>()</div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>{</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>    <span class="keywordflow">return</span> m_refACIm;</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>    <span class="keywordflow">return</span> m_refY0;</div>
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>}</div>
 </div>
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span> </div>
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
 <div class="foldopen" id="foldopen00991" data-start="{" data-end="}">
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e2846b355b0cc6963a00d6fe9b59bdb">  991</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">imageXCorrFFT&lt;realImageT&gt;::realT</a> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e2846b355b0cc6963a00d6fe9b59bdb">imageXCorrFFT&lt;realImageT&gt;::refX0</a>()</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#af928829876f8341133a20affcda917d9">  991</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#af928829876f8341133a20affcda917d9">imageXCorrFFT&lt;realImageT&gt;::normIm</a>()</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>{</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    <span class="keywordflow">return</span> m_refX0;</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    <span class="keywordflow">return</span> m_normIm;</div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>}</div>
 </div>
 <div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span> </div>
 <div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
 <div class="foldopen" id="foldopen00997" data-start="{" data-end="}">
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad4ee5b1d41a409d30d129556e7ec3123">  997</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">imageXCorrFFT&lt;realImageT&gt;::realT</a> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad4ee5b1d41a409d30d129556e7ec3123">imageXCorrFFT&lt;realImageT&gt;::refY0</a>()</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a90b3d8fa1603c6380c33bfbfc47471e4">  997</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a90b3d8fa1603c6380c33bfbfc47471e4">imageXCorrFFT&lt;realImageT&gt;::ccIm</a>()</div>
 <div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>{</div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    <span class="keywordflow">return</span> m_refY0;</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    <span class="keywordflow">return</span> m_ccIm;</div>
 <div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>}</div>
 </div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span> </div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
 <div class="foldopen" id="foldopen01003" data-start="{" data-end="}">
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#af928829876f8341133a20affcda917d9"> 1003</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#af928829876f8341133a20affcda917d9">imageXCorrFFT&lt;realImageT&gt;::normIm</a>()</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad37c6a8fe6f7046337ee603b3bc22cc2"> 1003</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad37c6a8fe6f7046337ee603b3bc22cc2">imageXCorrFFT&lt;realImageT&gt;::magIm</a>()</div>
 <div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>{</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <span class="keywordflow">return</span> m_normIm;</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <span class="keywordflow">return</span> m_magIm;</div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>}</div>
 </div>
 <div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span> </div>
 <div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
 <div class="foldopen" id="foldopen01009" data-start="{" data-end="}">
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a90b3d8fa1603c6380c33bfbfc47471e4"> 1009</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a90b3d8fa1603c6380c33bfbfc47471e4">imageXCorrFFT&lt;realImageT&gt;::ccIm</a>()</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#afdffc5bd28da0066a015e4f5ef73c209"> 1009</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#afdffc5bd28da0066a015e4f5ef73c209">imageXCorrFFT&lt;realImageT&gt;::findPeak</a>( <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;xShift, <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;yShift )</div>
 <div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>{</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>    <span class="keywordflow">return</span> m_ccIm;</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>}</div>
-</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span> </div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
-<div class="foldopen" id="foldopen01015" data-start="{" data-end="}">
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad37c6a8fe6f7046337ee603b3bc22cc2"> 1015</a></span><span class="keyword">const</span> <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">realImageT</a> &amp;<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad37c6a8fe6f7046337ee603b3bc22cc2">imageXCorrFFT&lt;realImageT&gt;::magIm</a>()</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>{</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    <span class="keywordflow">return</span> m_magIm;</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>}</div>
-</div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span> </div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
-<div class="foldopen" id="foldopen01021" data-start="{" data-end="}">
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#afdffc5bd28da0066a015e4f5ef73c209"> 1021</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#afdffc5bd28da0066a015e4f5ef73c209">imageXCorrFFT&lt;realImageT&gt;::findPeak</a>( <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;xShift, <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;yShift )</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>{</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keywordtype">int</span> xLag0, yLag0;</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span> </div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>    <span class="comment">/*realImageT sm = m_ccIm;</span></div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span><span class="comment">    filterImage(sm, m_ccIm, gaussKernel&lt;eigenImage&lt;realT&gt;, 2&gt;(3));</span></div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span><span class="comment">    m_ccIm = sm;*/</span></div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span> </div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>    <span class="comment">// m_ccIm = m_ccIm.pow(3);</span></div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> pk = m_ccIm.maxCoeff( &amp;xLag0, &amp;yLag0 );</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> mn = m_ccIm.minCoeff();</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span> </div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    <span class="keywordflow">if</span>( xLag0 - m_maxLag &lt; 0 )</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>    <span class="keywordtype">int</span> xLag0, yLag0;</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span> </div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>    <span class="comment">/*realImageT sm = m_ccIm;</span></div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span><span class="comment">    filterImage(sm, m_ccIm, gaussKernel&lt;eigenImage&lt;realT&gt;, 2&gt;(3));</span></div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span><span class="comment">    m_ccIm = sm;*/</span></div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span> </div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    <span class="comment">// m_ccIm = m_ccIm.pow(3);</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> pk = m_ccIm.maxCoeff( &amp;xLag0, &amp;yLag0 );</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> mn = m_ccIm.minCoeff();</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span> </div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    <span class="keywordflow">if</span>( xLag0 - m_maxLag &lt; 0 )</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    {</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>        m_maxLag = xLag0;</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    }</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>    <span class="keywordflow">if</span>( xLag0 + 2 * m_maxLag + 1 &gt;= m_ccIm.rows() )</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>    {</div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>        m_maxLag = ( m_ccIm.rows() - 1 - xLag0 ) / 2;</div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>    }</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>    <span class="keywordflow">if</span>( yLag0 - m_maxLag &lt; 0 )</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>    {</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>        m_maxLag = yLag0;</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    }</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    <span class="keywordflow">if</span>( yLag0 + 2 * m_maxLag + 1 &gt;= m_ccIm.cols() )</div>
 <div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    {</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>        m_maxLag = xLag0;</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>        m_maxLag = ( m_ccIm.cols() - 1 - yLag0 ) / 2;</div>
 <div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>    }</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    <span class="keywordflow">if</span>( xLag0 + 2 * m_maxLag + 1 &gt;= m_ccIm.rows() )</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    {</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>        m_maxLag = ( m_ccIm.rows() - 1 - xLag0 ) / 2;</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>    }</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    <span class="keywordflow">if</span>( yLag0 - m_maxLag &lt; 0 )</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span> </div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> x0 = xLag0 - m_maxLag;</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> y0 = yLag0 - m_maxLag;</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span> </div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::gaussFit )</div>
 <div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    {</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>        m_maxLag = yLag0;</div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    }</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    <span class="keywordflow">if</span>( yLag0 + 2 * m_maxLag + 1 &gt;= m_ccIm.cols() )</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    {</div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>        m_maxLag = ( m_ccIm.cols() - 1 - yLag0 ) / 2;</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    }</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> x0 = xLag0 - m_maxLag;</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> y0 = yLag0 - m_maxLag;</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span> </div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::gaussFit )</div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    {</div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>        m_magIm = m_ccIm.block( x0, y0, 2 * m_maxLag + 1, 2 * m_maxLag + 1 );</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>        m_fitter.setArray( m_magIm.data(), m_magIm.rows(), m_magIm.cols() );</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        m_magIm.maxCoeff( &amp;xLag0, &amp;yLag0 );</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span> </div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>        m_fitter.setGuess( mn, pk - mn, m_maxLag, m_maxLag, 3, 3, 0 );</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>        m_fitter.fit();</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>        m_magIm = m_ccIm.block( x0, y0, 2 * m_maxLag + 1, 2 * m_maxLag + 1 );</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span> </div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>        m_fitter.setArray( m_magIm.data(), m_magIm.rows(), m_magIm.cols() );</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>        m_magIm.maxCoeff( &amp;xLag0, &amp;yLag0 );</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span> </div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>        m_fitter.setGuess( mn, pk - mn, m_maxLag, m_maxLag, 3, 3, 0 );</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>        m_fitter.fit();</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span> </div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>        x0 = ( m_fitter.x0() + x0 );</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>        y0 = ( m_fitter.y0() + y0 );</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    }</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::interpPeak )</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>    {</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>        m_magIm.<a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#a3c036b644f86e63a04c4c1797a880110">resize</a>( m_magSize, m_magSize );</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span> </div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        <a class="code hl_function" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">imageMagnify</a>( m_magIm,</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>                      m_ccIm.block( x0, y0, 2 * m_maxLag + 1, 2 * m_maxLag + 1 ),</div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>                      <a class="code hl_struct" href="structmx_1_1improc_1_1cubicConvolTransform.html">cubicConvolTransform&lt;realT&gt;</a>() );</div>
 <div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span> </div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>        x0 = ( m_fitter.x0() + x0 );</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        y0 = ( m_fitter.y0() + y0 );</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    }</div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::interpPeak )</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    {</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>        <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>        m_magIm.resize( m_magSize, m_magSize );</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>        m_magIm.maxCoeff( &amp;x, &amp;y );</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        x0 = ( x * ( 1.0 / m_mag ) + x0 );</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        y0 = ( y * ( 1.0 / m_mag ) + y0 );</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    }</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::centerOfLight )</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    {</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>        <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> x, y;</div>
 <div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span> </div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>        <a class="code hl_function" href="group__image__transforms.html#ga3e35a0db70c18656ab9f54558e8bd694">imageMagnify</a>( m_magIm,</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                      m_ccIm.block( x0, y0, 2 * m_maxLag + 1, 2 * m_maxLag + 1 ),</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                      <a class="code hl_struct" href="structmx_1_1improc_1_1cubicConvolTransform.html">cubicConvolTransform&lt;realT&gt;</a>() );</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span> </div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>        m_magIm.maxCoeff( &amp;x, &amp;y );</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>        x0 = ( x * ( 1.0 / m_mag ) + x0 );</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>        y0 = ( y * ( 1.0 / m_mag ) + y0 );</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>        m_magIm = m_ccIm.block( x0, y0, 2 * m_maxLag + 1, 2 * m_maxLag + 1 );</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>        m_magIm -= m_magIm.minCoeff(); <span class="comment">// Must sum to &gt; 0.</span></div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span> </div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>        <a class="code hl_function" href="group__image__utils.html#ga8ec38405f24ea85bc1ef32febad31dbf">imageCenterOfLight</a>( x, y, m_magIm );</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span> </div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>        x0 = ( x + x0 );</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>        y0 = ( y + y0 );</div>
 <div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    }</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::centerOfLight )</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::mftOversamp )</div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>    {</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>        <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> x, y;</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span> </div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>        m_magIm = m_ccIm.block( x0, y0, 2 * m_maxLag + 1, 2 * m_maxLag + 1 );</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>        m_magIm -= m_magIm.minCoeff(); <span class="comment">// Must sum to &gt; 0.</span></div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>        <a class="code hl_function" href="group__image__utils.html#ga8ec38405f24ea85bc1ef32febad31dbf">imageCenterOfLight</a>( x, y, m_magIm );</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span> </div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>        x0 = ( x + x0 );</div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>        y0 = ( y + y0 );</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    }</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::mftOversamp )</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>    {</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>        <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        m_ccIm.maxCoeff( &amp;x, &amp;y );</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>        <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>        m_ccIm.maxCoeff( &amp;x, &amp;y );</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span> </div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>        <span class="keywordflow">if</span>( m_refX0 == 0 &amp;&amp; m_refY0 == 0 ) <span class="comment">// reference finding</span></div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>        {</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>            x0 = x;</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>            y0 = y;</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>        }</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>        {</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>            x = x / m_padFactorR - m_refX0;</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>            y = y / m_padFactorC - m_refY0;</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span> </div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> mag = 1.0 / m_tol;          <span class="comment">// m_mag is the effective mag for interpPeak...</span></div>
 <div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span> </div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>        <span class="keywordflow">if</span>( m_refX0 == 0 &amp;&amp; m_refY0 == 0 ) <span class="comment">// reference finding</span></div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>        {</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>            x0 = x;</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>            y0 = y;</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>        }</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>        {</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>            x = x / m_padFactorR - m_refX0;</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>            y = y / m_padFactorC - m_refY0;</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> tmagR = mag * m_padFactorR; <span class="comment">// the total mag</span></div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> tmagC = mag * m_padFactorC; <span class="comment">// the total mag</span></div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span> </div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> shiftx0 = -1 * ( m_refX0 * m_padFactorR ) * ( mag - 1 ) - x * tmagR;</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> shifty0 = -1 * ( m_refY0 * m_padFactorC ) * ( mag - 1 ) - y * tmagC;</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span> </div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>            m_mft_bwd.plan( m_rowsPadded, m_colsPadded, <a class="code hl_enumvalue" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502">math::ft::dir::backward</a>, shiftx0, shifty0, mag );</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span><span class="preprocessor">#ifdef XCFFT_C2C</span></div>
 <div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span> </div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> mag = 1.0 / m_tol;          <span class="comment">// m_mag is the effective mag for interpPeak...</span></div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>            m_mft_bwd( m_ftWorkPaddedOut, m_ftWorkPadded );</div>
 <div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span> </div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> tmagR = mag * m_padFactorR; <span class="comment">// the total mag</span></div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> tmagC = mag * m_padFactorC; <span class="comment">// the total mag</span></div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span> </div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> shiftx0 = -1 * ( m_refX0 * m_padFactorR ) * ( mag - 1 ) - x * tmagR;</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> shifty0 = -1 * ( m_refY0 * m_padFactorC ) * ( mag - 1 ) - y * tmagC;</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span> </div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>            m_mtWorkPadded.resize( m_rowsPadded, m_colsPadded );</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>            m_mtWorkPadded.setZero();</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>            <a class="code hl_function" href="group__ft.html#gab5f77caf9762acbfee0d498d21bc8e58">math::ft::augmentR2CFFTOutput</a>( m_mtWorkPadded, m_ftWork );</div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span> </div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>            m_mft_bwd.plan( m_rowsPadded, m_colsPadded, <a class="code hl_enumvalue" href="group__ft.html#gga4b7a7442a046a37b8cc8a8e0f9a86696a195fe59b6f103787a914aead0f3db502">math::ft::dir::backward</a>, shiftx0, shifty0, mag );</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>            m_mft_bwd( m_ftWorkPaddedOut, m_mtWorkPadded );</div>
 <div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span> </div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span><span class="preprocessor">#ifdef XCFFT_C2C</span></div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span> </div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>            m_mft_bwd( m_ftWorkPaddedOut, m_ftWorkPadded );</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>            m_magIm = m_ftWorkPaddedOut.real();</div>
 <div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span> </div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span> </div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>            m_mtWorkPadded.resize( m_rowsPadded, m_colsPadded );</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>            m_mtWorkPadded.setZero();</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>            <a class="code hl_function" href="group__ft.html#gab5f77caf9762acbfee0d498d21bc8e58">math::ft::augmentR2CFFTOutput</a>( m_mtWorkPadded, m_ftWork );</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>            <span class="keywordtype">int</span> xf, yf;</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>            m_magIm.maxCoeff( &amp;xf, &amp;yf );</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span> </div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>            xShift = x + ( xf - m_refX0 * m_padFactorR ) / tmagR;</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>            yShift = y + ( yf - m_refY0 * m_padFactorC ) / tmagC;</div>
 <div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span> </div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            m_mft_bwd( m_ftWorkPaddedOut, m_mtWorkPadded );</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span> </div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span> </div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>            m_magIm = m_ftWorkPaddedOut.real();</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>            <span class="keywordtype">int</span> xf, yf;</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>            m_magIm.maxCoeff( &amp;xf, &amp;yf );</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span> </div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>            xShift = x + ( xf - m_refX0 * m_padFactorR ) / tmagR;</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>            yShift = y + ( yf - m_refY0 * m_padFactorC ) / tmagC;</div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span> </div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>        }</div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>    }</div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::none )</div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>    {</div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>        <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>        m_ccIm.maxCoeff( &amp;x, &amp;y );</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>        x0 = x;</div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>        y0 = y;</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    }</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>    {</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1invalidconfig.html">mx::err::invalidconfig</a>, <span class="stringliteral">&quot;imageXCorrFFT::operator()&quot;</span>, <span class="stringliteral">&quot;unknown peak finding method&quot;</span> );</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>    }</div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span> </div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    <span class="comment">//--&gt; unpad here, scaling the shifts</span></div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    xShift = x0 / m_padFactorR - m_refX0;</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    yShift = y0 / m_padFactorC - m_refY0;</div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>}</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>        }</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>    }</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( m_peakMethod == xcorrPeakMethod::none )</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    {</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>        <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>        m_ccIm.maxCoeff( &amp;x, &amp;y );</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>        x0 = x;</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>        y0 = y;</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>    }</div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>    {</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1invalidconfig.html">mx::err::invalidconfig</a>, <span class="stringliteral">&quot;imageXCorrFFT::operator()&quot;</span>, <span class="stringliteral">&quot;unknown peak finding method&quot;</span> );</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>    }</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span> </div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>    <span class="comment">//--&gt; unpad here, scaling the shifts</span></div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>    xShift = x0 / m_padFactorR - m_refX0;</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    yShift = y0 / m_padFactorC - m_refY0;</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>}</div>
 </div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span> </div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> imT&gt;</div>
-<div class="foldopen" id="foldopen01160" data-start="{" data-end="}">
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb"> 1160</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb">imageXCorrFFT&lt;realImageT&gt;::operator()</a>( <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;xShift, <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;yShift, <span class="keyword">const</span> imT &amp;im )</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>{</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    <span class="keywordflow">if</span>( !m_refValid )</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    {</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1invalidconfig.html">err::invalidconfig</a>, <span class="stringliteral">&quot;imageXCorrFFT&quot;</span>, <span class="stringliteral">&quot;reference image is not valid&quot;</span> );</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>    }</div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span> </div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>    <span class="keywordflow">if</span>( im.rows() != m_rows )</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    {</div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1sizeerr.html">err::sizeerr</a>, <span class="stringliteral">&quot;imageXCorrFFT&quot;</span>, <span class="stringliteral">&quot;image must be same size as reference (rows)&quot;</span> );</div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>    }</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span> </div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>    <span class="keywordflow">if</span>( im.cols() != m_cols )</div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>    {</div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1sizeerr.html">err::sizeerr</a>, <span class="stringliteral">&quot;imageXCorrFFT&quot;</span>, <span class="stringliteral">&quot;image must be same size as reference (rows)&quot;</span> );</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>    }</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span> </div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>    <span class="comment">// Mask and normalize as needed</span></div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>    <span class="keywordflow">if</span>( m_haveMask )</div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>    {</div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>        <span class="keywordflow">if</span>( m_normalize )</div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>        {</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> m = imageMean&lt;realT&gt;( im, m_maskIm );</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> v = imageVariance&lt;realT&gt;( im, m, m_maskIm );</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span> </div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>            m_normIm = ( im - m ) * m_maskIm / sqrt( v );</div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>        }</div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        {</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>            m_normIm = im * m_maskIm;</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        }</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>    }</div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>    {</div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span> </div>
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>        <span class="keywordflow">if</span>( m_normalize )</div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        {</div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> m = imageMean&lt;realT&gt;( m_normIm );</div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> v = imageVariance&lt;realT&gt;( m_normIm, m );</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>            m_normIm = ( im - m ) / sqrt( v );</div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>        }</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>        {</div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>            m_normIm = im;</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>        }</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>    }</div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>    <span class="keywordflow">if</span>( m_haveWindow )</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    {</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>        m_normIm *= m_winIm;</div>
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>    }</div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span> </div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span><span class="preprocessor">#ifdef XCFFT_C2C</span></div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    m_ftWorkIn = m_normIm.template cast&lt;complexT&gt;();</div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span> </div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> imT&gt;</div>
+<div class="foldopen" id="foldopen01148" data-start="{" data-end="}">
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb"> 1148</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb">imageXCorrFFT&lt;realImageT&gt;::operator()</a>( <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;xShift, <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;yShift, <span class="keyword">const</span> imT &amp;im )</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>{</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>    <span class="keywordflow">if</span>( !m_refValid )</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>    {</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1invalidconfig.html">err::invalidconfig</a>, <span class="stringliteral">&quot;imageXCorrFFT&quot;</span>, <span class="stringliteral">&quot;reference image is not valid&quot;</span> );</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    }</div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span> </div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    <span class="keywordflow">if</span>( im.rows() != m_rows )</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    {</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1sizeerr.html">err::sizeerr</a>, <span class="stringliteral">&quot;imageXCorrFFT&quot;</span>, <span class="stringliteral">&quot;image must be same size as reference (rows)&quot;</span> );</div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>    }</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span> </div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>    <span class="keywordflow">if</span>( im.cols() != m_cols )</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    {</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>        mxThrowException( <a class="code hl_class" href="classmx_1_1err_1_1sizeerr.html">err::sizeerr</a>, <span class="stringliteral">&quot;imageXCorrFFT&quot;</span>, <span class="stringliteral">&quot;image must be same size as reference (rows)&quot;</span> );</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    }</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span> </div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>    <span class="comment">// Mask and normalize as needed</span></div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>    <span class="keywordflow">if</span>( m_haveMask )</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>    {</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>        <span class="keywordflow">if</span>( m_normalize )</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>        {</div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> m = imageMean&lt;realT&gt;( im, m_maskIm );</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> v = imageVariance&lt;realT&gt;( im, m, m_maskIm );</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span> </div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>            m_normIm = ( im - m ) * m_maskIm / sqrt( v );</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>        }</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>        {</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>            m_normIm = im * m_maskIm;</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>        }</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>    }</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    {</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span> </div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>        <span class="keywordflow">if</span>( m_normalize )</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>        {</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> m = imageMean&lt;realT&gt;( im );</div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>            <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> v = imageVariance&lt;realT&gt;( im, m );</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span> </div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>            m_normIm = ( im - m ) / sqrt( v );</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>        }</div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>        {</div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>            m_normIm = im;</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>        }</div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>    }</div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span> </div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>    <span class="keywordflow">if</span>( m_haveWindow )</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>    {</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>        m_normIm *= m_winIm;</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>    }</div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span> </div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span><span class="preprocessor">#ifdef XCFFT_C2C</span></div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    m_ftWorkIn = m_normIm.template cast&lt;complexT&gt;();</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span> </div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    m_fft_fwd( m_ftWork.data(), m_ftWorkIn.data() );</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>    m_fft_fwd( m_ftWork.data(), m_normIm.data() );</div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>    <span class="comment">// m_ftIm0 is the conjugated, fftw-normalized, reference image in the Fourier domain</span></div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>    <span class="comment">// So this is the FT of the cross-correlation:</span></div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>    m_ftWork *= m_ftIm0;</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span> </div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    m_ftWorkPadded.setZero();</div>
 <div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span> </div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>    m_fft_fwd( m_ftWork.data(), m_ftWorkIn.data() );</div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>    m_fft_fwd( m_ftWork.data(), m_normIm.data() );</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span> </div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <span class="comment">// m_ftIm0 is the conjugated, fftw-normalized, reference image in the Fourier domain</span></div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>    <span class="comment">// So this is the FT of the cross-correlation:</span></div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>    m_ftWork *= m_ftIm0;</div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span> </div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    m_ftWorkPadded.setZero();</div>
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span> </div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span><span class="preprocessor">#ifdef XCFFT_C2C</span></div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span> </div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    <a class="code hl_function" href="group__ft.html#gae8fd8462b04d2eef6848a191b37b1437">math::ft::padC2CFFTOutput</a>( m_ftWorkPadded, m_ftWork );</div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span> </div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>    m_fft_bwd( m_ftWorkPaddedOut.data(), m_ftWorkPadded.data() );</div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span> </div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    m_ccIm = m_ftWorkPaddedOut.real();</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span> </div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span><span class="preprocessor">#ifdef XCFFT_C2C</span></div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span> </div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>    <a class="code hl_function" href="group__ft.html#gae8fd8462b04d2eef6848a191b37b1437">math::ft::padC2CFFTOutput</a>( m_ftWorkPadded, m_ftWork );</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span> </div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    m_fft_bwd( m_ftWorkPaddedOut.data(), m_ftWorkPadded.data() );</div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span> </div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>    m_ccIm = m_ftWorkPaddedOut.real();</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span> </div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    <a class="code hl_function" href="group__ft.html#gad9a204325b656949330d5a68dcebf3bc">math::ft::padR2CFFTOutput</a>( m_ftWorkPadded, m_ftWork );</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span> </div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>    m_fft_bwd( m_ccIm, m_ftWorkPadded );</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span> </div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span> </div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>    findPeak( xShift, yShift );</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span> </div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>}</div>
+</div>
 <div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span> </div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>    <a class="code hl_function" href="group__ft.html#gad9a204325b656949330d5a68dcebf3bc">math::ft::padR2CFFTOutput</a>( m_ftWorkPadded, m_ftWork );</div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span> </div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    m_fft_bwd( m_ccIm, m_ftWorkPadded );</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span> </div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span> </div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>    findPeak( xShift, yShift );</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> im0T, <span class="keyword">class</span> imT&gt;</div>
+<div class="foldopen" id="foldopen01238" data-start="{" data-end="}">
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5346e05fc1ed9ee945c5fadf55e23195"> 1238</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb">imageXCorrFFT&lt;realImageT&gt;::operator()</a>( <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;xShift, <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;yShift, im0T &amp;im0, imT &amp;im )</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>{</div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    setReference( im0 );</div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>    <span class="keywordflow">return</span> operator()( xShift, yShift, im );</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>}</div>
+</div>
 <div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span> </div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>}</div>
-</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>} <span class="comment">// namespace improc</span></div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>} <span class="comment">// namespace mx</span></div>
 <div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span> </div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> realImageT&gt;</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> im0T, <span class="keyword">class</span> imT&gt;</div>
-<div class="foldopen" id="foldopen01249" data-start="{" data-end="}">
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"><a class="line" href="classmx_1_1improc_1_1imageXCorrFFT.html#a5346e05fc1ed9ee945c5fadf55e23195"> 1249</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb">imageXCorrFFT&lt;realImageT&gt;::operator()</a>( <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;xShift, <a class="code hl_typedef" href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">realT</a> &amp;yShift, im0T &amp;im0, imT &amp;im )</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>{</div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>    setReference( im0 );</div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>    <span class="keywordflow">return</span> operator()( xShift, yShift, im );</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>}</div>
-</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span> </div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>} <span class="comment">// namespace improc</span></div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>} <span class="comment">// namespace mx</span></div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span> </div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span><span class="preprocessor">#endif </span><span class="comment">// imageXCorrFFT_hpp</span></div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span><span class="preprocessor">#endif </span><span class="comment">// imageXCorrFFT_hpp</span></div>
 <div class="ttc" id="aclassmx_1_1err_1_1invalidconfig_html"><div class="ttname"><a href="classmx_1_1err_1_1invalidconfig.html">mx::err::invalidconfig</a></div><div class="ttdoc">mxException for invalid config settings</div><div class="ttdef"><b>Definition</b> <a href="mxException_8hpp_source.html#l00199">mxException.hpp:200</a></div></div>
 <div class="ttc" id="aclassmx_1_1err_1_1sizeerr_html"><div class="ttname"><a href="classmx_1_1err_1_1sizeerr.html">mx::err::sizeerr</a></div><div class="ttdoc">mxException for a size error</div><div class="ttdef"><b>Definition</b> <a href="mxException_8hpp_source.html#l00251">mxException.hpp:252</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html">mx::improc::imageXCorrFFT</a></div><div class="ttdoc">Find the optimum shift to align two images using the FFT cross correlation.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00081">imageXCorrFFT.hpp:82</a></div></div>
@@ -1494,13 +1483,13 @@ $(document).ready(function(){initNavTree('imageXCorrFFT_8hpp_source.html',''); i
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a87c1c04e646764acd2a6dfd2615ff8a4"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a87c1c04e646764acd2a6dfd2615ff8a4">mx::improc::imageXCorrFFT::haveRefWindow</a></div><div class="ttdeci">bool haveRefWindow()</div><div class="ttdoc">Get the value of the haveRefWindow flag.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00761">imageXCorrFFT.hpp:761</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a8ab2ba7a254346f5e867f1fa81fe69d3"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a8ab2ba7a254346f5e867f1fa81fe69d3">mx::improc::imageXCorrFFT::m_ftWorkIn</a></div><div class="ttdeci">complexArrayT m_ftWorkIn</div><div class="ttdoc">Working memory for the FFT input.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00187">imageXCorrFFT.hpp:187</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a8b84c9cbfbd3dcbc987191c3bc3156de"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a8b84c9cbfbd3dcbc987191c3bc3156de">mx::improc::imageXCorrFFT::m_mft_bwd</a></div><div class="ttdeci">math::ft::mftT&lt; complexT, complexT, 2 &gt; m_mft_bwd</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00200">imageXCorrFFT.hpp:200</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a8e2ae4ad8895ab90b616219c962f4083"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a8e2ae4ad8895ab90b616219c962f4083">mx::improc::imageXCorrFFT::refACIm</a></div><div class="ttdeci">const realImageT &amp; refACIm()</div><div class="ttdoc">Get a reference to the reference auto-correlation image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00985">imageXCorrFFT.hpp:985</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a90b3d8fa1603c6380c33bfbfc47471e4"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a90b3d8fa1603c6380c33bfbfc47471e4">mx::improc::imageXCorrFFT::ccIm</a></div><div class="ttdeci">const realImageT &amp; ccIm()</div><div class="ttdoc">Get a reference to the cross correlation image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01009">imageXCorrFFT.hpp:1009</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a8e2ae4ad8895ab90b616219c962f4083"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a8e2ae4ad8895ab90b616219c962f4083">mx::improc::imageXCorrFFT::refACIm</a></div><div class="ttdeci">const realImageT &amp; refACIm()</div><div class="ttdoc">Get a reference to the reference auto-correlation image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00973">imageXCorrFFT.hpp:973</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a90b3d8fa1603c6380c33bfbfc47471e4"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a90b3d8fa1603c6380c33bfbfc47471e4">mx::improc::imageXCorrFFT::ccIm</a></div><div class="ttdeci">const realImageT &amp; ccIm()</div><div class="ttdoc">Get a reference to the cross correlation image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00997">imageXCorrFFT.hpp:997</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a945a90e3f5d6f524d20f432c1b80e534"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a945a90e3f5d6f524d20f432c1b80e534">mx::improc::imageXCorrFFT::m_refX0</a></div><div class="ttdeci">realT m_refX0</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00169">imageXCorrFFT.hpp:169</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a95838babb52a7658ffac6a63d1a85dff"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a95838babb52a7658ffac6a63d1a85dff">mx::improc::imageXCorrFFT::m_ftWorkPaddedOut</a></div><div class="ttdeci">complexArrayT m_ftWorkPaddedOut</div><div class="ttdoc">Working memory for the FFT and MFT output.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00192">imageXCorrFFT.hpp:192</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a997eee6e9c0bc1294397b874a88a0961"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a997eee6e9c0bc1294397b874a88a0961">mx::improc::imageXCorrFFT::m_colsPadded</a></div><div class="ttdeci">int m_colsPadded</div><div class="ttdoc">The number of columns in the padded CC.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00119">imageXCorrFFT.hpp:119</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a9d10e69803837ee254e4bbdf768e4c75"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a9d10e69803837ee254e4bbdf768e4c75">mx::improc::imageXCorrFFT::rowsPadded</a></div><div class="ttdeci">int rowsPadded()</div><div class="ttdoc">Get the number of rows in the padded cross-correlation.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00577">imageXCorrFFT.hpp:577</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a9e2846b355b0cc6963a00d6fe9b59bdb"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e2846b355b0cc6963a00d6fe9b59bdb">mx::improc::imageXCorrFFT::refX0</a></div><div class="ttdeci">realT refX0()</div><div class="ttdoc">Get the x-shift of the reference image to itself.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00991">imageXCorrFFT.hpp:991</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_a9e2846b355b0cc6963a00d6fe9b59bdb"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#a9e2846b355b0cc6963a00d6fe9b59bdb">mx::improc::imageXCorrFFT::refX0</a></div><div class="ttdeci">realT refX0()</div><div class="ttdoc">Get the x-shift of the reference image to itself.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00979">imageXCorrFFT.hpp:979</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_aa131574f6141321a308bc9ff72a9b376"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#aa131574f6141321a308bc9ff72a9b376">mx::improc::imageXCorrFFT::imageXCorrFFT</a></div><div class="ttdeci">imageXCorrFFT()</div><div class="ttdoc">Default c'tor.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00533">imageXCorrFFT.hpp:533</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_aa49673f6f34d22dfeab0d181b24c780e"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#aa49673f6f34d22dfeab0d181b24c780e">mx::improc::imageXCorrFFT::m_maskIm</a></div><div class="ttdeci">realImageT m_maskIm</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00126">imageXCorrFFT.hpp:126</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_aa647a3f986a14ba3e226aa5dd652ccf5"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#aa647a3f986a14ba3e226aa5dd652ccf5">mx::improc::imageXCorrFFT::refValid</a></div><div class="ttdeci">bool refValid()</div><div class="ttdoc">Get the value of the reference valid flag.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00915">imageXCorrFFT.hpp:915</a></div></div>
@@ -1508,11 +1497,11 @@ $(document).ready(function(){initNavTree('imageXCorrFFT_8hpp_source.html',''); i
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ab75ec782b95bff05e1371c37904495d9"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ab75ec782b95bff05e1371c37904495d9">mx::improc::imageXCorrFFT::normalize</a></div><div class="ttdeci">bool normalize()</div><div class="ttdoc">Get the current value of the normalize flag.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00798">imageXCorrFFT.hpp:798</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ab7ee27e9282cbf0b353cb21f9095b404"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ab7ee27e9282cbf0b353cb21f9095b404">mx::improc::imageXCorrFFT::m_refWinIm</a></div><div class="ttdeci">realImageT m_refWinIm</div><div class="ttdoc">Window image to use for the reference.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00131">imageXCorrFFT.hpp:131</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_abcaa1243ce948b8e1e8ab0cd7587db32"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#abcaa1243ce948b8e1e8ab0cd7587db32">mx::improc::imageXCorrFFT::tol</a></div><div class="ttdeci">realT tol()</div><div class="ttdoc">Get the tolerance of the interpolated-magnified image, in pixels.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00934">imageXCorrFFT.hpp:934</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_abf93c2c1c4e2965309fed19ce8a773bb"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb">mx::improc::imageXCorrFFT::operator()</a></div><div class="ttdeci">int operator()(realT &amp;xShift, realT &amp;yShift, const imT &amp;im)</div><div class="ttdoc">Conduct the cross correlation to a specified tolerance.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01160">imageXCorrFFT.hpp:1160</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_abf93c2c1c4e2965309fed19ce8a773bb"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#abf93c2c1c4e2965309fed19ce8a773bb">mx::improc::imageXCorrFFT::operator()</a></div><div class="ttdeci">int operator()(realT &amp;xShift, realT &amp;yShift, const imT &amp;im)</div><div class="ttdoc">Conduct the cross correlation to a specified tolerance.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01148">imageXCorrFFT.hpp:1148</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ac478499802f885494be591725b505c26"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ac478499802f885494be591725b505c26">mx::improc::imageXCorrFFT::refMaskIm</a></div><div class="ttdeci">const realImageT &amp; refMaskIm()</div><div class="ttdoc">Get a reference to the reference mask image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00711">imageXCorrFFT.hpp:711</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_acf41c7f5df0af47c7a37f65a7641ab82"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#acf41c7f5df0af47c7a37f65a7641ab82">mx::improc::imageXCorrFFT::m_haveRefWindow</a></div><div class="ttdeci">bool m_haveRefWindow</div><div class="ttdoc">Flag indicating that a window has been provided for the reference.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00133">imageXCorrFFT.hpp:133</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad37c6a8fe6f7046337ee603b3bc22cc2"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad37c6a8fe6f7046337ee603b3bc22cc2">mx::improc::imageXCorrFFT::magIm</a></div><div class="ttdeci">const realImageT &amp; magIm()</div><div class="ttdoc">Get a reference to the magnified image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01015">imageXCorrFFT.hpp:1015</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad4ee5b1d41a409d30d129556e7ec3123"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad4ee5b1d41a409d30d129556e7ec3123">mx::improc::imageXCorrFFT::refY0</a></div><div class="ttdeci">realT refY0()</div><div class="ttdoc">Get the y-shift of the reference image to itself.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00997">imageXCorrFFT.hpp:997</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad37c6a8fe6f7046337ee603b3bc22cc2"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad37c6a8fe6f7046337ee603b3bc22cc2">mx::improc::imageXCorrFFT::magIm</a></div><div class="ttdeci">const realImageT &amp; magIm()</div><div class="ttdoc">Get a reference to the magnified image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01003">imageXCorrFFT.hpp:1003</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad4ee5b1d41a409d30d129556e7ec3123"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad4ee5b1d41a409d30d129556e7ec3123">mx::improc::imageXCorrFFT::refY0</a></div><div class="ttdeci">realT refY0()</div><div class="ttdoc">Get the y-shift of the reference image to itself.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00985">imageXCorrFFT.hpp:985</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad62bd155898b505ecaac6a7293b0318b"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad62bd155898b505ecaac6a7293b0318b">mx::improc::imageXCorrFFT::m_padFactorC</a></div><div class="ttdeci">realT m_padFactorC</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00114">imageXCorrFFT.hpp:114</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad66088d0ed378152007c1ec99aae9fee"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad66088d0ed378152007c1ec99aae9fee">mx::improc::imageXCorrFFT::realT</a></div><div class="ttdeci">_realImageT::Scalar realT</div><div class="ttdoc">the scalar type of the image type</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00086">imageXCorrFFT.hpp:86</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_ad8a8ccedd8340feab509fe8cae35a9db"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#ad8a8ccedd8340feab509fe8cae35a9db">mx::improc::imageXCorrFFT::m_haveRefMask</a></div><div class="ttdeci">bool m_haveRefMask</div><div class="ttdoc">Flag indicating that a referece mask has been provided.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00124">imageXCorrFFT.hpp:124</a></div></div>
@@ -1525,10 +1514,10 @@ $(document).ready(function(){initNavTree('imageXCorrFFT_8hpp_source.html',''); i
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_aeb0d38200be1cbcdacbf1af7a08c7afe"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#aeb0d38200be1cbcdacbf1af7a08c7afe">mx::improc::imageXCorrFFT::m_refMaskIm</a></div><div class="ttdeci">realImageT m_refMaskIm</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00121">imageXCorrFFT.hpp:121</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_af0584c616aeb2e178d692d77f1db4fb0"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#af0584c616aeb2e178d692d77f1db4fb0">mx::improc::imageXCorrFFT::winIm</a></div><div class="ttdeci">const realImageT &amp; winIm()</div><div class="ttdoc">Get a reference to the window image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00776">imageXCorrFFT.hpp:776</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_af42e08d59b029fd450a7c68f0854df96"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#af42e08d59b029fd450a7c68f0854df96">mx::improc::imageXCorrFFT::m_padFactorR</a></div><div class="ttdeci">realT m_padFactorR</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00111">imageXCorrFFT.hpp:111</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_af928829876f8341133a20affcda917d9"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#af928829876f8341133a20affcda917d9">mx::improc::imageXCorrFFT::normIm</a></div><div class="ttdeci">const realImageT &amp; normIm()</div><div class="ttdoc">Get a reference to the normalized image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01003">imageXCorrFFT.hpp:1003</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_af928829876f8341133a20affcda917d9"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#af928829876f8341133a20affcda917d9">mx::improc::imageXCorrFFT::normIm</a></div><div class="ttdeci">const realImageT &amp; normIm()</div><div class="ttdoc">Get a reference to the normalized image.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00991">imageXCorrFFT.hpp:991</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_afcc5771f87e2c0a26b1f4508fd77f438"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#afcc5771f87e2c0a26b1f4508fd77f438">mx::improc::imageXCorrFFT::m_peakMethod</a></div><div class="ttdeci">xcorrPeakMethod m_peakMethod</div><div class="ttdoc">The peak finding method to use.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00159">imageXCorrFFT.hpp:159</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_afcdc3f81ff6715598b07c4eb4e465414"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#afcdc3f81ff6715598b07c4eb4e465414">mx::improc::imageXCorrFFT::m_magSize</a></div><div class="ttdeci">realT m_magSize</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00152">imageXCorrFFT.hpp:152</a></div></div>
-<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_afdffc5bd28da0066a015e4f5ef73c209"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#afdffc5bd28da0066a015e4f5ef73c209">mx::improc::imageXCorrFFT::findPeak</a></div><div class="ttdeci">void findPeak(realT &amp;xShift, realT &amp;yShift)</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01021">imageXCorrFFT.hpp:1021</a></div></div>
+<div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_afdffc5bd28da0066a015e4f5ef73c209"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#afdffc5bd28da0066a015e4f5ef73c209">mx::improc::imageXCorrFFT::findPeak</a></div><div class="ttdeci">void findPeak(realT &amp;xShift, realT &amp;yShift)</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l01009">imageXCorrFFT.hpp:1009</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_afefb45fd02b2bc2c0006186dfe75d665"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#afefb45fd02b2bc2c0006186dfe75d665">mx::improc::imageXCorrFFT::cols</a></div><div class="ttdeci">int cols()</div><div class="ttdoc">Get the number of columns in the input images.</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00545">imageXCorrFFT.hpp:545</a></div></div>
 <div class="ttc" id="aclassmx_1_1improc_1_1imageXCorrFFT_html_aff7ac6a29419982efb74443ea85dd11c"><div class="ttname"><a href="classmx_1_1improc_1_1imageXCorrFFT.html#aff7ac6a29419982efb74443ea85dd11c">mx::improc::imageXCorrFFT::realImageT</a></div><div class="ttdeci">_realImageT realImageT</div><div class="ttdoc">the Eigen-like array type used for image processing</div><div class="ttdef"><b>Definition</b> <a href="imageXCorrFFT_8hpp_source.html#l00084">imageXCorrFFT.hpp:84</a></div></div>
 <div class="ttc" id="aclassmx_1_1math_1_1fit_1_1fitGaussian2D_html"><div class="ttname"><a href="classmx_1_1math_1_1fit_1_1fitGaussian2D.html">mx::math::fit::fitGaussian2D</a></div><div class="ttdoc">Class to manage fitting a 2D Gaussian to data via the levmarInterface.</div><div class="ttdef"><b>Definition</b> <a href="fitGaussian_8hpp_source.html#l00301">fitGaussian.hpp:302</a></div></div>
@@ -1554,7 +1543,7 @@ $(document).ready(function(){initNavTree('imageXCorrFFT_8hpp_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36e4a5df511904fcb54b5d9f3b8bffb0.html">improc</a></li><li class="navelem"><a class="el" href="imageXCorrFFT_8hpp.html">imageXCorrFFT.hpp</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:34 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

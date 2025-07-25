@@ -11,6 +11,7 @@ var classmx_1_1sigproc_1_1circularBufferBase =
     [ "latest", "classmx_1_1sigproc_1_1circularBufferBase.html#a584e60073134c5d4d6d68119d93ae114", null ],
     [ "maxEntries", "classmx_1_1sigproc_1_1circularBufferBase.html#a173c57aa70bce9cf5703a690c2b6e5e2", null ],
     [ "maxEntries", "classmx_1_1sigproc_1_1circularBufferBase.html#a3c7af26f8a093e1531a08ed9c2aa5487", null ],
+    [ "nextEntry", "classmx_1_1sigproc_1_1circularBufferBase.html#aa7e1738a4a4e932a2ab77bca87b39282", null ],
     [ "nextEntry", "classmx_1_1sigproc_1_1circularBufferBase.html#afc06fd8561d19d995bb51e78cbc88b1f", null ],
     [ "operator[]", "classmx_1_1sigproc_1_1circularBufferBase.html#a10cfdb3418c15765c9ce5df28ff467d8", null ],
     [ "operator[]", "classmx_1_1sigproc_1_1circularBufferBase.html#a6d19416be47d9723afd1ce41b6f79bcd", null ],

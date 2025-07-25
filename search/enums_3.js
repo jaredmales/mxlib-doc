@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dir_0',['dir',['../group__ft.html#ga4b7a7442a046a37b8cc8a8e0f9a86696',1,'mx::math::ft']]]
+  ['xcorrpeakmethod_0',['xcorrPeakMethod',['../group__image__reg.html#ga9c13cefccbf12a4c920c19ecc9428954',1,'mx::improc']]]
 ];

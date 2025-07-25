@@ -1,12 +1,9 @@
 var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
 [
-    [ "ADIDerotator.hpp", "ADIDerotator_8hpp.html", null ],
-    [ "ADIobservation.hpp", "ADIobservation_8hpp.html", "ADIobservation_8hpp" ],
     [ "aperturePhotometer.hpp", "aperturePhotometer_8hpp.html", "aperturePhotometer_8hpp" ],
     [ "circleOuterpix.hpp", "circleOuterpix_8hpp.html", "circleOuterpix_8hpp" ],
     [ "eigenCube.hpp", "eigenCube_8hpp.html", null ],
     [ "eigenImage.hpp", "eigenImage_8hpp.html", "eigenImage_8hpp" ],
-    [ "HCIobservation.hpp", "HCIobservation_8hpp.html", "HCIobservation_8hpp" ],
     [ "imageFilters.hpp", "imageFilters_8hpp.html", "imageFilters_8hpp" ],
     [ "imageMasks.hpp", "imageMasks_8hpp.html", "imageMasks_8hpp" ],
     [ "imagePads.hpp", "imagePads_8hpp.html", "imagePads_8hpp" ],
@@ -19,7 +16,6 @@ var dir_36e4a5df511904fcb54b5d9f3b8bffb0 =
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],
     [ "imCenterRadon.hpp", "imCenterRadon_8hpp.html", null ],
     [ "improc.hpp", "improc_8hpp.html", null ],
-    [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", "KLIPreduction_8hpp" ],
     [ "milkImage.hpp", "milkImage_8hpp.html", null ],
     [ "sourceFinder.hpp", "sourceFinder_8hpp.html", null ]
 ];

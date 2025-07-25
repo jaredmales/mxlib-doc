@@ -1,12 +1,10 @@
 var group__image__processing__files =
 [
     [ "FITS Files Files", "group__fits__processing__files.html", "group__fits__processing__files" ],
-    [ "ADIobservation.hpp", "ADIobservation_8hpp.html", null ],
     [ "aperturePhotometer.hpp", "aperturePhotometer_8hpp.html", null ],
     [ "circleOuterpix.hpp", "circleOuterpix_8hpp.html", null ],
     [ "eigenCube.hpp", "eigenCube_8hpp.html", null ],
     [ "eigenImage.hpp", "eigenImage_8hpp.html", null ],
-    [ "HCIobservation.hpp", "HCIobservation_8hpp.html", null ],
     [ "imageFilters.hpp", "imageFilters_8hpp.html", null ],
     [ "imageMasks.hpp", "imageMasks_8hpp.html", null ],
     [ "imagePads.hpp", "imagePads_8hpp.html", null ],
@@ -19,12 +17,8 @@ var group__image__processing__files =
     [ "imCenterCircleSym.hpp", "imCenterCircleSym_8hpp.html", null ],
     [ "imCenterRadon.hpp", "imCenterRadon_8hpp.html", null ],
     [ "improc.hpp", "improc_8hpp.html", null ],
-    [ "KLIPreduction.hpp", "KLIPreduction_8hpp.html", null ],
     [ "milkImage.hpp", "milkImage_8hpp.html", null ],
     [ "sourceFinder.hpp", "sourceFinder_8hpp.html", null ],
     [ "ioutils.hpp", "ioutils_8hpp.html", null ],
-    [ "ADIobservation.cpp", "ADIobservation_8cpp.html", null ],
-    [ "HCIobservation.cpp", "HCIobservation_8cpp.html", null ],
-    [ "imageUtils.cpp", "imageUtils_8cpp.html", null ],
-    [ "KLIPreduction.cpp", "KLIPreduction_8cpp.html", null ]
+    [ "imageUtils.cpp", "imageUtils_8cpp.html", null ]
 ];

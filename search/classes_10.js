@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['randomt_0',['randomT',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
-  ['randomt_3c_20int_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3apoisson_5fdistribution_3c_20int_20_3e_20_3e_1',['randomT&lt; int, std::mt19937_64, std::poisson_distribution&lt; int &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
-  ['randomt_3c_20long_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3apoisson_5fdistribution_3c_20long_20_3e_20_3e_2',['randomT&lt; long, std::mt19937_64, std::poisson_distribution&lt; long &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
-  ['randomt_3c_20realt_20_3e_3',['randomT&lt; realT &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
-  ['randomt_3c_20realt_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3agamma_5fdistribution_3c_20realt_20_3e_20_3e_4',['randomT&lt; realT, std::mt19937_64, std::gamma_distribution&lt; realT &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
-  ['randomt_3c_20realt_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3anormal_5fdistribution_3c_20realt_20_3e_20_3e_5',['randomT&lt; realT, std::mt19937_64, std::normal_distribution&lt; realT &gt; &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]],
-  ['randomt_3c_20realt_2c_20std_3a_3amt19937_5f64_2c_20std_3a_3anormal_5fdistribution_3c_20realt_20_3e_20_3e_3c_20realt_20_3e_6',['randomT&lt; realT, std::mt19937_64, std::normal_distribution&lt; realT &gt; &gt;&lt; realT &gt;',['../classmx_1_1math_1_1randomT.html',1,'mx::math']]]
+  ['sharedmemsegment_0',['sharedMemSegment',['../classmx_1_1ipc_1_1sharedMemSegment.html',1,'mx::ipc']]],
+  ['shwfs_1',['shwfs',['../structmx_1_1AO_1_1analysis_1_1shwfs.html',1,'mx::AO::analysis']]],
+  ['si_2',['si',['../structmx_1_1astro_1_1units_1_1si.html',1,'mx::astro::units']]],
+  ['simulatedaosystem_3',['simulatedAOSystem',['../classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html',1,'mx::AO::sim']]],
+  ['sizeerr_4',['sizeerr',['../classmx_1_1err_1_1sizeerr.html',1,'mx::err']]],
+  ['skipcol_5',['skipCol',['../structmx_1_1ioutils_1_1skipCol.html',1,'mx::ioutils']]],
+  ['solar_6',['solar',['../structmx_1_1astro_1_1units_1_1solar.html',1,'mx::astro::units']]],
+  ['sourcefinder_7',['sourceFinder',['../classmx_1_1improc_1_1sourceFinder.html',1,'mx::improc']]],
+  ['sqwavefilter_8',['sqWaveFilter',['../structmx_1_1astro_1_1sqWaveFilter.html',1,'mx::astro']]],
+  ['syevrmem_9',['syevrMem',['../structmx_1_1math_1_1syevrMem.html',1,'mx::math']]]
 ];

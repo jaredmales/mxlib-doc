@@ -126,12 +126,12 @@ class mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;</div
   <table class="tparams">
     <tr><td class="paramname">_derivedT</td><td>the child class type </td></tr>
     <tr><td class="paramname">_storedT</td><td>the type stored in teh circular buffer </td></tr>
-    <tr><td class="paramname">_indexT</td><td>the index type, also used for sizes (can be unsigned) </td></tr>
+    <tr><td class="paramname">_indexT</td><td>the index type, also used for sizes (must be signed) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00074">74</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00078">78</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="circularBuffer_8hpp_source.html">sigproc/circularBuffer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -167,6 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc06fd8561d19d995bb51e78cbc88b1f" id="r_afc06fd8561d19d995bb51e78cbc88b1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#afc06fd8561d19d995bb51e78cbc88b1f">nextEntry</a> (const <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a91d7321c0bf05518e8927015f714b694">storedT</a> &amp;newEnt)</td></tr>
 <tr class="memdesc:afc06fd8561d19d995bb51e78cbc88b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the next entry to the circular buffer.  <br /></td></tr>
 <tr class="separator:afc06fd8561d19d995bb51e78cbc88b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e1738a4a4e932a2ab77bca87b39282" id="r_aa7e1738a4a4e932a2ab77bca87b39282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#aa7e1738a4a4e932a2ab77bca87b39282">nextEntry</a> ()</td></tr>
+<tr class="memdesc:aa7e1738a4a4e932a2ab77bca87b39282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move to the next entry in the circular buffer.  <br /></td></tr>
+<tr class="separator:aa7e1738a4a4e932a2ab77bca87b39282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fecced319846d83fbec845bcd865ef" id="r_a50fecced319846d83fbec845bcd865ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a963a9ab25abfc11b1ff66d1944cda65b">indexT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a50fecced319846d83fbec845bcd865ef">earliest</a> ()</td></tr>
 <tr class="memdesc:a50fecced319846d83fbec845bcd865ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the earliest entry.  <br /></td></tr>
 <tr class="separator:a50fecced319846d83fbec845bcd865ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,7 +222,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>The child class. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00077">77</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00081">81</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -239,7 +242,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>The index type, also used for sizes. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00080">80</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00084">84</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +262,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>The type stored in the circular buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00079">79</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00083">83</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +286,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00187">187</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00199">199</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +325,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00192">192</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00204">204</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -366,9 +369,9 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00278">278</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00312">312</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="circularBuffer_8hpp_source.html#l00266">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;::operator[]()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="circularBuffer_8hpp_source.html#l00300">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;::operator[]()</a>.</p>
 
 </div>
 </div>
@@ -412,7 +415,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00284">284</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00318">318</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +439,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
 <p>Returns the index of the earliest entry. </p>
 <p>This is particularly useful for accessing entries with the <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a0d5a98b54fdad7596996e008611b6ac2" title="Get the entry at a given index relative a fixed reference entry.">at()</a> function over an unchanging sequence if asynchronous updates are possible. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00248">248</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00282">282</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +462,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
 
 <p>Returns the index of the latest entry. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00254">254</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00288">288</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +487,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
 <p>Note that this is not the current size of the buffer until at least maxEntries have been added. Use <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a44a7978c792cfe4cbb910a5151ecb9fd" title="Get the number of entries.">size()</a> to check current size.</p>
 <dl class="section return"><dt>Returns</dt><dd>the maximum size of the buffer, m_maxEntries </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00213">213</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00225">225</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,12 +518,36 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00198">198</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00210">210</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa7e1738a4a4e932a2ab77bca87b39282" name="aa7e1738a4a4e932a2ab77bca87b39282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e1738a4a4e932a2ab77bca87b39282">&#9670;&#160;</a></span>nextEntry() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a82e7bb9cbc33e3d8893bf45fe00c7e8f">derivedT</a> , typename <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a91d7321c0bf05518e8927015f714b694">storedT</a> , typename <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a963a9ab25abfc11b1ff66d1944cda65b">indexT</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html">mx::sigproc::circularBufferBase</a>&lt; <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a82e7bb9cbc33e3d8893bf45fe00c7e8f">derivedT</a>, <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a91d7321c0bf05518e8927015f714b694">storedT</a>, <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a963a9ab25abfc11b1ff66d1944cda65b">indexT</a> &gt;::nextEntry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Move to the next entry in the circular buffer. </p>
+<p>If not yet at maxEntries entries, this emplaces a new default constructed entry. Otherwise it increments counters so that the old latest entry is now the newest entry. </p>
+
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00260">260</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
 <a id="afc06fd8561d19d995bb51e78cbc88b1f" name="afc06fd8561d19d995bb51e78cbc88b1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc06fd8561d19d995bb51e78cbc88b1f">&#9670;&#160;</a></span>nextEntry()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afc06fd8561d19d995bb51e78cbc88b1f">&#9670;&#160;</a></span>nextEntry() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +573,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00225">225</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00237">237</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -578,9 +605,9 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00266">266</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00300">300</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="circularBuffer_8hpp_source.html#l00278">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;::at()</a>.</p>
+<p class="reference">References <a class="el" href="circularBuffer_8hpp_source.html#l00312">mx::sigproc::circularBufferBase&lt; _derivedT, _storedT, _indexT &gt;::at()</a>.</p>
 
 </div>
 </div>
@@ -608,7 +635,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00272">272</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00306">306</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -632,7 +659,7 @@ template&lt;class <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.h
 <p>Get the number of entries. </p>
 <p>Note that this is the current size. It will not be the same as <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a173c57aa70bce9cf5703a690c2b6e5e2" title="Get the maximum size of the buffer.">maxEntries()</a> until at least maxEntries have been added. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00219">219</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00231">231</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -661,7 +688,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>The circular buffer storage. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00083">83</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00089">89</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -689,7 +716,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>Index into m_buff of the latest entry. This is the newest entry in the buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00087">87</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00093">93</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -717,7 +744,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>The maximum number of entries to allow in the buffer before wrapping. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00085">85</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00091">91</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -744,7 +771,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 </div><div class="memdoc">
 <p>A monotonic counter, which is incremented for each new entry, and reset on call to maxEntries. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00089">89</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00095">95</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +799,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 
 <p>Index into m_buffer of the next entry. This is the oldest entry in the buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00086">86</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00092">92</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -785,7 +812,7 @@ template&lt;typename _derivedT , typename _storedT , typename _indexT &gt; </div
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>sigproc</b></li><li class="navelem"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html">circularBufferBase</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:36 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

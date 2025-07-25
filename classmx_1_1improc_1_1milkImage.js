@@ -13,6 +13,8 @@ var classmx_1_1improc_1_1milkImage =
     [ "operator eigenMap< dataT >", "classmx_1_1improc_1_1milkImage.html#a0c1cf5f8e3ceeb2dc7ff9ab79ce8ba0e", null ],
     [ "operator()", "classmx_1_1improc_1_1milkImage.html#ab9aa0d0dc613486dfa3852cf5b7e3bab", null ],
     [ "operator=", "classmx_1_1improc_1_1milkImage.html#a5a474ffaaaef71b9391490bba82e2bdb", null ],
+    [ "passive", "classmx_1_1improc_1_1milkImage.html#aceb1d2225173cdafeefe52d66be12a4b", null ],
+    [ "passive", "classmx_1_1improc_1_1milkImage.html#aae7b30c79c1325898a4093827cd39a8f", null ],
     [ "post", "classmx_1_1improc_1_1milkImage.html#ae24406f161a9d2474c293eb4e7f9e2b1", null ],
     [ "reopen", "classmx_1_1improc_1_1milkImage.html#abde2e3e41523f14f2893b9f39439ab8a", null ],
     [ "rows", "classmx_1_1improc_1_1milkImage.html#a7cffa5733141e4d7c131355006e74e8e", null ],
@@ -21,6 +23,7 @@ var classmx_1_1improc_1_1milkImage =
     [ "valid", "classmx_1_1improc_1_1milkImage.html#aa9554beb9b7c1132841efc00577484a3", null ],
     [ "m_image", "classmx_1_1improc_1_1milkImage.html#a75a7300b4ebb0e0c024f2d09ecefa851", null ],
     [ "m_name", "classmx_1_1improc_1_1milkImage.html#a89c2963b72b7b93e40da5204428401ad", null ],
+    [ "m_passive", "classmx_1_1improc_1_1milkImage.html#a272d39cfc31b012612c8557ae028ba3c", null ],
     [ "m_size_0", "classmx_1_1improc_1_1milkImage.html#af8c18c1eaf2a89eb5e1279be5ee8c1c1", null ],
     [ "m_size_1", "classmx_1_1improc_1_1milkImage.html#a44b9ab2c851eafe33844b840da4b622f", null ]
 ];

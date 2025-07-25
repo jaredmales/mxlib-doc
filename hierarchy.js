@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "mx::improc::ADIDerotator< _realT >", "structmx_1_1improc_1_1ADIDerotator.html", null ],
     [ "mx::math::fit::airy2D_obs_fitter< _realT >", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter.html", null ],
     [ "mx::math::fit::airy2D_obs_fitter_ps< _realT >", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter__ps.html", null ],
     [ "mx::math::fit::airy2D_obs_fitter_ps_eps< _realT >", "structmx_1_1math_1_1fit_1_1airy2D__obs__fitter__ps__eps.html", null ],
@@ -130,11 +129,6 @@ var hierarchy =
     [ "mx::math::gslInterpolator< mx::math::gsl_interp_linear< realT > >", "classmx_1_1math_1_1gslInterpolator.html", null ],
     [ "mx::math::gslInterpolator< mx::math::gsl_interp_steffen< realT > >", "classmx_1_1math_1_1gslInterpolator.html", null ],
     [ "mx::math::fit::hasJacobian< T >", "structmx_1_1math_1_1fit_1_1hasJacobian.html", null ],
-    [ "mx::improc::HCIobservation< _realT >", "structmx_1_1improc_1_1HCIobservation.html", [
-      [ "mx::improc::ADIobservation< _realT, _derotFunctObj >", "structmx_1_1improc_1_1ADIobservation.html", [
-        [ "mx::improc::KLIPreduction< _realT, _derotFunctObj, _evCalcT >", "structmx_1_1improc_1_1KLIPreduction.html", null ]
-      ] ]
-    ] ],
     [ "mx::math::histogramUniform< realT >", "classmx_1_1math_1_1histogramUniform.html", null ],
     [ "mx::wfp::idealCoronagraph< _realT >", "structmx_1_1wfp_1_1idealCoronagraph.html", null ],
     [ "mx::improc::imagePeakInterp< transformT >", "structmx_1_1improc_1_1imagePeakInterp.html", null ],
@@ -204,6 +198,7 @@ var hierarchy =
     [ "mx::sigproc::psdFilter< _realT, _rank, 0 >", "classmx_1_1sigproc_1_1psdFilter_3_01__realT_00_01__rank_00_010_01_4.html", null ],
     [ "mx::sigproc::psdVarMean< paramsT >", "structmx_1_1sigproc_1_1psdVarMean.html", null ],
     [ "mx::sigproc::psdVarMeanParams< _realT >", "structmx_1_1sigproc_1_1psdVarMeanParams.html", null ],
+    [ "mx::AO::sim::pyramidSensor< _realT, _detectorT >", "classmx_1_1AO_1_1sim_1_1pyramidSensor.html", null ],
     [ "mx::AO::sim::pywfsSlopeReconstructor< _floatT >", "classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor.html", null ],
     [ "mx::math::randomT< typeT, _ranengT, _randistT >", "classmx_1_1math_1_1randomT.html", null ],
     [ "mx::math::randomT< int, std::mt19937_64, std::poisson_distribution< int > >", "classmx_1_1math_1_1randomT.html", null ],

@@ -312,8 +312,12 @@ var group__mxAOAnalytic =
       [ "_regularizeCoefficients", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a31a5e4bec6657b49156e551c8895df64", null ],
       [ "calcCoefficients", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a2da559a2955e86a811e76a447c05acdc", null ],
       [ "optimizeNc", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#ab842a4afff5448f3e6ee4e59b9403245", null ],
-      [ "regularizeCoefficients", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a9483ca9cf2af5e1e60ea3265e748ec62", null ],
-      [ "m_gmax_lp", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a251ac9694ffa4c8a49f805adbfb9ffa4", null ]
+      [ "regularizeCoefficients", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a7f3c918cc249313013c26f94528e3f67", null ],
+      [ "m_ac", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a7a960a1912e6e47eb95a95b2c4591661", null ],
+      [ "m_extrap", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#afe8665db1444f51f94ebc3bcc965b4d5", null ],
+      [ "m_gmax_lp", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a251ac9694ffa4c8a49f805adbfb9ffa4", null ],
+      [ "m_psd2s", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a521a8a7aa07488a6ac14f4191b27abcf", null ],
+      [ "m_PSDtn", "structmx_1_1AO_1_1analysis_1_1clAOLinearPredictor.html#a780d00bad2bcf6849ae0973bc98291ee", null ]
     ] ],
     [ "mx::AO::analysis::fourierTemporalPSD< _realT, aosysT >", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html", [
       [ "complexT", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a97c436aa4e55ed2929a65a6e6161fd35", null ],
@@ -323,13 +327,13 @@ var group__mxAOAnalytic =
       [ "~fourierTemporalPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a658bfbcb710a93ab45dba3c31d70582e", null ],
       [ "absTol", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#af04c4cd82c82cbc7ab7e19a1fb528aa7", null ],
       [ "absTol", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ac55b644b94a5045070f60f1269e281f3", null ],
-      [ "analyzePSDGrid", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a30da85a66b2bef1e010acd7288b03c1a", null ],
+      [ "analyzePSDGrid", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a10c7c4b740653542cb508fe2cbf9d291", null ],
       [ "fastestPeak", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ac3ef38cf6f1bf265cc69355dcf85d6aa", null ],
       [ "getGridFreq", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a2e35b87138a8785cb3dc32c464fb4416", null ],
       [ "getGridPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a1be0172a074aeb66602a79c326358d9d", null ],
       [ "getGridPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a4d8705d69eba209db650e4e2bc3cbecd", null ],
       [ "initialize", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#abc0f94527206cb8e14bb37530b72ea1d", null ],
-      [ "intensityPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a3d08d8484aa8b3ad45717676afd01952", null ],
+      [ "intensityPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ad1dc6cada4b345bdd99a9b0c40f9f249", null ],
       [ "makePSDGrid", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#ab56bb21f8f422fb7b69cbc283aa455fc", null ],
       [ "multiLayerPSD", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a2ac63ce603c29bc22f52c0a54f1fff83", null ],
       [ "relTol", "structmx_1_1AO_1_1analysis_1_1fourierTemporalPSD.html#a56998d92261f8c74bbdb7a9a26c86479", null ],
@@ -382,7 +386,6 @@ var group__mxAOAnalytic =
     [ "mx::AO::analysis::F_basic", "group__mxAOAnalytic.html#ga68fe13d24baf657b1dfc036c0cee3d4d", null ],
     [ "mx::AO::analysis::F_mod", "group__mxAOAnalytic.html#ga6a42ec37d19e5e32f560c1d630a44848", null ],
     [ "mx::AO::analysis::F_zernike", "group__mxAOAnalytic.html#gab03cd16e9f65c29e25b720013c61f120", null ],
-    [ "mx::AO::analysis::Fm_projMod", "group__mxAOAnalytic.html#ga5e3d453681f58362c0f3116191ac58af", null ],
     [ "mx::AO::analysis::phiInt_basic", "group__mxAOAnalytic.html#ga4c2d016705e5e36c40478fb588b045e5", null ],
     [ "mx::AO::analysis::varmapToImage", "group__mxAOAnalytic.html#ga8ada887800a6570c00dbd9921b14315b", null ],
     [ "mx::AO::analysis::wfsNoisePSD", "group__mxAOAnalytic.html#ga84fdd3e48223467d8d26a098e773e24e", null ]

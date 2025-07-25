@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['sharedmemsegment_0',['sharedMemSegment',['../classmx_1_1ipc_1_1sharedMemSegment.html',1,'mx::ipc']]],
-  ['shwfs_1',['shwfs',['../structmx_1_1AO_1_1analysis_1_1shwfs.html',1,'mx::AO::analysis']]],
-  ['si_2',['si',['../structmx_1_1astro_1_1units_1_1si.html',1,'mx::astro::units']]],
-  ['simulatedaosystem_3',['simulatedAOSystem',['../classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html',1,'mx::AO::sim']]],
-  ['sizeerr_4',['sizeerr',['../classmx_1_1err_1_1sizeerr.html',1,'mx::err']]],
-  ['skipcol_5',['skipCol',['../structmx_1_1ioutils_1_1skipCol.html',1,'mx::ioutils']]],
-  ['solar_6',['solar',['../structmx_1_1astro_1_1units_1_1solar.html',1,'mx::astro::units']]],
-  ['sourcefinder_7',['sourceFinder',['../classmx_1_1improc_1_1sourceFinder.html',1,'mx::improc']]],
-  ['sqwavefilter_8',['sqWaveFilter',['../structmx_1_1astro_1_1sqWaveFilter.html',1,'mx::astro']]],
-  ['syevrmem_9',['syevrMem',['../structmx_1_1math_1_1syevrMem.html',1,'mx::math']]]
+  ['texttable_0',['textTable',['../structmx_1_1ioutils_1_1textTable.html',1,'mx::ioutils']]],
+  ['truefalset_1',['trueFalseT',['../structmx_1_1meta_1_1trueFalseT.html',1,'mx::meta']]],
+  ['truefalset_3c_20false_20_3e_2',['trueFalseT&lt; false &gt;',['../structmx_1_1meta_1_1trueFalseT_3_01false_01_4.html',1,'mx::meta']]],
+  ['truefalset_3c_20true_20_3e_3',['trueFalseT&lt; true &gt;',['../structmx_1_1meta_1_1trueFalseT_3_01true_01_4.html',1,'mx::meta']]],
+  ['turbatmosphere_4',['turbAtmosphere',['../structmx_1_1AO_1_1sim_1_1turbAtmosphere.html',1,'mx::AO::sim']]],
+  ['turbatmosphere_3c_20aosystemt_20_3e_5',['turbAtmosphere&lt; aoSystemT &gt;',['../structmx_1_1AO_1_1sim_1_1turbAtmosphere.html',1,'mx::AO::sim']]],
+  ['turblayer_6',['turbLayer',['../structmx_1_1AO_1_1sim_1_1turbLayer.html',1,'mx::AO::sim']]],
+  ['turbsubharmonic_7',['turbSubHarmonic',['../classmx_1_1AO_1_1sim_1_1turbSubHarmonic.html',1,'mx::AO::sim']]],
+  ['typedescription_8',['typeDescription',['../structmx_1_1meta_1_1typeDescription.html',1,'mx::meta']]]
 ];

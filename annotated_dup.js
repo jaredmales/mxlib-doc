@@ -22,6 +22,7 @@ var annotated_dup =
           [ "directPhaseReconstructor", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor.html", "classmx_1_1AO_1_1sim_1_1directPhaseReconstructor" ],
           [ "generalIntegrator", "classmx_1_1AO_1_1sim_1_1generalIntegrator.html", "classmx_1_1AO_1_1sim_1_1generalIntegrator" ],
           [ "leakyIntegrator", "classmx_1_1AO_1_1sim_1_1leakyIntegrator.html", "classmx_1_1AO_1_1sim_1_1leakyIntegrator" ],
+          [ "pyramidSensor", "classmx_1_1AO_1_1sim_1_1pyramidSensor.html", "classmx_1_1AO_1_1sim_1_1pyramidSensor" ],
           [ "pywfsSlopeReconstructor", "classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor.html", "classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor" ],
           [ "simulatedAOSystem", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem.html", "classmx_1_1AO_1_1sim_1_1simulatedAOSystem" ],
           [ "turbAtmosphere", "structmx_1_1AO_1_1sim_1_1turbAtmosphere.html", "structmx_1_1AO_1_1sim_1_1turbAtmosphere" ],
@@ -89,8 +90,6 @@ var annotated_dup =
         [ "fitsHeaderCard", "classmx_1_1fits_1_1fitsHeaderCard.html", "classmx_1_1fits_1_1fitsHeaderCard" ]
       ] ],
       [ "improc", null, [
-        [ "ADIDerotator", "structmx_1_1improc_1_1ADIDerotator.html", "structmx_1_1improc_1_1ADIDerotator" ],
-        [ "ADIobservation", "structmx_1_1improc_1_1ADIobservation.html", "structmx_1_1improc_1_1ADIobservation" ],
         [ "aperturePhotometer", "classmx_1_1improc_1_1aperturePhotometer.html", "classmx_1_1improc_1_1aperturePhotometer" ],
         [ "azBoxKernel", "structmx_1_1improc_1_1azBoxKernel.html", "structmx_1_1improc_1_1azBoxKernel" ],
         [ "bilinearTransform", "structmx_1_1improc_1_1bilinearTransform.html", null ],
@@ -98,14 +97,12 @@ var annotated_dup =
         [ "eigenArrPlanes", "structmx_1_1improc_1_1eigenArrPlanes.html", null ],
         [ "eigenCube", "classmx_1_1improc_1_1eigenCube.html", "classmx_1_1improc_1_1eigenCube" ],
         [ "gaussKernel", "structmx_1_1improc_1_1gaussKernel.html", null ],
-        [ "HCIobservation", "structmx_1_1improc_1_1HCIobservation.html", "structmx_1_1improc_1_1HCIobservation" ],
         [ "imagePeakInterp", "structmx_1_1improc_1_1imagePeakInterp.html", null ],
         [ "imageXCorrDiscrete", "classmx_1_1improc_1_1imageXCorrDiscrete.html", "classmx_1_1improc_1_1imageXCorrDiscrete" ],
         [ "imageXCorrFFT", "classmx_1_1improc_1_1imageXCorrFFT.html", "classmx_1_1improc_1_1imageXCorrFFT" ],
         [ "imCenterCircleSym", "structmx_1_1improc_1_1imCenterCircleSym.html", "structmx_1_1improc_1_1imCenterCircleSym" ],
         [ "imCenterRadon", "structmx_1_1improc_1_1imCenterRadon.html", "structmx_1_1improc_1_1imCenterRadon" ],
         [ "is_eigenCube", "structmx_1_1improc_1_1is__eigenCube.html", null ],
-        [ "KLIPreduction", "structmx_1_1improc_1_1KLIPreduction.html", "structmx_1_1improc_1_1KLIPreduction" ],
         [ "milkImage", "classmx_1_1improc_1_1milkImage.html", "classmx_1_1improc_1_1milkImage" ],
         [ "sourceFinder", "classmx_1_1improc_1_1sourceFinder.html", "classmx_1_1improc_1_1sourceFinder" ]
       ] ],

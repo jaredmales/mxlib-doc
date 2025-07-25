@@ -247,7 +247,7 @@ template&lt;typename imageOutT , typename imageInT &gt; </div>
 
 <p>Down-sample an image, reducing its size while conserving the total flux. </p>
 <p>If the old size is an integer multiple of the new size, this is just a re-bin. If not an integer multiple, the image is interpolated after performing the closest re-bin, and then re-normalized to conserve flux.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000055">Todo:</a></b></dt><dd>Allow selection of interpolator, providing a default version. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd>Allow selection of interpolator, providing a default version. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00874">874</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
@@ -375,7 +375,7 @@ template&lt;typename arrOutT , typename arrInT , typename transformT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00571">571</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="imageXCorrFFT_8hpp_source.html#l01021">mx::improc::imageXCorrFFT&lt; _realImageT &gt;::findPeak()</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00660">mx::improc::imageMagnify()</a>, <a class="el" href="imageUtils_8hpp_source.html#l00269">mx::improc::imageMaxInterp()</a>, and <a class="el" href="imageXCorrDiscrete_8hpp_source.html#l00306">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;::operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageXCorrFFT_8hpp_source.html#l01009">mx::improc::imageXCorrFFT&lt; _realImageT &gt;::findPeak()</a>, <a class="el" href="imageTransforms_8hpp_source.html#l00660">mx::improc::imageMagnify()</a>, <a class="el" href="imageUtils_8hpp_source.html#l00269">mx::improc::imageMaxInterp()</a>, and <a class="el" href="imageXCorrDiscrete_8hpp_source.html#l00306">mx::improc::imageXCorrDiscrete&lt; _ccImT &gt;::operator()()</a>.</p>
 
 </div>
 </div>
@@ -783,7 +783,7 @@ template&lt;typename transformT , typename arrT , typename arrT2 , typename floa
 
 <p class="definition">Definition at line <a class="el" href="imageTransforms_8hpp_source.html#l00194">194</a> of file <a class="el" href="imageTransforms_8hpp_source.html">imageTransforms.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00664">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::derotate()</a>, and <a class="el" href="imageMasks_8hpp_source.html#l01009">mx::improc::rotateMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageMasks_8hpp_source.html#l01009">mx::improc::rotateMask()</a>.</p>
 
 </div>
 </div>
@@ -846,7 +846,7 @@ template&lt;typename arrOutT , typename arrInT , typename floatT1 , typename flo
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000010">Test:</a></b></dt><dd>Scenario: Verify direction and accuracy of various image shifts <a class="el" href="imageTransforms__test_8cpp.html#tests_improc_imageTransforms_imageShift">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000006">Test:</a></b></dt><dd>Scenario: Verify direction and accuracy of various image shifts <a class="el" href="imageTransforms__test_8cpp.html#tests_improc_imageTransforms_imageShift">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">transim</td><td>Will contain the shifted image. Will be allocated.  </td></tr>
@@ -862,7 +862,7 @@ template&lt;typename arrOutT , typename arrInT , typename floatT1 , typename flo
 
 <p class="reference">References <a class="el" href="imageTransforms_8hpp_source.html#l00294">mx::improc::imageShiftWP()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ADIobservation_8hpp_source.html#l00559">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="imageTransforms__test_8cpp_source.html#l00025">SCENARIO()</a>, <a class="el" href="turbLayer_8hpp_source.html#l00283">mx::AO::sim::turbLayer&lt; _aoSystemT &gt;::shift()</a>, and <a class="el" href="turbLayer_8hpp_source.html#l00321">mx::AO::sim::turbLayer&lt; _aoSystemT &gt;::shiftRandom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="imageTransforms__test_8cpp_source.html#l00025">SCENARIO()</a>, <a class="el" href="turbLayer_8hpp_source.html#l00283">mx::AO::sim::turbLayer&lt; _aoSystemT &gt;::shift()</a>, and <a class="el" href="turbLayer_8hpp_source.html#l00321">mx::AO::sim::turbLayer&lt; _aoSystemT &gt;::shiftRandom()</a>.</p>
 
 </div>
 </div>
@@ -921,7 +921,7 @@ template&lt;typename outputArrT , typename inputArrT &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000009">Test:</a></b></dt><dd>Scenario: Verify direction and accuracy of various image shifts <a class="el" href="imageTransforms__test_8cpp.html#tests_improc_imageTransforms_imageShift">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000005">Test:</a></b></dt><dd>Scenario: Verify direction and accuracy of various image shifts <a class="el" href="imageTransforms__test_8cpp.html#tests_improc_imageTransforms_imageShift">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>contains the shifted image. Must be pre-allocated, but can be smaller than the in array.  </td></tr>
@@ -1016,7 +1016,7 @@ template&lt;typename outputArrT , typename inputArrT , typename scaleArrT &gt; <
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:35 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

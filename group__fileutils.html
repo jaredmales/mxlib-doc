@@ -130,6 +130,9 @@ Files</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gad2b071d3c58a167cab099592f6c3f968" id="r_gad2b071d3c58a167cab099592f6c3f968"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#gad2b071d3c58a167cab099592f6c3f968">mx::ioutils::exists</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:gad2b071d3c58a167cab099592f6c3f968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a path exists.  <br /></td></tr>
+<tr class="separator:gad2b071d3c58a167cab099592f6c3f968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga517907c00aa5e1b369e7326838d89ce0" id="r_ga517907c00aa5e1b369e7326838d89ce0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fileutils.html#ga517907c00aa5e1b369e7326838d89ce0">mx::ioutils::createDirectories</a> (const std::string &amp;path)</td></tr>
 <tr class="memdesc:ga517907c00aa5e1b369e7326838d89ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory or directories.  <br /></td></tr>
 <tr class="separator:ga517907c00aa5e1b369e7326838d89ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,9 +202,42 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00052">52</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00058">58</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00784">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00175">mx::AO::path::dm::basisRoot()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00195">mx::AO::path::dm::M2c()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00622">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::makeMaskCube()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01979">mx::improc::HCIobservation&lt; _realT &gt;::outputPreProcessed()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00245">mx::AO::path::dm::projectedModes()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00042">mx::AO::path::basis::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00083">mx::AO::path::dm::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00301">mx::AO::path::pupil::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00344">mx::AO::path::sys::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00368">mx::AO::path::sys::cal::root()</a>, and <a class="el" href="aoPaths_8hpp_source.html#l00384">mx::AO::path::sys::cal::sysResp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fourierTemporalPSD_8hpp_source.html#l00759">mx::AO::analysis::fourierTemporalPSD&lt; _realT, aosysT &gt;::analyzePSDGrid()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00175">mx::AO::path::dm::basisRoot()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00195">mx::AO::path::dm::M2c()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00245">mx::AO::path::dm::projectedModes()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00042">mx::AO::path::basis::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00083">mx::AO::path::dm::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00301">mx::AO::path::pupil::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00344">mx::AO::path::sys::root()</a>, <a class="el" href="aoPaths_8hpp_source.html#l00368">mx::AO::path::sys::cal::root()</a>, and <a class="el" href="aoPaths_8hpp_source.html#l00384">mx::AO::path::sys::cal::sysResp()</a>.</p>
+
+</div>
+</div>
+<a id="gad2b071d3c58a167cab099592f6c3f968" name="gad2b071d3c58a167cab099592f6c3f968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2b071d3c58a167cab099592f6c3f968">&#9670;&#160;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mx::ioutils::exists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a path exists. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the path exists </dd>
+<dd>
+false if it doesn't </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>the path to check for existence </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00053">53</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00170">mx::ioutils::getFileNames()</a>.</p>
 
 </div>
 </div>
@@ -241,9 +277,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00254">254</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00260">260</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00242">mx::ioutils::fileNamePrependAppend()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00248">mx::ioutils::fileNamePrependAppend()</a>.</p>
 
 </div>
 </div>
@@ -283,9 +319,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00259">259</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00265">265</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00242">mx::ioutils::fileNamePrependAppend()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00248">mx::ioutils::fileNamePrependAppend()</a>.</p>
 
 </div>
 </div>
@@ -332,9 +368,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00242">242</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00248">248</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00254">mx::ioutils::fileNameAppend()</a>, and <a class="el" href="fileUtils_8cpp_source.html#l00259">mx::ioutils::fileNamePrepend()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00260">mx::ioutils::fileNameAppend()</a>, and <a class="el" href="fileUtils_8cpp_source.html#l00265">mx::ioutils::fileNamePrepend()</a>.</p>
 
 </div>
 </div>
@@ -367,9 +403,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00318">318</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00324">324</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00301">mx::ioutils::fileSize()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00307">mx::ioutils::fileSize()</a>.</p>
 
 </div>
 </div>
@@ -401,9 +437,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00301">301</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00307">307</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00318">mx::ioutils::fileSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00324">mx::ioutils::fileSize()</a>.</p>
 
 </div>
 </div>
@@ -433,9 +469,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00237">237</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00243">243</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00164">mx::ioutils::getFileNames()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00170">mx::ioutils::getFileNames()</a>.</p>
 
 </div>
 </div>
@@ -476,9 +512,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00232">232</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00238">238</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00164">mx::ioutils::getFileNames()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00170">mx::ioutils::getFileNames()</a>.</p>
 
 </div>
 </div>
@@ -532,9 +568,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00164">164</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00170">170</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00237">mx::ioutils::getFileNames()</a>, <a class="el" href="fileUtils_8cpp_source.html#l00232">mx::ioutils::getFileNames()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00771">mx::improc::HCIobservation&lt; _realT &gt;::load_fileList()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l00786">mx::improc::HCIobservation&lt; _realT &gt;::load_RDIfileList()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00378">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::readPSFSub()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l02172">mx::improc::HCIobservation&lt; _realT &gt;::readPSFSub()</a>.</p>
+<p class="reference">References <a class="el" href="fileUtils_8cpp_source.html#l00053">mx::ioutils::exists()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fileUtils_8cpp_source.html#l00243">mx::ioutils::getFileNames()</a>, and <a class="el" href="fileUtils_8cpp_source.html#l00238">mx::ioutils::getFileNames()</a>.</p>
 
 </div>
 </div>
@@ -579,27 +617,27 @@ Functions</h2></td></tr>
 <p>Get the next file in a numbered sequence. </p>
 <p>Searches for files in the path designated by basename of the form basenameXXXXextension where the number of digits in XXXX is set by the <em>ndigit</em> parameter.</p>
 <dl class="section warning"><dt>Warning</dt><dd>this does not currently detect missing files in the sequence, e.g. if you have 0,1,3 in the directory this will start with 2!</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000088">Todo:</a></b></dt><dd>switch to using a regex or something so we can detect the missing file.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000082">Todo:</a></b></dt><dd>switch to using a regex or something so we can detect the missing file.</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">std::string</td><td>containing the next filename.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000083">Test:</a></b></dt><dd>Verify creation of sequential file names <a class="el" href="fileUtils__test_8cpp.html#tests_ioutils_fileUtils_getSequentialFilename">[test doc]</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000064">Test:</a></b></dt><dd>Verify creation of sequential file names <a class="el" href="fileUtils__test_8cpp.html#tests_ioutils_fileUtils_getSequentialFilename">[test doc]</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">basename</td><td>path and initial name of the file  </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">basename</td><td>path and initial name of the file*&zwj;/  </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">extension</td><td>[optional] extension to append after the number. Default is empty.  </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">startat</td><td>[optional] number to start the search from. Default is 0.  </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ndigit</td><td>[optional] number of digits in string representation of the number. Default is 4. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ndigit</td><td>[optional] number of digits in string representation of the number.Default is 4. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00265">265</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00271">271</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fileUtils__test_8cpp_source.html#l00013">SCENARIO()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l02059">mx::improc::HCIobservation&lt; _realT &gt;::writeFinim()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fileUtils__test_8cpp_source.html#l00013">SCENARIO()</a>.</p>
 
 </div>
 </div>
@@ -622,9 +660,9 @@ Functions</h2></td></tr>
 <p>Get the parent path from a filename. </p>
 <dl class="section return"><dt>Returns</dt><dd>the parent path of the file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00077">77</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00083">83</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01979">mx::improc::HCIobservation&lt; _realT &gt;::outputPreProcessed()</a>, <a class="el" href="phoenixSpectrum_8hpp_source.html#l00047">mx::astro::phoenixSpectrum&lt; _units &gt;::readSpectrum()</a>, and <a class="el" href="phoenixSpectrum_8hpp_source.html#l00096">mx::astro::rewritePhoenixSpectrum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phoenixSpectrum_8hpp_source.html#l00047">mx::astro::phoenixSpectrum&lt; _units &gt;::readSpectrum()</a>, and <a class="el" href="phoenixSpectrum_8hpp_source.html#l00096">mx::astro::rewritePhoenixSpectrum()</a>.</p>
 
 </div>
 </div>
@@ -647,9 +685,9 @@ Functions</h2></td></tr>
 <p>Get the base filename. </p>
 <dl class="section return"><dt>Returns</dt><dd>the filename, including the extension but without the path </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00071">71</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00077">77</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HCIobservation_8hpp_source.html#l01289">mx::improc::HCIobservation&lt; _realT &gt;::coaddImages()</a>, <a class="el" href="gitRepo_8cpp_source.html#l00067">mx::sys::gitRepo::getGitName()</a>, <a class="el" href="ADIobservation_8hpp_source.html#l00468">mx::improc::ADIobservation&lt; _realT, _derotFunctObj &gt;::injectFake()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l01811">mx::improc::HCIobservation&lt; _realT &gt;::readWeights()</a>, <a class="el" href="HCIobservation_8hpp_source.html#l02007">mx::improc::HCIobservation&lt; _realT &gt;::stdFitsHeader()</a>, and <a class="el" href="HCIobservation_8hpp_source.html#l01243">mx::improc::HCIobservation&lt; _realT &gt;::threshold()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gitRepo_8cpp_source.html#l00067">mx::sys::gitRepo::getGitName()</a>.</p>
 
 </div>
 </div>
@@ -672,7 +710,7 @@ Functions</h2></td></tr>
 <p>Get the stem of the filename. </p>
 <dl class="section return"><dt>Returns</dt><dd>the stem for the filename, that is without the path or extension </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00065">65</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fileUtils_8cpp_source.html#l00071">71</a> of file <a class="el" href="fileUtils_8cpp_source.html">fileUtils.cpp</a>.</p>
 
 </div>
 </div>
@@ -681,7 +719,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:35 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

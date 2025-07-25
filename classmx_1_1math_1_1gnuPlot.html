@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('classmx_1_1math_1_1gnuPlot.html',''); 
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <div class="textblock"><p>An interactive c++ interface to gnuplot. </p>
 <p>Spawns a gnuplot sesssion and communicates with it.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000069">Todo:</a></b></dt><dd>Use mxError for error reporting.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000063">Todo:</a></b></dt><dd>Use mxError for error reporting.</dd></dl>
 <p>An example of using <a class="el" href="classmx_1_1math_1_1gnuPlot.html" title="An interactive c++ interface to gnuplot.">gnuPlot</a> to plot data from a file: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classmx_1_1math_1_1gnuPlot.html">gnuPlot</a> <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">gp</a>; <span class="comment">//This automatically connects, and is now ready to plot.</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">gp</a>.<a class="code hl_function" href="classmx_1_1math_1_1gnuPlot.html#a27a5667ecb287ffebc2fade843a60fd4">plot</a>(<span class="stringliteral">&quot;my_data_file.dat&quot;</span>, <span class="stringliteral">&quot;u 1:2 w l&quot;</span>); <span class="comment">//Plots the data in the file</span></div>
@@ -390,7 +390,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Check for a response from gnuplot. </p>
 <p>It typically takes some time for a response from gnuplot to become readable, whether an error occurs or not. It is often 0.3 seconds or more. If there is no error, there will be no response so waiting for a response to check for errors after every command can be very time consuming. Thus it is a choice whether to check for errors from gnuplot after every command, and what timeout to use.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000070">Todo:</a></b></dt><dd>investigate having a second thread monitor for responses.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000064">Todo:</a></b></dt><dd>investigate having a second thread monitor for responses.</dd></dl>
 <p>gnuplot terminates all outputs with <code>\n\n</code>, so this reads up to these two characters. It then strips any leading and trailing whitespace. If the response begins with <code>gnuplot&gt;</code>, then the response is an error. In this case, checkResponse returns -1 and the gpError flag is set. If gpError is not set but the return value is -1, then some other error occurred (check <code>errno</code>).</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -2802,7 +2802,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><a class="el" href="classmx_1_1math_1_1gnuPlot.html">gnuPlot</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:36 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

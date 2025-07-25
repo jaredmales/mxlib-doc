@@ -138,14 +138,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gaedcae323c2891fcbed0eec1e4eebb543" id="r_gaedcae323c2891fcbed0eec1e4eebb543"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__error__handling.html#gaedcae323c2891fcbed0eec1e4eebb543">errno_report</a> (const std::string &amp;source, int ec, const std::string &amp;file, const int &amp;line, const std::string &amp;expl=&quot;&quot;)</td></tr>
 <tr class="memdesc:gaedcae323c2891fcbed0eec1e4eebb543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a rich error report given a standard errno error code.  <br /></td></tr>
 <tr class="separator:gaedcae323c2891fcbed0eec1e4eebb543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad094e275265e410dbf53da02ff7df9f5" id="r_ad094e275265e410dbf53da02ff7df9f5"><td class="memTemplParams" colspan="2">template&lt;typename iosT , char comment = '#'&gt; </td></tr>
-<tr class="memitem:ad094e275265e410dbf53da02ff7df9f5"><td class="memTemplItemLeft" align="right" valign="top">iosT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemx.html#ad094e275265e410dbf53da02ff7df9f5">dumpGitStatus</a> (iosT &amp;ios)</td></tr>
-<tr class="memdesc:ad094e275265e410dbf53da02ff7df9f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the current git status of the library to a stream.  <br /></td></tr>
-<tr class="separator:ad094e275265e410dbf53da02ff7df9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f2543b7e5d21579b6d40912cf3cd3e8" id="r_a2f2543b7e5d21579b6d40912cf3cd3e8"><td class="memTemplParams" colspan="2">template&lt;typename iosT , char comment = '#'&gt; </td></tr>
 <tr class="memitem:a2f2543b7e5d21579b6d40912cf3cd3e8"><td class="memTemplItemLeft" align="right" valign="top">iosT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemx.html#a2f2543b7e5d21579b6d40912cf3cd3e8">dumpGitStatus</a> (iosT &amp;ios, const std::string &amp;repoName, const std::string &amp;branch, const std::string &amp;sha1, const bool &amp;modified, const std::string &amp;section=&quot;&quot;)</td></tr>
 <tr class="memdesc:a2f2543b7e5d21579b6d40912cf3cd3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the git status of a repository to a stream.  <br /></td></tr>
 <tr class="separator:a2f2543b7e5d21579b6d40912cf3cd3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad094e275265e410dbf53da02ff7df9f5" id="r_ad094e275265e410dbf53da02ff7df9f5"><td class="memTemplParams" colspan="2">template&lt;typename iosT , char comment = '#'&gt; </td></tr>
+<tr class="memitem:ad094e275265e410dbf53da02ff7df9f5"><td class="memTemplItemLeft" align="right" valign="top">iosT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemx.html#ad094e275265e410dbf53da02ff7df9f5">dumpGitStatus</a> (iosT &amp;ios)</td></tr>
+<tr class="memdesc:ad094e275265e410dbf53da02ff7df9f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the current git status of the mxlib library to a stream.  <br /></td></tr>
+<tr class="separator:ad094e275265e410dbf53da02ff7df9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad094e275265e410dbf53da02ff7df9f5" name="ad094e275265e410dbf53da02ff7df9f5"></a>
@@ -166,7 +166,7 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Dump the current git status of the library to a stream. </p>
+<p>Dump the current git status of the mxlib library to a stream. </p>
 <p>Prints the current SHA1 hash and whether or not the library has been modified since that commit.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -182,9 +182,9 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mxlib_8hpp_source.html#l00050">50</a> of file <a class="el" href="mxlib_8hpp_source.html">mxlib.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxlib_8hpp_source.html#l00087">87</a> of file <a class="el" href="mxlib_8hpp_source.html">mxlib.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02706">mx::AO::analysis::aoSystem&lt; _realT, _inputSpectT, iosT &gt;::dumpAOSystem()</a>.</p>
+<p class="reference">References <a class="el" href="mxlib_8hpp_source.html#l00050">dumpGitStatus()</a>.</p>
 
 </div>
 </div>
@@ -261,7 +261,9 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mxlib_8hpp_source.html#l00078">78</a> of file <a class="el" href="mxlib_8hpp_source.html">mxlib.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mxlib_8hpp_source.html#l00050">50</a> of file <a class="el" href="mxlib_8hpp_source.html">mxlib.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="aoSystem_8hpp_source.html#l02707">mx::AO::analysis::aoSystem&lt; _realT, _inputSpectT, iosT &gt;::dumpAOSystem()</a>, and <a class="el" href="mxlib_8hpp_source.html#l00087">dumpGitStatus()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +273,7 @@ template&lt;typename iosT , char comment = '#'&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:35 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -9,12 +9,10 @@ var searchData=
   ['constants_6',['constants',['../group__aoConstants.html',1,'AO Constants'],['../group__boost__constants.html',1,'Boost Constants'],['../group__dimensionless__constants.html',1,'Dimensionless Constants'],['../group__genconstants.html',1,'General Constants'],['../group__astroconstants.html',1,'Physical and Astronomical Constants'],['../group__sofa__constants.html',1,'SOFA Constants']]],
   ['constants_20and_20units_7',['Constants and units',['../group__constants.html',1,'']]],
   ['constants_20with_20dimensions_8',['Constants with Dimensions',['../group__dimensioned__constants.html',1,'']]],
-  ['contrast_20imaging_9',['High Contrast Imaging',['../group__hc__imaging.html',1,'']]],
-  ['contrast_20imaging_20files_10',['High Contrast Imaging Files',['../group__hc__imaging__files.html',1,'']]],
-  ['conversions_11',['Unit Conversions',['../group__astrounits.html',1,'']]],
-  ['coronagraphs_12',['Coronagraphs',['../group__coronagraphs.html',1,'']]],
-  ['cublas_20interface_13',['NVIDIA Cuda cublas Interface',['../group__cublas.html',1,'']]],
-  ['cuda_20cublas_20interface_14',['NVIDIA Cuda cublas Interface',['../group__cublas.html',1,'']]],
-  ['cuda_20files_15',['Cuda Files',['../group__cuda__files.html',1,'']]],
-  ['cuda_20interface_16',['NVIDIA Cuda Interface',['../group__cuda.html',1,'']]]
+  ['conversions_9',['Unit Conversions',['../group__astrounits.html',1,'']]],
+  ['coronagraphs_10',['Coronagraphs',['../group__coronagraphs.html',1,'']]],
+  ['cublas_20interface_11',['NVIDIA Cuda cublas Interface',['../group__cublas.html',1,'']]],
+  ['cuda_20cublas_20interface_12',['NVIDIA Cuda cublas Interface',['../group__cublas.html',1,'']]],
+  ['cuda_20files_13',['Cuda Files',['../group__cuda__files.html',1,'']]],
+  ['cuda_20interface_14',['NVIDIA Cuda Interface',['../group__cuda.html',1,'']]]
 ];

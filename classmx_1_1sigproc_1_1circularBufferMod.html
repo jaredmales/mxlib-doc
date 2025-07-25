@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('classmx_1_1sigproc_1_1circularBufferMo
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename _storedT, typename _indexT&gt;<br />
 class mx::sigproc::circularBufferMod&lt; _storedT, _indexT &gt;</div><p>Circular buffer which wraps with the mod opoerator [very slow]. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00380">380</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00412">412</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="circularBuffer_8hpp_source.html">sigproc/circularBuffer.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -166,12 +166,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae40dc2e0cde74f188815441cd7ab7543" id="r_ae40dc2e0cde74f188815441cd7ab7543"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#ae40dc2e0cde74f188815441cd7ab7543">setMaxEntries</a> (<a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#a330ef155938bb2b58f25429e1e939a43">indexT</a> maxEnt)</td></tr>
 <tr class="memdesc:ae40dc2e0cde74f188815441cd7ab7543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface implementation for maxEntries.  <br /></td></tr>
 <tr class="separator:ae40dc2e0cde74f188815441cd7ab7543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182f2095554e6528db9a6bf559fdee7b" id="r_a182f2095554e6528db9a6bf559fdee7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#a182f2095554e6528db9a6bf559fdee7b">setWrapStartup</a> ()</td></tr>
-<tr class="memdesc:a182f2095554e6528db9a6bf559fdee7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface implementation for wrapping setup during the startup phase.  <br /></td></tr>
-<tr class="separator:a182f2095554e6528db9a6bf559fdee7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1b4c1c2d7082d5d74cc77554e5c5b71" id="r_ad1b4c1c2d7082d5d74cc77554e5c5b71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#ad1b4c1c2d7082d5d74cc77554e5c5b71">setWrap</a> ()</td></tr>
-<tr class="memdesc:ad1b4c1c2d7082d5d74cc77554e5c5b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface implementation for wrapping setup after the startup phase.  <br /></td></tr>
-<tr class="separator:ad1b4c1c2d7082d5d74cc77554e5c5b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6b8b009177f3caa642e0ea19325e0d2" id="r_ad6b8b009177f3caa642e0ea19325e0d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#a028e81d89b91016fee7f16a1b91fa598">storedT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#ad6b8b009177f3caa642e0ea19325e0d2">at</a> (<a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#a330ef155938bb2b58f25429e1e939a43">indexT</a> refEntry, <a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html#a330ef155938bb2b58f25429e1e939a43">indexT</a> idx)</td></tr>
 <tr class="memdesc:ad6b8b009177f3caa642e0ea19325e0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface implementation for entry access.  <br /></td></tr>
 <tr class="separator:ad6b8b009177f3caa642e0ea19325e0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc06fd8561d19d995bb51e78cbc88b1f inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase" id="r_afc06fd8561d19d995bb51e78cbc88b1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#afc06fd8561d19d995bb51e78cbc88b1f">nextEntry</a> (const <a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a91d7321c0bf05518e8927015f714b694">storedT</a> &amp;newEnt)</td></tr>
 <tr class="memdesc:afc06fd8561d19d995bb51e78cbc88b1f inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the next entry to the circular buffer.  <br /></td></tr>
 <tr class="separator:afc06fd8561d19d995bb51e78cbc88b1f inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e1738a4a4e932a2ab77bca87b39282 inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase" id="r_aa7e1738a4a4e932a2ab77bca87b39282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#aa7e1738a4a4e932a2ab77bca87b39282">nextEntry</a> ()</td></tr>
+<tr class="memdesc:aa7e1738a4a4e932a2ab77bca87b39282 inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move to the next entry in the circular buffer.  <br /></td></tr>
+<tr class="separator:aa7e1738a4a4e932a2ab77bca87b39282 inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fecced319846d83fbec845bcd865ef inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase" id="r_a50fecced319846d83fbec845bcd865ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a963a9ab25abfc11b1ff66d1944cda65b">indexT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmx_1_1sigproc_1_1circularBufferBase.html#a50fecced319846d83fbec845bcd865ef">earliest</a> ()</td></tr>
 <tr class="memdesc:a50fecced319846d83fbec845bcd865ef inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the earliest entry.  <br /></td></tr>
 <tr class="separator:a50fecced319846d83fbec845bcd865ef inherit pub_methods_classmx_1_1sigproc_1_1circularBufferBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,7 +247,7 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
 
 <p>The index type, also used for sizes. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00384">384</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00416">416</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -270,7 +267,7 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
 
 <p>The maximum number of entries to allow in the buffer before wrapping. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00383">383</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00415">415</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -302,7 +299,7 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
 
 <p>Default c'tor. </p>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00387">387</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00419">419</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +338,7 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00395">395</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00427">427</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -393,9 +390,9 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00426">426</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00444">444</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="circularBuffer_8hpp_source.html#l00083">mx::sigproc::circularBufferBase&lt; circularBufferMod&lt; _storedT, _indexT &gt;, _storedT, _indexT &gt;::m_buffer</a>.</p>
+<p class="reference">References <a class="el" href="circularBuffer_8hpp_source.html#l00089">mx::sigproc::circularBufferBase&lt; circularBufferMod&lt; _storedT, _indexT &gt;, _storedT, _indexT &gt;::m_buffer</a>.</p>
 
 </div>
 </div>
@@ -447,9 +444,9 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00440">440</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00458">458</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="circularBuffer_8hpp_source.html#l00083">mx::sigproc::circularBufferBase&lt; circularBufferMod&lt; _storedT, _indexT &gt;, _storedT, _indexT &gt;::m_buffer</a>.</p>
+<p class="reference">References <a class="el" href="circularBuffer_8hpp_source.html#l00089">mx::sigproc::circularBufferBase&lt; circularBufferMod&lt; _storedT, _indexT &gt;, _storedT, _indexT &gt;::m_buffer</a>.</p>
 
 </div>
 </div>
@@ -488,71 +485,7 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00403">403</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad1b4c1c2d7082d5d74cc77554e5c5b71" name="ad1b4c1c2d7082d5d74cc77554e5c5b71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1b4c1c2d7082d5d74cc77554e5c5b71">&#9670;&#160;</a></span>setWrap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _storedT , typename _indexT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html">mx::sigproc::circularBufferMod</a>&lt; _storedT, _indexT &gt;::setWrap </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Interface implementation for wrapping setup after the startup phase. </p>
-<p>This is called after maxEntries have been added. </p>
-
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00417">417</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a182f2095554e6528db9a6bf559fdee7b" name="a182f2095554e6528db9a6bf559fdee7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a182f2095554e6528db9a6bf559fdee7b">&#9670;&#160;</a></span>setWrapStartup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _storedT , typename _indexT &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html">mx::sigproc::circularBufferMod</a>&lt; _storedT, _indexT &gt;::setWrapStartup </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Interface implementation for wrapping setup during the startup phase. </p>
-<p>This is called before maxEntries have been added. </p>
-
-<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00410">410</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circularBuffer_8hpp_source.html#l00435">435</a> of file <a class="el" href="circularBuffer_8hpp_source.html">circularBuffer.hpp</a>.</p>
 
 </div>
 </div>
@@ -565,7 +498,7 @@ template&lt;typename _storedT , typename _indexT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>sigproc</b></li><li class="navelem"><a class="el" href="classmx_1_1sigproc_1_1circularBufferMod.html">circularBufferMod</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:36 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

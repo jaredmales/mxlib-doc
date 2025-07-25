@@ -124,7 +124,7 @@ class mx::math::ft::fftT&lt; _inputT, _outputT, _rank, 0 &gt;</div><p>Fast Fouri
 <p>Planning is done with "measure" to achieve optimum performance at the cost of extra time during the planning step. This can be mitigated using "wisdom", managed by <a class="el" href="structmx_1_1math_1_1ft_1_1fftwEnvironment.html">fftwEnvironment</a>.</p>
 <p>Calls to the FFTW plan functions are protected by <code>\#pragma omp critical</code> directives unless MX_FFTW_NOOMP is define prior to the first inclusion of this file. This means that you do not need to use the <code>fftw_make_planner_thread_safe</code> facility in FFTW.</p>
 <dl class="section note"><dt>Note</dt><dd>I recommend not using fftw_make_planner_thread_safe or specifying number of threads in <a class="el" href="structmx_1_1math_1_1ft_1_1fftwEnvironment.html">fftwEnvironment</a>.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000067">Todo:</a></b></dt><dd><p class="startdd">add execute interface with fftw like signature </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd><p class="startdd">add execute interface with fftw like signature </p>
 <p class="enddd">add plan interface where user passes in pointers (to avoid allocations)</p>
 </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -935,7 +935,7 @@ template&lt;<a class="el" href="group__genconstants.html#ga377ae58af2380c4810328
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemx.html">mx</a></li><li class="navelem"><b>math</b></li><li class="navelem"><b>ft</b></li><li class="navelem"><a class="el" href="classmx_1_1math_1_1ft_1_1fftT_3_01__inputT_00_01__outputT_00_01__rank_00_010_01_4.html">fftT&lt; _inputT, _outputT, _rank, 0 &gt;</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:36 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

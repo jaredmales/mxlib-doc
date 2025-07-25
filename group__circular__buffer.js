@@ -12,6 +12,7 @@ var group__circular__buffer =
       [ "latest", "classmx_1_1sigproc_1_1circularBufferBase.html#a584e60073134c5d4d6d68119d93ae114", null ],
       [ "maxEntries", "classmx_1_1sigproc_1_1circularBufferBase.html#a173c57aa70bce9cf5703a690c2b6e5e2", null ],
       [ "maxEntries", "classmx_1_1sigproc_1_1circularBufferBase.html#a3c7af26f8a093e1531a08ed9c2aa5487", null ],
+      [ "nextEntry", "classmx_1_1sigproc_1_1circularBufferBase.html#aa7e1738a4a4e932a2ab77bca87b39282", null ],
       [ "nextEntry", "classmx_1_1sigproc_1_1circularBufferBase.html#afc06fd8561d19d995bb51e78cbc88b1f", null ],
       [ "operator[]", "classmx_1_1sigproc_1_1circularBufferBase.html#a10cfdb3418c15765c9ce5df28ff467d8", null ],
       [ "operator[]", "classmx_1_1sigproc_1_1circularBufferBase.html#a6d19416be47d9723afd1ce41b6f79bcd", null ],
@@ -29,9 +30,7 @@ var group__circular__buffer =
       [ "circularBufferBranch", "classmx_1_1sigproc_1_1circularBufferBranch.html#acdde69a76381611ab7a1e35c71faef21", null ],
       [ "at", "classmx_1_1sigproc_1_1circularBufferBranch.html#a95b19ccbf3dc09411d94366438e0cf7b", null ],
       [ "at", "classmx_1_1sigproc_1_1circularBufferBranch.html#a283258d72e986af05d38b916845e22ac", null ],
-      [ "setMaxEntries", "classmx_1_1sigproc_1_1circularBufferBranch.html#a13770fe91ed58aec0e0c572c739b42b0", null ],
-      [ "setWrap", "classmx_1_1sigproc_1_1circularBufferBranch.html#a97151e99e64f5d05bdac1e961eceeafc", null ],
-      [ "setWrapStartup", "classmx_1_1sigproc_1_1circularBufferBranch.html#a2c991ad9d57e53802cc3d534f1986ecb", null ]
+      [ "setMaxEntries", "classmx_1_1sigproc_1_1circularBufferBranch.html#a13770fe91ed58aec0e0c572c739b42b0", null ]
     ] ],
     [ "mx::sigproc::circularBufferMod< _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferMod.html", [
       [ "indexT", "classmx_1_1sigproc_1_1circularBufferMod.html#a330ef155938bb2b58f25429e1e939a43", null ],
@@ -40,9 +39,7 @@ var group__circular__buffer =
       [ "circularBufferMod", "classmx_1_1sigproc_1_1circularBufferMod.html#ac9c3df7ea485183d015e2d6497b50d01", null ],
       [ "at", "classmx_1_1sigproc_1_1circularBufferMod.html#ad6b8b009177f3caa642e0ea19325e0d2", null ],
       [ "at", "classmx_1_1sigproc_1_1circularBufferMod.html#a61f2b3b2bb59f3b2cd5753cc81b99470", null ],
-      [ "setMaxEntries", "classmx_1_1sigproc_1_1circularBufferMod.html#ae40dc2e0cde74f188815441cd7ab7543", null ],
-      [ "setWrap", "classmx_1_1sigproc_1_1circularBufferMod.html#ad1b4c1c2d7082d5d74cc77554e5c5b71", null ],
-      [ "setWrapStartup", "classmx_1_1sigproc_1_1circularBufferMod.html#a182f2095554e6528db9a6bf559fdee7b", null ]
+      [ "setMaxEntries", "classmx_1_1sigproc_1_1circularBufferMod.html#ae40dc2e0cde74f188815441cd7ab7543", null ]
     ] ],
     [ "mx::sigproc::circularBufferIndex< _storedT, _indexT >", "classmx_1_1sigproc_1_1circularBufferIndex.html", [
       [ "indexT", "classmx_1_1sigproc_1_1circularBufferIndex.html#a43d2a88afa9cc79b59e858b7eb93b35e", null ],
@@ -52,8 +49,6 @@ var group__circular__buffer =
       [ "at", "classmx_1_1sigproc_1_1circularBufferIndex.html#ad195312788b9a1a9a62a8d7ae7096811", null ],
       [ "at", "classmx_1_1sigproc_1_1circularBufferIndex.html#a364531ad2ecf8b20f22dbbddaa49e69b", null ],
       [ "setMaxEntries", "classmx_1_1sigproc_1_1circularBufferIndex.html#ae21a018201d2a8933e6aeb6d3fd37e03", null ],
-      [ "setWrap", "classmx_1_1sigproc_1_1circularBufferIndex.html#a8f59a4752050f60f8c4c18d6231cd439", null ],
-      [ "setWrapStartup", "classmx_1_1sigproc_1_1circularBufferIndex.html#ab87da2695f754a5d808bcec3a61e3f73", null ],
       [ "m_indices", "classmx_1_1sigproc_1_1circularBufferIndex.html#a0b4bd3bc2258e6d0fdbb32521cac3678", null ]
     ] ]
 ];

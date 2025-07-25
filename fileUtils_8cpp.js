@@ -1,6 +1,7 @@
 var fileUtils_8cpp =
 [
     [ "createDirectories", "fileUtils_8cpp.html#ga517907c00aa5e1b369e7326838d89ce0", null ],
+    [ "exists", "fileUtils_8cpp.html#gad2b071d3c58a167cab099592f6c3f968", null ],
     [ "fileNameAppend", "fileUtils_8cpp.html#ga34cbdfd66ed57b5891611151b729eee4", null ],
     [ "fileNamePrepend", "fileUtils_8cpp.html#ga082efbe4a068d22b0b3a70207e267987", null ],
     [ "fileNamePrependAppend", "fileUtils_8cpp.html#ga29885af2f797ae1bc43e63ee128c2bab", null ],

@@ -452,14 +452,14 @@ $(document).ready(function(){initNavTree('geo_8hpp_source.html',''); initResizab
 <div class="foldopen" id="foldopen00316" data-start="{" data-end="}">
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">  316</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__geo.html#gafa2f7fd099fa2dbce1b53f39c04451e2">rotatePoint</a>( realT &amp;x0, <span class="comment">///&lt; [in.out] the x-coordinate of the point to rotate.  On exit contains the rotated value.</span></div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                  realT &amp;y0, <span class="comment">///&lt; [in.out] the y-coordinate of the point to rotate.  On exit contains the rotated value.</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                  realT angle <span class="comment">///&lt; [in] the angle by which to rotate [radians]</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                  realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">angle</a> <span class="comment">///&lt; [in] the angle by which to rotate [radians]</span></div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>)</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>{</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">x1</a>;</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">y1</a>;</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">cq</a> = <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">cos</a>( angle );</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sq</a> = <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sin</a>( angle );</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">cq</a> = <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">cos</a>( <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">angle</a> );</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    realT <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sq</a> = <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sin</a>( <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">angle</a> );</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">x1</a> = x0 * <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">cq</a> - y0 * <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sq</a>;</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">y1</a> = x0 * <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">sq</a> + y0 * <a class="code hl_function" href="group__genconstants.html#ga377ae58af2380c48103282022c75e0a8">cq</a>;</div>
@@ -489,7 +489,7 @@ $(document).ready(function(){initNavTree('geo_8hpp_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="geo_8hpp.html">geo.hpp</a></li>
-    <li class="footer">Generated on Wed Mar 5 2025 10:09:16 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Jul 25 2025 10:53:35 for mxlib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

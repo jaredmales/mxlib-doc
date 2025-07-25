@@ -3,6 +3,7 @@ var group__fileutils =
     [ "fileUtils.hpp", "fileUtils_8hpp.html", null ],
     [ "fileUtils.cpp", "fileUtils_8cpp.html", null ],
     [ "mx::ioutils::createDirectories", "group__fileutils.html#ga517907c00aa5e1b369e7326838d89ce0", null ],
+    [ "mx::ioutils::exists", "group__fileutils.html#gad2b071d3c58a167cab099592f6c3f968", null ],
     [ "mx::ioutils::fileNameAppend", "group__fileutils.html#ga34cbdfd66ed57b5891611151b729eee4", null ],
     [ "mx::ioutils::fileNamePrepend", "group__fileutils.html#ga082efbe4a068d22b0b3a70207e267987", null ],
     [ "mx::ioutils::fileNamePrependAppend", "group__fileutils.html#ga29885af2f797ae1bc43e63ee128c2bab", null ],

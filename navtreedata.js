@@ -28,16 +28,14 @@ var NAVTREE =
     [ "User's Guide", "topics.html", "topics" ],
     [ "mxlib", "md__2home_2jrmales_2Source_2mxlib_2README.html", null ],
     [ "Todo List", "todo.html", null ],
-    [ "Test List", "test.html", null ],
     [ "Bug List", "bug.html", null ],
+    [ "Test List", "test.html", null ],
     [ "Bibliography", "citelist.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ],
-        [ "Enumerator", "namespacemembers_eval.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -63,23 +61,21 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ADIDerotator_8cpp.html",
-"classmx_1_1AO_1_1analysis_1_1aoSystem.html#a8aa449c768c58a2545ae9050e5d7ec23",
-"classmx_1_1AO_1_1sim_1_1pywfsSlopeReconstructor.html#a8c4ef24ba13c6115be6b9ec389636dd0",
-"classmx_1_1fits_1_1fitsFile.html#adfe5f172bd897b7a6da4ef73835e4318",
-"classmx_1_1improc_1_1imageXCorrDiscrete.html#a99e0ab510d60a463c0586ee3ca64a0eb",
-"classmx_1_1math_1_1fit_1_1levmarInterface.html#a4c1b3c7be76a9c7b0cd8e3f93937a0df",
-"classmx_1_1sigproc_1_1circularBufferIndex.html",
-"fitsUtils_8cpp.html",
-"group__fftw__template__plans.html#ga17a7734b7cba8e0e303ee3c087bbb99e",
-"group__image__filters__kernels.html#ga6fa4c2dcfdcbc1c2f90cccec1ee66618",
-"group__stringutils.html#ga31df28b971a39001675547f747f2f226",
-"sharedMemSegment_8cpp.html",
-"structmx_1_1app_1_1appConfigurator.html#ae086a8a7333564690cfe284c47129f7d",
-"structmx_1_1cuda_1_1cudaPtr.html#ad96daf5e0b5e298df040435e8045fe8b",
-"structmx_1_1improc_1_1HCIobservation.html#acfd56525f2446a952c37193c9976cb04",
-"structmx_1_1math_1_1ft_1_1fftwEnvironment.html",
-"zernike__test_8cpp_source.html"
+"airyPattern_8hpp.html",
+"classmx_1_1AO_1_1analysis_1_1aoSystem.html#aa5cfce2afec8997cd1eac5a77a8f4bb6",
+"classmx_1_1AO_1_1sim_1_1pyramidSensor.html#a4948d8c75bb5a9382d9cdedd1c7b69bb",
+"classmx_1_1fits_1_1fitsFile.html",
+"classmx_1_1fits_1_1fitsHeaderCard.html#aa715c50ed2b72bc36705d82fbf4ab98c",
+"classmx_1_1ipc_1_1sharedMemSegment.html#a6c8e6d6d859317fcc79aef753da81b39",
+"classmx_1_1math_1_1histogramUniform.html#ac4edcc3b15a5c39c93f9ae438da61b56",
+"deformableMirror_8hpp.html",
+"group__binvector.html#ga5207aff4cd7f5b298565bd281bc8dd26",
+"group__genconstants.html#ga41ddf79c8f6f9442a53e81b8e02a69c4",
+"group__signal__windows1D.html#ga4e4c9c3064f636420531df7b1418d35a",
+"processInterface_8hpp.html",
+"structmx_1_1AO_1_1sim_1_1wavefront.html#a9449f30d83b93b664a6e051c5f90d62e",
+"structmx_1_1astro_1_1units_1_1si.html#a45a2fca21837a55dceb4201a18517d95",
+"structmx_1_1math_1_1ft_1_1fftwTypeSpec_3_01complexDT_00_01double_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
