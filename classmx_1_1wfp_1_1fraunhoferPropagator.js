@@ -1,0 +1,25 @@
+var classmx_1_1wfp_1_1fraunhoferPropagator =
+[
+    [ "complexT", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a95dc7389ac773b46d82c84edde7f5979", null ],
+    [ "realT", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a115b55ab2ce922cb809def8ad72d7bb8", null ],
+    [ "wavefrontT", "classmx_1_1wfp_1_1fraunhoferPropagator.html#ad19f27f229499d31f9525bc946b2f04f", null ],
+    [ "fraunhoferPropagator", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a195779684f44b1cb0f45b55049e030c5", null ],
+    [ "~fraunhoferPropagator", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a6e9efe5f6e2f30d544da33758fd07997", null ],
+    [ "initialize", "classmx_1_1wfp_1_1fraunhoferPropagator.html#aac6c364eb9593e7a33ae97781518a11a", null ],
+    [ "makeShiftPhase", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a4695b09c3937475c60944babd19085b4", null ],
+    [ "propagateFocalToPupil", "classmx_1_1wfp_1_1fraunhoferPropagator.html#adfb823552cebe42596e9766745f9169d", null ],
+    [ "propagatePupilToFocal", "classmx_1_1wfp_1_1fraunhoferPropagator.html#aa816655f47a0bcc0909b5f172acdbac2", null ],
+    [ "setWavefrontSizePixels", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a5d8f63e45cb651756ab1c524805f49ef", null ],
+    [ "shiftPupil", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a8e6864476178ba7c2e44842d6a64b925", null ],
+    [ "unshiftPupil", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a10d2e268ef357b2cc992d082770e72ed", null ],
+    [ "wholePixel", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a59ad39ea58e299a2ba792303562d9934", null ],
+    [ "wholePixel", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a6da5894e669f401cb816cce4fc927a5a", null ],
+    [ "m_centerFocal", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a852381cf03a8ed6921a127fa793adcb2", null ],
+    [ "m_centerPupil", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a2f55d56ac492d59c7bae2e2a4ec99f05", null ],
+    [ "m_fft_back", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a3645d031fc5a2a9cbac4949de7b6d549", null ],
+    [ "m_fft_fwd", "classmx_1_1wfp_1_1fraunhoferPropagator.html#aa67cc5f4420ea59d57c590cb815ccebd", null ],
+    [ "m_wavefrontSizePixels", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a7b0b9137bf20e65d35ff22bfd3ccd414", null ],
+    [ "m_wholePixel", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a6e6ddee2805eaac53656adf4e18d25be", null ],
+    [ "m_xcen", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a022ca950cf108acb145cd89cc50a3a4b", null ],
+    [ "m_ycen", "classmx_1_1wfp_1_1fraunhoferPropagator.html#a69cc8d032bf686a3b00f8d40a0c68b2f", null ]
+];
