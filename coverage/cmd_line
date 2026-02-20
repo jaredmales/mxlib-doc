@@ -1,0 +1,1 @@
+genhtml /home/jrmales/Source/mxlib/_build/coverage_filtered.info --output-directory /home/jrmales/Source/mxlib/_build/doc/html/coverage --title mxlib --hierarchical --merge-aliases --suppress-aliases --filter function --demangle-cpp --css-file /home/jrmales/Source/mxlib/tests/coverage/gcov.css

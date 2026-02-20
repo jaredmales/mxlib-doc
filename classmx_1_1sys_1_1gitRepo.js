@@ -1,0 +1,27 @@
+var classmx_1_1sys_1_1gitRepo =
+[
+    [ "gitRepo", "classmx_1_1sys_1_1gitRepo.html#add0aff14113636cabf5a4d382aaa6d0b", null ],
+    [ "gitRepo", "classmx_1_1sys_1_1gitRepo.html#aee5176b503faa826a77bf3e4d064fbe1", null ],
+    [ "branch", "classmx_1_1sys_1_1gitRepo.html#a6bb3b8bd4cc2b15598e5acd67961b3fe", null ],
+    [ "dir", "classmx_1_1sys_1_1gitRepo.html#ab88d7da89b8eb1ee62584a3cc8dc0f07", null ],
+    [ "dir", "classmx_1_1sys_1_1gitRepo.html#a1b3a32352da8e5309fef1245c6703d0c", null ],
+    [ "getGitFileState", "classmx_1_1sys_1_1gitRepo.html#af55754e6dd9c85b36ff9752102803aad", null ],
+    [ "getGitHash", "classmx_1_1sys_1_1gitRepo.html#a61e81d2e5012fca9adb6a6232bbe5a35", null ],
+    [ "getGitModified", "classmx_1_1sys_1_1gitRepo.html#aed99fb585603822f1b7cd877f1920730", null ],
+    [ "getGitName", "classmx_1_1sys_1_1gitRepo.html#a07725ff911012fed8c212a4a5d0f349c", null ],
+    [ "gitDir", "classmx_1_1sys_1_1gitRepo.html#a0818c539d64488a2a84322db854b04a1", null ],
+    [ "hash", "classmx_1_1sys_1_1gitRepo.html#afad5e66a779608d9e22fa2be0d7b896b", null ],
+    [ "isNotCommitted", "classmx_1_1sys_1_1gitRepo.html#a3920fd0c7b6afb902fafd2b62119af5d", null ],
+    [ "modified", "classmx_1_1sys_1_1gitRepo.html#adad01ba30e786580a58dd55fbb5e8ac2", null ],
+    [ "name", "classmx_1_1sys_1_1gitRepo.html#a6e2985aad6462b881fec1432b0b42e49", null ],
+    [ "m_branch", "classmx_1_1sys_1_1gitRepo.html#a36882a010bfc270cac463b06ec8abcc7", null ],
+    [ "m_deletedFiles", "classmx_1_1sys_1_1gitRepo.html#a8a63429243691262b96d72d1e7048fcf", null ],
+    [ "m_dir", "classmx_1_1sys_1_1gitRepo.html#a3da49b14dbac6684bf1d60e29f5e0597", null ],
+    [ "m_hash", "classmx_1_1sys_1_1gitRepo.html#abf57ec2fa5712f44b44026809764937b", null ],
+    [ "m_modified", "classmx_1_1sys_1_1gitRepo.html#af249fd43608c623681abdc3ad48025b0", null ],
+    [ "m_modifiedFiles", "classmx_1_1sys_1_1gitRepo.html#aa85645e842928f621908816f451c3ef7", null ],
+    [ "m_name", "classmx_1_1sys_1_1gitRepo.html#a6f72ef5747acca90775865b65db2bc33", null ],
+    [ "m_renamedFiles", "classmx_1_1sys_1_1gitRepo.html#a361cbc1723f345385d241e06f2be4fdc", null ],
+    [ "m_renamedFiles2", "classmx_1_1sys_1_1gitRepo.html#a36aef3c4f0d35b9010717c83319d039f", null ],
+    [ "m_untrackedFiles", "classmx_1_1sys_1_1gitRepo.html#a79f1b96d78932f0e42e09be31016d03a", null ]
+];

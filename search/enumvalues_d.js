@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['sizeerr_0',['sizeerr',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a3e6a65700fcd4798f6366717babdf2e5',1,'mx']]],
+  ['std_5fbad_5falloc_1',['std_bad_alloc',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a4a7bcb5080e02d238a12626189ccd463',1,'mx']]],
+  ['std_5fbad_5foptional_5faccess_2',['std_bad_optional_access',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a547ad9121856cffff299a57949122c95',1,'mx']]],
+  ['std_5fdomain_5ferror_3',['std_domain_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a424a04a8c699f79e8c14686bb83ef733',1,'mx']]],
+  ['std_5fexception_4',['std_exception',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a1702c8950d15f035273a3f192a9da2dc',1,'mx']]],
+  ['std_5ffilesystem_5ferror_5',['std_filesystem_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24abbca06370d74d99cacf0912b06e1c82a',1,'mx']]],
+  ['std_5fformat_5ferror_6',['std_format_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24ac035911cebf14cd9ec68831b4469be33',1,'mx']]],
+  ['std_5ffuture_5ferror_7',['std_future_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24ab61bd95013c59ba4868b1bcc1caedd27',1,'mx']]],
+  ['std_5finvalid_5fargument_8',['std_invalid_argument',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24ac7f051ac02958b635ef8ad9ac7151eae',1,'mx']]],
+  ['std_5fios_5fbase_5ffailure_9',['std_ios_base_failure',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a2d601976fd3542a82c2196ab0a3a235e',1,'mx']]],
+  ['std_5flength_5ferror_10',['std_length_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24ac1f46ea0f4e7af51a6a1edbda873eee2',1,'mx']]],
+  ['std_5flogic_5ferror_11',['std_logic_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a3b374e8006d0b565acd7a648809ff2d2',1,'mx']]],
+  ['std_5fout_5fof_5frange_12',['std_out_of_range',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24aa8f7a131447d1eee53ce66b7d3333f41',1,'mx']]],
+  ['std_5foverflow_5ferror_13',['std_overflow_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24ac6701ff30012822b20530c50fc37fa0e',1,'mx']]],
+  ['std_5frange_5ferror_14',['std_range_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a5933a0794d16f657c08e7f42028e403e',1,'mx']]],
+  ['std_5fruntime_5ferror_15',['std_runtime_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24a4970799786da68dbb8f3792f703b7f26',1,'mx']]],
+  ['std_5funderflow_5ferror_16',['std_underflow_error',['../group__error__handling__codes.html#gga337fdc93e37f9c7b71ea95ce9a9b0d24afc5b5b02c436c6513ba6e3c63a302afb',1,'mx']]]
+];

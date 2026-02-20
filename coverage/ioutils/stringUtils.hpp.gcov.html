@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - mxlib - ioutils/stringUtils.hpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory ioutils">ioutils</a> - stringUtils.hpp<span style="font-size: 80%;"> (source / <a href="stringUtils.hpp.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">mxlib</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-02-19 16:58:26</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : /** \file stringUtils.hpp</span>
+<span id="L2"><span class="lineNum">       2</span>              :  * \brief Utilities for working with strings</span>
+<span id="L3"><span class="lineNum">       3</span>              :  *</span>
+<span id="L4"><span class="lineNum">       4</span>              :  * \author Jared R. Males (jaredmales@gmail.com)</span>
+<span id="L5"><span class="lineNum">       5</span>              :  *</span>
+<span id="L6"><span class="lineNum">       6</span>              :  * \ingroup stringutils</span>
+<span id="L7"><span class="lineNum">       7</span>              :  *</span>
+<span id="L8"><span class="lineNum">       8</span>              :  */</span>
+<span id="L9"><span class="lineNum">       9</span>              : </span>
+<span id="L10"><span class="lineNum">      10</span>              : //***********************************************************************//</span>
+<span id="L11"><span class="lineNum">      11</span>              : // Copyright 2015, 2016, 2017 Jared R. Males (jaredmales@gmail.com)</span>
+<span id="L12"><span class="lineNum">      12</span>              : //</span>
+<span id="L13"><span class="lineNum">      13</span>              : // This file is part of mxlib.</span>
+<span id="L14"><span class="lineNum">      14</span>              : //</span>
+<span id="L15"><span class="lineNum">      15</span>              : // mxlib is free software: you can redistribute it and/or modify</span>
+<span id="L16"><span class="lineNum">      16</span>              : // it under the terms of the GNU General Public License as published by</span>
+<span id="L17"><span class="lineNum">      17</span>              : // the Free Software Foundation, either version 3 of the License, or</span>
+<span id="L18"><span class="lineNum">      18</span>              : // (at your option) any later version.</span>
+<span id="L19"><span class="lineNum">      19</span>              : //</span>
+<span id="L20"><span class="lineNum">      20</span>              : // mxlib is distributed in the hope that it will be useful,</span>
+<span id="L21"><span class="lineNum">      21</span>              : // but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span id="L22"><span class="lineNum">      22</span>              : // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span id="L23"><span class="lineNum">      23</span>              : // GNU General Public License for more details.</span>
+<span id="L24"><span class="lineNum">      24</span>              : //</span>
+<span id="L25"><span class="lineNum">      25</span>              : // You should have received a copy of the GNU General Public License</span>
+<span id="L26"><span class="lineNum">      26</span>              : // along with mxlib.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span id="L27"><span class="lineNum">      27</span>              : //***********************************************************************//</span>
+<span id="L28"><span class="lineNum">      28</span>              : </span>
+<span id="L29"><span class="lineNum">      29</span>              : #ifndef ioutils_stringUtils_hpp</span>
+<span id="L30"><span class="lineNum">      30</span>              : #define ioutils_stringUtils_hpp</span>
+<span id="L31"><span class="lineNum">      31</span>              : </span>
+<span id="L32"><span class="lineNum">      32</span>              : #include &lt;string&gt;</span>
+<span id="L33"><span class="lineNum">      33</span>              : #include &lt;sstream&gt;</span>
+<span id="L34"><span class="lineNum">      34</span>              : #include &lt;vector&gt;</span>
+<span id="L35"><span class="lineNum">      35</span>              : #include &lt;limits&gt;</span>
+<span id="L36"><span class="lineNum">      36</span>              : #include &lt;algorithm&gt;</span>
+<span id="L37"><span class="lineNum">      37</span>              : </span>
+<span id="L38"><span class="lineNum">      38</span>              : #include &quot;../meta/tagT.hpp&quot;</span>
+<span id="L39"><span class="lineNum">      39</span>              : #include &quot;../mxlib.hpp&quot;</span>
+<span id="L40"><span class="lineNum">      40</span>              : </span>
+<span id="L41"><span class="lineNum">      41</span>              : namespace mx</span>
+<span id="L42"><span class="lineNum">      42</span>              : {</span>
+<span id="L43"><span class="lineNum">      43</span>              : namespace ioutils</span>
+<span id="L44"><span class="lineNum">      44</span>              : {</span>
+<span id="L45"><span class="lineNum">      45</span>              : </span>
+<span id="L46"><span class="lineNum">      46</span>              : /** \addtogroup stringutils</span>
+<span id="L47"><span class="lineNum">      47</span>              :  * @{</span>
+<span id="L48"><span class="lineNum">      48</span>              :  */</span>
+<span id="L49"><span class="lineNum">      49</span>              : </span>
+<span id="L50"><span class="lineNum">      50</span>              : /// Convert a numerical value to a string</span>
+<span id="L51"><span class="lineNum">      51</span>              : /** The default version uses the stream library to convert.  A specialization is provided to prevent conversion of</span>
+<span id="L52"><span class="lineNum">      52</span>              :   std::string.</span>
+<span id="L53"><span class="lineNum">      53</span>              :   *</span>
+<span id="L54"><span class="lineNum">      54</span>              :   * The precision parameter is only used for floating point types.  If the default precision==0 is passed, then the</span>
+<span id="L55"><span class="lineNum">      55</span>              :   maximum useful precision is</span>
+<span id="L56"><span class="lineNum">      56</span>              :   * used, from the value of std::numeric_limits\&lt;typeT\&gt;::max_digits10.</span>
+<span id="L57"><span class="lineNum">      57</span>              :   *</span>
+<span id="L58"><span class="lineNum">      58</span>              :   * The width and pad template parameters can be used to set a fixed maximum width and a pad character.</span>
+<span id="L59"><span class="lineNum">      59</span>              :   *</span>
+<span id="L60"><span class="lineNum">      60</span>              :   * Examples:</span>
+<span id="L61"><span class="lineNum">      61</span>              :   *</span>
+<span id="L62"><span class="lineNum">      62</span>              :   * To convert a double precision number to string:</span>
+<span id="L63"><span class="lineNum">      63</span>              :   * \code</span>
+<span id="L64"><span class="lineNum">      64</span>              :     double d = 2.898434;</span>
+<span id="L65"><span class="lineNum">      65</span>              :     std::string str;</span>
+<span id="L66"><span class="lineNum">      66</span>              :     str = convertToString(d);  //note that you will not normally need to specify &lt;typeT&gt;</span>
+<span id="L67"><span class="lineNum">      67</span>              :   * \endcode</span>
+<span id="L68"><span class="lineNum">      68</span>              :   *</span>
+<span id="L69"><span class="lineNum">      69</span>              :   * To produce a fixed width 0 padded string from an integer:</span>
+<span id="L70"><span class="lineNum">      70</span>              :   * \code</span>
+<span id="L71"><span class="lineNum">      71</span>              :     int i = 23;</span>
+<span id="L72"><span class="lineNum">      72</span>              :     std::string str;</span>
+<span id="L73"><span class="lineNum">      73</span>              :     str = convertToString&lt;int, 5, '0'&gt;(i);  //result is &quot;00023&quot;.</span>
+<span id="L74"><span class="lineNum">      74</span>              :   * \endcode</span>
+<span id="L75"><span class="lineNum">      75</span>              :   *</span>
+<span id="L76"><span class="lineNum">      76</span>              :   * \tparam typeT is the type of value to convert</span>
+<span id="L77"><span class="lineNum">      77</span>              :   * \tparam width specifies the maximum width, not including the '\0'</span>
+<span id="L78"><span class="lineNum">      78</span>              :   * \tparam pad specifies the pad character</span>
+<span id="L79"><span class="lineNum">      79</span>              :   *</span>
+<span id="L80"><span class="lineNum">      80</span>              :   * \returns a string representation of value</span>
+<span id="L81"><span class="lineNum">      81</span>              :   *</span>
+<span id="L82"><span class="lineNum">      82</span>              :   */</span>
+<span id="L83"><span class="lineNum">      83</span>              : template &lt;typename typeT, unsigned width = 0, char pad = ' '&gt;</span>
+<span id="L84"><span class="lineNum">      84</span>              : [[deprecated( &quot;Use std::format instead&quot; )]]</span>
+<span id="L85"><span class="lineNum">      85</span>              : std::string convertToString(</span>
+<span id="L86"><span class="lineNum">      86</span>              :     const typeT &amp;value, ///&lt; [in] the value of type typeT to be converted</span>
+<span id="L87"><span class="lineNum">      87</span>              :     int precision = 0   ///&lt; [in] [optional] the precision (see</span>
+<span id="L88"><span class="lineNum">      88</span>              :                       ///&lt; http://www.cplusplus.com/reference/ios/ios_base/precision/) to use for floating point types.</span>
+<span id="L89"><span class="lineNum">      89</span>              : )</span>
+<span id="L90"><span class="lineNum">      90</span>              : {</span>
+<span id="L91"><span class="lineNum">      91</span>              : </span>
+<span id="L92"><span class="lineNum">      92</span>              :     std::ostringstream convert;</span>
+<span id="L93"><span class="lineNum">      93</span>              : </span>
+<span id="L94"><span class="lineNum">      94</span>              :     if( std::is_floating_point&lt;typeT&gt;::value )</span>
+<span id="L95"><span class="lineNum">      95</span>              :     {</span>
+<span id="L96"><span class="lineNum">      96</span>              :         if( precision == 0 )</span>
+<span id="L97"><span class="lineNum">      97</span>              :         {</span>
+<span id="L98"><span class="lineNum">      98</span>              :             convert.precision( std::numeric_limits&lt;typeT&gt;::max_digits10 );</span>
+<span id="L99"><span class="lineNum">      99</span>              :         }</span>
+<span id="L100"><span class="lineNum">     100</span>              :         else</span>
+<span id="L101"><span class="lineNum">     101</span>              :         {</span>
+<span id="L102"><span class="lineNum">     102</span>              :             convert.precision( precision );</span>
+<span id="L103"><span class="lineNum">     103</span>              :         }</span>
+<span id="L104"><span class="lineNum">     104</span>              :     }</span>
+<span id="L105"><span class="lineNum">     105</span>              : </span>
+<span id="L106"><span class="lineNum">     106</span>              :     convert &lt;&lt; value;</span>
+<span id="L107"><span class="lineNum">     107</span>              : </span>
+<span id="L108"><span class="lineNum">     108</span>              :     if( width == 0 )</span>
+<span id="L109"><span class="lineNum">     109</span>              :     {</span>
+<span id="L110"><span class="lineNum">     110</span>              :         return convert.str();</span>
+<span id="L111"><span class="lineNum">     111</span>              :     }</span>
+<span id="L112"><span class="lineNum">     112</span>              :     else</span>
+<span id="L113"><span class="lineNum">     113</span>              :     {</span>
+<span id="L114"><span class="lineNum">     114</span>              :         std::string c = convert.str();</span>
+<span id="L115"><span class="lineNum">     115</span>              : </span>
+<span id="L116"><span class="lineNum">     116</span>              :         if( c.length() &gt; width )</span>
+<span id="L117"><span class="lineNum">     117</span>              :         {</span>
+<span id="L118"><span class="lineNum">     118</span>              :             c.erase( width, c.length() - width );</span>
+<span id="L119"><span class="lineNum">     119</span>              :             return c;</span>
+<span id="L120"><span class="lineNum">     120</span>              :         }</span>
+<span id="L121"><span class="lineNum">     121</span>              : </span>
+<span id="L122"><span class="lineNum">     122</span>              :         return std::string( width - c.length(), pad ) + c;</span>
+<span id="L123"><span class="lineNum">     123</span>              :     }</span>
+<span id="L124"><span class="lineNum">     124</span>              : }</span>
+<span id="L125"><span class="lineNum">     125</span>              : </span>
+<span id="L126"><span class="lineNum">     126</span>              : // Specialization of convertToString to avoid converting a string to a string</span>
+<span id="L127"><span class="lineNum">     127</span>              : template &lt;&gt;</span>
+<span id="L128"><span class="lineNum">     128</span>              : std::string convertToString&lt;std::string&gt;( const std::string &amp;value, int precision );</span>
+<span id="L129"><span class="lineNum">     129</span>              : </span>
+<span id="L130"><span class="lineNum">     130</span>              : namespace stoTImpl</span>
+<span id="L131"><span class="lineNum">     131</span>              : {</span>
+<span id="L132"><span class="lineNum">     132</span>              : // tag overloads for stoT</span>
+<span id="L133"><span class="lineNum">     133</span>              : </span>
+<span id="L134"><span class="lineNum">     134</span>              : char stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;char&gt; );</span>
+<span id="L135"><span class="lineNum">     135</span>              : signed char stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;signed char&gt; );</span>
+<span id="L136"><span class="lineNum">     136</span>              : unsigned char stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;unsigned char&gt; );</span>
+<span id="L137"><span class="lineNum">     137</span>              : short stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;short&gt; );</span>
+<span id="L138"><span class="lineNum">     138</span>              : unsigned short stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;unsigned short&gt; );</span>
+<span id="L139"><span class="lineNum">     139</span>              : int stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;int&gt; );</span>
+<span id="L140"><span class="lineNum">     140</span>              : unsigned int stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;unsigned int&gt; );</span>
+<span id="L141"><span class="lineNum">     141</span>              : long stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;long&gt; );</span>
+<span id="L142"><span class="lineNum">     142</span>              : unsigned long stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;unsigned long&gt; );</span>
+<span id="L143"><span class="lineNum">     143</span>              : long long stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;long long&gt; );</span>
+<span id="L144"><span class="lineNum">     144</span>              : unsigned long long stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;unsigned long long&gt; );</span>
+<span id="L145"><span class="lineNum">     145</span>              : bool stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;bool&gt; );</span>
+<span id="L146"><span class="lineNum">     146</span>              : float stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;float&gt; );</span>
+<span id="L147"><span class="lineNum">     147</span>              : double stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;double&gt; );</span>
+<span id="L148"><span class="lineNum">     148</span>              : long double stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;long double&gt; );</span>
+<span id="L149"><span class="lineNum">     149</span>              : </span>
+<span id="L150"><span class="lineNum">     150</span>              : std::string stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;std::string&gt; );</span>
+<span id="L151"><span class="lineNum">     151</span>              : </span>
+<span id="L152"><span class="lineNum">     152</span>              : #ifdef HAS_QUAD</span>
+<span id="L153"><span class="lineNum">     153</span>              : __float128 stoT( const std::string &amp;str, error_t *errc, meta::tagT&lt;__float128&gt; );</span>
+<span id="L154"><span class="lineNum">     154</span>              : #endif</span>
+<span id="L155"><span class="lineNum">     155</span>              : </span>
+<span id="L156"><span class="lineNum">     156</span>              : } // namespace stoTImpl</span>
+<span id="L157"><span class="lineNum">     157</span>              : </span>
+<span id="L158"><span class="lineNum">     158</span>              : /// Convert a string to a numerical value.</span>
+<span id="L159"><span class="lineNum">     159</span>              : /** Provides exception-less string conversion.</span>
+<span id="L160"><span class="lineNum">     160</span>              :  *</span>
+<span id="L161"><span class="lineNum">     161</span>              :  * Example:</span>
+<span id="L162"><span class="lineNum">     162</span>              :  * \code</span>
+<span id="L163"><span class="lineNum">     163</span>              :  * std::string str = &quot;2.34567&quot;;</span>
+<span id="L164"><span class="lineNum">     164</span>              :  * mx::error_t errc;</span>
+<span id="L165"><span class="lineNum">     165</span>              :  * double d;</span>
+<span id="L166"><span class="lineNum">     166</span>              :  * d = stoT&lt;double&gt;(str, &amp;errc);</span>
+<span id="L167"><span class="lineNum">     167</span>              :  * if(errc != mx::error_t::noerror)</span>
+<span id="L168"><span class="lineNum">     168</span>              :  * {</span>
+<span id="L169"><span class="lineNum">     169</span>              :  * //do something</span>
+<span id="L170"><span class="lineNum">     170</span>              :  * }</span>
+<span id="L171"><span class="lineNum">     171</span>              :  * \endcode</span>
+<span id="L172"><span class="lineNum">     172</span>              :  *</span>
+<span id="L173"><span class="lineNum">     173</span>              :  * Values of `typeT=bool` are converted from strings that start with 0/f/F an 1/t/T as false and</span>
+<span id="L174"><span class="lineNum">     174</span>              :  * true respectively.  If that fails the string is converted to long long and then to bool, so if it is</span>
+<span id="L175"><span class="lineNum">     175</span>              :  * a valid number that fits in long long, it will evaluate to true or false based on whether or not it is 0.</span>
+<span id="L176"><span class="lineNum">     176</span>              :  *</span>
+<span id="L177"><span class="lineNum">     177</span>              :  * Complex types (`std::complex&lt;realT&gt;`) are not supported.</span>
+<span id="L178"><span class="lineNum">     178</span>              :  *</span>
+<span id="L179"><span class="lineNum">     179</span>              :  * \tparam typeT is the type of the numerical value desired</span>
+<span id="L180"><span class="lineNum">     180</span>              :  *</span>
+<span id="L181"><span class="lineNum">     181</span>              :  * \returns the converted numerical value.</span>
+<span id="L182"><span class="lineNum">     182</span>              :  *</span>
+<span id="L183"><span class="lineNum">     183</span>              :  * \b Error \b Codes</span>
+<span id="L184"><span class="lineNum">     184</span>              :  * - mx::error_t::noerror on success</span>
+<span id="L185"><span class="lineNum">     185</span>              :  * - mx::error_t::erange for an out of range value for typeT</span>
+<span id="L186"><span class="lineNum">     186</span>              :  * - mx::error_t::invalidarg for a string that can't be converted</span>
+<span id="L187"><span class="lineNum">     187</span>              :  */</span>
+<span id="L188"><span class="lineNum">     188</span>              : template &lt;typename typeT&gt;</span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">          12 : typeT stoT( const std::string &amp;str, /**&lt; [in] the string to convert*/</span></span>
+<span id="L190"><span class="lineNum">     190</span>              :             error_t *errc = nullptr /**&lt; [out] [optional] pointer to an mxlib error code set during the conversion */</span>
+<span id="L191"><span class="lineNum">     191</span>              : )</span>
+<span id="L192"><span class="lineNum">     192</span>              : {</span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">          12 :     return stoTImpl::stoT( str, errc, meta::tagT&lt;typeT&gt;() );</span></span>
+<span id="L194"><span class="lineNum">     194</span>              : }</span>
+<span id="L195"><span class="lineNum">     195</span>              : </span>
+<span id="L196"><span class="lineNum">     196</span>              : /// Convert a string to a numerical value.</span>
+<span id="L197"><span class="lineNum">     197</span>              : /** Provides exception-less string conversion.</span>
+<span id="L198"><span class="lineNum">     198</span>              :  *</span>
+<span id="L199"><span class="lineNum">     199</span>              :  * \overload</span>
+<span id="L200"><span class="lineNum">     200</span>              :  *</span>
+<span id="L201"><span class="lineNum">     201</span>              :  * \tparam typeT is the type of the numerical value desired</span>
+<span id="L202"><span class="lineNum">     202</span>              :  *</span>
+<span id="L203"><span class="lineNum">     203</span>              :  * \returns the converted numerical value.</span>
+<span id="L204"><span class="lineNum">     204</span>              :  *</span>
+<span id="L205"><span class="lineNum">     205</span>              :  * \b Error \b Codes</span>
+<span id="L206"><span class="lineNum">     206</span>              :  * - mx::error_t::noerror on success</span>
+<span id="L207"><span class="lineNum">     207</span>              :  * - mx::error_t::erange for an out of range value for typeT</span>
+<span id="L208"><span class="lineNum">     208</span>              :  * - mx::error_t::invalidarg for a string that can't be converted</span>
+<span id="L209"><span class="lineNum">     209</span>              :  */</span>
+<span id="L210"><span class="lineNum">     210</span>              : template &lt;typename typeT&gt;</span>
+<span id="L211"><span class="lineNum">     211</span>              : typeT stoT( const std::string &amp;str, /**&lt; [in] the string to convert*/</span>
+<span id="L212"><span class="lineNum">     212</span>              :             error_t &amp;errc           /**&lt; [out] [optional] mxlib error code set during the conversion */</span>
+<span id="L213"><span class="lineNum">     213</span>              : )</span>
+<span id="L214"><span class="lineNum">     214</span>              : {</span>
+<span id="L215"><span class="lineNum">     215</span>              :     return stoTImpl::stoT( str, &amp;errc, meta::tagT&lt;typeT&gt;() );</span>
+<span id="L216"><span class="lineNum">     216</span>              : }</span>
+<span id="L217"><span class="lineNum">     217</span>              : </span>
+<span id="L218"><span class="lineNum">     218</span>              : /// Convert a string to a numerical value.</span>
+<span id="L219"><span class="lineNum">     219</span>              : /** see \ref stoT</span>
+<span id="L220"><span class="lineNum">     220</span>              :  *</span>
+<span id="L221"><span class="lineNum">     221</span>              :  * \deprecated</span>
+<span id="L222"><span class="lineNum">     222</span>              :  */</span>
+<span id="L223"><span class="lineNum">     223</span>              : template &lt;typename typeT&gt;</span>
+<span id="L224"><span class="lineNum">     224</span>              : [[deprecated( &quot;Use mx::ioutils::stoT&lt;typeT&gt; instead&quot; )]]</span>
+<span id="L225"><span class="lineNum">     225</span>              : typeT convertFromString( const std::string &amp;str, /**&lt; [in] the string to convert*/</span>
+<span id="L226"><span class="lineNum">     226</span>              :                          error_t *errc = nullptr /**&lt; [out] [optional] mxlib error code */ )</span>
+<span id="L227"><span class="lineNum">     227</span>              : {</span>
+<span id="L228"><span class="lineNum">     228</span>              :     // If no specialization exists, we try to cast</span>
+<span id="L229"><span class="lineNum">     229</span>              :     return stoT&lt;typeT&gt;( str, errc );</span>
+<span id="L230"><span class="lineNum">     230</span>              : }</span>
+<span id="L231"><span class="lineNum">     231</span>              : </span>
+<span id="L232"><span class="lineNum">     232</span>              : /// Convert a string to all lower case.</span>
+<span id="L233"><span class="lineNum">     233</span>              : /** Calls the c tolower function for each character in \p instr.</span>
+<span id="L234"><span class="lineNum">     234</span>              :  *</span>
+<span id="L235"><span class="lineNum">     235</span>              :  * \returns mx::error_t::noerror on success</span>
+<span id="L236"><span class="lineNum">     236</span>              :  * \returns mx::error_t::std_length_error if string::resize throws a length error</span>
+<span id="L237"><span class="lineNum">     237</span>              :  * \returns mx::error_t::std_bad_alloc if string::resize throws a bad alloc</span>
+<span id="L238"><span class="lineNum">     238</span>              :  * \returns mx::error_t::std_exception if string::resize throws a std::exception</span>
+<span id="L239"><span class="lineNum">     239</span>              :  * \returns mx::error_t::exception if string::resize throws any other exception</span>
+<span id="L240"><span class="lineNum">     240</span>              :  */</span>
+<span id="L241"><span class="lineNum">     241</span>              : mx::error_t toLower( std::string &amp;outstr,     ///&lt; [out]  will be resized and populated with the lower case characters</span>
+<span id="L242"><span class="lineNum">     242</span>              :                      const std::string &amp;instr ///&lt; [in] is the string to convert</span>
+<span id="L243"><span class="lineNum">     243</span>              : );</span>
+<span id="L244"><span class="lineNum">     244</span>              : </span>
+<span id="L245"><span class="lineNum">     245</span>              : /// Convert a string to all lower case.</span>
+<span id="L246"><span class="lineNum">     246</span>              : /** Calls the c tolower function for each character in \p instr.</span>
+<span id="L247"><span class="lineNum">     247</span>              :  *</span>
+<span id="L248"><span class="lineNum">     248</span>              :  * \return the all lower case string</span>
+<span id="L249"><span class="lineNum">     249</span>              :  *</span>
+<span id="L250"><span class="lineNum">     250</span>              :  * \b Errors</span>
+<span id="L251"><span class="lineNum">     251</span>              :  * - mx::error_t::noerror on success</span>
+<span id="L252"><span class="lineNum">     252</span>              :  * - mx::error_t::std_length_error if string::resize throws a length error</span>
+<span id="L253"><span class="lineNum">     253</span>              :  * - mx::error_t::std_bad_alloc if string::resize throws a bad alloc</span>
+<span id="L254"><span class="lineNum">     254</span>              :  * - mx::error_t::std_exception if string::resize throws a std::exception</span>
+<span id="L255"><span class="lineNum">     255</span>              :  * - mx::error_t::exception if string::resize throws any other exception</span>
+<span id="L256"><span class="lineNum">     256</span>              :  *</span>
+<span id="L257"><span class="lineNum">     257</span>              :  */</span>
+<span id="L258"><span class="lineNum">     258</span>              : std::string toLower( const std::string &amp;instr, /**&lt; [in] is the string to convert*/</span>
+<span id="L259"><span class="lineNum">     259</span>              :                      mx::error_t *errc = nullptr /**&lt; [out] [optional] the error code indicating success or error */ );</span>
+<span id="L260"><span class="lineNum">     260</span>              : </span>
+<span id="L261"><span class="lineNum">     261</span>              : /// Convert a string to all upper case.</span>
+<span id="L262"><span class="lineNum">     262</span>              : /** Calls the c toupper function for each character in \p instr.</span>
+<span id="L263"><span class="lineNum">     263</span>              :  *</span>
+<span id="L264"><span class="lineNum">     264</span>              :  * \returns mx::error_t::noerror on success</span>
+<span id="L265"><span class="lineNum">     265</span>              :  * \returns mx::error_t::std_length_error if string::resize throws a length error</span>
+<span id="L266"><span class="lineNum">     266</span>              :  * \returns mx::error_t::std_bad_alloc if string::resize throws a bad alloc</span>
+<span id="L267"><span class="lineNum">     267</span>              :  * \returns mx::error_t::std_exception if string::resize throws a std::exception</span>
+<span id="L268"><span class="lineNum">     268</span>              :  * \returns mx::error_t::exception if string::resize throws any other exception</span>
+<span id="L269"><span class="lineNum">     269</span>              :  */</span>
+<span id="L270"><span class="lineNum">     270</span>              : mx::error_t toUpper( std::string &amp;outstr,     ///&lt; [out]  will be resized and populated with the lower case characters</span>
+<span id="L271"><span class="lineNum">     271</span>              :                      const std::string &amp;instr ///&lt; [in] is the string to convert</span>
+<span id="L272"><span class="lineNum">     272</span>              : );</span>
+<span id="L273"><span class="lineNum">     273</span>              : </span>
+<span id="L274"><span class="lineNum">     274</span>              : /// Convert a string to all upper case.</span>
+<span id="L275"><span class="lineNum">     275</span>              : /** Calls the c toupper function for each character in \p instr.</span>
+<span id="L276"><span class="lineNum">     276</span>              :  *</span>
+<span id="L277"><span class="lineNum">     277</span>              :  * \returns the all upper case string</span>
+<span id="L278"><span class="lineNum">     278</span>              :  *</span>
+<span id="L279"><span class="lineNum">     279</span>              :  * \b Errors</span>
+<span id="L280"><span class="lineNum">     280</span>              :  * - mx::error_t::noerror on success</span>
+<span id="L281"><span class="lineNum">     281</span>              :  * - mx::error_t::std_length_error if string::resize throws a length error</span>
+<span id="L282"><span class="lineNum">     282</span>              :  * - mx::error_t::std_bad_alloc if string::resize throws a bad alloc</span>
+<span id="L283"><span class="lineNum">     283</span>              :  * - mx::error_t::std_exception if string::resize throws a std::exception</span>
+<span id="L284"><span class="lineNum">     284</span>              :  * - mx::error_t::exception if string::resize throws any other exception</span>
+<span id="L285"><span class="lineNum">     285</span>              :  */</span>
+<span id="L286"><span class="lineNum">     286</span>              : std::string toUpper( const std::string &amp;instr, /**&lt; [in] is the string to convert*/</span>
+<span id="L287"><span class="lineNum">     287</span>              :                      mx::error_t *errc = nullptr /**&lt; [out] [optional] the error code indicating success or error */ );</span>
+<span id="L288"><span class="lineNum">     288</span>              : </span>
+<span id="L289"><span class="lineNum">     289</span>              : /// Remove all white space from a string.</span>
+<span id="L290"><span class="lineNum">     290</span>              : /**</span>
+<span id="L291"><span class="lineNum">     291</span>              :  * Uses std::remove_if.</span>
+<span id="L292"><span class="lineNum">     292</span>              :  */</span>
+<span id="L293"><span class="lineNum">     293</span>              : void removeWhiteSpace( std::string &amp;outstr,     ///&lt; [out] will contain the new string with no whitespace.</span>
+<span id="L294"><span class="lineNum">     294</span>              :                        const std::string &amp;instr ///&lt; [in] is the string to remove whitespace from</span>
+<span id="L295"><span class="lineNum">     295</span>              : );</span>
+<span id="L296"><span class="lineNum">     296</span>              : </span>
+<span id="L297"><span class="lineNum">     297</span>              : /// Remove all white space from a string.</span>
+<span id="L298"><span class="lineNum">     298</span>              : /**</span>
+<span id="L299"><span class="lineNum">     299</span>              :  * Uses std::remove_if.</span>
+<span id="L300"><span class="lineNum">     300</span>              :  *</span>
+<span id="L301"><span class="lineNum">     301</span>              :  * \returns the modified string.</span>
+<span id="L302"><span class="lineNum">     302</span>              :  */</span>
+<span id="L303"><span class="lineNum">     303</span>              : std::string removeWhiteSpace( const std::string &amp;instr /**&lt; [in] is the string to remove whitespace from*/ );</span>
+<span id="L304"><span class="lineNum">     304</span>              : </span>
+<span id="L305"><span class="lineNum">     305</span>              : /// Wrap a string by breaking it into smaller sized portions of a desired width</span>
+<span id="L306"><span class="lineNum">     306</span>              : /** Whenever possible breaks at spaces.  A single space is discarded at the break.</span>
+<span id="L307"><span class="lineNum">     307</span>              :  */</span>
+<span id="L308"><span class="lineNum">     308</span>              : int stringWrap( std::vector&lt;std::string&gt; &amp;lines, /**&lt; [out] each new entry contains a wrapped portion of the string.</span>
+<span id="L309"><span class="lineNum">     309</span>              :                                                             Not cleared, so can accumulate. */</span>
+<span id="L310"><span class="lineNum">     310</span>              :                 const std::string &amp;str,          ///&lt; [in] the string to wrap</span>
+<span id="L311"><span class="lineNum">     311</span>              :                 int width                        ///&lt; [in] the maximum width of the output strings</span>
+<span id="L312"><span class="lineNum">     312</span>              : );</span>
+<span id="L313"><span class="lineNum">     313</span>              : </span>
+<span id="L314"><span class="lineNum">     314</span>              : /// Parses a string into a vector of tokens delimited by a character</span>
+<span id="L315"><span class="lineNum">     315</span>              : /** E.g., the string</span>
+<span id="L316"><span class="lineNum">     316</span>              :   * \code</span>
+<span id="L317"><span class="lineNum">     317</span>              :     std::string s={&quot;0,1,2,3,4&quot;};</span>
+<span id="L318"><span class="lineNum">     318</span>              :     std::vector&lt;int&gt; v;</span>
+<span id="L319"><span class="lineNum">     319</span>              :     parseStringVector(v,s);</span>
+<span id="L320"><span class="lineNum">     320</span>              :     \endcode</span>
+<span id="L321"><span class="lineNum">     321</span>              :   * is parsed to a vector as if it was initialized with</span>
+<span id="L322"><span class="lineNum">     322</span>              :     \code</span>
+<span id="L323"><span class="lineNum">     323</span>              :     std::vector&lt;int&gt; v = {0,1,2,3,4};</span>
+<span id="L324"><span class="lineNum">     324</span>              :     \endcode</span>
+<span id="L325"><span class="lineNum">     325</span>              :   *</span>
+<span id="L326"><span class="lineNum">     326</span>              :   * \tparam typeT the type to convert the tokens too.</span>
+<span id="L327"><span class="lineNum">     327</span>              :   */</span>
+<span id="L328"><span class="lineNum">     328</span>              : template &lt;typename typeT&gt;</span>
+<span id="L329"><span class="lineNum">     329</span>              : void parseStringVector(</span>
+<span id="L330"><span class="lineNum">     330</span>              :     std::vector&lt;typeT&gt; &amp;v, ///&lt; [out] the vector holding the parsed and converted tokens.  Is cleared.</span>
+<span id="L331"><span class="lineNum">     331</span>              :     const std::string &amp;s,  ///&lt; [in] the string to parse</span>
+<span id="L332"><span class="lineNum">     332</span>              :     char delim = ','       ///&lt; [in] [optional] the delimiter.  Default is comma \p ','.</span>
+<span id="L333"><span class="lineNum">     333</span>              : )</span>
+<span id="L334"><span class="lineNum">     334</span>              : {</span>
+<span id="L335"><span class="lineNum">     335</span>              :     size_t st;</span>
+<span id="L336"><span class="lineNum">     336</span>              :     size_t com;</span>
+<span id="L337"><span class="lineNum">     337</span>              : </span>
+<span id="L338"><span class="lineNum">     338</span>              :     st = 0;</span>
+<span id="L339"><span class="lineNum">     339</span>              :     com = s.find( delim, st );</span>
+<span id="L340"><span class="lineNum">     340</span>              : </span>
+<span id="L341"><span class="lineNum">     341</span>              :     v.clear();</span>
+<span id="L342"><span class="lineNum">     342</span>              : </span>
+<span id="L343"><span class="lineNum">     343</span>              :     while( com != std::string::npos )</span>
+<span id="L344"><span class="lineNum">     344</span>              :     {</span>
+<span id="L345"><span class="lineNum">     345</span>              :         v.push_back( convertFromString&lt;typeT&gt;( s.substr( st, com - st ) ) );</span>
+<span id="L346"><span class="lineNum">     346</span>              :         st = com + 1;</span>
+<span id="L347"><span class="lineNum">     347</span>              :         com = s.find( delim, st );</span>
+<span id="L348"><span class="lineNum">     348</span>              :     }</span>
+<span id="L349"><span class="lineNum">     349</span>              :     v.push_back( convertFromString&lt;typeT&gt;( s.substr( st, s.size() - st ) ) );</span>
+<span id="L350"><span class="lineNum">     350</span>              : }</span>
+<span id="L351"><span class="lineNum">     351</span>              : </span>
+<span id="L352"><span class="lineNum">     352</span>              : /// Parses a string into a vector of tokens delimited by a set of characters</span>
+<span id="L353"><span class="lineNum">     353</span>              : /** E.g., the string</span>
+<span id="L354"><span class="lineNum">     354</span>              :   * \code</span>
+<span id="L355"><span class="lineNum">     355</span>              :     std::string s={&quot;0,1:2 3,4&quot;};</span>
+<span id="L356"><span class="lineNum">     356</span>              :     std::vector&lt;int&gt; v;</span>
+<span id="L357"><span class="lineNum">     357</span>              :     parseStringVector(v, s, &quot;,: &quot;);</span>
+<span id="L358"><span class="lineNum">     358</span>              :     \endcode</span>
+<span id="L359"><span class="lineNum">     359</span>              :   * is parsed to a vector as if it was initialized with</span>
+<span id="L360"><span class="lineNum">     360</span>              :     \code</span>
+<span id="L361"><span class="lineNum">     361</span>              :     std::vector&lt;int&gt; v = {0,1,2,3,4};</span>
+<span id="L362"><span class="lineNum">     362</span>              :     \endcode</span>
+<span id="L363"><span class="lineNum">     363</span>              :   *</span>
+<span id="L364"><span class="lineNum">     364</span>              :   * \tparam typeT the type to convert the tokens too.</span>
+<span id="L365"><span class="lineNum">     365</span>              :   */</span>
+<span id="L366"><span class="lineNum">     366</span>              : template &lt;typename typeT&gt;</span>
+<span id="L367"><span class="lineNum">     367</span>              : void parseStringVector(</span>
+<span id="L368"><span class="lineNum">     368</span>              :     std::vector&lt;typeT&gt; &amp;v,    ///&lt; [out] the vector holding the parsed and converted tokens.  Is cleared.</span>
+<span id="L369"><span class="lineNum">     369</span>              :     const std::string &amp;s,     ///&lt; [in] the string to parse</span>
+<span id="L370"><span class="lineNum">     370</span>              :     const std::string &amp;delims ///&lt; [in] the delimiters.</span>
+<span id="L371"><span class="lineNum">     371</span>              : )</span>
+<span id="L372"><span class="lineNum">     372</span>              : {</span>
+<span id="L373"><span class="lineNum">     373</span>              :     size_t st;</span>
+<span id="L374"><span class="lineNum">     374</span>              :     size_t com;</span>
+<span id="L375"><span class="lineNum">     375</span>              : </span>
+<span id="L376"><span class="lineNum">     376</span>              :     st = 0;</span>
+<span id="L377"><span class="lineNum">     377</span>              :     com = s.find_first_of( delims, st );</span>
+<span id="L378"><span class="lineNum">     378</span>              : </span>
+<span id="L379"><span class="lineNum">     379</span>              :     v.clear();</span>
+<span id="L380"><span class="lineNum">     380</span>              : </span>
+<span id="L381"><span class="lineNum">     381</span>              :     while( com != std::string::npos )</span>
+<span id="L382"><span class="lineNum">     382</span>              :     {</span>
+<span id="L383"><span class="lineNum">     383</span>              :         v.push_back( convertFromString&lt;typeT&gt;( s.substr( st, com - st ) ) );</span>
+<span id="L384"><span class="lineNum">     384</span>              :         st = com + 1;</span>
+<span id="L385"><span class="lineNum">     385</span>              :         com = s.find_first_of( delims, st );</span>
+<span id="L386"><span class="lineNum">     386</span>              :     }</span>
+<span id="L387"><span class="lineNum">     387</span>              :     v.push_back( convertFromString&lt;typeT&gt;( s.substr( st, s.size() - st ) ) );</span>
+<span id="L388"><span class="lineNum">     388</span>              : }</span>
+<span id="L389"><span class="lineNum">     389</span>              : /// @}</span>
+<span id="L390"><span class="lineNum">     390</span>              : </span>
+<span id="L391"><span class="lineNum">     391</span>              : } // namespace ioutils</span>
+<span id="L392"><span class="lineNum">     392</span>              : } // namespace mx</span>
+<span id="L393"><span class="lineNum">     393</span>              : </span>
+<span id="L394"><span class="lineNum">     394</span>              : #endif // ioutils_stringUtils_hpp</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>
